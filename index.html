@@ -8,16 +8,23 @@
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#090909">
   <link rel="canonical" href="https://ahmed-alhafiz.github.io/">
+  <link rel="alternate" hreflang="ar" href="https://ahmed-alhafiz.github.io/">
+  <link rel="alternate" hreflang="en" href="https://ahmed-alhafiz.github.io/en/">
+  <link rel="alternate" hreflang="de" href="https://ahmed-alhafiz.github.io/de/">
+  <link rel="alternate" hreflang="x-default" href="https://ahmed-alhafiz.github.io/">
   <link rel="icon" href="favicon.png" type="image/png" sizes="96x96">
 
   <meta property="og:type" content="profile">
   <meta property="og:title" content="أحمد الحافظ | Ahmed Alhafiz">
   <meta property="og:description" content="الموقع الرسمي للكاتب والمؤلف أحمد الحافظ — Ahmed Alhafiz.">
   <meta property="og:url" content="https://ahmed-alhafiz.github.io/">
-  <meta property="og:image" content="https://ahmed-alhafiz.github.io/ahmed-alhafiz-author.png">
-  <meta property="og:image:alt" content="أحمد الحافظ — Ahmed Alhafiz">
-  <meta property="og:image:width" content="1229">
-  <meta property="og:image:height" content="1536">
+  <meta property="og:image" content="https://ahmed-alhafiz.github.io/ahmed-alhafiz-social-card.png">
+  <meta property="og:image:alt" content="أحمد الحافظ — Ahmed Alhafiz — كاتب ومؤلف">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="de_DE">
   <meta name="twitter:card" content="summary_large_image">
 
   <script type="application/ld+json">
@@ -30,23 +37,17 @@
         "url": "https://ahmed-alhafiz.github.io/",
         "name": "أحمد الحافظ",
         "alternateName": "Ahmed Alhafiz",
-        "inLanguage": "ar",
-        "publisher": {
-          "@id": "https://ahmed-alhafiz.github.io/#person"
-        }
+        "inLanguage": ["ar", "en", "de"],
+        "publisher": {"@id": "https://ahmed-alhafiz.github.io/#person"}
       },
       {
-        "@type": "ProfilePage",
-        "@id": "https://ahmed-alhafiz.github.io/#profilepage",
+        "@type": "WebPage",
+        "@id": "https://ahmed-alhafiz.github.io/#webpage",
         "url": "https://ahmed-alhafiz.github.io/",
-        "name": "أحمد الحافظ — Ahmed Alhafiz",
+        "name": "أحمد الحافظ | Ahmed Alhafiz — كاتب ومؤلف",
         "inLanguage": "ar",
-        "isPartOf": {
-          "@id": "https://ahmed-alhafiz.github.io/#website"
-        },
-        "mainEntity": {
-          "@id": "https://ahmed-alhafiz.github.io/#person"
-        }
+        "isPartOf": {"@id": "https://ahmed-alhafiz.github.io/#website"},
+        "about": {"@id": "https://ahmed-alhafiz.github.io/#person"}
       },
       {
         "@type": "Person",
@@ -119,7 +120,7 @@ img{display:block;max-width:100%}
   -webkit-backdrop-filter:blur(18px) saturate(.9);
   border-bottom:1px solid var(--line-soft);
 }
-.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:22px}
 .brand{display:flex;align-items:center;gap:11px;direction:ltr}
 .brand-mark{
   width:43px;height:43px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;
@@ -128,14 +129,19 @@ img{display:block;max-width:100%}
 .brand-copy{line-height:1.2;text-align:left}
 .brand-copy strong{display:block;color:var(--gold-2);font-size:16px;font-weight:600;direction:rtl}
 .brand-copy span{display:block;color:#d7c3a6;font-family:Georgia,"Times New Roman",serif;font-size:13px;margin-top:3px}
-.nav{display:flex;align-items:center;gap:30px;font-size:15px;color:#c7c0b6}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px;color:#c7c0b6}
 .nav a{position:relative;padding:8px 0;transition:color .2s ease}
 .nav a:hover,.nav a:focus-visible{color:var(--text)}
 .nav a::after{content:"";position:absolute;inset-inline:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .2s ease}
 .nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+.header-tools{display:flex;align-items:center;gap:10px;direction:ltr}
 .social-mini{display:flex;gap:8px;direction:ltr}
 .social-mini a{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;color:#d9d2c8;border:1px solid transparent}
 .social-mini a:hover,.social-mini a:focus-visible{border-color:var(--line);color:var(--gold-2)}
+.lang-switch{display:flex;gap:4px;direction:ltr;font-family:Arial,sans-serif;font-size:11px}
+.lang-switch a{min-width:30px;height:30px;padding:0 6px;border:1px solid var(--line-soft);border-radius:999px;display:grid;place-items:center;color:#a9a198;transition:.2s}
+.lang-switch a:hover,.lang-switch a:focus-visible{border-color:var(--line);color:var(--gold-2)}
+.lang-switch a[aria-current="page"]{border-color:var(--gold);color:var(--gold-2)}
 .menu-btn{display:none;width:42px;height:42px;border:0;background:transparent;color:var(--gold-2);cursor:pointer}
 .menu-btn span,.menu-btn::before,.menu-btn::after{content:"";display:block;width:24px;height:1.5px;background:currentColor;margin:5px auto;transition:.2s ease}
 .mobile-menu{display:none}
@@ -175,6 +181,8 @@ img{display:block;max-width:100%}
 .about-index{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-family:Georgia,"Times New Roman",serif;font-size:13px;letter-spacing:.08em;direction:ltr}
 .about-copy{font-size:20px;line-height:2.15;color:#d6d0c7;margin:0;max-width:800px}
 .about-copy strong{color:#f0e7db;font-weight:600}
+.about-link{display:inline-flex;margin-top:20px;padding-bottom:3px;border-bottom:1px solid var(--line);color:#d6b27a;font-size:15px}
+.about-link:hover,.about-link:focus-visible{color:var(--gold-2);border-color:var(--gold)}
 
 /* Works */
 .works{padding-top:78px}
@@ -245,6 +253,7 @@ footer{padding:42px 0 48px;color:#7d776f;font-size:13px}
 
 @media (max-width:980px){
   .nav,.social-mini{display:none}.menu-btn{display:block}
+  .header-inner{gap:14px}.header-tools{margin-inline-start:auto}
   .hero-inner{grid-template-columns:280px 1fr;gap:46px;min-height:auto;padding:54px 0}
   .books-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .about-grid{grid-template-columns:160px 1fr;gap:32px}
@@ -255,6 +264,7 @@ footer{padding:42px 0 48px;color:#7d776f;font-size:13px}
   body{font-size:16px}
   .wrap{width:min(100% - 28px,var(--max))}
   .site-header{height:68px}.brand-mark{width:38px;height:38px}.brand-copy strong{font-size:14px}.brand-copy span{font-size:12px}
+  .lang-switch a{min-width:28px;height:28px;padding:0 5px;font-size:10px}
   .hero-inner{display:flex;flex-direction:column;gap:26px;padding:34px 0 42px;direction:rtl;text-align:center}
   .portrait-shell{width:min(52vw,196px)}.portrait-shell::before{inset:-8px;border-radius:22px}.portrait{border-radius:17px}
   .hero-copy{width:100%}.eyebrow{display:none}.hero h1{font-size:42px}.hero .latin{font-size:26px}.role{font-size:18px;margin:18px 0 10px}
@@ -284,13 +294,16 @@ footer{padding:42px 0 48px;color:#7d776f;font-size:13px}
       <span class="brand-copy"><strong>أحمد الحافظ</strong><span>Ahmed Alhafiz</span></span>
     </a>
     <nav class="nav" aria-label="التنقل الرئيسي">
-      <a href="#home">الرئيسية</a><a href="#works">المؤلفات</a><a href="#about">عن الكاتب</a><a href="#links">تواصل</a>
+      <a href="#home">الرئيسية</a><a href="#works">المؤلفات</a><a href="/about/">عن الكاتب</a><a href="#links">تواصل</a>
     </nav>
-    <div class="social-mini" aria-label="الروابط الرسمية">
-      <a href="https://medium.com/@AhmedAlhafiz" target="_blank" rel="me noopener noreferrer" aria-label="Medium"><span class="m-icon">M</span></a>
-      <a href="https://www.instagram.com/ahmed_666_8" target="_blank" rel="me noopener noreferrer" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>
-      </a>
+    <div class="header-tools">
+      <div class="social-mini" aria-label="الروابط الرسمية">
+        <a href="https://medium.com/@AhmedAlhafiz" target="_blank" rel="me noopener noreferrer" aria-label="Medium"><span class="m-icon">M</span></a>
+        <a href="https://www.instagram.com/ahmed_666_8" target="_blank" rel="me noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+      <div class="lang-switch" aria-label="اللغة"><a href="/" hreflang="ar" aria-current="page">AR</a><a href="/en/" hreflang="en">EN</a><a href="/de/" hreflang="de">DE</a></div>
     </div>
     <button class="menu-btn" type="button" aria-label="فتح القائمة" aria-expanded="false"><span></span></button>
   </div>
@@ -298,7 +311,7 @@ footer{padding:42px 0 48px;color:#7d776f;font-size:13px}
 
 <div class="mobile-drawer" aria-hidden="true">
   <div class="drawer-backdrop"></div>
-  <div class="drawer-panel"><nav aria-label="قائمة الهاتف"><a href="#home">الرئيسية</a><a href="#works">المؤلفات</a><a href="#about">عن الكاتب</a><a href="#links">تواصل</a></nav></div>
+  <div class="drawer-panel"><nav aria-label="قائمة الهاتف"><a href="#home">الرئيسية</a><a href="#works">المؤلفات</a><a href="/about/">عن الكاتب</a><a href="#links">تواصل</a></nav></div>
 </div>
 
 <main id="main">
@@ -328,6 +341,7 @@ footer{padding:42px 0 48px;color:#7d776f;font-size:13px}
       <div class="section-kicker">About the author</div>
       <h2 class="section-title">عن الكاتب</h2><div class="section-rule"></div>
       <p class="about-copy"><strong>أحمد الحافظ — Ahmed Alhafiz،</strong> كاتب ومؤلف يهتم بالأدب والفكر والتاريخ والقضايا الدينية. تتنوع أعماله بين الرواية والكتابة الفكرية، ويعمل من خلالها على تناول الأسئلة الإنسانية والتاريخية والدينية بلغة تجمع بين السرد والبحث والتأمل.</p>
+      <a class="about-link" href="/about/">الصفحة الكاملة للكاتب ←</a>
     </div>
   </div>
 </section>
@@ -340,22 +354,22 @@ footer{padding:42px 0 48px;color:#7d776f;font-size:13px}
     </div>
     <div class="books-viewport">
       <div class="books-grid" id="booksGrid">
-        <button class="book-card" type="button" data-book="juhayman" aria-label="جهيمان — القيامة بين الركن والمقام">
+        <a class="book-card" href="/books/juhayman/" data-book="juhayman" aria-label="جهيمان — القيامة بين الركن والمقام">
           <span class="book-cover"><img src="juhayman-cover.webp" alt="الغلاف الأمامي لرواية جهيمان — القيامة بين الركن والمقام" loading="lazy"></span>
           <span class="book-title">جهيمان — القيامة بين الركن والمقام</span><span class="book-status">قريبًا</span>
-        </button>
-        <button class="book-card" type="button" data-book="abbas" aria-label="أم عباس لجلب الحبيب ورد المطلقة">
+        </a>
+        <a class="book-card" href="/books/umm-abbas/" data-book="abbas" aria-label="أم عباس لجلب الحبيب ورد المطلقة">
           <span class="book-cover"><img src="umm-abbas-cover.webp" alt="الغلاف الأمامي لرواية أم عباس لجلب الحبيب ورد المطلقة" loading="lazy"></span>
           <span class="book-title">أم عباس لجلب الحبيب وردّ المطلقة</span><span class="book-status">قريبًا</span>
-        </button>
-        <button class="book-card" type="button" data-book="sirou" aria-label="سيروا في الأرض">
+        </a>
+        <a class="book-card" href="/books/sirou-fi-alard/" data-book="sirou" aria-label="سيروا في الأرض">
           <span class="book-cover"><img src="sirou-fi-alard-cover.webp" alt="الغلاف الأمامي لكتاب سيروا في الأرض" loading="lazy"></span>
           <span class="book-title">سيروا في الأرض</span><span class="book-status">قريبًا</span>
-        </button>
-        <button class="book-card" type="button" data-book="kitab" aria-label="كتاب الكتب">
+        </a>
+        <a class="book-card" href="/books/kitab-al-kutub/" data-book="kitab" aria-label="كتاب الكتب">
           <span class="book-cover"><img src="kitab-al-kutub-cover.webp" alt="الغلاف الأمامي لرواية كتاب الكتب" loading="lazy"></span>
           <span class="book-title">كتاب الكتب</span><span class="book-status">قريبًا</span>
-        </button>
+        </a>
       </div>
     </div>
     <div class="carousel-dots" aria-hidden="true"><i class="active"></i><i></i><i></i><i></i></div>
@@ -463,7 +477,9 @@ function closeBook(){
   setTimeout(()=>{if(document.body.contains(clone)){clone.remove();finish();}},520);
 }
 
-document.querySelectorAll('.book-card').forEach(card=>card.addEventListener('click',()=>openBook(card)));
+document.querySelectorAll('.book-card').forEach(card=>card.addEventListener('click',e=>{
+  if(e.button===0&&!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&!e.altKey){e.preventDefault();openBook(card);}
+}));
 overlay.querySelector('.sheet-close').addEventListener('click',closeBook);
 overlay.querySelector('.overlay-backdrop').addEventListener('click',closeBook);
 document.addEventListener('keydown',e=>{if(e.key==='Escape') closeBook();});
