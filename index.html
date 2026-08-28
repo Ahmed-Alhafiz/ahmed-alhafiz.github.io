@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>أحمد الحافظ | Ahmed Alhafiz — كاتب ومؤلف</title>
+  <meta name="description" content="الموقع الرسمي للكاتب والمؤلف أحمد الحافظ — Ahmed Alhafiz. كتابات ومؤلفات في الأدب والفكر والتاريخ والقضايا الدينية.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#090909">
+  <link rel="canonical" href="https://ahmed-alhafiz.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="أحمد الحافظ | Ahmed Alhafiz">
+  <meta property="og:description" content="الموقع الرسمي للكاتب والمؤلف أحمد الحافظ — Ahmed Alhafiz.">
+  <meta property="og:url" content="https://ahmed-alhafiz.github.io/">
+  <meta property="og:image" content="https://ahmed-alhafiz.github.io/ahmed-alhafiz-author.png">
+  <meta property="og:image:alt" content="أحمد الحافظ — Ahmed Alhafiz">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfilePage",
+    "url":"https://ahmed-alhafiz.github.io/",
+    "mainEntity":{
+      "@type":"Person",
+      "name":"Ahmed Alhafiz",
+      "alternateName":"أحمد الحافظ",
+      "url":"https://ahmed-alhafiz.github.io/",
+      "image":"https://ahmed-alhafiz.github.io/ahmed-alhafiz-author.png",
+      "sameAs":[
+        "https://medium.com/@AhmedAlhafiz",
+        "https://www.instagram.com/ahmed_666_8"
+      ]
+    }
+  }
+  </script>
+
+<style>
+:root{
+  --bg:#080808;
+  --bg-2:#0d0c0b;
+  --panel:#10100f;
+  --panel-2:#141310;
+  --text:#eee8df;
+  --muted:#aaa39a;
+  --gold:#b58a50;
+  --gold-2:#d0a865;
+  --line:rgba(181,138,80,.26);
+  --line-soft:rgba(255,255,255,.075);
+  --shadow:0 24px 80px rgba(0,0,0,.42);
+  --radius:20px;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(900px 460px at 18% 5%, rgba(181,138,80,.065), transparent 58%),
+    linear-gradient(180deg,#090909 0%,#080808 56%,#0a0908 100%);
+  font-family:"Noto Naskh Arabic","Amiri","Geeza Pro",Tahoma,Arial,sans-serif;
+  font-size:17px;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+body.modal-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+.skip{position:fixed;top:8px;inset-inline-start:8px;z-index:9999;padding:8px 12px;background:#fff;color:#111;transform:translateY(-150%)}
+.skip:focus{transform:none}
+
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:80;
+  height:76px;
+  background:rgba(8,8,8,.88);
+  backdrop-filter:blur(18px) saturate(.9);
+  -webkit-backdrop-filter:blur(18px) saturate(.9);
+  border-bottom:1px solid var(--line-soft);
+}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:11px;direction:ltr}
+.brand-mark{
+  width:43px;height:43px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;
+  color:var(--gold-2);font-family:Georgia,"Times New Roman",serif;font-size:18px;letter-spacing:.04em
+}
+.brand-copy{line-height:1.2;text-align:left}
+.brand-copy strong{display:block;color:var(--gold-2);font-size:16px;font-weight:600;direction:rtl}
+.brand-copy span{display:block;color:#d7c3a6;font-family:Georgia,"Times New Roman",serif;font-size:13px;margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px;font-size:15px;color:#c7c0b6}
+.nav a{position:relative;padding:8px 0;transition:color .2s ease}
+.nav a:hover,.nav a:focus-visible{color:var(--text)}
+.nav a::after{content:"";position:absolute;inset-inline:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .2s ease}
+.nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+.social-mini{display:flex;gap:8px;direction:ltr}
+.social-mini a{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;color:#d9d2c8;border:1px solid transparent}
+.social-mini a:hover,.social-mini a:focus-visible{border-color:var(--line);color:var(--gold-2)}
+.menu-btn{display:none;width:42px;height:42px;border:0;background:transparent;color:var(--gold-2);cursor:pointer}
+.menu-btn span,.menu-btn::before,.menu-btn::after{content:"";display:block;width:24px;height:1.5px;background:currentColor;margin:5px auto;transition:.2s ease}
+.mobile-menu{display:none}
+
+/* Hero */
+.hero{border-bottom:1px solid var(--line-soft)}
+.hero-inner{min-height:610px;display:grid;grid-template-columns:minmax(280px,360px) minmax(0,1fr);gap:82px;align-items:center;padding:58px 0 62px;direction:ltr}
+.portrait-shell{direction:ltr;justify-self:center;position:relative;width:min(100%,340px)}
+.portrait-shell::before{content:"";position:absolute;inset:-13px;border:1px solid rgba(181,138,80,.32);border-radius:28px;pointer-events:none}
+.portrait{
+  width:100%;height:auto;border-radius:22px;border:1px solid rgba(181,138,80,.62);box-shadow:var(--shadow);
+  background:#8c7f73;
+}
+/* Original image: no filter, no crop, no transform */
+.hero-copy{direction:rtl;max-width:650px;justify-self:center;text-align:center}
+.eyebrow{font-size:13px;color:var(--gold-2);letter-spacing:.03em;margin-bottom:8px}
+.hero h1{font-size:clamp(48px,5vw,74px);line-height:1.1;margin:0;color:#f0e8dc;font-weight:600}
+.hero .latin{font-family:Georgia,"Times New Roman",serif;color:var(--gold-2);font-size:clamp(32px,3.2vw,47px);line-height:1.2;margin-top:8px;direction:ltr}
+.role{display:flex;align-items:center;justify-content:center;gap:12px;margin:25px 0 14px;font-size:20px;font-weight:600;color:#e4ddd2}
+.role::before,.role::after{content:"";width:36px;height:1px;background:var(--gold)}
+.hero-lead{margin:0 auto;color:#bcb5aa;max-width:560px;font-size:18px;line-height:2}
+.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:28px;direction:ltr}
+.platform-btn{min-width:168px;min-height:48px;border:1px solid rgba(181,138,80,.55);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:10px;color:#d8c4a3;background:rgba(181,138,80,.02);transition:.2s ease}
+.platform-btn.medium{background:var(--gold-2);color:#16120d;border-color:var(--gold-2);font-weight:700}
+.platform-btn:hover,.platform-btn:focus-visible{transform:translateY(-2px);border-color:var(--gold-2)}
+.platform-btn.medium:hover,.platform-btn.medium:focus-visible{background:#d7b16f}
+.m-icon{font-family:Georgia,"Times New Roman",serif;font-size:21px;font-weight:700}
+
+/* Editorial section base */
+.section{padding:84px 0;border-bottom:1px solid var(--line-soft)}
+.section-kicker{color:var(--gold);font-family:Georgia,"Times New Roman",serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
+.section-title{font-size:42px;line-height:1.25;margin:0;color:var(--gold-2);font-weight:600}
+.section-rule{width:64px;height:1px;background:var(--gold);margin-top:16px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:220px 1fr;gap:50px;align-items:start}
+.about-index{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-family:Georgia,"Times New Roman",serif;font-size:13px;letter-spacing:.08em;direction:ltr}
+.about-copy{font-size:20px;line-height:2.15;color:#d6d0c7;margin:0;max-width:800px}
+.about-copy strong{color:#f0e7db;font-weight:600}
+
+/* Works */
+.works{padding-top:78px}
+.works-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:38px}
+.works-subtle{color:#8f887f;font-size:15px;margin:0}
+.books-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;direction:rtl}
+.book-card{
+  appearance:none;border:1px solid rgba(181,138,80,.24);background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.004));
+  padding:11px 11px 17px;border-radius:16px;color:inherit;text-align:center;cursor:pointer;position:relative;
+  transition:transform .28s ease,border-color .28s ease,background .28s ease;overflow:hidden
+}
+.book-card::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);pointer-events:none}
+.book-card:hover,.book-card:focus-visible{transform:translateY(-5px);border-color:rgba(208,168,101,.5);background:rgba(255,255,255,.026)}
+.book-cover{aspect-ratio:2/3;display:grid;place-items:center;background:#0b0b0b;border-radius:10px;overflow:hidden}
+.book-cover img{width:100%;height:100%;object-fit:contain;background:#0b0b0b}
+.book-title{display:block;color:#e5c28d;font-size:18px;line-height:1.55;margin-top:14px;min-height:56px}
+.book-status{display:inline-block;color:#b7afa4;font-size:14px;margin-top:4px}
+.book-status::before,.book-status::after{content:"";display:inline-block;width:18px;height:1px;background:rgba(181,138,80,.55);vertical-align:middle;margin:0 8px}
+
+.carousel-dots{display:none}
+
+/* Links */
+.links-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:620px;margin-top:32px}
+.link-card{border-top:1px solid var(--line);padding:20px 0;display:flex;align-items:center;justify-content:space-between;color:#ddd5ca;transition:.2s ease}
+.link-card:hover,.link-card:focus-visible{color:var(--gold-2);padding-inline:8px}
+.link-card strong{font-family:Georgia,"Times New Roman",serif;font-size:20px}
+.link-card span{font-size:14px;color:#8f887f}
+
+footer{padding:42px 0 48px;color:#7d776f;font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;direction:ltr}
+.footer-brand{font-family:Georgia,"Times New Roman",serif;color:#b79c78}
+
+/* Mobile menu */
+.mobile-drawer{position:fixed;inset:0;z-index:95;pointer-events:none;visibility:hidden}
+.mobile-drawer.open{pointer-events:auto;visibility:visible}
+.drawer-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.68);opacity:0;transition:.25s ease}
+.mobile-drawer.open .drawer-backdrop{opacity:1}
+.drawer-panel{position:absolute;top:0;inset-inline-end:0;width:min(82vw,330px);height:100%;background:#0d0d0c;border-inline-start:1px solid var(--line-soft);padding:90px 28px 30px;transform:translateX(-102%);transition:.28s cubic-bezier(.2,.7,.2,1)}
+.mobile-drawer.open .drawer-panel{transform:none}
+.drawer-panel nav{display:grid;gap:6px}
+.drawer-panel a{padding:14px 0;border-bottom:1px solid var(--line-soft);font-size:18px;color:#d9d2c8}
+
+/* Book details overlay */
+.book-overlay{position:fixed;inset:0;z-index:120;display:none;align-items:center;justify-content:center;padding:28px}
+.book-overlay.open{display:flex}
+.overlay-backdrop{position:absolute;inset:0;background:rgba(4,4,4,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);opacity:0;transition:opacity .28s ease}
+.book-overlay.ready .overlay-backdrop{opacity:1}
+.book-sheet{
+  position:relative;width:min(1120px,96vw);height:min(780px,91vh);background:#0e0e0d;border:1px solid rgba(181,138,80,.36);
+  border-radius:20px;box-shadow:0 32px 110px rgba(0,0,0,.6);overflow:hidden;opacity:0;transform:translateY(12px) scale(.995);transition:opacity .3s ease,transform .3s ease
+}
+.book-overlay.ready .book-sheet{opacity:1;transform:none}
+.sheet-close{position:absolute;top:18px;inset-inline-start:18px;z-index:5;width:42px;height:42px;border:1px solid rgba(181,138,80,.45);border-radius:50%;background:#0b0b0a;color:#d7b16f;font-size:26px;line-height:1;cursor:pointer}
+.sheet-grid{height:100%;display:grid;grid-template-columns:minmax(300px,40%) 1fr;gap:0;direction:ltr}
+.sheet-visual{background:#090909;border-inline-end:1px solid var(--line-soft);display:flex;align-items:center;justify-content:center;padding:44px 36px;overflow:hidden}
+.sheet-visual img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 20px 55px rgba(0,0,0,.42)}
+.sheet-copy{direction:rtl;padding:52px 58px 50px;overflow:auto;scrollbar-width:thin;scrollbar-color:#655039 #12110f}
+.sheet-status{display:inline-block;border:1px solid rgba(181,138,80,.42);border-radius:999px;padding:5px 16px;color:#cba268;font-size:14px;margin-bottom:14px}
+.sheet-title{font-size:38px;line-height:1.3;color:#e4bd82;margin:0 0 4px}
+.sheet-subtitle{color:#a9a198;font-size:16px;margin-bottom:25px}
+.sheet-copy hr{border:0;border-top:1px solid var(--line);margin:0 0 25px}
+.sheet-blurb{color:#d1cbc2;font-size:17px;line-height:2.1}
+.sheet-blurb p{margin:0 0 15px}
+.sheet-blurb .lead{color:#dcb476}
+
+/* Shared cover transition clone */
+.cover-flight{position:fixed;z-index:140;pointer-events:none;object-fit:contain;background:#090909;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.48);will-change:transform,width,height,left,top}
+
+@media (max-width:980px){
+  .nav,.social-mini{display:none}.menu-btn{display:block}
+  .hero-inner{grid-template-columns:280px 1fr;gap:46px;min-height:auto;padding:54px 0}
+  .books-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about-grid{grid-template-columns:160px 1fr;gap:32px}
+  .sheet-grid{grid-template-columns:36% 1fr}.sheet-copy{padding:44px 38px}
+}
+
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{width:min(100% - 28px,var(--max))}
+  .site-header{height:68px}.brand-mark{width:38px;height:38px}.brand-copy strong{font-size:14px}.brand-copy span{font-size:12px}
+  .hero-inner{display:flex;flex-direction:column;gap:26px;padding:34px 0 42px;direction:rtl;text-align:center}
+  .portrait-shell{width:min(52vw,196px)}.portrait-shell::before{inset:-8px;border-radius:22px}.portrait{border-radius:17px}
+  .hero-copy{width:100%}.eyebrow{display:none}.hero h1{font-size:42px}.hero .latin{font-size:26px}.role{font-size:18px;margin:18px 0 10px}
+  .hero-lead{font-size:16px;line-height:1.9;max-width:320px}.hero-actions{gap:8px;margin-top:20px}.platform-btn{min-width:0;flex:1;max-width:172px;min-height:44px;font-size:14px}
+  .section{padding:62px 0}.section-title{font-size:36px}.about-grid{display:block}.about-index{display:none}.about-copy{font-size:17px;line-height:2.05}
+  .works{padding-top:58px}.works-head{display:block;margin-bottom:24px}.works-subtle{margin-top:6px}
+  .books-viewport{margin-inline:-14px;overflow:hidden}
+  .books-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:14px;padding:8px 14px 18px;direction:rtl;scrollbar-width:none}
+  .books-grid::-webkit-scrollbar{display:none}.book-card{flex:0 0 78vw;max-width:300px;scroll-snap-align:center;padding:10px 10px 16px}.book-title{font-size:18px;min-height:auto;margin-top:12px}
+  .carousel-dots{display:flex;justify-content:center;gap:7px;margin-top:6px;direction:ltr}.carousel-dots i{width:6px;height:6px;border-radius:50%;background:#49443d;transition:.2s}.carousel-dots i.active{width:20px;border-radius:999px;background:var(--gold)}
+  .links-grid{grid-template-columns:1fr;margin-top:22px}.link-card{padding:16px 0}
+  .footer-inner{display:block;text-align:center}.footer-brand{margin-top:6px}
+  .book-overlay{padding:0;align-items:stretch}.book-sheet{width:100%;height:100%;max-height:none;border:0;border-radius:0}.sheet-grid{display:block;height:100%;overflow:auto;background:#0e0e0d}.sheet-visual{height:auto;min-height:46vh;padding:70px 30px 28px;border:0;border-bottom:1px solid var(--line-soft)}.sheet-visual img{max-height:56vh;max-width:78vw}.sheet-copy{overflow:visible;padding:28px 24px 70px}.sheet-title{font-size:30px}.sheet-blurb{font-size:16px;line-height:2}.sheet-close{position:fixed;top:max(14px,env(safe-area-inset-top));inset-inline-start:14px;background:rgba(12,12,11,.9)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">تجاوز إلى المحتوى</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#home" aria-label="أحمد الحافظ — الصفحة الرئيسية">
+      <span class="brand-mark" aria-hidden="true">AA</span>
+      <span class="brand-copy"><strong>أحمد الحافظ</strong><span>Ahmed Alhafiz</span></span>
+    </a>
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <a href="#home">الرئيسية</a><a href="#works">المؤلفات</a><a href="#about">عن الكاتب</a><a href="#links">تواصل</a>
+    </nav>
+    <div class="social-mini" aria-label="الروابط الرسمية">
+      <a href="https://medium.com/@AhmedAlhafiz" target="_blank" rel="me noopener noreferrer" aria-label="Medium"><span class="m-icon">M</span></a>
+      <a href="https://www.instagram.com/ahmed_666_8" target="_blank" rel="me noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>
+      </a>
+    </div>
+    <button class="menu-btn" type="button" aria-label="فتح القائمة" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-drawer" aria-hidden="true">
+  <div class="drawer-backdrop"></div>
+  <div class="drawer-panel"><nav aria-label="قائمة الهاتف"><a href="#home">الرئيسية</a><a href="#works">المؤلفات</a><a href="#about">عن الكاتب</a><a href="#links">تواصل</a></nav></div>
+</div>
+
+<main id="main">
+<section class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div class="portrait-shell">
+      <img class="portrait" src="ahmed-alhafiz-author.png" width="1229" height="1536" alt="أحمد الحافظ — Ahmed Alhafiz" fetchpriority="high">
+    </div>
+    <div class="hero-copy">
+      <div class="eyebrow">الموقع الرسمي</div>
+      <h1>أحمد الحافظ</h1>
+      <div class="latin">Ahmed Alhafiz</div>
+      <div class="role">كاتب ومؤلف</div>
+      <p class="hero-lead">يكتب في الأدب والفكر والتاريخ والقضايا الدينية.</p>
+      <div class="hero-actions">
+        <a class="platform-btn medium" href="https://medium.com/@AhmedAlhafiz" target="_blank" rel="me noopener noreferrer"><span class="m-icon">M</span><span>Medium</span></a>
+        <a class="platform-btn" href="https://www.instagram.com/ahmed_666_8" target="_blank" rel="me noopener noreferrer"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg><span>Instagram</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-index">ABOUT / 01</div>
+    <div>
+      <div class="section-kicker">About the author</div>
+      <h2 class="section-title">عن الكاتب</h2><div class="section-rule"></div>
+      <p class="about-copy"><strong>أحمد الحافظ — Ahmed Alhafiz،</strong> كاتب ومؤلف يهتم بالأدب والفكر والتاريخ والقضايا الدينية. تتنوع أعماله بين الرواية والكتابة الفكرية، ويعمل من خلالها على تناول الأسئلة الإنسانية والتاريخية والدينية بلغة تجمع بين السرد والبحث والتأمل.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section works" id="works">
+  <div class="wrap">
+    <div class="works-head">
+      <div><div class="section-kicker">Selected works</div><h2 class="section-title">المؤلفات</h2><div class="section-rule"></div></div>
+      <p class="works-subtle">قيد الإصدار</p>
+    </div>
+    <div class="books-viewport">
+      <div class="books-grid" id="booksGrid">
+        <button class="book-card" type="button" data-book="juhayman" aria-label="جهيمان — القيامة بين الركن والمقام">
+          <span class="book-cover"><img src="juhayman-cover.webp" alt="الغلاف الأمامي لرواية جهيمان — القيامة بين الركن والمقام" loading="lazy"></span>
+          <span class="book-title">جهيمان — القيامة بين الركن والمقام</span><span class="book-status">قريبًا</span>
+        </button>
+        <button class="book-card" type="button" data-book="abbas" aria-label="أم عباس لجلب الحبيب ورد المطلقة">
+          <span class="book-cover"><img src="umm-abbas-cover.webp" alt="الغلاف الأمامي لرواية أم عباس لجلب الحبيب ورد المطلقة" loading="lazy"></span>
+          <span class="book-title">أم عباس لجلب الحبيب وردّ المطلقة</span><span class="book-status">قريبًا</span>
+        </button>
+        <button class="book-card" type="button" data-book="sirou" aria-label="سيروا في الأرض">
+          <span class="book-cover"><img src="sirou-fi-alard-cover.webp" alt="الغلاف الأمامي لكتاب سيروا في الأرض" loading="lazy"></span>
+          <span class="book-title">سيروا في الأرض</span><span class="book-status">قريبًا</span>
+        </button>
+        <button class="book-card" type="button" data-book="kitab" aria-label="كتاب الكتب">
+          <span class="book-cover"><img src="kitab-al-kutub-cover.webp" alt="الغلاف الأمامي لرواية كتاب الكتب" loading="lazy"></span>
+          <span class="book-title">كتاب الكتب</span><span class="book-status">قريبًا</span>
+        </button>
+      </div>
+    </div>
+    <div class="carousel-dots" aria-hidden="true"><i class="active"></i><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<section class="section" id="links">
+  <div class="wrap">
+    <div class="section-kicker">Official links</div><h2 class="section-title">الروابط الرسمية</h2><div class="section-rule"></div>
+    <div class="links-grid">
+      <a class="link-card" href="https://medium.com/@AhmedAlhafiz" target="_blank" rel="me noopener noreferrer"><strong>Medium</strong><span>↗</span></a>
+      <a class="link-card" href="https://www.instagram.com/ahmed_666_8" target="_blank" rel="me noopener noreferrer"><strong>Instagram</strong><span>↗</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap footer-inner"><div>© 2026 جميع الحقوق محفوظة</div><div class="footer-brand">Ahmed Alhafiz</div></div></footer>
+
+<!-- Book overlay, populated from exact full blurbs below -->
+<div class="book-overlay" id="bookOverlay" aria-hidden="true">
+  <div class="overlay-backdrop"></div>
+  <article class="book-sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <button class="sheet-close" type="button" aria-label="إغلاق">×</button>
+    <div class="sheet-grid">
+      <div class="sheet-visual"><img id="sheetImage" src="" alt=""></div>
+      <div class="sheet-copy">
+        <div class="sheet-status">قريبًا</div>
+        <h3 class="sheet-title" id="sheetTitle"></h3>
+        <div class="sheet-subtitle" id="sheetSubtitle"></div><hr>
+        <div class="sheet-blurb" id="sheetBlurb"></div>
+      </div>
+    </div>
+  </article>
+</div>
+
+<script>
+const BOOKS = {
+  sirou: {
+    title:'سيروا في الأرض', subtitle:'رحلة في خلق الكون بين الوحي والعلم', image:'sirou-fi-alard-cover.webp',
+    blurb:`<p>ينطلق هذا الكتاب من آية قرآنية لا يقرأها بوصفها عنوانًا جميلًا فحسب، بل بوصفها منهجًا كاملًا للنظر: <span class="lead">«قل سيروا في الأرض فانظروا كيف بدأ الخلق»</span>.</p><p>ومن هذه الآية يفتح الكتاب طريقًا هادئًا بين الإيمان والمعرفة، بين خشوع القلب ويقظة العقل في زمن صار فيه السؤال العلمي عند بعض المتدينين موضع خوف، وصار الدين عند بعض المائلين إلى العلم موضع اتهام.</p><p>الفكرة المركزية في الكتاب أن الصدام بين الدين والعلم ليس قدرًا محتومًا، وأن كثيرًا من المعارك الدائرة في الوعي العربي هي نتيجة سوء فهم مزدوج: تدين يخاف من السؤال كأنه تهديد للإيمان، ونزعة علمية أو علمانية ترى في الدين خصمًا للعقل قبل أن تمنحه فرصة أن يكون مجرى للبحث والنظر.</p><p>هذا الكتاب لا يريد أن يربح مناظرة عابرة، بل أن يغير علاقة القارئ بالسؤال: أن يصير السؤال أقل رعبًا، والنظر أكثر أدبًا، والقرآن أكثر حضورًا، والعلم أكثر تواضعًا.</p>`
+  },
+  kitab: {
+    title:'كتاب الكتب', subtitle:'رواية تاريخية فلسفية', image:'kitab-al-kutub-cover.webp',
+    blurb:`<p class="lead">لم يفتح المغول أبواب بغداد.<br>الذين في الداخل فتحوها أولًا.</p><p>فتحها أمراء أكلوا الدولة حتى لم يبق منها إلا اسمها، وكتبة غسلوا الخيانة بالحبر، وعلماء علّموا الناس أن الصمت نجاة، وأن طاعة العاجز فضيلة، وأن دم الفقراء أقل حرمة من هيبة القصور. وحين وصل الغزاة، لم يهدموا دولة حية؛ بل ركلوا جثة كان رجالها ما يزالون يتشاجرون على حليها.</p><p>وسط هذا السواد، يحمل سراج الورّاق كتابًا يظنه ذاكرة للعالم. لكنه يكتشف أن الكتاب قد يكون أكثر قذارة من السيف؛ فالسيف يقتل مرة، أما الكلمة المزورة فتقتل الضحية، ثم تمحو اسمها، ثم تكتب فوق قبرها أن أحدًا لم يقتلها.</p><p>من بغداد المحترقة إلى ميافارقين وحلب ودمشق وعين جالوت ومراغة وشحطب، يعبر سراج مدنًا أكلها الجوع قبل الحصار، وباعها رجالها قبل أن يقتحمها العدو. يرى القصور مضاءة، والدواوين ترتب أسماء القتلى كما ترتب الضرائب، والخونة ينجون لأنهم كتبوا الخبر، والشجعان يموتون لأنهم لم يملكوا ختمًا يثبت أنهم كانوا شجعانًا.</p><p class="lead">هذه ليست رواية عن كتاب.</p><p>إنها محاكمة لأمة تعلمت أن تسمي عجزها قدرًا، وخوفها حكمة، وخياناتها سياسة. رواية عن الدم حين يصبح أرخص من لقب، وعن الجهل حين يلبس ثياب العلم، وعن التاريخ حين يكتبه الرجال أنفسهم الذين سلّموا المدن إلى قاتليها.</p><p class="lead">لم تُهزم تلك البلاد لأن عدوها كان قويًا فقط.<br>هُزمت لأن الذين حكموا قصورها كانوا أشد قسوة عليها من الذين جاؤوا لذبحها.</p>`
+  },
+  abbas: {
+    title:'أم عباس لجلب الحبيب وردّ المطلقة', subtitle:'رواية رعب نفسي', image:'umm-abbas-cover.webp',
+    blurb:`<p class="lead">لا تسأل: أكانت مريم ملبوسة؟<br>بل اسأل: كم يحتاج البيت من الخوف حتى يصدق أن ابنته لم تعد وحدها في جسدها.</p><p>بدأ الأمر بورقة.</p><p>وورقة لا تدري أهي طلسم، أم مزحة، أم عارض مرض، أم باب صغير تركه العقل مواربًا.</p><p>لكن الورق، إذا مسّه الخوف، لا يبقى ورقًا. يصير شاهدًا. ويغدو الجسد محكمة. ويصبح أقرب الناس إليك أول من يفتش فيك عن الغريب.</p><p>في هذا البيت، لا أحد يمتلك الحقيقة كاملة. أم ترتجف باسم النجاة. وأب يلوذ بالعقل كي لا ينهار. ومريم، بين الطبيب والشيخ، بين المرآة والسرير، بين صوتها وما يشبه صوتها، تواجه السؤال الذي لا يجرؤ أحد على سماعه:</p><p class="lead">إن لم أكن أنا من يفعل هذا... فمن يستعملني؟<br>وإن كنت أنا...<br>فمن بقي مني؟</p><p>«أم عباس لجلب الحبيب ورد المطلقة» رواية عن الخوف حين لا يطرق الباب.</p>`
+  },
+  juhayman: {
+    title:'جهيمان — القيامة بين الركن والمقام', subtitle:'رواية', image:'juhayman-cover.webp',
+    blurb:`<p class="lead">فجر الأول من محرّم سنة 1400هـ، انتهت الصلاة في المسجد الحرام... ثم ظهرت البنادق.</p><p>لم يكن ما جرى في مكة خيالًا. في 20 نوفمبر 1979 أُغلقت أبواب الحرم، وأُعلن محمد بن عبد الله القحطاني «المهدي»، وبايعه رجال بين الركن والمقام، وبدأ حصار انتهى بالموت والأسر والدم.</p><p>لكن هذه الرواية لا تسأل فقط: ماذا حدث؟<br>بل تسأل السؤال الأخطر:</p><p class="lead">كيف يصل رجل يخاف الله، ويحفظ النصوص، ويظن أنه ينصر الدين، إلى اللحظة التي يرفع فيها سلاحه على مسلم باسم الله؟</p><p>هنا يبدأ الطريق قبل الرصاصة بوقت طويل؛ بآية صحيحة، وحديث صحيح، وغضب على ظلم، وصحبة تمنح اليقين، ثم خطوة صغيرة بين النص وتفسيره، وأخرى بين الحكم والفرد، وأخرى بين الطاعة والبيعة، حتى يصبح ما كان مستحيلًا بالأمس واجبًا في عقل صاحبه.</p><p>وليس هذا الطريق حكرًا على زمن واحد. تتغير الوجوه والرايات والأسماء؛ مرة يعلّق الخلاص على مهدي، ومرة تعقد الطاعة لأمير، ومرة يرفع اسم خليفة. تختلف الجماعات والعقائد والظروف، لكن بعض الآليات تعود: يقين لا يقبل أن يُختبر، وتأويل يضيق حتى لا يبقى خارج الجماعة إلا متهم، ثم رصاص يجد طريقه إلى المسلمين قبل أعدائهم.</p><p>بين التاريخ والدين والفلسفة والمناظرة، تتبع «جهيمان — القيامة بين الركن والمقام» ذلك الطريق من بدايته؛ لا لتسخر من الإيمان، بل لتسأل باسم الإيمان نفسه:</p><p class="lead">أين ينتهي النص... وأين يبدأ الإنسان في تحميله ما لم يقل؟</p><p>لأن أخطر الأفكار ليست دائمًا تلك التي تأتي بلا دليل، بل تلك التي تحمل من الحقيقة ما يكفي لتقود إلى الباطل.</p>`
+  }
+};
+
+const overlay = document.getElementById('bookOverlay');
+const sheet = overlay.querySelector('.book-sheet');
+const sheetImage = document.getElementById('sheetImage');
+const sheetTitle = document.getElementById('sheetTitle');
+const sheetSubtitle = document.getElementById('sheetSubtitle');
+const sheetBlurb = document.getElementById('sheetBlurb');
+let activeCard = null;
+let flight = null;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function populateBook(key){
+  const b=BOOKS[key];
+  sheetImage.src=b.image; sheetImage.alt='الغلاف الأمامي لـ '+b.title;
+  sheetTitle.textContent=b.title; sheetSubtitle.textContent=b.subtitle; sheetBlurb.innerHTML=b.blurb;
+}
+
+async function openBook(card){
+  const key=card.dataset.book; activeCard=card; populateBook(key);
+  overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false'); document.body.classList.add('modal-open');
+  try{ await sheetImage.decode(); }catch(_e){}
+  requestAnimationFrame(()=>{
+    overlay.classList.add('ready');
+    if(reduced){ setTimeout(()=>overlay.querySelector('.sheet-close').focus(),30); return; }
+    const src=card.querySelector('.book-cover img'); const a=src.getBoundingClientRect();
+    sheetImage.style.visibility='hidden';
+    requestAnimationFrame(()=>{
+      const b=sheetImage.getBoundingClientRect();
+      if(!b.width || !b.height){ sheetImage.style.visibility='visible'; overlay.querySelector('.sheet-close').focus(); return; }
+      flight=src.cloneNode(); flight.className='cover-flight';
+      Object.assign(flight.style,{left:a.left+'px',top:a.top+'px',width:a.width+'px',height:a.height+'px'}); document.body.appendChild(flight);
+      const anim=flight.animate([
+        {left:a.left+'px',top:a.top+'px',width:a.width+'px',height:a.height+'px',borderRadius:'10px'},
+        {left:b.left+'px',top:b.top+'px',width:b.width+'px',height:b.height+'px',borderRadius:'8px'}
+      ],{duration:460,easing:'cubic-bezier(.2,.72,.18,1)',fill:'forwards'});
+      anim.onfinish=()=>{sheetImage.style.visibility='visible'; flight.remove(); flight=null; overlay.querySelector('.sheet-close').focus();};
+    });
+  });
+}
+
+function closeBook(){
+  if(!overlay.classList.contains('open')) return;
+  const finish=()=>{overlay.classList.remove('ready','open');overlay.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');sheetImage.style.visibility='visible'; if(activeCard){activeCard.focus();activeCard=null;}};
+  if(reduced || !activeCard){finish();return;}
+  const src=activeCard.querySelector('.book-cover img'); const target=src.getBoundingClientRect(); const from=sheetImage.getBoundingClientRect();
+  sheetImage.style.visibility='hidden';
+  const clone=sheetImage.cloneNode(); clone.className='cover-flight'; clone.src=sheetImage.src; Object.assign(clone.style,{left:from.left+'px',top:from.top+'px',width:from.width+'px',height:from.height+'px'}); document.body.appendChild(clone);
+  overlay.classList.remove('ready');
+  const anim=clone.animate([{left:from.left+'px',top:from.top+'px',width:from.width+'px',height:from.height+'px'},{left:target.left+'px',top:target.top+'px',width:target.width+'px',height:target.height+'px'}],{duration:380,easing:'cubic-bezier(.3,0,.2,1)',fill:'forwards'});
+  anim.onfinish=()=>{clone.remove();finish();};
+  setTimeout(()=>{if(document.body.contains(clone)){clone.remove();finish();}},520);
+}
+
+document.querySelectorAll('.book-card').forEach(card=>card.addEventListener('click',()=>openBook(card)));
+overlay.querySelector('.sheet-close').addEventListener('click',closeBook);
+overlay.querySelector('.overlay-backdrop').addEventListener('click',closeBook);
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closeBook();});
+
+// Mobile carousel indicator
+const grid=document.getElementById('booksGrid'); const dots=[...document.querySelectorAll('.carousel-dots i')];
+function updateDots(){ if(innerWidth>640)return; const cards=[...grid.children]; const center=grid.scrollLeft+grid.clientWidth/2; let best=0,dist=Infinity; cards.forEach((c,i)=>{const d=Math.abs((c.offsetLeft+c.offsetWidth/2)-center); if(d<dist){dist=d;best=i;}}); dots.forEach((d,i)=>d.classList.toggle('active',i===best)); }
+grid.addEventListener('scroll',()=>requestAnimationFrame(updateDots),{passive:true}); addEventListener('resize',updateDots); setTimeout(updateDots,60);
+
+// Mobile navigation
+const menuBtn=document.querySelector('.menu-btn'); const drawer=document.querySelector('.mobile-drawer');
+function toggleMenu(open){drawer.classList.toggle('open',open);drawer.setAttribute('aria-hidden',String(!open));menuBtn.setAttribute('aria-expanded',String(open));}
+menuBtn.addEventListener('click',()=>toggleMenu(!drawer.classList.contains('open'))); drawer.querySelector('.drawer-backdrop').addEventListener('click',()=>toggleMenu(false)); drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
+</script>
+</body>
+</html>
