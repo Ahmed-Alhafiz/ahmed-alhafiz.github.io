@@ -8,7 +8,7 @@
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#090909">
   <link rel="canonical" href="https://ahmed-alhafiz.github.io/">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="96x96">
 
   <meta property="og:type" content="profile">
   <meta property="og:title" content="أحمد الحافظ | Ahmed Alhafiz">
@@ -16,24 +16,58 @@
   <meta property="og:url" content="https://ahmed-alhafiz.github.io/">
   <meta property="og:image" content="https://ahmed-alhafiz.github.io/ahmed-alhafiz-author.png">
   <meta property="og:image:alt" content="أحمد الحافظ — Ahmed Alhafiz">
+  <meta property="og:image:width" content="1229">
+  <meta property="og:image:height" content="1536">
   <meta name="twitter:card" content="summary_large_image">
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"ProfilePage",
-    "url":"https://ahmed-alhafiz.github.io/",
-    "mainEntity":{
-      "@type":"Person",
-      "name":"Ahmed Alhafiz",
-      "alternateName":"أحمد الحافظ",
-      "url":"https://ahmed-alhafiz.github.io/",
-      "image":"https://ahmed-alhafiz.github.io/ahmed-alhafiz-author.png",
-      "sameAs":[
-        "https://medium.com/@AhmedAlhafiz",
-        "https://www.instagram.com/ahmed_666_8"
-      ]
-    }
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://ahmed-alhafiz.github.io/#website",
+        "url": "https://ahmed-alhafiz.github.io/",
+        "name": "أحمد الحافظ",
+        "alternateName": "Ahmed Alhafiz",
+        "inLanguage": "ar",
+        "publisher": {
+          "@id": "https://ahmed-alhafiz.github.io/#person"
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://ahmed-alhafiz.github.io/#profilepage",
+        "url": "https://ahmed-alhafiz.github.io/",
+        "name": "أحمد الحافظ — Ahmed Alhafiz",
+        "inLanguage": "ar",
+        "isPartOf": {
+          "@id": "https://ahmed-alhafiz.github.io/#website"
+        },
+        "mainEntity": {
+          "@id": "https://ahmed-alhafiz.github.io/#person"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://ahmed-alhafiz.github.io/#person",
+        "name": "أحمد الحافظ",
+        "alternateName": "Ahmed Alhafiz",
+        "url": "https://ahmed-alhafiz.github.io/",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://ahmed-alhafiz.github.io/ahmed-alhafiz-author.png",
+          "width": 1229,
+          "height": 1536
+        },
+        "jobTitle": "كاتب ومؤلف",
+        "description": "كاتب ومؤلف يهتم بالأدب والفكر والتاريخ والقضايا الدينية، وتتنوّع أعماله بين الرواية والكتابة الفكرية.",
+        "sameAs": [
+          "https://medium.com/@AhmedAlhafiz",
+          "https://www.instagram.com/ahmed_666_8"
+        ]
+      }
+    ]
   }
   </script>
 
