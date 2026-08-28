@@ -68,3 +68,11 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: file creation commit recorded by GitHub.
 - Status: `EXECUTED_VERIFIED`
 - Next: update recurring task prompts so they explicitly read both shared files before acting and append verified actions to this ledger.
+
+### 2026-08-29 — Shared-memory orchestration linked to all five SEO tasks
+- Task: orchestration / all SEO tasks
+- Book: all; operational priority = أم عباس + قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Action: updated all five active SEO task prompts so each must read `.github/SEO_SOURCE_OF_TRUTH.md` and `.github/SEO_OPERATIONS_LEDGER.md` before selecting an action; avoid executed/rejected/awaiting-measurement work; refetch the newest ledger and SHA before appending; preserve history; retry one merge on write conflict; and keep private/unannounced publication data out of the public repository.
+- Verification: post-update automation inspection confirmed the five intended SEO tasks are enabled and contain the shared-memory rule. A concurrent task run occurred during setup, but repository history showed no competing commit after creation of the ledger before this entry was written.
+- Status: `EXECUTED_VERIFIED`
+- Next: allow the coordinated tasks to operate; evaluate new ledger entries and real search/traffic measurements rather than repeatedly redesigning the orchestration without evidence.
