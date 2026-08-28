@@ -1,0 +1,19 @@
+Ahmed Alhafiz site v8 — QA REPORT
+================================
+
+Status: PASS
+Viewports tested: 320x800, 360x800, 390x844, 412x915, 430x932, 768x1024, 1024x900, 1440x1100
+Browser console/page errors: 0
+Horizontal overflow: 0 across all tested viewports
+Book cards: 4/4 loaded
+Book detail dialogs: all 4 tested at 390px and 1440px; Juhayman additionally tested at every viewport
+Mobile menu: open/close tested
+Mobile carousel: dominant-card + next-card-peek sizing tested
+Book overlay: Escape/button close tested; shared-cover animation path exercised
+Author portrait: original 1229x1536 PNG used byte-for-byte; no CSS filter, no transform, aspect ratio preserved
+Facebook/email/unwanted instructional copy: absent
+Approved author bio: present
+Structured data: ProfilePage + Person; Medium + Instagram sameAs
+
+Original photo SHA-256: c2c6c011fbed886b60745cc50aa2fe3bd0daaeaed5ecc47c7d62fdb910d419c8
+Site photo SHA-256:     c2c6c011fbed886b60745cc50aa2fe3bd0daaeaed5ecc47c7d62fdb910d419c8
