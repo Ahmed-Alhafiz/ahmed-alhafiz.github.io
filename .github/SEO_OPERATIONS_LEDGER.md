@@ -76,3 +76,11 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: post-update automation inspection confirmed the five intended SEO tasks are enabled and contain the shared-memory rule. A concurrent task run occurred during setup, but repository history showed no competing commit after creation of the ledger before this entry was written.
 - Status: `EXECUTED_VERIFIED`
 - Next: allow the coordinated tasks to operate; evaluate new ledger entries and real search/traffic measurements rather than repeatedly redesigning the orchestration without evidence.
+
+### 2026-08-29 — Automated Search Console → Gmail measurement relay prepared
+- Task: Search Console measurement infrastructure
+- Book: all; measurement priority = أم عباس + سيروا في الأرض
+- Action: created `tools/gsc-relay/Code.gs`, `tools/gsc-relay/appsscript.json`, and `tools/gsc-relay/README.md`. The relay uses the official Search Console API with read-only scope, detects the newest finalized date, compares the latest finalized 7 days with the prior 7 days, and emails a private machine-readable report with subject prefix `[GSC-AUTO]` to the effective Google account. Updated the recurring Search Console measurement task so Gmail relay reports are its preferred real-data source before requesting any manual export.
+- Verification: Gmail connector is active and a targeted search for `[GSC-AUTO]` completed successfully; no report exists yet because the Apps Script has not been authorized/run. Automation prompt update succeeded. Search Console data itself is not stored in this public repository.
+- Status: `READY_USER_ACTION`
+- Next: create/authorize the Apps Script once using the prepared files and run `setupGscRelay`; after the first `[GSC-AUTO] Ahmed Alhafiz ...` email arrives, verify the full Gmail → automation data path and then mark this relay `EXECUTED_VERIFIED`.
