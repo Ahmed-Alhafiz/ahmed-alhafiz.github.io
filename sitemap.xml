@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ahmed-alhafiz.github.io/</loc>
-    <lastmod>2026-08-28</lastmod>
-  </url>
+  <url><loc>https://ahmed-alhafiz.github.io/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/about/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/books/juhayman/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/books/kitab-al-kutub/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/books/umm-abbas/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/books/sirou-fi-alard/</loc><lastmod>2026-08-28</lastmod></url>
+
+  <url><loc>https://ahmed-alhafiz.github.io/en/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/en/about/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/en/books/juhayman/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/en/books/kitab-al-kutub/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/en/books/umm-abbas/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/en/books/sirou-fi-alard/</loc><lastmod>2026-08-28</lastmod></url>
+
+  <url><loc>https://ahmed-alhafiz.github.io/de/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/de/about/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/de/books/juhayman/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/de/books/kitab-al-kutub/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/de/books/umm-abbas/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://ahmed-alhafiz.github.io/de/books/sirou-fi-alard/</loc><lastmod>2026-08-28</lastmod></url>
 </urlset>
