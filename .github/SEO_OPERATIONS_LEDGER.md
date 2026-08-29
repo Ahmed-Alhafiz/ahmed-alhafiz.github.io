@@ -134,3 +134,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch confirmed the full canonical title is present in both the H3 and image alt, canonical/hreflang/schema on `/about/` remain intact, and sitemap now reports `2026-08-29` for `/about/`. Site commit `20c784eead367ff32e1ff488795bd8f993a4a129`; sitemap commit `d2820d04fdbc4b4ce1c7a79bb497e34b21ba6c3d`.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not repeat this author-page fix. In a later run, independently assess whether the homepage's short-form Sirou card creates enough remaining entity-name inconsistency to justify normalization.
+
+### 2026-08-29 — Goodreads catalog-addition packet for Umm Abbas
+- Task: recommendation-intent / independent book-entity acquisition
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/opportunity: Goodreads catalog record for the forthcoming Arabic novel, enabling an independent book entity that can be discovered, shelved and later reviewed.
+- Action: prepared a complete Goodreads Librarians request using only public verified fields: exact Arabic title, author أحمد الحافظ / Ahmed Alhafiz, Arabic language, forthcoming status, official description, official book URL and public cover URL. No ISBN, publisher, exact publication date, page count or format is supplied because those fields are not yet independently confirmed.
+- URL: https://www.goodreads.com/group/show/220-goodreads-librarians-group ; official evidence page: https://ahmed-alhafiz.github.io/books/umm-abbas/ ; cover: https://ahmed-alhafiz.github.io/umm-abbas-cover.webp
+- Verification: Goodreads states that its Librarians Group is the official channel for requesting new-book additions; its current librarian guidance allows confirmed forthcoming books with partial information, while rumored/unconfirmed works are excluded. Targeted Goodreads searches on 2026-08-29 found no stable record for the exact title.
+- Status: `READY_USER_ACTION`
+- Next: user joins the Goodreads Librarians Group and posts the prepared request once; do not create duplicate requests while it is pending.
