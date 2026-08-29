@@ -314,3 +314,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: AJIS's current submission guidance states that it publishes book reviews and review essays; its scope includes scholarly research on Islam, philosophy and metaphysics, and its current editorial team lists Dr Younus Mirza as Book Review Editor. A current 2026 issue confirms the journal remains active. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04c89920946665`.
 - Status: `EXECUTED_VERIFIED`
 - Next: wait for AJIS's response; if the forthcoming Arabic book is eligible, provide the requested review copy or metadata in the format requested. Do not re-pitch AJIS while pending.
+
+### 2026-08-29 — Homepage sitemap freshness correction
+- Task: ChatGPT/AI discoverability and technical SEO
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق (homepage entity path)
+- Target/problem: the Arabic homepage had been materially updated on 2026-08-29 to normalize the book’s canonical title, but `sitemap.xml` still reported the homepage as `lastmod=2026-08-28`.
+- Action: changed only the homepage `lastmod` in `sitemap.xml` to `2026-08-29`; no other URL timestamp or content was changed.
+- URL/file: https://ahmed-alhafiz.github.io/ — `sitemap.xml`
+- Verification: repository refetch after commit `f87f44f84a3132dde51e01393091b4901556f0ab` confirmed the homepage now carries `lastmod=2026-08-29`; priority-book URLs remain unchanged at `2026-08-29`, and `robots.txt` still explicitly allows `OAI-SearchBot` and references the sitemap.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not change homepage `lastmod` again unless the homepage receives another real content change; prioritize a distinct technical defect or new evidence in later runs.
