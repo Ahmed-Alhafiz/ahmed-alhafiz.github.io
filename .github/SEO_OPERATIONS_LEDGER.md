@@ -364,3 +364,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: current Al-Shajarah material identifies the journal as a refereed publication covering Islamic thought, Islamic civilization, and Islamic science, lists a Book Review Editor, and provides `alshajarah@iium.edu.my` for publication enquiries; recent 2026 material confirms the journal remains active. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04cfc1eb192202`.
 - Status: `EXECUTED_VERIFIED`
 - Next: wait for Al-Shajarah's response; if Arabic-language forthcoming books are eligible, provide the requested review copy or metadata in the format requested. Do not re-pitch Al-Shajarah while pending.
+
+### 2026-08-29 — Sirou canonical-title normalization on English homepage
+- Task: ChatGPT/AI discoverability and technical SEO
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/problem: the English homepage still linked the priority book under the shortened Arabic title «سيروا في الأرض» in its visible H3 and cover alt, while the canonical Arabic title and the Arabic/English/German book pages already use «قل سيروا في الأرض فانظروا كيف بدأ الخلق».
+- Action: normalized only the Sirou card on `en/index.html` so the visible H3 and image alt use the full canonical Arabic title; preserved the destination URL, English subtitle, page metadata, hreflang, and all other book cards. Refreshed only the English homepage `lastmod` in `sitemap.xml` to `2026-08-29` as part of the same content change.
+- URL/file: https://ahmed-alhafiz.github.io/en/ — `en/index.html`; `sitemap.xml`
+- Verification: repository refetch confirmed the full canonical title in the English homepage card and unchanged canonical/hreflang. Site commit `5d8bfdef94e47400652623bd44baae5b00d200b5`; sitemap commit `170aeec665b4589901f4d33b928152570d820ac0`. `robots.txt` remains permissive for `OAI-SearchBot`.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not repeat this English-homepage normalization; inspect the German homepage or a distinct technical/entity defect in later runs.
