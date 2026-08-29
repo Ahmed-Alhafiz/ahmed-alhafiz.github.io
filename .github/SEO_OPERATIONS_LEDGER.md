@@ -414,3 +414,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: Maydan identifies Dr. Cengiz Sisman and Dr. Ozlem Madi-Sisman as Book Reviews Editors; its mission explicitly covers scholarly and public discourse on Muslim societies and the Islamic faith, and it maintains published book reviews in Islamic thought/theology. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04e42993096d10`.
 - Status: `EXECUTED_VERIFIED`
 - Next: wait for Maydan's response; if the Arabic-language forthcoming book is eligible, provide the review copy or metadata in the format requested. Do not re-pitch Maydan while pending.
+
+### 2026-08-29 — Juhayman English-page citation clarity
+- Task: ChatGPT/AI discoverability and technical SEO
+- Book: جهيمان — القيامة بين الركن والمقام
+- Target/problem: the English hreflang page's lead sentence identified the title, genre, and 20 November 1979 Grand Mosque event but deferred both the author and forthcoming state to later page elements/text, weakening single-sentence extraction for answer engines.
+- Action: revised only the first visible paragraph so it identifies the work as a forthcoming historical religious novel by Ahmed Alhafiz while preserving the historical description; preserved title/meta, self-canonical, hreflang cluster, Book schema, author link, and the rest of the copy. Refreshed only the English Juhayman URL's sitemap `lastmod` to `2026-08-29`.
+- URL/file: https://ahmed-alhafiz.github.io/en/books/juhayman/ — `en/books/juhayman/index.html`; `sitemap.xml`
+- Verification: repository refetch confirmed the revised lead sentence and intact canonical/hreflang/schema; `sitemap.xml` now reports `2026-08-29` for the English Juhayman URL. Page commit `2793c06777ecc1279c30754fdef029c1845520a4`; sitemap commit `155b085ece5d5d67d6a14bfd00c5933a57360f92`. `robots.txt` still explicitly allows `OAI-SearchBot`, consistent with current OpenAI guidance recommending OAI-SearchBot for understanding public web content.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not repeat this English Juhayman lead fix; inspect the German Juhayman hreflang page or another distinct technical/entity defect in a later run.
