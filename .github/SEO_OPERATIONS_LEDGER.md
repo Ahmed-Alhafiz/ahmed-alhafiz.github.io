@@ -194,3 +194,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: StoryGraph's official support documentation states that users can manually add books missing from its database and may leave unavailable fields blank; targeted StoryGraph searches on 2026-08-29 returned no stable result for the exact title or author/title combination.
 - Status: `READY_USER_ACTION`
 - Next: user signs in to StoryGraph and submits the book once using the prepared packet; do not create a duplicate while pending or after the record appears.
+
+### 2026-08-29 — Sirou canonical-title normalization on German book page
+- Task: ChatGPT/AI discoverability and technical SEO
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/problem: the German hreflang page still identified the shared Book entity and visible Arabic H1 with the shortened title «سيروا في الأرض», after the Arabic and English pages had already been normalized to the canonical full title.
+- Action: normalized the German page’s `Book.name`, visible H1, cover alt, and lead identifying sentence to «قل سيروا في الأرض فانظروا كيف بدأ الخلق», while preserving the German display subtitle, self-canonical, hreflang cluster, author link, and existing German metadata. Refreshed only the German Sirou URL’s sitemap `lastmod` to `2026-08-29` as part of the same fix.
+- URL/file: https://ahmed-alhafiz.github.io/de/books/sirou-fi-alard/ — `de/books/sirou-fi-alard/index.html`; `sitemap.xml`
+- Verification: repository refetch confirmed the full canonical Arabic title in `Book.name`, H1, image alt, and the first identifying sentence; canonical/hreflang remained intact. Site commit `934b1845969586084383af8079284f0c73579b0b`; sitemap commit `8df05e4796ec8fbe2fa4a878f353d680cb807cde`. `robots.txt` still explicitly allows `OAI-SearchBot` and points to the sitemap.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not repeat this German-page normalization; inspect the homepage only if a distinct remaining canonical-title inconsistency is still present.
