@@ -184,3 +184,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch confirmed the full title «قل سيروا في الأرض فانظروا كيف بدأ الخلق» in the structured Book entity, H1, image alt and lead sentence; canonical and hreflang remain intact. Site commit `960b2df4e58d2c89b5453ceb51133ea540e5db3e`; sitemap commit `6d233c871eb1ad05423e68b336c4057175f75f32`.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not repeat this English-page normalization. Independently inspect the German hreflang page and homepage only if a distinct remaining canonical-title inconsistency is still present.
+
+### 2026-08-29 — StoryGraph catalog-addition opportunity for Umm Abbas
+- Task: recommendation-intent / independent book-entity acquisition
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/opportunity: The StoryGraph missing-book catalog record for the forthcoming Arabic psychological-horror novel.
+- Action: prepared a complete manual-add packet using only public verified fields: exact Arabic title, author أحمد الحافظ / Ahmed Alhafiz, Arabic language, forthcoming status, official description, official book URL, and cover URL; ISBN, publisher, exact publication date, page count, and format remain omitted until publicly verified.
+- URL/file: https://app.thestorygraph.com/books/new ; evidence: https://ahmed-alhafiz.github.io/books/umm-abbas/ ; cover: https://ahmed-alhafiz.github.io/umm-abbas-cover.webp
+- Verification: StoryGraph's official support documentation states that users can manually add books missing from its database and may leave unavailable fields blank; targeted StoryGraph searches on 2026-08-29 returned no stable result for the exact title or author/title combination.
+- Status: `READY_USER_ACTION`
+- Next: user signs in to StoryGraph and submits the book once using the prepared packet; do not create a duplicate while pending or after the record appears.
