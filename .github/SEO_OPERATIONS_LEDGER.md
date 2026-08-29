@@ -174,3 +174,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: TMR states that it publishes book reviews, profiles and interviews year-round; its submission FAQ explicitly directs book publicists, authors and publishers to Executive Editor Rana Asfour for review assignments with a press release and electronic ARC. TMR's mission and current editorial scope center SWANA literature, and it maintains an active book-review section and book club. The book's public record identifies it as a forthcoming Arabic psychological-horror novel focused on fear, belief, doubt, interpretation and family tension. No request for favorable coverage is made.
 - Status: `READY_USER_ACTION`
 - Next: send one email to Rana Asfour at `rana@themarkaz.org` with a short press note plus the electronic ARC; do not pitch the same book to TMR again while the request is pending.
+
+### 2026-08-29 — Sirou canonical-title normalization on English book page
+- Task: ChatGPT/AI discoverability and technical SEO
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/problem: the English hreflang page still identified the shared Book entity and visible Arabic H1 with the shortened Arabic title «سيروا في الأرض», creating entity-name inconsistency against the canonical Arabic page and author page.
+- Action: normalized the English page’s `Book.name`, visible H1, cover alt, and first identifying sentence to the full Arabic canonical title while preserving the English subtitle, self-canonical, hreflang cluster, author link, and existing descriptive metadata. Refreshed only this English URL’s sitemap `lastmod` to `2026-08-29` as part of the same change.
+- URL/file: https://ahmed-alhafiz.github.io/en/books/sirou-fi-alard/ — `en/books/sirou-fi-alard/index.html`; `sitemap.xml`
+- Verification: repository refetch confirmed the full title «قل سيروا في الأرض فانظروا كيف بدأ الخلق» in the structured Book entity, H1, image alt and lead sentence; canonical and hreflang remain intact. Site commit `960b2df4e58d2c89b5453ceb51133ea540e5db3e`; sitemap commit `6d233c871eb1ad05423e68b336c4057175f75f32`.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not repeat this English-page normalization. Independently inspect the German hreflang page and homepage only if a distinct remaining canonical-title inconsistency is still present.
