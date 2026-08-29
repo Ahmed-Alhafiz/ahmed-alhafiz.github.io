@@ -94,3 +94,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch confirmed canonical/hreflang remain intact and the page now includes «لمن تناسب رواية أم عباس؟» and «ما نوع الرعب في الرواية؟» with natural Arabic psychological-horror relevance.
 - Status: `EXECUTED_AWAITING_MEASUREMENT`
 - Next: do not rewrite this page again until Search Console/search evidence, a technical defect, or new independent evidence justifies another change.
+
+### 2026-08-29 — ArabLit forthcoming-book coverage opportunity for Umm Abbas
+- Task: independent recommendation-source acquisition
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/opportunity: ArabLit / ArabLit Quarterly — legitimate editorial suggestion for forthcoming-book coverage, with later review potential after publication.
+- Action: prepared a complete one-to-one outreach packet for `info@arablit.org`; no email sent automatically.
+- URL: https://arablit.org/news/ ; related review surface: https://arablit.org/reviews/
+- Verification: ArabLit states that it covers forthcoming publications and accepts suggestions for news coverage by email; its reviews page also accepts book suggestions by email. Existing site coverage demonstrates sustained attention to Arabic horror, djinn/supernatural literature, and Arabic-language authors. The book's public page currently identifies it as a forthcoming Arabic psychological-horror novel centered on fear, belief, doubt, interpretation, and family tension.
+- Status: `READY_USER_ACTION`
+- Next: user sends the prepared single email to `info@arablit.org`; if ArabLit responds, update this entry with the outcome and do not pitch the same opportunity again meanwhile.
