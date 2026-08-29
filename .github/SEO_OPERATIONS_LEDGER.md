@@ -394,3 +394,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch confirmed the revised lead sentence, intact canonical/hreflang/schema, and `sitemap.xml` now reports `2026-08-29` for the Arabic Juhayman URL. Page commit `3cc0d0cdd698fa3aa8feaef37af24088e2993c92`; sitemap commit `de229f61a6c333fd4dd02c255331137749083d06`. `robots.txt` remains permissive for `OAI-SearchBot`.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not repeat this Arabic Juhayman lead fix; inspect `كتاب الكتب` or a distinct remaining technical/entity defect in a later run.
+
+### 2026-08-29 — Qantara.de duplicate-source outreach for Sirou (execution error logged)
+- Task: independent recommendation-source acquisition
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/opportunity: Qantara.de Arabic editorial desk.
+- Action: sent one Arabic editorial inquiry to Mohammed Magdy at `kassem@qantara.de` about possible independent review/interview/cultural coverage for Sirou. This action should not have been executed because the same organization had already been contacted earlier the same day regarding «أم عباس», and the operating rule forbids repeating a previously contacted source even for a different book.
+- URL: https://qantara.de/en/page/about-us-contact ; official book page: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/
+- Verification: Gmail confirmed both prior Qantara message `1a04c603f6c20a59` and this second message `1a04e09bfeee8291` in Sent. The second message used only public verified facts and did not request favorable coverage or assert publisher, ISBN, sales, ranking, or endorsement.
+- Status: `EXECUTED_VERIFIED`
+- Next: treat Qantara.de as fully contacted for all books; do not send any further pitch or follow-up unless Qantara replies first or the user explicitly instructs otherwise. Future runs must check organization-level duplication, not only book-level duplication.
