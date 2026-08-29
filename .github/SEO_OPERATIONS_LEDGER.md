@@ -354,3 +354,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: The New Arab's live Features page shows an active Book Club in August 2026; current editorial pages identify Sheeffah Shiraz as Features Editor and provide `editorial-english@newarab.com`. The publication has a recurring Book Club surface with reviews and curated reading lists, including a February 18, 2026 Ramadan list and a December 17, 2025 '26 must-read new books for 2026' list. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04cce359e1b517`.
 - Status: `EXECUTED_VERIFIED`
 - Next: wait for The New Arab's response; if Arabic-language forthcoming titles are eligible, provide the requested reading copy or metadata in the format requested. Do not re-pitch The New Arab while this inquiry is pending.
+
+### 2026-08-29 — Al-Shajarah review inquiry for Sirou
+- Task: independent recommendation-source acquisition
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/opportunity: Al-Shajarah (ISTAC-IIUM) — independent book-review consideration in a refereed journal whose stated scope includes Islamic thought, Islamic civilization, and Islamic science.
+- Action: sent one individual editorial inquiry to `alshajarah@iium.edu.my`, explicitly identifying the book as forthcoming and Arabic-language and asking whether it is eligible for independent review consideration and whether an author-supplied review copy is acceptable. No favorable review, endorsement, publisher, ISBN, fixed publication date, ranking, or sales claim was requested or asserted.
+- URL: https://journals.iium.edu.my/shajarah/ ; official book page: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/
+- Verification: current Al-Shajarah material identifies the journal as a refereed publication covering Islamic thought, Islamic civilization, and Islamic science, lists a Book Review Editor, and provides `alshajarah@iium.edu.my` for publication enquiries; recent 2026 material confirms the journal remains active. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04cfc1eb192202`.
+- Status: `EXECUTED_VERIFIED`
+- Next: wait for Al-Shajarah's response; if Arabic-language forthcoming books are eligible, provide the requested review copy or metadata in the format requested. Do not re-pitch Al-Shajarah while pending.
