@@ -264,3 +264,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch confirmed the revised lead sentence, unchanged canonical/hreflang/schema, and `sitemap.xml` now reports `2026-08-29` for the English Umm Abbas URL. Page commit `9b5aaffcb027b03c347fae8c4d9572a5fc27565c`; sitemap commit `0cbfc21d6af996114004346efb32d9e5bd57554d`. `robots.txt` continues to explicitly allow `OAI-SearchBot`.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not repeat this English lead-sentence fix; independently inspect the German Umm Abbas hreflang page or homepage only if a distinct technical/entity defect remains.
+
+### 2026-08-29 — Sirou canonical-title normalization on Arabic homepage
+- Task: recommendation-intent / ChatGPT-AI discoverability
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/problem: the Arabic homepage still exposed the priority book under the short form «سيروا في الأرض» in the book-card label/title/cover alt and overlay title, while the Arabic, English and German book pages and `/about/` had already been normalized to the full canonical title.
+- Action: normalized the homepage Sirou card and overlay to the full canonical title «قل سيروا في الأرض فانظروا كيف بدأ الخلق» without changing the destination URL, descriptive blurb, page metadata, or other book cards.
+- URL/file: https://ahmed-alhafiz.github.io/ — `index.html`
+- Verification: repository refetch confirmed the full canonical title in the Sirou card `aria-label`, cover alt, visible card title and overlay title. Commit `eee35f7d1d2c7f13719f48f1600dfe3e5518b050`.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not repeat homepage title normalization; prioritize independent catalog/editorial evidence or real Search Console measurement before further copy changes.
