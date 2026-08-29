@@ -294,3 +294,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: ESSSAT states that the quarterly publication includes book reviews and welcomes notification of books suitable for review; current instructions cover science-and-theology, philosophical/epistemological, cosmological, evolutionary/biological and related fields. ESSSAT's contact page identifies Edward DeLaquil as editor for the journal, and current journal material lists the same editor/contact. Gmail confirmed the one-to-one inquiry was sent successfully.
 - Status: `EXECUTED_VERIFIED`
 - Next: wait for the editor's response; if Arabic-language/forthcoming books are eligible, provide the requested review copy or metadata in the format requested. Do not re-pitch ESSSAT/ISSR while pending.
+
+### 2026-08-29 — Qantara.de editorial tip sent for Umm Abbas
+- Task: independent recommendation-source acquisition
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/opportunity: Qantara.de Arabic editorial desk — independent review/interview/cultural-coverage consideration.
+- Action: sent one concise Arabic editorial-tip email to Mohammed Magdy at `kassem@qantara.de`, using only public verified facts and linking to the official book page; no favorable coverage, publisher, ISBN, sales, ranking, or endorsement was requested or claimed.
+- URL/file: https://qantara.de/en/page/about-us-contact ; https://ahmed-alhafiz.github.io/books/umm-abbas/
+- Verification: Qantara's current contact page lists Mohammed Magdy as Arabic editor and `kassem@qantara.de`; Gmail search confirmed the message in Sent with message ID `1a04c603f6c20a59` and no attachment.
+- Status: `EXECUTED_VERIFIED`
+- Next: wait for Qantara's response; do not re-pitch the same book while this enquiry is pending.
