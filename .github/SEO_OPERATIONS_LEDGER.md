@@ -274,3 +274,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch confirmed the full canonical title in the Sirou card `aria-label`, cover alt, visible card title and overlay title. Commit `eee35f7d1d2c7f13719f48f1600dfe3e5518b050`.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not repeat homepage title normalization; prioritize independent catalog/editorial evidence or real Search Console measurement before further copy changes.
+
+### 2026-08-29 — Al-Abhath review inquiry for Sirou
+- Task: independent recommendation-source acquisition
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/opportunity: Al-Abhath (American University of Beirut / Brill) — independent book-review consideration in a refereed Arab and Middle Eastern studies journal with Arabic-language review capability.
+- Action: sent one individual editorial inquiry to `alabhath@aub.edu.lb` asking whether the forthcoming Arabic book is eligible for review consideration and whether an author-supplied electronic or print review copy is acceptable; the message explicitly did not request favorable coverage and did not claim a publisher, ISBN, or fixed publication date.
+- URL: https://www.aub.edu.lb/alabhath/Pages/instructions.aspx ; journal: https://www.aub.edu.lb/alabhath/Pages/default.aspx ; current volume: https://www.aub.edu.lb/alabhath/Pages/volume-73.aspx ; official book page: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/
+- Verification: AUB identifies Al-Abhath as a refereed annual journal publishing reviews in Arab and Middle Eastern studies and accepting Arabic-language work; its current editorial board lists dedicated Book Review Editors. Its instructions explicitly provide a books-for-review route, while stating that publishers normally send review copies, so the outreach correctly asks about author eligibility before sending a copy. Volume 73 (2025) contains active book reviews in Arabic/Islamic studies. Gmail confirmed the one-to-one inquiry was sent successfully.
+- Status: `EXECUTED_VERIFIED`
+- Next: wait for Al-Abhath's response; if they confirm eligibility, provide the requested review copy in their preferred format. Do not re-pitch Al-Abhath while this inquiry is pending.
