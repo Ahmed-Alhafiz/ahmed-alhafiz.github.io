@@ -204,3 +204,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch confirmed the full canonical Arabic title in `Book.name`, H1, image alt, and the first identifying sentence; canonical/hreflang remained intact. Site commit `934b1845969586084383af8079284f0c73579b0b`; sitemap commit `8df05e4796ec8fbe2fa4a878f353d680cb807cde`. `robots.txt` still explicitly allows `OAI-SearchBot` and points to the sitemap.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not repeat this German-page normalization; inspect the homepage only if a distinct remaining canonical-title inconsistency is still present.
+
+### 2026-08-29 — Google Books Partner Center entity opportunity for Umm Abbas
+- Task: recommendation-intent / bibliographic entity strengthening
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/opportunity: create an official Google Books / Google Play Books catalog entity for the forthcoming Arabic psychological-horror novel, without inventing an ISBN.
+- Action: prepared a one-book Partner Center packet using only public verified fields. Google officially permits adding a book without ISBN and assigns a Google-specific `GGKEY`; metadata should include exact title, Arabic language, author, description, and a relevant genre. No publisher, ISBN, exact release date, page count, price, or availability claim should be entered unless independently confirmed and rights permit submission.
+- URL/file: https://play.google.com/books/publish/ ; official book page: https://ahmed-alhafiz.github.io/books/umm-abbas/ ; cover: https://ahmed-alhafiz.github.io/umm-abbas-cover.webp
+- Verification: Google Play Books Partner Center documentation current on 2026-08-29 states that an ISBN is not required, that Google assigns a `GGKEY` to books without one, and that metadata completeness improves discoverability. Google also supports Google Books preview availability separately from sale/pre-order settings.
+- Status: `READY_USER_ACTION`
+- Next: user signs in to Google Play Books Partner Center, adds one book, chooses the no-ISBN / Google book ID option, and enters only verified public metadata; upload/preview or sale settings only if the user currently holds the necessary distribution/preview rights. Do not create duplicate entries if an ISBN-backed publisher record later appears; reconcile identifiers instead.
