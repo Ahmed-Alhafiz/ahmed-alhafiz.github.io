@@ -114,3 +114,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch after commit `7d0d07f3133ef3fd30e0ad5b85f22c6044d781c7` confirmed both Arabic priority URLs now carry `2026-08-29` and the rest of the sitemap is preserved. `robots.txt` remains permissive for `OAI-SearchBot` and points to this sitemap.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not touch these timestamps again unless the corresponding pages receive a real content change; monitor indexing/measurement instead.
+
+### 2026-08-29 — Umm Abbas publisher-page bibliographic opportunity
+- Task: bibliographic / book-entity strengthening
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/gap: a public Facebook search surface associated with Dar Ghorab exposes the exact forthcoming title and credits أحمد الحافظ, while Dar Ghorab's official website has no dedicated book record for the title.
+- Action: prepared a publisher-page request packet; do not treat the Facebook mentions surface as sufficient proof that Dar Ghorab is the confirmed publisher, and do not add publisher/ISBN data to the author site until the publisher confirms it publicly.
+- URLs: https://www.facebook.com/darghorab/mentions/ ; https://www.ghorabpublishing.com/ ; official book page https://ahmed-alhafiz.github.io/books/umm-abbas/
+- Verification: exact-title web search surfaced «قريبًا أم عباس لجلب الحبيب وردّ المطلّقة … تأليف: أحمد الحافظ» on the Dar Ghorab Facebook mentions surface; the official Dar Ghorab site was opened and inspected and currently lists other releases but no dedicated Umm Abbas page. Google Books, Goodreads, WorldCat and major-bookstore targeted searches returned no stable record for the title.
+- Status: `READY_USER_ACTION`
+- Next: user asks Dar Ghorab, through its official communication channel, to confirm whether the title is theirs and, if yes, publish a dedicated forthcoming-book page containing the exact title, author name, cover, forthcoming status and official author-book URL; ISBN/year/edition only after those fields are formally assigned and public.
