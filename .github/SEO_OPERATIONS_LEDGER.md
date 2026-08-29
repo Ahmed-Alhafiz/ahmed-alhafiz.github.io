@@ -144,3 +144,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: Goodreads states that its Librarians Group is the official channel for requesting new-book additions; its current librarian guidance allows confirmed forthcoming books with partial information, while rumored/unconfirmed works are excluded. Targeted Goodreads searches on 2026-08-29 found no stable record for the exact title.
 - Status: `READY_USER_ACTION`
 - Next: user joins the Goodreads Librarians Group and posts the prepared request once; do not create duplicate requests while it is pending.
+
+### 2026-08-29 — New Books Network pitch opportunity for Sirou
+- Task: independent recommendation-source acquisition
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/opportunity: New Books Network — official “Pitch a Book” intake with relevant Islamic Studies / Religion and Science channels; hosts independently choose which books they cover.
+- Action: prepared a complete one-book pitch packet for the official form; no submission made automatically.
+- URL: https://newbooksnetwork.com/authors ; official book page: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/
+- Verification: New Books Network’s live pitch page explicitly invites authors to pitch their books and states that hosts see submissions and independently select books for coverage. Its current topic taxonomy includes Islamic Studies, Religion, Science, Biology and Evolution, History of Science, and Physics and Chemistry, making the book’s public religion-and-science focus directly relevant. The public book record identifies the title as forthcoming and describes its focus as beginning of creation, religion and science, revelation and reason, and limits of interpretation and knowledge. No publisher, ISBN, exact publication date, sales, ranking, or endorsement is asserted.
+- Status: `READY_USER_ACTION`
+- Next: user submits the single official NBN pitch form once, choosing Islamic Studies as the primary channel if available and leaving ISBN/publisher blank unless the form requires verified values; do not invent those fields or submit duplicate pitches while pending.
