@@ -324,3 +324,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch after commit `f87f44f84a3132dde51e01393091b4901556f0ab` confirmed the homepage now carries `lastmod=2026-08-29`; priority-book URLs remain unchanged at `2026-08-29`, and `robots.txt` still explicitly allows `OAI-SearchBot` and references the sitemap.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not change homepage `lastmod` again unless the homepage receives another real content change; prioritize a distinct technical defect or new evidence in later runs.
+
+### 2026-08-29 — Open Library catalog-addition opportunity for Umm Abbas
+- Task: bibliographic / book-entity strengthening
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/opportunity: create a discoverable Open Library work/edition record as an additional independent bibliographic surface; targeted Open Library searches found no matching title/author record.
+- Action: prepared a minimal public-data packet only. Use the exact Arabic title, primary author name «أحمد الحافظ», alternate searchable author name `Ahmed Alhafiz`, Arabic language, official description, official book URL, and verified cover. Leave publisher, ISBN, publication date, edition, pages and format blank until publicly verified.
+- URL/file: https://openlibrary.org/books/add ; evidence: https://ahmed-alhafiz.github.io/books/umm-abbas/ ; cover: https://ahmed-alhafiz.github.io/umm-abbas-cover.webp
+- Verification: Open Library’s current editing FAQ states that a book can be added with little or extensive information, recommends the native-script author name as primary with transliterations/alternate spellings added as searchable alternate names, and allows records without ISBN. The catalog also contains future-dated book records, confirming that a forthcoming work is not inherently excluded. No publisher/ISBN/date claim is inferred.
+- Status: `READY_USER_ACTION`
+- Next: user signs in to Open Library and creates the book once with only the verified fields above; after the author record exists, ensure `Ahmed Alhafiz` is added as an alternate name. Do not create a duplicate when later publisher/ISBN metadata becomes public; update the same work/edition instead.
