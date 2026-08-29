@@ -214,3 +214,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: Google Play Books Partner Center documentation current on 2026-08-29 states that an ISBN is not required, that Google assigns a `GGKEY` to books without one, and that metadata completeness improves discoverability. Google also supports Google Books preview availability separately from sale/pre-order settings.
 - Status: `READY_USER_ACTION`
 - Next: user signs in to Google Play Books Partner Center, adds one book, chooses the no-ISBN / Google book ID option, and enters only verified public metadata; upload/preview or sale settings only if the user currently holds the necessary distribution/preview rights. Do not create duplicate entries if an ISBN-backed publisher record later appears; reconcile identifiers instead.
+
+### 2026-08-29 — Science and Religion Forum review opportunity for Sirou
+- Task: independent recommendation-source acquisition
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/opportunity: Science and Religion Forum — `Reviews in Science and Religion`, a specialist journal that explicitly invites appropriate books to be brought to the editor’s attention for review.
+- Action: prepared a one-book editorial enquiry packet for the official contact form; no submission made automatically because the journal asks enquiries to use its contact form in the first instance.
+- URL: https://www.srforum.org/reviews-in-science-and-religion ; contact: https://www.srforum.org/contact ; official book page: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/
+- Verification: the journal states that it publishes recent reviews of books in the science-and-religion field and that members, colleagues and students may bring appropriate books to the editor’s attention; editor listed as Maureen Simpson. SRF’s current scope is explicitly open to all religions, and its 2026 programming addresses boundaries between scientific understanding and religious interpretation and welcomes non-Christian perspectives. The book is publicly described as forthcoming, Arabic-language, and focused on beginning of creation, religion and science, revelation and reason, and limits of interpretation and knowledge. The journal does not state an Arabic-language review policy, so the enquiry discloses the book’s Arabic language and asks whether it is eligible rather than assuming acceptance.
+- Status: `READY_USER_ACTION`
+- Next: submit the prepared single enquiry through the SRF contact form, asking whether the forthcoming Arabic book can be considered for `Reviews in Science and Religion`; if they confirm eligibility, provide the review copy/ARC in the format they request and do not submit a duplicate enquiry while pending.
