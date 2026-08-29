@@ -63,6 +63,7 @@
         },
         "jobTitle": "كاتب ومؤلف",
         "description": "كاتب ومؤلف يهتم بالأدب والفكر والتاريخ والقضايا الدينية، وتتنوّع أعماله بين الرواية والكتابة الفكرية.",
+        "email": "mailto:hhafz9924@gmail.com",
         "sameAs": [
           "https://medium.com/@AhmedAlhafiz",
           "https://www.instagram.com/ahmed_666_8"
@@ -205,11 +206,11 @@ img{display:block;max-width:100%}
 .carousel-dots{display:none}
 
 /* Links */
-.links-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:620px;margin-top:32px}
-.link-card{border-top:1px solid var(--line);padding:20px 0;display:flex;align-items:center;justify-content:space-between;color:#ddd5ca;transition:.2s ease}
-.link-card:hover,.link-card:focus-visible{color:var(--gold-2);padding-inline:8px}
-.link-card strong{font-family:Georgia,"Times New Roman",serif;font-size:20px}
-.link-card span{font-size:14px;color:#8f887f}
+.links-grid{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:32px;direction:ltr}
+.link-card{width:76px;height:76px;border:1px solid rgba(181,138,80,.38);border-radius:18px;display:grid;place-items:center;color:#d9d2c8;background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.006));transition:transform .22s ease,border-color .22s ease,color .22s ease,background .22s ease}
+.link-card:hover,.link-card:focus-visible{transform:translateY(-3px);border-color:var(--gold-2);color:var(--gold-2);background:rgba(181,138,80,.055)}
+.link-card svg{width:32px;height:32px;display:block}
+.link-card.medium-mark svg{width:36px;height:36px}
 
 footer{padding:42px 0 48px;color:#7d776f;font-size:13px}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;direction:ltr}
@@ -275,7 +276,7 @@ footer{padding:42px 0 48px;color:#7d776f;font-size:13px}
   .books-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:14px;padding:8px 14px 18px;direction:rtl;scrollbar-width:none}
   .books-grid::-webkit-scrollbar{display:none}.book-card{flex:0 0 78vw;max-width:300px;scroll-snap-align:center;padding:10px 10px 16px}.book-title{font-size:18px;min-height:auto;margin-top:12px}
   .carousel-dots{display:flex;justify-content:center;gap:7px;margin-top:6px;direction:ltr}.carousel-dots i{width:6px;height:6px;border-radius:50%;background:#49443d;transition:.2s}.carousel-dots i.active{width:20px;border-radius:999px;background:var(--gold)}
-  .links-grid{grid-template-columns:1fr;margin-top:22px}.link-card{padding:16px 0}
+  .links-grid{margin-top:24px;gap:12px}.link-card{width:68px;height:68px;border-radius:16px}.link-card svg{width:29px;height:29px}.link-card.medium-mark svg{width:33px;height:33px}
   .footer-inner{display:block;text-align:center}.footer-brand{margin-top:6px}
   .book-overlay{padding:0;align-items:stretch}.book-sheet{width:100%;height:100%;max-height:none;border:0;border-radius:0}.sheet-grid{display:block;height:100%;overflow:auto;background:#0e0e0d}.sheet-visual{height:auto;min-height:46vh;padding:70px 30px 28px;border:0;border-bottom:1px solid var(--line-soft)}.sheet-visual img{max-height:56vh;max-width:78vw}.sheet-copy{overflow:visible;padding:28px 24px 70px}.sheet-title{font-size:30px}.sheet-blurb{font-size:16px;line-height:2}.sheet-close{position:fixed;top:max(14px,env(safe-area-inset-top));inset-inline-start:14px;background:rgba(12,12,11,.9)}
 }
@@ -301,6 +302,9 @@ footer{padding:42px 0 48px;color:#7d776f;font-size:13px}
         <a href="https://medium.com/@AhmedAlhafiz" target="_blank" rel="me noopener noreferrer" aria-label="Medium"><span class="m-icon">M</span></a>
         <a href="https://www.instagram.com/ahmed_666_8" target="_blank" rel="me noopener noreferrer" aria-label="Instagram">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="mailto:hhafz9924@gmail.com" aria-label="البريد الإلكتروني">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 7l7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
       <div class="lang-switch" aria-label="اللغة"><a href="/" hreflang="ar" aria-current="page">AR</a><a href="/en/" hreflang="en">EN</a><a href="/de/" hreflang="de">DE</a></div>
@@ -379,9 +383,16 @@ footer{padding:42px 0 48px;color:#7d776f;font-size:13px}
 <section class="section" id="links">
   <div class="wrap">
     <div class="section-kicker">Official links</div><h2 class="section-title">الروابط الرسمية</h2><div class="section-rule"></div>
-    <div class="links-grid">
-      <a class="link-card" href="https://medium.com/@AhmedAlhafiz" target="_blank" rel="me noopener noreferrer"><strong>Medium</strong><span>↗</span></a>
-      <a class="link-card" href="https://www.instagram.com/ahmed_666_8" target="_blank" rel="me noopener noreferrer"><strong>Instagram</strong><span>↗</span></a>
+    <div class="links-grid" aria-label="الروابط الرسمية">
+      <a class="link-card medium-mark" href="https://medium.com/@AhmedAlhafiz" target="_blank" rel="me noopener noreferrer" aria-label="Medium" title="Medium">
+        <svg viewBox="0 0 42 42" aria-hidden="true"><ellipse cx="11" cy="21" rx="9" ry="13" fill="currentColor"/><ellipse cx="28" cy="21" rx="4.6" ry="11.3" fill="currentColor"/><ellipse cx="38" cy="21" rx="2.1" ry="9.4" fill="currentColor"/></svg>
+      </a>
+      <a class="link-card" href="https://www.instagram.com/ahmed_666_8" target="_blank" rel="me noopener noreferrer" aria-label="Instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>
+      </a>
+      <a class="link-card" href="mailto:hhafz9924@gmail.com" aria-label="البريد الإلكتروني: hhafz9924@gmail.com" title="hhafz9924@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 7l7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
   </div>
 </section>

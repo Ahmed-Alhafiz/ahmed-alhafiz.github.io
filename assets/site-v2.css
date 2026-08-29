@@ -58,6 +58,10 @@ h2{font-size:38px;line-height:1.25;margin:6px 0 12px;color:var(--gold2);font-wei
 .author-box{margin-top:34px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:#aaa39a}
 .author-box strong{color:#e1d9cf}
 .links{display:flex;flex-wrap:wrap;gap:12px}
+.icon-links{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:4px;direction:ltr}
+.icon-link{width:72px;height:72px;display:grid;place-items:center;border:1px solid rgba(181,138,80,.38);border-radius:17px;color:#d9d2c8;background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.006));transition:transform .22s ease,border-color .22s ease,color .22s ease,background .22s ease}
+.icon-link:hover,.icon-link:focus-visible{transform:translateY(-3px);border-color:var(--gold2);color:var(--gold2);background:rgba(181,138,80,.055)}
+.icon-link svg{width:30px;height:30px;display:block}.icon-link.medium-mark svg{width:34px;height:34px}
 footer{padding:36px 0 44px;color:#7f786f;font-size:13px}
 .footer-inner{display:flex;justify-content:space-between;gap:16px;align-items:center}
 .footer-inner .name{font:15px Georgia,serif;color:#ad906c}
@@ -71,5 +75,5 @@ footer{padding:36px 0 44px;color:#7f786f;font-size:13px}
  body{font-size:16px}.wrap{width:min(var(--max),calc(100% - 28px))}.brand-copy span{font-size:12px}.nav{gap:14px;font-size:13px;overflow:auto;justify-content:flex-start}
  .hero{padding:44px 0}.hero-grid .portrait{max-width:190px}.lead{font-size:17px}.section{padding:54px 0}.prose{font-size:17px}
  .books-grid{grid-template-columns:1fr 1fr;gap:12px}.book-card{padding:8px}.book-card h3{font-size:15px}.book-card p{font-size:12px}.book-card .more{font-size:12px}
- .page-head{padding:42px 0 32px}.book-layout{gap:30px}.footer-inner{display:block;text-align:center}.footer-inner .name{margin-top:5px}
+ .page-head{padding:42px 0 32px}.book-layout{gap:30px}.icon-links{gap:12px}.icon-link{width:64px;height:64px;border-radius:15px}.icon-link svg{width:27px;height:27px}.icon-link.medium-mark svg{width:31px;height:31px}.footer-inner{display:block;text-align:center}.footer-inner .name{margin-top:5px}
 }
