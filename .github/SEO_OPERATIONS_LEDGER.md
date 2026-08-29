@@ -434,3 +434,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: Arab World Books states that it accepts Arabic, English and French submissions, that books/texts are editorially evaluated, and that author accounts can submit books. Its live site in August 2026 includes an active Book Reviews category and a catalog of Arab books. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04eb579fbccd0f`.
 - Status: `EXECUTED_VERIFIED`
 - Next: wait for Arab World Books' response; if forthcoming titles are eligible, provide only the metadata or reading copy they request. Do not re-pitch Arab World Books while this inquiry is pending.
+
+### 2026-08-29 — English author-page Medium identity normalization
+- Task: ChatGPT/AI discoverability and technical SEO
+- Book: author identity after priority-book technical checks
+- Target/problem: `/en/about/` used the legacy Medium URL `https://medium.com/@AhmedAlhafiz` in `Person.sameAs`, while the Arabic author page and current official-site baseline use the canonical Medium subdomain `https://ahmedalhafiz.medium.com/`.
+- Action: changed only the Medium URL in the English author page’s `Person.sameAs` to `https://ahmedalhafiz.medium.com/`; preserved title/meta, canonical, hreflang, Person `@id`, Instagram sameAs, visible copy, book links, and all other markup.
+- URL/file: https://ahmed-alhafiz.github.io/en/about/ — `en/about/index.html`
+- Verification: GitHub update commit `72fa509dc034596f2b0aa150a9bb12590ad28c91`; repository refetch returned new blob SHA `012f8ba2fad77aebe525bb5f579856969bf5884a`. `robots.txt` remains permissive for `OAI-SearchBot`; sitemap already reports `2026-08-29` for `/en/about/`, so no timestamp-only edit was made.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not repeat this English author-page fix; inspect the German author page or homepage for the same legacy Medium identity only if still present.
