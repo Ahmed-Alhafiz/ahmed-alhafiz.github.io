@@ -344,3 +344,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch confirmed the revised lead sentence, unchanged canonical/hreflang/schema, and `sitemap.xml` now reports `2026-08-29` for the German Umm Abbas URL. Page commit `52dd836f7491e641681955327c9bbcb8e6066a88`; sitemap commit `f366265a7c3f0edf8fd93319a2d5a8c04f97bbd9`. `robots.txt` continues to explicitly allow `OAI-SearchBot`.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not repeat this German lead-sentence fix; prioritize a distinct technical defect, independent evidence, or measurement in later runs.
+
+### 2026-08-29 — The New Arab Book Club editorial inquiry for Umm Abbas
+- Task: independent recommendation-source acquisition
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/opportunity: The New Arab — active Book Club / features coverage for Arab-authored books, including reviews, interviews, annual/new-books lists and literary features.
+- Action: sent one individual editorial inquiry to `editorial-english@newarab.com`, identifying the book only by its verified public facts as a forthcoming Arabic psychological-horror novel and asking whether it is eligible for independent Book Club review/interview/forthcoming-books coverage. No favorable review, publisher, ISBN, fixed publication date, ranking, sales, or endorsement was requested or asserted.
+- URL: https://www.newarab.com/features ; contact: https://www.newarab.com/contact ; editorial team: https://www.newarab.com/editorialteam ; official book page: https://ahmed-alhafiz.github.io/books/umm-abbas/
+- Verification: The New Arab's live Features page shows an active Book Club in August 2026; current editorial pages identify Sheeffah Shiraz as Features Editor and provide `editorial-english@newarab.com`. The publication has a recurring Book Club surface with reviews and curated reading lists, including a February 18, 2026 Ramadan list and a December 17, 2025 '26 must-read new books for 2026' list. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04cce359e1b517`.
+- Status: `EXECUTED_VERIFIED`
+- Next: wait for The New Arab's response; if Arabic-language forthcoming titles are eligible, provide the requested reading copy or metadata in the format requested. Do not re-pitch The New Arab while this inquiry is pending.
