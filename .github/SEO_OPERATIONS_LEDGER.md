@@ -444,3 +444,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: GitHub update commit `72fa509dc034596f2b0aa150a9bb12590ad28c91`; repository refetch returned new blob SHA `012f8ba2fad77aebe525bb5f579856969bf5884a`. `robots.txt` remains permissive for `OAI-SearchBot`; sitemap already reports `2026-08-29` for `/en/about/`, so no timestamp-only edit was made.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not repeat this English author-page fix; inspect the German author page or homepage for the same legacy Medium identity only if still present.
+
+### 2026-08-29 — AmmanNet Arabic-horror editorial outreach for Umm Abbas
+- Task: independent recommendation-source acquisition
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/query/opportunity: Arabic psychological-horror recommendation intent; AmmanNet culture article «عشر روايات رعب عربية تستحق القراءة وتعيد تعريف الخوف» published 2026-01-19.
+- Action: sent one concise Arabic editorial inquiry to `info@ammannet.net`, referencing the existing horror-list article and offering the forthcoming novel for independent future culture coverage/review/list consideration; no favorable coverage, publisher, ISBN, fixed publication date, ranking, sales, or endorsement was requested or asserted.
+- URL/file: https://ammannet.net/ثقافة/عشر-روايات-رعب-عربية-تستحق-القراءة-وتعيد-تعريف-الخوف ; official book page: https://ahmed-alhafiz.github.io/books/umm-abbas/
+- Verification: AmmanNet’s live article explicitly curates Arabic horror around psychological depth, doubt and domestic/real-world fear; its public institutional pages list `info@ammannet.net`. Gmail confirmed the message was sent successfully with message ID `1a04f5d106473257`.
+- Status: `EXECUTED_VERIFIED`
+- Next: wait for AmmanNet’s response; treat AmmanNet/Radio Al-Balad as contacted at organization level and do not re-pitch either priority book unless they reply first or the user explicitly instructs otherwise.
