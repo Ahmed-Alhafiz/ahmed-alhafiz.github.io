@@ -424,3 +424,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch confirmed the revised lead sentence and intact canonical/hreflang/schema; `sitemap.xml` now reports `2026-08-29` for the English Juhayman URL. Page commit `2793c06777ecc1279c30754fdef029c1845520a4`; sitemap commit `155b085ece5d5d67d6a14bfd00c5933a57360f92`. `robots.txt` still explicitly allows `OAI-SearchBot`, consistent with current OpenAI guidance recommending OAI-SearchBot for understanding public web content.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not repeat this English Juhayman lead fix; inspect the German Juhayman hreflang page or another distinct technical/entity defect in a later run.
+
+### 2026-08-29 — Arab World Books inquiry for Umm Abbas
+- Task: independent recommendation-source acquisition
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/opportunity: Arab World Books / منتدى الكتاب العربي — independent Arabic-language book database and book-review surface with active 2026 editorial publishing.
+- Action: sent one individual inquiry to `webmaster@arabworldbooks.com`, identifying the book only by verified public facts as a forthcoming Arabic psychological-horror novel and asking whether the site considers forthcoming Arabic books for inclusion in its book database or for independent review once a reading copy is available. No favorable review, endorsement, publisher, ISBN, fixed publication date, ranking, or sales claim was requested or asserted.
+- URL: https://www.arabworldbooks.com/en/ ; FAQ/submission guidance: https://www.arabworldbooks.com/en/page/faq ; contact: https://www.arabworldbooks.com/contact ; official book page: https://ahmed-alhafiz.github.io/books/umm-abbas/
+- Verification: Arab World Books states that it accepts Arabic, English and French submissions, that books/texts are editorially evaluated, and that author accounts can submit books. Its live site in August 2026 includes an active Book Reviews category and a catalog of Arab books. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04eb579fbccd0f`.
+- Status: `EXECUTED_VERIFIED`
+- Next: wait for Arab World Books' response; if forthcoming titles are eligible, provide only the metadata or reading copy they request. Do not re-pitch Arab World Books while this inquiry is pending.
