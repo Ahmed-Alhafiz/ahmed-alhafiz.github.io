@@ -334,3 +334,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: Open Library’s current editing FAQ states that a book can be added with little or extensive information, recommends the native-script author name as primary with transliterations/alternate spellings added as searchable alternate names, and allows records without ISBN. The catalog also contains future-dated book records, confirming that a forthcoming work is not inherently excluded. No publisher/ISBN/date claim is inferred.
 - Status: `READY_USER_ACTION`
 - Next: user signs in to Open Library and creates the book once with only the verified fields above; after the author record exists, ensure `Ahmed Alhafiz` is added as an alternate name. Do not create a duplicate when later publisher/ISBN metadata becomes public; update the same work/edition instead.
+
+### 2026-08-29 — Umm Abbas German-page citation clarity
+- Task: ChatGPT/AI discoverability and technical SEO
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/problem: the German hreflang page’s first identifying sentence described the work and genre but did not bind the canonical Arabic title, author, and forthcoming status into one extractable sentence.
+- Action: revised only the first visible paragraph so it states the canonical Arabic title, German display title, that the work is an in-preparation psychological horror novel, and that it is by Ahmed Alhafiz; preserved title/meta, self-canonical, hreflang cluster, Book schema, author links, and the rest of the page. Refreshed only the German Umm Abbas URL’s sitemap `lastmod` to `2026-08-29` as part of the same content change.
+- URL/file: https://ahmed-alhafiz.github.io/de/books/umm-abbas/ — `de/books/umm-abbas/index.html`; `sitemap.xml`
+- Verification: repository refetch confirmed the revised lead sentence, unchanged canonical/hreflang/schema, and `sitemap.xml` now reports `2026-08-29` for the German Umm Abbas URL. Page commit `52dd836f7491e641681955327c9bbcb8e6066a88`; sitemap commit `f366265a7c3f0edf8fd93319a2d5a8c04f97bbd9`. `robots.txt` continues to explicitly allow `OAI-SearchBot`.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not repeat this German lead-sentence fix; prioritize a distinct technical defect, independent evidence, or measurement in later runs.
