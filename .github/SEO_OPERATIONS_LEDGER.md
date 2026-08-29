@@ -244,3 +244,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: targeted Google Books searches on 2026-08-29 found no stable record for the exact title/author combination. General exact-title search is dominated by Quran/tafsir pages for Al-Ankabut 29:20. Current Google Partner Center documentation states that a book can be added without ISBN via “Get a Google book ID (GGKEY)” and that richer metadata improves discoverability.
 - Status: `READY_USER_ACTION`
 - Next: user signs in to Google Play Books Partner Center and adds this single book once, using the exact title and only verified metadata; choose the no-ISBN / Google book ID option. Enable preview/sale settings only if the user holds the necessary rights, and do not create a duplicate if an ISBN-backed publisher record later appears.
+
+### 2026-08-29 — The Arab Daily News book-review request opportunity for Umm Abbas
+- Task: independent recommendation-source acquisition
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/opportunity: The Arab Daily News — explicit book-review / book-release intake handled by Ray Hanania, with an active Book Review category and 2026 book coverage.
+- Action: prepared a one-to-one plain-text book-review request / release packet; no email sent automatically.
+- URL: https://thearabdailynews.com/book-reviews/ ; review surface: https://thearabdailynews.com/category/book-review/ ; official book page: https://ahmed-alhafiz.github.io/books/umm-abbas/
+- Verification: the publication’s book-review page explicitly invites book review requests and book releases concerning Arab and Middle East-related books, directs submissions to Ray Hanania, requires press-release text in the email body, and says the ideal release is under 800 words. Its Book Review category remained active in 2026, including a June 2, 2026 forthcoming-book item. The proposed pitch identifies Umm Abbas only by its verified public facts: a forthcoming Arabic psychological-horror novel by Ahmed Alhafiz, focused on fear, belief, doubt, interpretation and family tension; it does not assert publisher, ISBN, sales, ranking, or endorsement.
+- Status: `READY_USER_ACTION`
+- Next: send one concise plain-text email to Ray Hanania using the address displayed on The Arab Daily News book-review page, asking for independent review/editorial consideration and linking to the official book page; do not request favorable coverage or send a duplicate while pending.
