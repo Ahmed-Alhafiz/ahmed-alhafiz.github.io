@@ -254,3 +254,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: the publication’s book-review page explicitly invites book review requests and book releases concerning Arab and Middle East-related books, directs submissions to Ray Hanania, requires press-release text in the email body, and says the ideal release is under 800 words. Its Book Review category remained active in 2026, including a June 2, 2026 forthcoming-book item. The proposed pitch identifies Umm Abbas only by its verified public facts: a forthcoming Arabic psychological-horror novel by Ahmed Alhafiz, focused on fear, belief, doubt, interpretation and family tension; it does not assert publisher, ISBN, sales, ranking, or endorsement.
 - Status: `READY_USER_ACTION`
 - Next: send one concise plain-text email to Ray Hanania using the address displayed on The Arab Daily News book-review page, asking for independent review/editorial consideration and linking to the official book page; do not request favorable coverage or send a duplicate while pending.
+
+### 2026-08-29 — Umm Abbas English-page citation clarity
+- Task: ChatGPT/AI discoverability and technical SEO
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/problem: the English hreflang page’s lead sentence named the work and genre but did not identify the author or forthcoming status until later in the page, weakening single-sentence extraction for answer engines.
+- Action: changed only the first visible identifying sentence to state that the work is a forthcoming psychological horror novel by Ahmed Alhafiz; preserved title/meta, self-canonical, hreflang cluster, Book schema, author links, and the rest of the copy. Refreshed only the English Umm Abbas URL’s sitemap `lastmod` to `2026-08-29` as part of the same content change.
+- URL/file: https://ahmed-alhafiz.github.io/en/books/umm-abbas/ — `en/books/umm-abbas/index.html`; `sitemap.xml`
+- Verification: repository refetch confirmed the revised lead sentence, unchanged canonical/hreflang/schema, and `sitemap.xml` now reports `2026-08-29` for the English Umm Abbas URL. Page commit `9b5aaffcb027b03c347fae8c4d9572a5fc27565c`; sitemap commit `0cbfc21d6af996114004346efb32d9e5bd57554d`. `robots.txt` continues to explicitly allow `OAI-SearchBot`.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not repeat this English lead-sentence fix; independently inspect the German Umm Abbas hreflang page or homepage only if a distinct technical/entity defect remains.
