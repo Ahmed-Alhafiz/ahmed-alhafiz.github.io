@@ -164,3 +164,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: targeted Goodreads/Google Books/WorldCat searches on 2026-08-29 found no stable record for the exact title. Current Goodreads librarian guidance states that confirmed forthcoming books with partial information may be valid catalog records when supported by a verifiable non-bookseller source; rumored/unconfirmed releases should not be added.
 - Status: `READY_USER_ACTION`
 - Next: user joins the Goodreads Librarians Group and posts one request using the prepared packet; do not submit duplicates while pending, and later add ISBN/publisher/date only after those fields are formally public and verifiable.
+
+### 2026-08-29 — The Markaz Review editorial-review opportunity for Umm Abbas
+- Task: independent recommendation-source acquisition
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target/opportunity: The Markaz Review — independent literary review/feature consideration through its explicit book-publicist/author intake handled by Executive Editor Rana Asfour.
+- Action: prepared a one-to-one outreach packet for review consideration; no email sent because TMR explicitly asks book publicists, authors and publishers to send a press release together with an electronic ARC, and no ARC attachment is available in the current execution context.
+- URL: https://themarkaz.org/submissions/ ; official book page: https://ahmed-alhafiz.github.io/books/umm-abbas/
+- Verification: TMR states that it publishes book reviews, profiles and interviews year-round; its submission FAQ explicitly directs book publicists, authors and publishers to Executive Editor Rana Asfour for review assignments with a press release and electronic ARC. TMR's mission and current editorial scope center SWANA literature, and it maintains an active book-review section and book club. The book's public record identifies it as a forthcoming Arabic psychological-horror novel focused on fear, belief, doubt, interpretation and family tension. No request for favorable coverage is made.
+- Status: `READY_USER_ACTION`
+- Next: send one email to Rana Asfour at `rana@themarkaz.org` with a short press note plus the electronic ARC; do not pitch the same book to TMR again while the request is pending.
