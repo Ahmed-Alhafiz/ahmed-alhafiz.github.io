@@ -234,3 +234,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: Qantara's current contact page lists Mohammed Magdy as Arabic editor and provides a direct editorial email. The site actively maintains an Arabic-literature topic surface and has published book reviews and author interviews, including 2025 coverage of Saïd Khatibi's novel and 2026 literary coverage. Qantara does not state that unsolicited books are automatically accepted, so the outreach is framed only as an editorial tip for independent consideration. The book's public page identifies it as a forthcoming Arabic psychological-horror novel centered on fear, belief, doubt, interpretation and family tension; no publisher, ISBN, sales, ranking, or endorsement claim is made.
 - Status: `READY_USER_ACTION`
 - Next: send one concise editorial-tip email to Mohammed Magdy at the address listed on Qantara's official contact page; do not request favorable coverage and do not re-pitch Qantara while the enquiry is pending.
+
+### 2026-08-29 — Google Books Partner Center entity opportunity for Sirou
+- Task: recommendation-intent / bibliographic entity strengthening
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/opportunity: create a distinct Google Books / Google Play Books entity so the book is separable from high-authority Quran verse and tafsir results that currently dominate exact-title searches.
+- Action: prepared a one-book Partner Center packet using only public verified fields: exact Arabic title, author أحمد الحافظ — Ahmed Alhafiz, Arabic language, public description, official book URL and cover. ISBN, publisher, exact publication date, price, page count and availability remain omitted unless publicly verified. Google permits books without ISBN and assigns a `GGKEY`.
+- URL/file: https://play.google.com/books/publish/ ; official book page: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/ ; cover: https://ahmed-alhafiz.github.io/sirou-fi-alard-cover.webp
+- Verification: targeted Google Books searches on 2026-08-29 found no stable record for the exact title/author combination. General exact-title search is dominated by Quran/tafsir pages for Al-Ankabut 29:20. Current Google Partner Center documentation states that a book can be added without ISBN via “Get a Google book ID (GGKEY)” and that richer metadata improves discoverability.
+- Status: `READY_USER_ACTION`
+- Next: user signs in to Google Play Books Partner Center and adds this single book once, using the exact title and only verified metadata; choose the no-ISBN / Google book ID option. Enable preview/sale settings only if the user holds the necessary rights, and do not create a duplicate if an ISBN-backed publisher record later appears.
