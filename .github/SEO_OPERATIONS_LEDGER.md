@@ -154,3 +154,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: New Books Network’s live pitch page explicitly invites authors to pitch their books and states that hosts see submissions and independently select books for coverage. Its current topic taxonomy includes Islamic Studies, Religion, Science, Biology and Evolution, History of Science, and Physics and Chemistry, making the book’s public religion-and-science focus directly relevant. The public book record identifies the title as forthcoming and describes its focus as beginning of creation, religion and science, revelation and reason, and limits of interpretation and knowledge. No publisher, ISBN, exact publication date, sales, ranking, or endorsement is asserted.
 - Status: `READY_USER_ACTION`
 - Next: user submits the single official NBN pitch form once, choosing Islamic Studies as the primary channel if available and leaving ISBN/publisher blank unless the form requires verified values; do not invent those fields or submit duplicate pitches while pending.
+
+### 2026-08-29 — Goodreads catalog-addition packet for Sirou
+- Task: bibliographic / book-entity strengthening
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/opportunity: create the first stable Goodreads catalog entity for the forthcoming Arabic book.
+- Action: prepared a Goodreads Librarians request packet using only publicly verified fields: exact Arabic title, author أحمد الحافظ / Ahmed Alhafiz, Arabic language, forthcoming status, official description, official book URL, and public cover URL. Publisher, ISBN, exact publication date, page count, edition, and format are intentionally omitted because they are not publicly verified.
+- URL/file: https://www.goodreads.com/group/show/220-goodreads-librarians-group ; evidence: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/ ; cover: https://ahmed-alhafiz.github.io/sirou-fi-alard-cover.webp
+- Verification: targeted Goodreads/Google Books/WorldCat searches on 2026-08-29 found no stable record for the exact title. Current Goodreads librarian guidance states that confirmed forthcoming books with partial information may be valid catalog records when supported by a verifiable non-bookseller source; rumored/unconfirmed releases should not be added.
+- Status: `READY_USER_ACTION`
+- Next: user joins the Goodreads Librarians Group and posts one request using the prepared packet; do not submit duplicates while pending, and later add ISBN/publisher/date only after those fields are formally public and verifiable.
