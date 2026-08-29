@@ -124,3 +124,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: exact-title web search surfaced «قريبًا أم عباس لجلب الحبيب وردّ المطلّقة … تأليف: أحمد الحافظ» on the Dar Ghorab Facebook mentions surface; the official Dar Ghorab site was opened and inspected and currently lists other releases but no dedicated Umm Abbas page. Google Books, Goodreads, WorldCat and major-bookstore targeted searches returned no stable record for the title.
 - Status: `READY_USER_ACTION`
 - Next: user asks Dar Ghorab, through its official communication channel, to confirm whether the title is theirs and, if yes, publish a dedicated forthcoming-book page containing the exact title, author name, cover, forthcoming status and official author-book URL; ISBN/year/edition only after those fields are formally assigned and public.
+
+### 2026-08-29 — Sirou canonical-title normalization on author page
+- Task: ChatGPT/AI discoverability and technical SEO
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/problem: `/about/` linked to the priority book using only the short form «سيروا في الأرض», while the canonical public title on the book page is «قل سيروا في الأرض فانظروا كيف بدأ الخلق».
+- Action: changed only the Sirou book card on the Arabic author page so its visible H3 and cover alt use the full canonical title; preserved the destination URL and all other author-page metadata/links. Refreshed `/about/` `lastmod` in `sitemap.xml` to `2026-08-29` as part of the same content change.
+- URL/file: https://ahmed-alhafiz.github.io/about/ — `about/index.html`; `sitemap.xml`
+- Verification: repository refetch confirmed the full canonical title is present in both the H3 and image alt, canonical/hreflang/schema on `/about/` remain intact, and sitemap now reports `2026-08-29` for `/about/`. Site commit `20c784eead367ff32e1ff488795bd8f993a4a129`; sitemap commit `d2820d04fdbc4b4ce1c7a79bb497e34b21ba6c3d`.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not repeat this author-page fix. In a later run, independently assess whether the homepage's short-form Sirou card creates enough remaining entity-name inconsistency to justify normalization.
