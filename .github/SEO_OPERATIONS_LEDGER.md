@@ -84,3 +84,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: Gmail connector is active and a targeted search for `[GSC-AUTO]` completed successfully; no report exists yet because the Apps Script has not been authorized/run. Automation prompt update succeeded. Search Console data itself is not stored in this public repository.
 - Status: `READY_USER_ACTION`
 - Next: create/authorize the Apps Script once using the prepared files and run `setupGscRelay`; after the first `[GSC-AUTO] Ahmed Alhafiz ...` email arrives, verify the full Gmail → automation data path and then mark this relay `EXECUTED_VERIFIED`.
+
+### 2026-08-29 — Umm Abbas recommendation-intent page strengthening
+- Task: recommendation-intent engine
+- Book: أم عباس لجلب الحبيب ورد المطلقة
+- Target: non-branded recommendation/search intent around «روايات رعب نفسي عربية».
+- Action: commit `2cec3d9ec8f79952045e88b293a5567ec07c59cb` updated the Arabic book page title/meta/Book schema and added reader-fit and horror-type sections without creating a competing article.
+- URL/file: https://ahmed-alhafiz.github.io/books/umm-abbas/ — `books/umm-abbas/index.html`
+- Verification: repository refetch confirmed canonical/hreflang remain intact and the page now includes «لمن تناسب رواية أم عباس؟» and «ما نوع الرعب في الرواية؟» with natural Arabic psychological-horror relevance.
+- Status: `EXECUTED_AWAITING_MEASUREMENT`
+- Next: do not rewrite this page again until Search Console/search evidence, a technical defect, or new independent evidence justifies another change.
