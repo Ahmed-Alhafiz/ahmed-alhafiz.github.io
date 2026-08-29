@@ -404,3 +404,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: Gmail confirmed both prior Qantara message `1a04c603f6c20a59` and this second message `1a04e09bfeee8291` in Sent. The second message used only public verified facts and did not request favorable coverage or assert publisher, ISBN, sales, ranking, or endorsement.
 - Status: `EXECUTED_VERIFIED`
 - Next: treat Qantara.de as fully contacted for all books; do not send any further pitch or follow-up unless Qantara replies first or the user explicitly instructs otherwise. Future runs must check organization-level duplication, not only book-level duplication.
+
+### 2026-08-29 — Maydan review inquiry for Sirou
+- Task: independent recommendation-source acquisition
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/opportunity: Maydan, the online publication of the AbuSulayman Center for Global Islamic Studies at George Mason University — independent book-review consideration through its dedicated Book Reviews editors.
+- Action: sent one individual inquiry to `publish@themaydan.com`, identifying the book only by verified public facts as a forthcoming Arabic-language work on religion and science and asking whether Maydan considers Arabic forthcoming books for independent review and whether an author-supplied electronic review copy is acceptable. No favorable review, endorsement, publisher, ISBN, fixed publication date, ranking, or sales claim was requested or asserted.
+- URL: https://themaydan.com/about/ ; submissions: https://themaydan.com/submissions/ ; official book page: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/
+- Verification: Maydan identifies Dr. Cengiz Sisman and Dr. Ozlem Madi-Sisman as Book Reviews Editors; its mission explicitly covers scholarly and public discourse on Muslim societies and the Islamic faith, and it maintains published book reviews in Islamic thought/theology. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04e42993096d10`.
+- Status: `EXECUTED_VERIFIED`
+- Next: wait for Maydan's response; if the Arabic-language forthcoming book is eligible, provide the review copy or metadata in the format requested. Do not re-pitch Maydan while pending.
