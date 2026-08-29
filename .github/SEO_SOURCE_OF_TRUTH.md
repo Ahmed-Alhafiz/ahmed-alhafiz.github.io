@@ -71,6 +71,9 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 - Current public state on site: قريبًا
 - Priority: after the three books above unless a high-value opportunity appears.
 
+## Permanent rejections
+- **New Books Network (NBN): permanently rejected by the user on 2026-08-29.** Do not recommend, pitch, submit, or prepare outreach to New Books Network for any current or future book unless the user explicitly reverses this decision in a later conversation.
+
 ## Non-negotiable execution rules
 - Read this file before choosing a new action.
 - Read `.github/SEO_OPERATIONS_LEDGER.md` before executing to avoid duplication.
