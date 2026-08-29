@@ -384,3 +384,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: the journal's current 2026 issue includes an active Book Review section, its scope explicitly includes Qur'anic sciences, theology, philosophy, science and technology with an Islamic-studies focus, and its submission guidance invites books for review while normally directing publishers to send copies. A current 2026 IRI programme also addressed “Reason, Revelation, and Evolution,” reinforcing topical institutional fit. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04da50caf025c5`.
 - Status: `EXECUTED_VERIFIED`
 - Next: wait for the journal's response; if the forthcoming Arabic book is eligible, provide the requested review copy or metadata in the format requested. Do not re-pitch Islamic Studies while pending.
+
+### 2026-08-29 — Juhayman lead citation clarity
+- Task: ChatGPT/AI discoverability and technical SEO
+- Book: جهيمان — القيامة بين الركن والمقام
+- Target/problem: the Arabic page’s lead sentence identified the title, genre and historical event but deferred the author and forthcoming state to later text, weakening single-sentence extraction after the two priority books were found technically sound.
+- Action: revised only the first visible paragraph so the lead now binds the exact title, genre, forthcoming state, author أحمد الحافظ — Ahmed Alhafiz, and the 20 November 1979 Haram event in one extractable sentence. Preserved title/meta, self-canonical, hreflang cluster, Book schema, author links and all remaining copy. Refreshed only the Arabic Juhayman URL’s sitemap `lastmod` to `2026-08-29`.
+- URL/file: https://ahmed-alhafiz.github.io/books/juhayman/ — `books/juhayman/index.html`; `sitemap.xml`
+- Verification: repository refetch confirmed the revised lead sentence, intact canonical/hreflang/schema, and `sitemap.xml` now reports `2026-08-29` for the Arabic Juhayman URL. Page commit `3cc0d0cdd698fa3aa8feaef37af24088e2993c92`; sitemap commit `de229f61a6c333fd4dd02c255331137749083d06`. `robots.txt` remains permissive for `OAI-SearchBot`.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not repeat this Arabic Juhayman lead fix; inspect `كتاب الكتب` or a distinct remaining technical/entity defect in a later run.
