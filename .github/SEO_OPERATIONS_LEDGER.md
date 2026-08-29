@@ -374,3 +374,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: repository refetch confirmed the full canonical title in the English homepage card and unchanged canonical/hreflang. Site commit `5d8bfdef94e47400652623bd44baae5b00d200b5`; sitemap commit `170aeec665b4589901f4d33b928152570d820ac0`. `robots.txt` remains permissive for `OAI-SearchBot`.
 - Status: `EXECUTED_VERIFIED`
 - Next: do not repeat this English-homepage normalization; inspect the German homepage or a distinct technical/entity defect in later runs.
+
+### 2026-08-29 — Islamic Studies (IRI-IIUI) review inquiry for Sirou
+- Task: independent recommendation-source acquisition
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/opportunity: Islamic Studies, Islamic Research Institute / International Islamic University Islamabad — independent book-review consideration in an active Scopus-indexed journal covering Qur'anic studies, theology, philosophy, science and technology within Islamic studies.
+- Action: sent one individual editorial inquiry to `islamicstudies.iri@iiu.edu.pk`, identifying the book only by verified public facts as a forthcoming Arabic work on religion and science and asking whether it is eligible for review consideration and whether an author-supplied electronic or print review copy is acceptable. No favorable review, endorsement, publisher, ISBN, fixed publication date, ranking, or sales claim was requested or asserted.
+- URL: https://journals.iiu.edu.pk/index.php/islamicstudies/about/submissions ; journal: https://journals.iiu.edu.pk/index.php/islamicstudies/index ; official book page: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/
+- Verification: the journal's current 2026 issue includes an active Book Review section, its scope explicitly includes Qur'anic sciences, theology, philosophy, science and technology with an Islamic-studies focus, and its submission guidance invites books for review while normally directing publishers to send copies. A current 2026 IRI programme also addressed “Reason, Revelation, and Evolution,” reinforcing topical institutional fit. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04da50caf025c5`.
+- Status: `EXECUTED_VERIFIED`
+- Next: wait for the journal's response; if the forthcoming Arabic book is eligible, provide the requested review copy or metadata in the format requested. Do not re-pitch Islamic Studies while pending.
