@@ -304,3 +304,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: Qantara's current contact page lists Mohammed Magdy as Arabic editor and `kassem@qantara.de`; Gmail search confirmed the message in Sent with message ID `1a04c603f6c20a59` and no attachment.
 - Status: `EXECUTED_VERIFIED`
 - Next: wait for Qantara's response; do not re-pitch the same book while this enquiry is pending.
+
+### 2026-08-29 — AJIS review inquiry for Sirou
+- Task: independent recommendation-source acquisition
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/opportunity: American Journal of Islam and Society (AJIS) — independent book-review consideration in an active interdisciplinary journal covering Islam, philosophy/metaphysics, and related intellectual fields.
+- Action: sent one individual editorial inquiry to `ajis@iiit.org`, explicitly identifying the book as forthcoming and Arabic-language and asking whether it is eligible for AJIS book-review consideration and whether an author-supplied review copy is acceptable. No favorable review, endorsement, publisher, ISBN, fixed publication date, ranking, or sales claim was requested or asserted.
+- URL: https://www.ajis.org/index.php/ajiss/about/submissions ; editorial team: https://www.ajis.org/index.php/ajiss/about/editorialTeam ; official book page: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/
+- Verification: AJIS's current submission guidance states that it publishes book reviews and review essays; its scope includes scholarly research on Islam, philosophy and metaphysics, and its current editorial team lists Dr Younus Mirza as Book Review Editor. A current 2026 issue confirms the journal remains active. Gmail confirmed the one-to-one inquiry was sent successfully with message ID `1a04c89920946665`.
+- Status: `EXECUTED_VERIFIED`
+- Next: wait for AJIS's response; if the forthcoming Arabic book is eligible, provide the requested review copy or metadata in the format requested. Do not re-pitch AJIS while pending.
