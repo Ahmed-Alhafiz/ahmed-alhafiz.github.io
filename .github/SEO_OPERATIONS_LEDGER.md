@@ -104,3 +104,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: ArabLit states that it covers forthcoming publications and accepts suggestions for news coverage by email; its reviews page also accepts book suggestions by email. Existing site coverage demonstrates sustained attention to Arabic horror, djinn/supernatural literature, and Arabic-language authors. The book's public page currently identifies it as a forthcoming Arabic psychological-horror novel centered on fear, belief, doubt, interpretation, and family tension.
 - Status: `READY_USER_ACTION`
 - Next: user sends the prepared single email to `info@arablit.org`; if ArabLit responds, update this entry with the outcome and do not pitch the same opportunity again meanwhile.
+
+### 2026-08-29 — Priority-book sitemap freshness correction
+- Task: ChatGPT/AI discoverability and technical SEO
+- Book: أم عباس لجلب الحبيب ورد المطلقة + قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/problem: `sitemap.xml` still advertised `lastmod=2026-08-28` for both Arabic priority-book URLs after their substantive page updates on 2026-08-29.
+- Action: updated only those two sitemap `lastmod` values to `2026-08-29`; no other URLs or language variants were changed.
+- URL/file: `sitemap.xml` — https://ahmed-alhafiz.github.io/sitemap.xml
+- Verification: repository refetch after commit `7d0d07f3133ef3fd30e0ad5b85f22c6044d781c7` confirmed both Arabic priority URLs now carry `2026-08-29` and the rest of the sitemap is preserved. `robots.txt` remains permissive for `OAI-SearchBot` and points to this sitemap.
+- Status: `EXECUTED_VERIFIED`
+- Next: do not touch these timestamps again unless the corresponding pages receive a real content change; monitor indexing/measurement instead.
