@@ -284,3 +284,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: AUB identifies Al-Abhath as a refereed annual journal publishing reviews in Arab and Middle Eastern studies and accepting Arabic-language work; its current editorial board lists dedicated Book Review Editors. Its instructions explicitly provide a books-for-review route, while stating that publishers normally send review copies, so the outreach correctly asks about author eligibility before sending a copy. Volume 73 (2025) contains active book reviews in Arabic/Islamic studies. Gmail confirmed the one-to-one inquiry was sent successfully.
 - Status: `EXECUTED_VERIFIED`
 - Next: wait for Al-Abhath's response; if they confirm eligibility, provide the requested review copy in their preferred format. Do not re-pitch Al-Abhath while this inquiry is pending.
+
+### 2026-08-29 — ESSSAT / ISSR review inquiry for Sirou
+- Task: independent recommendation-source acquisition
+- Book: قل سيروا في الأرض فانظروا كيف بدأ الخلق
+- Target/opportunity: `Reviews in Science, Religion and Theology`, the quarterly joint publication of ESSSAT and ISSR, for independent book-review consideration.
+- Action: sent one individual email to editor Dr Edward DeLaquil at `esdelaquil@gmail.com`, explicitly identifying the book as forthcoming and Arabic-language and asking whether it is eligible for review consideration before offering a review copy. No favorable review, endorsement, publisher, ISBN, fixed publication date, ranking, or sales claim was requested or asserted.
+- URL: https://www.esssat.net/esssat-news-reviews ; contact evidence: https://esssatconference.org/contact-us/ ; official book page: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/
+- Verification: ESSSAT states that the quarterly publication includes book reviews and welcomes notification of books suitable for review; current instructions cover science-and-theology, philosophical/epistemological, cosmological, evolutionary/biological and related fields. ESSSAT's contact page identifies Edward DeLaquil as editor for the journal, and current journal material lists the same editor/contact. Gmail confirmed the one-to-one inquiry was sent successfully.
+- Status: `EXECUTED_VERIFIED`
+- Next: wait for the editor's response; if Arabic-language/forthcoming books are eligible, provide the requested review copy or metadata in the format requested. Do not re-pitch ESSSAT/ISSR while pending.
