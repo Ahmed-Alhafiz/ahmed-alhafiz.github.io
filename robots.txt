@@ -8,3 +8,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ahmed-alhafiz.github.io/sitemap.xml
+Sitemap: https://ahmed-alhafiz.github.io/mazan/sitemap.xml
