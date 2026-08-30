@@ -7,14 +7,23 @@ This file is an operational control document for the recurring SEO / AI discover
 
 Before publishing or changing any public claim, verify it against the live official website and, when relevant, an independent public source such as a publisher, library, catalog, trusted bookstore, or cultural publication.
 
-## Priority order
-1. «أم عباس لجلب الحبيب ورد المطلقة»
-2. «قل سيروا في الأرض فانظروا كيف بدأ الخلق» (short form used on-site: «سيروا في الأرض»)
-3. «جهيمان — القيامة بين الركن والمقام»
-4. «كتاب الكتب»
-5. Author-name growth: «أحمد الحافظ — Ahmed Alhafiz»
+## CURRENT TEMPORARY STRATEGY — AUTHOR ENTITY / NO OUTREACH
+Effective 2026-08-30 until the user explicitly reverses this rule or confirms that the novels/books have been officially published:
+- Pause ALL external outreach. Do not email, pitch, submit contact forms, DM, request reviews, request listings, or suggest that the user contact any person, publication, publisher, reviewer, podcast, database, library, bookstore, or cultural organization.
+- Do not prepare outreach packets or `READY_USER_ACTION` items whose required action is contacting a third party.
+- Do not promote unpublished books externally. Existing public book pages may remain as factual forthcoming pages, but new work should not attempt to acquire reviews, recommendations, catalog records, publisher mentions, or third-party coverage before official publication.
+- Current operational priority is author-entity and owned-surface strengthening for «أحمد الحافظ — Ahmed Alhafiz»: technical SEO, indexability, structured data, canonical/hreflang consistency, internal linking, identity consistency, official-profile consistency, search-result diagnostics, and improvements to surfaces the user directly controls.
+- Prefer actions that can be implemented directly and verified without third-party contact.
+- Historical outreach entries in the ledger remain historical memory only; do not resume or repeat them while this temporary rule is active.
 
-Primary strategic objective: increase the probability that the books themselves become discoverable, citable and contextually recommendable for relevant book/recommendation queries in Google, ChatGPT Search and other answer engines. Author-name growth is secondary to book discovery.
+## Priority order
+1. Author-name growth and entity clarity: «أحمد الحافظ — Ahmed Alhafiz»
+2. Technical/indexing strength of the official website and `/about/`
+3. Consistency of owned official profiles and identity links
+4. Measurement/search-result diagnostics
+5. Book-level external promotion only after official publication and explicit strategy reactivation
+
+Current strategic objective: strengthen the association between «أحمد الحافظ», «Ahmed Alhafiz», the writer/author identity, and the official website in Google and answer engines without external outreach or premature promotion of unpublished works.
 
 ## Identity
 - Arabic author name: أحمد الحافظ
@@ -47,7 +56,6 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 - English page: https://ahmed-alhafiz.github.io/en/books/umm-abbas/
 - German page: https://ahmed-alhafiz.github.io/de/books/umm-abbas/
 - Public description focus currently on site: psychological horror; fear, belief, doubt, interpretation, family tension.
-- Operational recommendation territories to research, not automatically claim: Arabic psychological horror, family/uncertainty horror, belief-vs-explanation themes.
 - Publisher / ISBN / edition fields: do not add to public pages or structured data unless independently verified from a public source or explicitly approved after publication data stabilizes.
 
 ### 2) قل سيروا في الأرض فانظروا كيف بدأ الخلق
@@ -59,18 +67,17 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 - English page: https://ahmed-alhafiz.github.io/en/books/sirou-fi-alard/
 - German page: https://ahmed-alhafiz.github.io/de/books/sirou-fi-alard/
 - Public description focus currently on site: beginning of creation; religion and science; revelation and reason; limits of interpretation and knowledge.
-- Operational recommendation territories to research, not automatically claim: Arabic books on religion and science, creation questions, science-and-faith methodology, revelation/reason boundaries.
 - Publisher / ISBN / edition fields: do not add to public pages or structured data unless independently verified from a public source or explicitly approved after publication data stabilizes.
 
 ### 3) جهيمان — القيامة بين الركن والمقام
 - Official Arabic page: https://ahmed-alhafiz.github.io/books/juhayman/
 - Current public state on site: قريبًا
-- Priority: after the two books above unless a high-value time-sensitive opportunity appears.
+- External promotion: paused until official publication.
 
 ### 4) كتاب الكتب
 - Official Arabic page: https://ahmed-alhafiz.github.io/books/kitab-al-kutub/
 - Current public state on site: قريبًا
-- Priority: after the three books above unless a high-value opportunity appears.
+- External promotion: paused until official publication.
 
 ## Permanent rejections
 - **New Books Network (NBN): permanently rejected by the user on 2026-08-29.** Do not recommend, pitch, submit, or prepare outreach to New Books Network for any current or future book unless the user explicitly reverses this decision in a later conversation.
@@ -79,23 +86,23 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 - Read this file before choosing a new action.
 - Read `.github/SEO_OPERATIONS_LEDGER.md` before executing to avoid duplication.
 - One highest-impact action per task run unless several edits are inseparable parts of one fix.
-- Prefer book discovery and recommendation surfaces over generic author-name activity.
-- Prefer independent public evidence over self-owned claims.
+- While the temporary no-outreach rule is active, prioritize author-entity and owned-surface work over book recommendation acquisition.
+- Prefer independent public evidence over self-owned claims when validating factual claims, but do not contact third parties to acquire new evidence during the pause.
 - Never fabricate publication status, ISBN, publisher, reviews, sales, popularity, rankings, awards or search demand.
 - Never describe a book as “best”, “most searched”, “trending”, or “popular” without current evidence.
 - Do not create keyword-stuffed, duplicate or scaled low-value pages.
 - Do not use fake reviews, fake accounts, link spam, paid ranking links, mass-comment spam or synthetic traffic.
 - For internal-site actions, use connected GitHub tools when the change is clear, evidence-backed and reversible.
-- After every executed change, verify the live/repository result and record it in the operations ledger.
-- If external execution cannot be completed with available permissions, prepare one complete high-value execution packet and record the opportunity/status in the ledger.
+- After every executed change, verify the repository result and record it in the operations ledger when a safe append/update mechanism is available.
+- Do not convert an unavailable external action into an outreach packet while the temporary no-outreach rule is active; choose a different owned-surface or technical action instead.
 
-## Measurement hierarchy
-1. New independent book evidence / recommendation surfaces.
-2. New non-branded discovery queries for priority book pages.
-3. Growth in impressions and clicks for priority book pages.
-4. Book-title branded search growth.
-5. Author-name branded search growth.
-6. Ranking/CTR diagnostics as supporting signals, not isolated goals.
+## Measurement hierarchy during outreach pause
+1. Author-name branded search visibility and correct entity association.
+2. Indexing and visibility of the official homepage and `/about/`.
+3. Consistency of Arabic/Latin author identity across owned profiles.
+4. Growth in impressions and clicks for official author pages when real Search Console data is available.
+5. Technical/schema/indexability diagnostics.
+6. Book recommendation/discovery metrics resume priority only after official publication and explicit strategy reactivation.
 
 ## Search Console limitation
 The recurring tasks must never claim direct private Search Console access unless a real connected source becomes available. Use only real exported or connected data; do not invent metrics.
