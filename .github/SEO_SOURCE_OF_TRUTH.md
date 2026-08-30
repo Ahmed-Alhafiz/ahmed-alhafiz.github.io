@@ -1,6 +1,6 @@
 # SEO Source of Truth — Ahmed Alhafiz
 
-Last verified: 2026-08-29 (Europe/Vienna)
+Last verified: 2026-08-30 (Europe/Vienna)
 
 ## Purpose
 This file is an operational control document for the recurring SEO / AI discoverability tasks. It is NOT an independent bibliographic source and must never be cited externally as proof of a claim.
@@ -21,11 +21,11 @@ Primary strategic objective: increase the probability that the books themselves 
 - Latin author name: Ahmed Alhafiz
 - Official website: https://ahmed-alhafiz.github.io/
 - Official author page: https://ahmed-alhafiz.github.io/about/
-- Official Medium: https://ahmedalhafiz.medium.com/
+- Official Medium: https://medium.com/@AhmedAlhafiz
 - Official Instagram: https://www.instagram.com/ahmed_666_8
 
 ## Verified current website baseline
-Verified from repository state on 2026-08-29:
+Verified from repository state on 2026-08-30:
 - Separate author page exists at `/about/`.
 - Separate Arabic book pages exist under `/books/`.
 - English and German versions exist under `/en/` and `/de/`.
@@ -33,6 +33,7 @@ Verified from repository state on 2026-08-29:
 - `sitemap.xml` lists the main Arabic, English and German author/book URLs.
 - Google Search Console verification file exists in the repository.
 - Canonical and hreflang markup are present on the inspected priority book pages.
+- Author pages use the currently discoverable Medium profile URL `https://medium.com/@AhmedAlhafiz` in visible official links and `Person.sameAs`.
 
 Do NOT return to the obsolete baseline that the site is a single page without book pages.
 
