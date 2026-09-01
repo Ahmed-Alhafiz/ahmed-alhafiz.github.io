@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ar">
   <title>مقالات أحمد الحافظ</title>
-  <subtitle>دراسات أصلية موثقة في الدين والعلم، علم النفس، الأدب، التاريخ والحضارة.</subtitle>
+  <subtitle>دراسات أصلية موثقة في الدين والعلم، الذكاء الاصطناعي، علم النفس، الأدب، التاريخ والحضارة.</subtitle>
   <link href="https://ahmed-alhafiz.github.io/articles/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://ahmed-alhafiz.github.io/articles/" rel="alternate" type="text/html"/>
   <id>https://ahmed-alhafiz.github.io/articles/</id>
-  <updated>2026-09-01T23:00:00+02:00</updated>
+  <updated>2026-09-02T23:00:00+02:00</updated>
   <author><name>أحمد الحافظ</name><uri>https://ahmed-alhafiz.github.io/about/</uri></author>
+  <entry>
+    <title>حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض من الدجل والاعتداء؟</title>
+    <link href="https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/"/>
+    <id>https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/</id>
+    <published>2026-09-02T23:00:00+02:00</published>
+    <updated>2026-09-02T23:00:00+02:00</updated>
+    <category term="السلامة النفسية"/><category term="حماية المرضى"/><category term="الاحتيال الصحي"/>
+    <summary>تقرير يميز الدعم الروحي الطوعي عن الدجل والإكراه والعزل والاستغلال المالي والجنسي وتأخير العلاج، ويقدم اختبارًا عمليًا للحدود وخطة حماية للأسرة.</summary>
+  </entry>
+  <entry>
+    <title>تعليم الأسماء والذكاء الاصطناعي: هل تفهم الآلة الكلمات أم تتنبأ بها؟</title>
+    <link href="https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/"/>
+    <id>https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/</id>
+    <published>2026-09-02T23:00:00+02:00</published>
+    <updated>2026-09-02T23:00:00+02:00</updated>
+    <category term="الذكاء الاصطناعي"/><category term="فلسفة اللغة"/><category term="الدين والعلم"/>
+    <summary>دراسة تفصل بين الرمز والمفهوم والمرجع والقصد، وتشرح ما تفعله نماذج اللغة وما لا يحسمه نجاحها السلوكي عن الفهم والوعي.</summary>
+  </entry>
   <entry>
     <title>النوبات الوظيفية والصرع: كيف يفرّق الأطباء بينهما؟</title>
     <link href="https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/"/>
