@@ -1,6 +1,17 @@
 # SEO Source of Truth — Ahmed Alhafiz
 
-Last verified: 2026-08-30 (Europe/Vienna)
+Last verified: 2026-09-01 (Europe/Vienna)
+
+## Governing directive
+
+Before any website, article, SEO, AI-discoverability, or book-linked content action, read and obey:
+
+1. `.github/PROJECT_GOVERNING_DIRECTIVE.md`
+2. `.github/SEO_SOURCE_OF_TRUTH.md`
+3. `.github/SEO_OPERATIONS_LEDGER.md`
+4. `.github/CONTENT_CURRENT_CHECKPOINT.md` when continuing article or content work.
+
+The governing directive supersedes older strategy notes when they conflict. This file remains the factual and operational source of truth for current public claims and temporary constraints.
 
 ## Purpose
 This file is an operational control document for the recurring SEO / AI discoverability tasks. It is NOT an independent bibliographic source and must never be cited externally as proof of a claim.
@@ -83,8 +94,10 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 - **New Books Network (NBN): permanently rejected by the user on 2026-08-29.** Do not recommend, pitch, submit, or prepare outreach to New Books Network for any current or future book unless the user explicitly reverses this decision in a later conversation.
 
 ## Non-negotiable execution rules
+- Read the governing directive before choosing a new action.
 - Read this file before choosing a new action.
 - Read `.github/SEO_OPERATIONS_LEDGER.md` before executing to avoid duplication.
+- Read `.github/CONTENT_CURRENT_CHECKPOINT.md` before continuing article/content work.
 - One highest-impact action per task run unless several edits are inseparable parts of one fix.
 - While the temporary no-outreach rule is active, prioritize author-entity and owned-surface work over book recommendation acquisition.
 - Prefer independent public evidence over self-owned claims when validating factual claims, but do not contact third parties to acquire new evidence during the pause.
