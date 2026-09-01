@@ -41,6 +41,9 @@ jobs:
             exit 1
           fi
           tar -xzf /tmp/content-bundle.tgz -C .
+          # The repository token cannot create workflow files via git push.
+          # Publish the verified workflow separately through the GitHub connector after this release.
+          rm -f .github/workflows/site-integrity.yml
           rm .github/content-bundle.manifest .github/content-bundle.part-*
           python -m py_compile tools/site_audit.py
           python - <<'PY'
