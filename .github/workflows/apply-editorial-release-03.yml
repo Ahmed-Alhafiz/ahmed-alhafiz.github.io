@@ -1,0 +1,127 @@
+name: Apply editorial reference release 03
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/editorial-release-03.manifest
+
+permissions:
+  contents: write
+
+concurrency:
+  group: editorial-release-03
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect pending release
+        id: release
+        shell: bash
+        run: |
+          if [[ -f .github/editorial-release-03.manifest ]]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "Release bundle already consumed."
+          fi
+
+      - name: Decode, verify and install reviewed release
+        if: steps.release.outputs.present == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected_sha="1883a95662a97e9c9bcf10938cf51438b92363a93d111af921e714188ca8366d"
+          expected_parts="10"
+          grep -Fxq "sha256=${expected_sha}" .github/editorial-release-03.manifest
+          grep -Fxq "parts=${expected_parts}" .github/editorial-release-03.manifest
+          actual_parts="$(find .github -maxdepth 1 -type f -name 'editorial-release-03.part-*' | wc -l | tr -d ' ')"
+          test "$actual_parts" = "$expected_parts"
+          cat .github/editorial-release-03.part-* > /tmp/editorial-release-03.tgz.b64
+          base64 --decode /tmp/editorial-release-03.tgz.b64 > /tmp/editorial-release-03.tgz
+          echo "${expected_sha}  /tmp/editorial-release-03.tgz" | sha256sum --check --strict
+          if tar -tzf /tmp/editorial-release-03.tgz | grep -E '(^/|(^|/)\.\.(/|$))'; then
+            echo "Unsafe archive path detected" >&2
+            exit 1
+          fi
+          tar -xzf /tmp/editorial-release-03.tgz -C .
+          python .github/EDITORIAL_RELEASE_PATCH.py
+          printf '\n' >> .github/SEO_OPERATIONS_LEDGER.md
+          cat .github/SEO_LEDGER_APPEND.md >> .github/SEO_OPERATIONS_LEDGER.md
+          rm .github/EDITORIAL_RELEASE_PATCH.py .github/SEO_LEDGER_APPEND.md
+          rm .github/editorial-release-03.manifest .github/editorial-release-03.part-*
+          rm .github/workflows/apply-editorial-release-03.yml
+
+      - name: Run complete release verification
+        if: steps.release.outputs.present == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class JsonLdParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.active = False
+                  self.buf = []
+                  self.blocks = []
+              def handle_starttag(self, tag, attrs):
+                  a = dict(attrs)
+                  if tag.lower() == 'script' and a.get('type', '').lower() == 'application/ld+json':
+                      self.active = True
+                      self.buf = []
+              def handle_endtag(self, tag):
+                  if tag.lower() == 'script' and self.active:
+                      self.blocks.append(''.join(self.buf))
+                      self.active = False
+              def handle_data(self, data):
+                  if self.active:
+                      self.buf.append(data)
+
+          ET.parse('sitemap.xml')
+          ET.parse('articles/feed.xml')
+          count = 0
+          for path in Path('.').rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+              parser = JsonLdParser()
+              parser.feed(path.read_text(encoding='utf-8'))
+              for block in parser.blocks:
+                  if block.strip():
+                      json.loads(block)
+              count += 1
+          print(f'Parsed {count} HTML pages and all JSON-LD/XML successfully')
+          PY
+          python tools/site_audit.py
+          python tools/editorial_quality_gate.py
+          git diff --check
+          test ! -e .github/EDITORIAL_RELEASE_PATCH.py
+          test ! -e .github/SEO_LEDGER_APPEND.md
+          test ! -e .github/editorial-release-03.manifest
+          test "$(find .github -maxdepth 1 -type f -name 'editorial-release-03.part-*' | wc -l)" -eq 0
+
+      - name: Commit and push verified release
+        if: steps.release.outputs.present == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Ahmed-Alhafiz"
+          git config user.email "hhafz9924@gmail.com"
+          git add -A
+          git commit -m "Publish second reference research release"
+          if ! git push origin HEAD:main; then
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
