@@ -1,17 +1,18 @@
 # SEO Source of Truth — Ahmed Alhafiz
 
-Last verified: 2026-09-01 (Europe/Vienna)
+Last verified: 2026-09-02 (Europe/Vienna)
 
-## Governing directive
+## Governing directive and mandatory memory
 
 Before any website, article, SEO, AI-discoverability, or book-linked content action, read and obey:
 
 1. `.github/PROJECT_GOVERNING_DIRECTIVE.md`
 2. `.github/SEO_SOURCE_OF_TRUTH.md`
 3. `.github/SEO_OPERATIONS_LEDGER.md`
-4. `.github/CONTENT_CURRENT_CHECKPOINT.md` when continuing article or content work.
+4. `.github/SEO_OPERATIONS_CORRECTION_2026-09-01.md`
+5. `.github/CONTENT_CURRENT_CHECKPOINT.md` when continuing article or content work.
 
-The governing directive supersedes older strategy notes when they conflict. This file remains the factual and operational source of truth for current public claims and temporary constraints.
+The governing directive supersedes older strategy notes when they conflict. The correction record supersedes only inaccurate earlier completion/verification claims; it does not erase work that was actually executed. This file remains the factual and operational source of truth for current public claims and temporary constraints.
 
 ## Purpose
 This file is an operational control document for the recurring SEO / AI discoverability tasks. It is NOT an independent bibliographic source and must never be cited externally as proof of a claim.
@@ -45,17 +46,21 @@ Current strategic objective: strengthen the association between «أحمد ال�
 - Official Instagram: https://www.instagram.com/ahmed_666_8
 
 ## Verified current website baseline
-Verified from repository state on 2026-08-30:
+Verified from repository and public-page state on 2026-09-02:
 - Separate author page exists at `/about/`.
 - Separate Arabic book pages exist under `/books/`.
 - English and German versions exist under `/en/` and `/de/`.
+- A public article hub exists at `/articles/`.
+- Four reference studies are live and linked to the two active forthcoming works.
+- An editorial methodology page exists at `/methodology/`.
 - `robots.txt` explicitly allows `OAI-SearchBot`, `GPTBot`, and generic crawlers.
-- `sitemap.xml` lists the main Arabic, English and German author/book URLs.
+- `sitemap.xml` and `/articles/feed.xml` include the active research pages.
 - Google Search Console verification file exists in the repository.
 - Canonical and hreflang markup are present on the inspected priority book pages.
+- Persistent structural and editorial quality gates run through `.github/workflows/site-integrity.yml`.
 - Author pages use the currently discoverable Medium profile URL `https://medium.com/@AhmedAlhafiz` in visible official links and `Person.sameAs`.
 
-Do NOT return to the obsolete baseline that the site is a single page without book pages.
+Do NOT return to the obsolete baseline that the site is a single page without book pages or reference articles.
 
 ## Priority book records
 
@@ -84,11 +89,13 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 - Official Arabic page: https://ahmed-alhafiz.github.io/books/juhayman/
 - Current public state on site: قريبًا
 - External promotion: paused until official publication.
+- Article extraction: deferred until explicit user instruction.
 
 ### 4) كتاب الكتب
 - Official Arabic page: https://ahmed-alhafiz.github.io/books/kitab-al-kutub/
 - Current public state on site: قريبًا
 - External promotion: paused until official publication.
+- Article extraction: deferred until explicit user instruction.
 
 ## Permanent rejections
 - **New Books Network (NBN): permanently rejected by the user on 2026-08-29.** Do not recommend, pitch, submit, or prepare outreach to New Books Network for any current or future book unless the user explicitly reverses this decision in a later conversation.
@@ -96,7 +103,7 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 ## Non-negotiable execution rules
 - Read the governing directive before choosing a new action.
 - Read this file before choosing a new action.
-- Read `.github/SEO_OPERATIONS_LEDGER.md` before executing to avoid duplication.
+- Read `.github/SEO_OPERATIONS_LEDGER.md` and the correction record before executing to avoid duplication and stale claims.
 - Read `.github/CONTENT_CURRENT_CHECKPOINT.md` before continuing article/content work.
 - One highest-impact action per task run unless several edits are inseparable parts of one fix.
 - While the temporary no-outreach rule is active, prioritize author-entity and owned-surface work over book recommendation acquisition.
@@ -105,8 +112,10 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 - Never describe a book as “best”, “most searched”, “trending”, or “popular” without current evidence.
 - Do not create keyword-stuffed, duplicate or scaled low-value pages.
 - Do not use fake reviews, fake accounts, link spam, paid ranking links, mass-comment spam or synthetic traffic.
-- For internal-site actions, use connected GitHub tools when the change is clear, evidence-backed and reversible.
-- After every executed change, verify the repository result and record it in the operations ledger when a safe append/update mechanism is available.
+- For internal-site actions, use a feature branch, pull request, required checks, and merge when the change is substantial. Direct changes to `main` are limited to small, reversible operational corrections.
+- After every executed change, verify the repository result and record it in operational memory.
+- Do not claim a page is live before it exists on `main` and has been fetched from the public site.
+- Do not claim ranking or AI-citation improvement without real measurement.
 - Do not convert an unavailable external action into an outreach packet while the temporary no-outreach rule is active; choose a different owned-surface or technical action instead.
 
 ## Measurement hierarchy during outreach pause
@@ -114,8 +123,9 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 2. Indexing and visibility of the official homepage and `/about/`.
 3. Consistency of Arabic/Latin author identity across owned profiles.
 4. Growth in impressions and clicks for official author pages when real Search Console data is available.
-5. Technical/schema/indexability diagnostics.
-6. Book recommendation/discovery metrics resume priority only after official publication and explicit strategy reactivation.
+5. Indexing, non-branded impressions, referral traffic, and attributable citations for reference articles.
+6. Technical/schema/indexability diagnostics.
+7. Book recommendation/discovery metrics resume priority only after official publication and explicit strategy reactivation.
 
 ## Search Console limitation
 The recurring tasks must never claim direct private Search Console access unless a real connected source becomes available. Use only real exported or connected data; do not invent metrics.
