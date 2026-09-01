@@ -29,21 +29,25 @@ REFERENCE_ARTICLES = {
         "book": "books/sirou-fi-alard/index.html",
         "minimum_words": 1800,
         "medical": False,
+        "medication_warning": False,
     },
     "articles/six-days-creation-cosmic-time/index.html": {
         "book": "books/sirou-fi-alard/index.html",
         "minimum_words": 2200,
         "medical": False,
+        "medication_warning": False,
     },
     "articles/sleep-paralysis-jathoom/index.html": {
         "book": "books/umm-abbas/index.html",
         "minimum_words": 1800,
         "medical": True,
+        "medication_warning": False,
     },
     "articles/functional-seizures-vs-epilepsy/index.html": {
         "book": "books/umm-abbas/index.html",
         "minimum_words": 2400,
         "medical": True,
+        "medication_warning": True,
     },
 }
 
@@ -59,9 +63,10 @@ FORBIDDEN_CERTAINTY = (
 MEDICAL_SAFETY_GROUPS = (
     ("هذه مادة تثقيفية", "مادة تثقيفية عامة"),
     ("ليست تشخيصًا", "ليس تشخيصًا"),
-    ("الطوارئ", "اطلب الإسعاف", "اتصل بالإسعاف"),
-    ("لا توقف", "لا تغيّر جرعة", "لا تغير جرعة"),
+    ("الطوارئ", "اطلب الإسعاف", "اتصل بالإسعاف", "تقييم عاجل"),
 )
+
+MEDICATION_WARNING = ("لا توقف", "لا تغيّر جرعة", "لا تغير جرعة")
 
 TRUSTED_HOST_SUFFIXES = (
     "aan.com",
@@ -290,6 +295,10 @@ def main() -> int:
                     errors.append(
                         f"{rel}: medical safety language missing one of {alternatives}"
                     )
+            if rules["medication_warning"] and not any(
+                value in text for value in MEDICATION_WARNING
+            ):
+                errors.append(f"{rel}: medication-change warning is missing")
             if not any(value in lower for value in ("فيديو-eeg", "video-eeg", "rem", "طب النوم")):
                 errors.append(f"{rel}: medical mechanism/diagnostic context missing")
             if "MedicalWebPage" not in "".join(data.jsonld_buffers):
