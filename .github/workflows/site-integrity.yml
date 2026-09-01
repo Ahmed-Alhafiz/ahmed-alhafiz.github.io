@@ -19,5 +19,57 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate HTML, JSON-LD, links, sitemap, feed and publication safety
+      - name: Compile audit tools
+        run: python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py
+      - name: Parse XML and all JSON-LD blocks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class JsonLdParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.active = False
+                  self.buffer = []
+                  self.blocks = []
+
+              def handle_starttag(self, tag, attrs):
+                  attributes = dict(attrs)
+                  if tag.lower() == "script" and attributes.get("type", "").lower() == "application/ld+json":
+                      self.active = True
+                      self.buffer = []
+
+              def handle_endtag(self, tag):
+                  if tag.lower() == "script" and self.active:
+                      self.blocks.append("".join(self.buffer))
+                      self.active = False
+
+              def handle_data(self, data):
+                  if self.active:
+                      self.buffer.append(data)
+
+          ET.parse("sitemap.xml")
+          ET.parse("articles/feed.xml")
+          parsed = 0
+          for path in Path(".").rglob("*.html"):
+              if ".git" in path.parts:
+                  continue
+              parser = JsonLdParser()
+              parser.feed(path.read_text(encoding="utf-8"))
+              for block in parser.blocks:
+                  if block.strip():
+                      json.loads(block)
+              parsed += 1
+          print(f"Parsed {parsed} HTML files and all JSON-LD/XML successfully")
+          PY
+      - name: Validate HTML, links, sitemap, feed and publication safety
         run: python tools/site_audit.py
+      - name: Validate reference-article evidence, linking and medical safeguards
+        run: python tools/editorial_quality_gate.py
+      - name: Check patch whitespace
+        run: git diff --check
