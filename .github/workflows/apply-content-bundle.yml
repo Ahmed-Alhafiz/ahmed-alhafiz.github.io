@@ -32,7 +32,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test "$(find .github -maxdepth 1 -name 'content-bundle.part-*' -type f | wc -l)" -eq 14
+          test "$(find .github -maxdepth 1 -name 'content-bundle.part-*' -type f | wc -l)" -eq 5
           cat .github/content-bundle.part-* > /tmp/content-bundle.tgz.b64
           base64 --decode /tmp/content-bundle.tgz.b64 > /tmp/content-bundle.tgz
           echo "00873465b7187943bd3980edad34639f126d279baa8dc8e5130032e8114a62f6  /tmp/content-bundle.tgz" | sha256sum --check --strict
