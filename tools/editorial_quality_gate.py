@@ -4,7 +4,8 @@
 The repository integrity audit checks structural correctness. This companion
 gate checks the minimum editorial traits that make a reference page useful:
 a direct answer, substantial visible analysis, traceable sources, explicit
-uncertainty, reciprocal book links, and additional safeguards on medical pages.
+uncertainty, reciprocal book links, and additional safeguards on medical and
+safeguarding pages.
 
 It uses only the Python standard library so GitHub Actions can run it without
 network access or third-party packages.
@@ -30,24 +31,72 @@ REFERENCE_ARTICLES = {
         "minimum_words": 1800,
         "medical": False,
         "medication_warning": False,
+        "safeguarding": False,
+        "medical_context_markers": (),
+        "required_phrases": ("الانفجار العظيم", "الرتق والفتق"),
     },
     "articles/six-days-creation-cosmic-time/index.html": {
         "book": "books/sirou-fi-alard/index.html",
         "minimum_words": 2200,
         "medical": False,
         "medication_warning": False,
+        "safeguarding": False,
+        "medical_context_markers": (),
+        "required_phrases": ("أيام الخلق الستة", "الزمن الكوني"),
+    },
+    "articles/teaching-names-ai-understanding/index.html": {
+        "book": "books/sirou-fi-alard/index.html",
+        "minimum_words": 2500,
+        "medical": False,
+        "medication_warning": False,
+        "safeguarding": False,
+        "medical_context_markers": (),
+        "required_phrases": (
+            "سُلّم الاسم",
+            "تعليم آدم الأسماء",
+            "Transformer",
+            "لا يثبت وحده",
+        ),
     },
     "articles/sleep-paralysis-jathoom/index.html": {
         "book": "books/umm-abbas/index.html",
         "minimum_words": 1800,
         "medical": True,
         "medication_warning": False,
+        "safeguarding": False,
+        "medical_context_markers": ("rem", "طب النوم", "شلل النوم"),
+        "required_phrases": ("شلل النوم", "الجاثوم"),
     },
     "articles/functional-seizures-vs-epilepsy/index.html": {
         "book": "books/umm-abbas/index.html",
         "minimum_words": 2400,
         "medical": True,
         "medication_warning": True,
+        "safeguarding": False,
+        "medical_context_markers": (
+            "فيديو-eeg",
+            "video-eeg",
+            "تخطيط كهربائية الدماغ",
+        ),
+        "required_phrases": ("النوبات الوظيفية", "الصرع"),
+    },
+    "articles/spiritual-healing-exploitation-safeguarding/index.html": {
+        "book": "books/umm-abbas/index.html",
+        "minimum_words": 2600,
+        "medical": True,
+        "medication_warning": True,
+        "safeguarding": True,
+        "medical_context_markers": (
+            "الموافقة",
+            "الرعاية الطبية",
+            "الاحتيال الصحي",
+        ),
+        "required_phrases": (
+            "اختبار الحدود الخمس",
+            "حرية الانسحاب",
+            "صون الجسد",
+            "قابلية المساءلة",
+        ),
     },
 }
 
@@ -68,6 +117,14 @@ MEDICAL_SAFETY_GROUPS = (
 
 MEDICATION_WARNING = ("لا توقف", "لا تغيّر جرعة", "لا تغير جرعة")
 
+SAFEGUARDING_GROUPS = (
+    ("الموافقة", "قبول حر"),
+    ("الاعتداء", "العنف الجنسي"),
+    ("مكان آمن", "تعزيز الأمان"),
+    ("خدمة حماية", "شرطة", "جهة قادرة على الحماية"),
+    ("استشارة قانونية", "القانون المحلي"),
+)
+
 TRUSTED_HOST_SUFFIXES = (
     "aan.com",
     "neurology.org",
@@ -76,10 +133,18 @@ TRUSTED_HOST_SUFFIXES = (
     "ilae.org",
     "cdc.gov",
     "nhs.uk",
+    "who.int",
+    "ohchr.org",
+    "fda.gov",
+    "gov.uk",
     "nasa.gov",
     "esa.int",
     "usgs.gov",
     "arxiv.org",
+    "aclanthology.org",
+    "academic.oup.com",
+    "eprints.soton.ac.uk",
+    "science.org",
     "tafsir.app",
     "quran.com",
     "sunnah.com",
@@ -232,6 +297,9 @@ def main() -> int:
         for required_class in ("references", "citation-box", "related-work"):
             if required_class not in data.classes:
                 errors.append(f"{rel}: missing .{required_class}")
+        for phrase in rules["required_phrases"]:
+            if phrase not in text:
+                errors.append(f"{rel}: required analytical phrase missing: {phrase}")
 
         node = article_node(data)
         if node is None:
@@ -299,10 +367,20 @@ def main() -> int:
                 value in text for value in MEDICATION_WARNING
             ):
                 errors.append(f"{rel}: medication-change warning is missing")
-            if not any(value in lower for value in ("فيديو-eeg", "video-eeg", "rem", "طب النوم")):
-                errors.append(f"{rel}: medical mechanism/diagnostic context missing")
+            context_markers = tuple(value.lower() for value in rules["medical_context_markers"])
+            if context_markers and not any(value in lower for value in context_markers):
+                errors.append(
+                    f"{rel}: article-specific medical mechanism/context language is missing"
+                )
             if "MedicalWebPage" not in "".join(data.jsonld_buffers):
                 errors.append(f"{rel}: medical article lacks MedicalWebPage schema")
+
+        if rules["safeguarding"]:
+            for alternatives in SAFEGUARDING_GROUPS:
+                if not any(value in text for value in alternatives):
+                    errors.append(
+                        f"{rel}: safeguarding language missing one of {alternatives}"
+                    )
 
         print(f"{rel}: {count} visible words, {len(set(external))} visible sources")
 
