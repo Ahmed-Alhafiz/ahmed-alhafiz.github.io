@@ -38,7 +38,7 @@ entry = r'''
 '''
 
 if key not in text:
-    ledger.write_text(text.rstrip() + entry + '\n', encoding='utf-8')
+    ledger.write_text((text.rstrip() + entry).rstrip() + '\n', encoding='utf-8')
     print('Release entry appended to SEO operations ledger.')
 else:
     print('Release entry already present; no duplicate appended.')
