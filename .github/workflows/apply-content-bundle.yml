@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - .github/content-bundle.tgz.b64
+      - .github/content-bundle.manifest
 
 permissions:
   contents: write
@@ -17,22 +17,31 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Stop cleanly after the bundle has already been consumed
-        if: ${{ hashFiles('.github/content-bundle.tgz.b64') == '' }}
-        run: echo "Bundle already consumed; nothing to apply."
+      - name: Detect a pending reviewed bundle
+        id: bundle
+        shell: bash
+        run: |
+          if [[ -f .github/content-bundle.manifest ]]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "Bundle already consumed; nothing to apply."
+          fi
       - name: Decode, verify and extract the reviewed bundle
-        if: ${{ hashFiles('.github/content-bundle.tgz.b64') != '' }}
+        if: steps.bundle.outputs.present == 'true'
         shell: bash
         run: |
           set -euo pipefail
-          base64 --decode .github/content-bundle.tgz.b64 > /tmp/content-bundle.tgz
+          test "$(find .github -maxdepth 1 -name 'content-bundle.part-*' -type f | wc -l)" -eq 14
+          cat .github/content-bundle.part-* > /tmp/content-bundle.tgz.b64
+          base64 --decode /tmp/content-bundle.tgz.b64 > /tmp/content-bundle.tgz
           echo "00873465b7187943bd3980edad34639f126d279baa8dc8e5130032e8114a62f6  /tmp/content-bundle.tgz" | sha256sum --check --strict
           if tar -tzf /tmp/content-bundle.tgz | grep -E '(^/|(^|/)\.\.(/|$))'; then
             echo "Unsafe path detected in bundle" >&2
             exit 1
           fi
           tar -xzf /tmp/content-bundle.tgz -C .
-          rm .github/content-bundle.tgz.b64
+          rm .github/content-bundle.manifest .github/content-bundle.part-*
           python -m py_compile tools/site_audit.py
           python - <<'PY'
           import xml.etree.ElementTree as ET
@@ -42,7 +51,7 @@ jobs:
           PY
           git diff --check
       - name: Commit the reviewed website release
-        if: ${{ hashFiles('.github/content-bundle.tgz.b64') == '' }}
+        if: steps.bundle.outputs.present == 'true'
         shell: bash
         run: |
           set -euo pipefail
