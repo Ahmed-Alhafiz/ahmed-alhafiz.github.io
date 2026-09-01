@@ -1,15 +1,18 @@
 # Content Project Current Checkpoint — Ahmed Alhafiz
 
-**Updated:** 2026-09-01
+**Updated:** 2026-09-02
 
-## Governing directive
+## Governing directive and mandatory memory
 
 Before any website, article, SEO, AI-discoverability, or book-linked content work, read in order:
 
 1. `.github/PROJECT_GOVERNING_DIRECTIVE.md`
 2. `.github/SEO_SOURCE_OF_TRUTH.md`
 3. `.github/SEO_OPERATIONS_LEDGER.md`
-4. `.github/CONTENT_CURRENT_CHECKPOINT.md`
+4. `.github/SEO_OPERATIONS_CORRECTION_2026-09-01.md`
+5. `.github/CONTENT_CURRENT_CHECKPOINT.md`
+
+The correction file supersedes only inaccurate earlier claims about the number of live studies, cleanup, and verification. It does not erase work that was actually present.
 
 ## Current source priority
 
@@ -20,65 +23,92 @@ Before any website, article, SEO, AI-discoverability, or book-linked content wor
 
 ## Accuracy correction
 
-A prior checkpoint/report overstated the completion of the first research release. Inspection of the actual `main` tree on 2026-09-01 established the following:
+A prior report overstated completion of the first research release. Inspection of the actual `main` branch found that only two reference studies were live at that point and that failed one-time release artifacts remained. The missing work was rebuilt on a feature branch, subjected to pull-request checks, merged, deployed, and verified. The factual record is preserved in `.github/SEO_OPERATIONS_CORRECTION_2026-09-01.md`.
 
-- Live on `main`: the article hub, the ratq/fatq study, the sleep-paralysis report, the psychological-horror guide, methodology, feed, author/book links, and the structural site audit.
-- Not present on `main` before release candidate 04: the six-creation-days study, the functional-seizures report, and the editorial quality-gate script.
-- Several failed one-time release workflows, manifests, bridge tests, and two incomplete bundle parts remained in the repository despite the earlier statement that all temporary artifacts had been removed.
-- Therefore no claim that four reference studies were live was valid before release candidate 04 is merged and publicly verified.
+## Verified reference release 04
 
-This correction does not erase historical records. It supersedes only the inaccurate completion and verification claims about the missing files and cleanup state.
+- Status: `EXECUTED_VERIFIED`.
+- Pull request: `#7`.
+- Merge commit: `73c7d57dd421e4a632a8f9b77eadf563a9af2516`.
+- Pull-request integrity run: `33563747279` — success.
+- Post-merge integrity run: `33563836430` — success.
+- Public-page fetch confirmed the article hub, both new HTML studies, and both updated book pages were serving the merged content.
+- Sitemap and Atom feed were validated from the merged repository and by the CI XML/content checks.
 
-## Verified live baseline before release candidate 04
+### Live reference studies
+
+1. `/articles/ratq-fatq-big-bang/`
+   - 2,079 visible words;
+   - 8 visible sources.
+
+2. `/articles/six-days-creation-cosmic-time/`
+   - 2,598 visible words;
+   - 11 visible sources;
+   - separates Qur'anic text, classical interpretation, measured cosmic/terrestrial ages, and inference.
+
+3. `/articles/sleep-paralysis-jathoom/`
+   - 2,379 visible words;
+   - 6 visible sources.
+
+4. `/articles/functional-seizures-vs-epilepsy/`
+   - 2,775 visible words;
+   - 10 visible sources;
+   - includes urgent-care guidance, educational-only language, medication safeguards, and diagnostic limits.
+
+### Supporting public surfaces
 
 - `/articles/`
-- `/articles/ratq-fatq-big-bang/`
-- `/articles/sleep-paralysis-jathoom/`
 - `/guides/arabic-psychological-horror/`
 - `/methodology/`
 - `/articles/feed.xml`
-- linked Arabic pages for the author, «سيروا في الأرض», and «أم عباس»
+- `/books/sirou-fi-alard/`
+- `/books/umm-abbas/`
+- `/about/`
+
+The corresponding book pages and articles contain reciprocal visible and structured links. Both books remain described as forthcoming / `قيد الإصدار`.
+
+## Persistent quality controls
+
+The repository now contains:
+
 - `tools/site_audit.py`
+- `tools/editorial_quality_gate.py`
 - `.github/workflows/site-integrity.yml`
 
-## Release candidate 04 — branch `editorial-release-04`
+Every pull request and push to `main` checks:
 
-Prepared and committed on the feature branch:
+- Python syntax;
+- XML and all JSON-LD blocks;
+- HTML, canonical, sitemap, feed, and internal-link integrity;
+- publication safety for unpublished works;
+- article depth and direct-answer blocks;
+- visible and machine-readable source counts;
+- source-domain diversity;
+- reciprocal book links;
+- explicit uncertainty;
+- medical disclaimers, urgent-care language, treatment-specific medication warnings, and MedicalWebPage schema.
 
-1. `/articles/six-days-creation-cosmic-time/`
-   - Reference study separating Qur'anic text, classical interpretation, measured cosmic/terrestrial ages, and philosophical inference.
-   - Direct answer, explicit uncertainty, eleven machine-readable and visible sources, Article/WebPage/Breadcrumb schema, and a truthful forthcoming-book relation.
+Verified structural result for release 04:
 
-2. `/articles/functional-seizures-vs-epilepsy/`
-   - Medical reference report separating functional seizures from epileptic seizures.
-   - Covers history, witnesses, smartphone video, video-EEG, coexisting epilepsy, treatment evidence, medication limits, first aid, family response, and AI diagnostic limits.
-   - Contains emergency guidance, educational-only wording, medication-change warning, ten machine-readable and visible sources, MedicalWebPage/Article/Breadcrumb schema, and a truthful forthcoming-novel relation.
+- HTML pages: 25;
+- canonicals: 25;
+- sitemap URLs: 25;
+- errors: 0;
+- warnings: 0.
 
-3. Article hub, Atom feed, sitemap, and both active Arabic book pages updated with reciprocal links to the new studies.
+All four reference studies passed the editorial, evidence, linking, uncertainty, and safety gates.
 
-4. Added `tools/editorial_quality_gate.py` to enforce:
-   - substantial visible analysis;
-   - direct-answer blocks;
-   - Article abstracts and book relations;
-   - source count and domain diversity;
-   - hub/feed/sitemap coverage;
-   - reciprocal book links;
-   - uncertainty language;
-   - medical disclaimers, urgent-care language, treatment-specific medication warnings, and MedicalWebPage schema.
+## Cleanup state
 
-5. Expanded `.github/workflows/site-integrity.yml` so pull requests and pushes compile both audit tools, parse all JSON-LD/XML, run the structural audit, run the editorial quality gate, and check patch whitespace.
+Removed:
 
-6. Removed obsolete release artifacts from the feature branch:
-   - bridge test files;
-   - incomplete release bundle parts;
-   - stale manifests;
-   - failed one-time apply/finalize workflows.
+- bridge tests;
+- incomplete bundle parts;
+- stale manifests;
+- failed one-time apply/finalize workflows;
+- the later inactive one-time recorder and its trigger manifest.
 
-## Release status
-
-- Current state: `RELEASE_CANDIDATE_AWAITING_CI`.
-- The new pages must not be described as live until the pull-request checks pass, the branch is merged into `main`, GitHub Pages deploys, and the public URLs are fetched successfully.
-- Search ranking and AI citation improvement remain measurement questions, not deployment facts.
+Only persistent operational files and the site-integrity workflow should remain. Do not recreate one-time release workflows unless an ordinary feature-branch / pull-request path is technically impossible.
 
 ## Baseline measurement
 
@@ -87,14 +117,38 @@ Latest verified Search Console period before the research expansion: 2026-08-23 
 - Homepage: 15 clicks, 54 impressions, 27.78% CTR, average position 3.98.
 - `/about/`: 2 clicks, 15 impressions, 13.33% CTR, average position 4.73.
 
-These are small early samples. Do not claim ranking improvement until later finalized windows exist.
+These are small early samples. Deployment does not prove ranking growth or AI citation. Compare finalized data at 14, 28, and 56 days after release 04.
 
-## Immediate next actions
+## Next research batch
 
-1. Open a pull request from `editorial-release-04` to `main`.
-2. Require the full structural and editorial quality workflow to pass; inspect logs and repair every blocking failure.
-3. Merge only after green checks.
-4. Verify the GitHub Pages deployment and each public route, plus sitemap and Atom feed.
-5. Record the exact release commit and live-verification result.
-6. After release, avoid immediate rewrites. Measure finalized Search Console and referral data at 14, 28, and 56 days.
-7. Continue the next article only when it adds a distinct information need rather than repeating the current studies. The next provisional Sirou topic is «تعليم الأسماء والذكاء الاصطناعي: من المفهوم إلى الآلة»; the next provisional Umm-Abbas topic is exploitation of frightened families by fraudulent spiritual healers. Both require fresh source research and the same quality gates.
+Proceed on a clean feature branch and publish only after the same structural/editorial gates pass.
+
+### «قل سيروا في الأرض»
+
+Provisional next study:
+
+**«تعليم الأسماء والذكاء الاصطناعي: هل تفهم الآلة الكلمات أم تتنبأ بها؟»**
+
+Required distinctions:
+
+- Qur'anic text and classical interpretation;
+- naming, concept formation, reference, and symbol grounding;
+- what Transformer language models technically do;
+- behavioral capability versus claims of human-like understanding;
+- human agency, intention, responsibility, and the limits of theological analogy.
+
+### «أم عباس»
+
+Provisional next study:
+
+**«حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض من الدجل والاعتداء؟»**
+
+Required distinctions:
+
+- legitimate voluntary religious support versus diagnosis/treatment claims;
+- coercion, isolation, financial exploitation, sexual boundary violations, and victim blaming;
+- preserving medical and psychiatric assessment;
+- emergency and safeguarding procedures;
+- culturally respectful language that neither validates unverified supernatural causation nor ridicules religious belief.
+
+Both studies require fresh primary/official research, manuscript disclosure review, truthful reciprocal book linking, and the persistent quality gates.
