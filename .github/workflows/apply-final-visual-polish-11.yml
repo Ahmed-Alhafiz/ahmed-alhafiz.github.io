@@ -1,0 +1,68 @@
+name: Apply final visual polish 11
+
+on:
+  push:
+    branches:
+      - site-ux-rebuild-10
+    paths:
+      - .github/final-visual-polish-11.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: final-visual-polish-11
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply cover cropping Arabic interface and warning corrections
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(cat .github/final-visual-polish-11.trigger)" = 'run=1'
+          python .github/final_visual_polish_11.py
+          rm -f .github/final_visual_polish_11.py
+          rm -f .github/final-visual-polish-11.trigger
+
+      - name: Run complete structural editorial discovery and UX gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          workflow='.github/workflows/apply-final-visual-polish-11.yml'
+          parked='/tmp/apply-final-visual-polish-11.yml'
+          mv "$workflow" "$parked"
+          trap 'mv "$parked" "$workflow" 2>/dev/null || true' EXIT
+
+          python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py tools/discovery_integrity.py tools/ux_integrity.py
+          python tools/site_audit.py
+          python tools/editorial_quality_gate.py
+          python tools/discovery_integrity.py
+          python tools/ux_integrity.py
+          git diff --check
+
+          mv "$parked" "$workflow"
+          trap - EXIT
+          test ! -e .github/final_visual_polish_11.py
+          test ! -e .github/final-visual-polish-11.trigger
+
+      - name: Commit verified final polish
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add -A
+          git commit -m 'Crop padded book covers and localize Arabic research UI'
+          if ! git push origin HEAD:site-ux-rebuild-10; then
+            git pull --rebase origin site-ux-rebuild-10
+            git push origin HEAD:site-ux-rebuild-10
+          fi
