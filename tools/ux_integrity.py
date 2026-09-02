@@ -11,6 +11,7 @@ presentation decisions that materially affect trust and usability:
 - stable portrait markup on Arabic, English, and German home/profile pages;
 - explicit one-column portrait-first stacking at tablet and mobile widths;
 - one modern book layout across all three languages;
+- forced 2:3 cropped cover frames instead of padded source canvases;
 - correct page direction and accessible social links.
 """
 from __future__ import annotations
@@ -41,6 +42,11 @@ PORTRAIT_RE = re.compile(
 )
 CONTACT_CHANNEL_RE = re.compile(
     r'<a\b[^>]*class=["\'][^"\']*\bcontact-channel\b[^"\']*["\']',
+    re.IGNORECASE,
+)
+UNWRAPPED_BOOK_CARD_RE = re.compile(
+    r'<article\b[^>]*class=["\'][^"\']*\bbook-card\b[^"\']*["\'][^>]*>\s*'
+    r'<a\b[^>]*>\s*<img\b',
     re.IGNORECASE,
 )
 
@@ -128,7 +134,7 @@ def inspect_json(value: object, errors: list[str], context: str) -> None:
             inspect_json(child, errors, context)
 
 
-def validate_public_page(path: Path, errors: list[str]) -> None:
+def validate_public_page(path: Path, errors: list[str]) -> int:
     rel = path.relative_to(ROOT).as_posix()
     html = path.read_text(encoding="utf-8")
 
@@ -172,6 +178,8 @@ def validate_public_page(path: Path, errors: list[str]) -> None:
     for token in GLOBAL_LEGACY_TOKENS:
         if token in html:
             errors.append(f"{rel}: legacy or duplicated interface token remained: {token}")
+    if UNWRAPPED_BOOK_CARD_RE.search(html):
+        errors.append(f"{rel}: a book-card image is not inside a cropped 2:3 wrapper")
 
     for index, block in enumerate(SCRIPT_RE.findall(html), start=1):
         try:
@@ -180,6 +188,8 @@ def validate_public_page(path: Path, errors: list[str]) -> None:
             errors.append(f"{rel}: JSON-LD block {index} is invalid: {exc}")
             continue
         inspect_json(data, errors, f"{rel} JSON-LD block {index}")
+
+    return html.count('class="book-card-cover"')
 
 
 def validate_priority_pages(errors: list[str]) -> None:
@@ -214,6 +224,8 @@ def validate_priority_pages(errors: list[str]) -> None:
         ):
             if token not in html:
                 errors.append(f"{rel}: modern multilingual book token missing: {token}")
+        if html.count('class="book-hero-cover"') != 1:
+            errors.append(f"{rel}: expected exactly one cropped hero-cover frame")
         for token in BOOK_LEGACY_TOKENS:
             if token in html:
                 errors.append(f"{rel}: legacy book-layout token remained: {token}")
@@ -236,6 +248,11 @@ def validate_css(errors: list[str]) -> None:
         "@media(max-width:960px){\n  .home-hero-grid,.profile-grid{\n    grid-template-columns:minmax(0,1fr);",
         "grid-column:1;\n    grid-row:auto;\n    order:-1;",
         "width:min(47vw,174px)",
+        "UX10 cover-frame and Arabic-interface polish",
+        ".book-hero-cover{aspect-ratio:2/3}",
+        ".book-hero-cover img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center}",
+        ".book-card-cover{display:block;width:100%;aspect-ratio:2/3;overflow:hidden",
+        ".book-card .book-card-cover img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover",
     )
     for token in required:
         if token not in css:
@@ -245,8 +262,11 @@ def validate_css(errors: list[str]) -> None:
 def main() -> None:
     errors: list[str] = []
     pages = public_pages()
-    for page in pages:
-        validate_public_page(page, errors)
+    wrapped_cards = sum(validate_public_page(page, errors) for page in pages)
+    if wrapped_cards < 12:
+        errors.append(
+            f"site-wide book-card cover wrappers are incomplete: found {wrapped_cards}, expected at least 12"
+        )
     validate_priority_pages(errors)
     validate_css(errors)
 
@@ -258,11 +278,10 @@ def main() -> None:
 
     print(
         "UX integrity passed: "
-        f"{len(pages)} public pages, one compact footer each, "
-        "three official contact channels, no duplicate language footers, "
-        "no public GitHub identity, stable tri-language portrait markup, "
-        "mobile portrait-first single-column stacking, "
-        "and one modern book layout across Arabic, English, and German."
+        f"{len(pages)} public pages, {wrapped_cards} cropped book cards, "
+        "one compact footer each, three official contact channels, no duplicate "
+        "language footers, no public GitHub identity, stable tri-language portrait "
+        "markup, mobile portrait-first stacking, and forced 2:3 book-cover frames."
     )
 
 
