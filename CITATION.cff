@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite individual dossiers when possible; this file describes the author-led research collection."
+title: "Ahmed Alhafiz Research Desk"
+type: dataset
+authors:
+  - family-names: "Alhafiz"
+    given-names: "Ahmed"
+    alias: "أحمد الحافظ"
+version: "2.0"
+date-released: "2026-09-02"
+url: "https://ahmed-alhafiz.github.io/articles/"
+repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
+abstract: "Author-led Arabic and English research dossiers with traceable claims, sources, versions, and disclosed review status."
+keywords:
+  - Arabic research
+  - Quranic exegesis
+  - cosmology
+  - psychological horror
+  - evidence transparency

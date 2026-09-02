@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "site": "https://ahmed-alhafiz.github.io/",
+  "publisher": {
+    "name_ar": "أحمد الحافظ",
+    "name_en": "Ahmed Alhafiz",
+    "profile": "https://ahmed-alhafiz.github.io/about/"
+  },
+  "editorial_policy": "https://ahmed-alhafiz.github.io/methodology/",
+  "review_register": "https://ahmed-alhafiz.github.io/research-status/",
+  "generated": "2026-09-02",
+  "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
+  "items": [
+    {
+      "slug": "ratq-fatq-big-bang",
+      "title": "الرتق والفتق والانفجار العظيم: تحقيق في النص والتفسير وأدلة علم الكون",
+      "summary": "ملف موسع يفصل النص القرآني وتاريخ التفسير عن الرصد والنموذج العلمي والاستنتاج الفلسفي، مع خريطة ادعاء ودليل ونسخة إنجليزية.",
+      "type": "ملف بحثي موسع",
+      "version": "2.0",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/",
+      "english_url": "https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/",
+      "evidence_appendix": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/evidence/",
+      "claims_json": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/evidence/claims.json",
+      "citation_bib": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/citation.bib",
+      "citation_ris": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/citation.ris"
+    },
+    {
+      "slug": "teaching-names-ai-understanding",
+      "title": "تعليم الأسماء والذكاء الاصطناعي: هل تفهم الآلة الكلمات أم تتنبأ بها؟",
+      "summary": "دراسة تفصل بين الرمز والعلاقة الإحصائية والتمثيل المفهومي والتأسيس في العالم والقصد والمسؤولية.",
+      "type": "ملف بحثي موسع",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/"
+    },
+    {
+      "slug": "spiritual-healing-exploitation-safeguarding",
+      "title": "حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض؟",
+      "summary": "ملف حماية يميز الدعم الروحي الطوعي عن الإكراه والعزل والاستغلال واللمس بلا موافقة وتأخير الرعاية الطبية.",
+      "type": "ملف حماية وصحة",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_specialist_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/"
+    },
+    {
+      "slug": "functional-seizures-vs-epilepsy",
+      "title": "النوبات الوظيفية والصرع: كيف يفرّق الأطباء بينهما؟",
+      "summary": "موجز طبي تثقيفي عن آليتي الحالتين، وفيديو-EEG، وتعايشهما، وحدود التشخيص من الحركة أو الفيديو وحدهما.",
+      "type": "موجز طبي تثقيفي",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "medical_specialist_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/"
+    },
+    {
+      "slug": "six-days-creation-cosmic-time",
+      "title": "أيام الخلق الستة والزمن الكوني: هل اليوم القرآني 24 ساعة؟",
+      "summary": "موجز أدلة يفصل ما يثبته النص وتنوع التفسير عن قياسات الزمن الكوني وما لا تسمح به المطابقة القسرية.",
+      "type": "موجز أدلة",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/"
+    },
+    {
+      "slug": "sleep-paralysis-jathoom",
+      "title": "شلل النوم والجاثوم: لماذا نشعر بوجود كائن في الغرفة؟",
+      "summary": "موجز طبي ثقافي لشلل النوم وثقل الصدر والإحساس بالحضور، مع حدود التفسير ومتى يلزم التقييم الطبي.",
+      "type": "موجز طبي ثقافي",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "medical_specialist_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/"
+    }
+  ]
+}

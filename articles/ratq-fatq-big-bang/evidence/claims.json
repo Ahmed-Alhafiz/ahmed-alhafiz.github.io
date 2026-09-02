@@ -1,0 +1,123 @@
+{
+  "title_ar": "الرتق والفتق والانفجار العظيم: دفتر الادعاءات والأدلة",
+  "title_en": "Ratq, Fatq, and the Big Bang: Claim and Evidence Ledger",
+  "version": "2.0",
+  "date_modified": "2026-09-02",
+  "publisher": "Ahmed Alhafiz",
+  "review_status": {
+    "author_review": "complete",
+    "external_specialist_review": "not_completed",
+    "peer_reviewed": false
+  },
+  "related_forthcoming_work": {
+    "title": "قل سيروا في الأرض فانظروا كيف بدأ الخلق",
+    "url": "https://ahmed-alhafiz.github.io/books/sirou-fi-alard/",
+    "evidentiary_role": "none; thematic relationship only"
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim_ar": "تنص آية الأنبياء 30 على رتق ثم فتق منسوب إلى فعل الله، لكنها لا تعرّف مصطلح الانفجار العظيم ولا تقدم معادلة كونية.",
+      "claim_en": "Qur’an 21:30 states a ratq followed by a fatq attributed to God, but it does not define Big Bang cosmology or provide a cosmological equation.",
+      "confidence": "high",
+      "evidence_type": "primary_text_and_exegesis",
+      "sources": [
+        "https://quran.com/21/30",
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura21-aya30.html",
+        "https://quran.ksu.edu.sa/tafseer/qortobi/sura21-aya30.html",
+        "https://quran.ksu.edu.sa/tafseer/katheer/sura21-aya30.html"
+      ],
+      "caveat": "The theological attribution belongs to the Qur’anic claim; it is not an empirical inference from cosmology."
+    },
+    {
+      "id": "C02",
+      "claim_ar": "التفسير الكلاسيكي غير أحادي؛ فقد نُقلت قراءات الالتصاق والفصل، وتفصيل السماوات والأرض، وانحباس المطر والنبات ثم إطلاقهما.",
+      "claim_en": "Classical exegesis is not monolithic: it records readings of joining and separation, differentiation of heavens and earths, and rain/vegetation being withheld and released.",
+      "confidence": "high",
+      "evidence_type": "classical_exegesis",
+      "sources": [
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura21-aya30.html",
+        "https://quran.ksu.edu.sa/tafseer/qortobi/sura21-aya30.html",
+        "https://quran.ksu.edu.sa/tafseer/katheer/sura21-aya30.html"
+      ],
+      "caveat": "The ledger does not adjudicate all chains or rank every reported interpretation."
+    },
+    {
+      "id": "C03",
+      "claim_ar": "الانفجار العظيم في الاستعمال العلمي ليس انفجار مادة من مركز داخل فراغ سابق؛ إنه وصف لتاريخ كون حار كثيف يتمدد فيه مقياس الفضاء.",
+      "claim_en": "In scientific usage, the Big Bang is not matter exploding from a center into pre-existing emptiness; it describes the history of a hot, dense universe in which the scale of space expands.",
+      "confidence": "high",
+      "evidence_type": "official_scientific_explanation",
+      "sources": [
+        "https://science.nasa.gov/mission/webb/big-bang-q-and-a/",
+        "https://science.nasa.gov/universe/overview/"
+      ],
+      "caveat": "Global spatial topology and descriptions of the earliest regime remain model-dependent."
+    },
+    {
+      "id": "C04",
+      "claim_ar": "قوة نموذج الكون الحار المتمدد لا تأتي من شاهد واحد، بل من تضافر التمدد الكوني والخلفية الميكروية والتخليق النووي والبنية الكبرى.",
+      "claim_en": "The hot expanding-universe model is supported by converging evidence from cosmic expansion, the microwave background, primordial nucleosynthesis, and large-scale structure.",
+      "confidence": "high",
+      "evidence_type": "multiple_independent_observational_lines",
+      "sources": [
+        "https://doi.org/10.1073/pnas.15.3.168",
+        "https://doi.org/10.1086/148307",
+        "https://lambda.gsfc.nasa.gov/product/cobe/firas_overview.html",
+        "https://doi.org/10.1051/0004-6361/201833910",
+        "https://pdg.lbl.gov/2026/reviews/astro-cosmo.html"
+      ],
+      "caveat": "Each line has its own calibration, modelling assumptions, and open questions."
+    },
+    {
+      "id": "C05",
+      "claim_ar": "نجاح النموذج الرصدي لا يثبت وحده الخلق من العدم، ولا الفاعلية الإلهية، ولا أن للنموذج وصفًا مكتملًا للحظة أولى مطلقة.",
+      "claim_en": "The observational success of the model does not by itself establish creation from nothing, divine agency, or a complete description of an absolute first instant.",
+      "confidence": "high",
+      "evidence_type": "scope_analysis",
+      "sources": [
+        "https://science.nasa.gov/mission/webb/big-bang-q-and-a/",
+        "https://pdg.lbl.gov/2026/reviews/astro-cosmo.html"
+      ],
+      "caveat": "This is a boundary claim about what the cited scientific sources do and do not address, not a proof against metaphysical conclusions."
+    },
+    {
+      "id": "C06",
+      "claim_ar": "العلاقة المنضبطة بين الآية والنموذج هي مقارنة عامة قابلة للنقاش، لا هوية تقنية ولا تفسيرًا حصريًا.",
+      "claim_en": "A responsible relationship between the verse and the model is a debatable broad comparison, not technical identity or exclusive exegesis.",
+      "confidence": "medium",
+      "evidence_type": "integrative_interpretive_judgment",
+      "sources": [
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura21-aya30.html",
+        "https://science.nasa.gov/mission/webb/big-bang-q-and-a/",
+        "https://doi.org/10.1051/0004-6361/201833910"
+      ],
+      "caveat": "This is the author’s methodological judgment, not a direct statement in any single source."
+    },
+    {
+      "id": "C07",
+      "claim_ar": "التفاصيل الكونية قابلة للمراجعة حتى مع ثبات النواة الرصدية؛ وتُظهر نتائج Planck وDESI قوة النموذج القياسي مع توترات واحتمالات تعديل في بعض المعلمات والمكونات.",
+      "claim_en": "Cosmological details remain revisable even while the observational core is strong; Planck and DESI show both the power of the standard model and tensions or possible revisions in some parameters and components.",
+      "confidence": "high",
+      "evidence_type": "current_observational_programs",
+      "sources": [
+        "https://doi.org/10.1051/0004-6361/201833910",
+        "https://www.desi.lbl.gov/2025/03/19/desi-dr2-results-march-19-guide/",
+        "https://www.desi.lbl.gov/2026/07/30/new-desi-dr2-lyman-alpha-results-shed-light-on-dark-energy/"
+      ],
+      "caveat": "Hints of evolving dark energy are not a settled replacement for ΛCDM."
+    },
+    {
+      "id": "C08",
+      "claim_ar": "كتاب «سيروا في الأرض» هو منشأ السؤال التحريري، لكنه ليس مصدرًا لإثبات ادعاءات علم الكون في هذا الملف.",
+      "claim_en": "The forthcoming book Sirou fi al-Ard is the editorial origin of the question, but it is not evidence for the cosmological claims in this dossier.",
+      "confidence": "high",
+      "evidence_type": "editorial_disclosure",
+      "sources": [
+        "https://ahmed-alhafiz.github.io/books/sirou-fi-alard/",
+        "https://ahmed-alhafiz.github.io/methodology/"
+      ],
+      "caveat": "The book remains unpublished and is linked only after the evidence-led argument."
+    }
+  ]
+}

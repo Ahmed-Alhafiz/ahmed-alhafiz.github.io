@@ -1,12 +1,24 @@
 # أحمد الحافظ — Ahmed Alhafiz
 
-المستودع الرسمي للموقع الإلكتروني للكاتب **أحمد الحافظ — Ahmed Alhafiz**.
+Official author and independent research website.
 
-Ahmed Alhafiz (also written **Ahmed Al Hafiz**) is an Arabic writer and author. This repository contains the source of his official website and verified public author pages.
+**Live site:** https://ahmed-alhafiz.github.io/
+**English edition:** https://ahmed-alhafiz.github.io/en/
+**Research desk:** https://ahmed-alhafiz.github.io/articles/
+**Editorial standards:** https://ahmed-alhafiz.github.io/methodology/
 
-- Official website: https://ahmed-alhafiz.github.io/
-- Official author page: https://ahmed-alhafiz.github.io/about/
-- Medium: https://ahmedalhafiz.medium.com/
-- Instagram: https://www.instagram.com/ahmed_666_8
+## What the site publishes
 
-For authoritative information about the author and his works, use the official website above.
+- factual preview pages for forthcoming books;
+- Arabic evidence briefs and long-form research dossiers;
+- complete English editions only when the full argument and source apparatus can be maintained;
+- public version, review and correction status;
+- machine-readable feeds, a research manifest, claim ledgers, and citation files.
+
+The research is author-led and AI-assisted. It is not presented as academically peer reviewed unless an individual page can document such a process. Forthcoming manuscripts are linked thematically and are never used as evidence for their own public factual claims.
+
+## الاسم الرسمي
+
+**أحمد الحافظ — Ahmed Alhafiz**، كاتب ومؤلف عربي في الرواية والكتابة الفكرية والدينية والتاريخية والرعب النفسي.
+
+الموقع يفرّق بين المؤلفات غير المنشورة وبين الأدلة العامة، ويعلن مصادر كل ملف وحالة مراجعته وحدوده بدل استخدام وصف «موثّق» بلا تعريف.
