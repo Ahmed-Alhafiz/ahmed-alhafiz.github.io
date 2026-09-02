@@ -279,3 +279,9 @@ footer.site-footer{background:#08121d;color:#b9c5cd;padding:38px 0 22px}
   .home-hero-grid,.profile-grid{padding:25px 0 42px;gap:23px}
   .hero-portrait,.profile-portrait{width:min(47vw,174px)}
 }
+
+/* UX10 cover-frame and Arabic-interface polish */
+.book-hero-cover{aspect-ratio:2/3}
+.book-hero-cover img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center}
+.book-card-cover{display:block;width:100%;aspect-ratio:2/3;overflow:hidden;border-radius:10px;background:#171717}
+.book-card .book-card-cover img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center;border-radius:0}
