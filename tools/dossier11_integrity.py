@@ -207,6 +207,9 @@ def validate_pages() -> None:
             fail(f"{rel}: thematic book relationship must use mentions")
         if "claims.json" not in html or "/evidence/" not in html:
             fail(f"{rel}: evidence surfaces missing")
+        for figure_id in ('id="cascade-figure"', 'id="parallel-figure"'):
+            if figure_id not in html:
+                fail(f"{rel}: stable framework figure target missing: {figure_id}")
         if language == "ar":
             safety_tokens = ("الطوارئ", "لا توقف دواء", "ليست تشخيصًا")
             review_tokens = ("لم تتم بعد مراجعة مستقلة", "ليس مقياسًا سريريًا مُعتمدًا", "لا يُقدَّم بوصفه أداة تشخيصية")

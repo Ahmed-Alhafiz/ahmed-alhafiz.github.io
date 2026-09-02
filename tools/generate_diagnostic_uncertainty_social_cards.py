@@ -75,7 +75,7 @@ def rounded(
 
 
 def chain_panel(draw: ImageDraw.ImageDraw, *, arabic: bool) -> None:
-    rounded(draw, (65, 145, 515, 555), 27, PAPER, outline=BORDER, width=2)
+    rounded(draw, (65, 145, 515, 570), 27, PAPER, outline=BORDER, width=2)
     if arabic:
         ar(draw, (474, 186), "سلسلة الخوف–اليقين–السلطة", size=22, fill=INK, bold=True)
         labels = ["إشارة ملتبسة", "فراغ تفسيري", "خوف عائلي", "يقين مبكر", "نقل السلطة", "تآكل الموافقة", "تأخر أو ضرر"]
@@ -84,7 +84,7 @@ def chain_panel(draw: ImageDraw.ImageDraw, *, arabic: bool) -> None:
         labels = ["Ambiguous signal", "Interpretive vacuum", "Family threat", "Premature closure", "Authority transfer", "Consent erosion", "Delay or harm"]
     draw.line((105, 211, 474, 211), fill=COPPER, width=3)
 
-    y = 246
+    y = 243
     for number, label in enumerate(labels, 1):
         color = RED if number == 7 else (COPPER if number % 2 else BLUE)
         draw.ellipse((105, y - 18, 141, y + 18), fill=color)
@@ -95,13 +95,13 @@ def chain_panel(draw: ImageDraw.ImageDraw, *, arabic: bool) -> None:
             draw.text((158, y), label, font=font(16, bold=True), fill=INK, anchor="lm")
         if number < 7:
             draw.line((123, y + 20, 123, y + 31), fill=LINE, width=2)
-        y += 43
+        y += 42
 
-    rounded(draw, (100, 522, 480, 551), 14, GREEN)
+    rounded(draw, (100, 531, 480, 561), 15, GREEN)
     if arabic:
-        ar(draw, (290, 537), "يمكن قطع السلسلة في كل مرحلة", size=14, fill=WHITE, anchor="mm", bold=True)
+        ar(draw, (290, 546), "يمكن قطع السلسلة في كل مرحلة", size=14, fill=WHITE, anchor="mm", bold=True)
     else:
-        draw.text((290, 537), "Interrupt the cascade at every stage", font=font(13, bold=True), fill=WHITE, anchor="mm")
+        draw.text((290, 546), "Interrupt the cascade at every stage", font=font(13, bold=True), fill=WHITE, anchor="mm")
 
 
 def draw_arabic() -> Path:
