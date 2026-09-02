@@ -44,3 +44,10 @@ Author, source-link, structural, and automated review are complete in the candid
 3. `Visual review` must render both dossiers and both evidence appendices on desktop and mobile.
 4. Fresh pull-request runs must succeed.
 5. The screenshot artifact must be manually inspected before merge.
+
+## Dedicated social-card integrity
+
+- Arabic and English 1200×630 PNG cards are generated from retained source code in `tools/generate_water_social_cards.py`.
+- Both dossier pages and both evidence appendices use the language-appropriate card in Open Graph, Twitter, and JSON-LD image metadata.
+- The Arabic evidence appendix now uses the Arabic page as `x-default`, matching the dossier pair.
+- The permanent repository audit validates the PNG signature, IHDR dimensions, minimum file size, language-specific metadata references, and removal of the generic site card from these four surfaces.
