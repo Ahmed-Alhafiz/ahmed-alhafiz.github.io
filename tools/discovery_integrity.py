@@ -31,6 +31,7 @@ REQUIRED_ARABIC_SLUGS = {
     "sleep-paralysis-jathoom",
     "arabic-psychological-horror",
     "water-civilization-power",
+    "diagnostic-uncertainty-family-fear-coercive-authority",
 }
 BOOKS = {
     "sirou-fi-alard": ROOT / "books/sirou-fi-alard/index.html",

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">The Fear–Certainty–Authority Cascade</title>
+<desc id="desc">A seven-stage analytical diagram showing how an ambiguous signal can move through an interpretive vacuum, family threat amplification, premature closure, authority transfer and consent erosion to delay or harm, with opportunities to interrupt the cascade at every stage.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1724"/><stop offset="1" stop-color="#142c3c"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#071019" flood-opacity=".22"/></filter>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#d88b64"/></marker>
+  <style>
+    .sans{font-family:"DejaVu Sans",Arial,sans-serif}.title{font-size:42px;font-weight:800;fill:#fff}.subtitle{font-size:19px;fill:#c7d3db}.stage{font-size:21px;font-weight:800;fill:#17202a}.note{font-size:14px;fill:#52616d}.number{font-size:19px;font-weight:800;fill:#fff}.interrupt{font-size:18px;font-weight:800;fill:#e8f1f5}
+  </style>
+</defs>
+<rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+<circle cx="1105" cy="95" r="145" fill="none" stroke="#28546a" stroke-width="1" opacity=".7"/><circle cx="1105" cy="95" r="220" fill="none" stroke="#28546a" stroke-width="1" opacity=".45"/>
+<text x="80" y="78" class="sans title">The Fear–Certainty–Authority Cascade</text>
+<text x="80" y="116" class="sans subtitle">Analytical framework: how uncertainty can become a coercive decision system</text>
+<line x1="80" y1="145" x2="1120" y2="145" stroke="#356377" stroke-width="2"/>
+
+<g filter="url(#shadow)">
+  <rect x="80" y="185" width="305" height="126" rx="20" fill="#f5f1e8"/>
+  <circle cx="120" cy="222" r="24" fill="#bd704e"/><text x="120" y="229" text-anchor="middle" class="sans number">1</text>
+  <text x="154" y="226" class="sans stage">Ambiguous signal</text>
+  <text x="120" y="268" class="sans note">A real event that does not name its cause</text>
+
+  <rect x="447" y="185" width="305" height="126" rx="20" fill="#f5f1e8"/>
+  <circle cx="487" cy="222" r="24" fill="#2b6076"/><text x="487" y="229" text-anchor="middle" class="sans number">2</text>
+  <text x="521" y="226" class="sans stage">Interpretive vacuum</text>
+  <text x="487" y="268" class="sans note">A period in which no one knows enough</text>
+
+  <rect x="815" y="185" width="305" height="126" rx="20" fill="#f5f1e8"/>
+  <circle cx="855" cy="222" r="24" fill="#bd704e"/><text x="855" y="229" text-anchor="middle" class="sans number">3</text>
+  <text x="889" y="218" class="sans stage">Family threat</text><text x="889" y="244" class="sans stage">amplification</text>
+  <text x="855" y="282" class="sans note">Love, shame and fear re-weight the facts</text>
+</g>
+<path d="M395 248H435" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/><path d="M763 248H803" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/>
+
+<path d="M968 320V359" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/>
+<g filter="url(#shadow)">
+  <rect x="815" y="370" width="305" height="126" rx="20" fill="#f5f1e8"/>
+  <circle cx="855" cy="407" r="24" fill="#2b6076"/><text x="855" y="414" text-anchor="middle" class="sans number">4</text>
+  <text x="889" y="411" class="sans stage">Premature closure</text>
+  <text x="855" y="453" class="sans note">A comforting answer outruns the evidence</text>
+
+  <rect x="447" y="370" width="305" height="126" rx="20" fill="#f5f1e8"/>
+  <circle cx="487" cy="407" r="24" fill="#bd704e"/><text x="487" y="414" text-anchor="middle" class="sans number">5</text>
+  <text x="521" y="411" class="sans stage">Authority transfer</text>
+  <text x="487" y="453" class="sans note">Power moves to whoever claims certainty</text>
+
+  <rect x="80" y="370" width="305" height="126" rx="20" fill="#f5f1e8"/>
+  <circle cx="120" cy="407" r="24" fill="#2b6076"/><text x="120" y="414" text-anchor="middle" class="sans number">6</text>
+  <text x="154" y="411" class="sans stage">Consent erosion</text>
+  <text x="120" y="453" class="sans note">Refusal is renamed illness or resistance</text>
+</g>
+<path d="M805 433H765" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/><path d="M437 433H397" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/>
+
+<path d="M232 506V545" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/>
+<g filter="url(#shadow)"><rect x="80" y="557" width="415" height="112" rx="21" fill="#6d3942"/><circle cx="120" cy="593" r="24" fill="#f0ad85"/><text x="120" y="600" text-anchor="middle" class="sans number" fill="#17202a">7</text><text x="154" y="600" class="sans stage" fill="#fff">Delay or harm</text><text x="120" y="639" class="sans note" fill="#f3dfe2">Blocked assessment, coercion, abuse or lost trust</text></g>
+
+<g filter="url(#shadow)"><rect x="555" y="557" width="565" height="112" rx="21" fill="#23634b"/><text x="595" y="595" class="sans interrupt">The cascade can be interrupted at every stage</text><text x="595" y="631" class="sans note" fill="#d9ece3">Risk assessment · open hypotheses · documentation · consent · review</text></g>
+<text x="80" y="716" class="sans subtitle" font-size="14">Ahmed Alhafiz · analytical synthesis · version 1.0</text>
+</svg>

@@ -59,6 +59,29 @@
       "citation_cff": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/CITATION.cff"
     },
     {
+      "slug": "diagnostic-uncertainty-family-fear-coercive-authority",
+      "title": "حين يحكم الخوف قبل التشخيص: كيف يتحول الغموض إلى سلطة وإكراه داخل الأسرة؟",
+      "english_title": "When Fear Decides Before Diagnosis: How Uncertainty Becomes Authority and Coercion in Families",
+      "summary": "ملف بحثي موسع يشرح سلسلة انتقال العرض الملتبس من عدم اليقين وخوف الأسرة إلى اليقين المبكر ونقل السلطة وتآكل الموافقة، ويقترح مسار أمان موازيا يحفظ التقييم وصوت الشخص والدعم الديني الطوعي.",
+      "english_summary": "An evidence-led dossier on how an ambiguous symptom can move through family fear, premature certainty, authority transfer and consent erosion—and how a parallel-path safeguard preserves assessment, voice and voluntary spiritual support.",
+      "type": "ملف بحثي موسع",
+      "version": "1.0",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "review": "author_review_complete_specialist_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "english_url": "https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "evidence_appendix": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/",
+      "english_evidence_appendix": "https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/",
+      "claims_json": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/claims.json",
+      "citation_bib": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/citation.bib",
+      "citation_ris": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/citation.ris",
+      "citation_cff": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/CITATION.cff"
+    },
+    {
       "slug": "teaching-names-ai-understanding",
       "title": "تعليم الأسماء والذكاء الاصطناعي: هل تفهم الآلة الكلمات أم تتنبأ بها؟",
       "summary": "دراسة تفصل بين الرمز والعلاقة الإحصائية والتمثيل المفهومي والتأسيس في العالم والقصد والمسؤولية.",

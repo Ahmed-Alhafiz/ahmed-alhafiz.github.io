@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">مسار الأمان الموازي</title>
+<desc id="desc">مخطط يضع الشخص في مركز ستة مسارات متزامنة: السلامة الفورية، فرضيات مفتوحة، التقييم والمتابعة، التوثيق، الموافقة والحدود، والدعم العائلي والديني الطوعي.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6f2e9"/><stop offset="1" stop-color="#e7dfd1"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#15202b" flood-opacity=".16"/></filter>
+  <style>
+    .ar{font-family:"Noto Sans Arabic","DejaVu Sans",Arial,sans-serif;direction:rtl;unicode-bidi:bidi-override}.title{font-size:42px;font-weight:800;fill:#17202a}.subtitle{font-size:19px;fill:#5a6874}.label{font-size:20px;font-weight:800;fill:#17202a}.small{font-size:14px;fill:#5c6974}.center-title{font-size:28px;font-weight:800;fill:#fff}.center-small{font-size:16px;fill:#d4e0e7}.rule{stroke:#bd704e;stroke-width:4;stroke-linecap:round}.path{stroke:#356377;stroke-width:3;fill:none;stroke-dasharray:8 7}.number{font-family:Arial,sans-serif;font-size:17px;font-weight:800;fill:#fff}
+  </style>
+</defs>
+<rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+<text x="1120" y="70" text-anchor="end" class="ar title">مسار الأمان الموازي</text>
+<text x="1120" y="107" text-anchor="end" class="ar subtitle">عدة مسارات تعمل معًا؛ الشخص في المركز، لا التفسير</text>
+<line x1="80" y1="137" x2="1120" y2="137" class="rule"/>
+
+<!-- connection paths -->
+<path d="M600 380C470 330 380 255 300 230" class="path"/>
+<path d="M600 380C730 330 820 255 900 230" class="path"/>
+<path d="M600 380C450 390 350 395 280 395" class="path"/>
+<path d="M600 380C750 390 850 395 920 395" class="path"/>
+<path d="M600 380C470 450 390 540 315 574" class="path"/>
+<path d="M600 380C730 450 810 540 885 574" class="path"/>
+
+<!-- centre -->
+<g filter="url(#shadow)"><circle cx="600" cy="380" r="126" fill="#0b1724"/><circle cx="600" cy="380" r="105" fill="none" stroke="#356377" stroke-width="2"/><text x="600" y="365" text-anchor="middle" class="ar center-title">الشخص أولًا</text><text x="600" y="405" text-anchor="middle" class="ar center-small">صوته · سلامته · اختياره</text><text x="600" y="438" text-anchor="middle" class="ar center-small">لا يُختزل في تفسير واحد</text></g>
+
+<!-- nodes -->
+<g filter="url(#shadow)">
+  <rect x="80" y="173" width="360" height="112" rx="19" fill="#fffdf8" stroke="#d1c8b9"/>
+  <circle cx="405" cy="207" r="22" fill="#bd704e"/><text x="405" y="213" text-anchor="middle" class="number">1</text>
+  <text x="375" y="213" text-anchor="end" class="ar label">السلامة الفورية</text>
+  <text x="405" y="253" text-anchor="end" class="ar small">خطر مباشر · وعي · إصابة · طوارئ</text>
+
+  <rect x="760" y="173" width="360" height="112" rx="19" fill="#fffdf8" stroke="#d1c8b9"/>
+  <circle cx="1085" cy="207" r="22" fill="#2b6076"/><text x="1085" y="213" text-anchor="middle" class="number">2</text>
+  <text x="1055" y="213" text-anchor="end" class="ar label">فرضيات مفتوحة</text>
+  <text x="1085" y="253" text-anchor="end" class="ar small">نومية · عصبية · نفسية · دوائية · غيرها</text>
+
+  <rect x="60" y="338" width="360" height="112" rx="19" fill="#fffdf8" stroke="#d1c8b9"/>
+  <circle cx="385" cy="372" r="22" fill="#2b6076"/><text x="385" y="378" text-anchor="middle" class="number">3</text>
+  <text x="355" y="378" text-anchor="end" class="ar label">تقييم ومتابعة</text>
+  <text x="385" y="418" text-anchor="end" class="ar small">موعد واضح · رأي ثانٍ · إعادة تقييم</text>
+
+  <rect x="780" y="338" width="360" height="112" rx="19" fill="#fffdf8" stroke="#d1c8b9"/>
+  <circle cx="1105" cy="372" r="22" fill="#bd704e"/><text x="1105" y="378" text-anchor="middle" class="number">4</text>
+  <text x="1075" y="378" text-anchor="end" class="ar label">توثيق بلا حكم</text>
+  <text x="1105" y="418" text-anchor="end" class="ar small">الوقت · الشهود · التجربة · التفسير منفصلًا</text>
+
+  <rect x="95" y="523" width="390" height="112" rx="19" fill="#fffdf8" stroke="#d1c8b9"/>
+  <circle cx="450" cy="557" r="22" fill="#bd704e"/><text x="450" y="563" text-anchor="middle" class="number">5</text>
+  <text x="420" y="563" text-anchor="end" class="ar label">الموافقة والحدود</text>
+  <text x="450" y="603" text-anchor="end" class="ar small">لا خلوة · لا لمس قسري · لا إسكات</text>
+
+  <rect x="715" y="523" width="390" height="112" rx="19" fill="#fffdf8" stroke="#d1c8b9"/>
+  <circle cx="1070" cy="557" r="22" fill="#2b6076"/><text x="1070" y="563" text-anchor="middle" class="number">6</text>
+  <text x="1040" y="555" text-anchor="end" class="ar label">دعم عائلي وروحي</text>
+  <text x="1040" y="583" text-anchor="end" class="ar label">طوعي وآمن</text>
+  <text x="1070" y="614" text-anchor="end" class="ar small">يرافق الرعاية ولا يحتكرها</text>
+</g>
+
+<rect x="235" y="678" width="730" height="45" rx="22" fill="#23634b"/>
+<text x="600" y="707" text-anchor="middle" class="ar center-small">موعد مراجعة واضح يربط المسارات ويحدد متى نرفع مستوى الاستجابة</text>
+</svg>

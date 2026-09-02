@@ -6,7 +6,7 @@
   <link href="https://ahmed-alhafiz.github.io/en/articles/feed.json" rel="alternate" type="application/feed+json" />
   <link href="https://ahmed-alhafiz.github.io/en/articles/" rel="alternate" type="text/html" />
   <id>https://ahmed-alhafiz.github.io/en/articles/</id>
-  <updated>2026-09-02T05:40:00+02:00</updated>
+  <updated>2026-09-02T10:00:00+02:00</updated>
   <author>
     <name>Ahmed Alhafiz</name>
     <uri>https://ahmed-alhafiz.github.io/en/about/</uri>
@@ -28,5 +28,14 @@
     <updated>2026-09-02T05:40:00+02:00</updated>
     <category term="extended bilingual research dossier" />
     <summary>A bilingual dossier building a six-layer chain from resource and infrastructure to data, allocation, accountability, maintenance, and resilience, tested against Ma’rib, Mesopotamia, Angkor, and contemporary water governance.</summary>
+  </entry>
+  <entry>
+    <title>When Fear Decides Before Diagnosis: How Uncertainty Becomes Authority and Coercion in Families</title>
+    <link href="https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/" />
+    <id>https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/</id>
+    <published>2026-09-02T10:00:00+02:00</published>
+    <updated>2026-09-02T10:00:00+02:00</updated>
+    <category term="extended research dossier" />
+    <summary>An evidence-led dossier on how an ambiguous symptom can move through family fear, premature certainty, authority transfer and consent erosion—and how a parallel-path safeguard preserves assessment, voice and voluntary spiritual support.</summary>
   </entry>
 </feed>

@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this dossier or its analytical frameworks, cite this publication."
+title: "When Fear Decides Before Diagnosis: How Uncertainty Becomes Authority and Coercion in Families"
+type: article
+authors:
+  - family-names: Alhafiz
+    given-names: Ahmed
+    name-particle: ""
+    affiliation: Independent author and researcher
+version: "1.0"
+date-released: 2026-09-02
+url: "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/"
+repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
+abstract: >-
+  An Arabic and English evidence-led dossier on how ambiguous mental or
+  physical symptoms can move through family fear, premature certainty,
+  authority transfer and consent erosion to delay or harm. It proposes the
+  Fear–Certainty–Authority Cascade and the Parallel-Path Safeguard as
+  explicitly non-validated analytical syntheses.
+keywords:
+  - diagnostic uncertainty
+  - diagnostic safety
+  - family decision-making
+  - coercion
+  - informed consent
+  - mental health
+  - spiritual support
+  - help-seeking

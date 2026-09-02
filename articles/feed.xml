@@ -6,7 +6,7 @@
   <link href="https://ahmed-alhafiz.github.io/articles/feed.json" rel="alternate" type="application/feed+json" />
   <link href="https://ahmed-alhafiz.github.io/articles/" rel="alternate" type="text/html" />
   <id>https://ahmed-alhafiz.github.io/articles/</id>
-  <updated>2026-09-02T05:40:00+02:00</updated>
+  <updated>2026-09-02T10:00:00+02:00</updated>
   <author>
     <name>أحمد الحافظ</name>
     <uri>https://ahmed-alhafiz.github.io/about/</uri>
@@ -28,6 +28,15 @@
     <updated>2026-09-02T05:40:00+02:00</updated>
     <category term="ملف بحثي موسع ثنائي اللغة" />
     <summary>ملف ثنائي اللغة يبني سلسلة من ست طبقات بين المورد والبنية والبيانات والتخصيص والمساءلة والصيانة، ويختبرها في مأرب والرافدين وأنغكور وحوكمة المياه المعاصرة.</summary>
+  </entry>
+  <entry>
+    <title>حين يحكم الخوف قبل التشخيص: كيف يتحول الغموض إلى سلطة وإكراه داخل الأسرة؟</title>
+    <link href="https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/" />
+    <id>https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/</id>
+    <published>2026-09-02T10:00:00+02:00</published>
+    <updated>2026-09-02T10:00:00+02:00</updated>
+    <category term="ملف بحثي موسع" />
+    <summary>ملف بحثي موسع يشرح سلسلة انتقال العرض الملتبس من عدم اليقين وخوف الأسرة إلى اليقين المبكر ونقل السلطة وتآكل الموافقة، ويقترح مسار أمان موازيا يحفظ التقييم وصوت الشخص والدعم الديني الطوعي.</summary>
   </entry>
   <entry>
     <title>تعليم الأسماء والذكاء الاصطناعي: هل تفهم الآلة الكلمات أم تتنبأ بها؟</title>
