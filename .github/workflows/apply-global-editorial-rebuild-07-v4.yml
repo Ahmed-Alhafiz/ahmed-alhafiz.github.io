@@ -104,6 +104,10 @@ jobs:
           set -euo pipefail
           tar -xzf /tmp/global-rebuild-07.tgz -C .
           rm -rf .github/gr07
+          rm -f .github/finalize-editorial-release-05.trigger
+          rm -f .github/finalize-discovery-release-06.trigger
+          rm -f .github/workflows/finalize-editorial-release-05.yml
+          rm -f .github/workflows/finalize-discovery-release-06.yml
           rm -f .github/workflows/apply-global-editorial-rebuild-07.yml
           rm -f .github/workflows/apply-global-editorial-rebuild-07-v2.yml
           rm -f .github/workflows/apply-global-editorial-rebuild-07-v3.yml
@@ -172,6 +176,10 @@ jobs:
           python tools/editorial_quality_gate.py
           git diff --check
           test ! -e .github/gr07
+          test ! -e .github/finalize-editorial-release-05.trigger
+          test ! -e .github/finalize-discovery-release-06.trigger
+          test ! -e .github/workflows/finalize-editorial-release-05.yml
+          test ! -e .github/workflows/finalize-discovery-release-06.yml
           test ! -e .github/workflows/apply-global-editorial-rebuild-07.yml
           test ! -e .github/workflows/apply-global-editorial-rebuild-07-v2.yml
           test ! -e .github/workflows/apply-global-editorial-rebuild-07-v3.yml
