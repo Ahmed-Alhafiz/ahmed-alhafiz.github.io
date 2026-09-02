@@ -1,17 +1,17 @@
-name: Apply dossier 11 visual polish
+name: Apply dossier 11 final source polish
 
 on:
   push:
     branches:
       - umm-abbas-fear-certainty-authority-11
     paths:
-      - .github/dossier11-visual-polish.trigger
+      - .github/dossier11-final-source-polish.trigger
 
 permissions:
   contents: write
 
 concurrency:
-  group: dossier11-visual-polish
+  group: dossier11-final-source-polish
   cancel-in-progress: false
 
 jobs:
@@ -29,36 +29,28 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install reproducible image dependencies
+      - name: Apply source corrections and restore unrelated files
         shell: bash
         run: |
           set -euo pipefail
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends fonts-dejavu-core libraqm0
-          python -m pip install --disable-pip-version-check --quiet "pillow>=11,<12"
-          python - <<'PY'
-          from PIL import features
-          if not features.check('raqm'):
-              raise SystemExit('Pillow/libraqm Arabic shaping support is required')
-          print('libraqm shaping available')
-          PY
-
-      - name: Apply manual-review correction and regenerate share cards
-        shell: bash
-        run: |
-          set -euo pipefail
-          test "$(cat .github/dossier11-visual-polish.trigger)" = 'run=1'
-          python .github/dossier11_visual_polish.py
-          python tools/generate_diagnostic_uncertainty_social_cards.py
-          rm -f .github/dossier11_visual_polish.py
-          rm -f .github/dossier11-visual-polish.trigger
+          test "$(cat .github/dossier11-final-source-polish.trigger)" = 'run=1'
+          python .github/dossier11_final_source_polish.py
+          git checkout origin/main -- \
+            assets/figures/ratq-evidence-map-ar.svg \
+            assets/figures/ratq-evidence-map-en.svg \
+            assets/figures/source-trust-pipeline-en.svg \
+            assets/figures/water-power-justice-chain-ar.svg \
+            assets/figures/water-power-justice-chain-en.svg \
+            favicon.svg
+          rm -f .github/dossier11_final_source_polish.py
+          rm -f .github/dossier11-final-source-polish.trigger
 
       - name: Run complete permanent gates
         shell: bash
         run: |
           set -euo pipefail
           workflow='.github/workflows/apply-dossier11-visual-polish.yml'
-          parked='/tmp/apply-dossier11-visual-polish.yml'
+          parked='/tmp/apply-dossier11-final-source-polish.yml'
           mv "$workflow" "$parked"
           trap 'mv "$parked" "$workflow" 2>/dev/null || true' EXIT
 
@@ -79,24 +71,23 @@ jobs:
           python tools/arabic_ui_integrity.py
           git diff --check
 
-          grep -Fq 'id="cascade-figure"' articles/diagnostic-uncertainty-family-fear-coercive-authority/index.html
-          grep -Fq 'id="parallel-figure"' articles/diagnostic-uncertainty-family-fear-coercive-authority/index.html
-          grep -Fq 'fear-cascade-ar' .github/visual-review/run_visual_review.py
-          grep -Fq 'fear-parallel-en' .github/visual-review/run_visual_review.py
-          test ! -e .github/dossier11_visual_polish.py
-          test ! -e .github/dossier11-visual-polish.trigger
+          grep -Fq 'https://nap.nationalacademies.org/catalog/21794/improving-diagnosis-in-health-care' articles/diagnostic-uncertainty-family-fear-coercive-authority/index.html
+          grep -Fq '؛ لا تثبت أن المعالج التقليدي سبب التأخر' articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/claims.json
+          grep -Fq 'الأهلية القانونية' articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/claims.json
+          test ! -e .github/dossier11_final_source_polish.py
+          test ! -e .github/dossier11-final-source-polish.trigger
 
           mv "$parked" "$workflow"
           trap - EXIT
 
-      - name: Commit verified visual correction
+      - name: Commit verified final correction
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'Ahmed-Alhafiz'
           git config user.email 'hhafz9924@gmail.com'
           git add -A
-          git commit -m 'Polish dossier share card and add framework visual captures'
+          git commit -m 'Finalize dossier source links language and diff scope'
           if ! git push origin HEAD:umm-abbas-fear-certainty-authority-11; then
             git pull --rebase origin umm-abbas-fear-certainty-authority-11
             git push origin HEAD:umm-abbas-fear-certainty-authority-11
