@@ -88,17 +88,17 @@
       "type": "contextual_association",
       "confidence": "medium",
       "evidence": ["S16"],
-      "caveat_ar": "الدراسة استعادية ورصدية؛ ال تثبت أن المعالج التقليدي سبب التأخر ولا تنطبق على كل دعم ديني أو كل حالة.",
+      "caveat_ar": "الدراسة استعادية ورصدية؛ لا تثبت أن المعالج التقليدي سبب التأخر ولا تنطبق على كل دعم ديني أو كل حالة.",
       "caveat_en": "The retrospective observational design does not prove that traditional healing caused the delay and does not apply to every religious support pathway or individual."
     },
     {
       "id": "C07",
-      "claim_ar": "الرعاية النفسية القائمة على الحقوق تضع الكرامة والفاعلية القانونية والموافقة الحرة والمستنيرة وتقليل الإكراه في مركز الخدمة.",
+      "claim_ar": "الرعاية النفسية القائمة على الحقوق تضع الكرامة والأهلية القانونية والموافقة الحرة والمستنيرة وتقليل الإكراه في مركز الخدمة.",
       "claim_en": "Rights-based mental-health care centres dignity, legal agency, free and informed consent, and the reduction or elimination of coercion.",
       "type": "documented",
       "confidence": "high",
       "evidence": ["S06", "S07", "S08", "S09"],
-      "caveat_ar": "التطبيق القانوني والتفاصيل الإجرائية تختلف بين الدول؛ هذه مبادئ معيارية وليست استشارة قانونية محلية.",
+      "caveat_ar": "التطبيق القانوني والتفاصيل الإجرائية يختلفان بين الدول؛ هذه مبادئ معيارية وليست استشارة قانونية محلية.",
       "caveat_en": "Legal implementation and procedures vary by jurisdiction; these are normative principles, not local legal advice."
     },
     {
@@ -215,7 +215,7 @@
       "organization": "National Academies of Sciences, Engineering, and Medicine",
       "title": "Improving Diagnosis in Health Care",
       "year": 2015,
-      "url": "https://nap.nationalacademies.org/resource/21794/interactive/",
+      "url": "https://nap.nationalacademies.org/catalog/21794/improving-diagnosis-in-health-care",
       "supports": ["C01", "C03", "C04", "C13"]
     },
     {
