@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Targeted visual capture</title>
+<style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff}iframe{display:block;width:100%;height:100%;border:0}#result{display:none}</style></head>
+<body data-ready="false"><iframe id="viewport" title="visual capture viewport"></iframe><pre id="result">{"status":"pending"}</pre>
+<script>
+const params = new URLSearchParams(location.search);
+const path = params.get('path') || '/';
+const selector = params.get('selector') || 'body';
+const align = params.get('align') || 'start';
+const frame = document.getElementById('viewport');
+const result = document.getElementById('result');
+const twoFrames = () => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+const timeout = setTimeout(() => {
+  result.textContent = JSON.stringify({status:'error',error:'target iframe timeout',path,selector});
+  document.body.dataset.ready = 'error';
+}, 7000);
+frame.onload = async () => {
+  clearTimeout(timeout);
+  try {
+    const win = frame.contentWindow;
+    const doc = frame.contentDocument;
+    await twoFrames();
+    const target = doc.querySelector(selector);
+    if (!target) throw new Error(`target not found: ${selector}`);
+    target.scrollIntoView({block:align === 'end' ? 'end' : 'start',inline:'nearest'});
+    await twoFrames();
+    if (align === 'start') {
+      win.scrollBy(0,-20);
+      await twoFrames();
+    }
+    const box = target.getBoundingClientRect();
+    result.textContent = JSON.stringify({
+      status:'complete',path,selector,align,
+      scrollY:Math.round(win.scrollY),
+      viewport:{width:win.innerWidth,height:win.innerHeight},
+      document:{scrollHeight:doc.documentElement.scrollHeight,clientHeight:doc.documentElement.clientHeight},
+      target:{top:Math.round(box.top),bottom:Math.round(box.bottom),height:Math.round(box.height)}
+    });
+    document.body.dataset.ready = 'true';
+  } catch (error) {
+    result.textContent = JSON.stringify({status:'error',error:String(error),path,selector});
+    document.body.dataset.ready = 'error';
+  }
+};
+frame.src = `${path}${path.includes('?') ? '&' : '?'}target_capture=ux10`;
+</script></body></html>
