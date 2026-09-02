@@ -1,0 +1,194 @@
+name: Apply site UX rebuild 10
+
+on:
+  push:
+    branches:
+      - site-ux-rebuild-10
+    paths:
+      - .github/site-ux-rebuild-10.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-ux-rebuild-10
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply the multilingual visual and interaction rebuild
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(cat .github/site-ux-rebuild-10.trigger)" = 'run=1'
+          python .github/site_ux_rebuild10.py
+          python .github/site_ux_rebuild10_post.py
+          rm -f .github/site_ux_rebuild10.py
+          rm -f .github/site_ux_rebuild10_post.py
+          rm -f .github/site-ux-rebuild-10.trigger
+
+      - name: Parse all public structured outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py tools/discovery_integrity.py
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class JsonLdParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.active = False
+                  self.buffer = []
+                  self.blocks = []
+
+              def handle_starttag(self, tag, attrs):
+                  attributes = dict(attrs)
+                  if tag.lower() == 'script' and attributes.get('type', '').lower() == 'application/ld+json':
+                      self.active = True
+                      self.buffer = []
+
+              def handle_endtag(self, tag):
+                  if tag.lower() == 'script' and self.active:
+                      self.blocks.append(''.join(self.buffer))
+                      self.active = False
+
+              def handle_data(self, data):
+                  if self.active:
+                      self.buffer.append(data)
+
+          for path in [Path('sitemap.xml'), Path('articles/feed.xml'), Path('en/articles/feed.xml')]:
+              ET.parse(path)
+
+          for path in [
+              Path('articles/feed.json'),
+              Path('en/articles/feed.json'),
+              Path('articles/research-index.json'),
+              Path('articles/ratq-fatq-big-bang/evidence/claims.json'),
+              Path('articles/water-civilization-power/evidence/claims.json'),
+              Path('en/articles/ratq-fatq-big-bang/evidence/claims.json'),
+              Path('en/articles/water-civilization-power/evidence/claims.json'),
+          ]:
+              json.loads(path.read_text(encoding='utf-8'))
+
+          pages = blocks = 0
+          for path in Path('.').rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+              parser = JsonLdParser()
+              parser.feed(path.read_text(encoding='utf-8'))
+              for block in parser.blocks:
+                  if block.strip():
+                      json.loads(block)
+                      blocks += 1
+              pages += 1
+          print(f'Parsed {pages} HTML pages, {blocks} JSON-LD blocks, XML feeds and evidence JSON.')
+          PY
+
+      - name: Run complete structural editorial discovery and UX checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          workflow='.github/workflows/site-ux-rebuild-10.yml'
+          parked='/tmp/site-ux-rebuild-10.yml'
+          mv "$workflow" "$parked"
+          trap 'mv "$parked" "$workflow" 2>/dev/null || true' EXIT
+
+          python tools/site_audit.py
+          python tools/editorial_quality_gate.py
+          python tools/discovery_integrity.py
+
+          if grep -RIl --include='*.html' --include='*.json' 'https://github.com/Ahmed-Alhafiz' . --exclude-dir=.git; then
+            echo 'Public GitHub identity link remained in a public surface.' >&2
+            exit 1
+          fi
+          if grep -RIl --include='*.html' -E 'اللغات والروابط|Languages and profiles|identity-links' . --exclude-dir=.git; then
+            echo 'A duplicate language/profile footer or oversized identity-card surface remained.' >&2
+            exit 1
+          fi
+
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          footer_re = re.compile(r'<footer\b[^>]*>.*?</footer>', re.I | re.S)
+          errors = []
+          count = 0
+          for path in Path('.').rglob('*.html'):
+              if '.git' in path.parts or path.name == '404.html':
+                  continue
+              html = path.read_text(encoding='utf-8')
+              footers = footer_re.findall(html)
+              if len(footers) != 1:
+                  errors.append(f'{path}: expected one footer, found {len(footers)}')
+                  continue
+              if html.count('id="site-footer"') != 1:
+                  errors.append(f'{path}: rebuilt footer ID missing or duplicated')
+              if 'class="langs"' in footers[0]:
+                  errors.append(f'{path}: language selector remained in footer')
+              count += 1
+
+          for rel, tokens in {
+              'index.html': ('home-hero', 'hero-portrait'),
+              'en/index.html': ('home-hero', 'hero-portrait'),
+              'de/index.html': ('home-hero', 'hero-portrait'),
+              'about/index.html': ('profile-hero', 'profile-portrait', 'contact-channel'),
+              'en/about/index.html': ('profile-hero', 'profile-portrait', 'contact-channel'),
+              'de/about/index.html': ('profile-hero', 'profile-portrait', 'contact-channel'),
+              'de/books/sirou-fi-alard/index.html': ('book-hero', 'book-hero-cover', 'publication-note'),
+              'de/books/umm-abbas/index.html': ('book-hero', 'book-hero-cover', 'publication-note'),
+              'de/books/juhayman/index.html': ('book-hero', 'book-hero-cover', 'publication-note'),
+              'de/books/kitab-al-kutub/index.html': ('book-hero', 'book-hero-cover', 'publication-note'),
+          }.items():
+              text = Path(rel).read_text(encoding='utf-8')
+              for token in tokens:
+                  if token not in text:
+                      errors.append(f'{rel}: missing {token}')
+
+          css = Path('assets/site-v2.css').read_text(encoding='utf-8')
+          for token in (
+              'Site UX Rebuild 10 — multilingual visual consistency',
+              '.footer-shell',
+              '.contact-channel',
+              'aspect-ratio:4/5',
+              '.book-hero .pill',
+          ):
+              if token not in css:
+                  errors.append(f'assets/site-v2.css: missing {token}')
+
+          if errors:
+              raise SystemExit('\n'.join(errors))
+          print(f'UX consistency checks passed across {count} public pages')
+          PY
+
+          git diff --check
+          test ! -e .github/site_ux_rebuild10.py
+          test ! -e .github/site_ux_rebuild10_post.py
+          test ! -e .github/site-ux-rebuild-10.trigger
+
+          mv "$parked" "$workflow"
+          trap - EXIT
+
+      - name: Commit verified rebuild to the feature branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add -A
+          git commit -m 'Rebuild multilingual site UX and contact surfaces'
+          if ! git push origin HEAD:site-ux-rebuild-10; then
+            git pull --rebase origin site-ux-rebuild-10
+            git push origin HEAD:site-ux-rebuild-10
+          fi
