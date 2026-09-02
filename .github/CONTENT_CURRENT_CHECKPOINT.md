@@ -16,8 +16,9 @@ Before any website, research, SEO, AI-discoverability, entity, measurement, doma
 8. `.github/WATER_CIVILIZATION_POWER_09_PREMERGE.md`
 9. `.github/SITE_UX_REBUILD_10_VERIFICATION.md`
 10. `.github/UMM_ABBAS_FEAR_CERTAINTY_AUTHORITY_11_PREMERGE.md`
-11. `.github/MEASUREMENT_PROTOCOL.md`
-12. `.github/CUSTOM_DOMAIN_MIGRATION_PLAN.md`
+11. `.github/ENTITY_MEASUREMENT_FOUNDATION_12_VERIFICATION.md`
+12. `.github/MEASUREMENT_PROTOCOL.md`
+13. `.github/CUSTOM_DOMAIN_MIGRATION_PLAN.md`
 
 ## Governing strategy
 
@@ -51,6 +52,8 @@ The site is not managed as a volume blog. It is an author-entity and reference-d
 - Evidence appendices, machine-readable claim ledgers, BibTeX, RIS, and `CITATION.cff` outputs.
 - Responsive editorial design with browser-based desktop/mobile visual review.
 - Explicit crawler access for `OAI-SearchBot`, `GPTBot`, and generic crawlers.
+- One canonical author entity across all public pages and one root `author.json` identity graph.
+- Automated local/live visibility-readiness monitoring and constrained IndexNow changed-URL notification.
 
 ## Verified release 11 — Umm Abbas fear/certainty/authority dossier
 
@@ -66,6 +69,33 @@ The site is not managed as a volume blog. It is an author-entity and reference-d
   - Parallel-Path Safeguard.
 - The forthcoming novel is encoded as thematic origin only, never medical evidence.
 
+## Verified release 12 — canonical entity, measurement, IndexNow, and domain readiness
+
+- Pull request: `#17`.
+- Squash merge: `b62cdbd6abd8b5588c88706400699689e1a39e16`.
+- Pull-request `Site integrity`: `33626170341` — success.
+- Pull-request `Visual review`: `33626170490` — success and manually inspected for Arabic, English, and German identity sections at desktop and mobile sizes.
+- Main `Site integrity`: `33626518929` — success.
+- GitHub Pages deployment: `33626517913` — success.
+- Visibility readiness monitor: `33626518932` — success.
+- IndexNow changed-URL notification: `33626518876` — success.
+
+Verified release state:
+
+- 42 public HTML pages.
+- 42 unique canonical URLs.
+- 42 sitemap URLs.
+- 42 canonical head author links.
+- 42 linked author manifests.
+- 10 embedded canonical Person nodes.
+- one public `author.json` graph connecting the site, three profile editions, four forthcoming books, and four reference dossiers.
+- `OAI-SearchBot`, `GPTBot`, and generic crawlers explicitly allowed at `/`.
+- live deployment audit returned zero errors across identity, robots, sitemap, feeds, research index, current pillars, and the AI pillar candidate.
+- IndexNow root key verified live with HTTP 200 on attempt 5.
+- 43 changed public URLs submitted; endpoint returned HTTP 202 (`accepted_key_validation_pending`). This is transport acceptance only, not evidence of crawl, indexing, ranking, traffic, or citation.
+- full IndexNow dry-run inventory: 50 eligible sitemap and machine-surface URLs.
+- custom-domain migration plan completed but not activated.
+
 ## Strategic content inventory
 
 Controlled by `data/content-inventory.json`:
@@ -76,7 +106,7 @@ Controlled by `data/content-inventory.json`:
 - 1 literary guide.
 - 1 URL held for overlap review.
 
-No consolidation or deletion occurs before overlap, link, and 30-day measurement review.
+No consolidation or deletion occurs before overlap, link, query, and 30-day measurement review. No new URL is published merely to increase page count.
 
 ## Measurement baseline
 
@@ -104,21 +134,9 @@ Current external outcomes:
 
 Technical readiness is not reported as ranking success.
 
-## Entity and domain foundation 12
-
-Current controlled batch:
-
-- standardise every canonical `Person` node;
-- publish one machine-readable `author.json` identity manifest;
-- add a visible identity/disambiguation section to Arabic, English, and German author pages;
-- retain only Medium and Instagram as verified external identity links;
-- add a technical visibility monitor;
-- activate constrained IndexNow changed-URL notification with explicit transport-only interpretation;
-- prepare, but do not activate, the custom-domain migration until the user purchases and selects the domain.
-
 ## Custom-domain dependency
 
-No domain is purchased or configured yet. Preferred naming order, subject to live availability:
+No domain is purchased or configured yet. Preferred naming order, subject to live availability at purchase time:
 
 1. `ahmedalhafiz.com`
 2. `ahmed-alhafiz.com`
@@ -141,13 +159,14 @@ Permanent checks must continue to validate:
 - absence of alias doorway pages;
 - content-inventory counts and anti-thin-content policy;
 - public crawler access and machine identity manifest;
+- IndexNow host/key/request boundaries and transport-only interpretation;
 - reproducible desktop/mobile visual review;
 - absence of temporary release machinery.
 
-## Next controlled work after foundation 12
+## Next controlled work after verified foundation 12
 
-1. Observe the Day-7 and Day-30 measurement windows without noisy title changes.
+1. Observe Day-7 and Day-30 measurement windows without noisy title changes.
 2. Rebuild `teaching-names-ai-understanding` into the fourth complete bilingual pillar instead of creating derivative posts.
 3. Purchase and verify the selected custom domain before any canonical-host migration.
-4. Connect a trustworthy Search Console export/API and privacy-compliant referral analytics when account authorization is available.
+4. Connect a current trustworthy Search Console export/API and privacy-compliant referral analytics when account authorization is available.
 5. Keep «كتاب الكتب» and «جهيمان» deferred.
