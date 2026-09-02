@@ -1,0 +1,128 @@
+name: Visual review
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Start local static server
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/ahmed-site-server.log 2>&1 &
+          echo $! > /tmp/ahmed-site-server.pid
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:4173/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/ahmed-site-server.log
+          exit 1
+
+      - name: Render priority pages at desktop and mobile widths
+        shell: bash
+        run: |
+          set -euo pipefail
+          browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [[ -z "$browser" ]]; then
+            echo 'No Chromium-compatible browser is available on the runner.' >&2
+            exit 1
+          fi
+          echo "Using browser: $browser"
+          mkdir -p visual-review/desktop visual-review/mobile
+
+          pages=(
+            'home-ar|/'
+            'home-en|/en/'
+            'research-ar|/articles/'
+            'research-en|/en/articles/'
+            'ratq-ar|/articles/ratq-fatq-big-bang/'
+            'ratq-en|/en/articles/ratq-fatq-big-bang/'
+            'evidence-ar|/articles/ratq-fatq-big-bang/evidence/'
+            'methodology-ar|/methodology/'
+            'methodology-en|/en/methodology/'
+            'research-status-ar|/research-status/'
+            'sirou-ar|/books/sirou-fi-alard/'
+            'umm-abbas-ar|/books/umm-abbas/'
+            'about-ar|/about/'
+          )
+
+          for item in "${pages[@]}"; do
+            name="${item%%|*}"
+            path="${item#*|}"
+            url="http://127.0.0.1:4173${path}?visual_review=1"
+            curl --fail --silent --show-error "$url" > /dev/null
+
+            "$browser" \
+              --headless=new \
+              --no-sandbox \
+              --disable-gpu \
+              --hide-scrollbars \
+              --virtual-time-budget=2500 \
+              --force-device-scale-factor=1 \
+              --window-size=1440,1200 \
+              --screenshot="visual-review/desktop/${name}.png" \
+              "$url"
+
+            "$browser" \
+              --headless=new \
+              --no-sandbox \
+              --disable-gpu \
+              --hide-scrollbars \
+              --virtual-time-budget=2500 \
+              --force-device-scale-factor=1 \
+              --window-size=390,844 \
+              --screenshot="visual-review/mobile/${name}.png" \
+              "$url"
+          done
+
+      - name: Verify screenshot dimensions and completeness
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import struct
+
+          expected = {
+              "desktop": (1440, 1200),
+              "mobile": (390, 844),
+          }
+          total = 0
+          for mode, dimensions in expected.items():
+              paths = sorted((Path("visual-review") / mode).glob("*.png"))
+              if len(paths) != 13:
+                  raise SystemExit(f"{mode}: expected 13 screenshots, found {len(paths)}")
+              for path in paths:
+                  data = path.read_bytes()
+                  if data[:8] != b"\x89PNG\r\n\x1a\n":
+                      raise SystemExit(f"{path}: not a PNG")
+                  width, height = struct.unpack(">II", data[16:24])
+                  if (width, height) != dimensions:
+                      raise SystemExit(
+                          f"{path}: expected {dimensions}, found {(width, height)}"
+                      )
+                  if len(data) < 5_000:
+                      raise SystemExit(f"{path}: suspiciously small render ({len(data)} bytes)")
+                  total += 1
+          print(f"Verified {total} rendered screenshots at expected dimensions")
+          PY
+
+      - name: Upload visual review artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: global-editorial-rebuild-07-visual-review
+          path: visual-review
+          retention-days: 14
+          if-no-files-found: error
