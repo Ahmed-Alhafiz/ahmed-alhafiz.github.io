@@ -1,0 +1,65 @@
+name: Diagnose AI pillar 13 release archive
+
+on:
+  push:
+    branches:
+      - teaching-names-ai-pillar-13
+    paths:
+      - .github/ai13/DIAGNOSE
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+
+      - name: Reconstruct inspect and fingerprint archive without extracting into repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f .github/ai13/DIAGNOSE
+          mapfile -t parts < <(find .github/ai13 -maxdepth 1 -type f -name 'part-*' | sort)
+          echo "SEGMENT_COUNT=${#parts[@]}"
+          printf '%s\n' "${parts[@]}"
+          test "${#parts[@]}" -eq 5
+          for part in "${parts[@]}"; do
+            test "$(wc -c < "$part" | tr -d ' ')" -eq 16000
+          done
+          cat "${parts[@]}" > /tmp/ai13-release.tgz.b64
+          echo "BASE64_SIZE=$(wc -c < /tmp/ai13-release.tgz.b64 | tr -d ' ')"
+          echo "BASE64_SHA256=$(sha256sum /tmp/ai13-release.tgz.b64 | cut -d' ' -f1)"
+          base64 --decode /tmp/ai13-release.tgz.b64 > /tmp/ai13-release.tgz
+          echo "ARCHIVE_SIZE=$(wc -c < /tmp/ai13-release.tgz | tr -d ' ')"
+          echo "ARCHIVE_SHA256=$(sha256sum /tmp/ai13-release.tgz | cut -d' ' -f1)"
+          gzip --test /tmp/ai13-release.tgz
+          if tar -tzf /tmp/ai13-release.tgz | grep -E '(^/|(^|/)\.\.(/|$))'; then
+            echo 'UNSAFE_ARCHIVE_PATH' >&2
+            exit 1
+          fi
+          echo 'ARCHIVE_MEMBERS_BEGIN'
+          tar -tzf /tmp/ai13-release.tgz | sort
+          echo 'ARCHIVE_MEMBERS_END'
+          mkdir /tmp/ai13-release
+          tar -xzf /tmp/ai13-release.tgz -C /tmp/ai13-release
+          test -f /tmp/ai13-release/articles/teaching-names-ai-understanding/index.html
+          test -f /tmp/ai13-release/en/articles/teaching-names-ai-understanding/index.html
+          test -f /tmp/ai13-release/articles/teaching-names-ai-understanding/evidence/claims.json
+          test -f /tmp/ai13-release/.github/ai13_integrate.py
+          test -f /tmp/ai13-release/tools/teaching_names_ai_integrity.py
+          python -m py_compile /tmp/ai13-release/.github/ai13_integrate.py /tmp/ai13-release/tools/teaching_names_ai_integrity.py /tmp/ai13-release/tools/generate_teaching_names_ai_social_cards.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('/tmp/ai13-release')
+          data = json.loads((root/'articles/teaching-names-ai-understanding/evidence/claims.json').read_text(encoding='utf-8'))
+          assert data['dossier']['version'] == '2.1'
+          assert len(data['claims']) == 12
+          assert len(data['sources']) == 25
+          print('CLAIMS=12 SOURCES=25 VERSION=2.1')
+          PY
+          echo 'DIAGNOSIS_PASSED'
