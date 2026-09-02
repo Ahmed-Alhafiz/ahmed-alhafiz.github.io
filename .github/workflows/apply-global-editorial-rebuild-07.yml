@@ -30,7 +30,7 @@ jobs:
           set -euo pipefail
           test -f .github/gr07/APPLY
           mapfile -t parts < <(find .github/gr07 -maxdepth 1 -type f -name 'part-*' | sort)
-          test "${#parts[@]}" -eq 16
+          test "${#parts[@]}" -eq 20
           cat "${parts[@]}" > /tmp/global-rebuild-07.tgz.b64
           test "$(wc -c < /tmp/global-rebuild-07.tgz.b64 | tr -d ' ')" -eq 124420
           base64 --decode /tmp/global-rebuild-07.tgz.b64 > /tmp/global-rebuild-07.tgz
@@ -47,6 +47,7 @@ jobs:
           tar -xzf /tmp/global-rebuild-07.tgz -C .
           rm -rf .github/gr07
           rm -f .github/workflows/apply-global-editorial-rebuild-07.yml
+          rm -f .github/workflows/diagnose-global-editorial-rebuild-07.yml
 
       - name: Parse structured data, feeds and machine-readable evidence
         shell: bash
@@ -120,6 +121,7 @@ jobs:
           git diff --check
           test ! -e .github/gr07
           test ! -e .github/workflows/apply-global-editorial-rebuild-07.yml
+          test ! -e .github/workflows/diagnose-global-editorial-rebuild-07.yml
 
       - name: Commit verified rebuild to branch
         shell: bash
