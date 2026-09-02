@@ -76,7 +76,7 @@ def main() -> None:
     css = css_path.read_text(encoding="utf-8")
     if CSS_MARKER in css:
         raise RuntimeError("mobile stacking correction already exists")
-    css_path.write_text(css.rstrip() + CSS + "\n", encoding="utf-8")
+    css_path.write_text(css.rstrip() + CSS.rstrip() + "\n", encoding="utf-8")
 
     for rel, changes in REPLACEMENTS.items():
         path = ROOT / rel
@@ -99,7 +99,7 @@ def main() -> None:
         if ".git" in path.parts:
             continue
         text = path.read_text(encoding="utf-8")
-        normalized = "\n".join(line.rstrip() for line in text.splitlines()) + "\n"
+        normalized = "\n".join(line.rstrip() for line in text.rstrip().splitlines()) + "\n"
         path.write_text(normalized, encoding="utf-8")
 
     css = css_path.read_text(encoding="utf-8")
