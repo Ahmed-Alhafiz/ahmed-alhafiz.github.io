@@ -89,7 +89,7 @@ STATUS = r'''def patch_status() -> None:
     write_text(path, text.replace(marker, "<tbody>" + EN_STATUS_ROW + '<tr><td><a href="/en/articles/water-civilization-power/">', 1))
 '''
 
-VISUAL = r'''def patch_visual_review() -> None:
+VISUAL = r"""def patch_visual_review() -> None:
     path = ROOT / ".github/visual-review/run_visual_review.py"
     text = path.read_text(encoding="utf-8")
 
@@ -166,7 +166,7 @@ VISUAL = r'''def patch_visual_review() -> None:
     if text.count(old_summary) != 1:
         raise RuntimeError(f"Visual final-summary block count: {text.count(old_summary)}")
     write_text(path, text.replace(old_summary, new_summary, 1))
-'''
+"""
 
 
 def replace_function(text: str, name: str, next_name: str, replacement: str) -> str:
