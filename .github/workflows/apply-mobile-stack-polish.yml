@@ -28,7 +28,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test "$(cat .github/mobile-stack-polish.trigger)" = 'run=1'
+          grep -Eq '^run=[0-9]+$' .github/mobile-stack-polish.trigger
           python .github/mobile-stack-polish.py
           rm -f .github/mobile-stack-polish.py
           rm -f .github/mobile-stack-polish.trigger
