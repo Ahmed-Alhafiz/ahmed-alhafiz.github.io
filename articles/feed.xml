@@ -6,14 +6,14 @@
   <link href="https://ahmed-alhafiz.github.io/articles/feed.json" rel="alternate" type="application/feed+json"/>
   <link href="https://ahmed-alhafiz.github.io/articles/" rel="alternate" type="text/html"/>
   <id>https://ahmed-alhafiz.github.io/articles/</id>
-  <updated>2026-09-02T23:30:00+02:00</updated>
+  <updated>2026-09-02T04:33:19+02:00</updated>
   <author><name>أحمد الحافظ</name><uri>https://ahmed-alhafiz.github.io/about/</uri></author>
   <entry>
     <title>الرتق والفتق والانفجار العظيم: تحقيق في النص والتفسير وأدلة علم الكون</title>
     <link href="https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/"/>
     <id>https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/</id>
-    <published>2026-09-02T23:30:00+02:00</published>
-    <updated>2026-09-02T23:30:00+02:00</updated>
+    <published>2026-09-01T23:00:00+02:00</published>
+    <updated>2026-09-02T04:33:19+02:00</updated>
     <category term="ملف بحثي موسع"/>
     <summary>ملف موسع يفصل النص القرآني وتاريخ التفسير عن الرصد والنموذج العلمي والاستنتاج الفلسفي، مع خريطة ادعاء ودليل ونسخة إنجليزية.</summary>
   </entry>
@@ -21,8 +21,8 @@
     <title>تعليم الأسماء والذكاء الاصطناعي: هل تفهم الآلة الكلمات أم تتنبأ بها؟</title>
     <link href="https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/"/>
     <id>https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/</id>
-    <published>2026-09-02T23:10:00+02:00</published>
-    <updated>2026-09-02T23:10:00+02:00</updated>
+    <published>2026-09-02T04:33:19+02:00</published>
+    <updated>2026-09-02T04:33:19+02:00</updated>
     <category term="ملف بحثي موسع"/>
     <summary>دراسة تفصل بين الرمز والعلاقة الإحصائية والتمثيل المفهومي والتأسيس في العالم والقصد والمسؤولية.</summary>
   </entry>
@@ -30,8 +30,8 @@
     <title>حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض؟</title>
     <link href="https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/"/>
     <id>https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/</id>
-    <published>2026-09-02T23:05:00+02:00</published>
-    <updated>2026-09-02T23:05:00+02:00</updated>
+    <published>2026-09-02T04:33:19+02:00</published>
+    <updated>2026-09-02T04:33:19+02:00</updated>
     <category term="ملف حماية وصحة"/>
     <summary>ملف حماية يميز الدعم الروحي الطوعي عن الإكراه والعزل والاستغلال واللمس بلا موافقة وتأخير الرعاية الطبية.</summary>
   </entry>
@@ -40,7 +40,7 @@
     <link href="https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/"/>
     <id>https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/</id>
     <published>2026-09-01T23:00:00+02:00</published>
-    <updated>2026-09-01T23:00:00+02:00</updated>
+    <updated>2026-09-02T04:33:19+02:00</updated>
     <category term="موجز طبي تثقيفي"/>
     <summary>موجز طبي تثقيفي عن آليتي الحالتين، وفيديو-EEG، وتعايشهما، وحدود التشخيص من الحركة أو الفيديو وحدهما.</summary>
   </entry>
@@ -49,7 +49,7 @@
     <link href="https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/"/>
     <id>https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/</id>
     <published>2026-09-01T23:00:00+02:00</published>
-    <updated>2026-09-01T23:00:00+02:00</updated>
+    <updated>2026-09-02T04:33:19+02:00</updated>
     <category term="موجز أدلة"/>
     <summary>موجز أدلة يفصل ما يثبته النص وتنوع التفسير عن قياسات الزمن الكوني وما لا تسمح به المطابقة القسرية.</summary>
   </entry>
@@ -58,8 +58,17 @@
     <link href="https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/"/>
     <id>https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/</id>
     <published>2026-09-01T23:00:00+02:00</published>
-    <updated>2026-09-01T23:00:00+02:00</updated>
+    <updated>2026-09-02T04:33:19+02:00</updated>
     <category term="موجز طبي ثقافي"/>
     <summary>موجز طبي ثقافي لشلل النوم وثقل الصدر والإحساس بالحضور، مع حدود التفسير ومتى يلزم التقييم الطبي.</summary>
+  </entry>
+  <entry>
+    <title>الرعب النفسي العربي: كيف يعمل الخوف حين لا نعرف مصدره؟</title>
+    <link href="https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/"/>
+    <id>https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/</id>
+    <published>2026-09-01T23:00:00+02:00</published>
+    <updated>2026-09-02T04:33:19+02:00</updated>
+    <category term="دليل تحليلي"/>
+    <summary>دليل تحليلي يميز مركز الخوف النفسي عن مجرد وجود حدث خارق أو صدمة، ويربط الغموض بالتفسير والسلطة داخل الحكاية.</summary>
   </entry>
 </feed>
