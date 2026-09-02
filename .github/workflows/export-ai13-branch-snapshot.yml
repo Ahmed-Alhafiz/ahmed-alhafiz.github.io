@@ -20,23 +20,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Build deterministic branch snapshot
+      - name: Build deterministic immutable branch snapshot
         shell: bash
         run: |
           set -euo pipefail
           test -f .github/ai13/EXPORT
-          tar \
-            --exclude='./.git' \
-            --exclude='./branch-snapshot.tgz' \
-            --sort=name \
-            --mtime='UTC 2026-09-02' \
-            --owner=0 \
-            --group=0 \
-            --numeric-owner \
-            -czf branch-snapshot.tgz .
+          git archive --format=tar HEAD | gzip -n -9 > /tmp/branch-snapshot.tgz
+          cp /tmp/branch-snapshot.tgz branch-snapshot.tgz
           sha256sum branch-snapshot.tgz > branch-snapshot.sha256
+          echo "SNAPSHOT_COMMIT=$(git rev-parse HEAD)"
           echo "SNAPSHOT_SIZE=$(wc -c < branch-snapshot.tgz | tr -d ' ')"
           cat branch-snapshot.sha256
+          gzip --test branch-snapshot.tgz
+          if tar -tzf branch-snapshot.tgz | grep -E '(^/|(^|/)\.\.(/|$))'; then
+            echo 'Unsafe archive path detected' >&2
+            exit 1
+          fi
 
       - name: Upload branch snapshot
         uses: actions/upload-artifact@v4
