@@ -1,0 +1,50 @@
+name: Finalize water dossier operational record
+
+on:
+  push:
+    branches:
+      - water09-operational-record-10
+    paths:
+      - .github/water09-operational-record-v2.trigger
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Write and validate verified release memory
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fxq 'run=1' .github/water09-operational-record-v2.trigger
+          python .github/water09_finalize_record.py
+          grep -Fq '**Status:** `EXECUTED_VERIFIED`' .github/WATER_CIVILIZATION_POWER_09_PREMERGE.md
+          grep -Fq 'Verified Water, Civilization and Power release 09' .github/CONTENT_CURRENT_CHECKPOINT.md
+          test "$(grep -Fc '### 2026-09-02 — Water, Civilization and Power bilingual research dossier 09' .github/SEO_OPERATIONS_LEDGER.md)" -eq 1
+          git diff --check
+          rm -f .github/water09_finalize_record.py
+          rm -f .github/water09-operational-record.trigger
+          rm -f .github/water09-operational-record-v2.trigger
+
+      - name: Commit operational documents
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add \
+            .github/WATER_CIVILIZATION_POWER_09_PREMERGE.md \
+            .github/CONTENT_CURRENT_CHECKPOINT.md \
+            .github/SEO_OPERATIONS_LEDGER.md \
+            .github/water09_finalize_record.py \
+            .github/water09-operational-record.trigger \
+            .github/water09-operational-record-v2.trigger
+          git commit -m 'Record verified water dossier release state'
+          git push origin HEAD:water09-operational-record-10
