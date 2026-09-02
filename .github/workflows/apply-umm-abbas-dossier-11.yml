@@ -48,6 +48,7 @@ jobs:
         run: |
           set -euo pipefail
           grep -Eq '^run=[0-9]+$' .github/umm-abbas-dossier-11.trigger
+          python .github/dossier11_release_polish.py
           python .github/dossier11_integration_fix.py
           python .github/dossier11_marker_fix.py
           python .github/dossier11_integrate.py
@@ -55,6 +56,7 @@ jobs:
           # the GitHub Actions token is not used to mutate permanent workflows.
           git checkout -- .github/workflows
           python tools/generate_diagnostic_uncertainty_social_cards.py
+          rm -f .github/dossier11_release_polish.py
           rm -f .github/dossier11_integration_fix.py
           rm -f .github/dossier11_marker_fix.py
           rm -f .github/dossier11_integrate.py
@@ -148,6 +150,7 @@ jobs:
           python tools/dossier11_integrity.py
           git diff --check
 
+          test ! -e .github/dossier11_release_polish.py
           test ! -e .github/dossier11_integration_fix.py
           test ! -e .github/dossier11_marker_fix.py
           test ! -e .github/dossier11_integrate.py
