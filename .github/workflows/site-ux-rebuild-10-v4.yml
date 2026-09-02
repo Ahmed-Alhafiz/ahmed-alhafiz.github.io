@@ -1,0 +1,56 @@
+name: Apply site UX rebuild 10 v4
+
+on:
+  push:
+    branches:
+      - site-ux-rebuild-10
+    paths:
+      - .github/site-ux-rebuild-10-v4.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-ux-rebuild-10-v4
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Correct the runner then apply and verify the UX rebuild
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(cat .github/site-ux-rebuild-10-v4.trigger)" = 'run=4'
+          python .github/site_ux_rebuild10_runner_patch.py
+          rm -f .github/site_ux_rebuild10_runner_patch.py
+          python .github/site_ux_rebuild10_runner.py
+          rm -f .github/site-ux-rebuild-10-v4.trigger
+          test ! -e .github/site_ux_rebuild10_runner.py
+          test ! -e .github/site_ux_rebuild10_runner_patch.py
+          test ! -e .github/site_ux_rebuild10.py
+          test ! -e .github/site_ux_rebuild10_post.py
+          test ! -e .github/site-ux-rebuild-10.trigger
+          test ! -e .github/site-ux-rebuild-10-v2.trigger
+          test ! -e .github/site-ux-rebuild-10-v3.trigger
+          test ! -e .github/site-ux-rebuild-10-v4.trigger
+
+      - name: Commit verified rebuild to the feature branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add -A
+          git commit -m 'Rebuild multilingual site UX and contact surfaces'
+          if ! git push origin HEAD:site-ux-rebuild-10; then
+            git pull --rebase origin site-ux-rebuild-10
+            git push origin HEAD:site-ux-rebuild-10
+          fi
