@@ -33,7 +33,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test "$(cat .github/entity-measurement-foundation-12-v4.trigger)" = 'run=6'
+          test "$(cat .github/entity-measurement-foundation-12-v4.trigger)" = 'run=7'
           python .github/entity_measurement_foundation12_patch.py
           python .github/entity_measurement_foundation12_patch2.py
           python .github/entity_measurement_foundation12_patch3.py
@@ -100,6 +100,20 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          parked='/tmp/entity-foundation-workflows'
+          mkdir -p "$parked"
+          for workflow in .github/workflows/apply-entity-measurement-foundation-12*.yml; do
+            [[ -e "$workflow" ]] || continue
+            mv "$workflow" "$parked/"
+          done
+          restore_workflows() {
+            for workflow in "$parked"/*.yml; do
+              [[ -e "$workflow" ]] || continue
+              mv "$workflow" .github/workflows/
+            done
+          }
+          trap restore_workflows EXIT
+
           python -m py_compile \
             tools/site_audit.py \
             tools/editorial_quality_gate.py \
@@ -174,6 +188,9 @@ jobs:
           test ! -e .github/entity-measurement-foundation-12-v4.trigger
           rm -f visibility-audit-local.json indexnow-dry-run.json
           git diff --check
+
+          restore_workflows
+          trap - EXIT
 
       - name: Commit verified non-workflow foundation
         shell: bash
