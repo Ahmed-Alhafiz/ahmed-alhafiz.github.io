@@ -179,7 +179,7 @@ html[dir="ltr"] .profile-latin{direction:rtl;font-family:"Noto Naskh Arabic","Ge
 @media(max-width:960px){
  .profile-grid,.book-hero-grid{grid-template-columns:1fr;gap:36px;padding:62px 0 68px;min-height:0}
  .profile-portrait{justify-self:center;order:-1;width:min(56vw,280px)}
- .book-hero-cover{order:-1;width:min(54vw,270px)}
+ .book-hero-cover{order:2;width:min(54vw,270px);margin-top:4px}
  .book-editorial{grid-template-columns:1fr;gap:30px}
  .feature-callout{grid-template-columns:1fr;align-items:start}.feature-callout .actions{justify-content:flex-start}
  .identity-links{grid-template-columns:1fr 1fr}
