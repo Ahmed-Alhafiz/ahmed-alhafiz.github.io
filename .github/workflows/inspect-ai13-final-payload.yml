@@ -21,56 +21,239 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Inspect payload combinations without mutating the repository
+      - name: Reconstruct and inspect every plausible payload ordering
         shell: bash
         run: |
-          set -u
-          work="$(mktemp -d)"
-          trap 'rm -rf "$work"' EXIT
+          set -euo pipefail
+          python3 - <<'PY'
+          from __future__ import annotations
 
-          clean_b64() {
-            tr -d '\r\n\t ' < "$1" > "$1.clean"
+          import base64
+          import hashlib
+          import io
+          import itertools
+          import json
+          import re
+          import tarfile
+          from collections import OrderedDict
+          from pathlib import Path, PurePosixPath
+
+          output = Path("ai13-inspection")
+          valid_dir = output / "valid"
+          output.mkdir(parents=True, exist_ok=True)
+          valid_dir.mkdir(parents=True, exist_ok=True)
+
+          fragment_paths = OrderedDict(
+              [
+                  ("p000", Path(".github/ai13-final/part-000")),
+                  ("p001", Path(".github/ai13-final/part-001")),
+                  ("p002a", Path(".github/ai13-final/part-002a")),
+                  ("p002b", Path(".github/ai13-final/part-002b")),
+                  ("rem000", Path(".github/ai13-final-rem/part-000")),
+              ]
+          )
+
+          missing = [str(path) for path in fragment_paths.values() if not path.is_file()]
+          if missing:
+              raise SystemExit("Missing payload fragments: " + ", ".join(missing))
+
+          def clean(text: str) -> str:
+              return re.sub(r"\s+", "", text)
+
+          fragments = OrderedDict(
+              (name, clean(path.read_text(encoding="utf-8")))
+              for name, path in fragment_paths.items()
+          )
+
+          candidate_texts: OrderedDict[str, str] = OrderedDict()
+
+          def add_candidate(name: str, text: str) -> None:
+              if text:
+                  candidate_texts.setdefault(name, text)
+
+          # First test the semantically plausible sequences explicitly.
+          add_candidate("p000_p001", fragments["p000"] + fragments["p001"])
+          add_candidate("p000_p002a_p002b", fragments["p000"] + fragments["p002a"] + fragments["p002b"])
+          add_candidate("p000_p002a_p002b_p001", fragments["p000"] + fragments["p002a"] + fragments["p002b"] + fragments["p001"])
+          add_candidate("p000_rem000", fragments["p000"] + fragments["rem000"])
+          add_candidate("p000_p002a_p002b_rem000", fragments["p000"] + fragments["p002a"] + fragments["p002b"] + fragments["rem000"])
+          add_candidate("p000_p001_rem000", fragments["p000"] + fragments["p001"] + fragments["rem000"])
+          add_candidate(
+              "natural_all",
+              fragments["p000"]
+              + fragments["p001"]
+              + fragments["p002a"]
+              + fragments["p002b"]
+              + fragments["rem000"],
+          )
+
+          # Exhaustively test every ordering that starts at the only known gzip header.
+          tails = ["p001", "p002a", "p002b", "rem000"]
+          for length in range(0, len(tails) + 1):
+              for ordering in itertools.permutations(tails, length):
+                  name = "p000" + ("_" + "_".join(ordering) if ordering else "")
+                  add_candidate(name, fragments["p000"] + "".join(fragments[item] for item in ordering))
+
+          # Search every supplied fragment and natural concatenation for embedded gzip-base64 starts.
+          scan_sources = OrderedDict(fragments)
+          scan_sources["natural_final"] = (
+              fragments["p000"] + fragments["p001"] + fragments["p002a"] + fragments["p002b"]
+          )
+          scan_sources["all_fragments"] = scan_sources["natural_final"] + fragments["rem000"]
+          for source_name, source_text in scan_sources.items():
+              starts = [match.start() for match in re.finditer(r"H4sI", source_text)]
+              ends = [match.end() for match in re.finditer(r"==", source_text)]
+              ends.append(len(source_text))
+              for start_index, start in enumerate(starts):
+                  for end_index, end in enumerate(sorted(set(ends))):
+                      if end <= start:
+                          continue
+                      segment = source_text[start:end]
+                      if len(segment) % 4 != 0:
+                          continue
+                      add_candidate(
+                          f"scan_{source_name}_s{start_index}_e{end_index}",
+                          segment,
+                      )
+
+          records: list[dict[str, object]] = []
+          seen_payloads: dict[str, str] = {}
+          valid_names: list[str] = []
+
+          for candidate_name, text in candidate_texts.items():
+              payload_sha = hashlib.sha256(text.encode("ascii", errors="ignore")).hexdigest()
+              if payload_sha in seen_payloads:
+                  records.append(
+                      {
+                          "name": candidate_name,
+                          "duplicate_of": seen_payloads[payload_sha],
+                          "base64_length": len(text),
+                          "base64_mod4": len(text) % 4,
+                      }
+                  )
+                  continue
+              seen_payloads[payload_sha] = candidate_name
+
+              invalid = sorted(set(re.sub(r"[A-Za-z0-9+/=]", "", text)))
+              padding_positions = [index for index, value in enumerate(text) if value == "="]
+              record: dict[str, object] = {
+                  "name": candidate_name,
+                  "base64_length": len(text),
+                  "base64_mod4": len(text) % 4,
+                  "invalid_characters": invalid,
+                  "padding_count": len(padding_positions),
+                  "first_padding_position": padding_positions[0] if padding_positions else None,
+                  "last_padding_position": padding_positions[-1] if padding_positions else None,
+                  "base64_sha256": payload_sha,
+              }
+
+              try:
+                  decoded = base64.b64decode(text, validate=True)
+              except Exception as exc:  # diagnostic workflow: preserve all failure evidence
+                  record["decode"] = "failed"
+                  record["decode_error"] = f"{type(exc).__name__}: {exc}"
+                  records.append(record)
+                  continue
+
+              record["decode"] = "ok"
+              record["decoded_bytes"] = len(decoded)
+              record["decoded_sha256"] = hashlib.sha256(decoded).hexdigest()
+              record["magic_hex"] = decoded[:16].hex()
+
+              try:
+                  with tarfile.open(fileobj=io.BytesIO(decoded), mode="r:gz") as archive:
+                      members = archive.getmembers()
+                      unsafe: list[str] = []
+                      for member in members:
+                          path = PurePosixPath(member.name)
+                          if path.is_absolute() or ".." in path.parts:
+                              unsafe.append(member.name)
+                      if unsafe:
+                          raise ValueError("Unsafe archive paths: " + ", ".join(unsafe[:10]))
+
+                      record["gzip_tar"] = "ok"
+                      record["members"] = len(members)
+                      record["regular_files"] = sum(member.isfile() for member in members)
+                      listing = "\n".join(member.name for member in members) + "\n"
+                      (valid_dir / f"{candidate_name}.listing.txt").write_text(
+                          listing,
+                          encoding="utf-8",
+                      )
+
+                      archive_path = valid_dir / f"{candidate_name}.tgz"
+                      archive_path.write_bytes(decoded)
+                      extract_root = valid_dir / f"{candidate_name}-files"
+                      extract_root.mkdir(parents=True, exist_ok=True)
+                      archive.extractall(extract_root)
+
+                      file_hashes: list[str] = []
+                      for extracted in sorted(extract_root.rglob("*")):
+                          if extracted.is_file():
+                              digest = hashlib.sha256(extracted.read_bytes()).hexdigest()
+                              file_hashes.append(f"{digest}  {extracted.relative_to(extract_root).as_posix()}")
+                      (valid_dir / f"{candidate_name}.sha256").write_text(
+                          "\n".join(file_hashes) + ("\n" if file_hashes else ""),
+                          encoding="utf-8",
+                      )
+                      valid_names.append(candidate_name)
+              except Exception as exc:  # diagnostic workflow: preserve all failure evidence
+                  record["gzip_tar"] = "failed"
+                  record["gzip_tar_error"] = f"{type(exc).__name__}: {exc}"
+
+              records.append(record)
+
+          fragment_report = {
+              name: {
+                  "path": fragment_paths[name].as_posix(),
+                  "characters": len(text),
+                  "mod4": len(text) % 4,
+                  "sha256": hashlib.sha256(text.encode("ascii", errors="ignore")).hexdigest(),
+                  "gzip_header_occurrences": [
+                      match.start() for match in re.finditer(r"H4sI", text)
+                  ],
+                  "padding_positions": [index for index, value in enumerate(text) if value == "="],
+              }
+              for name, text in fragments.items()
           }
 
-          inspect_candidate() {
-            local name="$1"
-            local b64="$2"
-            echo "::group::candidate=${name}"
-            clean_b64 "$b64"
-            printf 'base64-bytes='; wc -c < "$b64.clean"
-            if ! base64 --decode "$b64.clean" > "$work/${name}.bin"; then
-              echo "decode=FAILED"
-              echo "::endgroup::"
-              return 0
-            fi
-            echo "decode=OK"
-            file "$work/${name}.bin"
-            sha256sum "$work/${name}.bin"
-            printf 'decoded-bytes='; wc -c < "$work/${name}.bin"
-            if gzip -t "$work/${name}.bin" 2>/dev/null; then
-              echo "gzip=OK"
-              if tar -tzf "$work/${name}.bin" > "$work/${name}.listing" 2>"$work/${name}.tar.err"; then
-                echo "tar=OK"
-                printf 'members='; wc -l < "$work/${name}.listing"
-                sed -n '1,240p' "$work/${name}.listing"
-              else
-                echo "tar=FAILED"
-                cat "$work/${name}.tar.err"
-                gzip -dc "$work/${name}.bin" | file - || true
-              fi
-            else
-              echo "gzip=FAILED"
-              unzip -l "$work/${name}.bin" || true
-            fi
-            echo "::endgroup::"
+          report = {
+              "commit": "${{ github.sha }}",
+              "fragments": fragment_report,
+              "candidate_count": len(candidate_texts),
+              "unique_candidate_count": len(seen_payloads),
+              "valid_candidates": valid_names,
+              "records": records,
           }
+          (output / "inspection.json").write_text(
+              json.dumps(report, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
 
-          cat .github/ai13-final/part-* > "$work/final.b64"
-          cat .github/ai13-final-rem/part-* > "$work/rem.b64"
-          cat "$work/final.b64" "$work/rem.b64" > "$work/final-plus-rem.b64"
-          cat "$work/rem.b64" "$work/final.b64" > "$work/rem-plus-final.b64"
+          summary_lines = [
+              f"candidate_count={len(candidate_texts)}",
+              f"unique_candidate_count={len(seen_payloads)}",
+              "valid_candidates=" + (",".join(valid_names) if valid_names else "NONE"),
+          ]
+          (output / "SUMMARY.txt").write_text("\n".join(summary_lines) + "\n", encoding="utf-8")
+          print("\n".join(summary_lines))
+          for record in records:
+              if record.get("gzip_tar") == "ok":
+                  print(
+                      "VALID",
+                      record["name"],
+                      "decoded_bytes=",
+                      record["decoded_bytes"],
+                      "members=",
+                      record["members"],
+                      "sha256=",
+                      record["decoded_sha256"],
+                  )
+          PY
 
-          inspect_candidate final "$work/final.b64"
-          inspect_candidate remainder "$work/rem.b64"
-          inspect_candidate final_plus_remainder "$work/final-plus-rem.b64"
-          inspect_candidate remainder_plus_final "$work/rem-plus-final.b64"
+      - name: Upload reconstruction evidence and every valid candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai13-final-payload-inspection-${{ github.run_id }}
+          path: ai13-inspection
+          if-no-files-found: error
+          retention-days: 3
