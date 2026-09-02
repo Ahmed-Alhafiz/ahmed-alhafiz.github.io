@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Verify that book covers render as true 2:3 artwork, not padded canvases."""
+"""Verify that book covers render as true 2:3 artwork, not padded canvases.
+
+The covers do not share one luminance profile: Juhayman is intentionally much
+darker than the other jackets. Padding is therefore detected from uniform
+edge bands and low whole-image variation, not from one brightness quota.
+"""
 from __future__ import annotations
 
 import json
@@ -26,6 +31,15 @@ BOOKS = (
 )
 LANGS = (("ar", ""), ("en", "en/"), ("de", "de/"))
 HOME_ROUTES = (("ar", "/"), ("en", "/en/"), ("de", "/de/"))
+
+# Juhayman is a deliberately black, low-key cover. A per-title floor prevents
+# the audit from confusing visual darkness with an empty/padded canvas.
+MIN_VISIBLE_CONTENT = {
+    "sirou-fi-alard": 0.18,
+    "umm-abbas": 0.18,
+    "juhayman": 0.12,
+    "kitab-al-kutub": 0.18,
+}
 
 
 def build_driver() -> webdriver.Chrome:
@@ -121,11 +135,17 @@ def band_stats(image: Image.Image, top: bool) -> dict[str, float]:
     }
 
 
-def content_fraction(image: Image.Image) -> float:
+def whole_image_stats(image: Image.Image) -> dict[str, float]:
     gray = image.convert("L")
+    stat = ImageStat.Stat(gray)
     histogram = gray.histogram()
     pixels = gray.width * gray.height
-    return round(sum(histogram[30:]) / pixels, 4)
+    visible = sum(histogram[30:]) / pixels
+    return {
+        "mean": round(stat.mean[0], 2),
+        "stddev": round(stat.stddev[0], 2),
+        "visibleContentFraction": round(visible, 4),
+    }
 
 
 def audit_book_covers(driver: webdriver.Chrome, mode: str, width: int, height: int) -> list[dict[str, Any]]:
@@ -169,15 +189,21 @@ def audit_book_covers(driver: webdriver.Chrome, mode: str, width: int, height: i
 
             top = band_stats(rendered, True)
             bottom = band_stats(rendered, False)
-            fraction = content_fraction(rendered)
+            whole = whole_image_stats(rendered)
             padded_top = top["nearBlackFraction"] > 0.96 and top["stddev"] < 8
             padded_bottom = bottom["nearBlackFraction"] > 0.96 and bottom["stddev"] < 8
             if padded_top and padded_bottom:
                 raise SystemExit(
                     f"{shot}: uniform black padding remains at both edges; top={top}, bottom={bottom}"
                 )
-            if fraction < 0.18:
-                raise SystemExit(f"{shot}: too little visible artwork after crop ({fraction})")
+            if whole["stddev"] < 12:
+                raise SystemExit(f"{shot}: rendered cover is visually near-uniform: {whole}")
+            minimum = MIN_VISIBLE_CONTENT[slug]
+            if whole["visibleContentFraction"] < minimum:
+                raise SystemExit(
+                    f"{shot}: too little visible artwork for {slug} "
+                    f"({whole['visibleContentFraction']} < {minimum}); stats={whole}"
+                )
 
             reports.append(
                 {
@@ -192,7 +218,8 @@ def audit_book_covers(driver: webdriver.Chrome, mode: str, width: int, height: i
                     "rendered": {"width": rendered.width, "height": rendered.height},
                     "topBand": top,
                     "bottomBand": bottom,
-                    "contentFraction": fraction,
+                    "wholeImage": whole,
+                    "minimumVisibleContent": minimum,
                 }
             )
 
@@ -255,7 +282,8 @@ def main() -> None:
         raise SystemExit("Expected six multilingual works-section screenshots")
     print(
         "Book-cover audit passed: 12 multilingual hero covers at two viewports, "
-        "forced 2:3 crop, no dual black padding bands, and six works-section captures."
+        "forced 2:3 crop, no dual black padding bands, calibrated dark-cover "
+        "variation checks, and six works-section captures."
     )
 
 
