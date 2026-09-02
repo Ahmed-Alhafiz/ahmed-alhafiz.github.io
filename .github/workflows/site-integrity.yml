@@ -22,7 +22,17 @@ jobs:
           python-version: "3.12"
 
       - name: Compile audit tools
-        run: python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py tools/discovery_integrity.py tools/ux_integrity.py tools/arabic_ui_integrity.py tools/dossier11_integrity.py
+        run: >-
+          python -m py_compile
+          tools/site_audit.py
+          tools/editorial_quality_gate.py
+          tools/discovery_integrity.py
+          tools/ux_integrity.py
+          tools/arabic_ui_integrity.py
+          tools/dossier11_integrity.py
+          tools/entity_integrity.py
+          tools/visibility_audit.py
+          tools/indexnow_submit.py
 
       - name: Parse XML JSON feeds evidence manifests figures and every JSON-LD block
         shell: bash
@@ -63,9 +73,13 @@ jobs:
               *sorted(Path("assets/figures").glob("*.svg")),
           ]
           json_files = [
+              Path("author.json"),
               Path("articles/feed.json"),
               Path("en/articles/feed.json"),
               Path("articles/research-index.json"),
+              Path("data/content-inventory.json"),
+              Path("data/visibility-baseline.json"),
+              Path("data/indexnow-config.json"),
               *sorted(Path("articles").glob("*/evidence/claims.json")),
           ]
 
@@ -166,6 +180,15 @@ jobs:
       - name: Validate fear-before-diagnosis bilingual dossier evidence and safety package
         run: python tools/dossier11_integrity.py
 
+      - name: Validate canonical author identity aliases manifest and attribution boundaries
+        run: python tools/entity_integrity.py
+
+      - name: Validate the technical visibility baseline without inferring rankings or citations
+        run: python tools/visibility_audit.py --output visibility-audit-local.json
+
+      - name: Validate IndexNow ownership configuration and URL inventory without submission
+        run: python tools/indexnow_submit.py --all --report indexnow-dry-run.json
+
       - name: Validate multilingual UX portrait footer contact covers and public identity integrity
         run: python tools/ux_integrity.py
 
@@ -189,4 +212,8 @@ jobs:
           fi
 
       - name: Check patch whitespace
-        run: git diff --check
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f visibility-audit-local.json indexnow-dry-run.json
+          git diff --check
