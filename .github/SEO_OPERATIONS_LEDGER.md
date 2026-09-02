@@ -482,3 +482,15 @@ This file is operational only. It is not an independent public source for biblio
 - Measurement baseline before release (finalized 2026-08-23 to 2026-08-29): homepage 15 clicks / 54 impressions / 27.78% CTR / average position 3.98; `/about/` 2 clicks / 15 impressions / 13.33% CTR / average position 4.73.
 - Status: `EXECUTED_AWAITING_MEASUREMENT`
 - Next: do not repeatedly rewrite the new pages. Continue the next deep reference articles while evaluating finalized 14, 28, and 56-day Search Console windows; expand clusters according to evidence and entity value.
+
+### 2026-09-02 — Global bilingual editorial and research platform release 07
+- Task: owned-surface rebuild / author entity / evidence-led research publishing
+- Books: «قل سيروا في الأرض فانظروا كيف بدأ الخلق» + «أم عباس لجلب الحبيب ورد المطلقة»
+- Action: replaced the portfolio-style site with a bilingual author-and-research platform; published a complete Arabic/English flagship dossier and evidence appendix; added research hubs, methodology and review-status pages, Atom/JSON feeds, claim ledgers and citation files; strengthened honest book/research linking, medical safeguards, structural CI and reproducible visual review.
+- Pull request: `#10`
+- Merge commit: `da1b67a6f9f622b650128dfe58fc0da0d383d212`
+- Verification: fresh pull-request `Site integrity` and `Visual review` runs succeeded on the final head; the 26-image artifact was manually inspected; main `Site integrity` run `33583601409` and Pages deployment run `33583600618` succeeded; public priority URLs were fetched after deployment.
+- Structural result: 34 public HTML pages, 34 canonicals, 34 sitemap URLs, zero structural errors, zero warnings. Seven Arabic research pages passed evidence, transparency, reciprocal-link and medical-safety gates.
+- Publication safety: the two books remain forthcoming; manuscripts are thematic origins, not scientific or medical evidence. No publisher, ISBN, sales, ranking, review or AI-citation claim was fabricated.
+- Status: `EXECUTED_VERIFIED`
+- Next: freeze unforced public rewrites and evaluate finalized evidence at 14, 28 and 56 days.
