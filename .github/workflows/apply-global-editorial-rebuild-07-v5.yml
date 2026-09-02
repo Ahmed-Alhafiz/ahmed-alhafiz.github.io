@@ -1,0 +1,187 @@
+name: Apply global editorial rebuild 07 v5
+
+on:
+  push:
+    branches:
+      - global-editorial-rebuild-07
+    paths:
+      - .github/gr07/APPLY10
+
+permissions:
+  contents: write
+
+concurrency:
+  group: global-editorial-rebuild-07-v5
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout rebuild branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and verify the reviewed release archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f .github/gr07/APPLY10
+          parts=(
+            .github/gr07/part-00
+            .github/gr07/part-01a
+            .github/gr07/part-01b
+            .github/gr07/part-01c
+            .github/gr07/part-02
+            .github/gr07/part-03
+            .github/gr07/part-04
+            .github/gr07/part-05000
+            .github/gr07/fix-05001
+            .github/gr07/fix-05002
+            .github/gr07/fix-050030
+            .github/gr07/fix-050031
+            .github/gr07/fix-050032
+            .github/gr07/fix-050033
+            .github/gr07/fix-050034
+            .github/gr07/fix-050040
+            .github/gr07/fix-050041
+            .github/gr07/fix-050042
+            .github/gr07/fix-050043
+            .github/gr07/fix-050044
+            .github/gr07/fix-050050
+            .github/gr07/fix-050051
+            .github/gr07/part-050052
+            .github/gr07/fix-050053
+            .github/gr07/fix-050054
+            .github/gr07/part-0501
+            .github/gr07/part-0502
+            .github/gr07/part-0503
+            .github/gr07/part-0504
+            .github/gr07/part-06
+            .github/gr07/part-07
+            .github/gr07/part-0800
+            .github/gr07/part-0801
+            .github/gr07/part-0802
+            .github/gr07/part-0803
+            .github/gr07/part-0804
+            .github/gr07/part-0805
+          )
+          for part in "${parts[@]}"; do test -s "$part"; done
+          cat "${parts[@]}" > /tmp/global-rebuild-07.tgz.b64
+          test "$(wc -c < /tmp/global-rebuild-07.tgz.b64 | tr -d ' ')" -eq 124420
+          echo '46526f3b3330fa565c8e9874ffee0ddbf05a14a557a74c8d098fa054aa4746f4  /tmp/global-rebuild-07.tgz.b64' | sha256sum --check --strict
+          base64 --decode /tmp/global-rebuild-07.tgz.b64 > /tmp/global-rebuild-07.tgz
+          echo 'c8606e6113e0b340c707b7d73db56aa906733b7f2c04dea07bafda4993898fc7  /tmp/global-rebuild-07.tgz' | sha256sum --check --strict
+          if tar -tzf /tmp/global-rebuild-07.tgz | grep -E '(^/|(^|/)\.\.(/|$))'; then
+            echo 'Unsafe archive path detected' >&2
+            exit 1
+          fi
+          echo 'Archive integrity verified exactly.'
+
+      - name: Install the global editorial and research architecture
+        shell: bash
+        run: |
+          set -euo pipefail
+          tar -xzf /tmp/global-rebuild-07.tgz -C .
+          python .github/quality_patch_rebuild07.py
+          rm -f .github/quality_patch_rebuild07.py
+          rm -rf .github/gr07
+          rm -f .github/finalize-editorial-release-05.trigger
+          rm -f .github/finalize-discovery-release-06.trigger
+          rm -f .github/workflows/finalize-editorial-release-05.yml
+          rm -f .github/workflows/finalize-discovery-release-06.yml
+          rm -f .github/workflows/apply-global-editorial-rebuild-07.yml
+          rm -f .github/workflows/apply-global-editorial-rebuild-07-v2.yml
+          rm -f .github/workflows/apply-global-editorial-rebuild-07-v3.yml
+          rm -f .github/workflows/apply-global-editorial-rebuild-07-v4.yml
+          rm -f .github/workflows/apply-global-editorial-rebuild-07-v5.yml
+          rm -f .github/workflows/diagnose-global-editorial-rebuild-07.yml
+
+      - name: Parse all structured and machine-readable outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class JsonLdParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.active = False
+                  self.buf = []
+                  self.blocks = []
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if tag.lower() == 'script' and attrs.get('type', '').lower() == 'application/ld+json':
+                      self.active = True
+                      self.buf = []
+              def handle_endtag(self, tag):
+                  if tag.lower() == 'script' and self.active:
+                      self.blocks.append(''.join(self.buf))
+                      self.active = False
+              def handle_data(self, data):
+                  if self.active:
+                      self.buf.append(data)
+
+          for path in [Path('sitemap.xml'), Path('articles/feed.xml'), Path('en/articles/feed.xml')]:
+              ET.parse(path)
+          for path in [
+              Path('articles/feed.json'),
+              Path('en/articles/feed.json'),
+              Path('articles/research-index.json'),
+              Path('articles/ratq-fatq-big-bang/evidence/claims.json'),
+          ]:
+              json.loads(path.read_text(encoding='utf-8'))
+
+          pages = blocks = 0
+          for path in Path('.').rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+              parser = JsonLdParser()
+              parser.feed(path.read_text(encoding='utf-8'))
+              for block in parser.blocks:
+                  if block.strip():
+                      json.loads(block)
+                      blocks += 1
+              pages += 1
+          print(f'Parsed {pages} HTML pages, {blocks} JSON-LD blocks, all XML feeds and evidence JSON.')
+          PY
+
+      - name: Run structural editorial and safety quality gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/site_audit.py
+          python tools/editorial_quality_gate.py
+          git diff --check
+          test ! -e .github/gr07
+          test ! -e .github/quality_patch_rebuild07.py
+          test ! -e .github/finalize-editorial-release-05.trigger
+          test ! -e .github/finalize-discovery-release-06.trigger
+          test ! -e .github/workflows/finalize-editorial-release-05.yml
+          test ! -e .github/workflows/finalize-discovery-release-06.yml
+          test ! -e .github/workflows/apply-global-editorial-rebuild-07.yml
+          test ! -e .github/workflows/apply-global-editorial-rebuild-07-v2.yml
+          test ! -e .github/workflows/apply-global-editorial-rebuild-07-v3.yml
+          test ! -e .github/workflows/apply-global-editorial-rebuild-07-v4.yml
+          test ! -e .github/workflows/apply-global-editorial-rebuild-07-v5.yml
+          test ! -e .github/workflows/diagnose-global-editorial-rebuild-07.yml
+
+      - name: Commit verified rebuild to the review branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add -A
+          git commit -m 'Apply global editorial and research rebuild'
+          if ! git push origin HEAD:global-editorial-rebuild-07; then
+            git pull --rebase origin global-editorial-rebuild-07
+            git push origin HEAD:global-editorial-rebuild-07
+          fi
