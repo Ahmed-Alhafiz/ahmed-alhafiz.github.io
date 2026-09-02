@@ -4,9 +4,14 @@
 The covers do not share one luminance profile: Juhayman is intentionally much
 darker than the other jackets. Padding is therefore detected from uniform
 edge bands and low whole-image variation, not from one brightness quota.
+
+Element screenshots supplied by WebDriver can be clipped to the visible mobile
+viewport. This audit therefore uses Chrome DevTools Protocol with
+``captureBeyondViewport`` so every measured 2:3 frame is inspected in full.
 """
 from __future__ import annotations
 
+import base64
 import json
 import shutil
 import struct
@@ -112,6 +117,59 @@ def rect(driver: webdriver.Chrome, element: Any) -> dict[str, float]:
     )
 
 
+def capture_element_beyond_viewport(
+    driver: webdriver.Chrome,
+    element: Any,
+    output: Path,
+) -> None:
+    """Capture the complete element in document coordinates through CDP."""
+    driver.execute_script(
+        """
+        document.documentElement.style.scrollBehavior = 'auto';
+        document.body.style.scrollBehavior = 'auto';
+        arguments[0].scrollIntoView({block:'center', inline:'nearest', behavior:'auto'});
+        """,
+        element,
+    )
+    time.sleep(0.12)
+    clip = driver.execute_script(
+        """
+        const r = arguments[0].getBoundingClientRect();
+        return {
+          x: r.left + window.scrollX,
+          y: r.top + window.scrollY,
+          width: r.width,
+          height: r.height
+        };
+        """,
+        element,
+    )
+    if clip["width"] <= 0 or clip["height"] <= 0:
+        raise SystemExit(f"Cannot capture an empty element frame: {clip}")
+    result = driver.execute_cdp_cmd(
+        "Page.captureScreenshot",
+        {
+            "format": "png",
+            "fromSurface": True,
+            "captureBeyondViewport": True,
+            "clip": {
+                "x": float(clip["x"]),
+                "y": float(clip["y"]),
+                "width": float(clip["width"]),
+                "height": float(clip["height"]),
+                "scale": 1,
+            },
+        },
+    )
+    encoded = result.get("data")
+    if not encoded:
+        raise SystemExit(f"Chrome returned no screenshot data for {output}")
+    payload = base64.b64decode(encoded, validate=True)
+    if not payload.startswith(b"\x89PNG\r\n\x1a\n"):
+        raise SystemExit(f"Chrome returned a non-PNG element capture for {output}")
+    output.write_bytes(payload)
+
+
 def png_dimensions(path: Path) -> tuple[int, int]:
     data = path.read_bytes()
     if data[:8] != b"\x89PNG\r\n\x1a\n" or data[12:16] != b"IHDR":
@@ -178,8 +236,7 @@ def audit_book_covers(driver: webdriver.Chrome, mode: str, width: int, height: i
                 raise SystemExit(f"{mode} {language}/{slug}: cover escapes viewport")
 
             shot = output / f"{mode}-{language}-{short}.png"
-            if not frame.screenshot(str(shot)):
-                raise SystemExit(f"Failed to capture {shot}")
+            capture_element_beyond_viewport(driver, frame, shot)
             if shot.stat().st_size < 4_000:
                 raise SystemExit(f"{shot}: suspiciously small cover render")
             rendered = Image.open(shot).convert("RGB")
