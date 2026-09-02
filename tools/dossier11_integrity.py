@@ -196,8 +196,9 @@ def validate_pages() -> None:
             fail(f"{rel}: reciprocal link to related book missing")
         if framework1 not in text or framework2 not in text:
             fail(f"{rel}: original frameworks missing from visible text")
-        if "External review pending" not in text:
-            fail(f"{rel}: external review badge/disclosure missing")
+        expected_badge = "مراجعة خارجية معلّقة" if language == "ar" else "External review pending"
+        if expected_badge not in text:
+            fail(f"{rel}: localized external review badge/disclosure missing")
         if len(set(REF_ID_RE.findall(html))) < 19:
             fail(f"{rel}: expected at least 19 annotated reference anchors")
         if "isBasedOn" in html:
@@ -207,10 +208,10 @@ def validate_pages() -> None:
         if "claims.json" not in html or "/evidence/" not in html:
             fail(f"{rel}: evidence surfaces missing")
         if language == "ar":
-            safety_tokens = ("الطوارئ", "لا توقف دواء", "ليس لتشخيص")
-            review_tokens = ("لم تتم بعد مراجعة", "غير مصدّق", "لا يُقدَّم")
+            safety_tokens = ("الطوارئ", "لا توقف دواء", "ليست تشخيصًا")
+            review_tokens = ("لم تتم بعد مراجعة مستقلة", "ليس مقياسًا سريريًا مُعتمدًا", "لا يُقدَّم بوصفه أداة تشخيصية")
         else:
-            safety_tokens = ("emergency", "Do not stop prescribed medication", "not individual medical advice")
+            safety_tokens = ("emergency", "Do not stop prescribed medication", "not a diagnosis or individual medical advice")
             review_tokens = ("No independent", "not a validated", "must not be represented")
         if not all(token.lower() in text.lower() for token in safety_tokens):
             fail(f"{rel}: medical safety boundary incomplete")

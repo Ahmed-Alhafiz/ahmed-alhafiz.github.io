@@ -52,6 +52,10 @@ TOP_PAGES = (
     ("ratq-en", "/en/articles/ratq-fatq-big-bang/"),
     ("water-ar", "/articles/water-civilization-power/"),
     ("water-en", "/en/articles/water-civilization-power/"),
+    ("fear-ar", "/articles/diagnostic-uncertainty-family-fear-coercive-authority/"),
+    ("fear-en", "/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/"),
+    ("fear-evidence-ar", "/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/"),
+    ("fear-evidence-en", "/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/"),
     ("sirou-ar", "/books/sirou-fi-alard/"),
     ("sirou-en", "/en/books/sirou-fi-alard/"),
     ("sirou-de", "/de/books/sirou-fi-alard/"),
@@ -78,6 +82,8 @@ TARGET_PAGES = (
 SOCIAL_CARDS = (
     Path("assets/social/water-civilization-power-ar.png"),
     Path("assets/social/water-civilization-power-en.png"),
+    Path("assets/social/diagnostic-uncertainty-family-fear-ar.png"),
+    Path("assets/social/diagnostic-uncertainty-family-fear-en.png"),
 )
 
 
@@ -338,19 +344,22 @@ def copy_and_verify_social_cards() -> None:
 
 
 def verify_inventory() -> None:
+    expected_screenshots = len(TOP_PAGES) + len(TARGET_PAGES)
     for mode, dimensions in VIEWPORTS.items():
         images = sorted((ROOT / mode).glob("*.png"))
-        if len(images) != 30:
-            raise SystemExit(f"{mode}: expected 30 screenshots, found {len(images)}")
+        if len(images) != expected_screenshots:
+            raise SystemExit(
+                f"{mode}: expected {expected_screenshots} screenshots, found {len(images)}"
+            )
         for image in images:
             if png_dimensions(image) != dimensions:
                 raise SystemExit(f"{image}: wrong screenshot dimensions")
-    if len(list((ROOT / "geometry").glob("*.json"))) != 2:
-        raise SystemExit("Expected two geometry reports")
-    if len(list((ROOT / "targets").glob("*.json"))) != 2:
-        raise SystemExit("Expected two target reports")
-    if len(list((ROOT / "social").glob("*.png"))) != 2:
-        raise SystemExit("Expected two social cards")
+    if len(list((ROOT / "geometry").glob("*.json"))) != len(VIEWPORTS):
+        raise SystemExit(f"Expected {len(VIEWPORTS)} geometry reports")
+    if len(list((ROOT / "targets").glob("*.json"))) != len(VIEWPORTS):
+        raise SystemExit(f"Expected {len(VIEWPORTS)} target reports")
+    if len(list((ROOT / "social").glob("*.png"))) != len(SOCIAL_CARDS):
+        raise SystemExit(f"Expected {len(SOCIAL_CARDS)} social cards")
 
 
 def build_driver() -> webdriver.Chrome:
@@ -396,9 +405,12 @@ def main() -> None:
 
     copy_and_verify_social_cards()
     verify_inventory()
+    total_screenshots = (len(TOP_PAGES) + len(TARGET_PAGES)) * len(VIEWPORTS)
     print(
-        "Visual review passed: 60 exact-size screenshots, six portrait tests at "
-        "two viewports, 12 verified targeted captures, and two social cards."
+        f"Visual review passed: {total_screenshots} exact-size screenshots, "
+        f"{len(GEOMETRY_TESTS)} portrait tests at {len(VIEWPORTS)} viewports, "
+        f"{len(TARGET_PAGES) * len(VIEWPORTS)} verified targeted captures, "
+        f"and {len(SOCIAL_CARDS)} social cards."
     )
 
 
