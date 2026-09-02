@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Six-Layer Understanding Matrix</title>
+<desc id="desc">An English diagram separating symbol discrimination, distributional association, compositional use and transfer, grounded reference, causal and interventional modelling, and intention, experience and responsibility. Success at one layer does not establish all higher layers.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07131f"/><stop offset="1" stop-color="#163447"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#02080d" flood-opacity=".25"/></filter>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#d88b64"/></marker>
+  <style>
+    .sans{font-family:"DejaVu Sans",Arial,sans-serif}.title{font-size:42px;font-weight:800;fill:#fff}.sub{font-size:19px;fill:#c4d1d9}.layer{font-size:20px;font-weight:800;fill:#17202a}.note{font-size:14px;fill:#52616d}.num{font-size:18px;font-weight:800;fill:#fff}.band{font-size:17px;font-weight:700;fill:#fff}
+  </style>
+</defs>
+<rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+<circle cx="1096" cy="92" r="150" fill="none" stroke="#2e6077" opacity=".55"/><circle cx="1096" cy="92" r="225" fill="none" stroke="#2e6077" opacity=".3"/>
+<text x="80" y="75" class="sans title">Six-Layer Understanding Matrix</text>
+<text x="80" y="112" class="sans sub">Do not compress every use of “understanding” into one verdict</text>
+<line x1="80" y1="142" x2="1120" y2="142" stroke="#356377" stroke-width="2"/>
+
+<g filter="url(#shadow)">
+<rect x="80" y="181" width="430" height="112" rx="20" fill="#f7f3ea"/><circle cx="120" cy="215" r="22" fill="#bd704e"/><text x="120" y="221" text-anchor="middle" class="sans num">1</text><text x="154" y="222" class="sans layer">Symbol discrimination</text><text x="120" y="261" class="sans note">Track a sign, its form, order, and contrast</text>
+<rect x="580" y="181" width="540" height="112" rx="20" fill="#f7f3ea"/><circle cx="620" cy="215" r="22" fill="#2b6076"/><text x="620" y="221" text-anchor="middle" class="sans num">2</text><text x="654" y="222" class="sans layer">Distributional association</text><text x="620" y="261" class="sans note">Learn contextual co-occurrence and probability from data</text>
+
+<rect x="80" y="326" width="430" height="112" rx="20" fill="#f7f3ea"/><circle cx="120" cy="360" r="22" fill="#2b6076"/><text x="120" y="366" text-anchor="middle" class="sans num">3</text><text x="154" y="354" class="sans layer">Compositional use</text><text x="154" y="380" class="sans layer">and transfer</text><text x="120" y="416" class="sans note">Rebuild a relation in a new form or problem</text>
+<rect x="580" y="326" width="540" height="112" rx="20" fill="#f7f3ea"/><circle cx="620" cy="360" r="22" fill="#bd704e"/><text x="620" y="366" text-anchor="middle" class="sans num">4</text><text x="654" y="367" class="sans layer">Grounded reference</text><text x="620" y="406" class="sans note">Connect words to perception, environment, body, or a source</text>
+
+<rect x="80" y="471" width="430" height="112" rx="20" fill="#f7f3ea"/><circle cx="120" cy="505" r="22" fill="#bd704e"/><text x="120" y="511" text-anchor="middle" class="sans num">5</text><text x="154" y="499" class="sans layer">Causal and interventional</text><text x="154" y="525" class="sans layer">model</text><text x="120" y="561" class="sans note">Predict the effect of a deliberate change, not correlation alone</text>
+<rect x="580" y="471" width="540" height="112" rx="20" fill="#f7f3ea"/><circle cx="620" cy="505" r="22" fill="#2b6076"/><text x="620" y="511" text-anchor="middle" class="sans num">6</text><text x="654" y="499" class="sans layer">Intention, experience,</text><text x="654" y="525" class="sans layer">and responsibility</text><text x="620" y="561" class="sans note">Subjective perspective, independent goal, or moral accountability</text>
+</g>
+
+<path d="M520 237H568" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/><path d="M850 301V317" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/><path d="M520 382H568" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/><path d="M850 446V462" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/><path d="M520 527H568" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/>
+
+<rect x="190" y="635" width="820" height="58" rx="29" fill="#6d3942"/>
+<text x="600" y="671" text-anchor="middle" class="sans band">Success at one layer does not establish every layer above it</text>
+<text x="80" y="724" class="sans sub" font-size="13">Ahmed Alhafiz · author synthesis · version 2.0 · not a validated consciousness scale</text>
+</svg>
