@@ -30,153 +30,16 @@ jobs:
           cat /tmp/ahmed-site-server.log
           exit 1
 
-      - name: Build same-origin visual audit helpers
+      - name: Prepare deterministic visual-audit helpers
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p visual-review/geometry visual-review/targets
+          mkdir -p visual-review/geometry visual-review/targets visual-review/desktop visual-review/mobile visual-review/social
+          cp .github/visual-review/layout-audit.template visual-review/layout-audit.html
+          cp .github/visual-review/capture.template visual-review/capture.html
+          python3 -m py_compile .github/visual-review/verify_layout.py .github/visual-review/verify_artifact.py
 
-          cat > visual-review/layout-audit.html <<'HTML'
-          <!doctype html>
-          <html lang="en"><head><meta charset="utf-8"><title>Multilingual portrait layout audit</title></head>
-          <body data-done="false"><pre id="result">pending</pre>
-          <script>
-          const params = new URLSearchParams(location.search);
-          const width = Number(params.get('width'));
-          const height = Number(params.get('height'));
-          const tests = [
-            {name:'home-ar', path:'/', portrait:'.hero-portrait', copy:'.home-hero-grid>div:first-child'},
-            {name:'home-en', path:'/en/', portrait:'.hero-portrait', copy:'.home-hero-grid>div:first-child'},
-            {name:'home-de', path:'/de/', portrait:'.hero-portrait', copy:'.home-hero-grid>div:first-child'},
-            {name:'about-ar', path:'/about/', portrait:'.profile-portrait', copy:'.profile-grid>div:first-child'},
-            {name:'about-en', path:'/en/about/', portrait:'.profile-portrait', copy:'.profile-grid>div:first-child'},
-            {name:'about-de', path:'/de/about/', portrait:'.profile-portrait', copy:'.profile-grid>div:first-child'}
-          ];
-          const round = value => Math.round(value * 100) / 100;
-          const twoFrames = () => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-          const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error('iframe timeout')), ms));
-          async function settle(frame) {
-            const doc = frame.contentDocument;
-            if (doc.fonts && doc.fonts.ready) await doc.fonts.ready;
-            await Promise.all([...doc.images].map(image => {
-              if (image.complete) return image.decode ? image.decode().catch(() => {}) : Promise.resolve();
-              return new Promise(resolve => {
-                image.addEventListener('load', resolve, {once:true});
-                image.addEventListener('error', resolve, {once:true});
-              });
-            }));
-            await twoFrames();
-          }
-          function rect(value) {
-            return {top:round(value.top), right:round(value.right), bottom:round(value.bottom), left:round(value.left), width:round(value.width), height:round(value.height)};
-          }
-          async function measure(test) {
-            const frame = document.createElement('iframe');
-            frame.style.cssText = `position:absolute;left:-20000px;top:0;width:${width}px;height:${height}px;border:0`;
-            document.body.appendChild(frame);
-            const loaded = new Promise((resolve, reject) => {
-              frame.onload = resolve;
-              frame.onerror = () => reject(new Error(`failed to load ${test.path}`));
-            });
-            frame.src = `${test.path}?layout_audit=ux10`;
-            await Promise.race([loaded, timeout(9000)]);
-            await settle(frame);
-            const doc = frame.contentDocument;
-            const portrait = doc.querySelector(test.portrait);
-            const image = portrait && portrait.querySelector('img');
-            const copy = doc.querySelector(test.copy);
-            if (!portrait || !image || !copy) throw new Error(`${test.name}: required layout selector missing`);
-            const portraitRect = portrait.getBoundingClientRect();
-            const imageRect = image.getBoundingClientRect();
-            const copyRect = copy.getBoundingClientRect();
-            const overlapWidth = Math.max(0, Math.min(portraitRect.right, copyRect.right) - Math.max(portraitRect.left, copyRect.left));
-            const overlapHeight = Math.max(0, Math.min(portraitRect.bottom, copyRect.bottom) - Math.max(portraitRect.top, copyRect.top));
-            const style = frame.contentWindow.getComputedStyle(image);
-            const result = {
-              name:test.name,
-              viewport:{width,height},
-              portrait:rect(portraitRect),
-              image:rect(imageRect),
-              copy:rect(copyRect),
-              overlapArea:round(overlapWidth * overlapHeight),
-              verticalGap:round(copyRect.top - portraitRect.bottom),
-              objectFit:style.objectFit,
-              objectPosition:style.objectPosition
-            };
-            frame.remove();
-            return result;
-          }
-          (async () => {
-            try {
-              const results = [];
-              for (const test of tests) results.push(await measure(test));
-              document.getElementById('result').textContent = JSON.stringify(results);
-              document.body.dataset.done = 'true';
-            } catch (error) {
-              document.getElementById('result').textContent = JSON.stringify({error:String(error)});
-              document.body.dataset.done = 'error';
-            }
-          })();
-          </script></body></html>
-          HTML
-
-          cat > visual-review/capture.html <<'HTML'
-          <!doctype html>
-          <html lang="en"><head><meta charset="utf-8"><title>Targeted visual capture</title>
-          <style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff}iframe{display:block;width:100%;height:100%;border:0}#result{display:none}</style></head>
-          <body data-ready="false"><iframe id="viewport" title="visual capture viewport"></iframe><pre id="result">pending</pre>
-          <script>
-          const params = new URLSearchParams(location.search);
-          const path = params.get('path') || '/';
-          const selector = params.get('selector') || 'body';
-          const align = params.get('align') || 'start';
-          const frame = document.getElementById('viewport');
-          const result = document.getElementById('result');
-          const twoFrames = () => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-          async function settle(doc) {
-            if (doc.fonts && doc.fonts.ready) await doc.fonts.ready;
-            await Promise.all([...doc.images].map(image => {
-              if (image.complete) return image.decode ? image.decode().catch(() => {}) : Promise.resolve();
-              return new Promise(resolve => {
-                image.addEventListener('load', resolve, {once:true});
-                image.addEventListener('error', resolve, {once:true});
-              });
-            }));
-            await twoFrames();
-          }
-          frame.onload = async () => {
-            try {
-              const win = frame.contentWindow;
-              const doc = frame.contentDocument;
-              await settle(doc);
-              const target = doc.querySelector(selector);
-              if (!target) throw new Error(`target not found: ${selector}`);
-              target.scrollIntoView({block:align === 'end' ? 'end' : 'start', inline:'nearest'});
-              await twoFrames();
-              if (align === 'start') {
-                win.scrollBy(0, -20);
-                await twoFrames();
-              }
-              const box = target.getBoundingClientRect();
-              result.textContent = JSON.stringify({
-                path,
-                selector,
-                align,
-                scrollY:Math.round(win.scrollY),
-                viewport:{width:win.innerWidth,height:win.innerHeight},
-                target:{top:Math.round(box.top),bottom:Math.round(box.bottom),height:Math.round(box.height)}
-              });
-              document.body.dataset.ready = 'true';
-            } catch (error) {
-              result.textContent = JSON.stringify({error:String(error),path,selector});
-              document.body.dataset.ready = 'error';
-            }
-          };
-          frame.src = `${path}${path.includes('?') ? '&' : '?'}target_capture=ux10`;
-          </script></body></html>
-          HTML
-
-      - name: Verify portrait dimensions order and non-overlap across languages
+      - name: Verify portrait dimensions order overflow and non-overlap across languages
         shell: bash
         run: |
           set -euo pipefail
@@ -195,7 +58,8 @@ jobs:
               --headless=new \
               --no-sandbox \
               --disable-gpu \
-              --virtual-time-budget=20000 \
+              --disable-dev-shm-usage \
+              --virtual-time-budget=18000 \
               --force-device-scale-factor=1 \
               --window-size="${width},${height}" \
               --dump-dom \
@@ -203,77 +67,7 @@ jobs:
               > "visual-review/geometry/${mode}.html"
           done
 
-          python3 - <<'PY'
-          from html.parser import HTMLParser
-          from pathlib import Path
-          import html
-          import json
-
-          class ResultParser(HTMLParser):
-              def __init__(self):
-                  super().__init__(convert_charrefs=True)
-                  self.in_result = False
-                  self.values = []
-              def handle_starttag(self, tag, attrs):
-                  if tag.lower() == 'pre' and dict(attrs).get('id') == 'result':
-                      self.in_result = True
-              def handle_endtag(self, tag):
-                  if tag.lower() == 'pre' and self.in_result:
-                      self.in_result = False
-              def handle_data(self, data):
-                  if self.in_result:
-                      self.values.append(data)
-
-          reports = {}
-          for mode in ('desktop', 'mobile'):
-              parser = ResultParser()
-              parser.feed(Path(f'visual-review/geometry/{mode}.html').read_text(encoding='utf-8'))
-              raw = html.unescape(''.join(parser.values)).strip()
-              report = json.loads(raw)
-              if isinstance(report, dict) and report.get('error'):
-                  raise SystemExit(f'{mode}: browser layout audit failed: {report["error"]}')
-              if len(report) != 6:
-                  raise SystemExit(f'{mode}: expected six layout measurements, found {len(report)}')
-              reports[mode] = report
-              Path(f'visual-review/geometry/{mode}.json').write_text(
-                  json.dumps(report, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
-              )
-
-          for mode, report in reports.items():
-              by_name = {item['name']: item for item in report}
-              for group in (('home-ar','home-en','home-de'), ('about-ar','about-en','about-de')):
-                  widths = [by_name[name]['portrait']['width'] for name in group]
-                  heights = [by_name[name]['portrait']['height'] for name in group]
-                  if max(widths) - min(widths) > 1.5:
-                      raise SystemExit(f'{mode}: cross-language portrait width drift: {dict(zip(group,widths))}')
-                  if max(heights) - min(heights) > 1.5:
-                      raise SystemExit(f'{mode}: cross-language portrait height drift: {dict(zip(group,heights))}')
-
-              for name, item in by_name.items():
-                  portrait = item['portrait']
-                  image = item['image']
-                  copy = item['copy']
-                  ratio = portrait['width'] / portrait['height']
-                  if not 0.79 <= ratio <= 0.81:
-                      raise SystemExit(f'{mode} {name}: portrait ratio is {ratio:.4f}, expected 4:5')
-                  if abs(portrait['width'] - image['width']) > 1.5 or abs(portrait['height'] - image['height']) > 1.5:
-                      raise SystemExit(f'{mode} {name}: image does not fill portrait frame')
-                  if item['objectFit'] != 'cover':
-                      raise SystemExit(f'{mode} {name}: object-fit is {item["objectFit"]!r}, expected cover')
-                  if item['overlapArea'] > 2:
-                      raise SystemExit(f'{mode} {name}: portrait overlaps copy by {item["overlapArea"]} px²')
-                  width = item['viewport']['width']
-                  for label, rect in (('portrait', portrait), ('copy', copy)):
-                      if rect['left'] < -1.5 or rect['right'] > width + 1.5:
-                          raise SystemExit(f'{mode} {name}: {label} escapes viewport: {rect}')
-                  if mode == 'mobile':
-                      if portrait['bottom'] > copy['top'] - 8:
-                          raise SystemExit(f'{mode} {name}: portrait is not cleanly stacked before copy; gap={item["verticalGap"]}')
-                      if not 140 <= portrait['width'] <= 200:
-                          raise SystemExit(f'{mode} {name}: portrait width {portrait["width"]} outside mobile target')
-
-          print('Portraits have equal cross-language dimensions, valid 4:5 cropping, no overlap, and correct mobile order')
-          PY
+          python3 .github/visual-review/verify_layout.py
 
       - name: Render multilingual pages and targeted footer contact states
         shell: bash
@@ -284,7 +78,6 @@ jobs:
             echo 'No Chromium-compatible browser is available on the runner.' >&2
             exit 1
           fi
-          mkdir -p visual-review/desktop visual-review/mobile visual-review/social visual-review/targets
 
           top_pages=(
             'home-ar|/'
@@ -327,8 +120,10 @@ jobs:
               --headless=new \
               --no-sandbox \
               --disable-gpu \
+              --disable-dev-shm-usage \
               --hide-scrollbars \
-              --virtual-time-budget=6000 \
+              --run-all-compositor-stages-before-draw \
+              --virtual-time-budget=7000 \
               --force-device-scale-factor=1 \
               --window-size="${width},${height}" \
               --screenshot="visual-review/${mode}/${name}.png" \
@@ -359,7 +154,8 @@ jobs:
                 --headless=new \
                 --no-sandbox \
                 --disable-gpu \
-                --virtual-time-budget=10000 \
+                --disable-dev-shm-usage \
+                --virtual-time-budget=12000 \
                 --force-device-scale-factor=1 \
                 --window-size="${width},${height}" \
                 --dump-dom \
@@ -371,88 +167,8 @@ jobs:
           cp assets/social/water-civilization-power-ar.png visual-review/social/
           cp assets/social/water-civilization-power-en.png visual-review/social/
 
-      - name: Verify targeted capture positions screenshots and social cards
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          from html.parser import HTMLParser
-          from pathlib import Path
-          import html
-          import json
-          import struct
-
-          class ResultParser(HTMLParser):
-              def __init__(self):
-                  super().__init__(convert_charrefs=True)
-                  self.in_result = False
-                  self.values = []
-              def handle_starttag(self, tag, attrs):
-                  if tag.lower() == 'pre' and dict(attrs).get('id') == 'result':
-                      self.in_result = True
-              def handle_endtag(self, tag):
-                  if tag.lower() == 'pre' and self.in_result:
-                      self.in_result = False
-              def handle_data(self, data):
-                  if self.in_result:
-                      self.values.append(data)
-
-          target_reports = []
-          for path in sorted(Path('visual-review/targets').glob('*.html')):
-              parser = ResultParser()
-              parser.feed(path.read_text(encoding='utf-8'))
-              raw = html.unescape(''.join(parser.values)).strip()
-              report = json.loads(raw)
-              if report.get('error'):
-                  raise SystemExit(f'{path}: target capture failed: {report["error"]}')
-              viewport_height = report['viewport']['height']
-              target = report['target']
-              visible = max(0, min(viewport_height, target['bottom']) - max(0, target['top']))
-              required = min(180, max(80, target['height'] * 0.45))
-              if visible < required:
-                  raise SystemExit(f'{path}: target is not sufficiently visible; visible={visible}, required={required}, report={report}')
-              target_reports.append(report)
-          if len(target_reports) != 12:
-              raise SystemExit(f'Expected 12 target-capture reports, found {len(target_reports)}')
-
-          expected = {'desktop': (1440, 1200), 'mobile': (390, 844)}
-          total = 0
-          for mode, dimensions in expected.items():
-              paths = sorted((Path('visual-review') / mode).glob('*.png'))
-              if len(paths) != 30:
-                  raise SystemExit(f'{mode}: expected 30 screenshots, found {len(paths)}')
-              for path in paths:
-                  data = path.read_bytes()
-                  if data[:8] != b'\x89PNG\r\n\x1a\n' or data[12:16] != b'IHDR':
-                      raise SystemExit(f'{path}: not a valid PNG')
-                  width, height = struct.unpack('>II', data[16:24])
-                  if (width, height) != dimensions:
-                      raise SystemExit(f'{path}: expected {dimensions}, found {(width, height)}')
-                  if len(data) < 5_000:
-                      raise SystemExit(f'{path}: suspiciously small render ({len(data)} bytes)')
-                  total += 1
-
-          for mode in ('desktop', 'mobile'):
-              report = json.loads((Path('visual-review/geometry') / f'{mode}.json').read_text(encoding='utf-8'))
-              if len(report) != 6:
-                  raise SystemExit(f'geometry/{mode}.json: expected six measurements')
-
-          social = sorted((Path('visual-review') / 'social').glob('*.png'))
-          expected_names = {'water-civilization-power-ar.png', 'water-civilization-power-en.png'}
-          if {path.name for path in social} != expected_names:
-              raise SystemExit(f'social: expected {sorted(expected_names)}, found {[path.name for path in social]}')
-          for path in social:
-              data = path.read_bytes()
-              if data[:8] != b'\x89PNG\r\n\x1a\n' or data[12:16] != b'IHDR':
-                  raise SystemExit(f'{path}: not a valid PNG')
-              width, height = struct.unpack('>II', data[16:24])
-              if (width, height) != (1200, 630):
-                  raise SystemExit(f'{path}: expected 1200x630, found {(width, height)}')
-              if len(data) < 10_000:
-                  raise SystemExit(f'{path}: suspiciously small social card ({len(data)} bytes)')
-
-          print(f'Verified {total} page screenshots, 12 targeted capture positions, two geometry reports, and {len(social)} social cards')
-          PY
+      - name: Verify target positions screenshots geometry and social cards
+        run: python3 .github/visual-review/verify_artifact.py
 
       - name: Upload visual review artifact
         uses: actions/upload-artifact@v4
