@@ -1,0 +1,76 @@
+name: Inspect AI pillar 13 final payload
+
+on:
+  push:
+    branches:
+      - teaching-names-ai-pillar-13
+    paths:
+      - .github/workflows/inspect-ai13-final-payload.yml
+      - .github/ai13-final/INSPECT
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Inspect payload combinations without mutating the repository
+        shell: bash
+        run: |
+          set -u
+          work="$(mktemp -d)"
+          trap 'rm -rf "$work"' EXIT
+
+          clean_b64() {
+            tr -d '\r\n\t ' < "$1" > "$1.clean"
+          }
+
+          inspect_candidate() {
+            local name="$1"
+            local b64="$2"
+            echo "::group::candidate=${name}"
+            clean_b64 "$b64"
+            printf 'base64-bytes='; wc -c < "$b64.clean"
+            if ! base64 --decode "$b64.clean" > "$work/${name}.bin"; then
+              echo "decode=FAILED"
+              echo "::endgroup::"
+              return 0
+            fi
+            echo "decode=OK"
+            file "$work/${name}.bin"
+            sha256sum "$work/${name}.bin"
+            printf 'decoded-bytes='; wc -c < "$work/${name}.bin"
+            if gzip -t "$work/${name}.bin" 2>/dev/null; then
+              echo "gzip=OK"
+              if tar -tzf "$work/${name}.bin" > "$work/${name}.listing" 2>"$work/${name}.tar.err"; then
+                echo "tar=OK"
+                printf 'members='; wc -l < "$work/${name}.listing"
+                sed -n '1,240p' "$work/${name}.listing"
+              else
+                echo "tar=FAILED"
+                cat "$work/${name}.tar.err"
+                gzip -dc "$work/${name}.bin" | file - || true
+              fi
+            else
+              echo "gzip=FAILED"
+              unzip -l "$work/${name}.bin" || true
+            fi
+            echo "::endgroup::"
+          }
+
+          cat .github/ai13-final/part-* > "$work/final.b64"
+          cat .github/ai13-final-rem/part-* > "$work/rem.b64"
+          cat "$work/final.b64" "$work/rem.b64" > "$work/final-plus-rem.b64"
+          cat "$work/rem.b64" "$work/final.b64" > "$work/rem-plus-final.b64"
+
+          inspect_candidate final "$work/final.b64"
+          inspect_candidate remainder "$work/rem.b64"
+          inspect_candidate final_plus_remainder "$work/final-plus-rem.b64"
+          inspect_candidate remainder_plus_final "$work/rem-plus-final.b64"
