@@ -54,12 +54,13 @@ AUDIT_BLOCK = r'''
     for page_rel,(card_rel,card_url) in social_surfaces.items():
         page_file=root/page_rel; source=page_file.read_text(encoding='utf-8') if page_file.exists() else ''
         if not source:errors.append(f'{page_rel}: missing social-card surface');continue
+        image_id=(expected(root,page_file) or '')+'#image'
         required=(
           f'<meta property="og:image" content="{card_url}">',
           f'<meta property="og:image:secure_url" content="{card_url}">',
           '<meta property="og:image:type" content="image/png">',
           f'<meta name="twitter:image" content="{card_url}">',
-          card_url+'#image',
+          image_id,
         )
         for marker in required:
             if marker not in source:errors.append(f'{page_rel}: dedicated social marker missing: {marker}')
