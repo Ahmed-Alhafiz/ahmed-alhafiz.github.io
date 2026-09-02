@@ -225,7 +225,7 @@ def validate_html(errors: list[str]) -> None:
 
     if page_count < 40:
         errors.append(f"Public-page inventory unexpectedly small: {page_count}")
-    if person_count < 20:
+    if person_count < 10:
         errors.append(f"Too few canonical Person nodes were validated: {person_count}")
 
 

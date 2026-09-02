@@ -116,7 +116,7 @@ def local_audit() -> dict[str, Any]:
             errors.append(f"{path.relative_to(ROOT)}: expected one canonical, found {len(matches)}")
         else:
             canonicals.append(matches[0])
-        author_links += html.count('rel="author"')
+        author_links += len(re.findall(r'<link\b[^>]*\brel=["\']author["\'][^>]*>', html, re.IGNORECASE))
         manifest_links += html.count('type="application/ld+json" href="/author.json"')
         for block in SCRIPT_RE.findall(html):
             data = json.loads(block)
@@ -205,7 +205,7 @@ def local_audit() -> dict[str, Any]:
         "status": "failed" if errors else "passed",
         "errors": errors,
         "measured": measured,
-        "unmeasured_external_outcomes": baseline.get("observed_outcomes", {}),
+        "unmeasured_external_outcomes": baseline.get("current_post_rebuild_outcomes", {}),
     }
 
 
