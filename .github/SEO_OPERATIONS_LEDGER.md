@@ -512,3 +512,13 @@ This file is operational only. It is not an independent public source for biblio
 - Status: `EXECUTED_VERIFIED`
 - Measurement boundary: no search-rank or AI-citation gain is claimed. Evaluate real evidence at 14, 28, and 56 days.
 - Next: build the Umm Abbas diagnostic-uncertainty/family-fear/coercive-authority dossier on a private branch; do not mass-publish or rewrite the new public dossier without a verified defect or measurement evidence.
+
+### 2026-09-02 — Canonical author entity, measurement, domain, and IndexNow foundation 12
+- Task: author-entity disambiguation, honest outcome measurement, crawler transport, and custom-domain migration readiness.
+- Action: prepared a single canonical Person identity across public JSON-LD; one public `author.json` graph; visible Arabic, English, and German identity records; an anti-thin-content inventory; a non-fabricated Day-0 visibility baseline; local/live readiness auditing; constrained IndexNow changed-URL notification; and a verified custom-domain migration/rollback plan.
+- Identity: primary Arabic name `أحمد الحافظ`; preferred Latin name `Ahmed Alhafiz`; secondary search transliteration `Ahmad Alhafiz`; canonical author ID `https://ahmed-alhafiz.github.io/#person`.
+- External identity links: Medium and Instagram only. Email remains a contact field, not a `sameAs` identity profile.
+- Measurement boundary: technical deployment, crawler access, structured data, and IndexNow receipt are not reported as Google ranking, indexing, knowledge-panel creation, traffic, or AI citation.
+- Content policy: three current pillars, one pillar candidate, supporting briefs retained only for distinct reader intent, and no deletion or consolidation before baseline/overlap review and redirect planning.
+- Domain status: migration plan prepared; no domain purchased, DNS changed, CNAME activated, or canonical host changed.
+- Status: `PREMERGE_VERIFICATION_REQUIRED`.

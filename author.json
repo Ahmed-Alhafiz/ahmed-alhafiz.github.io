@@ -1,0 +1,181 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ahmed-alhafiz.github.io/#website",
+      "url": "https://ahmed-alhafiz.github.io/",
+      "name": "أحمد الحافظ",
+      "alternateName": [
+        "Ahmed Alhafiz",
+        "Ahmad Alhafiz"
+      ],
+      "inLanguage": [
+        "ar",
+        "en",
+        "de"
+      ],
+      "publisher": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ahmed-alhafiz.github.io/#person",
+      "name": "أحمد الحافظ",
+      "alternateName": [
+        "Ahmed Alhafiz",
+        "Ahmad Alhafiz"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "canonical-author-id",
+        "value": "https://ahmed-alhafiz.github.io/#person"
+      },
+      "url": "https://ahmed-alhafiz.github.io/about/",
+      "mainEntityOfPage": [
+        "https://ahmed-alhafiz.github.io/about/",
+        "https://ahmed-alhafiz.github.io/en/about/",
+        "https://ahmed-alhafiz.github.io/de/about/"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://ahmed-alhafiz.github.io/ahmed-alhafiz-author.png",
+        "width": 1229,
+        "height": 1536
+      },
+      "email": "mailto:hhafz9924@gmail.com",
+      "jobTitle": "كاتب ومؤلف — Writer and author",
+      "description": "أحمد الحافظ — Ahmed Alhafiz: كاتب عربي في الرواية والكتابة الفكرية والدينية والتاريخية، وينشر ملفات بحثية مستقلة تربط الادعاءات بمصادرها وحدودها.",
+      "disambiguatingDescription": "This identity refers to the author of the forthcoming works and research dossiers listed on ahmed-alhafiz.github.io, not to other people who share the Arabic name أحمد الحافظ.",
+      "knowsAbout": [
+        "Arabic literature",
+        "religion and science",
+        "history and civilisation",
+        "psychological horror",
+        "philosophy of knowledge",
+        "evidence-led research publishing"
+      ],
+      "publishingPrinciples": "https://ahmed-alhafiz.github.io/methodology/",
+      "sameAs": [
+        "https://medium.com/@AhmedAlhafiz",
+        "https://www.instagram.com/ahmed_666_8"
+      ]
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://ahmed-alhafiz.github.io/about/#page",
+      "url": "https://ahmed-alhafiz.github.io/about/",
+      "name": "أحمد الحافظ — Ahmed Alhafiz | الكاتب والمؤلف",
+      "inLanguage": "ar",
+      "mainEntity": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://ahmed-alhafiz.github.io/en/about/#page",
+      "url": "https://ahmed-alhafiz.github.io/en/about/",
+      "name": "Ahmed Alhafiz — Author and Research Publisher",
+      "inLanguage": "en",
+      "mainEntity": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://ahmed-alhafiz.github.io/de/about/#page",
+      "url": "https://ahmed-alhafiz.github.io/de/about/",
+      "name": "Ahmed Alhafiz — Schriftsteller und Autor",
+      "inLanguage": "de",
+      "mainEntity": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://ahmed-alhafiz.github.io/books/sirou-fi-alard/#book",
+      "name": "قل سيروا في الأرض فانظروا كيف بدأ الخلق",
+      "url": "https://ahmed-alhafiz.github.io/books/sirou-fi-alard/",
+      "inLanguage": "ar",
+      "creativeWorkStatus": "Forthcoming; not yet officially published",
+      "author": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://ahmed-alhafiz.github.io/books/umm-abbas/#book",
+      "name": "أم عباس لجلب الحبيب ورد المطلقة",
+      "url": "https://ahmed-alhafiz.github.io/books/umm-abbas/",
+      "inLanguage": "ar",
+      "creativeWorkStatus": "Forthcoming; not yet officially published",
+      "author": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://ahmed-alhafiz.github.io/books/juhayman/#book",
+      "name": "جهيمان — القيامة بين الركن والمقام",
+      "url": "https://ahmed-alhafiz.github.io/books/juhayman/",
+      "inLanguage": "ar",
+      "creativeWorkStatus": "Forthcoming; not yet officially published",
+      "author": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://ahmed-alhafiz.github.io/books/kitab-al-kutub/#book",
+      "name": "كتاب الكتب",
+      "url": "https://ahmed-alhafiz.github.io/books/kitab-al-kutub/",
+      "inLanguage": "ar",
+      "creativeWorkStatus": "Forthcoming; not yet officially published",
+      "author": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/#article",
+      "headline": "الرتق والفتق والانفجار العظيم: تحقيق في النص والتفسير وأدلة علم الكون",
+      "url": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/",
+      "inLanguage": "ar",
+      "author": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/#article",
+      "headline": "الماء والحضارة والسلطة: متى تصبح إدارة المورد عدلًا، ومتى تتحول إلى أداة سيطرة؟",
+      "url": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/",
+      "inLanguage": "ar",
+      "author": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/#article",
+      "headline": "حين يحكم الخوف قبل التشخيص: كيف يتحول الغموض إلى سلطة وإكراه داخل الأسرة؟",
+      "url": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "inLanguage": "ar",
+      "author": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/#article",
+      "headline": "تعليم الأسماء والذكاء الاصطناعي: هل تفهم الآلة الكلمات أم تتنبأ بها؟",
+      "url": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/",
+      "inLanguage": "ar",
+      "author": {
+        "@id": "https://ahmed-alhafiz.github.io/#person"
+      }
+    }
+  ],
+  "dateModified": "2026-09-02"
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-09-02",
+  "site": "https://ahmed-alhafiz.github.io/",
+  "policy": {
+    "primary_rule": "Do not publish a new URL merely to increase page count. Every indexed page must answer a distinct question, provide unique value, and disclose its evidence and review status.",
+    "preferred_actions": [
+      "deepen a proven pillar",
+      "merge overlapping weak material",
+      "redirect a retired URL to the strongest surviving answer",
+      "retain a supporting brief only when it serves a distinct reader need"
+    ],
+    "prohibited_shortcuts": [
+      "doorway pages for name variants",
+      "near-duplicate translations without substantive editing",
+      "fabricated reviews or citations",
+      "mass-generated articles without independent research value",
+      "treating forthcoming manuscripts as evidence for public claims"
+    ],
+    "deletion_rule": "No indexed URL is removed solely because it is short. Removal or consolidation requires overlap analysis, link preservation, and an explicit redirect plan.",
+    "measurement_freeze": "During the initial 30-day baseline, titles, canonical URLs, and pillar scopes remain stable unless a factual or safety correction is required."
+  },
+  "classes": {
+    "pillar": "Reference-grade dossier with a narrow question, substantial original synthesis, transparent evidence architecture, and bilingual or planned international reach.",
+    "pillar_candidate": "Strategically valuable topic that requires a complete rebuild or second-language edition before promotion as a reference asset.",
+    "supporting_brief": "A bounded explainer serving a distinct question and linking into a pillar; it must not compete with the pillar for the same search intent.",
+    "literary_guide": "A craft or interpretation page whose value is literary rather than medical or scientific.",
+    "hold_for_review": "Retained while overlap, traffic, external links, and consolidation risk are measured."
+  },
+  "items": [
+    {
+      "slug": "ratq-fatq-big-bang",
+      "url": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/",
+      "class": "pillar",
+      "book_cluster": "sirou-fi-alard",
+      "languages": ["ar", "en"],
+      "next_action": "hold_scope_and_measure",
+      "reason": "Established bilingual dossier with claim-evidence architecture and a distinct text–exegesis–cosmology question."
+    },
+    {
+      "slug": "water-civilization-power",
+      "url": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/",
+      "class": "pillar",
+      "book_cluster": "sirou-fi-alard",
+      "languages": ["ar", "en"],
+      "next_action": "hold_scope_and_measure",
+      "reason": "Bilingual governance dossier with an original six-layer institutional model and comparative cases."
+    },
+    {
+      "slug": "diagnostic-uncertainty-family-fear-coercive-authority",
+      "url": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "class": "pillar",
+      "book_cluster": "umm-abbas",
+      "languages": ["ar", "en"],
+      "next_action": "hold_scope_measure_and_seek_specialist_review_after_publication_policy_allows",
+      "reason": "Complete bilingual dossier with two original but explicitly non-validated frameworks, 14 claims, and 19 sources."
+    },
+    {
+      "slug": "teaching-names-ai-understanding",
+      "url": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/",
+      "class": "pillar_candidate",
+      "book_cluster": "sirou-fi-alard",
+      "languages": ["ar"],
+      "next_action": "rebuild_then_publish_complete_english_edition",
+      "reason": "Strategically strong question, but the current international surface is incomplete. It should not be multiplied into smaller derivative posts."
+    },
+    {
+      "slug": "spiritual-healing-exploitation-safeguarding",
+      "url": "https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": ["ar"],
+      "next_action": "retain_as_companion_and_avoid_scope_overlap",
+      "reason": "Distinct practitioner-conduct and safeguarding question that complements the upstream family-decision pillar."
+    },
+    {
+      "slug": "functional-seizures-vs-epilepsy",
+      "url": "https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": ["ar"],
+      "next_action": "retain_pending_specialist_review_and_query_data",
+      "reason": "Narrow medical distinction with a separate reader need; must remain conservative and visibly unreviewed by a specialist."
+    },
+    {
+      "slug": "six-days-creation-cosmic-time",
+      "url": "https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/",
+      "class": "hold_for_review",
+      "book_cluster": "sirou-fi-alard",
+      "languages": ["ar"],
+      "next_action": "measure_overlap_with_ratq_pillar_before_merge_or_redirect",
+      "reason": "Potential intent overlap with the cosmology pillar; no consolidation should occur before baseline and link-risk review."
+    },
+    {
+      "slug": "sleep-paralysis-jathoom",
+      "url": "https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": ["ar"],
+      "next_action": "retain_pending_specialist_review_and_query_data",
+      "reason": "Distinct medical-cultural question with clear safety relevance and a direct literary connection."
+    },
+    {
+      "slug": "arabic-psychological-horror",
+      "url": "https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/",
+      "class": "literary_guide",
+      "book_cluster": "umm-abbas",
+      "languages": ["ar"],
+      "next_action": "retain_as_literary_surface_not_medical_evidence",
+      "reason": "Serves craft and literary interpretation rather than clinical search intent."
+    }
+  ],
+  "current_counts": {
+    "pillar": 3,
+    "pillar_candidate": 1,
+    "supporting_brief": 3,
+    "literary_guide": 1,
+    "hold_for_review": 1
+  }
+}

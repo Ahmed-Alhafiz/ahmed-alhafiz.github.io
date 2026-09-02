@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "baseline_date": "2026-09-02",
+  "site": {
+    "canonical_origin": "https://ahmed-alhafiz.github.io",
+    "canonical_author_id": "https://ahmed-alhafiz.github.io/#person",
+    "author_profile_ar": "https://ahmed-alhafiz.github.io/about/",
+    "author_profile_en": "https://ahmed-alhafiz.github.io/en/about/",
+    "author_profile_de": "https://ahmed-alhafiz.github.io/de/about/",
+    "author_manifest": "https://ahmed-alhafiz.github.io/author.json",
+    "sitemap": "https://ahmed-alhafiz.github.io/sitemap.xml",
+    "robots": "https://ahmed-alhafiz.github.io/robots.txt"
+  },
+  "technical_baseline": {
+    "public_html_pages": 42,
+    "canonical_urls": 42,
+    "sitemap_urls": 42,
+    "research_items": 9,
+    "complete_bilingual_pillars": 3,
+    "arabic_feed_items": 9,
+    "english_feed_items": 3,
+    "oai_searchbot": "explicitly_allowed",
+    "gptbot": "explicitly_allowed",
+    "generic_crawlers": "allowed",
+    "structured_author_identity": "foundation_prepared_pending_merge",
+    "custom_domain": "not_configured",
+    "indexnow": "configured_pending_first_verified_submission"
+  },
+  "verified_pre_rebuild_search_console_baseline": {
+    "period": {
+      "start": "2026-08-23",
+      "end": "2026-08-29"
+    },
+    "scope": "small pre-rebuild samples preserved from the project checkpoint; they are not evidence of post-release growth",
+    "pages": [
+      {
+        "path": "/",
+        "clicks": 15,
+        "impressions": 54,
+        "ctr_percent": 27.78,
+        "average_position": 3.98
+      },
+      {
+        "path": "/about/",
+        "clicks": 2,
+        "impressions": 15,
+        "ctr_percent": 13.33,
+        "average_position": 4.73
+      }
+    ],
+    "limitations": [
+      "The sample is small.",
+      "The data predates the latest editorial, UX, dossier, and entity releases.",
+      "Page-level average position does not establish position one for the query أحمد الحافظ.",
+      "The baseline does not measure AI citations or independent external authority."
+    ]
+  },
+  "current_post_rebuild_outcomes": {
+    "google_indexed_pages": {
+      "status": "not_measured",
+      "value": null,
+      "required_source": "Current Google Search Console URL Inspection or Index Coverage data"
+    },
+    "google_query_impressions": {
+      "status": "not_measured",
+      "value": null,
+      "required_source": "Current Google Search Console Performance report or API"
+    },
+    "ranking_for_arabic_name": {
+      "query": "أحمد الحافظ",
+      "status": "not_measured",
+      "position": null,
+      "reason": "The preserved page-level baseline does not isolate this query, and no current controlled query export is connected to the repository."
+    },
+    "ranking_for_latin_name": {
+      "queries": [
+        "Ahmed Alhafiz",
+        "Ahmad Alhafiz"
+      ],
+      "status": "not_measured",
+      "position": null
+    },
+    "chatgpt_referrals": {
+      "status": "not_measured",
+      "sessions": null,
+      "expected_attribution": "utm_source=chatgpt.com",
+      "required_source": "privacy-compliant analytics or server/referrer logs"
+    },
+    "verified_ai_citations": {
+      "status": "not_observed",
+      "count": 0,
+      "definition": "A captured answer from an external AI search surface that explicitly links to a site page as support."
+    },
+    "independent_external_citations": {
+      "status": "not_observed",
+      "count": 0,
+      "definition": "A third-party page under independent editorial control that cites or substantively discusses a site page or forthcoming work."
+    }
+  },
+  "measurement_rules": {
+    "technical_success_is_not_ranking_success": true,
+    "structured_data_is_not_counted_as_a_rich_result_until_observed": true,
+    "a_self_authored_link_is_not_an_external_citation": true,
+    "a_search_result_impression_is_not_an_ai_citation": true,
+    "a_site_colon_query_is_diagnostic_only_not_authoritative": true,
+    "unknown_values_remain_null": true,
+    "reporting_windows_days": [
+      7,
+      30,
+      90
+    ]
+  },
+  "next_measurement_requirements": [
+    "Connect or export current Google Search Console data for the verified property.",
+    "Connect a privacy-compliant analytics source capable of isolating utm_source=chatgpt.com.",
+    "Record controlled Arabic and Latin-name SERP observations with date, country, device, and signed-out state.",
+    "Capture only externally observed AI citations; do not infer them from crawl access."
+  ]
+}

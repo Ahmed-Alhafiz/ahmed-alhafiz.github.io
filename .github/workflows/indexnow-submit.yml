@@ -1,0 +1,116 @@
+name: IndexNow changed-URL notification
+
+on:
+  workflow_dispatch:
+    inputs:
+      submit_all:
+        description: "Submit all sitemap and machine-surface URLs instead of only changed public files"
+        required: true
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - "author.json"
+      - "robots.txt"
+      - "sitemap.xml"
+      - "articles/feed.xml"
+      - "articles/feed.json"
+      - "articles/research-index.json"
+      - "en/articles/feed.xml"
+      - "en/articles/feed.json"
+      - "data/indexnow-config.json"
+      - "tools/indexnow_submit.py"
+      - "ae4f1b69f173ae5ba5583e5d1e9298e367b3c8cb9911a9ec.txt"
+      - ".github/workflows/indexnow-submit.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-changed-url-notification
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout permanent branch with history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate IndexNow client and ownership configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/indexnow_submit.py
+          python tools/indexnow_submit.py --all --report indexnow-dry-run.json
+
+      - name: Submit only the eligible URL set after live key verification
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          SUBMIT_ALL: ${{ inputs.submit_all }}
+        run: |
+          set -euo pipefail
+          if [[ "$EVENT_NAME" == "workflow_dispatch" && "$SUBMIT_ALL" == "true" ]]; then
+            python tools/indexnow_submit.py \
+              --all \
+              --wait-live \
+              --submit \
+              --report indexnow-report.json
+          elif [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            echo 'Manual changed-URL mode has no event predecessor; submitting the current sitemap set once.'
+            python tools/indexnow_submit.py \
+              --all \
+              --wait-live \
+              --submit \
+              --report indexnow-report.json
+          else
+            python tools/indexnow_submit.py \
+              --before "$BEFORE_SHA" \
+              --after "$AFTER_SHA" \
+              --wait-live \
+              --submit \
+              --report indexnow-report.json
+          fi
+
+      - name: Record transport status without overstating indexing
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          report = json.loads(Path('indexnow-report.json').read_text(encoding='utf-8'))
+          print('# IndexNow transport result')
+          print()
+          print(f"- URL count: **{report['url_count']}**")
+          print(f"- Report status: **{report['status']}**")
+          submission = report.get('submission', {})
+          if submission:
+              print(f"- HTTP response: **{submission.get('http_status')}**")
+              print(f"- Transport interpretation: **{submission.get('transport_status')}**")
+          print()
+          print('A successful response means the URL set was received or accepted pending key validation. It does **not** prove crawling, indexing, ranking, traffic, or AI citation.')
+          PY
+
+      - name: Upload dry-run and submission records
+        uses: actions/upload-artifact@v4
+        with:
+          name: indexnow-${{ github.run_id }}
+          path: |
+            indexnow-dry-run.json
+            indexnow-report.json
+          retention-days: 90
+          if-no-files-found: error

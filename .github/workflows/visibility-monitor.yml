@@ -1,0 +1,80 @@
+name: Visibility readiness monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 1 * *"
+  push:
+    branches: [main]
+    paths:
+      - "author.json"
+      - "robots.txt"
+      - "sitemap.xml"
+      - "about/**"
+      - "en/about/**"
+      - "de/about/**"
+      - "articles/feed.*"
+      - "en/articles/feed.*"
+      - "articles/research-index.json"
+      - "data/visibility-baseline.json"
+      - "data/content-inventory.json"
+      - "tools/visibility_audit.py"
+      - ".github/workflows/visibility-monitor.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: visibility-readiness-monitor
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout permanent branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Use Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile and run local plus live visibility audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/visibility_audit.py tools/entity_integrity.py
+          python tools/entity_integrity.py
+          python tools/visibility_audit.py --live --output visibility-audit.json
+
+      - name: Write an explicit outcome boundary to the run summary
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          report = json.loads(Path('visibility-audit.json').read_text(encoding='utf-8'))
+          measured = report['local']['measured']
+          print('# Visibility readiness result')
+          print()
+          print(f"- Overall technical audit: **{report['status']}**")
+          print(f"- Public HTML pages: **{measured['public_html_pages']}**")
+          print(f"- Canonical/sitemap URLs: **{measured['canonical_urls']} / {measured['sitemap_urls']}**")
+          print(f"- Canonical Person nodes checked: **{measured['canonical_person_nodes']}**")
+          print(f"- Arabic / English feed items: **{measured['arabic_feed_items']} / {measured['english_feed_items']}**")
+          print()
+          print('This run verifies publication and public accessibility. It does **not** measure Google position, indexed-page count, knowledge panels, referral sessions, or AI citations.')
+          PY
+
+      - name: Upload dated technical observation
+        uses: actions/upload-artifact@v4
+        with:
+          name: visibility-readiness-${{ github.run_id }}
+          path: visibility-audit.json
+          retention-days: 90
+          if-no-files-found: error
