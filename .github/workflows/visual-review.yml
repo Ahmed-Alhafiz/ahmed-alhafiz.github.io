@@ -10,7 +10,7 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -30,35 +30,46 @@ jobs:
           cat /tmp/ahmed-site-server.log
           exit 1
 
-      - name: Verify computed portrait geometry across all three languages
+      - name: Build same-origin visual audit helpers
         shell: bash
         run: |
           set -euo pipefail
-          browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
-          if [[ -z "$browser" ]]; then
-            echo 'No Chromium-compatible browser is available on the runner.' >&2
-            exit 1
-          fi
-          mkdir -p visual-review/geometry
+          mkdir -p visual-review/geometry visual-review/targets
 
-          cat > visual-review/geometry-template.html <<'HTML'
+          cat > visual-review/layout-audit.html <<'HTML'
           <!doctype html>
-          <html lang="en"><head><meta charset="utf-8"><title>portrait geometry audit</title></head>
+          <html lang="en"><head><meta charset="utf-8"><title>Multilingual portrait layout audit</title></head>
           <body data-done="false"><pre id="result">pending</pre>
           <script>
           const params = new URLSearchParams(location.search);
           const width = Number(params.get('width'));
           const height = Number(params.get('height'));
           const tests = [
-            {name:'home-ar', path:'/', selector:'.hero-portrait'},
-            {name:'home-en', path:'/en/', selector:'.hero-portrait'},
-            {name:'home-de', path:'/de/', selector:'.hero-portrait'},
-            {name:'about-ar', path:'/about/', selector:'.profile-portrait'},
-            {name:'about-en', path:'/en/about/', selector:'.profile-portrait'},
-            {name:'about-de', path:'/de/about/', selector:'.profile-portrait'}
+            {name:'home-ar', path:'/', portrait:'.hero-portrait', copy:'.home-hero-grid>div:first-child'},
+            {name:'home-en', path:'/en/', portrait:'.hero-portrait', copy:'.home-hero-grid>div:first-child'},
+            {name:'home-de', path:'/de/', portrait:'.hero-portrait', copy:'.home-hero-grid>div:first-child'},
+            {name:'about-ar', path:'/about/', portrait:'.profile-portrait', copy:'.profile-grid>div:first-child'},
+            {name:'about-en', path:'/en/about/', portrait:'.profile-portrait', copy:'.profile-grid>div:first-child'},
+            {name:'about-de', path:'/de/about/', portrait:'.profile-portrait', copy:'.profile-grid>div:first-child'}
           ];
           const round = value => Math.round(value * 100) / 100;
+          const twoFrames = () => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
           const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error('iframe timeout')), ms));
+          async function settle(frame) {
+            const doc = frame.contentDocument;
+            if (doc.fonts && doc.fonts.ready) await doc.fonts.ready;
+            await Promise.all([...doc.images].map(image => {
+              if (image.complete) return image.decode ? image.decode().catch(() => {}) : Promise.resolve();
+              return new Promise(resolve => {
+                image.addEventListener('load', resolve, {once:true});
+                image.addEventListener('error', resolve, {once:true});
+              });
+            }));
+            await twoFrames();
+          }
+          function rect(value) {
+            return {top:round(value.top), right:round(value.right), bottom:round(value.bottom), left:round(value.left), width:round(value.width), height:round(value.height)};
+          }
           async function measure(test) {
             const frame = document.createElement('iframe');
             frame.style.cssText = `position:absolute;left:-20000px;top:0;width:${width}px;height:${height}px;border:0`;
@@ -67,23 +78,30 @@ jobs:
               frame.onload = resolve;
               frame.onerror = () => reject(new Error(`failed to load ${test.path}`));
             });
-            frame.src = `${test.path}?geometry_audit=ux10`;
-            await Promise.race([loaded, timeout(8000)]);
+            frame.src = `${test.path}?layout_audit=ux10`;
+            await Promise.race([loaded, timeout(9000)]);
+            await settle(frame);
             const doc = frame.contentDocument;
-            const box = doc.querySelector(test.selector);
-            const image = box && box.querySelector('img');
-            if (!box || !image) throw new Error(`${test.name}: portrait selector missing`);
-            const boxRect = box.getBoundingClientRect();
+            const portrait = doc.querySelector(test.portrait);
+            const image = portrait && portrait.querySelector('img');
+            const copy = doc.querySelector(test.copy);
+            if (!portrait || !image || !copy) throw new Error(`${test.name}: required layout selector missing`);
+            const portraitRect = portrait.getBoundingClientRect();
             const imageRect = image.getBoundingClientRect();
+            const copyRect = copy.getBoundingClientRect();
+            const overlapWidth = Math.max(0, Math.min(portraitRect.right, copyRect.right) - Math.max(portraitRect.left, copyRect.left));
+            const overlapHeight = Math.max(0, Math.min(portraitRect.bottom, copyRect.bottom) - Math.max(portraitRect.top, copyRect.top));
             const style = frame.contentWindow.getComputedStyle(image);
             const result = {
-              name: test.name,
-              boxWidth: round(boxRect.width),
-              boxHeight: round(boxRect.height),
-              imageWidth: round(imageRect.width),
-              imageHeight: round(imageRect.height),
-              objectFit: style.objectFit,
-              objectPosition: style.objectPosition
+              name:test.name,
+              viewport:{width,height},
+              portrait:rect(portraitRect),
+              image:rect(imageRect),
+              copy:rect(copyRect),
+              overlapArea:round(overlapWidth * overlapHeight),
+              verticalGap:round(copyRect.top - portraitRect.bottom),
+              objectFit:style.objectFit,
+              objectPosition:style.objectPosition
             };
             frame.remove();
             return result;
@@ -102,6 +120,72 @@ jobs:
           </script></body></html>
           HTML
 
+          cat > visual-review/capture.html <<'HTML'
+          <!doctype html>
+          <html lang="en"><head><meta charset="utf-8"><title>Targeted visual capture</title>
+          <style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff}iframe{display:block;width:100%;height:100%;border:0}#result{display:none}</style></head>
+          <body data-ready="false"><iframe id="viewport" title="visual capture viewport"></iframe><pre id="result">pending</pre>
+          <script>
+          const params = new URLSearchParams(location.search);
+          const path = params.get('path') || '/';
+          const selector = params.get('selector') || 'body';
+          const align = params.get('align') || 'start';
+          const frame = document.getElementById('viewport');
+          const result = document.getElementById('result');
+          const twoFrames = () => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+          async function settle(doc) {
+            if (doc.fonts && doc.fonts.ready) await doc.fonts.ready;
+            await Promise.all([...doc.images].map(image => {
+              if (image.complete) return image.decode ? image.decode().catch(() => {}) : Promise.resolve();
+              return new Promise(resolve => {
+                image.addEventListener('load', resolve, {once:true});
+                image.addEventListener('error', resolve, {once:true});
+              });
+            }));
+            await twoFrames();
+          }
+          frame.onload = async () => {
+            try {
+              const win = frame.contentWindow;
+              const doc = frame.contentDocument;
+              await settle(doc);
+              const target = doc.querySelector(selector);
+              if (!target) throw new Error(`target not found: ${selector}`);
+              target.scrollIntoView({block:align === 'end' ? 'end' : 'start', inline:'nearest'});
+              await twoFrames();
+              if (align === 'start') {
+                win.scrollBy(0, -20);
+                await twoFrames();
+              }
+              const box = target.getBoundingClientRect();
+              result.textContent = JSON.stringify({
+                path,
+                selector,
+                align,
+                scrollY:Math.round(win.scrollY),
+                viewport:{width:win.innerWidth,height:win.innerHeight},
+                target:{top:Math.round(box.top),bottom:Math.round(box.bottom),height:Math.round(box.height)}
+              });
+              document.body.dataset.ready = 'true';
+            } catch (error) {
+              result.textContent = JSON.stringify({error:String(error),path,selector});
+              document.body.dataset.ready = 'error';
+            }
+          };
+          frame.src = `${path}${path.includes('?') ? '&' : '?'}target_capture=ux10`;
+          </script></body></html>
+          HTML
+
+      - name: Verify portrait dimensions order and non-overlap across languages
+        shell: bash
+        run: |
+          set -euo pipefail
+          browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [[ -z "$browser" ]]; then
+            echo 'No Chromium-compatible browser is available on the runner.' >&2
+            exit 1
+          fi
+
           for spec in 'desktop|1440|1200' 'mobile|390|844'; do
             mode="${spec%%|*}"
             rest="${spec#*|}"
@@ -111,11 +195,11 @@ jobs:
               --headless=new \
               --no-sandbox \
               --disable-gpu \
-              --virtual-time-budget=18000 \
+              --virtual-time-budget=20000 \
               --force-device-scale-factor=1 \
               --window-size="${width},${height}" \
               --dump-dom \
-              "http://127.0.0.1:4173/visual-review/geometry-template.html?width=${width}&height=${height}" \
+              "http://127.0.0.1:4173/visual-review/layout-audit.html?width=${width}&height=${height}" \
               > "visual-review/geometry/${mode}.html"
           done
 
@@ -125,29 +209,31 @@ jobs:
           import html
           import json
 
-          class PreParser(HTMLParser):
+          class ResultParser(HTMLParser):
               def __init__(self):
                   super().__init__(convert_charrefs=True)
-                  self.in_pre = False
-                  self.data = []
+                  self.in_result = False
+                  self.values = []
               def handle_starttag(self, tag, attrs):
                   if tag.lower() == 'pre' and dict(attrs).get('id') == 'result':
-                      self.in_pre = True
+                      self.in_result = True
               def handle_endtag(self, tag):
-                  if tag.lower() == 'pre' and self.in_pre:
-                      self.in_pre = False
+                  if tag.lower() == 'pre' and self.in_result:
+                      self.in_result = False
               def handle_data(self, data):
-                  if self.in_pre:
-                      self.data.append(data)
+                  if self.in_result:
+                      self.values.append(data)
 
           reports = {}
           for mode in ('desktop', 'mobile'):
-              parser = PreParser()
+              parser = ResultParser()
               parser.feed(Path(f'visual-review/geometry/{mode}.html').read_text(encoding='utf-8'))
-              raw = html.unescape(''.join(parser.data)).strip()
+              raw = html.unescape(''.join(parser.values)).strip()
               report = json.loads(raw)
               if isinstance(report, dict) and report.get('error'):
-                  raise SystemExit(f'{mode}: browser geometry audit failed: {report["error"]}')
+                  raise SystemExit(f'{mode}: browser layout audit failed: {report["error"]}')
+              if len(report) != 6:
+                  raise SystemExit(f'{mode}: expected six layout measurements, found {len(report)}')
               reports[mode] = report
               Path(f'visual-review/geometry/{mode}.json').write_text(
                   json.dumps(report, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
@@ -155,27 +241,41 @@ jobs:
 
           for mode, report in reports.items():
               by_name = {item['name']: item for item in report}
-              if len(by_name) != 6:
-                  raise SystemExit(f'{mode}: expected six portrait measurements, found {len(by_name)}')
               for group in (('home-ar','home-en','home-de'), ('about-ar','about-en','about-de')):
-                  widths = [by_name[name]['boxWidth'] for name in group]
-                  heights = [by_name[name]['boxHeight'] for name in group]
+                  widths = [by_name[name]['portrait']['width'] for name in group]
+                  heights = [by_name[name]['portrait']['height'] for name in group]
                   if max(widths) - min(widths) > 1.5:
                       raise SystemExit(f'{mode}: cross-language portrait width drift: {dict(zip(group,widths))}')
                   if max(heights) - min(heights) > 1.5:
                       raise SystemExit(f'{mode}: cross-language portrait height drift: {dict(zip(group,heights))}')
+
               for name, item in by_name.items():
-                  ratio = item['boxWidth'] / item['boxHeight']
+                  portrait = item['portrait']
+                  image = item['image']
+                  copy = item['copy']
+                  ratio = portrait['width'] / portrait['height']
                   if not 0.79 <= ratio <= 0.81:
                       raise SystemExit(f'{mode} {name}: portrait ratio is {ratio:.4f}, expected 4:5')
-                  if abs(item['boxWidth'] - item['imageWidth']) > 1.5 or abs(item['boxHeight'] - item['imageHeight']) > 1.5:
+                  if abs(portrait['width'] - image['width']) > 1.5 or abs(portrait['height'] - image['height']) > 1.5:
                       raise SystemExit(f'{mode} {name}: image does not fill portrait frame')
                   if item['objectFit'] != 'cover':
                       raise SystemExit(f'{mode} {name}: object-fit is {item["objectFit"]!r}, expected cover')
-          print('Portrait geometry is stable across Arabic, English and German at desktop and mobile widths')
+                  if item['overlapArea'] > 2:
+                      raise SystemExit(f'{mode} {name}: portrait overlaps copy by {item["overlapArea"]} px²')
+                  width = item['viewport']['width']
+                  for label, rect in (('portrait', portrait), ('copy', copy)):
+                      if rect['left'] < -1.5 or rect['right'] > width + 1.5:
+                          raise SystemExit(f'{mode} {name}: {label} escapes viewport: {rect}')
+                  if mode == 'mobile':
+                      if portrait['bottom'] > copy['top'] - 8:
+                          raise SystemExit(f'{mode} {name}: portrait is not cleanly stacked before copy; gap={item["verticalGap"]}')
+                      if not 140 <= portrait['width'] <= 200:
+                          raise SystemExit(f'{mode} {name}: portrait width {portrait["width"]} outside mobile target')
+
+          print('Portraits have equal cross-language dimensions, valid 4:5 cropping, no overlap, and correct mobile order')
           PY
 
-      - name: Render multilingual hero contact book and footer states
+      - name: Render multilingual pages and targeted footer contact states
         shell: bash
         run: |
           set -euo pipefail
@@ -184,9 +284,9 @@ jobs:
             echo 'No Chromium-compatible browser is available on the runner.' >&2
             exit 1
           fi
-          mkdir -p visual-review/desktop visual-review/mobile visual-review/social
+          mkdir -p visual-review/desktop visual-review/mobile visual-review/social visual-review/targets
 
-          pages=(
+          top_pages=(
             'home-ar|/'
             'home-en|/en/'
             'home-de|/de/'
@@ -211,64 +311,111 @@ jobs:
             'kitab-al-kutub-ar|/books/kitab-al-kutub/'
             'kitab-al-kutub-en|/en/books/kitab-al-kutub/'
             'kitab-al-kutub-de|/de/books/kitab-al-kutub/'
-            'home-ar-footer|/#site-footer'
-            'home-en-footer|/en/#site-footer'
-            'home-de-footer|/de/#site-footer'
-            'about-ar-contact|/about/#contact'
-            'about-en-contact|/en/about/#contact'
-            'about-de-contact|/de/about/#contact'
+          )
+          target_pages=(
+            'home-ar-footer|/|#site-footer|end'
+            'home-en-footer|/en/|#site-footer|end'
+            'home-de-footer|/de/|#site-footer|end'
+            'about-ar-contact|/about/|#contact|start'
+            'about-en-contact|/en/about/|#contact|start'
+            'about-de-contact|/de/about/|#contact|start'
           )
 
-          for item in "${pages[@]}"; do
+          render() {
+            local mode="$1" width="$2" height="$3" name="$4" url="$5"
+            "$browser" \
+              --headless=new \
+              --no-sandbox \
+              --disable-gpu \
+              --hide-scrollbars \
+              --virtual-time-budget=6000 \
+              --force-device-scale-factor=1 \
+              --window-size="${width},${height}" \
+              --screenshot="visual-review/${mode}/${name}.png" \
+              "$url"
+          }
+
+          for item in "${top_pages[@]}"; do
             name="${item%%|*}"
-            route="${item#*|}"
-            base="${route%%#*}"
-            fragment=""
-            if [[ "$route" == *'#'* ]]; then
-              fragment="#${route#*#}"
-            fi
-            url="http://127.0.0.1:4173${base}?visual_review=ux10${fragment}"
-            curl --fail --silent --show-error "http://127.0.0.1:4173${base}" > /dev/null
+            path="${item#*|}"
+            curl --fail --silent --show-error "http://127.0.0.1:4173${path}" > /dev/null
+            url="http://127.0.0.1:4173${path}?visual_review=ux10"
+            render desktop 1440 1200 "$name" "$url"
+            render mobile 390 844 "$name" "$url"
+          done
 
-            "$browser" \
-              --headless=new \
-              --no-sandbox \
-              --disable-gpu \
-              --hide-scrollbars \
-              --virtual-time-budget=3000 \
-              --force-device-scale-factor=1 \
-              --window-size=1440,1200 \
-              --screenshot="visual-review/desktop/${name}.png" \
-              "$url"
-
-            "$browser" \
-              --headless=new \
-              --no-sandbox \
-              --disable-gpu \
-              --hide-scrollbars \
-              --virtual-time-budget=3000 \
-              --force-device-scale-factor=1 \
-              --window-size=390,844 \
-              --screenshot="visual-review/mobile/${name}.png" \
-              "$url"
+          for item in "${target_pages[@]}"; do
+            IFS='|' read -r name path selector align <<< "$item"
+            curl --fail --silent --show-error "http://127.0.0.1:4173${path}" > /dev/null
+            encoded_path="$(python3 -c 'import sys,urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "$path")"
+            encoded_selector="$(python3 -c 'import sys,urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "$selector")"
+            helper="http://127.0.0.1:4173/visual-review/capture.html?path=${encoded_path}&selector=${encoded_selector}&align=${align}"
+            for spec in 'desktop|1440|1200' 'mobile|390|844'; do
+              mode="${spec%%|*}"
+              rest="${spec#*|}"
+              width="${rest%%|*}"
+              height="${rest##*|}"
+              "$browser" \
+                --headless=new \
+                --no-sandbox \
+                --disable-gpu \
+                --virtual-time-budget=10000 \
+                --force-device-scale-factor=1 \
+                --window-size="${width},${height}" \
+                --dump-dom \
+                "$helper" > "visual-review/targets/${mode}-${name}.html"
+              render "$mode" "$width" "$height" "$name" "$helper"
+            done
           done
 
           cp assets/social/water-civilization-power-ar.png visual-review/social/
           cp assets/social/water-civilization-power-en.png visual-review/social/
 
-      - name: Verify screenshot dimensions files and social-card assets
+      - name: Verify targeted capture positions screenshots and social cards
         shell: bash
         run: |
           set -euo pipefail
           python3 - <<'PY'
+          from html.parser import HTMLParser
           from pathlib import Path
+          import html
           import json
           import struct
 
-          expected = {
-              'desktop': (1440, 1200),
-              'mobile': (390, 844),
-          }
+          class ResultParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.in_result = False
+                  self.values = []
+              def handle_starttag(self, tag, attrs):
+                  if tag.lower() == 'pre' and dict(attrs).get('id') == 'result':
+                      self.in_result = True
+              def handle_endtag(self, tag):
+                  if tag.lower() == 'pre' and self.in_result:
+                      self.in_result = False
+              def handle_data(self, data):
+                  if self.in_result:
+                      self.values.append(data)
+
+          target_reports = []
+          for path in sorted(Path('visual-review/targets').glob('*.html')):
+              parser = ResultParser()
+              parser.feed(path.read_text(encoding='utf-8'))
+              raw = html.unescape(''.join(parser.values)).strip()
+              report = json.loads(raw)
+              if report.get('error'):
+                  raise SystemExit(f'{path}: target capture failed: {report["error"]}')
+              viewport_height = report['viewport']['height']
+              target = report['target']
+              visible = max(0, min(viewport_height, target['bottom']) - max(0, target['top']))
+              required = min(180, max(80, target['height'] * 0.45))
+              if visible < required:
+                  raise SystemExit(f'{path}: target is not sufficiently visible; visible={visible}, required={required}, report={report}')
+              target_reports.append(report)
+          if len(target_reports) != 12:
+              raise SystemExit(f'Expected 12 target-capture reports, found {len(target_reports)}')
+
+          expected = {'desktop': (1440, 1200), 'mobile': (390, 844)}
           total = 0
           for mode, dimensions in expected.items():
               paths = sorted((Path('visual-review') / mode).glob('*.png'))
@@ -291,10 +438,7 @@ jobs:
                   raise SystemExit(f'geometry/{mode}.json: expected six measurements')
 
           social = sorted((Path('visual-review') / 'social').glob('*.png'))
-          expected_names = {
-              'water-civilization-power-ar.png',
-              'water-civilization-power-en.png',
-          }
+          expected_names = {'water-civilization-power-ar.png', 'water-civilization-power-en.png'}
           if {path.name for path in social} != expected_names:
               raise SystemExit(f'social: expected {sorted(expected_names)}, found {[path.name for path in social]}')
           for path in social:
@@ -307,7 +451,7 @@ jobs:
               if len(data) < 10_000:
                   raise SystemExit(f'{path}: suspiciously small social card ({len(data)} bytes)')
 
-          print(f'Verified {total} multilingual page screenshots, two geometry reports and {len(social)} social cards')
+          print(f'Verified {total} page screenshots, 12 targeted capture positions, two geometry reports, and {len(social)} social cards')
           PY
 
       - name: Upload visual review artifact
