@@ -22,7 +22,7 @@ jobs:
           python-version: "3.12"
 
       - name: Compile audit tools
-        run: python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py tools/discovery_integrity.py
+        run: python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py tools/discovery_integrity.py tools/ux_integrity.py
 
       - name: Parse XML JSON feeds evidence manifests figures and every JSON-LD block
         shell: bash
@@ -162,6 +162,9 @@ jobs:
 
       - name: Validate feed chronology research index hub sitemap and reciprocal book graph
         run: python tools/discovery_integrity.py
+
+      - name: Validate multilingual UX portrait footer contact and public identity integrity
+        run: python tools/ux_integrity.py
 
       - name: Reject temporary release machinery
         shell: bash
