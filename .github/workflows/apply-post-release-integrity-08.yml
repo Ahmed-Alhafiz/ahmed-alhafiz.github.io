@@ -1,0 +1,136 @@
+name: Apply post-release integrity 08
+
+on:
+  push:
+    branches:
+      - post-release-integrity-08
+    paths:
+      - .github/post-release-integrity-08.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: post-release-integrity-08
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply feed chronology discovery graph and memory corrections
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(cat .github/post-release-integrity-08.trigger)" = 'run=1'
+          python .github/post_release_integrity08.py
+          rm -f .github/post_release_integrity08.py
+          rm -f .github/post-release-integrity-08.trigger
+          rm -f .github/workflows/apply-post-release-integrity-08.yml
+
+      - name: Parse corrected XML JSON and every JSON-LD block
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timedelta, timezone
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class JsonLdParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.active = False
+                  self.buffer = []
+                  self.blocks = []
+              def handle_starttag(self, tag, attrs):
+                  attributes = dict(attrs)
+                  if tag.lower() == 'script' and attributes.get('type', '').lower() == 'application/ld+json':
+                      self.active = True
+                      self.buffer = []
+              def handle_endtag(self, tag):
+                  if tag.lower() == 'script' and self.active:
+                      self.blocks.append(''.join(self.buffer))
+                      self.active = False
+              def handle_data(self, data):
+                  if self.active:
+                      self.buffer.append(data)
+
+          atom = {'a': 'http://www.w3.org/2005/Atom'}
+          limit = datetime.now(timezone.utc) + timedelta(minutes=10)
+          expected_counts = {
+              'articles/feed.xml': 7,
+              'en/articles/feed.xml': 1,
+          }
+          for path, count in expected_counts.items():
+              root = ET.parse(path).getroot()
+              entries = root.findall('a:entry', atom)
+              if len(entries) != count:
+                  raise SystemExit(f'{path}: expected {count} entries, found {len(entries)}')
+              for node in [root.find('a:updated', atom), *[x for e in entries for x in (e.find('a:published', atom), e.find('a:updated', atom))]]:
+                  if node is None or not node.text:
+                      raise SystemExit(f'{path}: missing timestamp')
+                  moment = datetime.fromisoformat(node.text.replace('Z', '+00:00')).astimezone(timezone.utc)
+                  if moment > limit:
+                      raise SystemExit(f'{path}: future timestamp {node.text}')
+
+          for path, count in {'articles/feed.json': 7, 'en/articles/feed.json': 1}.items():
+              data = json.loads(Path(path).read_text(encoding='utf-8'))
+              if len(data.get('items', [])) != count:
+                  raise SystemExit(f'{path}: expected {count} items, found {len(data.get("items", []))}')
+              for item in data['items']:
+                  for field in ('date_published', 'date_modified'):
+                      moment = datetime.fromisoformat(item[field].replace('Z', '+00:00')).astimezone(timezone.utc)
+                      if moment > limit:
+                          raise SystemExit(f'{path}: future {field} for {item["url"]}')
+
+          pages = blocks = 0
+          for path in Path('.').rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+              parser = JsonLdParser()
+              parser.feed(path.read_text(encoding='utf-8'))
+              for block in parser.blocks:
+                  if block.strip():
+                      json.loads(block)
+                      blocks += 1
+              pages += 1
+          print(f'Parsed {pages} HTML pages, {blocks} JSON-LD blocks, corrected Atom and JSON feeds.')
+          PY
+
+      - name: Run complete structural editorial and safety gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/site_audit.py
+          python tools/editorial_quality_gate.py
+          grep -Fq 'Validate feed chronology and research discovery graph' .github/workflows/site-integrity.yml
+          grep -Fq 'Global bilingual editorial and research platform release 07' .github/SEO_OPERATIONS_LEDGER.md
+          grep -Fq 'Verified global editorial rebuild 07' .github/CONTENT_CURRENT_CHECKPOINT.md
+          grep -Fq 'BRANCH_VERIFIED_AWAITING_PR_AND_LIVE_DEPLOYMENT' .github/POST_RELEASE_INTEGRITY_08.md
+          git diff --check
+          test ! -e .github/post_release_integrity08.py
+          test ! -e .github/post-release-integrity-08.trigger
+          test ! -e .github/workflows/apply-post-release-integrity-08.yml
+
+      - name: Commit verified correction to review branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add -A
+          git commit -m 'Correct feed chronology and research discovery integrity'
+          if ! git push origin HEAD:post-release-integrity-08; then
+            git pull --rebase origin post-release-integrity-08
+            git push origin HEAD:post-release-integrity-08
+          fi
