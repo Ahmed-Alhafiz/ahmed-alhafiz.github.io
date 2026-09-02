@@ -15,11 +15,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Use Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install browser automation dependency
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --quiet "selenium>=4.25,<5"
+          python -c "import selenium; print('Selenium', selenium.__version__)"
+          google-chrome --version || chromium --version || chromium-browser --version
+          chromedriver --version || true
+
       - name: Start local static server
         shell: bash
         run: |
           set -euo pipefail
-          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/ahmed-site-server.log 2>&1 &
+          python -m http.server 4173 --bind 127.0.0.1 > /tmp/ahmed-site-server.log 2>&1 &
           echo $! > /tmp/ahmed-site-server.pid
           for attempt in {1..30}; do
             if curl --fail --silent http://127.0.0.1:4173/ > /dev/null; then
@@ -30,145 +44,12 @@ jobs:
           cat /tmp/ahmed-site-server.log
           exit 1
 
-      - name: Prepare deterministic visual-audit helpers
+      - name: Render and verify multilingual responsive states
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p visual-review/geometry visual-review/targets visual-review/desktop visual-review/mobile visual-review/social
-          cp .github/visual-review/layout-audit.template visual-review/layout-audit.html
-          cp .github/visual-review/capture.template visual-review/capture.html
-          python3 -m py_compile .github/visual-review/verify_layout.py .github/visual-review/verify_artifact.py
-
-      - name: Verify portrait dimensions order overflow and non-overlap across languages
-        shell: bash
-        run: |
-          set -euo pipefail
-          browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
-          if [[ -z "$browser" ]]; then
-            echo 'No Chromium-compatible browser is available on the runner.' >&2
-            exit 1
-          fi
-
-          for spec in 'desktop|1440|1200' 'mobile|390|844'; do
-            mode="${spec%%|*}"
-            rest="${spec#*|}"
-            width="${rest%%|*}"
-            height="${rest##*|}"
-            "$browser" \
-              --headless=new \
-              --no-sandbox \
-              --disable-gpu \
-              --disable-dev-shm-usage \
-              --virtual-time-budget=18000 \
-              --force-device-scale-factor=1 \
-              --window-size="${width},${height}" \
-              --dump-dom \
-              "http://127.0.0.1:4173/visual-review/layout-audit.html?width=${width}&height=${height}" \
-              > "visual-review/geometry/${mode}.html"
-          done
-
-          python3 .github/visual-review/verify_layout.py
-
-      - name: Render multilingual pages and targeted footer contact states
-        shell: bash
-        run: |
-          set -euo pipefail
-          browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
-          if [[ -z "$browser" ]]; then
-            echo 'No Chromium-compatible browser is available on the runner.' >&2
-            exit 1
-          fi
-
-          top_pages=(
-            'home-ar|/'
-            'home-en|/en/'
-            'home-de|/de/'
-            'about-ar|/about/'
-            'about-en|/en/about/'
-            'about-de|/de/about/'
-            'research-ar|/articles/'
-            'research-en|/en/articles/'
-            'ratq-ar|/articles/ratq-fatq-big-bang/'
-            'ratq-en|/en/articles/ratq-fatq-big-bang/'
-            'water-ar|/articles/water-civilization-power/'
-            'water-en|/en/articles/water-civilization-power/'
-            'sirou-ar|/books/sirou-fi-alard/'
-            'sirou-en|/en/books/sirou-fi-alard/'
-            'sirou-de|/de/books/sirou-fi-alard/'
-            'umm-abbas-ar|/books/umm-abbas/'
-            'umm-abbas-en|/en/books/umm-abbas/'
-            'umm-abbas-de|/de/books/umm-abbas/'
-            'juhayman-ar|/books/juhayman/'
-            'juhayman-en|/en/books/juhayman/'
-            'juhayman-de|/de/books/juhayman/'
-            'kitab-al-kutub-ar|/books/kitab-al-kutub/'
-            'kitab-al-kutub-en|/en/books/kitab-al-kutub/'
-            'kitab-al-kutub-de|/de/books/kitab-al-kutub/'
-          )
-          target_pages=(
-            'home-ar-footer|/|#site-footer|end'
-            'home-en-footer|/en/|#site-footer|end'
-            'home-de-footer|/de/|#site-footer|end'
-            'about-ar-contact|/about/|#contact|start'
-            'about-en-contact|/en/about/|#contact|start'
-            'about-de-contact|/de/about/|#contact|start'
-          )
-
-          render() {
-            local mode="$1" width="$2" height="$3" name="$4" url="$5"
-            "$browser" \
-              --headless=new \
-              --no-sandbox \
-              --disable-gpu \
-              --disable-dev-shm-usage \
-              --hide-scrollbars \
-              --run-all-compositor-stages-before-draw \
-              --virtual-time-budget=7000 \
-              --force-device-scale-factor=1 \
-              --window-size="${width},${height}" \
-              --screenshot="visual-review/${mode}/${name}.png" \
-              "$url"
-          }
-
-          for item in "${top_pages[@]}"; do
-            name="${item%%|*}"
-            path="${item#*|}"
-            curl --fail --silent --show-error "http://127.0.0.1:4173${path}" > /dev/null
-            url="http://127.0.0.1:4173${path}?visual_review=ux10"
-            render desktop 1440 1200 "$name" "$url"
-            render mobile 390 844 "$name" "$url"
-          done
-
-          for item in "${target_pages[@]}"; do
-            IFS='|' read -r name path selector align <<< "$item"
-            curl --fail --silent --show-error "http://127.0.0.1:4173${path}" > /dev/null
-            encoded_path="$(python3 -c 'import sys,urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "$path")"
-            encoded_selector="$(python3 -c 'import sys,urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "$selector")"
-            helper="http://127.0.0.1:4173/visual-review/capture.html?path=${encoded_path}&selector=${encoded_selector}&align=${align}"
-            for spec in 'desktop|1440|1200' 'mobile|390|844'; do
-              mode="${spec%%|*}"
-              rest="${spec#*|}"
-              width="${rest%%|*}"
-              height="${rest##*|}"
-              "$browser" \
-                --headless=new \
-                --no-sandbox \
-                --disable-gpu \
-                --disable-dev-shm-usage \
-                --virtual-time-budget=12000 \
-                --force-device-scale-factor=1 \
-                --window-size="${width},${height}" \
-                --dump-dom \
-                "$helper" > "visual-review/targets/${mode}-${name}.html"
-              render "$mode" "$width" "$height" "$name" "$helper"
-            done
-          done
-
-          cp assets/social/water-civilization-power-ar.png visual-review/social/
-          cp assets/social/water-civilization-power-en.png visual-review/social/
-
-      - name: Verify target positions screenshots geometry and social cards
-        run: python3 .github/visual-review/verify_artifact.py
+          python -m py_compile .github/visual-review/run_visual_review.py
+          python .github/visual-review/run_visual_review.py
 
       - name: Upload visual review artifact
         uses: actions/upload-artifact@v4
