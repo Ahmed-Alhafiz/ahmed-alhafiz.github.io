@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0",
+  "dossier": {
+    "slug": "teaching-names-ai-understanding",
+    "title_ar": "تعليم الأسماء والذكاء الاصطناعي: ما الذي يثبت عن فهم الآلة؟",
+    "title_en": "Teaching the Names and Artificial Intelligence: What Does the Evidence Establish About Machine Understanding?",
+    "version": "2.0",
+    "published": "2026-09-02T15:00:00+02:00",
+    "modified": "2026-09-02T15:00:00+02:00",
+    "author": "أحمد الحافظ — Ahmed Alhafiz",
+    "canonical_ar": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/",
+    "canonical_en": "https://ahmed-alhafiz.github.io/en/articles/teaching-names-ai-understanding/",
+    "review_status": "author_review_complete_ai_nlp_specialist_review_pending",
+    "peer_reviewed": false,
+    "review_disclosure_ar": "لم تتم بعد مراجعة مستقلة من اختصاصي في معالجة اللغة الطبيعية أو فلسفة الذكاء الاصطناعي.",
+    "review_disclosure_en": "No independent NLP or philosophy-of-AI specialist has reviewed this edition.",
+    "thematic_origin": {
+      "type": "forthcoming_book",
+      "name": "قل سيروا في الأرض فانظروا كيف بدأ الخلق",
+      "url": "https://ahmed-alhafiz.github.io/books/sirou-fi-alard/",
+      "evidentiary_status": "theme_only_not_technical_evidence"
+    },
+    "original_contributions": [
+      {
+        "name_ar": "مصفوفة الفهم من ست طبقات",
+        "name_en": "Six-Layer Understanding Matrix",
+        "status": "author_synthesis_not_validated_scale"
+      },
+      {
+        "name_ar": "بروتوكول 6×4 لفحص ادعاء الفهم",
+        "name_en": "6×4 Protocol for Testing Understanding Claims",
+        "status": "author_synthesis_not_validated_benchmark"
+      }
+    ]
+  },
+  "confidence_scale": {
+    "high": "The proposition closely follows a primary paper, original experiment, authoritative text, or directly inspected classical source.",
+    "medium": "Evidence supports a narrower contextual claim, but model, task, probing method, or philosophical assumptions limit generalisation.",
+    "open": "Author synthesis, interpretive proposal, or unresolved scientific/philosophical question; not a validated metric or settled conclusion."
+  },
+  "claim_types": {
+    "documented": "A bounded proposition directly supported by the cited source or experiment.",
+    "documented_with_inference": "A source-supported fact plus an explicitly limited inference that is not itself a direct experimental result.",
+    "contested": "A live empirical or philosophical dispute represented by sources with materially different conclusions.",
+    "author_synthesis": "An original framework or methodological proposal created for this dossier and explicitly not presented as validated science."
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim_ar": "تُدرَّب نماذج اللغة الذاتية الانحدار على تقدير احتمالات الرموز التالية، لكن دالة التدريب لا تكفي وحدها لوصف جميع البنى أو القدرات التي قد تظهر في النموذج المتعلم.",
+      "claim_en": "Autoregressive language models are trained to estimate probabilities of subsequent tokens, but the training objective alone does not fully describe every internal structure or capability that may emerge in the trained model.",
+      "type": "documented_with_inference",
+      "confidence": "high",
+      "evidence": ["S06", "S07"],
+      "caveat_ar": "الجزء الأول وصف هندسي مباشر. أما القول إن الهدف لا يصف كل البنى فهو استنتاج من الأداء والتحليل، ولا يثبت فهمًا أو وعيًا.",
+      "caveat_en": "The first clause is a direct engineering description. The second is an inference from performance and analysis and does not establish understanding or consciousness."
+    },
+    {
+      "id": "C02",
+      "claim_ar": "تتيح بنية المحوِّل بالانتباه تمثيل الاعتماد السياقي بين الرموز بكفاءة، غير أن وصف البنية الحسابية لا يمنح وحده حكمًا على المعنى أو القصد أو التجربة الذاتية.",
+      "claim_en": "Transformer attention efficiently represents contextual dependencies among tokens, but an architectural description alone does not settle meaning, intention, or subjective experience.",
+      "type": "documented_with_inference",
+      "confidence": "high",
+      "evidence": ["S06"],
+      "caveat_ar": "ورقة Transformer تثبت نتائج هندسية على مهام محددة؛ الجزء المتعلق بالقصد والوعي حد استدلالي لا تجربة في الورقة.",
+      "caveat_en": "The Transformer paper reports engineering results on specific tasks; the intention/consciousness clause is an inferential boundary, not an experiment in that paper."
+    },
+    {
+      "id": "C03",
+      "claim_ar": "توجد أدلة على أن نماذج لغوية نصية تتعلم تمثيلات داخلية قابلة للفك لبعض البنى النحوية والدلالية والمكانية والزمنية، ولذلك لا يكفي وصفها بقاموس سطحي أو استرجاع حرفي فقط.",
+      "claim_en": "There is evidence that text-trained language models learn decodable internal representations of some syntactic, semantic, spatial, and temporal structures; describing them solely as surface dictionaries or literal retrieval is therefore inadequate.",
+      "type": "documented",
+      "confidence": "medium",
+      "evidence": ["S07", "S10", "S12", "S21"],
+      "caveat_ar": "نجاح المسبار أو المهمة لا يبين تلقائيًا مدى عمومية التمثيل، ولا ما إذا كان النموذج يستخدمه سببيًا في كل إجابة.",
+      "caveat_en": "Probe or task success does not automatically establish broad generality or causal use of the representation in every answer."
+    },
+    {
+      "id": "C04",
+      "claim_ar": "قابلية فك معلومة من التنشيطات الداخلية لا تكفي وحدها لإثبات أن تلك المعلومة هي الآلية السببية التي اعتمد عليها النموذج، ولا أن تمثيله مماثل للتمثيل البشري.",
+      "claim_en": "Decodability of information from internal activations is not by itself evidence that the information is causally used by the model or represented in the same way humans represent it.",
+      "type": "documented_with_inference",
+      "confidence": "high",
+      "evidence": ["S10", "S12", "S19"],
+      "caveat_ar": "يمكن للتدخلات السببية الأقوى أن تحسن الحجة، لكنها تظل مرتبطة بنموذج ومهمة وتعريف للتمثيل.",
+      "caveat_en": "Stronger causal interventions improve the case, but remain model-, task-, and representation-definition dependent."
+    },
+    {
+      "id": "C05",
+      "claim_ar": "هناك خلاف جاد حول مقدار المعنى الذي يمكن تعلمه من الشكل اللغوي وحده: تجادل أعمال بأن الشكل لا يحدد الإحالة والقصد، بينما تكشف تجارب أخرى اتساقًا وتمثيلات غنية مستفادة من النص؛ ولا يحسم أي طرف وحده سؤال الفهم الإنساني الكامل.",
+      "claim_en": "There is a substantive dispute over how much meaning can be learned from linguistic form alone: some work argues that form underdetermines reference and communicative intent, while other experiments find rich, consistent representations learned from text; neither side alone settles full human-like understanding.",
+      "type": "contested",
+      "confidence": "medium",
+      "evidence": ["S05", "S08", "S10", "S12"],
+      "caveat_ar": "بعض المصادر موقفية أو فلسفية وبعضها تجريبي؛ لا يجوز التعامل معها كأنها تقيس المتغير نفسه أو تقدم حكمًا نهائيًا واحدًا.",
+      "caveat_en": "Some sources are philosophical or position papers and others experimental; they do not measure one identical variable or yield one final verdict."
+    },
+    {
+      "id": "C06",
+      "claim_ar": "ربط اللغة بالصورة والحالة الحسية والفعل الروبوتي يضيف قنوات تأريض لا توجد في التدريب النصي الخالص، وقد يحسن النقل والتعامل مع العالم؛ لكنه لا يثبت تأريضًا كاملًا أو قصدًا أو وعيًا.",
+      "claim_en": "Connecting language to images, sensor state, and robotic action adds grounding channels absent from text-only training and can improve transfer and real-world task performance, but it does not establish complete grounding, intention, or consciousness.",
+      "type": "documented_with_inference",
+      "confidence": "high",
+      "evidence": ["S15", "S16", "S17", "S18"],
+      "caveat_ar": "النتائج تخص أنظمة ومهام وبيئات بعينها؛ الأداء الجسدي لا يساوي تجربة جسدية ذاتية.",
+      "caveat_en": "Results concern particular systems, tasks, and environments; embodied performance is not equivalent to subjective embodied experience."
+    },
+    {
+      "id": "C07",
+      "claim_ar": "قد ينجح النموذج في صيغة مألوفة ثم يفشل عند عكس علاقة، أو تغيير عرض المعنى، أو إزالة قرائن سطحية، ما يدل على أن النجاح السلوكي الواحد لا يكفي لإثبات تمثيل مفهومي ثابت وقابل للنقل.",
+      "claim_en": "A model may succeed in a familiar formulation yet fail under relation reversal, meaning-preserving reformulation, or removal of surface cues; one successful behaviour is therefore insufficient evidence of a stable transferable concept.",
+      "type": "documented",
+      "confidence": "high",
+      "evidence": ["S11", "S12", "S21"],
+      "caveat_ar": "بعض أوجه الفشل قابلة للتخفيف ببيانات أو تدريب أو تصميم مختلف، فلا تُعامل كحد منطقي أبدي لكل بنية مستقبلية.",
+      "caveat_en": "Some failures can be mitigated by different data, training, or architecture and should not be treated as eternal logical limits on all future systems."
+    },
+    {
+      "id": "C08",
+      "claim_ar": "سلسلة التفكير أو الشرح اللفظي قد تكون مقنعة لكنها غير أمينة للعملية التي أثرت فعليًا في الجواب، لذلك لا يجوز مساواة تفسير النموذج بنفاذ مباشر إلى آليته الداخلية.",
+      "claim_en": "A chain-of-thought or verbal explanation can be persuasive yet unfaithful to the factors that actually influenced the answer; model explanations should not be equated with direct access to internal computation.",
+      "type": "documented",
+      "confidence": "high",
+      "evidence": ["S19"],
+      "caveat_ar": "النتيجة لا تعني أن كل شرح غير أمين، بل أن الأمانة لا تُفترض من الطلاقة ويجب اختبارها.",
+      "caveat_en": "The finding does not imply every explanation is unfaithful; it shows faithfulness cannot be inferred from fluency and must be tested."
+    },
+    {
+      "id": "C09",
+      "claim_ar": "تصريح النموذج بأنه يفهم أو يشعر أو يقصد هو مخرج لغوي متأثر بالبيانات والتعليمات والسياق، وليس قياسًا مستقلًا لحالة ذاتية.",
+      "claim_en": "A model's statement that it understands, feels, or intends is a language output shaped by data, instructions, and context, not an independent measurement of subjective state.",
+      "type": "documented_with_inference",
+      "confidence": "high",
+      "evidence": ["S07", "S19", "S20"],
+      "caveat_ar": "هذا لا يثبت استحالة وعي نظام اصطناعي؛ يحدد فقط ضعف الاستدلال من التقرير الذاتي اللغوي وحده.",
+      "caveat_en": "This does not prove artificial consciousness impossible; it only limits inference from linguistic self-report alone."
+    },
+    {
+      "id": "C10",
+      "claim_ar": "لا يوجد في الأداء اللغوي أو التمثيلات القابلة للفك أو التأريض متعدد الوسائط وحدها اختبار يحسم وجود الوعي أو القصد الأخلاقي في النماذج الحالية.",
+      "claim_en": "Language performance, decodable representations, or multimodal grounding alone do not constitute a decisive test for consciousness or moral intention in current models.",
+      "type": "contested",
+      "confidence": "medium",
+      "evidence": ["S04", "S08", "S19", "S20"],
+      "caveat_ar": "علم الوعي نفسه متعدد النظريات، وتقييم الأنظمة يتغير بتغير المؤشرات؛ الصياغة حالة دليل لا برهان استحالة.",
+      "caveat_en": "Consciousness science contains competing theories and system assessments depend on chosen indicators; this is a state-of-evidence claim, not an impossibility proof."
+    },
+    {
+      "id": "C11",
+      "claim_ar": "تقع آيات تعليم آدم الأسماء في سياق الخلافة، وتعليم من الله، وإظهار العلم، ثم التكليف والابتلاء؛ ولا تقدم وصفًا هندسيًا لنماذج اللغة أو نبوءة تقنية عن الذكاء الاصطناعي.",
+      "claim_en": "The verses on teaching Adam the names occur within the context of vicegerency, divine teaching, the disclosure of knowledge, and subsequent moral responsibility; they do not provide an engineering description of language models or a technical prophecy of AI.",
+      "type": "documented_with_inference",
+      "confidence": "high",
+      "evidence": ["S01", "S02", "S03"],
+      "caveat_ar": "نفي الوصف الهندسي استنتاج من نوع النص وسياقه، ولا يمنع التأمل غير القطعي في التسمية والمعرفة والمسؤولية.",
+      "caveat_en": "The engineering boundary is inferred from genre and context; it does not prohibit non-conclusive reflection on naming, knowledge, and responsibility."
+    },
+    {
+      "id": "C12",
+      "claim_ar": "مصفوفة الفهم من ست طبقات وبروتوكول 6×4 تركيبان أصليان للمؤلف لتنظيم الادعاءات والاختبارات، وليسا مقياس وعي أو معيارًا سريريًا أو اختبارًا علميًا مُصدّقًا.",
+      "claim_en": "The Six-Layer Understanding Matrix and 6×4 Protocol are original author syntheses for organising claims and tests; they are not validated scientific benchmarks, consciousness scales, or clinical instruments.",
+      "type": "author_synthesis",
+      "confidence": "open",
+      "evidence": ["S04", "S05", "S08", "S10", "S11", "S12", "S13", "S15", "S16", "S17", "S19", "S20", "S21"],
+      "caveat_ar": "تحتاج الأداتان إلى نقد واختبار مستقل قبل استعمالهما خارج غرضهما التحريري المقارن.",
+      "caveat_en": "Both tools require independent criticism and testing before use beyond their editorial comparative purpose."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "type": "primary_religious_text",
+      "authors": "القرآن الكريم",
+      "title": "سورة البقرة، الآيات 30–33",
+      "year": null,
+      "url": "https://quran.com/2/30-33",
+      "supports": ["C11"]
+    },
+    {
+      "id": "S02",
+      "type": "classical_exegesis",
+      "authors": "محمد بن جرير الطبري",
+      "title": "جامع البيان، تفسير سورة البقرة 31–33",
+      "year": null,
+      "url": "https://tafsir.app/tabari/2/31",
+      "supports": ["C11"]
+    },
+    {
+      "id": "S03",
+      "type": "classical_exegesis",
+      "authors": "محمد بن أحمد القرطبي",
+      "title": "الجامع لأحكام القرآن، تفسير سورة البقرة 31–33",
+      "year": null,
+      "url": "https://tafsir.app/qurtubi/2/31",
+      "supports": ["C11"]
+    },
+    {
+      "id": "S04",
+      "type": "foundational_paper",
+      "authors": "Alan M. Turing",
+      "title": "Computing Machinery and Intelligence",
+      "year": 1950,
+      "venue": "Mind",
+      "doi": "10.1093/mind/LIX.236.433",
+      "url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+      "supports": ["C10", "C12"]
+    },
+    {
+      "id": "S05",
+      "type": "foundational_paper",
+      "authors": "Stevan Harnad",
+      "title": "The Symbol Grounding Problem",
+      "year": 1990,
+      "venue": "Physica D",
+      "doi": "10.1016/0167-2789(90)90087-6",
+      "url": "https://eprints.soton.ac.uk/250382/",
+      "supports": ["C05", "C12"]
+    },
+    {
+      "id": "S06",
+      "type": "architecture_paper",
+      "authors": "Ashish Vaswani et al.",
+      "title": "Attention Is All You Need",
+      "year": 2017,
+      "venue": "NeurIPS",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "supports": ["C01", "C02"]
+    },
+    {
+      "id": "S07",
+      "type": "model_paper",
+      "authors": "Tom B. Brown et al.",
+      "title": "Language Models are Few-Shot Learners",
+      "year": 2020,
+      "venue": "NeurIPS",
+      "url": "https://arxiv.org/abs/2005.14165",
+      "supports": ["C01", "C03", "C09"]
+    },
+    {
+      "id": "S08",
+      "type": "position_paper",
+      "authors": "Emily M. Bender; Alexander Koller",
+      "title": "Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data",
+      "year": 2020,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2020.acl-main.463",
+      "url": "https://aclanthology.org/2020.acl-main.463/",
+      "supports": ["C05", "C10", "C12"]
+    },
+    {
+      "id": "S09",
+      "type": "experimental_paper",
+      "authors": "Brenden M. Lake; Ruslan Salakhutdinov; Joshua B. Tenenbaum",
+      "title": "Human-level Concept Learning through Probabilistic Program Induction",
+      "year": 2015,
+      "venue": "Science",
+      "doi": "10.1126/science.aab3050",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26659050/",
+      "supports": []
+    },
+    {
+      "id": "S10",
+      "type": "representation_analysis",
+      "authors": "Wes Gurnee; Max Tegmark",
+      "title": "Language Models Represent Space and Time",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2310.02207",
+      "supports": ["C03", "C04", "C05", "C12"]
+    },
+    {
+      "id": "S11",
+      "type": "generalization_study",
+      "authors": "Lukas Berglund et al.",
+      "title": "The Reversal Curse: LLMs Trained on A Is B Fail to Learn B Is A",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2309.12288",
+      "supports": ["C07", "C12"]
+    },
+    {
+      "id": "S12",
+      "type": "semantic_consistency_study",
+      "authors": "Xenia Ohmer; Elia Bruni; Dieuwke Hupkes",
+      "title": "From Form(s) to Meaning: Probing the Semantic Depths of Language Models Using Multisense Consistency",
+      "year": 2024,
+      "venue": "Computational Linguistics",
+      "doi": "10.1162/coli_a_00511",
+      "url": "https://aclanthology.org/2024.cl-4.10/",
+      "supports": ["C03", "C04", "C05", "C07", "C12"]
+    },
+    {
+      "id": "S13",
+      "type": "grounding_evaluation",
+      "authors": "Hyunji Lee et al.",
+      "title": "How Well Do Large Language Models Truly Ground?",
+      "year": 2024,
+      "venue": "NAACL",
+      "doi": "10.18653/v1/2024.naacl-long.135",
+      "url": "https://aclanthology.org/2024.naacl-long.135/",
+      "supports": ["C12"]
+    },
+    {
+      "id": "S14",
+      "type": "contextual_grounding_study",
+      "authors": "Giovanni Monea et al.",
+      "title": "A Glitch in the Matrix? Locating and Detecting Language Model Grounding with Fakepedia",
+      "year": 2024,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2024.acl-long.369",
+      "url": "https://aclanthology.org/2024.acl-long.369/",
+      "supports": []
+    },
+    {
+      "id": "S15",
+      "type": "vision_language_model",
+      "authors": "Alec Radford et al.",
+      "title": "Learning Transferable Visual Models From Natural Language Supervision",
+      "year": 2021,
+      "venue": "ICML",
+      "url": "https://proceedings.mlr.press/v139/radford21a.html",
+      "supports": ["C06", "C12"]
+    },
+    {
+      "id": "S16",
+      "type": "embodied_multimodal_model",
+      "authors": "Danny Driess et al.",
+      "title": "PaLM-E: An Embodied Multimodal Language Model",
+      "year": 2023,
+      "venue": "ICML",
+      "url": "https://proceedings.mlr.press/v202/driess23a.html",
+      "supports": ["C06", "C12"]
+    },
+    {
+      "id": "S17",
+      "type": "vision_language_action_model",
+      "authors": "Brianna Zitkovich et al.",
+      "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "year": 2023,
+      "venue": "CoRL",
+      "url": "https://proceedings.mlr.press/v229/zitkovich23a.html",
+      "supports": ["C06", "C12"]
+    },
+    {
+      "id": "S18",
+      "type": "multimodal_representation_study",
+      "authors": "Cameron R. Jones; Sean Trott",
+      "title": "Multimodal Language Models Show Evidence of Embodied Simulation",
+      "year": 2024,
+      "venue": "LREC-COLING",
+      "url": "https://aclanthology.org/2024.lrec-main.1041/",
+      "supports": ["C06"]
+    },
+    {
+      "id": "S19",
+      "type": "explanation_faithfulness_study",
+      "authors": "Miles Turpin; Julian Michael; Ethan Perez; Samuel R. Bowman",
+      "title": "Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting",
+      "year": 2023,
+      "venue": "NeurIPS",
+      "doi": "10.52202/075280-3275",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/ed3fea9033a80fea1376299fa7863f4a-Abstract.html",
+      "supports": ["C04", "C08", "C09", "C10", "C12"]
+    },
+    {
+      "id": "S20",
+      "type": "interdisciplinary_report",
+      "authors": "Patrick Butlin et al.",
+      "title": "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2308.08708",
+      "supports": ["C09", "C10", "C12"]
+    },
+    {
+      "id": "S21",
+      "type": "linguistic_generalization_study",
+      "authors": "Shijia Zhou et al.",
+      "title": "Constructions Are So Difficult That Even Large Language Models Get Them Right for the Wrong Reasons",
+      "year": 2024,
+      "venue": "LREC-COLING",
+      "url": "https://aclanthology.org/2024.lrec-main.336/",
+      "supports": ["C03", "C07", "C12"]
+    }
+  ]
+}
