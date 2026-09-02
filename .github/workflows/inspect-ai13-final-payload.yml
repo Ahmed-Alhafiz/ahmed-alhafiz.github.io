@@ -40,8 +40,10 @@ jobs:
 
           output = Path("ai13-inspection")
           valid_dir = output / "valid"
+          fragment_dir = output / "fragments"
           output.mkdir(parents=True, exist_ok=True)
           valid_dir.mkdir(parents=True, exist_ok=True)
+          fragment_dir.mkdir(parents=True, exist_ok=True)
 
           fragment_paths = OrderedDict(
               [
@@ -64,6 +66,8 @@ jobs:
               (name, clean(path.read_text(encoding="utf-8")))
               for name, path in fragment_paths.items()
           )
+          for name, text in fragments.items():
+              (fragment_dir / f"{name}.b64").write_text(text, encoding="ascii")
 
           candidate_texts: OrderedDict[str, str] = OrderedDict()
 
@@ -250,7 +254,7 @@ jobs:
                   )
           PY
 
-      - name: Upload reconstruction evidence and every valid candidate
+      - name: Upload reconstruction evidence and exact fragments
         uses: actions/upload-artifact@v4
         with:
           name: ai13-final-payload-inspection-${{ github.run_id }}
