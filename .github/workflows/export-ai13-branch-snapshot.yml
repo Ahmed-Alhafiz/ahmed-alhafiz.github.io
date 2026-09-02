@@ -1,0 +1,49 @@
+name: Export AI pillar 13 branch snapshot
+
+on:
+  push:
+    branches:
+      - teaching-names-ai-pillar-13
+    paths:
+      - .github/ai13/EXPORT
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build deterministic branch snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f .github/ai13/EXPORT
+          tar \
+            --exclude='./.git' \
+            --exclude='./branch-snapshot.tgz' \
+            --sort=name \
+            --mtime='UTC 2026-09-02' \
+            --owner=0 \
+            --group=0 \
+            --numeric-owner \
+            -czf branch-snapshot.tgz .
+          sha256sum branch-snapshot.tgz > branch-snapshot.sha256
+          echo "SNAPSHOT_SIZE=$(wc -c < branch-snapshot.tgz | tr -d ' ')"
+          cat branch-snapshot.sha256
+
+      - name: Upload branch snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: teaching-names-ai-pillar-13-branch-snapshot
+          path: |
+            branch-snapshot.tgz
+            branch-snapshot.sha256
+          retention-days: 3
+          if-no-files-found: error
