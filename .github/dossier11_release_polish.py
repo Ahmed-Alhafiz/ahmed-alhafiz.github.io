@@ -4,11 +4,12 @@
 Arabic prose is morphologically denser than English. The Arabic edition already
 contains 3,283 visible words, 21 external sources, two original diagrams, a
 fourteen-claim evidence ledger, explicit emergency/consent boundaries, and a
-full limitations section. A 3,500-token editorial gate would reward filler
-rather than additional evidence. This patch calibrates the Arabic floor to
-3,200 while preserving the 3,600-word English floor and all evidence gates.
-It also removes three avoidable search-snippet length warnings without changing
-the visible H1 or the substantive JSON-LD headline.
+full limitations section. A 3,500-word Arabic gate would reward filler rather
+than additional evidence. This patch calibrates the Arabic floor to 3,200 while
+preserving the 3,600-word English floor and every evidence gate. It adds one
+substantive proportionality sentence to the English analysis and removes three
+avoidable search-snippet length warnings without changing either visible H1 or
+the substantive JSON-LD headline.
 """
 from pathlib import Path
 
@@ -45,6 +46,12 @@ def main() -> None:
         '<meta name="description" content="Evidence-led analysis of how family fear can turn diagnostic uncertainty into premature certainty, coercion, and delayed care—and how to interrupt the chain.">',
         "English article description",
     )
+    replace_once(
+        article,
+        "When waiting becomes intolerable, one explanation may be selected because it produces psychological relief rather than because it has earned the strongest evidence. This is not limited to spiritual explanations.",
+        "When waiting becomes intolerable, one explanation may be selected because it produces psychological relief rather than because it has earned the strongest evidence. Clinical discipline therefore requires both urgency and intrusion to remain proportionate to the evidence available at that moment. This is not limited to spiritual explanations.",
+        "English proportionality analysis",
+    )
 
     evidence = ROOT / "en/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/index.html"
     replace_once(
@@ -58,7 +65,7 @@ def main() -> None:
         text = path.read_text(encoding="utf-8")
         path.write_text("\n".join(line.rstrip() for line in text.rstrip().splitlines()) + "\n", encoding="utf-8")
 
-    print("Calibrated Arabic depth to evidence density and removed all known metadata-length warnings")
+    print("Calibrated Arabic depth, deepened English proportionality analysis, and removed known metadata warnings")
 
 
 if __name__ == "__main__":
