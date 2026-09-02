@@ -1,0 +1,124 @@
+name: Apply water dossier social cards
+
+on:
+  push:
+    branches:
+      - water-civilization-power-09
+    paths:
+      - .github/water09-social.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: water09-social-cards
+  cancel-in-progress: false
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deterministic image dependency
+        run: python -m pip install --disable-pip-version-check "Pillow>=11,<13"
+
+      - name: Generate cards and integrate metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fxq 'run=1' .github/water09-social.trigger
+          python tools/generate_water_social_cards.py
+          python .github/water09_social_patch.py
+
+      - name: Validate generated binary and semantic surfaces
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import struct
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          root = Path('.')
+          cards = {
+              'ar': root / 'assets/social/water-civilization-power-ar.png',
+              'en': root / 'assets/social/water-civilization-power-en.png',
+          }
+          for lang, path in cards.items():
+              data = path.read_bytes()
+              if data[:8] != b'\x89PNG\r\n\x1a\n' or data[12:16] != b'IHDR':
+                  raise SystemExit(f'{path}: invalid PNG signature')
+              size = struct.unpack('>II', data[16:24])
+              if size != (1200, 630):
+                  raise SystemExit(f'{path}: expected 1200x630, found {size}')
+              if len(data) < 10_000:
+                  raise SystemExit(f'{path}: suspiciously small ({len(data)} bytes)')
+              print(f'{lang}: {path} — {size[0]}x{size[1]} — {len(data)} bytes')
+
+          surfaces = {
+              'articles/water-civilization-power/index.html': cards['ar'].name,
+              'articles/water-civilization-power/evidence/index.html': cards['ar'].name,
+              'en/articles/water-civilization-power/index.html': cards['en'].name,
+              'en/articles/water-civilization-power/evidence/index.html': cards['en'].name,
+          }
+          for rel, filename in surfaces.items():
+              html = (root / rel).read_text(encoding='utf-8')
+              if html.count(filename) < 5:
+                  raise SystemExit(f'{rel}: social card is not wired across metadata and JSON-LD')
+              if 'ahmed-alhafiz-social-card.png' in html:
+                  raise SystemExit(f'{rel}: generic site card remained')
+              if 'name="twitter:image"' not in html or 'property="og:image:alt"' not in html:
+                  raise SystemExit(f'{rel}: social accessibility/distribution metadata incomplete')
+          print('Four social surfaces use dedicated, language-correct cards.')
+          PY
+
+      - name: Run complete repository gates without one-time machinery
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/water09-one-time/.github/workflows
+          mv .github/water09_social_patch.py /tmp/water09-one-time/.github/
+          mv .github/water09-social.trigger /tmp/water09-one-time/.github/
+          mv .github/workflows/apply-water09-social.yml /tmp/water09-one-time/.github/workflows/
+          trap 'mv /tmp/water09-one-time/.github/water09_social_patch.py .github/ 2>/dev/null || true; mv /tmp/water09-one-time/.github/water09-social.trigger .github/ 2>/dev/null || true; mv /tmp/water09-one-time/.github/workflows/apply-water09-social.yml .github/workflows/ 2>/dev/null || true' EXIT
+          python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py tools/discovery_integrity.py tools/generate_water_social_cards.py
+          python tools/site_audit.py
+          python tools/editorial_quality_gate.py
+          python tools/discovery_integrity.py
+          git diff --check
+          mv /tmp/water09-one-time/.github/water09_social_patch.py .github/
+          mv /tmp/water09-one-time/.github/water09-social.trigger .github/
+          mv /tmp/water09-one-time/.github/workflows/apply-water09-social.yml .github/workflows/
+          trap - EXIT
+
+      - name: Commit generated assets and verified integration
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add \
+            assets/social/water-civilization-power-ar.png \
+            assets/social/water-civilization-power-en.png \
+            articles/water-civilization-power/index.html \
+            articles/water-civilization-power/evidence/index.html \
+            en/articles/water-civilization-power/index.html \
+            en/articles/water-civilization-power/evidence/index.html \
+            tools/site_audit.py \
+            .github/WATER_CIVILIZATION_POWER_09_PREMERGE.md
+          git commit -m 'Integrate dedicated bilingual social cards for water dossier'
+          if ! git push origin HEAD:water-civilization-power-09; then
+            git pull --rebase origin water-civilization-power-09
+            git push origin HEAD:water-civilization-power-09
+          fi
