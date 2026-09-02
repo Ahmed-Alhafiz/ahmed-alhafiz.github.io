@@ -15,13 +15,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Use Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Compile audit tools
         run: python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py
-      - name: Parse XML and all JSON-LD blocks
+
+      - name: Parse XML JSON feeds evidence manifests and every JSON-LD block
         shell: bash
         run: |
           set -euo pipefail
@@ -53,9 +56,24 @@ jobs:
                   if self.active:
                       self.buffer.append(data)
 
-          ET.parse("sitemap.xml")
-          ET.parse("articles/feed.xml")
-          parsed = 0
+          xml_files = [
+              Path("sitemap.xml"),
+              Path("articles/feed.xml"),
+              Path("en/articles/feed.xml"),
+          ]
+          json_files = [
+              Path("articles/feed.json"),
+              Path("en/articles/feed.json"),
+              Path("articles/research-index.json"),
+              Path("articles/ratq-fatq-big-bang/evidence/claims.json"),
+          ]
+
+          for path in xml_files:
+              ET.parse(path)
+          for path in json_files:
+              json.loads(path.read_text(encoding="utf-8"))
+
+          pages = blocks = 0
           for path in Path(".").rglob("*.html"):
               if ".git" in path.parts:
                   continue
@@ -64,12 +82,36 @@ jobs:
               for block in parser.blocks:
                   if block.strip():
                       json.loads(block)
-              parsed += 1
-          print(f"Parsed {parsed} HTML files and all JSON-LD/XML successfully")
+                      blocks += 1
+              pages += 1
+
+          print(
+              f"Parsed {pages} HTML files, {blocks} JSON-LD blocks, "
+              f"{len(xml_files)} XML outputs and {len(json_files)} JSON outputs"
+          )
           PY
-      - name: Validate HTML, links, sitemap, feed and publication safety
+
+      - name: Validate HTML links sitemap feeds hreflang and publication safety
         run: python tools/site_audit.py
-      - name: Validate reference-article evidence, linking and medical safeguards
+
+      - name: Validate evidence depth transparency linking and medical safeguards
         run: python tools/editorial_quality_gate.py
+
+      - name: Reject temporary release machinery
+        shell: bash
+        run: |
+          set -euo pipefail
+          if find .github -maxdepth 3 -type f \( \
+              -name 'APPLY*' -o \
+              -name 'part-*' -o \
+              -name 'fix-*' -o \
+              -name '*release*.trigger' -o \
+              -name 'apply-global-editorial-rebuild-*' -o \
+              -name 'diagnose-global-editorial-rebuild-*' \
+            \) -print | grep -q .; then
+            echo 'Temporary release machinery must not enter the permanent branch.' >&2
+            exit 1
+          fi
+
       - name: Check patch whitespace
         run: git diff --check
