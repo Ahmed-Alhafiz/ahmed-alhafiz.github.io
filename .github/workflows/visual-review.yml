@@ -10,7 +10,7 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,12 +20,12 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install browser automation dependency
+      - name: Install browser and image automation dependencies
         shell: bash
         run: |
           set -euo pipefail
-          python -m pip install --disable-pip-version-check --quiet "selenium>=4.25,<5"
-          python -c "import selenium; print('Selenium', selenium.__version__)"
+          python -m pip install --disable-pip-version-check --quiet "selenium>=4.25,<5" "pillow>=11,<12"
+          python -c "import selenium, PIL; print('Selenium', selenium.__version__, 'Pillow', PIL.__version__)"
           google-chrome --version || chromium --version || chromium-browser --version
           chromedriver --version || true
 
@@ -50,8 +50,10 @@ jobs:
           set -euo pipefail
           python -m py_compile \
             .github/visual-review/run_visual_review.py \
-            .github/visual-review/run_visual_review_fixed.py
+            .github/visual-review/run_visual_review_fixed.py \
+            .github/visual-review/verify_book_covers.py
           python .github/visual-review/run_visual_review_fixed.py
+          python .github/visual-review/verify_book_covers.py
 
       - name: Upload visual review artifact
         uses: actions/upload-artifact@v4
