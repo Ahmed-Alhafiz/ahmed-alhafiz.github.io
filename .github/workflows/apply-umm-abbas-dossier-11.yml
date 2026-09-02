@@ -49,12 +49,14 @@ jobs:
           set -euo pipefail
           grep -Eq '^run=[0-9]+$' .github/umm-abbas-dossier-11.trigger
           python .github/dossier11_integration_fix.py
+          python .github/dossier11_marker_fix.py
           python .github/dossier11_integrate.py
           # Workflow YAML changes are committed directly after branch verification;
           # the GitHub Actions token is not used to mutate permanent workflows.
           git checkout -- .github/workflows
           python tools/generate_diagnostic_uncertainty_social_cards.py
           rm -f .github/dossier11_integration_fix.py
+          rm -f .github/dossier11_marker_fix.py
           rm -f .github/dossier11_integrate.py
           rm -f .github/umm-abbas-dossier-11.trigger
 
@@ -147,6 +149,7 @@ jobs:
           git diff --check
 
           test ! -e .github/dossier11_integration_fix.py
+          test ! -e .github/dossier11_marker_fix.py
           test ! -e .github/dossier11_integrate.py
           test ! -e .github/umm-abbas-dossier-11.trigger
           test -s assets/social/diagnostic-uncertainty-family-fear-ar.png
