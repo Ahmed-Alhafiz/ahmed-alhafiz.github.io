@@ -18,7 +18,7 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v4
 
-      - name: Reconstruct inspect and fingerprint archive without extracting into repository
+      - name: Reconstruct and inventory every recoverable archive member without changing repository
         shell: bash
         run: |
           set -euo pipefail
@@ -36,30 +36,80 @@ jobs:
           base64 --decode /tmp/ai13-release.tgz.b64 > /tmp/ai13-release.tgz
           echo "ARCHIVE_SIZE=$(wc -c < /tmp/ai13-release.tgz | tr -d ' ')"
           echo "ARCHIVE_SHA256=$(sha256sum /tmp/ai13-release.tgz | cut -d' ' -f1)"
+
+          set +e
           gzip --test /tmp/ai13-release.tgz
-          if tar -tzf /tmp/ai13-release.tgz | grep -E '(^/|(^|/)\.\.(/|$))'; then
+          gzip_test_rc=$?
+          gzip -dc /tmp/ai13-release.tgz > /tmp/ai13-release.partial.tar
+          inflate_rc=$?
+          set -e
+          echo "GZIP_TEST_RC=${gzip_test_rc}"
+          echo "INFLATE_RC=${inflate_rc}"
+          echo "PARTIAL_TAR_SIZE=$(wc -c < /tmp/ai13-release.partial.tar | tr -d ' ')"
+          echo "PARTIAL_TAR_SHA256=$(sha256sum /tmp/ai13-release.partial.tar | cut -d' ' -f1)"
+
+          if tar -tvf /tmp/ai13-release.partial.tar 2>/tmp/tar-list.err | grep -E '(^|[[:space:]])/|(^|[[:space:]])\.\.(/|$)'; then
             echo 'UNSAFE_ARCHIVE_PATH' >&2
             exit 1
           fi
-          echo 'ARCHIVE_MEMBERS_BEGIN'
-          tar -tzf /tmp/ai13-release.tgz | sort
-          echo 'ARCHIVE_MEMBERS_END'
-          mkdir /tmp/ai13-release
-          tar -xzf /tmp/ai13-release.tgz -C /tmp/ai13-release
-          test -f /tmp/ai13-release/articles/teaching-names-ai-understanding/index.html
-          test -f /tmp/ai13-release/en/articles/teaching-names-ai-understanding/index.html
-          test -f /tmp/ai13-release/articles/teaching-names-ai-understanding/evidence/claims.json
-          test -f /tmp/ai13-release/.github/ai13_integrate.py
-          test -f /tmp/ai13-release/tools/teaching_names_ai_integrity.py
-          python -m py_compile /tmp/ai13-release/.github/ai13_integrate.py /tmp/ai13-release/tools/teaching_names_ai_integrity.py /tmp/ai13-release/tools/generate_teaching_names_ai_social_cards.py
+          echo 'TAR_LIST_STDERR_BEGIN'
+          cat /tmp/tar-list.err || true
+          echo 'TAR_LIST_STDERR_END'
+          echo 'RECOVERABLE_TAR_MEMBERS_BEGIN'
+          tar -tvf /tmp/ai13-release.partial.tar 2>/dev/null || true
+          echo 'RECOVERABLE_TAR_MEMBERS_END'
+
+          mkdir -p /tmp/ai13-recovered
+          set +e
+          tar -xvf /tmp/ai13-release.partial.tar -C /tmp/ai13-recovered > /tmp/tar-extract.out 2>/tmp/tar-extract.err
+          extract_rc=$?
+          set -e
+          echo "EXTRACT_RC=${extract_rc}"
+          echo 'EXTRACT_STDOUT_BEGIN'
+          cat /tmp/tar-extract.out || true
+          echo 'EXTRACT_STDOUT_END'
+          echo 'EXTRACT_STDERR_BEGIN'
+          cat /tmp/tar-extract.err || true
+          echo 'EXTRACT_STDERR_END'
+          echo 'RECOVERED_FILES_BEGIN'
+          find /tmp/ai13-recovered -type f -printf '%P|%s|%p\n' | sort
+          echo 'RECOVERED_FILES_END'
+
           python - <<'PY'
           import json
+          import re
           from pathlib import Path
-          root = Path('/tmp/ai13-release')
-          data = json.loads((root/'articles/teaching-names-ai-understanding/evidence/claims.json').read_text(encoding='utf-8'))
-          assert data['dossier']['version'] == '2.1'
-          assert len(data['claims']) == 12
-          assert len(data['sources']) == 25
-          print('CLAIMS=12 SOURCES=25 VERSION=2.1')
+          root = Path('/tmp/ai13-recovered')
+          for path in sorted(root.rglob('*')):
+              if not path.is_file():
+                  continue
+              rel = path.relative_to(root)
+              status = []
+              if path.suffix == '.json':
+                  try:
+                      data = json.loads(path.read_text(encoding='utf-8'))
+                      status.append('JSON_OK')
+                      if rel.as_posix().endswith('claims.json'):
+                          status.append(f"VERSION={data.get('dossier',{}).get('version')}")
+                          status.append(f"CLAIMS={len(data.get('claims',[]))}")
+                          status.append(f"SOURCES={len(data.get('sources',[]))}")
+                  except Exception as exc:
+                      status.append(f'JSON_BAD={type(exc).__name__}:{exc}')
+              if path.suffix == '.html':
+                  try:
+                      text = path.read_text(encoding='utf-8')
+                      status.append(f'HTML_CHARS={len(text)}')
+                      status.append(f'HTML_END={text.rstrip().endswith("</html>")}')
+                      status.append(f'JSONLD={len(re.findall(r"application/ld\\+json", text, re.I))}')
+                  except Exception as exc:
+                      status.append(f'HTML_BAD={type(exc).__name__}:{exc}')
+              if path.suffix == '.py':
+                  try:
+                      compile(path.read_text(encoding='utf-8'), str(path), 'exec')
+                      status.append('PY_OK')
+                  except Exception as exc:
+                      status.append(f'PY_BAD={type(exc).__name__}:{exc}')
+              if status:
+                  print(f'RECOVERED_CHECK|{rel}|'+ '|'.join(status))
           PY
-          echo 'DIAGNOSIS_PASSED'
+          echo 'PARTIAL_INVENTORY_COMPLETED'
