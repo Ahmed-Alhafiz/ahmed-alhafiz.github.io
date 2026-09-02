@@ -48,8 +48,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python -m py_compile .github/visual-review/run_visual_review.py
-          python .github/visual-review/run_visual_review.py
+          python -m py_compile \
+            .github/visual-review/run_visual_review.py \
+            .github/visual-review/run_visual_review_fixed.py
+          python .github/visual-review/run_visual_review_fixed.py
 
       - name: Upload visual review artifact
         uses: actions/upload-artifact@v4
