@@ -22,26 +22,55 @@
     "oai_searchbot": "explicitly_allowed",
     "gptbot": "explicitly_allowed",
     "generic_crawlers": "allowed",
-    "structured_author_identity": "present_and_being_standardized",
+    "structured_author_identity": "foundation_prepared_pending_merge",
     "custom_domain": "not_configured",
-    "indexnow": "prepared_not_yet_submitted"
+    "indexnow": "configured_pending_first_verified_submission"
   },
-  "observed_outcomes": {
+  "verified_pre_rebuild_search_console_baseline": {
+    "period": {
+      "start": "2026-08-23",
+      "end": "2026-08-29"
+    },
+    "scope": "small pre-rebuild samples preserved from the project checkpoint; they are not evidence of post-release growth",
+    "pages": [
+      {
+        "path": "/",
+        "clicks": 15,
+        "impressions": 54,
+        "ctr_percent": 27.78,
+        "average_position": 3.98
+      },
+      {
+        "path": "/about/",
+        "clicks": 2,
+        "impressions": 15,
+        "ctr_percent": 13.33,
+        "average_position": 4.73
+      }
+    ],
+    "limitations": [
+      "The sample is small.",
+      "The data predates the latest editorial, UX, dossier, and entity releases.",
+      "Page-level average position does not establish position one for the query أحمد الحافظ.",
+      "The baseline does not measure AI citations or independent external authority."
+    ]
+  },
+  "current_post_rebuild_outcomes": {
     "google_indexed_pages": {
       "status": "not_measured",
       "value": null,
-      "required_source": "Google Search Console URL Inspection or Index Coverage data"
+      "required_source": "Current Google Search Console URL Inspection or Index Coverage data"
     },
     "google_query_impressions": {
       "status": "not_measured",
       "value": null,
-      "required_source": "Google Search Console Performance report or API"
+      "required_source": "Current Google Search Console Performance report or API"
     },
     "ranking_for_arabic_name": {
       "query": "أحمد الحافظ",
       "status": "not_measured",
       "position": null,
-      "reason": "No Search Console export or controlled observation log is connected to the repository."
+      "reason": "The preserved page-level baseline does not isolate this query, and no current controlled query export is connected to the repository."
     },
     "ranking_for_latin_name": {
       "queries": [
@@ -71,8 +100,8 @@
   "measurement_rules": {
     "technical_success_is_not_ranking_success": true,
     "structured_data_is_not_counted_as_a_rich_result_until_observed": true,
-    "a_self-authored_link_is_not_an_external_citation": true,
-    "a_search_result impression_is_not_an_ai_citation": true,
+    "a_self_authored_link_is_not_an_external_citation": true,
+    "a_search_result_impression_is_not_an_ai_citation": true,
     "a_site_colon_query_is_diagnostic_only_not_authoritative": true,
     "unknown_values_remain_null": true,
     "reporting_windows_days": [
@@ -82,7 +111,7 @@
     ]
   },
   "next_measurement_requirements": [
-    "Connect or export Google Search Console data for the verified property.",
+    "Connect or export current Google Search Console data for the verified property.",
     "Connect a privacy-compliant analytics source capable of isolating utm_source=chatgpt.com.",
     "Record controlled Arabic and Latin-name SERP observations with date, country, device, and signed-out state.",
     "Capture only externally observed AI citations; do not infer them from crawl access."
