@@ -29,11 +29,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Apply corrected entity measurement and discovery infrastructure
+      - name: Apply non-workflow entity measurement and discovery infrastructure
         shell: bash
         run: |
           set -euo pipefail
-          test "$(cat .github/entity-measurement-foundation-12-v4.trigger)" = 'run=5'
+          test "$(cat .github/entity-measurement-foundation-12-v4.trigger)" = 'run=6'
           python .github/entity_measurement_foundation12_patch.py
           python .github/entity_measurement_foundation12_patch2.py
           python .github/entity_measurement_foundation12_patch3.py
@@ -42,10 +42,15 @@ jobs:
           from pathlib import Path
           path = Path('.github/entity_measurement_foundation12_apply.py')
           text = path.read_text(encoding='utf-8')
-          old = '    normalize()\n'
-          if text.count(old) != 1:
-              raise SystemExit(f'Expected one repository-wide normalize call, found {text.count(old)}')
-          path.write_text(text.replace(old, '', 1), encoding='utf-8')
+          removals = (
+              '    normalize()\n',
+              '    patch_integrity_workflow()\n',
+          )
+          for old in removals:
+              if text.count(old) != 1:
+                  raise SystemExit(f'Expected one integration call {old.strip()!r}, found {text.count(old)}')
+              text = text.replace(old, '', 1)
+          path.write_text(text, encoding='utf-8')
           PY
 
           python .github/entity_measurement_foundation12_apply.py
@@ -90,7 +95,6 @@ jobs:
           rm -f .github/entity_measurement_foundation12_patch2.py
           rm -f .github/entity_measurement_foundation12_patch3.py
           rm -f .github/entity-measurement-foundation-12*.trigger
-          rm -f .github/workflows/apply-entity-measurement-foundation-12*.yml
 
       - name: Run all permanent gates and machine-output checks
         shell: bash
@@ -167,20 +171,22 @@ jobs:
           test ! -e .github/entity_measurement_foundation12_patch.py
           test ! -e .github/entity_measurement_foundation12_patch2.py
           test ! -e .github/entity_measurement_foundation12_patch3.py
-          if find .github -maxdepth 3 -type f \( -name '*.trigger' -o -name 'apply-entity-measurement-foundation-12*.yml' \) -print | grep -q .; then
-            echo 'Temporary entity-foundation release machinery remained.' >&2
-            exit 1
-          fi
+          test ! -e .github/entity-measurement-foundation-12-v4.trigger
           rm -f visibility-audit-local.json indexnow-dry-run.json
           git diff --check
 
-      - name: Commit verified foundation
+      - name: Commit verified non-workflow foundation
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'Ahmed-Alhafiz'
           git config user.email 'hhafz9924@gmail.com'
           git add -A
+          if git diff --cached --name-only | grep -q '^\.github/workflows/'; then
+            echo 'This automated commit must not modify workflow files.' >&2
+            git diff --cached --name-status -- .github/workflows/
+            exit 1
+          fi
           git commit -m 'Standardize author identity and activate measurable discovery infrastructure'
           if ! git push origin HEAD:entity-measurement-domain-foundation-12; then
             git pull --rebase origin entity-measurement-domain-foundation-12
