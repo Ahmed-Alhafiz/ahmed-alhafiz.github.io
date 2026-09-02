@@ -9,6 +9,7 @@ presentation decisions that materially affect trust and usability:
 - no public GitHub profile presented as an author channel;
 - exactly three official contact channels where contact details are shown;
 - stable portrait markup on Arabic, English, and German home/profile pages;
+- explicit one-column portrait-first stacking at tablet and mobile widths;
 - one modern book layout across all three languages;
 - correct page direction and accessible social links.
 """
@@ -204,7 +205,13 @@ def validate_priority_pages(errors: list[str]) -> None:
 
     for rel in BOOK_PAGES:
         html = (ROOT / rel).read_text(encoding="utf-8")
-        for token in ('class="site-header"', 'class="site-footer"', 'class="book-hero"', 'class="book-hero-cover"', 'class="publication-note"'):
+        for token in (
+            'class="site-header"',
+            'class="site-footer"',
+            'class="book-hero"',
+            'class="book-hero-cover"',
+            'class="publication-note"',
+        ):
             if token not in html:
                 errors.append(f"{rel}: modern multilingual book token missing: {token}")
         for token in BOOK_LEGACY_TOKENS:
@@ -225,6 +232,10 @@ def validate_css(errors: list[str]) -> None:
         "width:min(50vw,184px)",
         ".book-hero .pill",
         "UX10 final mobile footer alignment",
+        "UX10 mobile stacking correction",
+        "@media(max-width:960px){\n  .home-hero-grid,.profile-grid{\n    grid-template-columns:minmax(0,1fr);",
+        "grid-column:1;\n    grid-row:auto;\n    order:-1;",
+        "width:min(47vw,174px)",
     )
     for token in required:
         if token not in css:
@@ -250,6 +261,7 @@ def main() -> None:
         f"{len(pages)} public pages, one compact footer each, "
         "three official contact channels, no duplicate language footers, "
         "no public GitHub identity, stable tri-language portrait markup, "
+        "mobile portrait-first single-column stacking, "
         "and one modern book layout across Arabic, English, and German."
     )
 
