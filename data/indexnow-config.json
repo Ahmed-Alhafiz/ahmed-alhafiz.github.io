@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "enabled": true,
+  "endpoint": "https://api.indexnow.org/indexnow",
+  "canonical_origin": "https://ahmed-alhafiz.github.io",
+  "host": "ahmed-alhafiz.github.io",
+  "key": "ae4f1b69f173ae5ba5583e5d1e9298e367b3c8cb9911a9ec",
+  "key_file": "ae4f1b69f173ae5ba5583e5d1e9298e367b3c8cb9911a9ec.txt",
+  "key_location": "https://ahmed-alhafiz.github.io/ae4f1b69f173ae5ba5583e5d1e9298e367b3c8cb9911a9ec.txt",
+  "maximum_urls_per_request": 10000,
+  "accepted_transport_codes": [200, 202],
+  "interpretation": "A 200 or 202 response proves receipt or acceptance pending key validation; it does not prove crawl, indexing, ranking, or citation.",
+  "custom_domain_note": "Regenerate the key configuration and verify the key file on the new host before any custom-domain submission."
+}
