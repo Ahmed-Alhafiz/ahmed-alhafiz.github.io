@@ -1,0 +1,273 @@
+name: Publish Teaching the Names and AI pillar 13
+
+on:
+  push:
+    branches:
+      - teaching-names-ai-pillar-13
+    paths:
+      - .github/ai13-publish/GO
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-teaching-names-ai-pillar-13
+  cancel-in-progress: false
+
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout immutable feature-branch state
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prove release completeness and clean temporary transfer state
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f .github/ai13-publish/GO
+          test -f articles/teaching-names-ai-understanding/index.html
+          test -f en/articles/teaching-names-ai-understanding/index.html
+          test -f articles/teaching-names-ai-understanding/evidence/index.html
+          test -f en/articles/teaching-names-ai-understanding/evidence/index.html
+          test -f articles/teaching-names-ai-understanding/evidence/claims.json
+          test -f tools/teaching_names_ai_integrity.py
+          test -f tools/generate_teaching_names_ai_social_cards.py
+          test -f assets/social/teaching-names-ai-understanding-ar.png
+          test -f assets/social/teaching-names-ai-understanding-en.png
+          test -f .github/visual-review/run_visual_review_fixed.py
+
+          for forbidden in \
+            .github/ai13 \
+            .github/ai13-final \
+            .github/ai13-final-rem \
+            .github/ai13_integrate.py \
+            .github/workflows/diagnose-ai13-release.yml \
+            .github/workflows/recover-ai13-verified-files.yml \
+            .github/workflows/export-ai13-branch-snapshot.yml \
+            .github/workflows/apply-ai13-final-release.yml; do
+            if test -e "$forbidden"; then
+              echo "Forbidden temporary release path remained: $forbidden" >&2
+              exit 1
+            fi
+          done
+
+          if find .github -type f \( -name 'test-local-file-upload*' -o -name 'test-file-ref-*' \) -print | grep -q .; then
+            echo 'Connector probe file remained in the branch.' >&2
+            exit 1
+          fi
+
+          git fetch origin main
+          git merge-base --is-ancestor origin/main HEAD
+          echo "FEATURE_HEAD=$(git rev-parse HEAD)"
+          echo "MAIN_BASE=$(git rev-parse origin/main)"
+
+      - name: Use Python and install deterministic QA dependencies
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install rendering dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --quiet 'Pillow>=10,<12' 'selenium>=4.25,<5'
+          python - <<'PY'
+          from PIL import features
+          import selenium
+          print('Selenium', selenium.__version__)
+          print('Pillow libraqm', features.check('raqm'))
+          if not features.check('raqm'):
+              raise SystemExit('Pillow/libraqm is required for deterministic Arabic social cards')
+          PY
+          google-chrome --version || chromium --version || chromium-browser --version
+          chromedriver --version || true
+
+      - name: Park the publisher itself before permanent repository audits
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/ai13-publisher
+          mv .github/workflows/publish-teaching-names-ai-pillar-13.yml /tmp/ai13-publisher/
+          mv .github/ai13-publish/GO /tmp/ai13-publisher/
+
+      - name: Parse every machine-readable output
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/*.py .github/visual-review/*.py
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class JSONLD(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.active = False
+                  self.buffer = []
+                  self.blocks = []
+              def handle_starttag(self, tag, attrs):
+                  data = dict(attrs)
+                  if tag.lower() == 'script' and data.get('type', '').lower() == 'application/ld+json':
+                      self.active = True
+                      self.buffer = []
+              def handle_endtag(self, tag):
+                  if self.active and tag.lower() == 'script':
+                      self.blocks.append(''.join(self.buffer))
+                      self.active = False
+              def handle_data(self, data):
+                  if self.active:
+                      self.buffer.append(data)
+
+          xml = [Path('sitemap.xml'), Path('articles/feed.xml'), Path('en/articles/feed.xml'), *sorted(Path('assets/figures').glob('*.svg'))]
+          json_files = [Path('articles/feed.json'), Path('en/articles/feed.json'), Path('articles/research-index.json'), Path('author.json'), *sorted(Path('articles').glob('*/evidence/claims.json'))]
+          for path in xml:
+              ET.parse(path)
+          for path in json_files:
+              json.loads(path.read_text(encoding='utf-8'))
+
+          pages = blocks = 0
+          for path in Path('.').rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+              parser = JSONLD()
+              parser.feed(path.read_text(encoding='utf-8'))
+              for block in parser.blocks:
+                  if block.strip():
+                      json.loads(block)
+                      blocks += 1
+              pages += 1
+          print(f'Parsed {pages} HTML pages, {blocks} JSON-LD blocks, {len(xml)} XML/SVG files and {len(json_files)} JSON files')
+          PY
+
+      - name: Run all permanent structural editorial discovery identity UX and pillar gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/site_audit.py
+          python tools/editorial_quality_gate.py
+          python tools/discovery_integrity.py
+          python tools/entity_integrity.py
+          python tools/ux_integrity.py
+          python tools/arabic_ui_integrity.py
+          python tools/dossier11_integrity.py
+          python tools/teaching_names_ai_integrity.py
+
+          grep -Fq '/articles/water-civilization-power/' books/sirou-fi-alard/index.html
+          grep -Fq '/articles/teaching-names-ai-understanding/' books/sirou-fi-alard/index.html
+          grep -Fq '/en/articles/water-civilization-power/' en/books/sirou-fi-alard/index.html
+          grep -Fq '/en/articles/teaching-names-ai-understanding/' en/books/sirou-fi-alard/index.html
+          git diff --check
+
+      - name: Reproduce the Arabic and English social cards byte-for-byte
+        shell: bash
+        run: |
+          set -euo pipefail
+          before_ar="$(sha256sum assets/social/teaching-names-ai-understanding-ar.png | cut -d' ' -f1)"
+          before_en="$(sha256sum assets/social/teaching-names-ai-understanding-en.png | cut -d' ' -f1)"
+          python tools/generate_teaching_names_ai_social_cards.py
+          after_ar="$(sha256sum assets/social/teaching-names-ai-understanding-ar.png | cut -d' ' -f1)"
+          after_en="$(sha256sum assets/social/teaching-names-ai-understanding-en.png | cut -d' ' -f1)"
+          test "$before_ar" = "$after_ar"
+          test "$before_en" = "$after_en"
+          git diff --exit-code -- assets/social/teaching-names-ai-understanding-ar.png assets/social/teaching-names-ai-understanding-en.png
+          echo "AR_CARD_SHA256=$after_ar"
+          echo "EN_CARD_SHA256=$after_en"
+
+      - name: Start an isolated local server
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m http.server 4173 --bind 127.0.0.1 >/tmp/ai13-server.log 2>&1 &
+          echo $! >/tmp/ai13-server.pid
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:4173/ >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/ai13-server.log
+          exit 1
+
+      - name: Run full browser visual regression on phone and desktop
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf visual-review
+          python .github/visual-review/run_visual_review_fixed.py
+          test "$(find visual-review/desktop -maxdepth 1 -type f -name '*.png' | wc -l)" -ge 40
+          test "$(find visual-review/mobile -maxdepth 1 -type f -name '*.png' | wc -l)" -ge 40
+          test -f visual-review/desktop/ai-understanding-ar.png
+          test -f visual-review/mobile/ai-understanding-ar.png
+          test -f visual-review/desktop/ai-understanding-en.png
+          test -f visual-review/mobile/ai-understanding-en.png
+          test -f visual-review/desktop/ai-evidence-ar.png
+          test -f visual-review/mobile/ai-evidence-en.png
+
+      - name: Write immutable branch-verification record
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > .github/TEACHING_NAMES_AI_PILLAR_13_PREMERGE.md <<EOF
+          # Teaching the Names and AI — Pillar 13 Pre-merge Record
+
+          **Date:** 2026-09-02  
+          **Status:** \`BRANCH_VERIFIED_AWAITING_PUBLIC_DEPLOYMENT\`  
+          **GitHub Actions run:** \`${GITHUB_RUN_ID}\`  
+          **Verified feature head:** \`$(git rev-parse HEAD)\`  
+          **Verified main base:** \`$(git rev-parse origin/main)\`
+
+          ## Verified release
+
+          - Full Arabic and independently edited English editions.
+          - Version 2.1 with 12 classified claims and 25 annotated sources.
+          - Arabic and English evidence appendices, machine-readable claim ledger, BibTeX, RIS and CFF exports.
+          - Four original explanatory figures and two reproducible 1200×630 social cards.
+          - Honest thematic link to the forthcoming book; the manuscript is not technical evidence.
+          - All permanent structural, editorial, discovery, identity, UX, Arabic-interface, medical-dossier and AI-pillar gates passed.
+          - All JSON, XML, SVG and JSON-LD outputs parsed.
+          - Social cards regenerated byte-for-byte.
+          - Full browser regression passed on phone and desktop with at least 80 rendered page states.
+          - The existing water/civilization research links remained reciprocal in Arabic and English book pages.
+
+          ## Measurement boundary
+
+          This record proves branch integrity and publishability. It does not prove Google ranking, traffic, external links, recommendations or AI citation. Those outcomes require post-deployment measurement.
+          EOF
+          sed -i 's/[[:space:]]*$//' .github/TEACHING_NAMES_AI_PILLAR_13_PREMERGE.md
+          git diff --check
+
+      - name: Upload the verified visual artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: teaching-names-ai-pillar-13-visual-review
+          path: visual-review
+          retention-days: 14
+          if-no-files-found: error
+
+      - name: Remove publisher machinery and create the clean verified release commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf visual-review .github/ai13-publish
+          rm -f .github/workflows/publish-teaching-names-ai-pillar-13.yml
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add -A
+          git diff --cached --check
+          git commit -m 'Verify and finalize bilingual Teaching the Names and AI pillar'
+
+      - name: Fast-forward the reviewed branch and main only after every gate passed
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main teaching-names-ai-pillar-13
+          git merge-base --is-ancestor origin/main HEAD
+          git push origin HEAD:teaching-names-ai-pillar-13
+          git push origin HEAD:main
+          echo "PUBLISHED_COMMIT=$(git rev-parse HEAD)"
