@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.0",
+  "id": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/claims.json",
+  "dossier": {
+    "title_ar": "الماء والحضارة والسلطة: متى تصبح إدارة المورد عدلًا، ومتى تتحول إلى أداة سيطرة؟",
+    "title_en": "Water, Civilization and Power: When Does Resource Governance Produce Justice—and When Does It Become Control?",
+    "version": "1.0",
+    "published": "2026-09-02",
+    "modified": "2026-09-02",
+    "author": {
+      "name_ar": "أحمد الحافظ",
+      "name_en": "Ahmed Alhafiz",
+      "url": "https://ahmed-alhafiz.github.io/about/"
+    },
+    "arabic_url": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/",
+    "english_url": "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/",
+    "evidence_url_ar": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/",
+    "evidence_url_en": "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/evidence/",
+    "related_book": {
+      "name_ar": "قل سيروا في الأرض فانظروا كيف بدأ الخلق",
+      "status": "forthcoming",
+      "relationship": "thematic_origin_not_evidence",
+      "url": "https://ahmed-alhafiz.github.io/books/sirou-fi-alard/"
+    }
+  },
+  "review_status": {
+    "author_reviewed": true,
+    "source_links_checked": true,
+    "machine_readable_files_validated": true,
+    "external_specialist_reviewed": false,
+    "peer_reviewed": false,
+    "review_needed": [
+      "water governance",
+      "archaeology of irrigation",
+      "ancient South Arabia",
+      "Islamic/Qur'anic studies"
+    ],
+    "ai_assistance_disclosed": true
+  },
+  "method": {
+    "layers": [
+      {
+        "id": "L1",
+        "ar": "المورد والتقلب",
+        "en": "resource and variability"
+      },
+      {
+        "id": "L2",
+        "ar": "البنية التحتية",
+        "en": "infrastructure"
+      },
+      {
+        "id": "L3",
+        "ar": "البيانات والقياس",
+        "en": "data and measurement"
+      },
+      {
+        "id": "L4",
+        "ar": "التخصيص والقواعد",
+        "en": "allocation and rules"
+      },
+      {
+        "id": "L5",
+        "ar": "السلطة والمساءلة",
+        "en": "authority and accountability"
+      },
+      {
+        "id": "L6",
+        "ar": "الصيانة والقدرة على الصمود",
+        "en": "maintenance and resilience"
+      }
+    ],
+    "evidence_classes": [
+      "Qur'anic text and exegesis",
+      "official intergovernmental governance standards and data",
+      "peer-reviewed institutional research",
+      "peer-reviewed archaeology and environmental history",
+      "authorial synthesis with explicit caveats"
+    ]
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "type": "synthesis",
+      "confidence": "high",
+      "claim_ar": "وجود الماء شرط مهم للعمران، لكنه لا يصنع حضارة أو دولة بمفرده؛ الأثر السياسي للماء تمرره البنية المؤسسية التي تنظم المعرفة والبنية التحتية والتوزيع والمساءلة.",
+      "claim_en": "Water availability is an important condition for settlement and production, but it does not create civilisation or the state by itself; institutions mediate its political effects through knowledge, infrastructure, allocation, and accountability.",
+      "sources": [
+        "R05",
+        "R08",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R21"
+      ],
+      "limits_ar": "هذه خلاصة تركيبية، وليست قانونًا تاريخيًا أحاديًا. تختلف النتائج بحسب البيئة والتقنية وحجم النظام وعلاقات الملكية والسلطة.",
+      "limits_en": "This is a synthesis, not a monocausal historical law. Outcomes vary with ecology, technology, system scale, property relations, and political organisation.",
+      "would_change_ar": "تضعف الخلاصة إذا أثبتت مقارنات واسعة أن وفرة الماء أو ندرتها تتنبأ وحدها بشكل السلطة بغض النظر عن المؤسسات.",
+      "would_change_en": "The conclusion would weaken if broad comparative evidence showed water abundance or scarcity alone predicting political form regardless of institutions."
+    },
+    {
+      "id": "C02",
+      "type": "governance",
+      "confidence": "high",
+      "claim_ar": "نظام الماء ليس سدًا أو قناة فقط؛ هو دورة مستمرة من القياس والتمويل والتشغيل والصيانة وتوزيع الحصص وحل النزاعات ومراقبة النتائج.",
+      "claim_en": "A water system is not merely a dam or canal; it is a continuing cycle of measurement, finance, operation, maintenance, allocation, dispute resolution, and monitoring.",
+      "sources": [
+        "R05",
+        "R10",
+        "R13",
+        "R17",
+        "R18"
+      ],
+      "limits_ar": "قد تُنجز بعض الوظائف رسميًا وأخرى عرفيًا؛ لا يعني وجود بنية مؤسسية أنها عادلة أو فعالة.",
+      "limits_en": "Some functions may be formal and others customary; the presence of institutions does not prove that they are fair or effective.",
+      "would_change_ar": "تتغير الصياغة إذا ظهرت نظم كبيرة مستقرة طويلًا بلا قواعد صيانة أو معلومات أو توزيع يمكن تحديدها.",
+      "would_change_en": "The formulation would change if large, durable systems were shown to persist without identifiable maintenance, information, or allocation rules."
+    },
+    {
+      "id": "C03",
+      "type": "environmental",
+      "confidence": "high",
+      "claim_ar": "الري يرفع القدرة الإنتاجية، لكنه قد يولد تملحًا وتغدقًا وتدهورًا إذا أسيء الصرف أو تراكمت الأملاح؛ لذلك قد تتحول زيادة الماء إلى خسارة بطيئة.",
+      "claim_en": "Irrigation can raise production, yet poor drainage and salt accumulation can generate waterlogging, salinisation, and degradation; more water can therefore become a slow loss.",
+      "sources": [
+        "R19",
+        "R20",
+        "R06",
+        "R09"
+      ],
+      "limits_ar": "لا يجوز اختزال تاريخ بلاد الرافدين أو انهيار أي مجتمع في التملح وحده؛ الحرب والتجارة والسياسة والمناخ متغيرات مستقلة ومتفاعلة.",
+      "limits_en": "The history of Mesopotamia—or the decline of any society—cannot be reduced to salinity alone; war, trade, politics, and climate are independent and interacting variables.",
+      "would_change_ar": "تتغير درجة الثقة إذا أعادت بيانات أثرية وبيئية عالية الدقة تقدير توقيت التملح أو وزنه مقارنة بالعوامل الأخرى.",
+      "would_change_en": "Confidence would change if higher-resolution archaeological and environmental data substantially revised the timing or weight of salinisation relative to other factors."
+    },
+    {
+      "id": "C04",
+      "type": "historical-theory",
+      "confidence": "high",
+      "claim_ar": "لا تدعم الأدلة حتمية تقول إن الري الكبير ينتج الاستبداد تلقائيًا؛ نظم الماء ظهرت تحت ترتيبات مركزية ومحلية وهجينة، وقد تغير النمط داخل المجتمع نفسه عبر الزمن.",
+      "claim_en": "Evidence does not support a deterministic rule that large irrigation automatically produces despotism; water systems have operated under centralised, local, and hybrid arrangements, and the mix can change within the same society over time.",
+      "sources": [
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R21"
+      ],
+      "limits_ar": "رفض الحتمية لا يعني إنكار أن البنية الكبيرة قد تمنح من يسيطر عليها قدرة مادية ورمزية على التركيز والجباية والإكراه.",
+      "limits_en": "Rejecting determinism does not deny that large infrastructure can give controllers material and symbolic capacity for concentration, extraction, or coercion.",
+      "would_change_ar": "تضعف الخلاصة إذا أثبتت قاعدة بيانات عالمية ممثلة أن حجم الري وحده يتنبأ بنمط سلطوي واحد بثبات قوي.",
+      "would_change_en": "The conclusion would weaken if a representative global dataset showed irrigation scale alone robustly predicting one political form."
+    },
+    {
+      "id": "C05",
+      "type": "institutional",
+      "confidence": "medium-high",
+      "claim_ar": "في بعض السياقات، تستطيع جماعات المستخدمين وضع قواعد محلية وإنفاذها وصيانة الشبكة بكفاءة تفوق ترتيبات مفروضة من وكالة مركزية؛ لكن الإدارة المحلية ليست ضمانًا ولا وصفة عالمية.",
+      "claim_en": "In some contexts, user communities can devise and enforce local rules and maintain irrigation more effectively than externally imposed agency arrangements; local governance is nevertheless neither guaranteed nor universally superior.",
+      "sources": [
+        "R12",
+        "R13",
+        "R21"
+      ],
+      "limits_ar": "الدراسات السياقية لا تبرر تعميمًا عالميًا، وقد تعاني النظم المحلية من الإقصاء، وعدم المساواة، والهجرة، ونقص التمويل أو الخبرة.",
+      "limits_en": "Contextual studies do not justify a universal claim; local systems may suffer exclusion, inequality, migration, or shortages of finance and expertise.",
+      "would_change_ar": "تتغير الخلاصة بتجارب مقارنة توضح أن مزايا الإدارة المحلية تختفي بعد ضبط نوع البنية والتمويل والبيئة.",
+      "would_change_en": "The conclusion would change if comparative work showed local advantages disappearing after controlling for infrastructure, finance, and ecology."
+    },
+    {
+      "id": "C06",
+      "type": "power-analysis",
+      "confidence": "medium-high",
+      "claim_ar": "تتحول إدارة الماء إلى أداة سيطرة عندما تتركز بوابات الوصول والبيانات والقياس والعقوبة في يد جهة غير شفافة ولا يملك المستخدمون حق الاعتراض أو المراجعة.",
+      "claim_en": "Water governance becomes a mechanism of control when access points, data, measurement, and sanctions are concentrated in an opaque authority without meaningful rights of challenge or review.",
+      "sources": [
+        "R04",
+        "R05",
+        "R08",
+        "R10",
+        "R11",
+        "R14",
+        "R15",
+        "R21"
+      ],
+      "limits_ar": "هذه صياغة تحليلية تقيس خطر السيطرة، ولا تدعي أن كل مؤسسة مركزية قمعية أو أن كل قرار توزيع متنازع عليه ظلم.",
+      "limits_en": "This is an analytical risk formulation; it does not claim that every central institution is coercive or every contested allocation is unjust.",
+      "would_change_ar": "تضعف إذا بينت أدلة مقارنة أن التركيز وانعدام الشفافية لا يرتبطان بضعف الإنصاف أو المساءلة في نظم الماء.",
+      "would_change_en": "It would weaken if comparative evidence found concentration and opacity unrelated to fairness or accountability in water systems."
+    },
+    {
+      "id": "C07",
+      "type": "governance-standard",
+      "confidence": "high",
+      "claim_ar": "الحوكمة الأقوى للماء تجمع وضوح المسؤوليات، الإدارة على المقياس المناسب، بيانات قابلة للمشاركة، تمويلًا وصيانة، نزاهة وشفافية، مشاركة، إدارة للمفاضلات، وتقييمًا دوريًا.",
+      "claim_en": "Stronger water governance combines clear responsibilities, management at appropriate scales, shareable data, finance and maintenance, integrity and transparency, participation, trade-off management, and regular evaluation.",
+      "sources": [
+        "R05",
+        "R08",
+        "R10"
+      ],
+      "limits_ar": "هذه مبادئ معيارية وتشغيلية؛ نجاحها يعتمد على التنفيذ والقدرة والسياق، وليس على وجودها في وثيقة.",
+      "limits_en": "These are normative and operational principles; success depends on implementation, capacity, and context rather than their presence in a document.",
+      "would_change_ar": "تحتاج القائمة إلى تعديل إذا قدمت تقييمات التطبيق أدلة متكررة على أن بعض العناصر غير ضرورية أو أن عناصر مفقودة أكثر حسمًا.",
+      "would_change_en": "The list should be revised if implementation evaluations repeatedly show some elements unnecessary or other omitted elements decisive."
+    },
+    {
+      "id": "C08",
+      "type": "cooperation",
+      "confidence": "high",
+      "claim_ar": "المياه المشتركة لا تقود حتمًا إلى الحرب؛ الاتفاقات والهيئات المشتركة وتبادل البيانات وآليات التوزيع والإنذار تستطيع تحويل الاعتماد المتبادل إلى تعاون، مع بقاء مخاطر اللامساواة والتوتر.",
+      "claim_en": "Shared waters do not inevitably produce war; agreements, joint bodies, data exchange, allocation mechanisms, and early warning can turn interdependence into cooperation, while inequality and tension remain real risks.",
+      "sources": [
+        "R08",
+        "R10"
+      ],
+      "limits_ar": "وجود اتفاق أو هيئة لا يضمن التنفيذ أو المساواة، وقد تخفي مؤشرات التعاون تفاوتًا في القوة أو الوصول.",
+      "limits_en": "An agreement or joint body does not guarantee implementation or equality, and formal cooperation can conceal power or access asymmetries.",
+      "would_change_ar": "تتغير الصياغة إذا أظهرت بيانات نزاعات محسنة أن آليات التعاون لا تقلل المخاطر بعد ضبط العلاقات السياسية.",
+      "would_change_en": "The formulation would change if improved conflict data showed cooperation mechanisms failing to reduce risk after political relations are controlled."
+    },
+    {
+      "id": "C09",
+      "type": "case-study",
+      "confidence": "high",
+      "claim_ar": "مأرب مثال على نظام هيدرولوجي طويل العمر تشكل عبر مراحل من البناء والإصلاح ورفع المنشأة والتعامل مع الطمي؛ لا يصح عرضه كجدار عبقري واحد انهار بسبب واحد بسيط.",
+      "claim_en": "Ma’rib is evidence of a long-lived hydrological system shaped through construction phases, repairs, raising, and sediment management; it should not be reduced to one ingenious wall destroyed by one simple cause.",
+      "sources": [
+        "R15",
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "limits_ar": "السجل الأثري ناقص، والنص القرآني يقرر معنى الإعراض والعاقبة ولا يقدم تقريرًا هندسيًا تفصيليًا عن التسلسل السببي.",
+      "limits_en": "The archaeological record is incomplete, and the Qur’anic passage provides a moral account of turning away and consequence, not an engineering chronology.",
+      "would_change_ar": "تتغير الخلاصة مع حفريات أو تأريخ أو نمذجة رسوبية تعيد بناء المراحل والاختلالات على نحو مختلف.",
+      "would_change_en": "The conclusion would change with excavation, dating, or sediment models that substantially revise the sequence of construction, repair, and failure."
+    },
+    {
+      "id": "C10",
+      "type": "methodological",
+      "confidence": "high",
+      "claim_ar": "القراءة القرآنية تضيف أسئلة الشكر والقسط والأمانة والعاقبة إلى تحليل الماء، لكنها لا تعوض قياس التصريف أو فحص التربة أو دراسة النقوش والمؤسسات؛ الفصل بين المقامين شرط للصدق.",
+      "claim_en": "A Qur’anic reading adds questions of gratitude, justice, stewardship, and consequence to water analysis, but it cannot replace flow measurement, soil analysis, epigraphy, or institutional research; keeping the levels distinct is a condition of honesty.",
+      "sources": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R16",
+        "R19",
+        "R20"
+      ],
+      "limits_ar": "هذه قاعدة منهجية للموقع وليست نتيجة تجريبية يمكن إثباتها بالطريقة نفسها التي تثبت بها ظاهرة مادية.",
+      "limits_en": "This is a methodological rule for the publication, not an empirical finding established in the same manner as a physical process.",
+      "would_change_ar": "قد تتعدل طريقة الصياغة مع نقد منهجي أقوى، لكن الفصل بين نوع الدليل ونوع الاستنتاج يبقى مطلوبًا.",
+      "would_change_en": "The wording may change under stronger methodological criticism, while the need to separate evidence types from inference types remains."
+    }
+  ],
+  "sources": [
+    {
+      "id": "R01",
+      "title_ar": "القرآن الكريم، سورة المؤمنون، الآية 18",
+      "title_en": "Qur’an 23:18",
+      "url": "https://quran.com/23/18",
+      "type": "نص قرآني / Qur’anic text",
+      "note_ar": "النص الذي يربط إنزال الماء بالقدر وإسكانه في الأرض؛ يُستخدم هنا لبناء السؤال الأخلاقي، لا لقياس نظام هيدرولوجي.",
+      "note_en": "The verse links water with measure and emplacement in the earth; used here for ethical framing, not as a hydrological dataset."
+    },
+    {
+      "id": "R02",
+      "title_ar": "القرآن الكريم، سورة الرحمن، الآيات 7–9",
+      "title_en": "Qur’an 55:7–9",
+      "url": "https://quran.com/55/7-9",
+      "type": "نص قرآني / Qur’anic text",
+      "note_ar": "مرجع مفهوم الميزان والقسط وعدم الإخسار؛ لا يُستعمل بديلًا عن تحليل المؤسسات.",
+      "note_en": "The textual basis for balance, justice, and non-diminution; not a substitute for institutional analysis."
+    },
+    {
+      "id": "R03",
+      "title_ar": "القرآن الكريم، سورة سبأ، الآيات 15–17",
+      "title_en": "Qur’an 34:15–17",
+      "url": "https://quran.com/34/15-17",
+      "type": "نص قرآني / Qur’anic text",
+      "note_ar": "يعرض نعمة سبأ، وأمر الشكر، ثم سيل العرم؛ تُفصل الدلالة الوعظية عن إعادة البناء الأثري لأسباب التحول.",
+      "note_en": "The Saba passage links organised abundance, gratitude, and the flood; its moral meaning is kept distinct from archaeological causal reconstruction."
+    },
+    {
+      "id": "R04",
+      "title_ar": "القرآن الكريم، سورة الزخرف، الآية 51",
+      "title_en": "Qur’an 43:51",
+      "url": "https://quran.com/43/51",
+      "type": "نص قرآني / Qur’anic text",
+      "note_ar": "يستعمل فرعون الملك والأنهار في خطاب الشرعية؛ وهو مدخل لتحليل تحويل المورد إلى حجة سلطة.",
+      "note_en": "Pharaoh invokes kingship and rivers as political legitimation, providing a textual entry into resource-based claims of authority."
+    },
+    {
+      "id": "R05",
+      "title_ar": "مبادئ منظمة التعاون الاقتصادي والتنمية لحوكمة المياه",
+      "title_en": "OECD Principles on Water Governance",
+      "url": "https://www.oecd.org/en/topics/sub-issues/water-governance/the-oecd-principles-on-water-governance-and-implementation-strategy.html",
+      "type": "معيار حكومي دولي / Intergovernmental governance standard",
+      "note_ar": "اثنا عشر مبدأ تشمل وضوح المسؤوليات، المقياس المناسب، البيانات، التمويل، النزاهة، المشاركة، المفاضلات، والمراقبة.",
+      "note_en": "Twelve principles covering roles, scale, data, finance, integrity, participation, trade-offs, and monitoring."
+    },
+    {
+      "id": "R06",
+      "title_ar": "منظمة الأغذية والزراعة: إدارة المياه الزراعية",
+      "title_en": "FAO: Agricultural Water Management",
+      "url": "https://www.fao.org/land-water/water/agricultural-water-management/en",
+      "type": "مصدر رسمي / Official data and policy source",
+      "note_ar": "يضع الزراعة في موقع أكبر مستخدم للمياه العذبة عالميًا، ويصل إدارة الماء بالأمن الغذائي والقدرة على الصمود.",
+      "note_en": "Identifies agriculture as the largest global freshwater user and connects water management to food security and resilience."
+    },
+    {
+      "id": "R07",
+      "title_ar": "منظمة الأغذية والزراعة: مؤشرا كفاءة استخدام المياه والإجهاد المائي ضمن الهدف السادس",
+      "title_en": "FAO SDG 6: Water-use efficiency and water stress",
+      "url": "https://www.fao.org/sustainable-development-goals-data-portal/data/indicators/642-water-stress/sdg-6-indicators-of-water-use-efficiency-and-water-stress/en",
+      "type": "بيانات رسمية / Official indicator data",
+      "note_ar": "مصدر حديث لقياس الإجهاد المائي وحصص القطاعات من السحب، مع تباين إقليمي كبير.",
+      "note_en": "Current official indicators for water stress and sectoral withdrawals, with large regional variation."
+    },
+    {
+      "id": "R08",
+      "title_ar": "تقرير الأمم المتحدة العالمي عن تنمية الموارد المائية 2024: الماء من أجل الازدهار والسلام",
+      "title_en": "UN World Water Development Report 2024: Water for Prosperity and Peace",
+      "url": "https://www.unesco.org/reports/wwdr/en/2024/peace-prosperity",
+      "type": "تقرير أممي / UN flagship report",
+      "note_ar": "يربط أمن المياه والعدالة في الوصول بالازدهار والسلام، ويحذر من أثر اللامساواة في الاستقرار الاجتماعي.",
+      "note_en": "Links water security and equitable access with prosperity and peace, while warning that inequality can undermine stability."
+    },
+    {
+      "id": "R09",
+      "title_ar": "الهيئة الحكومية الدولية المعنية بتغير المناخ، التقييم السادس، الفصل الرابع: المياه",
+      "title_en": "IPCC AR6 WGII, Chapter 4: Water",
+      "url": "https://www.ipcc.ch/report/ar6/wg2/chapter/chapter-4/",
+      "type": "تقييم علمي دولي / International scientific assessment",
+      "note_ar": "يقيّم أثر تغير المناخ في الدورة المائية ومخاطر الندرة والفيضانات والتكيف، مع درجات ثقة معلنة.",
+      "note_en": "Assesses climate-driven changes in the water cycle, scarcity, floods, and adaptation with explicit confidence levels."
+    },
+    {
+      "id": "R10",
+      "title_ar": "لجنة الأمم المتحدة الاقتصادية لأوروبا: التقدم في التعاون بشأن المياه العابرة للحدود 2020–2023",
+      "title_en": "UNECE: Progress on Transboundary Water Cooperation 2020–2023",
+      "url": "https://unece.org/info/publications/pub/397865",
+      "type": "تقرير اتفاقية دولية / Treaty implementation report",
+      "note_ar": "يوضح واجبات الاستخدام المعقول والمنصف، والاتفاقات المشتركة، والهيئات المشتركة، وتبادل البيانات.",
+      "note_en": "Documents reasonable and equitable use, specific agreements, joint bodies, and data exchange under the Water Convention."
+    },
+    {
+      "id": "R11",
+      "title_ar": "الجمعية العامة للأمم المتحدة: الحقان في مياه الشرب المأمونة وخدمات الصرف الصحي، القرار A/RES/80/216",
+      "title_en": "UN General Assembly Resolution A/RES/80/216 on the human rights to safe drinking water and sanitation",
+      "url": "https://digitallibrary.un.org/record/4098509",
+      "type": "قرار أممي / UN resolution",
+      "note_ar": "يؤكد الإطار الحقوقي المعاصر: الوصول المأمون والمقبول والميسور ليس مجرد مكرمة إدارية.",
+      "note_en": "Affirms the contemporary rights framework: safe, acceptable, affordable access is not merely administrative discretion."
+    },
+    {
+      "id": "R12",
+      "title_ar": "أوستروم ولام ولي: أداء نظم الري ذاتية الإدارة في نيبال",
+      "title_en": "Ostrom, Lam & Lee (1994), The Performance of Self-Governing Irrigation Systems in Nepal",
+      "url": "https://doi.org/10.3233/HSM-1994-13305",
+      "type": "بحث محكّم / Peer-reviewed study",
+      "note_ar": "اختبار مؤسسي يقوض افتراض أن الدولة المركزية هي الطريق الوحيد لإدارة مورد ري مشترك.",
+      "note_en": "An institutional study challenging the assumption that only central government can manage shared irrigation resources."
+    },
+    {
+      "id": "R13",
+      "title_ar": "باستاكوتي وشيفاكوتي: القواعد والعمل الجماعي في نظم الري في نيبال",
+      "title_en": "Bastakoti & Shivakoti (2012), Rules and collective action in Nepal irrigation systems",
+      "url": "https://doi.org/10.1017/S1744137411000452",
+      "type": "بحث محكّم / Peer-reviewed study",
+      "note_ar": "يقارن تكوين القواعد وآليات الإنفاذ في نظم يديرها المزارعون وأخرى تديرها الوكالات.",
+      "note_en": "Compares rule formation and enforcement in farmer-managed and agency-managed systems."
+    },
+    {
+      "id": "R14",
+      "title_ar": "ديفيز: معضلة فيتفوجل والإدارة اللامركزية للري",
+      "title_en": "Davies (2009), Wittfogel’s dilemma: heterarchy and irrigation management",
+      "url": "https://doi.org/10.1080/00438240802666465",
+      "type": "بحث أثري/أنثروبولوجي محكّم / Peer-reviewed archaeology and anthropology",
+      "note_ar": "ينتقد الصيغ التبسيطية لنظرية الاستبداد الهيدروليكي، مع إبقاء السؤال مفتوحًا عن شروط نشوء بؤر السلطة.",
+      "note_en": "Critiques simplistic hydraulic-despotism claims while retaining the question of when irrigation contributes to loci of authority."
+    },
+    {
+      "id": "R15",
+      "title_ar": "هاروَر: هل ماتت الفرضية الهيدروليكية؟ الري والتغير الاجتماعي في اليمن القديم",
+      "title_en": "Harrower (2009), Is the hydraulic hypothesis dead yet? Irrigation and social change in ancient Yemen",
+      "url": "https://doi.org/10.1080/00438240802668354",
+      "type": "بحث أثري محكّم / Peer-reviewed archaeology",
+      "note_ar": "يرفض الحتمية الأحادية، ويبين مع ذلك أهمية أنظمة الري الكبيرة في تشكيل الدولة والهيبة السياسية بجنوب الجزيرة.",
+      "note_en": "Rejects one-cause determinism while retaining the importance of large irrigation systems for state formation and ideological prestige in ancient South Arabia."
+    },
+    {
+      "id": "R16",
+      "title_ar": "اليونسكو: معالم مملكة سبأ القديمة، مأرب",
+      "title_en": "UNESCO World Heritage Centre: Landmarks of the Ancient Kingdom of Saba, Marib",
+      "url": "https://whc.unesco.org/en/list/1700/",
+      "type": "سجل تراث عالمي رسمي / Official World Heritage record",
+      "note_ar": "يوثق سبعة مواقع، إدارة مركزية معقدة، ومنظومة ري واسعة ارتبطت بسد مأرب وواحة اصطناعية كبرى.",
+      "note_en": "Documents seven sites, complex central administration, and extensive irrigation linked to the Ma’rib dam and a major artificial oasis."
+    },
+    {
+      "id": "R17",
+      "title_ar": "فوغت: الحالة البحثية الراهنة للسد العظيم في مأرب بعد حملة 2005/2006",
+      "title_en": "Vogt (2023), Research status of the Great Dam of Ma’rib after the 2005/2006 campaign",
+      "url": "https://doi.org/10.34780/f7ge-f0u9",
+      "type": "بحث أثري / Archaeological research",
+      "note_ar": "يعرض تطور البنية، والمصارف، وأعمال الإصلاح، وطبقات أقدم؛ وهو دليل على تاريخ تقني متدرج لا منشأة لحظية.",
+      "note_en": "Examines architectural evolution, sluices, repairs, and earlier phases—evidence for a layered technical history rather than a one-off structure."
+    },
+    {
+      "id": "R18",
+      "title_ar": "غاربريخت وغاربريخت: الترسب خلف السدود في العصور القديمة",
+      "title_en": "Garbrecht & Garbrecht, Siltation Behind Dams in Antiquity",
+      "url": "https://doi.org/10.1061/40738(140)6",
+      "type": "بحث هندسي تاريخي / Historical engineering study",
+      "note_ar": "يعرض تراكم الطمي في مأرب ورفع السد وتعزيزاته، بما يكشف أن الصيانة والتكيف جزء من عمر المنشأة.",
+      "note_en": "Examines sedimentation, dam raising, and structural adaptation at Ma’rib, showing maintenance as part of infrastructure life."
+    },
+    {
+      "id": "R19",
+      "title_ar": "جاكوبسن وآدامز: الملح والطمي في زراعة بلاد الرافدين القديمة",
+      "title_en": "Jacobsen & Adams (1958), Salt and Silt in Ancient Mesopotamian Agriculture",
+      "url": "https://doi.org/10.1126/science.128.3334.1251",
+      "type": "بحث محكّم / Peer-reviewed study",
+      "note_ar": "مرجع كلاسيكي في أثر الملوحة والترسب في الزراعة المروية القديمة؛ لا يكفي وحده لتفسير تاريخ منطقة كاملة.",
+      "note_en": "A classic study of salinity and silt in ancient irrigated agriculture; insufficient by itself as a total explanation of regional history."
+    },
+    {
+      "id": "R20",
+      "title_ar": "آرتزي وهليل: دفاع عن نظرية التملح التدريجي في جنوب بلاد الرافدين",
+      "title_en": "Artzy & Hillel (1988), Progressive soil salinization in ancient southern Mesopotamia",
+      "url": "https://doi.org/10.1002/gea.3340030306",
+      "type": "بحث محكّم / Peer-reviewed geoarchaeology",
+      "note_ar": "يشرح آليات التملح وتدهور التربة في الأودية الجافة ضعيفة الصرف.",
+      "note_en": "Explains salinization and soil degradation in poorly drained arid river valleys."
+    },
+    {
+      "id": "R21",
+      "title_ar": "كلاسن وإيفانز: إدارة المياه من أعلى ومن أسفل في أنغكور",
+      "title_en": "Klassen & Evans (2020), Top-down and bottom-up water management at Angkor",
+      "url": "https://doi.org/10.1016/j.jaa.2020.101166",
+      "type": "بحث أثري محكّم مفتوح / Open peer-reviewed archaeology",
+      "note_ar": "يكشف تعايش البنية المركزية والمجتمعية ثم انتقالًا تدريجيًا نحو تركّز الأرض والإدارة؛ مثال على تغير المؤسسات عبر الزمن.",
+      "note_en": "Shows coexistence of state and community systems followed by increasing concentration of land and management over time."
+    }
+  ],
+  "license_note": "Page text is copyright Ahmed Alhafiz. External sources retain their own rights. Metadata may be reused with attribution.",
+  "citation": "Alhafiz, Ahmed. “Water, Civilization and Power.” Version 1.0, 2 September 2026."
+}

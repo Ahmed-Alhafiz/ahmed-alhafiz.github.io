@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this dossier or its claim ledger, cite it using the metadata below."
+title: "Water, Civilization and Power: When Does Resource Governance Produce Justice—and When Does It Become Control?"
+type: article
+authors:
+  - family-names: "Alhafiz"
+    given-names: "Ahmed"
+    name-particle: ""
+version: "1.0"
+date-released: "2026-09-02"
+url: "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/"
+repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
+abstract: "A bilingual evidence-led dossier separating water resource conditions, infrastructure, data, allocation rules, authority, accountability, maintenance, and resilience."
+keywords:
+  - water governance
+  - hydraulic systems
+  - political power
+  - irrigation institutions
+  - Ma'rib
+  - Mesopotamia
+  - Qur'anic ethics
+license: "CC-BY-NC-ND-4.0"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Alhafiz"
+      given-names: "Ahmed"
+  title: "Water, Civilization and Power: When Does Resource Governance Produce Justice—and When Does It Become Control?"
+  year: 2026
+  month: 9
+  version: "1.0"
+  url: "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/"

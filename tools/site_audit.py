@@ -130,11 +130,15 @@ def main()->int:
           'research-status/index.html':('en','https://ahmed-alhafiz.github.io/en/research-status/'),
           'articles/ratq-fatq-big-bang/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/'),
           'articles/ratq-fatq-big-bang/evidence/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/evidence/'),
+          'articles/water-civilization-power/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/'),
+          'articles/water-civilization-power/evidence/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/evidence/'),
           'en/articles/index.html':('ar','https://ahmed-alhafiz.github.io/articles/'),
           'en/methodology/index.html':('ar','https://ahmed-alhafiz.github.io/methodology/'),
           'en/research-status/index.html':('ar','https://ahmed-alhafiz.github.io/research-status/'),
           'en/articles/ratq-fatq-big-bang/index.html':('ar','https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/'),
           'en/articles/ratq-fatq-big-bang/evidence/index.html':('ar','https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/evidence/'),
+          'en/articles/water-civilization-power/index.html':('ar','https://ahmed-alhafiz.github.io/articles/water-civilization-power/'),
+          'en/articles/water-civilization-power/evidence/index.html':('ar','https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/'),
         }
         if rel.as_posix() in paired:
             code,url=paired[rel.as_posix()]
@@ -167,7 +171,7 @@ def main()->int:
         else:
             try:ET.parse(p)
             except Exception as e:errors.append(f'{f}: invalid XML: {e}')
-    for f in ['articles/feed.json','en/articles/feed.json','articles/research-index.json','articles/ratq-fatq-big-bang/evidence/claims.json']:
+    for f in ['articles/feed.json','en/articles/feed.json','articles/research-index.json','articles/ratq-fatq-big-bang/evidence/claims.json','articles/water-civilization-power/evidence/claims.json']:
         p=root/f
         if not p.exists():errors.append(f'{f}: missing')
         else:

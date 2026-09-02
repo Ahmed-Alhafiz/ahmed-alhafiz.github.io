@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">سلسلة الماء والسلطة والعدل</title>
+<desc id="desc">خريطة من ست طبقات: المورد والتقلب، البنية التحتية، البيانات والقياس، التخصيص والقواعد، السلطة والمساءلة، الصيانة والقدرة على الصمود. توضح أن الماء لا ينتج شكلا سياسيا واحدا، بل تمر آثاره عبر المؤسسات.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7f3ea"/><stop offset="1" stop-color="#ebe3d6"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".12"/></filter>
+  <style>
+    text{font-family:"Noto Sans Arabic","Arial",sans-serif;fill:#172536}
+    .small{font-size:22px;fill:#52606d}
+    .num{font-size:19px;font-weight:700;fill:#fff}
+    .head{font-size:28px;font-weight:700}
+    .sub{font-size:20px;fill:#5b6873}
+    .arrow{stroke:#a86843;stroke-width:5;fill:none;marker-end:url(#end)}
+  </style>
+  <marker id="end" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#a86843"/></marker>
+</defs>
+<rect width="1200" height="720" rx="34" fill="url(#bg)"/>
+<text x="600" y="58" text-anchor="middle" class="head" font-size="34">سلسلة الماء — السلطة — العدل</text>
+<text x="600" y="94" text-anchor="middle" class="small">لا يخلق المورد نظامًا سياسيًا وحده؛ تمر آثاره عبر ست طبقات مؤسسية</text>
+<g filter="url(#shadow)">
+  <g transform="translate(70 150)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="260" cy="38" r="22" fill="#19364d"/><text x="260" y="45" text-anchor="middle" class="num">١</text>
+    <text x="265" y="82" text-anchor="end" class="head">المورد والتقلب</text>
+    <text x="265" y="116" text-anchor="end" class="sub">وفرة، ندرة، موسم، فيضان، جفاف</text>
+  </g>
+  <g transform="translate(450 150)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="260" cy="38" r="22" fill="#19364d"/><text x="260" y="45" text-anchor="middle" class="num">٢</text>
+    <text x="265" y="82" text-anchor="end" class="head">البنية التحتية</text>
+    <text x="265" y="116" text-anchor="end" class="sub">سدود، قنوات، صرف، تخزين</text>
+  </g>
+  <g transform="translate(830 150)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="260" cy="38" r="22" fill="#19364d"/><text x="260" y="45" text-anchor="middle" class="num">٣</text>
+    <text x="265" y="82" text-anchor="end" class="head">البيانات والقياس</text>
+    <text x="265" y="116" text-anchor="end" class="sub">تدفق، نوعية، حصة، سجل، إنذار</text>
+  </g>
+  <g transform="translate(830 410)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="260" cy="38" r="22" fill="#a86843"/><text x="260" y="45" text-anchor="middle" class="num">٤</text>
+    <text x="265" y="82" text-anchor="end" class="head">التخصيص والقواعد</text>
+    <text x="265" y="116" text-anchor="end" class="sub">من يأخذ؟ متى؟ وبأي أولوية؟</text>
+  </g>
+  <g transform="translate(450 410)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="260" cy="38" r="22" fill="#a86843"/><text x="260" y="45" text-anchor="middle" class="num">٥</text>
+    <text x="265" y="82" text-anchor="end" class="head">السلطة والمساءلة</text>
+    <text x="265" y="116" text-anchor="end" class="sub">قرار، اعتراض، شفافية، إنفاذ</text>
+  </g>
+  <g transform="translate(70 410)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="260" cy="38" r="22" fill="#23634b"/><text x="260" y="45" text-anchor="middle" class="num">٦</text>
+    <text x="265" y="82" text-anchor="end" class="head">الصيانة والصمود</text>
+    <text x="265" y="116" text-anchor="end" class="sub">تمويل، إصلاح، تعلم، تكيف</text>
+  </g>
+</g>
+<path class="arrow" d="M370 222 H440"/>
+<path class="arrow" d="M750 222 H820"/>
+<path class="arrow" d="M980 305 V397"/>
+<path class="arrow" d="M830 482 H760"/>
+<path class="arrow" d="M450 482 H380"/>
+<path class="arrow" d="M220 410 V315"/>
+<path d="M220 315 C220 345 600 365 980 315" stroke="#5f7c8e" stroke-width="3" stroke-dasharray="8 8" fill="none"/>
+<text x="600" y="635" text-anchor="middle" class="head">النتيجة ليست حتمية</text>
+<text x="600" y="673" text-anchor="middle" class="small">عدل وتعاون وقدرة على الصمود — أو احتكار وهشاشة وسيطرة — بحسب تصميم المؤسسات وعملها</text>
+</svg>
