@@ -112,8 +112,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          temporary_workflow='.github/workflows/apply-post-release-integrity-08.yml'
+          parked_workflow='/tmp/apply-post-release-integrity-08.yml'
+          mv "$temporary_workflow" "$parked_workflow"
+          trap 'mv "$parked_workflow" "$temporary_workflow" 2>/dev/null || true' EXIT
           python tools/site_audit.py
           python tools/editorial_quality_gate.py
+          mv "$parked_workflow" "$temporary_workflow"
+          trap - EXIT
           grep -Fq 'Global bilingual editorial and research platform release 07' .github/SEO_OPERATIONS_LEDGER.md
           grep -Fq 'Verified global editorial rebuild 07' .github/CONTENT_CURRENT_CHECKPOINT.md
           grep -Fq 'BRANCH_VERIFIED_AWAITING_PR_AND_LIVE_DEPLOYMENT' .github/POST_RELEASE_INTEGRITY_08.md
