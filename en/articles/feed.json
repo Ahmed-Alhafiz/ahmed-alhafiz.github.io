@@ -1,0 +1,30 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Ahmed Alhafiz Research Desk",
+  "home_page_url": "https://ahmed-alhafiz.github.io/en/articles/",
+  "feed_url": "https://ahmed-alhafiz.github.io/en/articles/feed.json",
+  "language": "en",
+  "authors": [
+    {
+      "name": "Ahmed Alhafiz",
+      "url": "https://ahmed-alhafiz.github.io/en/about/"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/",
+      "url": "https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/",
+      "title": "Ratq, fatq, and the Big Bang: text, exegesis, evidence, and limits",
+      "summary": "A layered inquiry into Qur’an 21:30, classical exegesis, and hot Big Bang cosmology, separating text, observation, model, and metaphysical inference.",
+      "date_published": "2026-09-02T23:30:00+02:00",
+      "date_modified": "2026-09-02T23:30:00+02:00",
+      "tags": [
+        "extended research dossier",
+        "Quranic exegesis",
+        "cosmology",
+        "external review pending"
+      ],
+      "language": "en"
+    }
+  ]
+}

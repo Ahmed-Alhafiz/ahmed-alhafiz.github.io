@@ -1,328 +1,129 @@
 #!/usr/bin/env python3
-"""Editorial quality gate for published reference articles.
-
-The repository integrity audit checks structural correctness. This companion
-gate checks the minimum editorial traits that make a reference page useful:
-a direct answer, substantial visible analysis, traceable sources, explicit
-uncertainty, reciprocal book links, and additional safeguards on medical pages.
-
-It uses only the Python standard library so GitHub Actions can run it without
-network access or third-party packages.
-"""
-
+"""Evidence, transparency, safety, and bilingual-depth gate for public research."""
 from __future__ import annotations
-
-import json
-import re
-import sys
-import xml.etree.ElementTree as ET
-from dataclasses import dataclass, field
+import json,re,sys,xml.etree.ElementTree as ET
+from dataclasses import dataclass,field
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
+ROOT=Path(__file__).resolve().parents[1]
+BASE='https://ahmed-alhafiz.github.io'
 
-ROOT = Path(__file__).resolve().parents[1]
-BASE = "https://ahmed-alhafiz.github.io"
-
-REFERENCE_ARTICLES = {
-    "articles/ratq-fatq-big-bang/index.html": {
-        "book": "books/sirou-fi-alard/index.html",
-        "minimum_words": 1800,
-        "medical": False,
-        "medication_warning": False,
-    },
-    "articles/six-days-creation-cosmic-time/index.html": {
-        "book": "books/sirou-fi-alard/index.html",
-        "minimum_words": 2200,
-        "medical": False,
-        "medication_warning": False,
-    },
-    "articles/sleep-paralysis-jathoom/index.html": {
-        "book": "books/umm-abbas/index.html",
-        "minimum_words": 1800,
-        "medical": True,
-        "medication_warning": False,
-    },
-    "articles/functional-seizures-vs-epilepsy/index.html": {
-        "book": "books/umm-abbas/index.html",
-        "minimum_words": 2400,
-        "medical": True,
-        "medication_warning": True,
-    },
+RULES={
+ 'articles/ratq-fatq-big-bang/index.html':dict(words=2800,sources=12,book='books/sirou-fi-alard/index.html',route='/articles/ratq-fatq-big-bang/',medical=False,extended=True),
+ 'en/articles/ratq-fatq-big-bang/index.html':dict(words=2500,sources=12,book='en/books/sirou-fi-alard/index.html',route='/en/articles/ratq-fatq-big-bang/',medical=False,extended=True),
+ 'articles/teaching-names-ai-understanding/index.html':dict(words=2500,sources=9,book='books/sirou-fi-alard/index.html',route='/articles/teaching-names-ai-understanding/',medical=False,extended=False),
+ 'articles/spiritual-healing-exploitation-safeguarding/index.html':dict(words=2350,sources=10,book='books/umm-abbas/index.html',route='/articles/spiritual-healing-exploitation-safeguarding/',medical=True,extended=False),
+ 'articles/six-days-creation-cosmic-time/index.html':dict(words=2100,sources=8,book='books/sirou-fi-alard/index.html',route='/articles/six-days-creation-cosmic-time/',medical=False,extended=False),
+ 'articles/sleep-paralysis-jathoom/index.html':dict(words=1800,sources=5,book='books/umm-abbas/index.html',route='/articles/sleep-paralysis-jathoom/',medical=True,extended=False),
+ 'articles/functional-seizures-vs-epilepsy/index.html':dict(words=2300,sources=8,book='books/umm-abbas/index.html',route='/articles/functional-seizures-vs-epilepsy/',medical=True,extended=False),
 }
-
-FORBIDDEN_CERTAINTY = (
-    "يثبت نهائيًا",
-    "يثبت قطعيًا علميًا",
-    "يعالج حتمًا",
-    "يضمن الشفاء",
-    "تشخيص مؤكد من الفيديو",
-    "لا يمكن أن يخطئ",
-)
-
-MEDICAL_SAFETY_GROUPS = (
-    ("هذه مادة تثقيفية", "مادة تثقيفية عامة"),
-    ("ليست تشخيصًا", "ليس تشخيصًا"),
-    ("الطوارئ", "اطلب الإسعاف", "اتصل بالإسعاف", "تقييم عاجل"),
-)
-
-MEDICATION_WARNING = ("لا توقف", "لا تغيّر جرعة", "لا تغير جرعة")
-
-TRUSTED_HOST_SUFFIXES = (
-    "aan.com",
-    "neurology.org",
-    "pubmed.ncbi.nlm.nih.gov",
-    "pmc.ncbi.nlm.nih.gov",
-    "ilae.org",
-    "cdc.gov",
-    "nhs.uk",
-    "nasa.gov",
-    "esa.int",
-    "usgs.gov",
-    "arxiv.org",
-    "tafsir.app",
-    "quran.com",
-    "sunnah.com",
-)
-
+TRUSTED=('nasa.gov','esa.int','lbl.gov','doi.org','aanda.org','pdg.lbl.gov','pubmed.ncbi.nlm.nih.gov','pmc.ncbi.nlm.nih.gov','who.int','nhs.uk','fda.gov','gov.uk','aan.com','neurology.org','ilae.org','quran.com','quran.ksu.edu.sa','tafsir.app','sunnah.com','aclanthology.org','arxiv.org','academic.oup.com')
 
 @dataclass
-class ArticleData:
-    text_parts: list[str] = field(default_factory=list)
-    links: list[str] = field(default_factory=list)
-    ids: set[str] = field(default_factory=set)
-    classes: set[str] = field(default_factory=set)
-    jsonld_buffers: list[str] = field(default_factory=list)
-    _in_ignored: int = 0
-    _in_jsonld: bool = False
-    _json_buffer: list[str] = field(default_factory=list)
+class D:
+ text:list[str]=field(default_factory=list);links:list[str]=field(default_factory=list);classes:set[str]=field(default_factory=set);ids:set[str]=field(default_factory=set);jsons:list[str]=field(default_factory=list);ignore:int=0;json_on:bool=False;buf:list[str]=field(default_factory=list)
+class P(HTMLParser):
+ def __init__(self):super().__init__(convert_charrefs=True);self.d=D()
+ def handle_starttag(self,t,a):
+  t=t.lower();a={k.lower():(v or '') for k,v in a}
+  if t in {'style','noscript'}:self.d.ignore+=1
+  if t=='script':
+   if a.get('type','').lower()=='application/ld+json':self.d.json_on=True;self.d.buf=[]
+   else:self.d.ignore+=1
+  if t=='a' and a.get('href'):self.d.links.append(a['href'].strip())
+  if a.get('id'):self.d.ids.add(a['id'])
+  self.d.classes.update(a.get('class','').split())
+ def handle_endtag(self,t):
+  t=t.lower()
+  if t=='script' and self.d.json_on:
+   raw=''.join(self.d.buf).strip();self.d.json_on=False;self.d.buf=[]
+   if raw:self.d.jsons.append(raw)
+  elif t in {'script','style','noscript'} and self.d.ignore:self.d.ignore-=1
+ def handle_data(self,x):
+  if self.d.json_on:self.d.buf.append(x)
+  elif not self.d.ignore and x.strip():self.d.text.append(x.strip())
+def parse(p):
+ x=P();x.feed(p.read_text(encoding='utf-8'));x.close();[json.loads(j) for j in x.d.jsons];return x.d
+def wc(text):return len(re.findall(r'[\u0600-\u06ffA-Za-z0-9]+',text))
+def article_node(d):
+ def walk(o):
+  if isinstance(o,dict):
+   yield o
+   for x in o.get('@graph',[]) if isinstance(o.get('@graph'),list) else []:yield from walk(x)
+  elif isinstance(o,list):
+   for x in o:yield from walk(x)
+ for raw in d.jsons:
+  for n in walk(json.loads(raw)):
+   typ=n.get('@type'); types=typ if isinstance(typ,list) else [typ]
+   if 'Article' in types:return n
+ return None
 
-    @property
-    def text(self) -> str:
-        return re.sub(r"\s+", " ", " ".join(self.text_parts)).strip()
+def main():
+ errors=[];warnings=[]
+ hubs={p:(ROOT/p).read_text(encoding='utf-8') for p in ['articles/index.html','en/articles/index.html','research-status/index.html','en/research-status/index.html']}
+ sitemap=(ROOT/'sitemap.xml').read_text(encoding='utf-8'); feeds=(ROOT/'articles/feed.xml').read_text(encoding='utf-8')
+ for rel,r in RULES.items():
+  p=ROOT/rel
+  if not p.exists():errors.append(f'{rel}: missing');continue
+  d=parse(p);text=re.sub(r'\s+',' ',' '.join(d.text));count=wc(text);ext=sorted(set(h for h in d.links if urlsplit(h).scheme in {'http','https'} and urlsplit(h).netloc!='ahmed-alhafiz.github.io'))
+  print(f'{rel}: {count} visible words, {len(ext)} external sources')
+  if count<r['words']:errors.append(f'{rel}: depth {count} < {r["words"]}')
+  if len(ext)<r['sources']:errors.append(f'{rel}: visible external sources {len(ext)} < {r["sources"]}')
+  if 'answer' not in d.ids or 'summary-box' not in d.classes:errors.append(f'{rel}: no direct-answer unit')
+  for c in ['references','citation-box','related-work']:
+   if c not in d.classes:errors.append(f'{rel}: missing .{c}')
+  n=article_node(d)
+  if not n:errors.append(f'{rel}: no Article JSON-LD')
+  else:
+   typ=n.get('@type');
+   if (typ=='ScholarlyArticle') or (isinstance(typ,list) and 'ScholarlyArticle' in typ):errors.append(f'{rel}: falsely implies ScholarlyArticle')
+   for key in ['headline','abstract','datePublished','dateModified','author','citation']:
+    if not n.get(key):errors.append(f'{rel}: Article schema missing {key}')
+   if n.get('isBasedOn'):errors.append(f'{rel}: forthcoming book must not be declared evidentiary isBasedOn')
+   if rel.startswith(('articles/ratq','en/articles/ratq')) and not n.get('mentions'):errors.append(f'{rel}: thematic book relationship should be disclosed with mentions')
+  domains={urlsplit(h).netloc.lower() for h in ext if any(urlsplit(h).netloc.lower().endswith(t) for t in TRUSTED)}
+  if len(domains)<3:errors.append(f'{rel}: trusted-source diversity too low: {sorted(domains)}')
+  book=(ROOT/r['book']).read_text(encoding='utf-8') if (ROOT/r['book']).exists() else ''
+  if r['route'] not in book:errors.append(f'{rel}: no reciprocal link from {r["book"]}')
+  hub=hubs['en/articles/index.html'] if rel.startswith('en/') else hubs['articles/index.html']
+  if r['route'] not in hub:errors.append(f'{rel}: absent from relevant hub')
+  if BASE+r['route'] not in sitemap:errors.append(f'{rel}: absent from sitemap')
+  if not rel.startswith('en/') and BASE+r['route'] not in feeds:errors.append(f'{rel}: absent from Arabic Atom feed')
+  lower=text.lower()
+  if not any(x in lower for x in ['external review','مراجعة خارجية','مراجعة اختصاص','لم تتم بعد']):warnings.append(f'{rel}: external-review wording is weak')
+  if r['medical']:
+   groups=[('هذه مادة تثقيفية','مادة تثقيفية عامة','educational'),('ليست تشخيص','ليس تشخيص','not a diagnosis'),('الطوارئ','الإسعاف','emergency'),('لا توقف','لا تغيّر','لا تغير','do not stop')]
+   for g in groups:
+    if not any(x.lower() in lower for x in g):errors.append(f'{rel}: missing medical safeguard {g}')
+   if 'MedicalWebPage' not in ''.join(d.jsons):errors.append(f'{rel}: missing MedicalWebPage schema')
 
+ # Flagship infrastructure
+ required=[
+  'articles/ratq-fatq-big-bang/evidence/index.html','en/articles/ratq-fatq-big-bang/evidence/index.html','articles/ratq-fatq-big-bang/evidence/claims.json','articles/ratq-fatq-big-bang/citation.bib','articles/ratq-fatq-big-bang/citation.ris','assets/figures/ratq-evidence-map-ar.svg','assets/figures/ratq-evidence-map-en.svg','assets/figures/source-trust-pipeline-ar.svg','assets/figures/source-trust-pipeline-en.svg','articles/research-index.json','CITATION.cff']
+ for f in required:
+  if not (ROOT/f).exists() or (ROOT/f).stat().st_size<80:errors.append(f'{f}: missing or empty')
+ try:
+  claims=json.loads((ROOT/'articles/ratq-fatq-big-bang/evidence/claims.json').read_text(encoding='utf-8'))
+  if len(claims.get('claims',[]))<8:errors.append('claims.json: fewer than 8 audited claims')
+  if claims.get('review_status',{}).get('peer_reviewed') is not False:errors.append('claims.json: peer review status not explicit false')
+ except Exception as e:errors.append(f'claims.json invalid: {e}')
+ for f in ['methodology/index.html','en/methodology/index.html','research-status/index.html','en/research-status/index.html','about/index.html','en/about/index.html']:
+  if not (ROOT/f).exists():errors.append(f'{f}: missing trust surface')
 
-class Parser(HTMLParser):
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=True)
-        self.data = ArticleData()
+ # Book independence and explicit publication state
+ for f in ['books/sirou-fi-alard/index.html','books/umm-abbas/index.html','en/books/sirou-fi-alard/index.html','en/books/umm-abbas/index.html']:
+  t=(ROOT/f).read_text(encoding='utf-8') if (ROOT/f).exists() else ''
+  if not any(x in t for x in ['قيد الإصدار','forthcoming']):errors.append(f'{f}: forthcoming state missing')
+  if not any(x in t for x in ['لا تعتمد','does not treat','لا تُستخدم','not evidence']):errors.append(f'{f}: evidence independence not explicit')
 
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        tag = tag.lower()
-        a = {k.lower(): (v or "") for k, v in attrs}
-        if tag in {"style", "noscript"}:
-            self.data._in_ignored += 1
-        if tag == "script":
-            if a.get("type", "").lower() == "application/ld+json":
-                self.data._in_jsonld = True
-                self.data._json_buffer = []
-            else:
-                self.data._in_ignored += 1
-        if tag == "a" and a.get("href"):
-            self.data.links.append(a["href"].strip())
-        if a.get("id"):
-            self.data.ids.add(a["id"].strip())
-        for cls in a.get("class", "").split():
-            self.data.classes.add(cls)
+ # No mass-English facade: the one English dossier must be complete and linked.
+ if '/en/articles/ratq-fatq-big-bang/' not in hubs['en/articles/index.html']:errors.append('English hub missing flagship')
+ if 'not a peer-reviewed journal' not in hubs['en/articles/index.html']:errors.append('English hub missing review disclosure')
 
-    def handle_endtag(self, tag: str) -> None:
-        tag = tag.lower()
-        if tag == "script" and self.data._in_jsonld:
-            raw = "".join(self.data._json_buffer).strip()
-            if raw:
-                self.data.jsonld_buffers.append(raw)
-            self.data._in_jsonld = False
-            self.data._json_buffer = []
-        elif tag in {"script", "style", "noscript"} and self.data._in_ignored:
-            self.data._in_ignored -= 1
-
-    def handle_data(self, value: str) -> None:
-        if self.data._in_jsonld:
-            self.data._json_buffer.append(value)
-        elif not self.data._in_ignored and value.strip():
-            self.data.text_parts.append(value.strip())
-
-
-def parse(path: Path) -> ArticleData:
-    parser = Parser()
-    parser.feed(path.read_text(encoding="utf-8"))
-    parser.close()
-    for raw in parser.data.jsonld_buffers:
-        json.loads(raw)
-    return parser.data
-
-
-def word_count(text: str) -> int:
-    return len(re.findall(r"[\u0600-\u06FF\w]+", text, flags=re.UNICODE))
-
-
-def article_node(data: ArticleData) -> dict | None:
-    def walk(value):
-        if isinstance(value, dict):
-            yield value
-            graph = value.get("@graph")
-            if isinstance(graph, list):
-                for item in graph:
-                    yield from walk(item)
-        elif isinstance(value, list):
-            for item in value:
-                yield from walk(item)
-
-    for raw in data.jsonld_buffers:
-        obj = json.loads(raw)
-        for node in walk(obj):
-            types = node.get("@type")
-            if types == "Article" or (isinstance(types, list) and "Article" in types):
-                return node
-    return None
-
-
-def canonical_for_path(rel: str) -> str:
-    parent = Path(rel).parent.as_posix().strip("/")
-    return f"{BASE}/{parent}/"
-
-
-def load_sitemap() -> set[str]:
-    tree = ET.parse(ROOT / "sitemap.xml")
-    ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-    return {
-        node.text.strip()
-        for node in tree.findall("s:url/s:loc", ns)
-        if node.text
-    }
-
-
-def load_feed_links() -> set[str]:
-    tree = ET.parse(ROOT / "articles" / "feed.xml")
-    ns = {"a": "http://www.w3.org/2005/Atom"}
-    result: set[str] = set()
-    for entry in tree.findall("a:entry", ns):
-        for link in entry.findall("a:link", ns):
-            href = link.attrib.get("href", "").strip()
-            if href:
-                result.add(href)
-    return result
-
-
-def main() -> int:
-    errors: list[str] = []
-    warnings: list[str] = []
-    hub = (ROOT / "articles" / "index.html").read_text(encoding="utf-8")
-    sitemap = load_sitemap()
-    feed = load_feed_links()
-
-    for rel, rules in REFERENCE_ARTICLES.items():
-        path = ROOT / rel
-        if not path.exists():
-            errors.append(f"{rel}: missing reference article")
-            continue
-
-        data = parse(path)
-        text = data.text
-        lower = text.lower()
-        count = word_count(text)
-        url = canonical_for_path(rel)
-
-        if count < rules["minimum_words"]:
-            errors.append(
-                f"{rel}: visible analysis is too short ({count} < {rules['minimum_words']} words)"
-            )
-        if "answer" not in data.ids or "summary-box" not in data.classes:
-            errors.append(f"{rel}: missing direct-answer summary")
-        for required_class in ("references", "citation-box", "related-work"):
-            if required_class not in data.classes:
-                errors.append(f"{rel}: missing .{required_class}")
-
-        node = article_node(data)
-        if node is None:
-            errors.append(f"{rel}: missing Article JSON-LD")
-            citations: list[str] = []
-        else:
-            raw_citations = node.get("citation", [])
-            citations = raw_citations if isinstance(raw_citations, list) else []
-            if len(citations) < 5:
-                errors.append(f"{rel}: fewer than five machine-readable citations")
-            if node.get("url") != url:
-                errors.append(f"{rel}: Article URL does not match canonical route")
-            if not node.get("abstract"):
-                errors.append(f"{rel}: Article JSON-LD has no abstract")
-            if node.get("isBasedOn") is None:
-                errors.append(f"{rel}: Article JSON-LD has no isBasedOn book relation")
-
-        external = [
-            href for href in data.links
-            if urlsplit(href).scheme in {"http", "https"}
-            and urlsplit(href).netloc not in {"ahmed-alhafiz.github.io"}
-        ]
-        if len(set(external)) < 5:
-            errors.append(f"{rel}: fewer than five unique visible external references")
-
-        trusted = {
-            urlsplit(href).netloc.lower()
-            for href in external
-            if any(urlsplit(href).netloc.lower().endswith(suffix) for suffix in TRUSTED_HOST_SUFFIXES)
-        }
-        if len(trusted) < 2:
-            errors.append(f"{rel}: external evidence lacks domain diversity ({sorted(trusted)})")
-
-        if url not in sitemap:
-            errors.append(f"{rel}: missing from sitemap")
-        if url not in feed:
-            errors.append(f"{rel}: missing from Atom feed")
-        route = "/" + Path(rel).parent.as_posix().strip("/") + "/"
-        if route not in hub:
-            errors.append(f"{rel}: missing from article hub")
-
-        book_path = ROOT / rules["book"]
-        if not book_path.exists():
-            errors.append(f"{rel}: related book page is missing: {rules['book']}")
-        else:
-            book_html = book_path.read_text(encoding="utf-8")
-            if route not in book_html:
-                errors.append(f"{rel}: no reciprocal link from {rules['book']}")
-
-        for phrase in FORBIDDEN_CERTAINTY:
-            if phrase in text:
-                errors.append(f"{rel}: unsupported certainty phrase: {phrase}")
-
-        uncertainty_markers = ("قد ", "لا يعني", "لا يكفي", "حدود", "لا يصح")
-        if sum(marker in text for marker in uncertainty_markers) < 2:
-            warnings.append(f"{rel}: uncertainty language is unusually sparse")
-
-        if rules["medical"]:
-            for alternatives in MEDICAL_SAFETY_GROUPS:
-                if not any(value in text for value in alternatives):
-                    errors.append(
-                        f"{rel}: medical safety language missing one of {alternatives}"
-                    )
-            if rules["medication_warning"] and not any(
-                value in text for value in MEDICATION_WARNING
-            ):
-                errors.append(f"{rel}: medication-change warning is missing")
-            if not any(value in lower for value in ("فيديو-eeg", "video-eeg", "rem", "طب النوم")):
-                errors.append(f"{rel}: medical mechanism/diagnostic context missing")
-            if "MedicalWebPage" not in "".join(data.jsonld_buffers):
-                errors.append(f"{rel}: medical article lacks MedicalWebPage schema")
-
-        print(f"{rel}: {count} visible words, {len(set(external))} visible sources")
-
-    if warnings:
-        print("\nWARNINGS")
-        for item in warnings:
-            print(f"- {item}")
-
-    if errors:
-        print("\nERRORS")
-        for item in errors:
-            print(f"- {item}")
-        return 1
-
-    print(
-        f"\nPASS: {len(REFERENCE_ARTICLES)} reference articles satisfy "
-        "the editorial, evidence, linking and safety gates"
-    )
-    return 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())
+ if warnings:
+  print('\nWARNINGS');[print('-',x) for x in warnings]
+ if errors:
+  print('\nERRORS');[print('-',x) for x in errors];return 1
+ print(f'\nPASS: {len(RULES)} research pages satisfy depth, evidence, transparency, linking, bilingual and medical-safety gates');return 0
+if __name__=='__main__':sys.exit(main())

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Ahmed Alhafiz Research Desk</title>
+  <subtitle>Full English research editions with traceable evidence and disclosed review status.</subtitle>
+  <link href="https://ahmed-alhafiz.github.io/en/articles/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://ahmed-alhafiz.github.io/en/articles/feed.json" rel="alternate" type="application/feed+json"/>
+  <link href="https://ahmed-alhafiz.github.io/en/articles/" rel="alternate" type="text/html"/>
+  <id>https://ahmed-alhafiz.github.io/en/articles/</id>
+  <updated>2026-09-02T23:30:00+02:00</updated>
+  <author><name>Ahmed Alhafiz</name><uri>https://ahmed-alhafiz.github.io/en/about/</uri></author>
+  <entry>
+    <title>Ratq, fatq, and the Big Bang: text, exegesis, evidence, and limits</title>
+    <link href="https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/"/>
+    <id>https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/</id>
+    <published>2026-09-02T23:30:00+02:00</published>
+    <updated>2026-09-02T23:30:00+02:00</updated>
+    <category term="extended research dossier"/>
+    <summary>A layered inquiry into Qur’an 21:30, classical exegesis, and hot Big Bang cosmology, separating text, observation, model, and metaphysical inference.</summary>
+  </entry>
+</feed>

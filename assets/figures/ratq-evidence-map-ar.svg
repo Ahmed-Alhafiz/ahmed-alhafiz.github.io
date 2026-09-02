@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc"><title id="title">من النص إلى الاستنتاج: لا تخلط طبقات المعرفة</title><desc id="desc">مخطط يفصل النص والتفسير والرصد والنموذج والاستنتاج، ويبين تضافر أدلة التمدد والخلفية والعناصر والبنية الكبرى.</desc><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7f4ed"/><stop offset="1" stop-color="#e8e1d5"/></linearGradient><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#687885"/></marker></defs><rect width="1200" height="760" rx="28" fill="url(#bg)"/><text x="1125" y="70" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="31" font-weight="700" fill="#141a22">من النص إلى الاستنتاج: لا تخلط طبقات المعرفة</text><text x="1125" y="106" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="17" fill="#66717c">تتغير قوة الادعاء باختلاف نوع الدليل الذي يحمله</text><g><rect x="955" y="150" width="202" height="128" rx="18" fill="#0b1724"/>
+<text x="1134" y="190" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="19" font-weight="700" fill="#fff">1 — النص</text>
+<text x="1134" y="224" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#e1e8ed">رتق ثم فتق،</text>
+<text x="1134" y="250" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#e1e8ed">والفعل منسوب إلى الله</text></g>
+<g><rect x="730" y="150" width="202" height="128" rx="18" fill="#214157"/>
+<text x="909" y="190" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="19" font-weight="700" fill="#fff">2 — التفسير</text>
+<text x="909" y="224" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#e1e8ed">فصل بعد اتصال،</text>
+<text x="909" y="250" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#e1e8ed">ومطر ونبات وغيرها</text></g>
+<g><rect x="505" y="150" width="202" height="128" rx="18" fill="#2b6076"/>
+<text x="684" y="190" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="19" font-weight="700" fill="#fff">3 — الرصد</text>
+<text x="684" y="224" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#e1e8ed">ضوء وأطياف وخرائط،</text>
+<text x="684" y="250" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#e1e8ed">ونِسَب قابلة للقياس</text></g>
+<g><rect x="280" y="150" width="202" height="128" rx="18" fill="#a65437"/>
+<text x="459" y="190" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="19" font-weight="700" fill="#fff">4 — النموذج</text>
+<text x="459" y="224" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#e1e8ed">كون حار متمدد،</text>
+<text x="459" y="250" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#e1e8ed">ومعادلات قابلة للمراجعة</text></g>
+<g><rect x="55" y="150" width="202" height="128" rx="18" fill="#5b3941"/>
+<text x="234" y="190" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="19" font-weight="700" fill="#fff">5 — الاستنتاج</text>
+<text x="234" y="224" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#e1e8ed">الخلق والمعنى،</text>
+<text x="234" y="250" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#e1e8ed">والموقف الفلسفي</text></g>
+<line x1="955" y1="214" x2="938" y2="214" stroke="#687885" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="730" y1="214" x2="713" y2="214" stroke="#687885" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="505" y1="214" x2="488" y2="214" stroke="#687885" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="280" y1="214" x2="263" y2="214" stroke="#687885" stroke-width="3" marker-end="url(#arrow)"/><text x="1125" y="340" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="25" font-weight="700" fill="#141a22">الأعمدة الرصدية المستقلة لنموذج الكون الحار</text><g><rect x="55" y="382" width="250" height="126" rx="16" fill="#fffdf8" stroke="#cfc6b9"/>
+<circle cx="92" cy="419" r="18" fill="#2b6076"/><text x="92" y="425" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#fff">A</text>
+<text x="281" y="421" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="17" font-weight="700" fill="#14202b">التمدد الكوني</text>
+<text x="281" y="454" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="13.5" fill="#65717b">الانزياح الأحمر وعلاقة</text>
+<text x="281" y="478" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="13.5" fill="#65717b">المسافة بمعدل الابتعاد</text></g>
+<g><rect x="335" y="382" width="250" height="126" rx="16" fill="#fffdf8" stroke="#cfc6b9"/>
+<circle cx="372" cy="419" r="18" fill="#2b6076"/><text x="372" y="425" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#fff">B</text>
+<text x="561" y="421" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="17" font-weight="700" fill="#14202b">الخلفية الكونية</text>
+<text x="561" y="454" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="13.5" fill="#65717b">طيف حراري وتفاوتات</text>
+<text x="561" y="478" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="13.5" fill="#65717b">ترسم الكون المبكر</text></g>
+<g><rect x="615" y="382" width="250" height="126" rx="16" fill="#fffdf8" stroke="#cfc6b9"/>
+<circle cx="652" cy="419" r="18" fill="#2b6076"/><text x="652" y="425" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#fff">C</text>
+<text x="841" y="421" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="17" font-weight="700" fill="#14202b">العناصر الخفيفة</text>
+<text x="841" y="454" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="13.5" fill="#65717b">الهيدروجين والهيليوم</text>
+<text x="841" y="478" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="13.5" fill="#65717b">وآثار التخليق النووي</text></g>
+<g><rect x="895" y="382" width="250" height="126" rx="16" fill="#fffdf8" stroke="#cfc6b9"/>
+<circle cx="932" cy="419" r="18" fill="#2b6076"/><text x="932" y="425" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#fff">D</text>
+<text x="1121" y="421" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="17" font-weight="700" fill="#14202b">البنية الكبرى</text>
+<text x="1121" y="454" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="13.5" fill="#65717b">قمم صوتية وتوزيع مجرات</text>
+<text x="1121" y="478" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="13.5" fill="#65717b">ونمو البنية عبر الزمن</text></g>
+<path d="M180 510 C180 565 520 570 520 605" fill="none" stroke="#607b89" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M460 510 C460 565 550 570 550 605" fill="none" stroke="#607b89" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M740 510 C740 565 650 570 650 605" fill="none" stroke="#607b89" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1020 510 C1020 565 680 570 680 605" fill="none" stroke="#607b89" stroke-width="3" marker-end="url(#arrow)"/><rect x="390" y="604" width="420" height="96" rx="48" fill="#0b1724"/><text x="600" y="644" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="21" font-weight="700" fill="#fff">نموذج الكون الحار المتمدد</text><text x="600" y="674" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13.5" fill="#c8d5dd">قوي رصديًا — لكنه ليس تعريفًا للخلق من العدم</text><text x="1125" y="729" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#7b858d">Ahmed Alhafiz · Research Desk · 2026</text></svg>

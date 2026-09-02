@@ -1,20 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ar">
-  <title>مقالات أحمد الحافظ</title>
-  <subtitle>دراسات أصلية موثقة في الدين والعلم، علم النفس، الأدب، التاريخ والحضارة.</subtitle>
+  <title>مركز أبحاث أحمد الحافظ</title>
+  <subtitle>ملفات بحثية وموجزات أدلة مع مصادر وحالة مراجعة معلنة.</subtitle>
   <link href="https://ahmed-alhafiz.github.io/articles/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://ahmed-alhafiz.github.io/articles/feed.json" rel="alternate" type="application/feed+json"/>
   <link href="https://ahmed-alhafiz.github.io/articles/" rel="alternate" type="text/html"/>
   <id>https://ahmed-alhafiz.github.io/articles/</id>
-  <updated>2026-09-01T23:00:00+02:00</updated>
+  <updated>2026-09-02T23:30:00+02:00</updated>
   <author><name>أحمد الحافظ</name><uri>https://ahmed-alhafiz.github.io/about/</uri></author>
+  <entry>
+    <title>الرتق والفتق والانفجار العظيم: تحقيق في النص والتفسير وأدلة علم الكون</title>
+    <link href="https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/"/>
+    <id>https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/</id>
+    <published>2026-09-02T23:30:00+02:00</published>
+    <updated>2026-09-02T23:30:00+02:00</updated>
+    <category term="ملف بحثي موسع"/>
+    <summary>ملف موسع يفصل النص القرآني وتاريخ التفسير عن الرصد والنموذج العلمي والاستنتاج الفلسفي، مع خريطة ادعاء ودليل ونسخة إنجليزية.</summary>
+  </entry>
+  <entry>
+    <title>تعليم الأسماء والذكاء الاصطناعي: هل تفهم الآلة الكلمات أم تتنبأ بها؟</title>
+    <link href="https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/"/>
+    <id>https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/</id>
+    <published>2026-09-02T23:10:00+02:00</published>
+    <updated>2026-09-02T23:10:00+02:00</updated>
+    <category term="ملف بحثي موسع"/>
+    <summary>دراسة تفصل بين الرمز والعلاقة الإحصائية والتمثيل المفهومي والتأسيس في العالم والقصد والمسؤولية.</summary>
+  </entry>
+  <entry>
+    <title>حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض؟</title>
+    <link href="https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/"/>
+    <id>https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/</id>
+    <published>2026-09-02T23:05:00+02:00</published>
+    <updated>2026-09-02T23:05:00+02:00</updated>
+    <category term="ملف حماية وصحة"/>
+    <summary>ملف حماية يميز الدعم الروحي الطوعي عن الإكراه والعزل والاستغلال واللمس بلا موافقة وتأخير الرعاية الطبية.</summary>
+  </entry>
   <entry>
     <title>النوبات الوظيفية والصرع: كيف يفرّق الأطباء بينهما؟</title>
     <link href="https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/"/>
     <id>https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/</id>
     <published>2026-09-01T23:00:00+02:00</published>
     <updated>2026-09-01T23:00:00+02:00</updated>
-    <category term="طب الأعصاب"/><category term="النوبات الوظيفية"/><category term="الصرع"/>
-    <summary>تقرير طبي موثق يشرح الفرق بين النوبات الوظيفية ونوبات الصرع، ومسار التشخيص، ودور الشهود والفيديو وتخطيط الدماغ، والعلاج وحدود التشخيص من مقطع واحد.</summary>
+    <category term="موجز طبي تثقيفي"/>
+    <summary>موجز طبي تثقيفي عن آليتي الحالتين، وفيديو-EEG، وتعايشهما، وحدود التشخيص من الحركة أو الفيديو وحدهما.</summary>
   </entry>
   <entry>
     <title>أيام الخلق الستة والزمن الكوني: هل اليوم القرآني 24 ساعة؟</title>
@@ -22,34 +50,16 @@
     <id>https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/</id>
     <published>2026-09-01T23:00:00+02:00</published>
     <updated>2026-09-01T23:00:00+02:00</updated>
-    <category term="الدين والعلم"/><category term="التفسير"/><category term="الزمن الكوني"/>
-    <summary>دراسة تفصل بين نص خلق السماوات والأرض في ستة أيام، وتنوع أقوال المفسرين، وأعمار الكون والأرض في العلم الحديث، وحدود الربط القطعي بينها.</summary>
-  </entry>
-  <entry>
-    <title>الرتق والفتق والانفجار العظيم: ما الذي يقوله القرآن وما الذي يثبته العلم؟</title>
-    <link href="https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/"/>
-    <id>https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/</id>
-    <published>2026-09-01T18:00:00+02:00</published>
-    <updated>2026-09-01T18:00:00+02:00</updated>
-    <category term="الدين والعلم"/><category term="علم الكون"/><category term="التفسير"/>
-    <summary>دراسة تفصل بين دلالة آية الرتق والفتق وأقوال المفسرين وبين نموذج الكون الحار المتمدد وأدلته، وتحدد موضع الالتقاء وحدود المطابقة.</summary>
+    <category term="موجز أدلة"/>
+    <summary>موجز أدلة يفصل ما يثبته النص وتنوع التفسير عن قياسات الزمن الكوني وما لا تسمح به المطابقة القسرية.</summary>
   </entry>
   <entry>
     <title>شلل النوم والجاثوم: لماذا نشعر بوجود كائن في الغرفة؟</title>
     <link href="https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/"/>
     <id>https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/</id>
-    <published>2026-09-01T18:00:00+02:00</published>
-    <updated>2026-09-01T18:00:00+02:00</updated>
-    <category term="طب النوم"/><category term="علم النفس"/><category term="الثقافة الشعبية"/>
-    <summary>تقرير طبي وثقافي يشرح تداخل نوم REM واليقظة، وثقل الصدر والإحساس بالحضور، ومتى تستدعي النوبات تقييمًا طبيًا.</summary>
-  </entry>
-  <entry>
-    <title>روايات رعب نفسي عربية: كيف تميّز النوع وتختار ما يناسبك؟</title>
-    <link href="https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/"/>
-    <id>https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/</id>
-    <published>2026-08-29T12:00:00+02:00</published>
-    <updated>2026-09-01T18:00:00+02:00</updated>
-    <category term="الأدب العربي"/><category term="الرعب النفسي"/><category term="دليل القراءة"/>
-    <summary>دليل تحليلي يميز الرعب النفسي عن الرعب الخارق والصدمة والغموض، ويشرح كيف يختار القارئ الرواية بحسب مركز الخوف.</summary>
+    <published>2026-09-01T23:00:00+02:00</published>
+    <updated>2026-09-01T23:00:00+02:00</updated>
+    <category term="موجز طبي ثقافي"/>
+    <summary>موجز طبي ثقافي لشلل النوم وثقل الصدر والإحساس بالحضور، مع حدود التفسير ومتى يلزم التقييم الطبي.</summary>
   </entry>
 </feed>
