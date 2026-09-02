@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">مصفوفة الفهم من ست طبقات</title>
+<desc id="desc">رسم عربي يفصل ست طبقات: تمييز الرمز، الارتباط التوزيعي، الاستخدام التركيبي والنقل، الإحالة المتجذرة، النموذج السببي والتدخل، ثم القصد والتجربة والمسؤولية. ويؤكد أن النجاح في طبقة لا يثبت الطبقات الأعلى تلقائيًا.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07131f"/><stop offset="1" stop-color="#163447"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#02080d" flood-opacity=".25"/></filter>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#d88b64"/></marker>
+  <style>
+    .ar{font-family:"Noto Sans Arabic","DejaVu Sans",Arial,sans-serif;direction:rtl;unicode-bidi:bidi-override}.title{font-size:42px;font-weight:800;fill:#fff}.sub{font-size:19px;fill:#c4d1d9}.layer{font-size:21px;font-weight:800;fill:#17202a}.note{font-size:14px;fill:#52616d}.num{font-family:Arial,sans-serif;font-size:18px;font-weight:800;fill:#fff}.band{font-size:16px;font-weight:700;fill:#fff}
+  </style>
+</defs>
+<rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+<circle cx="104" cy="92" r="150" fill="none" stroke="#2e6077" opacity=".55"/><circle cx="104" cy="92" r="225" fill="none" stroke="#2e6077" opacity=".3"/>
+<text x="1120" y="75" text-anchor="end" class="ar title">مصفوفة الفهم من ست طبقات</text>
+<text x="1120" y="112" text-anchor="end" class="ar sub">لا تُضغط كلمة «يفهم» في حكم واحد</text>
+<line x1="80" y1="142" x2="1120" y2="142" stroke="#356377" stroke-width="2"/>
+
+<g filter="url(#shadow)">
+<rect x="690" y="181" width="430" height="112" rx="20" fill="#f7f3ea"/><circle cx="1081" cy="215" r="22" fill="#bd704e"/><text x="1081" y="221" text-anchor="middle" class="num">1</text><text x="1048" y="222" text-anchor="end" class="ar layer">تمييز الرمز</text><text x="1082" y="261" text-anchor="end" class="ar note">فصل العلامة وتتبّع شكلها وترتيبها</text>
+<rect x="80" y="181" width="540" height="112" rx="20" fill="#f7f3ea"/><circle cx="581" cy="215" r="22" fill="#2b6076"/><text x="581" y="221" text-anchor="middle" class="num">2</text><text x="548" y="222" text-anchor="end" class="ar layer">الارتباط التوزيعي</text><text x="582" y="261" text-anchor="end" class="ar note">تعلم الجوار والاستعمال والاحتمال من البيانات</text>
+
+<rect x="690" y="326" width="430" height="112" rx="20" fill="#f7f3ea"/><circle cx="1081" cy="360" r="22" fill="#2b6076"/><text x="1081" y="366" text-anchor="middle" class="num">3</text><text x="1048" y="367" text-anchor="end" class="ar layer">الاستخدام التركيبي والنقل</text><text x="1082" y="406" text-anchor="end" class="ar note">إعادة بناء العلاقة في صياغة أو مسألة جديدة</text>
+<rect x="80" y="326" width="540" height="112" rx="20" fill="#f7f3ea"/><circle cx="581" cy="360" r="22" fill="#bd704e"/><text x="581" y="366" text-anchor="middle" class="num">4</text><text x="548" y="367" text-anchor="end" class="ar layer">الإحالة المتجذرة</text><text x="582" y="406" text-anchor="end" class="ar note">ربط اللفظ بصورة أو حس أو بيئة أو مصدر محدد</text>
+
+<rect x="690" y="471" width="430" height="112" rx="20" fill="#f7f3ea"/><circle cx="1081" cy="505" r="22" fill="#bd704e"/><text x="1081" y="511" text-anchor="middle" class="num">5</text><text x="1048" y="512" text-anchor="end" class="ar layer">النموذج السببي والتدخل</text><text x="1082" y="551" text-anchor="end" class="ar note">توقّع أثر تغيير متعمد، لا مجرد الارتباط</text>
+<rect x="80" y="471" width="540" height="112" rx="20" fill="#f7f3ea"/><circle cx="581" cy="505" r="22" fill="#2b6076"/><text x="581" y="511" text-anchor="middle" class="num">6</text><text x="548" y="504" text-anchor="end" class="ar layer">القصد والتجربة</text><text x="548" y="531" text-anchor="end" class="ar layer">والمسؤولية</text><text x="582" y="561" text-anchor="end" class="ar note">منظور ذاتي أو غاية مستقلة أو أهلية للمساءلة</text>
+</g>
+
+<path d="M675 237H635" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/><path d="M350 301V317" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/><path d="M675 382H635" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/><path d="M350 446V462" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/><path d="M675 527H635" stroke="#d88b64" stroke-width="4" marker-end="url(#arrow)"/>
+
+<rect x="190" y="635" width="820" height="58" rx="29" fill="#6d3942"/>
+<text x="600" y="671" text-anchor="middle" class="ar band">النجاح في طبقة لا يثبت تلقائيًا الطبقات التي تليها</text>
+<text x="80" y="724" class="sub" font-size="13">Ahmed Alhafiz · author synthesis · version 2.0 · not a validated consciousness scale</text>
+</svg>
