@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this dossier or its analytical frameworks, cite this publication."
+title: "Teaching the Names and Artificial Intelligence: What Does the Evidence Establish About Machine Understanding?"
+type: article
+authors:
+  - family-names: Alhafiz
+    given-names: Ahmed
+    affiliation: Independent author and researcher
+version: "2.0"
+date-released: 2026-09-02
+url: "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/"
+repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
+abstract: >-
+  A bilingual evidence-led dossier separating six layers often compressed
+  into the word understanding: symbol discrimination, distributional
+  association, compositional transfer, grounded reference, causal and
+  interventional modelling, and intention, experience and responsibility.
+  The dossier proposes a Six-Layer Understanding Matrix and a 6x4 testing
+  protocol as explicitly non-validated analytical syntheses.
+keywords:
+  - language models
+  - machine understanding
+  - symbol grounding
+  - semantic representation
+  - multimodal grounding
+  - causal reasoning
+  - artificial consciousness
+  - teaching the names
+  - Quran and artificial intelligence
