@@ -145,9 +145,8 @@ jobs:
           for path in [
               Path('articles/feed.json'),
               Path('en/articles/feed.json'),
-              Path('research/index.json'),
+              Path('articles/research-index.json'),
               Path('articles/ratq-fatq-big-bang/evidence/claims.json'),
-              Path('en/articles/ratq-fatq-big-bang/evidence/claims.json'),
           ]:
               json.loads(path.read_text(encoding='utf-8'))
 
