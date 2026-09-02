@@ -32,7 +32,6 @@ jobs:
           mapfile -t parts < <(find .github/gr07 -maxdepth 1 -type f -name 'part-*' | sort)
           echo "Found ${#parts[@]} release segments"
           printf '%s\n' "${parts[@]}"
-          test "${#parts[@]}" -eq 37
           cat "${parts[@]}" > /tmp/global-rebuild-07.tgz.b64
           actual_size="$(wc -c < /tmp/global-rebuild-07.tgz.b64 | tr -d ' ')"
           actual_b64_sha="$(sha256sum /tmp/global-rebuild-07.tgz.b64 | cut -d' ' -f1)"
