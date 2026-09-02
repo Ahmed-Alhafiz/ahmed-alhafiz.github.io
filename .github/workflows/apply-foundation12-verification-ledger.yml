@@ -28,7 +28,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test "$(cat .github/foundation12-verification-ledger.trigger)" = 'run=1'
+          test "$(cat .github/foundation12-verification-ledger.trigger)" = 'run=2'
           python .github/foundation12_append_ledger.py
           grep -Fq '### 2026-09-02 — Foundation 12 post-merge verification addendum' .github/SEO_OPERATIONS_LEDGER.md
           grep -Fq -- '- Status: `EXECUTED_VERIFIED`.' .github/SEO_OPERATIONS_LEDGER.md
