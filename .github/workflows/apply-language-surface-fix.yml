@@ -1,0 +1,122 @@
+name: Apply multilingual surface correction
+
+on:
+  push:
+    branches:
+      - global-editorial-rebuild-07
+    paths:
+      - .github/language-surface-fix.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: multilingual-surface-correction
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Correct visible language counterparts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python .github/language_surface_fix.py
+          rm -f .github/language_surface_fix.py
+          rm -f .github/language-surface-fix.trigger
+          rm -f .github/workflows/apply-language-surface-fix.yml
+
+      - name: Validate exact visible switcher targets
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          class Parser(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.alternates = {}
+                  self.switches = {}
+                  self.in_langs = False
+                  self.depth = 0
+
+              def handle_starttag(self, tag, attrs):
+                  attributes = dict(attrs)
+                  rel = attributes.get('rel', '').lower().split()
+                  lang = attributes.get('hreflang', '').lower()
+                  if tag.lower() == 'link' and 'alternate' in rel and lang in {'ar', 'en', 'de'}:
+                      self.alternates[lang] = urlparse(attributes.get('href', '')).path
+
+                  classes = attributes.get('class', '').split()
+                  if tag.lower() == 'div' and 'langs' in classes:
+                      self.in_langs = True
+                      self.depth = 1
+                      return
+
+                  if self.in_langs:
+                      if tag.lower() == 'div':
+                          self.depth += 1
+                      if tag.lower() == 'a' and lang in {'ar', 'en', 'de'}:
+                          self.switches[lang] = urlparse(attributes.get('href', '')).path
+
+              def handle_endtag(self, tag):
+                  if self.in_langs and tag.lower() == 'div':
+                      self.depth -= 1
+                      if self.depth == 0:
+                          self.in_langs = False
+
+          errors = []
+          checked = 0
+          for path in Path('.').rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+              parser = Parser()
+              parser.feed(path.read_text(encoding='utf-8'))
+              if not parser.alternates:
+                  continue
+              for lang, expected in parser.alternates.items():
+                  actual = parser.switches.get(lang)
+                  if actual != expected:
+                      errors.append(f'{path}: visible {lang} target {actual!r}, expected {expected!r}')
+              checked += 1
+
+          if errors:
+              print('\n'.join(errors))
+              raise SystemExit(1)
+          print(f'Validated exact visible language counterparts on {checked} pages')
+          PY
+
+      - name: Run complete structural and editorial gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py
+          python tools/site_audit.py
+          python tools/editorial_quality_gate.py
+          git diff --check
+          test ! -e .github/language_surface_fix.py
+          test ! -e .github/language-surface-fix.trigger
+          test ! -e .github/workflows/apply-language-surface-fix.yml
+
+      - name: Commit verified corrections
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add -A
+          git commit -m 'Correct research language counterpart navigation'
+          if ! git push origin HEAD:global-editorial-rebuild-07; then
+            git pull --rebase origin global-editorial-rebuild-07
+            git push origin HEAD:global-editorial-rebuild-07
+          fi
