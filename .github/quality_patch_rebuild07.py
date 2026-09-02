@@ -5,7 +5,8 @@ The patch preserves the visible research text while:
 - replacing an incorrect evidentiary relationship to forthcoming books with
   a thematic `mentions` relationship;
 - making the absence of external specialist review explicit;
-- adding a clear emergency boundary to the sleep-paralysis explainer.
+- adding a clear emergency boundary to the sleep-paralysis explainer;
+- normalizing release-document whitespace for a clean, auditable commit.
 """
 from __future__ import annotations
 
@@ -82,6 +83,18 @@ def insert_before_citation(html: str, block: str) -> str:
     return html[: match.start()] + block + "\n\n" + html[match.start() :]
 
 
+def normalize_readme() -> bool:
+    path = ROOT / "README.md"
+    if not path.exists():
+        raise FileNotFoundError("README.md")
+    original = path.read_text(encoding="utf-8")
+    normalized = "\n".join(line.rstrip() for line in original.splitlines()) + "\n"
+    if normalized != original:
+        path.write_text(normalized, encoding="utf-8")
+        return True
+    return False
+
+
 def main() -> None:
     changed = []
     for rel in TARGETS:
@@ -113,9 +126,11 @@ def main() -> None:
             path.write_text(revised, encoding="utf-8")
             changed.append(rel)
 
+    readme_changed = normalize_readme()
     print(f"Applied semantic and safety corrections to {len(changed)} pages")
     for rel in changed:
         print(f"- {rel}")
+    print(f"README whitespace normalized: {readme_changed}")
 
 
 if __name__ == "__main__":
