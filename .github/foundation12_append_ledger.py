@@ -24,5 +24,5 @@ addendum = r'''
 - Next: preserve the 7/30/90-day measurement windows; rebuild `teaching-names-ai-understanding` into the fourth complete bilingual pillar; do not migrate the canonical host until the user owns and verifies the selected domain.
 '''
 
-path.write_text(text + addendum + '\n', encoding='utf-8')
+path.write_text((text + addendum).rstrip() + '\n', encoding='utf-8')
 print('Appended Foundation 12 EXECUTED_VERIFIED ledger record')
