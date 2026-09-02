@@ -22,7 +22,7 @@ jobs:
           python-version: "3.12"
 
       - name: Compile audit tools
-        run: python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py
+        run: python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py tools/discovery_integrity.py
 
       - name: Parse XML JSON feeds evidence manifests and every JSON-LD block
         shell: bash
@@ -159,6 +159,9 @@ jobs:
       - name: Validate evidence depth transparency linking and medical safeguards
         run: python tools/editorial_quality_gate.py
 
+      - name: Validate feed chronology research index hub sitemap and reciprocal book graph
+        run: python tools/discovery_integrity.py
+
       - name: Reject temporary release machinery
         shell: bash
         run: |
@@ -167,9 +170,9 @@ jobs:
               -name 'APPLY*' -o \
               -name 'part-*' -o \
               -name 'fix-*' -o \
-              -name '*release*.trigger' -o \
-              -name 'apply-global-editorial-rebuild-*' -o \
-              -name 'diagnose-global-editorial-rebuild-*' \
+              -name '*.trigger' -o \
+              -name 'apply-*' -o \
+              -name 'diagnose-*' \
             \) -print | grep -q .; then
             echo 'Temporary release machinery must not enter the permanent branch.' >&2
             exit 1
