@@ -494,3 +494,21 @@ This file is operational only. It is not an independent public source for biblio
 - Publication safety: the two books remain forthcoming; manuscripts are thematic origins, not scientific or medical evidence. No publisher, ISBN, sales, ranking, review or AI-citation claim was fabricated.
 - Status: `EXECUTED_VERIFIED`
 - Next: freeze unforced public rewrites and evaluate finalized evidence at 14, 28 and 56 days.
+
+### 2026-09-02 — Water, Civilization and Power bilingual research dossier 09
+- Task: owned-surface reference research / bilingual discoverability / book-linked authority
+- Book: «قل سيروا في الأرض فانظروا كيف بدأ الخلق»
+- Original contribution: introduced the six-layer Water–Power–Justice Chain—resource variability, infrastructure, data, allocation, authority/accountability, and maintenance/resilience—while rejecting hydraulic determinism.
+- Public surfaces: complete Arabic/English dossiers; Arabic/English evidence appendices; C01–C10 claims JSON; 21-source BibTeX/RIS exports; dossier BibTeX/RIS/CFF; two original SVG diagrams; two dedicated 1200×630 social cards.
+- Integration: Arabic/English homepages and research hubs; Sirou book pages; review-status registries; Atom/JSON feeds; sitemap; machine research index; reciprocal study/book links.
+- Review boundary: author/source/structural/automated review complete; independent water-governance, archaeology, ancient-South-Arabia, and Qur’anic-studies review pending; no academic peer review claimed; forthcoming manuscript is thematic origin rather than evidence.
+- Pull request: `#12`.
+- Final PR head: `ebfe9f8a8b08aa5614676699ddac518e8b44ae89`.
+- Verification: PR `Site integrity` run `33592802011` and `Visual review` run `33592802143` succeeded; final artifact ID `9832355817` contained 44 page screenshots plus two social cards and was manually inspected.
+- Merge: `b448ba512c38ba2dad7b1ddb857be9e7b97bac65`.
+- Main verification: `Site integrity` run `33593035699` and Pages deployment run `33593034881` succeeded; public dossier, evidence, hub, book, feed, and research-index surfaces were fetched after deployment.
+- Structural result: 38 public HTML pages, 38 canonicals, 38 sitemap URLs, zero errors, zero warnings; nine research pages passed the editorial gate; discovery graph contains eight Arabic surfaces and two complete English editions.
+- Social integrity: four dossier/evidence surfaces use language-correct cards in Open Graph, Twitter, and JSON-LD; permanent audit validates PNG signature, 1200×630 dimensions, minimum size, metadata, and absence of the generic card.
+- Status: `EXECUTED_VERIFIED`
+- Measurement boundary: no search-rank or AI-citation gain is claimed. Evaluate real evidence at 14, 28, and 56 days.
+- Next: build the Umm Abbas diagnostic-uncertainty/family-fear/coercive-authority dossier on a private branch; do not mass-publish or rewrite the new public dossier without a verified defect or measurement evidence.
