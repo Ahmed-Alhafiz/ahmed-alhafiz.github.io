@@ -24,15 +24,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Apply feed chronology discovery graph and memory corrections
+      - name: Apply chronology discovery graph and operational-memory corrections
         shell: bash
         run: |
           set -euo pipefail
-          test "$(cat .github/post-release-integrity-08.trigger)" = 'run=1'
+          grep -Eq '^run=[0-9]+$' .github/post-release-integrity-08.trigger
           python .github/post_release_integrity08.py
+          # The workflow token cannot update workflow files. Preserve the current
+          # permanent CI file here; it is strengthened directly after this commit.
+          git checkout -- .github/workflows/site-integrity.yml
           rm -f .github/post_release_integrity08.py
           rm -f .github/post-release-integrity-08.trigger
-          rm -f .github/workflows/apply-post-release-integrity-08.yml
 
       - name: Parse corrected XML JSON and every JSON-LD block
         shell: bash
@@ -67,16 +69,15 @@ jobs:
 
           atom = {'a': 'http://www.w3.org/2005/Atom'}
           limit = datetime.now(timezone.utc) + timedelta(minutes=10)
-          expected_counts = {
-              'articles/feed.xml': 7,
-              'en/articles/feed.xml': 1,
-          }
+          expected_counts = {'articles/feed.xml': 7, 'en/articles/feed.xml': 1}
           for path, count in expected_counts.items():
               root = ET.parse(path).getroot()
               entries = root.findall('a:entry', atom)
               if len(entries) != count:
                   raise SystemExit(f'{path}: expected {count} entries, found {len(entries)}')
-              for node in [root.find('a:updated', atom), *[x for e in entries for x in (e.find('a:published', atom), e.find('a:updated', atom))]]:
+              nodes = [root.find('a:updated', atom)]
+              nodes.extend(node for entry in entries for node in (entry.find('a:published', atom), entry.find('a:updated', atom)))
+              for node in nodes:
                   if node is None or not node.text:
                       raise SystemExit(f'{path}: missing timestamp')
                   moment = datetime.fromisoformat(node.text.replace('Z', '+00:00')).astimezone(timezone.utc)
@@ -113,14 +114,13 @@ jobs:
           set -euo pipefail
           python tools/site_audit.py
           python tools/editorial_quality_gate.py
-          grep -Fq 'Validate feed chronology and research discovery graph' .github/workflows/site-integrity.yml
           grep -Fq 'Global bilingual editorial and research platform release 07' .github/SEO_OPERATIONS_LEDGER.md
           grep -Fq 'Verified global editorial rebuild 07' .github/CONTENT_CURRENT_CHECKPOINT.md
           grep -Fq 'BRANCH_VERIFIED_AWAITING_PR_AND_LIVE_DEPLOYMENT' .github/POST_RELEASE_INTEGRITY_08.md
           git diff --check
           test ! -e .github/post_release_integrity08.py
           test ! -e .github/post-release-integrity-08.trigger
-          test ! -e .github/workflows/apply-post-release-integrity-08.yml
+          test -e .github/workflows/apply-post-release-integrity-08.yml
 
       - name: Commit verified correction to review branch
         shell: bash
