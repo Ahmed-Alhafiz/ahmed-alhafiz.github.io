@@ -17,7 +17,10 @@
       "summary": "ملف موسع يفصل النص القرآني وتاريخ التفسير عن الرصد والنموذج العلمي والاستنتاج الفلسفي، مع خريطة ادعاء ودليل ونسخة إنجليزية.",
       "type": "ملف بحثي موسع",
       "version": "2.0",
-      "languages": ["ar", "en"],
+      "languages": [
+        "ar",
+        "en"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/",
@@ -25,7 +28,35 @@
       "evidence_appendix": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/evidence/",
       "claims_json": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/evidence/claims.json",
       "citation_bib": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/citation.bib",
-      "citation_ris": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/citation.ris"
+      "citation_ris": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/citation.ris",
+      "english_title": "Ratq, fatq, and the Big Bang: text, exegesis, evidence, and limits",
+      "english_summary": "A layered inquiry into Qur’an 21:30, classical exegesis, observation, cosmological modelling, and the limits of metaphysical inference."
+    },
+    {
+      "slug": "water-civilization-power",
+      "title": "الماء والحضارة والسلطة: متى تصبح إدارة المورد عدلًا، ومتى تتحول إلى أداة سيطرة؟",
+      "english_title": "Water, Civilization and Power: When Does Resource Governance Produce Justice—and When Does It Become Control?",
+      "summary": "ملف ثنائي اللغة يبني سلسلة من ست طبقات بين المورد والبنية والبيانات والتخصيص والمساءلة والصيانة، ويختبرها في مأرب والرافدين وأنغكور وحوكمة المياه المعاصرة.",
+      "english_summary": "A bilingual dossier building a six-layer chain from resource and infrastructure to data, allocation, accountability, maintenance, and resilience, tested against Ma’rib, Mesopotamia, Angkor, and contemporary water governance.",
+      "type": "ملف بحثي موسع ثنائي اللغة",
+      "english_type": "Extended bilingual research dossier",
+      "version": "1.0",
+      "languages": [
+        "ar",
+        "en"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/",
+      "english_url": "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/",
+      "evidence_appendix": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/",
+      "english_evidence_appendix": "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/evidence/",
+      "claims_json": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/claims.json",
+      "references_bib": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/references.bib",
+      "references_ris": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/references.ris",
+      "citation_bib": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/citation.bib",
+      "citation_ris": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/citation.ris",
+      "citation_cff": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/CITATION.cff"
     },
     {
       "slug": "teaching-names-ai-understanding",
@@ -33,7 +64,9 @@
       "summary": "دراسة تفصل بين الرمز والعلاقة الإحصائية والتمثيل المفهومي والتأسيس في العالم والقصد والمسؤولية.",
       "type": "ملف بحثي موسع",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/"
@@ -44,7 +77,9 @@
       "summary": "ملف حماية يميز الدعم الروحي الطوعي عن الإكراه والعزل والاستغلال واللمس بلا موافقة وتأخير الرعاية الطبية.",
       "type": "ملف حماية وصحة",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "author_review_complete_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/"
@@ -55,7 +90,9 @@
       "summary": "موجز طبي تثقيفي عن آليتي الحالتين، وفيديو-EEG، وتعايشهما، وحدود التشخيص من الحركة أو الفيديو وحدهما.",
       "type": "موجز طبي تثقيفي",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "medical_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/"
@@ -66,7 +103,9 @@
       "summary": "موجز أدلة يفصل ما يثبته النص وتنوع التفسير عن قياسات الزمن الكوني وما لا تسمح به المطابقة القسرية.",
       "type": "موجز أدلة",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/"
@@ -77,7 +116,9 @@
       "summary": "موجز طبي ثقافي لشلل النوم وثقل الصدر والإحساس بالحضور، مع حدود التفسير ومتى يلزم التقييم الطبي.",
       "type": "موجز طبي ثقافي",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "medical_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/"
@@ -88,7 +129,9 @@
       "summary": "دليل تحليلي يميز مركز الخوف النفسي عن مجرد وجود حدث خارق أو صدمة، ويربط الغموض بالتفسير والسلطة داخل الحكاية.",
       "type": "دليل تحليلي",
       "version": "2.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/"

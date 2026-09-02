@@ -12,13 +12,15 @@ BASE='https://ahmed-alhafiz.github.io'
 RULES={
  'articles/ratq-fatq-big-bang/index.html':dict(words=2800,sources=12,book='books/sirou-fi-alard/index.html',route='/articles/ratq-fatq-big-bang/',medical=False,extended=True),
  'en/articles/ratq-fatq-big-bang/index.html':dict(words=2500,sources=12,book='en/books/sirou-fi-alard/index.html',route='/en/articles/ratq-fatq-big-bang/',medical=False,extended=True),
+ 'articles/water-civilization-power/index.html':dict(words=3600,sources=18,book='books/sirou-fi-alard/index.html',route='/articles/water-civilization-power/',medical=False,extended=True),
+ 'en/articles/water-civilization-power/index.html':dict(words=4000,sources=18,book='en/books/sirou-fi-alard/index.html',route='/en/articles/water-civilization-power/',medical=False,extended=True),
  'articles/teaching-names-ai-understanding/index.html':dict(words=2500,sources=9,book='books/sirou-fi-alard/index.html',route='/articles/teaching-names-ai-understanding/',medical=False,extended=False),
  'articles/spiritual-healing-exploitation-safeguarding/index.html':dict(words=2350,sources=10,book='books/umm-abbas/index.html',route='/articles/spiritual-healing-exploitation-safeguarding/',medical=True,extended=False),
  'articles/six-days-creation-cosmic-time/index.html':dict(words=2100,sources=8,book='books/sirou-fi-alard/index.html',route='/articles/six-days-creation-cosmic-time/',medical=False,extended=False),
  'articles/sleep-paralysis-jathoom/index.html':dict(words=1800,sources=5,book='books/umm-abbas/index.html',route='/articles/sleep-paralysis-jathoom/',medical=True,extended=False),
  'articles/functional-seizures-vs-epilepsy/index.html':dict(words=2300,sources=8,book='books/umm-abbas/index.html',route='/articles/functional-seizures-vs-epilepsy/',medical=True,extended=False),
 }
-TRUSTED=('nasa.gov','esa.int','lbl.gov','doi.org','aanda.org','pdg.lbl.gov','pubmed.ncbi.nlm.nih.gov','pmc.ncbi.nlm.nih.gov','who.int','nhs.uk','fda.gov','gov.uk','aan.com','neurology.org','ilae.org','quran.com','quran.ksu.edu.sa','tafsir.app','sunnah.com','aclanthology.org','arxiv.org','academic.oup.com')
+TRUSTED=('nasa.gov','esa.int','lbl.gov','doi.org','aanda.org','pdg.lbl.gov','pubmed.ncbi.nlm.nih.gov','pmc.ncbi.nlm.nih.gov','who.int','nhs.uk','fda.gov','gov.uk','aan.com','neurology.org','ilae.org','quran.com','quran.ksu.edu.sa','tafsir.app','sunnah.com','aclanthology.org','arxiv.org','academic.oup.com','oecd.org','fao.org','unesco.org','ipcc.ch','unece.org','un.org','cambridge.org','tandfonline.com','sciencedirect.com','science.org','wiley.com','onlinelibrary.wiley.com','dainst.org','ascelibrary.org')
 
 @dataclass
 class D:
@@ -81,7 +83,7 @@ def main():
    for key in ['headline','abstract','datePublished','dateModified','author','citation']:
     if not n.get(key):errors.append(f'{rel}: Article schema missing {key}')
    if n.get('isBasedOn'):errors.append(f'{rel}: forthcoming book must not be declared evidentiary isBasedOn')
-   if rel.startswith(('articles/ratq','en/articles/ratq')) and not n.get('mentions'):errors.append(f'{rel}: thematic book relationship should be disclosed with mentions')
+   if (rel.startswith(('articles/ratq','en/articles/ratq')) or 'water-civilization-power' in rel) and not n.get('mentions'):errors.append(f'{rel}: thematic book relationship should be disclosed with mentions')
   domains={urlsplit(h).netloc.lower() for h in ext if any(urlsplit(h).netloc.lower().endswith(t) for t in TRUSTED)}
   if len(domains)<3:errors.append(f'{rel}: trusted-source diversity too low: {sorted(domains)}')
   book=(ROOT/r['book']).read_text(encoding='utf-8') if (ROOT/r['book']).exists() else ''
@@ -100,7 +102,7 @@ def main():
 
  # Flagship infrastructure
  required=[
-  'articles/ratq-fatq-big-bang/evidence/index.html','en/articles/ratq-fatq-big-bang/evidence/index.html','articles/ratq-fatq-big-bang/evidence/claims.json','articles/ratq-fatq-big-bang/citation.bib','articles/ratq-fatq-big-bang/citation.ris','assets/figures/ratq-evidence-map-ar.svg','assets/figures/ratq-evidence-map-en.svg','assets/figures/source-trust-pipeline-ar.svg','assets/figures/source-trust-pipeline-en.svg','articles/research-index.json','CITATION.cff']
+  'articles/ratq-fatq-big-bang/evidence/index.html','en/articles/ratq-fatq-big-bang/evidence/index.html','articles/water-civilization-power/evidence/index.html','en/articles/water-civilization-power/evidence/index.html','articles/water-civilization-power/evidence/claims.json','articles/water-civilization-power/evidence/references.bib','articles/water-civilization-power/evidence/references.ris','articles/water-civilization-power/citation.bib','articles/water-civilization-power/citation.ris','articles/water-civilization-power/CITATION.cff','assets/figures/water-power-justice-chain-ar.svg','assets/figures/water-power-justice-chain-en.svg','articles/ratq-fatq-big-bang/evidence/claims.json','articles/ratq-fatq-big-bang/citation.bib','articles/ratq-fatq-big-bang/citation.ris','assets/figures/ratq-evidence-map-ar.svg','assets/figures/ratq-evidence-map-en.svg','assets/figures/source-trust-pipeline-ar.svg','assets/figures/source-trust-pipeline-en.svg','articles/research-index.json','CITATION.cff']
  for f in required:
   if not (ROOT/f).exists() or (ROOT/f).stat().st_size<80:errors.append(f'{f}: missing or empty')
  try:
@@ -108,6 +110,12 @@ def main():
   if len(claims.get('claims',[]))<8:errors.append('claims.json: fewer than 8 audited claims')
   if claims.get('review_status',{}).get('peer_reviewed') is not False:errors.append('claims.json: peer review status not explicit false')
  except Exception as e:errors.append(f'claims.json invalid: {e}')
+ try:
+  water_claims=json.loads((ROOT/'articles/water-civilization-power/evidence/claims.json').read_text(encoding='utf-8'))
+  if len(water_claims.get('claims',[]))<10:errors.append('water claims.json: fewer than 10 audited claims')
+  if len(water_claims.get('sources',[]))<20:errors.append('water claims.json: fewer than 20 sources')
+  if water_claims.get('review_status',{}).get('peer_reviewed') is not False:errors.append('water claims.json: peer review status not explicit false')
+ except Exception as e:errors.append(f'water claims.json invalid: {e}')
  for f in ['methodology/index.html','en/methodology/index.html','research-status/index.html','en/research-status/index.html','about/index.html','en/about/index.html']:
   if not (ROOT/f).exists():errors.append(f'{f}: missing trust surface')
 
@@ -117,8 +125,9 @@ def main():
   if not any(x in t for x in ['قيد الإصدار','forthcoming']):errors.append(f'{f}: forthcoming state missing')
   if not any(x in t for x in ['لا تعتمد','does not treat','لا تُستخدم','not evidence']):errors.append(f'{f}: evidence independence not explicit')
 
- # No mass-English facade: the one English dossier must be complete and linked.
- if '/en/articles/ratq-fatq-big-bang/' not in hubs['en/articles/index.html']:errors.append('English hub missing flagship')
+ # English editions must be complete, not thin translation facades.
+ for route in ['/en/articles/ratq-fatq-big-bang/','/en/articles/water-civilization-power/']:
+  if route not in hubs['en/articles/index.html']:errors.append(f'English hub missing complete dossier {route}')
  if 'not a peer-reviewed journal' not in hubs['en/articles/index.html']:errors.append('English hub missing review disclosure')
 
  if warnings:

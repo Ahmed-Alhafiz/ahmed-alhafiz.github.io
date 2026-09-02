@@ -6,7 +6,7 @@ internal links, accessibility basics, language alternates, structured data,
 feed/manifest integrity, and publication-safety rules for forthcoming books.
 """
 from __future__ import annotations
-import argparse, json, re, sys, xml.etree.ElementTree as ET
+import argparse, json, re, struct, sys, xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from pathlib import Path
@@ -130,11 +130,15 @@ def main()->int:
           'research-status/index.html':('en','https://ahmed-alhafiz.github.io/en/research-status/'),
           'articles/ratq-fatq-big-bang/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/'),
           'articles/ratq-fatq-big-bang/evidence/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/evidence/'),
+          'articles/water-civilization-power/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/'),
+          'articles/water-civilization-power/evidence/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/evidence/'),
           'en/articles/index.html':('ar','https://ahmed-alhafiz.github.io/articles/'),
           'en/methodology/index.html':('ar','https://ahmed-alhafiz.github.io/methodology/'),
           'en/research-status/index.html':('ar','https://ahmed-alhafiz.github.io/research-status/'),
           'en/articles/ratq-fatq-big-bang/index.html':('ar','https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/'),
           'en/articles/ratq-fatq-big-bang/evidence/index.html':('ar','https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/evidence/'),
+          'en/articles/water-civilization-power/index.html':('ar','https://ahmed-alhafiz.github.io/articles/water-civilization-power/'),
+          'en/articles/water-civilization-power/evidence/index.html':('ar','https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/'),
         }
         if rel.as_posix() in paired:
             code,url=paired[rel.as_posix()]
@@ -167,13 +171,45 @@ def main()->int:
         else:
             try:ET.parse(p)
             except Exception as e:errors.append(f'{f}: invalid XML: {e}')
-    for f in ['articles/feed.json','en/articles/feed.json','articles/research-index.json','articles/ratq-fatq-big-bang/evidence/claims.json']:
+    for f in ['articles/feed.json','en/articles/feed.json','articles/research-index.json','articles/ratq-fatq-big-bang/evidence/claims.json','articles/water-civilization-power/evidence/claims.json']:
         p=root/f
         if not p.exists():errors.append(f'{f}: missing')
         else:
             try:json.loads(p.read_text(encoding='utf-8'))
             except Exception as e:errors.append(f'{f}: invalid JSON: {e}')
     if not (root/'CITATION.cff').exists():errors.append('CITATION.cff missing')
+
+    # Dedicated social cards for the bilingual water dossier.
+    social_surfaces={
+      'articles/water-civilization-power/index.html':('assets/social/water-civilization-power-ar.png',BASE+'/assets/social/water-civilization-power-ar.png'),
+      'articles/water-civilization-power/evidence/index.html':('assets/social/water-civilization-power-ar.png',BASE+'/assets/social/water-civilization-power-ar.png'),
+      'en/articles/water-civilization-power/index.html':('assets/social/water-civilization-power-en.png',BASE+'/assets/social/water-civilization-power-en.png'),
+      'en/articles/water-civilization-power/evidence/index.html':('assets/social/water-civilization-power-en.png',BASE+'/assets/social/water-civilization-power-en.png'),
+    }
+    checked_cards=set()
+    for page_rel,(card_rel,card_url) in social_surfaces.items():
+        page_file=root/page_rel; source=page_file.read_text(encoding='utf-8') if page_file.exists() else ''
+        if not source:errors.append(f'{page_rel}: missing social-card surface');continue
+        image_id=(expected(root,page_file) or '')+'#image'
+        required=(
+          f'<meta property="og:image" content="{card_url}">',
+          f'<meta property="og:image:secure_url" content="{card_url}">',
+          '<meta property="og:image:type" content="image/png">',
+          f'<meta name="twitter:image" content="{card_url}">',
+          image_id,
+        )
+        for marker in required:
+            if marker not in source:errors.append(f'{page_rel}: dedicated social marker missing: {marker}')
+        if 'ahmed-alhafiz-social-card.png' in source:errors.append(f'{page_rel}: generic social card still used')
+        if card_rel in checked_cards:continue
+        checked_cards.add(card_rel); card=root/card_rel
+        if not card.exists():errors.append(f'{card_rel}: dedicated social card missing');continue
+        data=card.read_bytes()
+        if len(data)<10_000:errors.append(f'{card_rel}: suspiciously small PNG ({len(data)} bytes)')
+        if len(data)<24 or data[:8]!=b'\x89PNG\r\n\x1a\n' or data[12:16]!=b'IHDR':
+            errors.append(f'{card_rel}: invalid PNG signature/IHDR');continue
+        width,height=struct.unpack('>II',data[16:24])
+        if (width,height)!=(1200,630):errors.append(f'{card_rel}: expected 1200x630, found {width}x{height}')
 
     robots=(root/'robots.txt').read_text(encoding='utf-8') if (root/'robots.txt').exists() else ''
     for token in ['OAI-SearchBot','GPTBot','Sitemap: https://ahmed-alhafiz.github.io/sitemap.xml']:

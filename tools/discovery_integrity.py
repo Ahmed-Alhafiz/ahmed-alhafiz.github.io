@@ -30,6 +30,7 @@ REQUIRED_ARABIC_SLUGS = {
     "six-days-creation-cosmic-time",
     "sleep-paralysis-jathoom",
     "arabic-psychological-horror",
+    "water-civilization-power",
 }
 BOOKS = {
     "sirou-fi-alard": ROOT / "books/sirou-fi-alard/index.html",
@@ -101,6 +102,8 @@ def validate_index() -> tuple[dict[str, dict], dict[str, dict]]:
         if not page.is_file():
             fail(f"{slug}: public page does not exist at {page.relative_to(ROOT)}")
         if "en" in item["languages"]:
+            if not item.get("english_title"):
+                fail(f"{slug}: English title missing from research index")
             english = item.get("english_url")
             if not english:
                 fail(f"{slug}: English declared but english_url is missing")
@@ -237,7 +240,7 @@ def main() -> None:
     indexed_en = {
         item["english_url"]: {
             **item,
-            "title": "Ratq, fatq, and the Big Bang: text, exegesis, evidence, and limits",
+            "title": item["english_title"],
         }
         for item in indexed_ar.values()
         if item.get("english_url")

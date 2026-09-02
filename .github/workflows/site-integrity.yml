@@ -24,7 +24,7 @@ jobs:
       - name: Compile audit tools
         run: python -m py_compile tools/site_audit.py tools/editorial_quality_gate.py tools/discovery_integrity.py
 
-      - name: Parse XML JSON feeds evidence manifests and every JSON-LD block
+      - name: Parse XML JSON feeds evidence manifests figures and every JSON-LD block
         shell: bash
         run: |
           set -euo pipefail
@@ -60,12 +60,13 @@ jobs:
               Path("sitemap.xml"),
               Path("articles/feed.xml"),
               Path("en/articles/feed.xml"),
+              *sorted(Path("assets/figures").glob("*.svg")),
           ]
           json_files = [
               Path("articles/feed.json"),
               Path("en/articles/feed.json"),
               Path("articles/research-index.json"),
-              Path("articles/ratq-fatq-big-bang/evidence/claims.json"),
+              *sorted(Path("articles").glob("*/evidence/claims.json")),
           ]
 
           for path in xml_files:
@@ -87,7 +88,7 @@ jobs:
 
           print(
               f"Parsed {pages} HTML files, {blocks} JSON-LD blocks, "
-              f"{len(xml_files)} XML outputs and {len(json_files)} JSON outputs"
+              f"{len(xml_files)} XML/SVG outputs and {len(json_files)} JSON outputs"
           )
           PY
 

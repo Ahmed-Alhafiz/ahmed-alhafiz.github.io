@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">The water–power–justice chain</title>
+<desc id="desc">A six-layer map: resource and variability, infrastructure, data and measurement, allocation and rules, authority and accountability, maintenance and resilience. Water does not determine one political form; institutions mediate its effects.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7f3ea"/><stop offset="1" stop-color="#ebe3d6"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".12"/></filter>
+  <style>
+    text{font-family:Inter,Arial,sans-serif;fill:#172536}
+    .small{font-size:21px;fill:#52606d}
+    .num{font-size:19px;font-weight:700;fill:#fff}
+    .head{font-size:25px;font-weight:700}
+    .sub{font-size:18px;fill:#5b6873}
+    .arrow{stroke:#a86843;stroke-width:5;fill:none;marker-end:url(#end)}
+  </style>
+  <marker id="end" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#a86843"/></marker>
+</defs>
+<rect width="1200" height="720" rx="34" fill="url(#bg)"/>
+<text x="600" y="58" text-anchor="middle" class="head" font-size="34">The Water–Power–Justice Chain</text>
+<text x="600" y="94" text-anchor="middle" class="small">A resource does not create a political order by itself; six institutional layers mediate its effects</text>
+<g filter="url(#shadow)">
+  <g transform="translate(70 150)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="40" cy="38" r="22" fill="#19364d"/><text x="40" y="45" text-anchor="middle" class="num">1</text>
+    <text x="35" y="82" class="head">Resource &amp; variability</text>
+    <text x="35" y="116" class="sub">Abundance, scarcity, flood, drought</text>
+  </g>
+  <g transform="translate(450 150)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="40" cy="38" r="22" fill="#19364d"/><text x="40" y="45" text-anchor="middle" class="num">2</text>
+    <text x="35" y="82" class="head">Infrastructure</text>
+    <text x="35" y="116" class="sub">Dams, canals, drainage, storage</text>
+  </g>
+  <g transform="translate(830 150)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="40" cy="38" r="22" fill="#19364d"/><text x="40" y="45" text-anchor="middle" class="num">3</text>
+    <text x="35" y="82" class="head">Data &amp; measurement</text>
+    <text x="35" y="116" class="sub">Flow, quality, shares, records, warning</text>
+  </g>
+  <g transform="translate(830 410)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="40" cy="38" r="22" fill="#a86843"/><text x="40" y="45" text-anchor="middle" class="num">4</text>
+    <text x="35" y="82" class="head">Allocation &amp; rules</text>
+    <text x="35" y="116" class="sub">Who receives what, when, and why?</text>
+  </g>
+  <g transform="translate(450 410)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="40" cy="38" r="22" fill="#a86843"/><text x="40" y="45" text-anchor="middle" class="num">5</text>
+    <text x="35" y="82" class="head">Authority &amp; accountability</text>
+    <text x="35" y="116" class="sub">Decision, appeal, transparency, enforcement</text>
+  </g>
+  <g transform="translate(70 410)">
+    <rect width="300" height="145" rx="22" fill="#fffdf8" stroke="#d8cdbd"/>
+    <circle cx="40" cy="38" r="22" fill="#23634b"/><text x="40" y="45" text-anchor="middle" class="num">6</text>
+    <text x="35" y="82" class="head">Maintenance &amp; resilience</text>
+    <text x="35" y="116" class="sub">Finance, repair, learning, adaptation</text>
+  </g>
+</g>
+<path class="arrow" d="M370 222 H440"/>
+<path class="arrow" d="M750 222 H820"/>
+<path class="arrow" d="M980 305 V397"/>
+<path class="arrow" d="M830 482 H760"/>
+<path class="arrow" d="M450 482 H380"/>
+<path class="arrow" d="M220 410 V315"/>
+<path d="M220 315 C220 345 600 365 980 315" stroke="#5f7c8e" stroke-width="3" stroke-dasharray="8 8" fill="none"/>
+<text x="600" y="635" text-anchor="middle" class="head">The outcome is not predetermined</text>
+<text x="600" y="673" text-anchor="middle" class="small">Justice, cooperation, and resilience—or exclusion, fragility, and control—depend on institutional design and practice</text>
+</svg>
