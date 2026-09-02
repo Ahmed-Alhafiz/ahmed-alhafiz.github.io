@@ -7,9 +7,10 @@ fourteen-claim evidence ledger, explicit emergency/consent boundaries, and a
 full limitations section. A 3,500-word Arabic gate would reward filler rather
 than additional evidence. This patch calibrates the Arabic floor to 3,200 while
 preserving the 3,600-word English floor and every evidence gate. It adds one
-substantive proportionality sentence to the English analysis and removes three
-avoidable search-snippet length warnings without changing either visible H1 or
-the substantive JSON-LD headline.
+substantive proportionality sentence to the English analysis, localizes the
+Arabic review badge, removes three avoidable snippet-length warnings, and makes
+the permanent dossier gate assert the actual safety and review language rather
+than brittle older wording.
 """
 from pathlib import Path
 
@@ -61,11 +62,39 @@ def main() -> None:
         "English evidence description",
     )
 
-    for path in (integration, article, evidence):
+    arabic = ROOT / "articles/diagnostic-uncertainty-family-fear-coercive-authority/index.html"
+    replace_once(
+        arabic,
+        '<span class="status-badge pending">External review pending</span>',
+        '<span class="status-badge pending">مراجعة خارجية معلّقة</span>',
+        "Arabic review badge localization",
+    )
+
+    gate = ROOT / "tools/dossier11_integrity.py"
+    replace_once(
+        gate,
+        '        if "External review pending" not in text:\n            fail(f"{rel}: external review badge/disclosure missing")',
+        '        expected_badge = "مراجعة خارجية معلّقة" if language == "ar" else "External review pending"\n        if expected_badge not in text:\n            fail(f"{rel}: localized external review badge/disclosure missing")',
+        "Localized review-badge assertion",
+    )
+    replace_once(
+        gate,
+        '            safety_tokens = ("الطوارئ", "لا توقف دواء", "ليس لتشخيص")\n            review_tokens = ("لم تتم بعد مراجعة", "غير مصدّق", "لا يُقدَّم")',
+        '            safety_tokens = ("الطوارئ", "لا توقف دواء", "ليست تشخيصًا")\n            review_tokens = ("لم تتم بعد مراجعة مستقلة", "ليس مقياسًا سريريًا مُعتمدًا", "لا يُقدَّم بوصفه أداة تشخيصية")',
+        "Arabic safety and review assertions",
+    )
+    replace_once(
+        gate,
+        '            safety_tokens = ("emergency", "Do not stop prescribed medication", "not individual medical advice")',
+        '            safety_tokens = ("emergency", "Do not stop prescribed medication", "not a diagnosis or individual medical advice")',
+        "English safety assertion",
+    )
+
+    for path in (integration, article, evidence, arabic, gate):
         text = path.read_text(encoding="utf-8")
         path.write_text("\n".join(line.rstrip() for line in text.rstrip().splitlines()) + "\n", encoding="utf-8")
 
-    print("Calibrated Arabic depth, deepened English proportionality analysis, and removed known metadata warnings")
+    print("Calibrated depth, deepened proportionality, localized review UI, and aligned permanent safety assertions")
 
 
 if __name__ == "__main__":
