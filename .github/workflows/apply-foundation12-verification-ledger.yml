@@ -1,0 +1,45 @@
+name: Apply Foundation 12 verification ledger
+
+on:
+  push:
+    branches:
+      - entity-measurement-foundation-12-verification
+    paths:
+      - .github/foundation12-verification-ledger.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: foundation12-verification-ledger
+  cancel-in-progress: false
+
+jobs:
+  append:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout verification branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Append the verified completion record
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(cat .github/foundation12-verification-ledger.trigger)" = 'run=1'
+          python .github/foundation12_append_ledger.py
+          grep -Fq '### 2026-09-02 — Foundation 12 post-merge verification addendum' .github/SEO_OPERATIONS_LEDGER.md
+          grep -Fq -- '- Status: `EXECUTED_VERIFIED`.' .github/SEO_OPERATIONS_LEDGER.md
+          git diff --check -- .github/SEO_OPERATIONS_LEDGER.md
+
+      - name: Commit only the ledger update
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add .github/SEO_OPERATIONS_LEDGER.md
+          git commit -m 'Record verified completion of entity and measurement foundation 12'
+          git push origin HEAD:entity-measurement-foundation-12-verification
