@@ -91,6 +91,68 @@ jobs:
           )
           PY
 
+      - name: Validate visible language switchers against hreflang alternates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          from urllib.parse import urlparse
+          import re
+
+          alternate_re = re.compile(
+              r'<link\b[^>]*\brel=["\']alternate["\'][^>]*\bhreflang=["\']([^"\']+)["\'][^>]*\bhref=["\']([^"\']+)["\'][^>]*>',
+              re.IGNORECASE,
+          )
+          langs_re = re.compile(
+              r'<div\b[^>]*\bclass=["\'][^"\']*\blangs\b[^"\']*["\'][^>]*>(.*?)</div>',
+              re.IGNORECASE | re.DOTALL,
+          )
+          anchor_re = re.compile(
+              r'<a\b[^>]*\bhref=["\']([^"\']+)["\'][^>]*\bhreflang=["\']([^"\']+)["\'][^>]*>',
+              re.IGNORECASE,
+          )
+
+          def local_path(url: str) -> str:
+              parsed = urlparse(url)
+              path = parsed.path if parsed.scheme else url.split('#', 1)[0].split('?', 1)[0]
+              if not path.startswith('/'):
+                  path = '/' + path
+              return path
+
+          errors = []
+          checked = 0
+          for path in Path('.').rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+              html = path.read_text(encoding='utf-8')
+              alternates = {
+                  lang.lower(): local_path(href)
+                  for lang, href in alternate_re.findall(html)
+                  if lang.lower() in {'ar', 'en', 'de'}
+              }
+              match = langs_re.search(html)
+              if not alternates or not match:
+                  continue
+              switches = {
+                  lang.lower(): local_path(href)
+                  for href, lang in anchor_re.findall(match.group(1))
+                  if lang.lower() in {'ar', 'en', 'de'}
+              }
+              for lang, expected in alternates.items():
+                  actual = switches.get(lang)
+                  if actual != expected:
+                      errors.append(
+                          f'{path}: visible {lang} switch is {actual!r}; hreflang requires {expected!r}'
+                      )
+              checked += 1
+
+          if errors:
+              print('\n'.join(errors))
+              raise SystemExit(1)
+          print(f'Validated visible language switchers on {checked} multilingual pages')
+          PY
+
       - name: Validate HTML links sitemap feeds hreflang and publication safety
         run: python tools/site_audit.py
 
