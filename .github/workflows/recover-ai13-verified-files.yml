@@ -1,0 +1,93 @@
+name: Recover verified AI pillar 13 files
+
+on:
+  push:
+    branches:
+      - teaching-names-ai-pillar-13
+    paths:
+      - .github/ai13/RECOVER
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recover-ai13-verified-files
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Recover only fingerprinted complete files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f .github/ai13/RECOVER
+          mapfile -t parts < <(find .github/ai13 -maxdepth 1 -type f -name 'part-*' | sort)
+          test "${#parts[@]}" -eq 5
+          cat "${parts[@]}" > /tmp/ai13-release.tgz.b64
+          echo 'a2a2637072b6b73fd9f7d6d093ab49ef0ebc93f0b50301c98cd266b212e04bf1  /tmp/ai13-release.tgz.b64' | sha256sum --check --strict
+          base64 --decode /tmp/ai13-release.tgz.b64 > /tmp/ai13-release.tgz
+          echo 'a6b10e494079ceb446beb67b1f6ca49879141238ed8af0c2dce04c8d9c0618b7  /tmp/ai13-release.tgz' | sha256sum --check --strict
+
+          set +e
+          gzip -dc /tmp/ai13-release.tgz > /tmp/ai13-release.partial.tar
+          inflate_rc=$?
+          set -e
+          test "$inflate_rc" -eq 1
+          echo 'd375ccac8daa5460d293b55bc8b07477d11bdb3d2e87d4b98b851b74252a4e64  /tmp/ai13-release.partial.tar' | sha256sum --check --strict
+          mkdir /tmp/ai13-recovered
+          set +e
+          tar -xf /tmp/ai13-release.partial.tar -C /tmp/ai13-recovered
+          extract_rc=$?
+          set -e
+          test "$extract_rc" -eq 2
+
+          cat <<'EOF' | sha256sum --check --strict
+          339706ddad15d8b6486810f098535598e308f7aaabb3ded618e5e327eb212770  /tmp/ai13-recovered/.github/ai13_integrate.py
+          e85e2da60180fba19ea896dbd385f1450b263440d6b7341c9a5c7cbcc67cd615  /tmp/ai13-recovered/articles/teaching-names-ai-understanding/CITATION.cff
+          3a18bd1709658bd140f1134b2d1ddd77a55c69cdad77b44471d26b9433927099  /tmp/ai13-recovered/articles/teaching-names-ai-understanding/citation.bib
+          a9ab376f8ea3139edb86b27a0443b95d6a493ddf0052c2631bb65eefa41cd45d  /tmp/ai13-recovered/articles/teaching-names-ai-understanding/citation.ris
+          ba047a8c1f9159f57bacb42f6ca02808a8bbfe8ca63009165af60e2ba6e32baa  /tmp/ai13-recovered/articles/teaching-names-ai-understanding/evidence/claims.json
+          EOF
+
+          install -D -m 0644 /tmp/ai13-recovered/.github/ai13_integrate.py .github/ai13_integrate.py
+          install -D -m 0644 /tmp/ai13-recovered/articles/teaching-names-ai-understanding/CITATION.cff articles/teaching-names-ai-understanding/CITATION.cff
+          install -D -m 0644 /tmp/ai13-recovered/articles/teaching-names-ai-understanding/citation.bib articles/teaching-names-ai-understanding/citation.bib
+          install -D -m 0644 /tmp/ai13-recovered/articles/teaching-names-ai-understanding/citation.ris articles/teaching-names-ai-understanding/citation.ris
+          install -D -m 0644 /tmp/ai13-recovered/articles/teaching-names-ai-understanding/evidence/claims.json articles/teaching-names-ai-understanding/evidence/claims.json
+
+          python -m py_compile .github/ai13_integrate.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('articles/teaching-names-ai-understanding/evidence/claims.json').read_text(encoding='utf-8'))
+          assert data['dossier']['version'] == '2.1'
+          assert len(data['claims']) == 12
+          assert len(data['sources']) == 25
+          PY
+          git diff --check
+
+      - name: Commit verified recovered files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add .github/ai13_integrate.py \
+            articles/teaching-names-ai-understanding/CITATION.cff \
+            articles/teaching-names-ai-understanding/citation.bib \
+            articles/teaching-names-ai-understanding/citation.ris \
+            articles/teaching-names-ai-understanding/evidence/claims.json
+          if git diff --cached --quiet; then
+            echo 'Verified files already match the recovered release.'
+            exit 0
+          fi
+          git commit -m 'Recover verified AI pillar evidence and integration files'
+          git push origin HEAD:teaching-names-ai-pillar-13
