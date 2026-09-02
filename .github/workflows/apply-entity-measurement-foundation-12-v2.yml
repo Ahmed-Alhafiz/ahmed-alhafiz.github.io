@@ -1,0 +1,207 @@
+name: Apply entity and measurement foundation 12 v2
+
+on:
+  push:
+    branches:
+      - entity-measurement-domain-foundation-12
+    paths:
+      - .github/entity-measurement-foundation-12-v2.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: entity-measurement-foundation-12-v2
+  cancel-in-progress: false
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply the corrected canonical entity and measurement foundation
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(cat .github/entity-measurement-foundation-12-v2.trigger)" = 'run=2'
+
+          python .github/entity_measurement_foundation12_patch.py
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('.github/entity_measurement_foundation12_apply.py')
+          text = path.read_text(encoding='utf-8')
+          old = '    normalize()\n'
+          if text.count(old) != 1:
+              raise SystemExit(f'Expected one repository-wide normalize call, found {text.count(old)}')
+          path.write_text(text.replace(old, '', 1), encoding='utf-8')
+          PY
+
+          python .github/entity_measurement_foundation12_apply.py
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          audit = Path('tools/visibility_audit.py')
+          text = audit.read_text(encoding='utf-8')
+          old = 'baseline.get("observed_outcomes", {})'
+          new = 'baseline.get("current_post_rebuild_outcomes", {})'
+          if text.count(old) != 1:
+              raise SystemExit(f'Expected one visibility-baseline key reference, found {text.count(old)}')
+          audit.write_text(text.replace(old, new, 1), encoding='utf-8')
+
+          manifest = Path('author.json')
+          data = json.loads(manifest.read_text(encoding='utf-8'))
+          data.pop('license', None)
+          manifest.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          checkpoint = Path('.github/CONTENT_CURRENT_CHECKPOINT.md')
+          text = checkpoint.read_text(encoding='utf-8')
+          marker = '## Measurement baseline\n\n'
+          addition = (
+              'Preserved verified pre-rebuild Search Console period: 2026-08-23 to 2026-08-29.\n\n'
+              '- Homepage: 15 clicks, 54 impressions, 27.78% CTR, average position 3.98.\n'
+              '- `/about/`: 2 clicks, 15 impressions, 13.33% CTR, average position 4.73.\n\n'
+              'These are small page-level samples from before the latest editorial, UX, dossier, and entity releases. '
+              'They do not prove position one for the query `أحمد الحافظ`, post-release growth, or AI citation.\n\n'
+          )
+          if text.count(marker) != 1:
+              raise SystemExit(f'Checkpoint measurement marker count: {text.count(marker)}')
+          checkpoint.write_text(text.replace(marker, marker + addition, 1), encoding='utf-8')
+          PY
+
+          rm -f .github/entity_measurement_foundation12_apply.py
+          rm -f .github/entity_measurement_foundation12_patch.py
+          rm -f .github/entity-measurement-foundation-12.trigger
+          rm -f .github/entity-measurement-foundation-12-v2.trigger
+          rm -f .github/workflows/apply-entity-measurement-foundation-12.yml
+          rm -f .github/workflows/apply-entity-measurement-foundation-12-v2.yml
+
+      - name: Parse all structured and machine-readable outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class JsonLdParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.active = False
+                  self.buffer = []
+                  self.blocks = []
+              def handle_starttag(self, tag, attrs):
+                  if tag.lower() == 'script' and dict(attrs).get('type', '').lower() == 'application/ld+json':
+                      self.active = True
+                      self.buffer = []
+              def handle_endtag(self, tag):
+                  if tag.lower() == 'script' and self.active:
+                      self.blocks.append(''.join(self.buffer))
+                      self.active = False
+              def handle_data(self, data):
+                  if self.active:
+                      self.buffer.append(data)
+
+          xml_files = [
+              Path('sitemap.xml'),
+              Path('articles/feed.xml'),
+              Path('en/articles/feed.xml'),
+              *sorted(Path('assets/figures').glob('*.svg')),
+          ]
+          json_files = [
+              Path('author.json'),
+              Path('articles/feed.json'),
+              Path('en/articles/feed.json'),
+              Path('articles/research-index.json'),
+              Path('data/content-inventory.json'),
+              Path('data/visibility-baseline.json'),
+              Path('data/indexnow-config.json'),
+              *sorted(Path('articles').glob('*/evidence/claims.json')),
+          ]
+          for path in xml_files:
+              ET.parse(path)
+          for path in json_files:
+              json.loads(path.read_text(encoding='utf-8'))
+
+          pages = blocks = 0
+          for path in Path('.').rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+              parser = JsonLdParser()
+              parser.feed(path.read_text(encoding='utf-8'))
+              for block in parser.blocks:
+                  if block.strip():
+                      json.loads(block)
+                      blocks += 1
+              pages += 1
+          print(f'Parsed {pages} HTML files, {blocks} JSON-LD blocks, {len(xml_files)} XML/SVG files, and {len(json_files)} JSON files')
+          PY
+
+      - name: Run every permanent structural editorial discovery entity and UX gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile \
+            tools/site_audit.py \
+            tools/editorial_quality_gate.py \
+            tools/discovery_integrity.py \
+            tools/dossier11_integrity.py \
+            tools/entity_integrity.py \
+            tools/visibility_audit.py \
+            tools/indexnow_submit.py \
+            tools/ux_integrity.py \
+            tools/arabic_ui_integrity.py \
+            .github/visual-review/run_visual_review.py
+
+          python tools/site_audit.py
+          python tools/editorial_quality_gate.py
+          python tools/discovery_integrity.py
+          python tools/dossier11_integrity.py
+          python tools/entity_integrity.py
+          python tools/visibility_audit.py --output visibility-audit-local.json
+          python tools/indexnow_submit.py --all --report indexnow-dry-run.json
+          python tools/ux_integrity.py
+          python tools/arabic_ui_integrity.py
+
+          test "$(python -c 'import json; print(len(json.load(open("author.json", encoding="utf-8"))["@graph"]))')" -ge 13
+          test "$(python -c 'import json; print(len(json.load(open("data/content-inventory.json", encoding="utf-8"))["items"]))')" = 9
+          test "$(python -c 'import json; print(json.load(open("visibility-audit-local.json", encoding="utf-8"))["status"])')" = passed
+          test "$(python -c 'import json; print(json.load(open("indexnow-dry-run.json", encoding="utf-8"))["status"])')" = dry_run
+          test ! -e .github/entity_measurement_foundation12_apply.py
+          test ! -e .github/entity_measurement_foundation12_patch.py
+          test ! -e .github/entity-measurement-foundation-12.trigger
+          test ! -e .github/entity-measurement-foundation-12-v2.trigger
+          test ! -e .github/workflows/apply-entity-measurement-foundation-12.yml
+          test ! -e .github/workflows/apply-entity-measurement-foundation-12-v2.yml
+          if find .github -maxdepth 3 -type f \( -name '*.trigger' -o -name 'apply-*.yml' \) -print | grep -q .; then
+            echo 'Temporary release machinery remained after integration.' >&2
+            exit 1
+          fi
+          rm -f visibility-audit-local.json indexnow-dry-run.json
+          git diff --check
+
+      - name: Commit the verified foundation to the feature branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Ahmed-Alhafiz'
+          git config user.email 'hhafz9924@gmail.com'
+          git add -A
+          git commit -m 'Standardize author identity and activate measurable discovery infrastructure'
+          if ! git push origin HEAD:entity-measurement-domain-foundation-12; then
+            git pull --rebase origin entity-measurement-domain-foundation-12
+            git push origin HEAD:entity-measurement-domain-foundation-12
+          fi
