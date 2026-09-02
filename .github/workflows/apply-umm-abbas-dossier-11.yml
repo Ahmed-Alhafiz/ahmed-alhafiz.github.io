@@ -47,7 +47,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test "$(cat .github/umm-abbas-dossier-11.trigger)" = 'run=1'
+          grep -Eq '^run=[0-9]+$' .github/umm-abbas-dossier-11.trigger
           python .github/dossier11_integration_fix.py
           python .github/dossier11_integrate.py
           # Workflow YAML changes are committed directly after branch verification;
