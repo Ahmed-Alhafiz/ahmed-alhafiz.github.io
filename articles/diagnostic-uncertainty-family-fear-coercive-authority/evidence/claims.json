@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.0",
+  "dossier": {
+    "slug": "diagnostic-uncertainty-family-fear-coercive-authority",
+    "title_ar": "حين يحكم الخوف قبل التشخيص: كيف يتحول الغموض إلى سلطة وإكراه داخل الأسرة؟",
+    "title_en": "When Fear Decides Before Diagnosis: How Uncertainty Becomes Authority and Coercion in Families",
+    "version": "1.0",
+    "published": "2026-09-02T10:00:00+02:00",
+    "modified": "2026-09-02T10:00:00+02:00",
+    "author": "أحمد الحافظ — Ahmed Alhafiz",
+    "canonical_ar": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+    "canonical_en": "https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+    "review_status": "author_review_complete_specialist_review_pending",
+    "review_disclosure_ar": "لم تتم بعد مراجعة مستقلة من اختصاصي في الطب النفسي أو السلامة التشخيصية أو أخلاقيات الموافقة.",
+    "review_disclosure_en": "No independent psychiatrist, diagnostic-safety specialist, or consent ethicist has reviewed this edition.",
+    "thematic_origin": {
+      "type": "forthcoming_book",
+      "name": "أم عباس لجلب الحبيب ورد المطلقة",
+      "url": "https://ahmed-alhafiz.github.io/books/umm-abbas/",
+      "evidentiary_status": "theme_only_not_evidence"
+    }
+  },
+  "confidence_scale": {
+    "high": "Directly supported by official guidance, consensus material, or closely matched primary research.",
+    "medium": "Supported but context-limited, observational, cross-sectional, qualitative, or dependent on interpretation.",
+    "open": "Author synthesis, normative proposal, or inference not independently validated as a clinical instrument."
+  },
+  "claim_types": {
+    "documented": "Paraphrase of a source-supported proposition.",
+    "contextual_association": "Association or qualitative finding whose population and design limit generalisation and causal inference.",
+    "author_synthesis": "Original analytical synthesis constructed from multiple sources and explicitly not presented as a validated instrument."
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "claim_ar": "التشخيص عملية تكرارية وفريقية تشمل الاستماع والفحص والاختبارات والتواصل والمتابعة وإعادة التقييم، وقد يقع الضرر عبر تشخيص فائت أو خاطئ أو متأخر أو سيئ التواصل.",
+      "claim_en": "Diagnosis is an iterative, team-based process involving history, examination, testing, communication, follow-up, and re-evaluation; harm may arise from missed, wrong, delayed, or poorly communicated diagnosis.",
+      "type": "documented",
+      "confidence": "high",
+      "evidence": ["S01", "S02", "S05"],
+      "caveat_ar": "لا يعني كون التشخيص تكراريًا أن التأخير غير المحدد مقبول؛ يجب أن توجد خطة ومواعيد تصعيد ومراجعة.",
+      "caveat_en": "Iteration does not excuse indefinite delay; a plan, escalation threshold, and review point are required."
+    },
+    {
+      "id": "C02",
+      "claim_ar": "إدارة عدم اليقين ومعايرة الثقة جزء من التميز التشخيصي، وليستا علامة ضعف إذا صاحبهما مسار واضح للخطوة التالية.",
+      "claim_en": "Managing uncertainty and calibrating confidence are components of diagnostic excellence, not signs of weakness when paired with an explicit next-step plan.",
+      "type": "documented",
+      "confidence": "high",
+      "evidence": ["S03"],
+      "caveat_ar": "أداة AHRQ إطار تحسين مهني وليست اختبارًا فرديًا لتحديد التشخيص.",
+      "caveat_en": "The AHRQ resource is a professional improvement framework, not an individual diagnostic test."
+    },
+    {
+      "id": "C03",
+      "claim_ar": "المريض ومن يحبهم أعضاء مهمون في الفريق التشخيصي لأنهم يملكون معلومات طولية قد لا تظهر في مقابلة قصيرة.",
+      "claim_en": "Patients and loved ones are important members of the diagnostic team because they may hold longitudinal information unavailable in a brief encounter.",
+      "type": "documented",
+      "confidence": "high",
+      "evidence": ["S01", "S04", "S05"],
+      "caveat_ar": "المشاركة لا تمنح الأسرة ملكية القرار أو حق تجاوز السرية والموافقة.",
+      "caveat_en": "Participation does not give relatives ownership of the decision or a right to override confidentiality and consent."
+    },
+    {
+      "id": "C04",
+      "claim_ar": "فشل تبادل المعلومات والتواصل بين الشخص والأسرة والمهنيين قد يضعف السلامة التشخيصية، بينما يحسن إشراك الشخص جودة البيانات المتاحة.",
+      "claim_en": "Failures of information exchange among the person, family, and clinicians can weaken diagnostic safety, while patient engagement can improve the available evidence.",
+      "type": "documented",
+      "confidence": "high",
+      "evidence": ["S01", "S02", "S04", "S05"],
+      "caveat_ar": "لا يضمن التواصل الجيد تشخيصًا صحيحًا، لكنه يقلل نقاط الفقد وسوء الفهم.",
+      "caveat_en": "Good communication does not guarantee a correct diagnosis, but it reduces information loss and misunderstanding."
+    },
+    {
+      "id": "C05",
+      "claim_ar": "في دراسة نوعية صغيرة على أسر في الأردن، تأثرت قرارات العلاج بإدراك التهديد، والاعتقاد بفعالية الخيار، والتكلفة أو التوافر، والخبرة السابقة، ضمن تفسيرات طبية واجتماعية وروحية متداخلة.",
+      "claim_en": "In a small qualitative study of families in Jordan, treatment decisions were influenced by perceived threat, perceived efficacy, cost or availability, and prior experience within overlapping biomedical, social, and spiritual accounts.",
+      "type": "contextual_association",
+      "confidence": "medium",
+      "evidence": ["S15"],
+      "caveat_ar": "العينة 25 أسرة وفي سياق أردني؛ لا تمثل جميع الأسر العربية ولا تثبت مسارًا سببيًا عامًا.",
+      "caveat_en": "The sample comprised 25 families in Jordan; it cannot represent all Arab families or establish a universal causal pathway."
+    },
+    {
+      "id": "C06",
+      "claim_ar": "في سجلات حالات فصام جديدة في الرياض ارتبط المرور بمعالجين تقليديين بمدة أطول من الذهان غير المعالج.",
+      "claim_en": "Among new schizophrenia records in Riyadh, a care pathway through traditional healers was associated with a longer duration of untreated psychosis.",
+      "type": "contextual_association",
+      "confidence": "medium",
+      "evidence": ["S16"],
+      "caveat_ar": "الدراسة استعادية ورصدية؛ ال تثبت أن المعالج التقليدي سبب التأخر ولا تنطبق على كل دعم ديني أو كل حالة.",
+      "caveat_en": "The retrospective observational design does not prove that traditional healing caused the delay and does not apply to every religious support pathway or individual."
+    },
+    {
+      "id": "C07",
+      "claim_ar": "الرعاية النفسية القائمة على الحقوق تضع الكرامة والفاعلية القانونية والموافقة الحرة والمستنيرة وتقليل الإكراه في مركز الخدمة.",
+      "claim_en": "Rights-based mental-health care centres dignity, legal agency, free and informed consent, and the reduction or elimination of coercion.",
+      "type": "documented",
+      "confidence": "high",
+      "evidence": ["S06", "S07", "S08", "S09"],
+      "caveat_ar": "التطبيق القانوني والتفاصيل الإجرائية تختلف بين الدول؛ هذه مبادئ معيارية وليست استشارة قانونية محلية.",
+      "caveat_en": "Legal implementation and procedures vary by jurisdiction; these are normative principles, not local legal advice."
+    },
+    {
+      "id": "C08",
+      "claim_ar": "ضغط الأقارب أو مقدمي الرعاية قد يفسد حرية القرار، وعند الاشتباه ينبغي توفير وقت ومكان آمن وحديث منفرد مع الشخص.",
+      "claim_en": "Pressure from relatives or carers can undermine free will; suspected coercion warrants time, a safe setting, and an opportunity to speak with the person alone.",
+      "type": "documented",
+      "confidence": "high",
+      "evidence": ["S10", "S13"],
+      "caveat_ar": "وجود رأي عائلي قوي لا يثبت الإكراه وحده؛ التقييم يحتاج سياقًا وأثرًا على قدرة الشخص على الاختيار.",
+      "caveat_en": "A strong family opinion does not by itself prove coercion; context and its effect on free choice must be assessed."
+    },
+    {
+      "id": "C09",
+      "claim_ar": "القدرة على اتخاذ القرار خاصة بقرار وزمن، ولا تُنفى لمجرد تشخيص أو مظهر أو سلوك غير معتاد؛ يجب دعم القرار أولًا وتوثيق أساس أي حكم.",
+      "claim_en": "Decision-making capacity is specific to a decision and time and cannot be denied solely because of diagnosis, appearance, or unusual behaviour; decision support and documented reasoning are required.",
+      "type": "documented",
+      "confidence": "high",
+      "evidence": ["S10", "S11"],
+      "caveat_ar": "هذه الإرشادات مبنية على سياق قانوني بريطاني؛ المبدأ العام مفيد، لكن الإجراءات الملزمة تختلف حسب الدولة.",
+      "caveat_en": "These standards arise from a UK legal context; the general principle is useful, but binding procedures vary by jurisdiction."
+    },
+    {
+      "id": "C10",
+      "claim_ar": "إشراك مقدمي الرعاية قد يحسن التخطيط عندما يوافق الشخص وتبقى رغباته مركزية.",
+      "claim_en": "Carer involvement can improve planning when the person consents and their wishes remain central.",
+      "type": "documented",
+      "confidence": "high",
+      "evidence": ["S12"],
+      "caveat_ar": "يجب تكييف المشاركة مع السرية والخطر والقدرة والرغبات الفعلية للشخص.",
+      "caveat_en": "Involvement must be adapted to confidentiality, risk, capacity, and the person’s actual wishes."
+    },
+    {
+      "id": "C11",
+      "claim_ar": "عند الاشتباه في أول نوبة ذهانية ينبغي أن يكون التقييم الاختصاصي سريعًا، مع بقاء الأسباب الجسدية والعصبية والدوائية والنومية ضمن الفحص المناسب.",
+      "claim_en": "Suspected first-episode psychosis warrants prompt specialist assessment while physical, neurological, medication-related, substance-related, and sleep-related causes remain part of an appropriate differential.",
+      "type": "documented",
+      "confidence": "high",
+      "evidence": ["S14"],
+      "caveat_ar": "الإرشاد لا يعني أن كل صوت أو تجربة حسية غريبة هي ذهان، ولا يسمح بالتشخيص الذاتي.",
+      "caveat_en": "The guideline does not mean every voice or unusual sensory experience is psychosis and does not enable self-diagnosis."
+    },
+    {
+      "id": "C12",
+      "claim_ar": "سلسلة الخوف–اليقين–السلطة تركيب تحليلي أصلي يجمع أدلة من السلامة التشخيصية والموافقة وحقوق الإنسان ومسارات طلب المساعدة.",
+      "claim_en": "The Fear–Certainty–Authority Cascade is an original analytical synthesis integrating diagnostic safety, consent, human-rights, and help-seeking evidence.",
+      "type": "author_synthesis",
+      "confidence": "open",
+      "evidence": ["S01", "S03", "S06", "S10", "S13", "S15", "S16", "S17", "S18"],
+      "caveat_ar": "لم يخضع الإطار لاختبار صلاحية سريري أو دراسة تنبؤية مستقلة، ولا يجوز استخدامه لتشخيص أسرة أو شخص.",
+      "caveat_en": "The framework has not undergone independent clinical validation or predictive study and must not be used to diagnose a family or individual."
+    },
+    {
+      "id": "C13",
+      "claim_ar": "مسار الأمان الموازي تركيب عملي أصلي يقترح تشغيل السلامة والتقييم والتوثيق والموافقة والدعم العائلي والديني الطوعي بالتوازي بدل جعلها معسكرات متنافسة.",
+      "claim_en": "The Parallel-Path Safeguard is an original practical synthesis that runs safety, assessment, documentation, consent, family support, and voluntary spiritual support in parallel rather than as competing camps.",
+      "type": "author_synthesis",
+      "confidence": "open",
+      "evidence": ["S01", "S04", "S05", "S06", "S07", "S08", "S10", "S12", "S13"],
+      "caveat_ar": "ليس بروتوكولًا علاجيًا مصدّقًا ولا بديلًا عن خدمات الطوارئ أو التقييم المهني أو القانون المحلي.",
+      "caveat_en": "It is not a validated treatment protocol and does not replace emergency services, professional assessment, or local law."
+    },
+    {
+      "id": "C14",
+      "claim_ar": "الدعم الديني يمكن أن يرافق الرعاية بأمان عندما يكون طوعيًا وغير حصري ويحفظ الجسد والموافقة ولا يوقف التقييم أو الدواء، لكن هذا معيار سلامة تركيبي لا نتيجة تجربة سريرية مباشرة.",
+      "claim_en": "Spiritual support can accompany care more safely when it is voluntary, non-exclusive, consent-respecting, and does not interrupt assessment or prescribed treatment; this is a normative synthesis, not a direct trial result.",
+      "type": "author_synthesis",
+      "confidence": "open",
+      "evidence": ["S06", "S07", "S08", "S10", "S13", "S15", "S16", "S17", "S18"],
+      "caveat_ar": "لا تثبت المصادر فعالية ممارسة روحية بعينها، ولا تسمح بالمساواة بين كل الممارسات أو الممارسين.",
+      "caveat_en": "The sources do not establish the efficacy of a particular spiritual practice and do not justify treating all practices or practitioners as equivalent."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "type": "official_guidance",
+      "organization": "World Health Organization",
+      "title": "World Patient Safety Day 2024: Improving Diagnosis for Patient Safety",
+      "year": 2024,
+      "url": "https://www.who.int/campaigns/world-patient-safety-day/world-patient-safety-day-2024",
+      "supports": ["C01", "C03", "C04", "C12", "C13"]
+    },
+    {
+      "id": "S02",
+      "type": "technical_guidance",
+      "organization": "World Health Organization",
+      "title": "Diagnostic Errors: Technical Series on Safer Primary Care",
+      "year": 2016,
+      "url": "https://www.who.int/publications-detail-redirect/9789241511636",
+      "supports": ["C01", "C04"]
+    },
+    {
+      "id": "S03",
+      "type": "official_tool",
+      "organization": "Agency for Healthcare Research and Quality",
+      "title": "Calibrate Dx: A Resource to Improve Diagnostic Decisions",
+      "year": 2022,
+      "url": "https://www.ahrq.gov/diagnostic-safety/tools/calibrate-dx.html",
+      "supports": ["C02", "C12"]
+    },
+    {
+      "id": "S04",
+      "type": "official_tool",
+      "organization": "Agency for Healthcare Research and Quality",
+      "title": "Toolkit for Engaging Patients to Improve Diagnostic Safety",
+      "year": 2023,
+      "url": "https://www.ahrq.gov/diagnostic-safety/tools/engaging-patients-improve.html",
+      "supports": ["C03", "C04", "C13"]
+    },
+    {
+      "id": "S05",
+      "type": "consensus_report",
+      "organization": "National Academies of Sciences, Engineering, and Medicine",
+      "title": "Improving Diagnosis in Health Care",
+      "year": 2015,
+      "url": "https://nap.nationalacademies.org/resource/21794/interactive/",
+      "supports": ["C01", "C03", "C04", "C13"]
+    },
+    {
+      "id": "S06",
+      "type": "normative_guidance",
+      "organization": "World Health Organization and Office of the United Nations High Commissioner for Human Rights",
+      "title": "Mental Health, Human Rights and Legislation: Guidance and Practice",
+      "year": 2023,
+      "url": "https://www.who.int/publications/i/item/9789240080737",
+      "supports": ["C07", "C12", "C13", "C14"]
+    },
+    {
+      "id": "S07",
+      "type": "official_guidance",
+      "organization": "World Health Organization",
+      "title": "Guidance on Community Mental Health Services: Promoting Person-Centred and Rights-Based Approaches",
+      "year": 2021,
+      "url": "https://www.who.int/publications/i/item/9789240025707",
+      "supports": ["C07", "C13", "C14"]
+    },
+    {
+      "id": "S08",
+      "type": "official_guidance",
+      "organization": "World Health Organization",
+      "title": "Mental Health Crisis Services: Promoting Person-Centred and Rights-Based Approaches",
+      "year": 2021,
+      "url": "https://www.who.int/publications/i/item/9789240025721",
+      "supports": ["C07", "C13", "C14"]
+    },
+    {
+      "id": "S09",
+      "type": "official_training",
+      "organization": "World Health Organization",
+      "title": "WHO QualityRights Training: Humanitarian Edition",
+      "year": 2025,
+      "url": "https://www.who.int/publications/m/item/who-qualityrights-training--humanitarian-edition",
+      "supports": ["C07"]
+    },
+    {
+      "id": "S10",
+      "type": "guideline",
+      "organization": "National Institute for Health and Care Excellence",
+      "title": "NG108: Decision-making and Mental Capacity — Recommendations",
+      "year": 2018,
+      "url": "https://www.nice.org.uk/guidance/ng108/chapter/Recommendations",
+      "supports": ["C08", "C09", "C12", "C13", "C14"]
+    },
+    {
+      "id": "S11",
+      "type": "quality_standard",
+      "organization": "National Institute for Health and Care Excellence",
+      "title": "QS194 Quality Statement 3: Assessment of Capacity",
+      "year": 2020,
+      "url": "https://www.nice.org.uk/guidance/qs194/chapter/Quality-statement-3-Assessment-of-capacity",
+      "supports": ["C09"]
+    },
+    {
+      "id": "S12",
+      "type": "quality_standard",
+      "organization": "National Institute for Health and Care Excellence",
+      "title": "QS200 Quality Statement 2: Working with Carers",
+      "year": 2021,
+      "url": "https://www.nice.org.uk/guidance/qs200/chapter/Quality-statement-2-Working-with-carers",
+      "supports": ["C10", "C13"]
+    },
+    {
+      "id": "S13",
+      "type": "professional_standard",
+      "organization": "General Medical Council",
+      "title": "Decision Making and Consent: Pressure and Free Will",
+      "year": 2020,
+      "url": "https://www.gmc-uk.org/professional-standards/the-professional-standards/decision-making-and-consent/circumstances-that-affect-the-decision-making-process-continued-1",
+      "supports": ["C08", "C12", "C13", "C14"]
+    },
+    {
+      "id": "S14",
+      "type": "clinical_guideline",
+      "organization": "National Institute for Health and Care Excellence",
+      "title": "CG178: Getting Help Early for Possible First-Episode Psychosis",
+      "year": 2014,
+      "url": "https://www.nice.org.uk/guidance/cg178/ifp/chapter/Getting-help-early-if-you-are-at-risk-of-or-have-a-first-episode-of-psychosis",
+      "supports": ["C11"]
+    },
+    {
+      "id": "S15",
+      "type": "qualitative_study",
+      "authors": "Arabiat D; Whitehead L; Al Jabery M; Hamdan-Mansour A; Shaheen A; Abu Sabbah E",
+      "title": "Beliefs About Illness and Treatment Decision Modelling During Ill-Health in Arabic Families",
+      "journal": "Journal of Multidisciplinary Healthcare",
+      "year": 2021,
+      "doi": "10.2147/JMDH.S311900",
+      "url": "https://doi.org/10.2147/JMDH.S311900",
+      "sample": "25 families in Jordan",
+      "supports": ["C05", "C12", "C14"]
+    },
+    {
+      "id": "S16",
+      "type": "retrospective_observational_study",
+      "authors": "Al Fayez H; Lappin J; Murray R; Boydell J",
+      "title": "Duration of Untreated Psychosis and Pathway to Care in Riyadh, Saudi Arabia",
+      "journal": "Early Intervention in Psychiatry",
+      "year": 2017,
+      "doi": "10.1111/eip.12214",
+      "url": "https://doi.org/10.1111/eip.12214",
+      "sample": "421 new schizophrenia records across six government hospitals",
+      "supports": ["C06", "C12", "C14"]
+    },
+    {
+      "id": "S17",
+      "type": "cross_sectional_study",
+      "authors": "Alosaimi FD et al.",
+      "title": "The Prevalence of Psychiatric Disorders Among Visitors to Faith Healers in Saudi Arabia",
+      "journal": "Pakistan Journal of Medical Sciences",
+      "year": 2014,
+      "doi": "10.12669/pjms.305.5434",
+      "url": "https://doi.org/10.12669/pjms.305.5434",
+      "supports": ["C12", "C14"]
+    },
+    {
+      "id": "S18",
+      "type": "cross_sectional_study",
+      "authors": "Alosaimi FD et al.",
+      "title": "Psychosocial Correlates of Using Faith Healing Services in Riyadh, Saudi Arabia",
+      "journal": "International Journal of Mental Health Systems",
+      "year": 2015,
+      "doi": "10.1186/1752-4458-9-8",
+      "url": "https://doi.org/10.1186/1752-4458-9-8",
+      "supports": ["C12", "C14"]
+    },
+    {
+      "id": "S19",
+      "type": "cross_sectional_study",
+      "authors": "Mahsoon A et al.",
+      "title": "Parental Support, Beliefs about Mental Illness, and Mental Help-Seeking among Young Adults in Saudi Arabia",
+      "journal": "International Journal of Environmental Research and Public Health",
+      "year": 2020,
+      "doi": "10.3390/ijerph17155615",
+      "url": "https://doi.org/10.3390/ijerph17155615",
+      "sample": "236 young adults; convenience sample",
+      "supports": []
+    }
+  ]
+}
