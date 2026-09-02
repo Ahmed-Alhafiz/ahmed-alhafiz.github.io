@@ -56,9 +56,10 @@ jobs:
           python .github/visual-review/verify_book_covers.py
 
       - name: Upload visual review artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: site-ux-rebuild-10-visual-review
           path: visual-review
           retention-days: 14
-          if-no-files-found: error
+          if-no-files-found: warn
