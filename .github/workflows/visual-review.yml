@@ -10,7 +10,7 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -49,19 +49,28 @@ jobs:
             'research-en|/en/articles/'
             'ratq-ar|/articles/ratq-fatq-big-bang/'
             'ratq-en|/en/articles/ratq-fatq-big-bang/'
-            'evidence-ar|/articles/ratq-fatq-big-bang/evidence/'
+            'ratq-evidence-ar|/articles/ratq-fatq-big-bang/evidence/'
+            'ratq-evidence-en|/en/articles/ratq-fatq-big-bang/evidence/'
+            'water-ar|/articles/water-civilization-power/'
+            'water-en|/en/articles/water-civilization-power/'
+            'water-evidence-ar|/articles/water-civilization-power/evidence/'
+            'water-evidence-en|/en/articles/water-civilization-power/evidence/'
             'methodology-ar|/methodology/'
             'methodology-en|/en/methodology/'
             'research-status-ar|/research-status/'
+            'research-status-en|/en/research-status/'
             'sirou-ar|/books/sirou-fi-alard/'
+            'sirou-en|/en/books/sirou-fi-alard/'
             'umm-abbas-ar|/books/umm-abbas/'
+            'umm-abbas-en|/en/books/umm-abbas/'
             'about-ar|/about/'
+            'about-en|/en/about/'
           )
 
           for item in "${pages[@]}"; do
             name="${item%%|*}"
             path="${item#*|}"
-            url="http://127.0.0.1:4173${path}?visual_review=1"
+            url="http://127.0.0.1:4173${path}?visual_review=water09"
             curl --fail --silent --show-error "$url" > /dev/null
 
             "$browser" \
@@ -102,8 +111,8 @@ jobs:
           total = 0
           for mode, dimensions in expected.items():
               paths = sorted((Path("visual-review") / mode).glob("*.png"))
-              if len(paths) != 13:
-                  raise SystemExit(f"{mode}: expected 13 screenshots, found {len(paths)}")
+              if len(paths) != 22:
+                  raise SystemExit(f"{mode}: expected 22 screenshots, found {len(paths)}")
               for path in paths:
                   data = path.read_bytes()
                   if data[:8] != b"\x89PNG\r\n\x1a\n":
@@ -122,7 +131,7 @@ jobs:
       - name: Upload visual review artifact
         uses: actions/upload-artifact@v4
         with:
-          name: global-editorial-rebuild-07-visual-review
+          name: water-civilization-power-09-visual-review
           path: visual-review
           retention-days: 14
           if-no-files-found: error
