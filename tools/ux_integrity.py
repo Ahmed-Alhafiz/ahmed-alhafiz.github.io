@@ -9,7 +9,7 @@ presentation decisions that materially affect trust and usability:
 - no public GitHub profile presented as an author channel;
 - exactly three official contact channels where contact details are shown;
 - stable portrait markup on Arabic, English, and German home/profile pages;
-- removal of the legacy German page layouts;
+- one modern book layout across all three languages;
 - correct page direction and accessible social links.
 """
 from __future__ import annotations
@@ -38,6 +38,10 @@ PORTRAIT_RE = re.compile(
     r'<img\b(?=[^>]*src=["\']/ahmed-alhafiz-author\.png["\'])(?=[^>]*width=["\']1229["\'])(?=[^>]*height=["\']1536["\'])[^>]*>',
     re.IGNORECASE | re.DOTALL,
 )
+CONTACT_CHANNEL_RE = re.compile(
+    r'<a\b[^>]*class=["\'][^"\']*\bcontact-channel\b[^"\']*["\']',
+    re.IGNORECASE,
+)
 
 HOME_PAGES = {
     "index.html": "ar",
@@ -49,20 +53,24 @@ PROFILE_PAGES = {
     "en/about/index.html": "en",
     "de/about/index.html": "de",
 }
-GERMAN_MODERN_PAGES = {
-    "de/index.html",
-    "de/about/index.html",
-    "de/books/sirou-fi-alard/index.html",
-    "de/books/umm-abbas/index.html",
-    "de/books/juhayman/index.html",
-    "de/books/kitab-al-kutub/index.html",
+BOOK_SLUGS = ("sirou-fi-alard", "umm-abbas", "juhayman", "kitab-al-kutub")
+BOOK_PAGES = {
+    f"{prefix}books/{slug}/index.html"
+    for prefix in ("", "en/", "de/")
+    for slug in BOOK_SLUGS
 }
-LEGACY_TOKENS = (
-    'class="page-head"',
-    'class="book-layout"',
+GLOBAL_LEGACY_TOKENS = (
     'class="identity-links"',
     "Languages and profiles",
     "اللغات والروابط",
+)
+BOOK_LEGACY_TOKENS = (
+    'class="page-head"',
+    'class="book-layout"',
+    'href="/#links"',
+    'href="/en/#links"',
+    'href="/de/#links"',
+    'href="/en/#books"',
 )
 
 
@@ -105,7 +113,7 @@ def public_pages() -> list[Path]:
     )
 
 
-def promote_json(value: object, errors: list[str], context: str) -> None:
+def inspect_json(value: object, errors: list[str], context: str) -> None:
     if isinstance(value, dict):
         same_as = value.get("sameAs")
         if isinstance(same_as, list):
@@ -113,10 +121,10 @@ def promote_json(value: object, errors: list[str], context: str) -> None:
                 if isinstance(url, str) and url.startswith(PUBLIC_GITHUB):
                     errors.append(f"{context}: GitHub remained in structured public identity")
         for child in value.values():
-            promote_json(child, errors, context)
+            inspect_json(child, errors, context)
     elif isinstance(value, list):
         for child in value:
-            promote_json(child, errors, context)
+            inspect_json(child, errors, context)
 
 
 def validate_public_page(path: Path, errors: list[str]) -> None:
@@ -160,7 +168,7 @@ def validate_public_page(path: Path, errors: list[str]) -> None:
 
     if PUBLIC_GITHUB in html:
         errors.append(f"{rel}: public GitHub author link remained")
-    for token in LEGACY_TOKENS:
+    for token in GLOBAL_LEGACY_TOKENS:
         if token in html:
             errors.append(f"{rel}: legacy or duplicated interface token remained: {token}")
 
@@ -170,13 +178,12 @@ def validate_public_page(path: Path, errors: list[str]) -> None:
         except json.JSONDecodeError as exc:
             errors.append(f"{rel}: JSON-LD block {index} is invalid: {exc}")
             continue
-        promote_json(data, errors, f"{rel} JSON-LD block {index}")
+        inspect_json(data, errors, f"{rel} JSON-LD block {index}")
 
 
 def validate_priority_pages(errors: list[str]) -> None:
     for rel, language in {**HOME_PAGES, **PROFILE_PAGES}.items():
-        path = ROOT / rel
-        html = path.read_text(encoding="utf-8")
+        html = (ROOT / rel).read_text(encoding="utf-8")
         if not PORTRAIT_RE.search(html):
             errors.append(f"{rel}: stable 1229×1536 portrait markup missing")
         if language == "ar" and 'dir="rtl"' not in html:
@@ -188,27 +195,25 @@ def validate_priority_pages(errors: list[str]) -> None:
         html = (ROOT / rel).read_text(encoding="utf-8")
         if html.count('id="contact"') != 1:
             errors.append(f"{rel}: compact contact section missing or duplicated")
-        if html.count('class="contact-channel') != 3:
+        if len(CONTACT_CHANNEL_RE.findall(html)) != 3:
             errors.append(f"{rel}: expected exactly three visible contact channels")
         if "mailto:hhafz9924@gmail.com" not in html:
             errors.append(f"{rel}: official email contact missing")
         if '<small dir="ltr">' not in html:
             errors.append(f"{rel}: LTR-safe account handle markup missing")
 
-    for rel in GERMAN_MODERN_PAGES:
+    for rel in BOOK_PAGES:
         html = (ROOT / rel).read_text(encoding="utf-8")
-        for token in ('class="site-header"', 'class="site-footer"'):
+        for token in ('class="site-header"', 'class="site-footer"', 'class="book-hero"', 'class="book-hero-cover"', 'class="publication-note"'):
             if token not in html:
-                errors.append(f"{rel}: current design-system token missing: {token}")
-        if rel.startswith("de/books/"):
-            for token in ('class="book-hero"', 'class="book-hero-cover"', 'class="publication-note"'):
-                if token not in html:
-                    errors.append(f"{rel}: modern German book token missing: {token}")
+                errors.append(f"{rel}: modern multilingual book token missing: {token}")
+        for token in BOOK_LEGACY_TOKENS:
+            if token in html:
+                errors.append(f"{rel}: legacy book-layout token remained: {token}")
 
 
 def validate_css(errors: list[str]) -> None:
-    path = ROOT / "assets/site-v2.css"
-    css = path.read_text(encoding="utf-8")
+    css = (ROOT / "assets/site-v2.css").read_text(encoding="utf-8")
     required = (
         "Site UX Rebuild 10 — multilingual visual consistency",
         ".home-hero-grid,.profile-grid{grid-template-columns:",
@@ -245,7 +250,7 @@ def main() -> None:
         f"{len(pages)} public pages, one compact footer each, "
         "three official contact channels, no duplicate language footers, "
         "no public GitHub identity, stable tri-language portrait markup, "
-        "and modern German surfaces."
+        "and one modern book layout across Arabic, English, and German."
     )
 
 
