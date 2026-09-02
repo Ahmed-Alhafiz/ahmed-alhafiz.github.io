@@ -1,4 +1,4 @@
-name: Apply entity and measurement foundation 12 v4
+name: Apply entity and measurement foundation 12 final
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: entity-measurement-foundation-12-v4
+  group: entity-measurement-foundation-12-final
   cancel-in-progress: false
 
 jobs:
@@ -33,7 +33,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test "$(cat .github/entity-measurement-foundation-12-v4.trigger)" = 'run=4'
+          test "$(cat .github/entity-measurement-foundation-12-v4.trigger)" = 'run=5'
           python .github/entity_measurement_foundation12_patch.py
           python .github/entity_measurement_foundation12_patch2.py
           python .github/entity_measurement_foundation12_patch3.py
@@ -80,6 +80,9 @@ jobs:
           if text.count(marker) != 1:
               raise SystemExit(f'Checkpoint measurement marker count: {text.count(marker)}')
           checkpoint.write_text(text.replace(marker, marker + addition, 1), encoding='utf-8')
+
+          css = Path('assets/site-v2.css')
+          css.write_text(css.read_text(encoding='utf-8').rstrip() + '\n', encoding='utf-8')
           PY
 
           rm -f .github/entity_measurement_foundation12_apply.py
