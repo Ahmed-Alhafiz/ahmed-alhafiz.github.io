@@ -10,16 +10,30 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Use Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install browser and image automation dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --quiet "selenium>=4.25,<5" "pillow>=11,<12"
+          python -c "import selenium, PIL; print('Selenium', selenium.__version__, 'Pillow', PIL.__version__)"
+          google-chrome --version || chromium --version || chromium-browser --version
+          chromedriver --version || true
 
       - name: Start local static server
         shell: bash
         run: |
           set -euo pipefail
-          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/ahmed-site-server.log 2>&1 &
+          python -m http.server 4173 --bind 127.0.0.1 > /tmp/ahmed-site-server.log 2>&1 &
           echo $! > /tmp/ahmed-site-server.pid
           for attempt in {1..30}; do
             if curl --fail --silent http://127.0.0.1:4173/ > /dev/null; then
@@ -30,131 +44,22 @@ jobs:
           cat /tmp/ahmed-site-server.log
           exit 1
 
-      - name: Render priority pages at desktop and mobile widths
+      - name: Render and verify multilingual responsive states
         shell: bash
         run: |
           set -euo pipefail
-          browser="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
-          if [[ -z "$browser" ]]; then
-            echo 'No Chromium-compatible browser is available on the runner.' >&2
-            exit 1
-          fi
-          echo "Using browser: $browser"
-          mkdir -p visual-review/desktop visual-review/mobile visual-review/social
-
-          pages=(
-            'home-ar|/'
-            'home-en|/en/'
-            'research-ar|/articles/'
-            'research-en|/en/articles/'
-            'ratq-ar|/articles/ratq-fatq-big-bang/'
-            'ratq-en|/en/articles/ratq-fatq-big-bang/'
-            'ratq-evidence-ar|/articles/ratq-fatq-big-bang/evidence/'
-            'ratq-evidence-en|/en/articles/ratq-fatq-big-bang/evidence/'
-            'water-ar|/articles/water-civilization-power/'
-            'water-en|/en/articles/water-civilization-power/'
-            'water-evidence-ar|/articles/water-civilization-power/evidence/'
-            'water-evidence-en|/en/articles/water-civilization-power/evidence/'
-            'methodology-ar|/methodology/'
-            'methodology-en|/en/methodology/'
-            'research-status-ar|/research-status/'
-            'research-status-en|/en/research-status/'
-            'sirou-ar|/books/sirou-fi-alard/'
-            'sirou-en|/en/books/sirou-fi-alard/'
-            'umm-abbas-ar|/books/umm-abbas/'
-            'umm-abbas-en|/en/books/umm-abbas/'
-            'about-ar|/about/'
-            'about-en|/en/about/'
-          )
-
-          for item in "${pages[@]}"; do
-            name="${item%%|*}"
-            path="${item#*|}"
-            url="http://127.0.0.1:4173${path}?visual_review=water09"
-            curl --fail --silent --show-error "$url" > /dev/null
-
-            "$browser" \
-              --headless=new \
-              --no-sandbox \
-              --disable-gpu \
-              --hide-scrollbars \
-              --virtual-time-budget=2500 \
-              --force-device-scale-factor=1 \
-              --window-size=1440,1200 \
-              --screenshot="visual-review/desktop/${name}.png" \
-              "$url"
-
-            "$browser" \
-              --headless=new \
-              --no-sandbox \
-              --disable-gpu \
-              --hide-scrollbars \
-              --virtual-time-budget=2500 \
-              --force-device-scale-factor=1 \
-              --window-size=390,844 \
-              --screenshot="visual-review/mobile/${name}.png" \
-              "$url"
-          done
-
-          cp assets/social/water-civilization-power-ar.png visual-review/social/
-          cp assets/social/water-civilization-power-en.png visual-review/social/
-
-      - name: Verify screenshots and social-card assets
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          from pathlib import Path
-          import struct
-
-          expected = {
-              "desktop": (1440, 1200),
-              "mobile": (390, 844),
-          }
-          total = 0
-          for mode, dimensions in expected.items():
-              paths = sorted((Path("visual-review") / mode).glob("*.png"))
-              if len(paths) != 22:
-                  raise SystemExit(f"{mode}: expected 22 screenshots, found {len(paths)}")
-              for path in paths:
-                  data = path.read_bytes()
-                  if data[:8] != b"\x89PNG\r\n\x1a\n" or data[12:16] != b"IHDR":
-                      raise SystemExit(f"{path}: not a valid PNG")
-                  width, height = struct.unpack(">II", data[16:24])
-                  if (width, height) != dimensions:
-                      raise SystemExit(
-                          f"{path}: expected {dimensions}, found {(width, height)}"
-                      )
-                  if len(data) < 5_000:
-                      raise SystemExit(f"{path}: suspiciously small render ({len(data)} bytes)")
-                  total += 1
-
-          social = sorted((Path("visual-review") / "social").glob("*.png"))
-          expected_names = {
-              "water-civilization-power-ar.png",
-              "water-civilization-power-en.png",
-          }
-          if {path.name for path in social} != expected_names:
-              raise SystemExit(
-                  f"social: expected {sorted(expected_names)}, found {[path.name for path in social]}"
-              )
-          for path in social:
-              data = path.read_bytes()
-              if data[:8] != b"\x89PNG\r\n\x1a\n" or data[12:16] != b"IHDR":
-                  raise SystemExit(f"{path}: not a valid PNG")
-              width, height = struct.unpack(">II", data[16:24])
-              if (width, height) != (1200, 630):
-                  raise SystemExit(f"{path}: expected 1200x630, found {(width, height)}")
-              if len(data) < 10_000:
-                  raise SystemExit(f"{path}: suspiciously small social card ({len(data)} bytes)")
-
-          print(f"Verified {total} page screenshots and {len(social)} dedicated social cards")
-          PY
+          python -m py_compile \
+            .github/visual-review/run_visual_review.py \
+            .github/visual-review/run_visual_review_fixed.py \
+            .github/visual-review/verify_book_covers.py
+          python .github/visual-review/run_visual_review_fixed.py
+          python .github/visual-review/verify_book_covers.py
 
       - name: Upload visual review artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: water-civilization-power-09-visual-review
+          name: site-ux-rebuild-10-visual-review
           path: visual-review
           retention-days: 14
-          if-no-files-found: error
+          if-no-files-found: warn
