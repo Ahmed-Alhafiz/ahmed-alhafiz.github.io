@@ -71,7 +71,9 @@ def validate_standard() -> None:
         "85–100: ركيزة مرجعية",
         "أقوى ثلاثة اعتراضات",
         "نسخة إنجليزية تحريرية كاملة",
-        "المخطوطان مصدر أسئلة لا مصدر براهين",
+        "منشأ موضوعي للسؤال",
+        "ليس مصدرًا علميًا لإثبات الجواب",
+        "لا تُبنى حلقة استشهاد ذاتي",
     )
     for token in required:
         if token not in text:
@@ -107,6 +109,9 @@ def validate_architecture() -> None:
     matrix_rows = re.findall(r"^\| [1-6]\. ", text, flags=re.MULTILINE)
     if len(matrix_rows) != 6:
         fail(f"expected six matrix layers, found {len(matrix_rows)}")
+
+    if "الوعي" not in text or "سؤال مستقل" not in text:
+        fail("consciousness must remain a separate unresolved question")
 
 
 def validate_url(url: str, context: str) -> None:
@@ -155,14 +160,32 @@ def validate_register() -> None:
             if not source.get(key):
                 fail(f"{sid}: missing source field {key}")
         validate_url(source["url"], sid)
-        if sid.startswith("R") and source["domain"] not in {"quran", "tafsir", "quranic_lexicography"}:
+        if sid.startswith("R") and source["domain"] not in {
+            "quran",
+            "tafsir",
+            "quranic_lexicography",
+        }:
             fail(f"{sid}: religious source domain mismatch")
-        if sid.startswith("A") and source["domain"] in {"quran", "tafsir", "quranic_lexicography"}:
+        if sid.startswith("A") and source["domain"] in {
+            "quran",
+            "tafsir",
+            "quranic_lexicography",
+        }:
             fail(f"{sid}: technical source misclassified as religious")
 
     for claim in claims:
         cid = claim["id"]
-        for key in ("domain", "claim_ar", "claim_en", "type", "confidence", "support", "counterweight", "limit_ar", "limit_en"):
+        for key in (
+            "domain",
+            "claim_ar",
+            "claim_en",
+            "type",
+            "confidence",
+            "support",
+            "counterweight",
+            "limit_ar",
+            "limit_en",
+        ):
             if key not in claim or claim[key] in (None, ""):
                 fail(f"{cid}: missing claim field {key}")
         if claim["type"] not in ALLOWED_CLAIM_TYPES:
@@ -194,12 +217,24 @@ def validate_register() -> None:
         if not any(sid.startswith("A") for sid in claim["support"]):
             fail(f"{cid}: technical claim lacks technical support")
 
-    if "the author's book as scientific evidence" not in data.get("source_policy", {}).get("excluded", []):
+    excluded = data.get("source_policy", {}).get("excluded", [])
+    if "the author's book as scientific evidence" not in excluded:
         fail("source policy no longer excludes the author's book as scientific evidence")
 
     frontier = source_map["A22"]
     if frontier.get("status") != "frontier_excluded_from_central_conclusion":
         fail("2026 global-workspace preprint must stay outside central conclusion")
+
+    grouped = [
+        source["id"]
+        for source in sources
+        if source.get("type") == "derived_source_group"
+    ]
+    if grouped != ["A15"]:
+        fail("the temporary grouped source must remain isolated as A15 until replacement")
+    next_validation = " ".join(data.get("next_validation", []))
+    if "Resolve A15" not in next_validation:
+        fail("publication plan must explicitly require replacing grouped pseudo-source A15")
 
 
 def main() -> None:
@@ -209,8 +244,9 @@ def main() -> None:
     validate_register()
     print(
         "Reference-grade research architecture passed: governing standard present, "
-        "six-layer Teaching the Names matrix, 14 bilingual claims, 28 classified sources, "
-        "valid source references, explicit manuscript/evidence separation, and frontier-result containment."
+        "six-layer Teaching the Names matrix, 14 bilingual claims, 28 classified planning sources, "
+        "valid source references, explicit manuscript/evidence separation, isolated temporary A15, "
+        "and frontier-result containment."
     )
 
 
