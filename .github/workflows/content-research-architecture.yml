@@ -25,7 +25,7 @@ jobs:
       - name: Compile the architecture gate
         run: python -m py_compile tools/content_research_architecture_integrity.py
 
-      - name: Parse retired planning and verified claim-evidence registers
+      - name: Parse registers and measure verification records and drafts
         shell: bash
         run: |
           set -euo pipefail
@@ -40,14 +40,14 @@ jobs:
           verified = json.loads(
               Path('.github/teaching_names_ai_verified_claims.json').read_text(encoding='utf-8')
           )
-          quranic = Path(
-              '.github/drafts/TEACHING_NAMES_ARABIC_DRAFT_01_QURANIC_UNIT.md'
-          ).read_text(encoding='utf-8')
-          technical = Path(
-              '.github/drafts/TEACHING_NAMES_ARABIC_DRAFT_02_TECHNICAL_UNIT.md'
-          ).read_text(encoding='utf-8')
-
+          paths = {
+              'tafsir verification': Path('.github/TEACHING_NAMES_TAFSIR_VERIFICATION_2026-09-03.md'),
+              'technical verification': Path('.github/TEACHING_NAMES_TECHNICAL_VERIFICATION_2026-09-03.md'),
+              'Qur\'anic draft': Path('.github/drafts/TEACHING_NAMES_ARABIC_DRAFT_01_QURANIC_UNIT.md'),
+              'technical draft': Path('.github/drafts/TEACHING_NAMES_ARABIC_DRAFT_02_TECHNICAL_UNIT.md'),
+          }
           words = lambda text: len(re.findall(r'[\w\u0600-\u06FF]+', text, flags=re.UNICODE))
+
           print(
               f"Retired planning register: status={planning['status']}, "
               f"publication_state={planning['publication_state']}"
@@ -57,10 +57,9 @@ jobs:
               f"{len(verified['sources'])} sources, "
               f"publication_state={verified['publication_state']}"
           )
-          print(
-              f"Internal Arabic drafts: Qur'anic unit={words(quranic)} words; "
-              f"technical unit={words(technical)} words"
-          )
+          for label, path in paths.items():
+              text = path.read_text(encoding='utf-8')
+              print(f"{label}: {words(text)} words; {len(text)} characters")
           PY
 
       - name: Validate reference-grade tafsir technical evidence reciprocity and drafts
