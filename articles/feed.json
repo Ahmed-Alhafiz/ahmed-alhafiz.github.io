@@ -8,77 +8,14 @@
     {"name": "أحمد الحافظ — Ahmed Alhafiz", "url": "https://ahmed-alhafiz.github.io/about/"}
   ],
   "items": [
-    {
-      "id": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/",
-      "url": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/",
-      "title": "الرتق والفتق والانفجار العظيم: تحقيق في النص والتفسير وأدلة علم الكون",
-      "summary": "ملف موسع يفصل النص القرآني وتاريخ التفسير عن الرصد والنموذج العلمي والاستنتاج الفلسفي، مع خريطة ادعاء ودليل ونسخة إنجليزية.",
-      "date_published": "2026-09-01T23:00:00+02:00", "date_modified": "2026-09-02T04:33:19+02:00",
-      "tags": ["ملف بحثي موسع", "author_review_complete_external_review_pending", "sirou-fi-alard"], "language": "ar"
-    },
-    {
-      "id": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/",
-      "url": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/",
-      "title": "الماء والحضارة والسلطة: متى تصبح إدارة المورد عدلًا، ومتى تتحول إلى أداة سيطرة؟",
-      "summary": "ملف ثنائي اللغة يبني سلسلة من ست طبقات بين المورد والبنية والبيانات والتخصيص والمساءلة والصيانة، ويختبرها في مأرب والرافدين وأنغكور وحوكمة المياه المعاصرة.",
-      "date_published": "2026-09-02T05:40:00+02:00", "date_modified": "2026-09-02T05:40:00+02:00",
-      "tags": ["ملف بحثي موسع ثنائي اللغة", "author_review_complete_external_review_pending", "sirou-fi-alard"], "language": "ar"
-    },
-    {
-      "id": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
-      "url": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
-      "title": "حين يحكم الخوف قبل التشخيص: كيف يتحول الغموض إلى سلطة وإكراه داخل الأسرة؟",
-      "summary": "ملف بحثي موسع يشرح سلسلة انتقال العرض الملتبس من عدم اليقين وخوف الأسرة إلى اليقين المبكر ونقل السلطة وتآكل الموافقة، ويقترح مسار أمان موازيا يحفظ التقييم وصوت الشخص والدعم الديني الطوعي.",
-      "date_published": "2026-09-02T10:00:00+02:00", "date_modified": "2026-09-02T10:00:00+02:00",
-      "tags": ["ملف بحثي موسع", "author_review_complete_specialist_review_pending", "umm-abbas", "السلامة التشخيصية", "الموافقة"], "language": "ar"
-    },
-    {
-      "id": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/",
-      "url": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/",
-      "title": "تعليم الأسماء والذكاء الاصطناعي: من الاسم إلى العالم والمسؤولية",
-      "summary": "ملف ثنائي اللغة يفكك سؤال فهم النماذج اللغوية إلى ست طبقات، من الرمز والتعميم والتأريض إلى النموذج السببي والقصد والمسؤولية، مع تحقيق البقرة 30–33 واعتراضات وحدود صريحة.",
-      "date_published": "2026-09-02T04:33:19+02:00", "date_modified": "2026-09-03T15:03:00+02:00",
-      "tags": ["ملف بحثي موسع ثنائي اللغة", "author_review_complete_external_review_pending", "sirou-fi-alard"], "language": "ar"
-    },
-    {
-      "id": "https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/",
-      "url": "https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/",
-      "title": "حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض من الدجل والاعتداء؟",
-      "summary": "ملف حماية يميز الدعم الروحي الطوعي عن الإكراه والعزل والاستغلال واللمس بلا موافقة وتأخير الرعاية الطبية.",
-      "date_published": "2026-09-02T04:33:19+02:00", "date_modified": "2026-09-02T04:33:19+02:00",
-      "tags": ["ملف حماية وصحة", "author_review_complete_specialist_review_pending", "umm-abbas"], "language": "ar"
-    },
-    {
-      "id": "https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/",
-      "url": "https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/",
-      "title": "النوبات الوظيفية والصرع: كيف يفرّق الأطباء بينهما؟",
-      "summary": "موجز طبي تثقيفي عن آليتي الحالتين، وفيديو-EEG، وتعايشهما، وحدود التشخيص من الحركة أو الفيديو وحدهما.",
-      "date_published": "2026-09-01T23:00:00+02:00", "date_modified": "2026-09-02T04:33:19+02:00",
-      "tags": ["موجز طبي تثقيفي", "medical_specialist_review_pending", "umm-abbas"], "language": "ar"
-    },
-    {
-      "id": "https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/",
-      "url": "https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/",
-      "title": "أيام الخلق الستة والزمن الكوني: هل اليوم القرآني 24 ساعة؟",
-      "summary": "موجز أدلة يفصل ما يثبته النص وتنوع التفسير عن قياسات الزمن الكوني وما لا تسمح به المطابقة القسرية.",
-      "date_published": "2026-09-01T23:00:00+02:00", "date_modified": "2026-09-02T04:33:19+02:00",
-      "tags": ["موجز أدلة", "external_review_pending", "sirou-fi-alard"], "language": "ar"
-    },
-    {
-      "id": "https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/",
-      "url": "https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/",
-      "title": "شلل النوم والجاثوم: لماذا نشعر بوجود كائن في الغرفة؟",
-      "summary": "موجز طبي ثقافي لشلل النوم وثقل الصدر والإحساس بالحضور، مع حدود التفسير ومتى يلزم التقييم الطبي.",
-      "date_published": "2026-09-01T23:00:00+02:00", "date_modified": "2026-09-02T04:33:19+02:00",
-      "tags": ["موجز طبي ثقافي", "medical_specialist_review_pending", "umm-abbas"], "language": "ar"
-    },
-    {
-      "id": "https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/",
-      "url": "https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/",
-      "title": "روايات رعب نفسي عربية: دليل تحليلي للاختيار والقراءة",
-      "summary": "دليل تحليلي يميز مركز الخوف النفسي عن مجرد وجود حدث خارق أو صدمة، ويربط الغموض بالتفسير والسلطة داخل الحكاية.",
-      "date_published": "2026-09-01T23:00:00+02:00", "date_modified": "2026-09-02T04:33:19+02:00",
-      "tags": ["دليل تحليلي", "author_review_complete_external_review_pending", "umm-abbas"], "language": "ar"
-    }
+    {"id":"https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/","url":"https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/","title":"الرتق والفتق والانفجار العظيم: تحقيق في النص والتفسير وأدلة علم الكون","summary":"ملف موسع يفصل النص القرآني وتاريخ التفسير عن الرصد والنموذج العلمي والاستنتاج الفلسفي، مع خريطة ادعاء ودليل ونسخة إنجليزية.","date_published":"2026-09-01T23:00:00+02:00","date_modified":"2026-09-02T04:33:19+02:00","tags":["ملف بحثي موسع","author_review_complete_external_review_pending","sirou-fi-alard"],"language":"ar"},
+    {"id":"https://ahmed-alhafiz.github.io/articles/water-civilization-power/","url":"https://ahmed-alhafiz.github.io/articles/water-civilization-power/","title":"الماء والحضارة والسلطة: متى تصبح إدارة المورد عدلًا، ومتى تتحول إلى أداة سيطرة؟","summary":"ملف ثنائي اللغة يبني سلسلة من ست طبقات بين المورد والبنية والبيانات والتخصيص والمساءلة والصيانة، ويختبرها في مأرب والرافدين وأنغكور وحوكمة المياه المعاصرة.","date_published":"2026-09-02T05:40:00+02:00","date_modified":"2026-09-02T05:40:00+02:00","tags":["ملف بحثي موسع ثنائي اللغة","author_review_complete_external_review_pending","sirou-fi-alard"],"language":"ar"},
+    {"id":"https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/","url":"https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/","title":"حين يحكم الخوف قبل التشخيص: كيف يتحول الغموض إلى سلطة وإكراه داخل الأسرة؟","summary":"ملف بحثي موسع يشرح سلسلة انتقال العرض الملتبس من عدم اليقين وخوف الأسرة إلى اليقين المبكر ونقل السلطة وتآكل الموافقة، ويقترح مسار أمان موازيا يحفظ التقييم وصوت الشخص والدعم الديني الطوعي.","date_published":"2026-09-02T10:00:00+02:00","date_modified":"2026-09-02T10:00:00+02:00","tags":["ملف بحثي موسع","author_review_complete_specialist_review_pending","umm-abbas","السلامة التشخيصية","الموافقة"],"language":"ar"},
+    {"id":"https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/","url":"https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/","title":"تعليم الأسماء والذكاء الاصطناعي: من الاسم إلى العالم والمسؤولية","summary":"ملف ثنائي اللغة يفكك سؤال فهم النماذج اللغوية إلى ست طبقات، من الرمز والتعميم والتأريض إلى النموذج السببي والقصد والمسؤولية، مع تحقيق البقرة 30–33 واعتراضات وحدود صريحة.","date_published":"2026-09-02T04:33:19+02:00","date_modified":"2026-09-03T15:03:00+02:00","tags":["ملف بحثي موسع ثنائي اللغة","author_review_complete_external_review_pending","sirou-fi-alard"],"language":"ar"},
+    {"id":"https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/","url":"https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/","title":"حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض من الدجل والاعتداء؟","summary":"ملف حماية يميز الدعم الروحي الطوعي عن الإكراه والعزل والاستغلال واللمس بلا موافقة وتأخير الرعاية الطبية.","date_published":"2026-09-02T04:33:19+02:00","date_modified":"2026-09-02T04:33:19+02:00","tags":["ملف حماية وصحة","author_review_complete_specialist_review_pending","umm-abbas"],"language":"ar"},
+    {"id":"https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/","url":"https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/","title":"النوبات الوظيفية والصرع: كيف يفرّق الأطباء بينهما؟","summary":"موجز طبي تثقيفي عن آليتي الحالتين، وفيديو-EEG، وتعايشهما، وحدود التشخيص من الحركة أو الفيديو وحدهما.","date_published":"2026-09-01T23:00:00+02:00","date_modified":"2026-09-02T04:33:19+02:00","tags":["موجز طبي تثقيفي","medical_specialist_review_pending","umm-abbas"],"language":"ar"},
+    {"id":"https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/","url":"https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/","title":"أيام الخلق الستة والزمن الكوني: هل اليوم القرآني 24 ساعة؟","summary":"موجز أدلة يفصل ما يثبته النص وتنوع التفسير عن قياسات الزمن الكوني وما لا تسمح به المطابقة القسرية.","date_published":"2026-09-01T23:00:00+02:00","date_modified":"2026-09-02T04:33:19+02:00","tags":["موجز أدلة","external_review_pending","sirou-fi-alard"],"language":"ar"},
+    {"id":"https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/","url":"https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/","title":"شلل النوم والجاثوم: لماذا نشعر بوجود كائن في الغرفة؟","summary":"موجز طبي ثقافي لشلل النوم وثقل الصدر والإحساس بالحضور، مع حدود التفسير ومتى يلزم التقييم الطبي.","date_published":"2026-09-01T23:00:00+02:00","date_modified":"2026-09-02T04:33:19+02:00","tags":["موجز طبي ثقافي","medical_specialist_review_pending","umm-abbas"],"language":"ar"},
+    {"id":"https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/","url":"https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/","title":"روايات رعب نفسي عربية: دليل تحليلي للاختيار والقراءة","summary":"دليل تحليلي يميز مركز الخوف النفسي عن مجرد وجود حدث خارق أو صدمة، ويربط الغموض بالتفسير والسلطة داخل الحكاية.","date_published":"2026-08-29T00:00:00+02:00","date_modified":"2026-09-01T00:00:00+02:00","tags":["دليل تحليلي","author_review_complete_external_review_pending","umm-abbas"],"language":"ar"}
   ]
 }
