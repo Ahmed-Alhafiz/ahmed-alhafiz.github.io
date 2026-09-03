@@ -1,16 +1,15 @@
 cff-version: 1.2.0
-message: "If you use this dossier or its claim ledger, cite it using the metadata below."
-title: "Water, Civilization and Power: When Does Resource Governance Produce Justice—and When Does It Become Control?"
-type: article
+message: "If you use this evidence package, cite the research dossier using the preferred citation below."
+title: "Water, Civilization and Power — evidence and citation package"
+type: dataset
 authors:
   - family-names: "Alhafiz"
     given-names: "Ahmed"
-    name-particle: ""
 version: "1.0"
 date-released: "2026-09-02"
-url: "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/"
+url: "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/claims.json"
 repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
-abstract: "A bilingual evidence-led dossier separating water resource conditions, infrastructure, data, allocation rules, authority, accountability, maintenance, and resilience."
+abstract: "Portable claim, source, and citation metadata accompanying the bilingual water-governance research dossier."
 keywords:
   - water governance
   - hydraulic systems
