@@ -1,0 +1,107 @@
+TY  - JOUR
+AU  - Turing, A. M.
+TI  - Computing Machinery and Intelligence
+JO  - Mind
+PY  - 1950
+DO  - 10.1093/mind/LIX.236.433
+ER  -
+
+TY  - JOUR
+AU  - Searle, John R.
+TI  - Minds, Brains, and Programs
+JO  - Behavioral and Brain Sciences
+PY  - 1980
+DO  - 10.1017/S0140525X00005756
+ER  -
+
+TY  - JOUR
+AU  - Harnad, Stevan
+TI  - The Symbol Grounding Problem
+JO  - Physica D: Nonlinear Phenomena
+PY  - 1990
+DO  - 10.1016/0167-2789(90)90087-6
+ER  -
+
+TY  - CONF
+AU  - Vaswani, Ashish
+TI  - Attention Is All You Need
+T2  - Advances in Neural Information Processing Systems
+PY  - 2017
+UR  - https://papers.nips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html
+ER  -
+
+TY  - CONF
+AU  - Brown, Tom B.
+TI  - Language Models are Few-Shot Learners
+T2  - Advances in Neural Information Processing Systems
+PY  - 2020
+UR  - https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html
+ER  -
+
+TY  - CONF
+AU  - Bender, Emily M.
+AU  - Koller, Alexander
+TI  - Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data
+T2  - Proceedings of ACL
+PY  - 2020
+DO  - 10.18653/v1/2020.acl-main.463
+ER  -
+
+TY  - CONF
+AU  - Bisk, Yonatan
+TI  - Experience Grounds Language
+T2  - Proceedings of EMNLP
+PY  - 2020
+DO  - 10.18653/v1/2020.emnlp-main.703
+ER  -
+
+TY  - CONF
+AU  - Lake, Brenden M.
+AU  - Baroni, Marco
+TI  - Generalization without Systematicity: On the Compositional Skills of Sequence-to-Sequence Recurrent Networks
+T2  - Proceedings of ICML
+PY  - 2018
+UR  - https://proceedings.mlr.press/v80/lake18a.html
+ER  -
+
+TY  - RPRT
+AU  - Li, Kenneth
+TI  - Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task
+PY  - 2022
+UR  - https://arxiv.org/abs/2210.13382
+ER  -
+
+TY  - CONF
+AU  - Gurnee, Wes
+AU  - Tegmark, Max
+TI  - Language Models Represent Space and Time
+T2  - ICLR
+PY  - 2024
+UR  - https://proceedings.iclr.cc/paper_files/paper/2024/hash/0a6059857ae5c82ea9726ee9282a7145-Abstract-Conference.html
+ER  -
+
+TY  - CONF
+AU  - Hewitt, John
+AU  - Liang, Percy
+TI  - Designing and Interpreting Probes with Control Tasks
+T2  - EMNLP-IJCNLP
+PY  - 2019
+DO  - 10.18653/v1/D19-1275
+ER  -
+
+TY  - JOUR
+AU  - Geiger, Atticus
+TI  - Causal Abstraction: A Theoretical Foundation for Mechanistic Interpretability
+JO  - Journal of Machine Learning Research
+PY  - 2025
+UR  - https://www.jmlr.org/papers/v26/23-0058.html
+ER  -
+
+TY  - JOUR
+AU  - Mitchell, Melanie
+AU  - Krakauer, David C.
+TI  - The Debate over Understanding in AI's Large Language Models
+JO  - Proceedings of the National Academy of Sciences
+PY  - 2023
+DO  - 10.1073/pnas.2215907120
+ER  -
