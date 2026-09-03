@@ -18,7 +18,7 @@
     "research_items": 9,
     "complete_bilingual_pillars": 4,
     "arabic_feed_items": 9,
-    "english_feed_items": 3,
+    "english_feed_items": 4,
     "oai_searchbot": "explicitly_allowed",
     "gptbot": "explicitly_allowed",
     "generic_crawlers": "allowed",
