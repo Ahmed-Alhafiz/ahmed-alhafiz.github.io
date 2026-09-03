@@ -1,0 +1,66 @@
+name: Content research architecture
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile the architecture gate
+        run: python -m py_compile tools/content_research_architecture_integrity.py
+
+      - name: Parse the Teaching the Names claim and source register
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('.github/teaching_names_ai_source_register.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          print(
+              f"Parsed {len(data['claims'])} bilingual planning claims and "
+              f"{len(data['sources'])} classified sources"
+          )
+          PY
+
+      - name: Validate reference-grade standard source architecture and boundaries
+        run: python tools/content_research_architecture_integrity.py
+
+      - name: Reject a false publication-state claim
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(
+              Path('.github/teaching_names_ai_source_register.json').read_text(encoding='utf-8')
+          )
+          if data['status'] != 'research_architecture_complete_article_not_yet_rewritten':
+              raise SystemExit('The planning register must not claim that the public article was rewritten.')
+          if data['pillar']['thematic_origin']['relationship'] != 'thematic_origin_not_empirical_evidence':
+              raise SystemExit('The author manuscript was incorrectly promoted to empirical evidence.')
+          print('Publication-state and manuscript/evidence boundaries are explicit.')
+          PY
+
+      - name: Check patch whitespace
+        run: git diff --check
