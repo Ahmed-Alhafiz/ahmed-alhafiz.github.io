@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 STANDARD = ROOT / ".github/CONTENT_REFERENCE_GRADE_STANDARD.md"
 ARCHITECTURE = ROOT / ".github/TEACHING_NAMES_AI_REBUILD_ARCHITECTURE.md"
 PLANNING = ROOT / ".github/teaching_names_ai_source_register.json"
-VERIFIED = ROOT / ".github/teaching_names_ai_verified_manifest.json"
+VERIFIED = ROOT / ".github/teaching_names_ai_verified_claims.json"
 TAFSIR = ROOT / ".github/TEACHING_NAMES_TAFSIR_VERIFICATION_2026-09-03.md"
 AUDIT = ROOT / ".github/CONTENT_AUDIT_2026-09-03_BATCH_1.md"
 DRAFT = ROOT / ".github/drafts/TEACHING_NAMES_ARABIC_DRAFT_01_QURANIC_UNIT.md"
@@ -93,7 +93,7 @@ def validate_standard_and_architecture() -> None:
         "بروتوكول الاختبار الخصومي",
         "أقوى الاعتراضات",
         "لا تُجعل «الأسماء» مرادفة آليًا لـtokens",
-        "منشأً موضوعيًا للسؤال لا دليلًا تقنيًا",
+        "منشأً موضوعيًا للحجة",
         "نتيجة 85/100 فأكثر",
     ):
         if token not in architecture:
@@ -141,30 +141,30 @@ def validate_tafsir_record() -> None:
 def validate_verified_manifest() -> None:
     data = load_json(VERIFIED)
     if data.get("schema_version") != "1.0-prepublication":
-        fail("verified manifest schema version mismatch")
+        fail("verified claim register schema version mismatch")
     if data.get("status") != "verified_claim_evidence_manifest_article_draft_pending":
-        fail("verified manifest status mismatch")
+        fail("verified claim register status mismatch")
     if data.get("publication_state") != "not_public_not_merged":
-        fail("verified manifest must not claim publication")
+        fail("verified claim register must not claim publication")
 
     pillar = data.get("pillar", {})
     if pillar.get("framework_ar") != "مصفوفة الاسم–العالم–المسؤولية":
-        fail("verified manifest Arabic framework name mismatch")
+        fail("verified claim register Arabic framework name mismatch")
     if pillar.get("framework_en") != "The Name–World–Responsibility Matrix":
-        fail("verified manifest English framework name mismatch")
+        fail("verified claim register English framework name mismatch")
     if pillar.get("thematic_origin", {}).get("evidentiary_role") != "question_origin_only":
         fail("thematic manuscript must remain question origin only")
     if pillar.get("external_review") != "not_completed":
-        fail("verified manifest falsely implies external review")
+        fail("verified claim register falsely implies external review")
 
     claims = data.get("claims")
     sources = data.get("sources")
     if not isinstance(claims, list) or not isinstance(sources, list):
-        fail("verified manifest claims and sources must be arrays")
+        fail("verified claim register claims and sources must be arrays")
     if [claim.get("id") for claim in claims] != EXPECTED_CLAIMS:
-        fail("verified manifest claim IDs/order must be C01–C14")
+        fail("verified claim register claim IDs/order must be C01–C14")
     if [source.get("id") for source in sources] != EXPECTED_SOURCES:
-        fail("verified manifest source IDs/order must be R01–R06 then A01–A22")
+        fail("verified claim register source IDs/order must be R01–R06 then A01–A22")
 
     claim_map = {claim["id"]: claim for claim in claims}
     source_map = {source["id"]: source for source in sources}
