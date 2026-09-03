@@ -25,12 +25,13 @@ jobs:
       - name: Compile the architecture gate
         run: python -m py_compile tools/content_research_architecture_integrity.py
 
-      - name: Parse planning and verified claim-evidence registers
+      - name: Parse retired planning and verified claim-evidence registers
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
           import json
+          import re
           from pathlib import Path
 
           planning = json.loads(
@@ -39,17 +40,30 @@ jobs:
           verified = json.loads(
               Path('.github/teaching_names_ai_verified_claims.json').read_text(encoding='utf-8')
           )
+          quranic = Path(
+              '.github/drafts/TEACHING_NAMES_ARABIC_DRAFT_01_QURANIC_UNIT.md'
+          ).read_text(encoding='utf-8')
+          technical = Path(
+              '.github/drafts/TEACHING_NAMES_ARABIC_DRAFT_02_TECHNICAL_UNIT.md'
+          ).read_text(encoding='utf-8')
+
+          words = lambda text: len(re.findall(r'[\w\u0600-\u06FF]+', text, flags=re.UNICODE))
           print(
-              f"Planning register: {len(planning['claims'])} claims, "
-              f"{len(planning['sources'])} sources, status={planning['status']}"
+              f"Retired planning register: status={planning['status']}, "
+              f"publication_state={planning['publication_state']}"
           )
           print(
               f"Verified register: {len(verified['claims'])} claims, "
-              f"{len(verified['sources'])} sources, publication_state={verified['publication_state']}"
+              f"{len(verified['sources'])} sources, "
+              f"publication_state={verified['publication_state']}"
+          )
+          print(
+              f"Internal Arabic drafts: Qur'anic unit={words(quranic)} words; "
+              f"technical unit={words(technical)} words"
           )
           PY
 
-      - name: Validate reference-grade architecture primary tafsir corrections and reciprocity
+      - name: Validate reference-grade tafsir technical evidence reciprocity and drafts
         run: python tools/content_research_architecture_integrity.py
 
       - name: Reject false publication review and manuscript-evidence states
@@ -66,10 +80,15 @@ jobs:
           verified = json.loads(
               Path('.github/teaching_names_ai_verified_claims.json').read_text(encoding='utf-8')
           )
-          if planning['status'] != 'research_architecture_complete_article_not_yet_rewritten':
-              raise SystemExit('Planning register falsely claims a public rewrite.')
-          if planning['pillar']['thematic_origin']['relationship'] != 'thematic_origin_not_empirical_evidence':
-              raise SystemExit('Planning register promoted the manuscript to empirical evidence.')
+
+          if planning['status'] != 'superseded_by_verified_claim_register':
+              raise SystemExit('Retired planning register is not quarantined.')
+          if planning['publication_state'] != 'article_not_yet_rewritten_or_published':
+              raise SystemExit('Retired planning register falsely claims a public rewrite.')
+          if planning['pillar']['thematic_origin']['relationship'] != 'question_origin_only_not_empirical_evidence':
+              raise SystemExit('Retired planning register promoted the manuscript to evidence.')
+          if planning['pillar']['external_review'] != 'not_completed':
+              raise SystemExit('Retired planning register falsely claims external review.')
           if verified['publication_state'] != 'not_public_not_merged':
               raise SystemExit('Verified register falsely claims publication or merge.')
           if verified['pillar']['thematic_origin']['evidentiary_role'] != 'question_origin_only':
@@ -78,6 +97,16 @@ jobs:
               raise SystemExit('Verified register falsely claims external review.')
           print('Publication, review, and manuscript/evidence boundaries are explicit.')
           PY
+
+      - name: Reject ChatGPT-only citation syntax in repository drafts
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -R --line-number --fixed-strings 'filecite' .github/drafts; then
+            echo 'ChatGPT-only file citation syntax must not be stored in repository drafts.' >&2
+            exit 1
+          fi
+          echo 'No ChatGPT-only citation syntax found in repository drafts.'
 
       - name: Check patch whitespace
         run: git diff --check
