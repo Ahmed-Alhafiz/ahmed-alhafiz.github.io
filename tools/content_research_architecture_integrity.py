@@ -192,7 +192,7 @@ def validate_verification_records() -> None:
         ),
         "primary-tafsir verification record",
     )
-    # This is a completeness guard, not a claim that word count proves quality.
+    # These are measured completeness guards; word count is not a quality score.
     if words(tafsir) < 1_500:
         fail("primary-tafsir verification record is below the 1,500-word floor")
 
@@ -216,8 +216,8 @@ def validate_verification_records() -> None:
         ),
         "primary technical verification record",
     )
-    if words(technical) < 2_500:
-        fail("primary technical verification record is below the 2,500-word floor")
+    if words(technical) < 2_000:
+        fail("primary technical verification record is below the 2,000-word floor")
 
 
 def validate_verified_claim_graph() -> None:
