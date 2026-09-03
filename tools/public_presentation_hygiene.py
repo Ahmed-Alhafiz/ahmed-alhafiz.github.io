@@ -1,0 +1,95 @@
+#!/usr/bin/env python3
+"""Reject internal production residue from public-facing site files.
+
+The site may legitimately discuss artificial intelligence as a research topic.
+This gate therefore does not ban AI terminology. It targets production-process
+phrases, draft/debug markers, prompt residue, and internal workflow language
+that should never leak into finished public editorial pages.
+"""
+from __future__ import annotations
+
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+PUBLIC_HTML = [
+    path
+    for path in ROOT.rglob("*.html")
+    if ".git" not in path.parts and ".github" not in path.parts
+]
+PUBLIC_TEXT = [ROOT / "robots.txt", ROOT / "sitemap.xml"]
+
+# Narrow patterns: production disclosure/residue, not legitimate topical discussion.
+BANNED_PATTERNS = {
+    "explicit AI-production disclosure": re.compile(
+        r"(?:AI assistance|AI-assisted|How AI is used|"
+        r"AI helps organize and test the work|"
+        r"دور الذكاء الاصطناعي|"
+        r"الذكاء الاصطناعي يساعد في تنظيم العمل|"
+        r"المساعدة الآلية لأن القارئ|"
+        r"بمساعدة أدوات آلية)",
+        re.IGNORECASE,
+    ),
+    "draft/debug residue": re.compile(
+        r"(?:\bTODO\b|\bFIXME\b|\bPLACEHOLDER\b|"
+        r"مسودة داخلية غير منشورة|"
+        r"internal draft|draft pending|"
+        r"lorem ipsum)",
+        re.IGNORECASE,
+    ),
+    "prompt/workflow residue": re.compile(
+        r"(?:system prompt|developer message|prompt injection|"
+        r"chain of thought|internal workflow|"
+        r"تعليمات النظام|تعليمات المطور|سلسلة التفكير)",
+        re.IGNORECASE,
+    ),
+}
+
+# HTML comments are not visible, but they are public source and can leak build notes.
+COMMENT_RE = re.compile(r"<!--(.*?)-->", re.DOTALL)
+COMMENT_MARKER_RE = re.compile(
+    r"(?:TODO|FIXME|prompt|draft|temporary|debug|generated|"
+    r"مسودة|مؤقت|اختبار|تعليمات)",
+    re.IGNORECASE,
+)
+
+
+def main() -> None:
+    errors: list[str] = []
+    checked = 0
+
+    for path in [*PUBLIC_HTML, *PUBLIC_TEXT]:
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        rel = path.relative_to(ROOT)
+        checked += 1
+
+        for label, pattern in BANNED_PATTERNS.items():
+            match = pattern.search(text)
+            if match:
+                snippet = re.sub(r"\s+", " ", match.group(0)).strip()
+                errors.append(f"{rel}: {label}: {snippet!r}")
+
+        if path.suffix == ".html":
+            for comment in COMMENT_RE.findall(text):
+                marker = COMMENT_MARKER_RE.search(comment)
+                if marker:
+                    snippet = re.sub(r"\s+", " ", comment).strip()[:180]
+                    errors.append(
+                        f"{rel}: public HTML comment contains production residue: {snippet!r}"
+                    )
+
+    if errors:
+        print("PUBLIC PRESENTATION HYGIENE ERRORS:")
+        print("\n".join(f"- {error}" for error in errors))
+        raise SystemExit(1)
+
+    print(
+        f"Public presentation hygiene passed across {checked} public files: "
+        "no production-process disclosure residue, draft/debug markers, or prompt/workflow leakage."
+    )
+
+
+if __name__ == "__main__":
+    main()
