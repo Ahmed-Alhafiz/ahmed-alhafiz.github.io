@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this research dossier, please cite it using the metadata below."
+title: "تعليم الأسماء والذكاء الاصطناعي: من الاسم إلى العالم والمسؤولية"
+type: article
+authors:
+  - family-names: "الحافظ"
+    given-names: "أحمد"
+    name-particle: ""
+    alias: "Ahmed Alhafiz"
+url: "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/"
+date-released: 2026-09-02
+abstract: >-
+  دراسة قرآنية وتفسيرية وتقنية وفلسفية تفكك سؤال فهم النماذج اللغوية
+  إلى ست طبقات: الرمز، العلاقات، التركيب والتعميم، التأريض، النموذج السببي،
+  والقصد والمسؤولية، مع فصل الوعي كسؤال مستقل.
+keywords:
+  - تعليم الأسماء
+  - الذكاء الاصطناعي
+  - large language models
+  - symbol grounding
+  - mechanistic interpretability
+  - compositional generalization
+license: "All rights reserved"
