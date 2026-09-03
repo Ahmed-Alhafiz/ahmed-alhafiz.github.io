@@ -228,7 +228,7 @@ def validate_register() -> None:
     grouped = [
         source["id"]
         for source in sources
-        if source.get("type") == "derived_source_group"
+        if source.get("status") == "derived_source_group"
     ]
     if grouped != ["A15"]:
         fail("the temporary grouped source must remain isolated as A15 until replacement")
