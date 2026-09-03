@@ -37,14 +37,14 @@ jobs:
               Path('.github/teaching_names_ai_source_register.json').read_text(encoding='utf-8')
           )
           verified = json.loads(
-              Path('.github/teaching_names_ai_verified_manifest.json').read_text(encoding='utf-8')
+              Path('.github/teaching_names_ai_verified_claims.json').read_text(encoding='utf-8')
           )
           print(
               f"Planning register: {len(planning['claims'])} claims, "
               f"{len(planning['sources'])} sources, status={planning['status']}"
           )
           print(
-              f"Verified manifest: {len(verified['claims'])} claims, "
+              f"Verified register: {len(verified['claims'])} claims, "
               f"{len(verified['sources'])} sources, publication_state={verified['publication_state']}"
           )
           PY
@@ -64,18 +64,18 @@ jobs:
               Path('.github/teaching_names_ai_source_register.json').read_text(encoding='utf-8')
           )
           verified = json.loads(
-              Path('.github/teaching_names_ai_verified_manifest.json').read_text(encoding='utf-8')
+              Path('.github/teaching_names_ai_verified_claims.json').read_text(encoding='utf-8')
           )
           if planning['status'] != 'research_architecture_complete_article_not_yet_rewritten':
               raise SystemExit('Planning register falsely claims a public rewrite.')
           if planning['pillar']['thematic_origin']['relationship'] != 'thematic_origin_not_empirical_evidence':
               raise SystemExit('Planning register promoted the manuscript to empirical evidence.')
           if verified['publication_state'] != 'not_public_not_merged':
-              raise SystemExit('Verified manifest falsely claims publication or merge.')
+              raise SystemExit('Verified register falsely claims publication or merge.')
           if verified['pillar']['thematic_origin']['evidentiary_role'] != 'question_origin_only':
-              raise SystemExit('Verified manifest promoted the manuscript to evidence.')
+              raise SystemExit('Verified register promoted the manuscript to evidence.')
           if verified['pillar']['external_review'] != 'not_completed':
-              raise SystemExit('Verified manifest falsely claims external review.')
+              raise SystemExit('Verified register falsely claims external review.')
           print('Publication, review, and manuscript/evidence boundaries are explicit.')
           PY
 
