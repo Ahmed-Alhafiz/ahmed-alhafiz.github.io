@@ -33,6 +33,7 @@ jobs:
           tools/entity_integrity.py
           tools/visibility_audit.py
           tools/indexnow_submit.py
+          tools/public_presentation_hygiene.py
 
       - name: Parse XML JSON feeds evidence manifests figures and every JSON-LD block
         shell: bash
@@ -170,6 +171,9 @@ jobs:
 
       - name: Validate HTML links sitemap feeds hreflang and publication safety
         run: python tools/site_audit.py
+
+      - name: Reject public production residue draft markers and prompt leakage
+        run: python tools/public_presentation_hygiene.py
 
       - name: Validate evidence depth transparency linking and medical safeguards
         run: python tools/editorial_quality_gate.py
