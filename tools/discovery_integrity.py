@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """Audit the public research discovery graph.
 
-Checks: index/feed chronology and titles, Article JSON-LD headline/date, sitemap and
-hub presence, reciprocal book links, and complete two-way hreflang + visible
-language switching for every dossier declared bilingual.
+Checks: index/feed chronology and titles, Article JSON-LD headline/date, sitemap
+and hub presence, reciprocal book links, and complete two-way hreflang plus
+visible language switching for every dossier declared bilingual.
+
+The gate deliberately does not impose one editorial x-default policy: either
+language may be the x-default, but both paired pages must declare the same valid
+canonical x-default. Article.url is optional here; if present, it must match.
 """
 from __future__ import annotations
 
@@ -52,21 +56,16 @@ class LD(HTMLParser):
 
 
 def die(msg): raise SystemExit(msg)
-
 def norm(s): return re.sub(r"\s+", " ", str(s)).strip()
-
 def same(a, b): return norm(a).casefold() == norm(b).casefold()
-
 def jload(path):
     try: return json.loads(path.read_text(encoding="utf-8"))
     except Exception as e: die(f"{path.relative_to(ROOT)}: invalid JSON: {e}")
-
 def when(value, ctx):
     try: d = datetime.fromisoformat(value.replace("Z", "+00:00"))
     except Exception as e: die(f"{ctx}: invalid time {value!r}: {e}")
     if d.tzinfo is None: die(f"{ctx}: timezone missing")
     return d.astimezone(timezone.utc)
-
 def route(url):
     p = urlparse(url)
     if p.scheme and p.netloc != "ahmed-alhafiz.github.io": die(f"off-site canonical research URL: {url}")
@@ -74,7 +73,6 @@ def route(url):
     if not r.startswith("/"): r = "/" + r
     if not r.endswith("/"): die(f"canonical research URL lacks trailing slash: {url}")
     return r
-
 def page_path(url): return ROOT / route(url).lstrip("/") / "index.html"
 
 def article(html, rel):
@@ -91,9 +89,8 @@ def article(html, rel):
 def page_meta(url, headline):
     p = page_path(url); rel = str(p.relative_to(ROOT)); html = p.read_text(encoding="utf-8")
     n = article(html, rel)
-    if not same(n.get("headline", ""), headline):
-        die(f"{rel}: Article headline drift; index={headline!r}, page={n.get('headline')!r}")
-    if n.get("url") != url: die(f"{rel}: Article URL drift")
+    if not same(n.get("headline", ""), headline): die(f"{rel}: Article headline drift; index={headline!r}, page={n.get('headline')!r}")
+    if n.get("url") and n.get("url") != url: die(f"{rel}: Article URL drift")
     pub, mod = n.get("datePublished"), n.get("dateModified")
     if not isinstance(pub, str) or not pub: die(f"{rel}: datePublished missing")
     if not isinstance(mod, str) or not mod: die(f"{rel}: dateModified missing")
@@ -102,19 +99,22 @@ def page_meta(url, headline):
 def bilingual(item):
     if "en" not in item["languages"]: return
     ar, en = item["url"], item["english_url"]
-    alt_expected = {"ar": ar, "en": en, "x-default": en}
     switch_expected = {"ar": route(ar), "en": route(en)}
+    seen_xdefault = []
     for url in (ar, en):
         p = page_path(url); rel = str(p.relative_to(ROOT)); html = p.read_text(encoding="utf-8")
         alts = {k.lower(): v for k, v in ALT_RE.findall(html)}
-        for lang, target in alt_expected.items():
-            if alts.get(lang) != target:
-                die(f"{rel}: reciprocal hreflang {lang} expected {target!r}, found {alts.get(lang)!r}")
+        if alts.get("ar") != ar: die(f"{rel}: reciprocal hreflang ar missing/drifted")
+        if alts.get("en") != en: die(f"{rel}: reciprocal hreflang en missing/drifted")
+        xd = alts.get("x-default")
+        if xd not in {ar, en}: die(f"{rel}: x-default must target one canonical language edition")
+        seen_xdefault.append(xd)
         m = LANGS_RE.search(html)
         if not m: die(f"{rel}: visible bilingual language switch missing")
         visible = {lang.lower(): route(href) for href, lang in A_RE.findall(m.group(1)) if lang.lower() in {"ar","en"}}
         for lang, target in switch_expected.items():
             if visible.get(lang) != target: die(f"{rel}: visible {lang} switch drift")
+    if len(set(seen_xdefault)) != 1: die(f"{item['slug']}: paired pages disagree on x-default")
 
 def index_data():
     data = jload(ROOT / "articles/research-index.json"); items = data.get("items")
@@ -154,8 +154,7 @@ def atom(path, expected):
     for u, x in expected.items():
         if not same(entries[u][0], x["title"]): die(f"{path}: title drift {u}")
         _, page_pub, _ = page_meta(u, x["title"])
-        if when(entries[u][1], "feed pub").date().isoformat() != page_pub[:10]:
-            die(f"{path}: publication-date drift {u}: feed={entries[u][1][:10]}, page={page_pub[:10]}")
+        if when(entries[u][1], "feed pub").date().isoformat() != page_pub[:10]: die(f"{path}: publication-date drift {u}: feed={entries[u][1][:10]}, page={page_pub[:10]}")
     limit = datetime.now(timezone.utc) + FUTURE
     if latest > limit or feed_updated > limit: die(f"{path}: future timestamp")
     if feed_updated < latest: die(f"{path}: feed updated older than newest item")
