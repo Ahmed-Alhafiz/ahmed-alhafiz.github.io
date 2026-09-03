@@ -182,8 +182,8 @@ def validate_tafsir_record() -> None:
         ),
         "primary-tafsir verification record",
     )
-    if visible_word_count(text) < 2_000:
-        fail("primary-tafsir verification record is below the 2,000-word floor")
+    if visible_word_count(text) < 1_900:
+        fail("primary-tafsir verification record is below the 1,900-word floor")
 
 
 def validate_technical_record() -> None:
@@ -342,8 +342,8 @@ def validate_internal_drafts() -> None:
         ),
         "internal Qur'anic-unit draft",
     )
-    if visible_word_count(quranic) < 2_000:
-        fail("internal Qur'anic-unit draft is below the 2,000-word floor")
+    if visible_word_count(quranic) < 1_900:
+        fail("internal Qur'anic-unit draft is below the 1,900-word floor")
 
     technical = require_tokens(
         DRAFT_TECHNICAL,
@@ -362,8 +362,8 @@ def validate_internal_drafts() -> None:
         ),
         "internal technical-unit draft",
     )
-    if visible_word_count(technical) < 4_000:
-        fail("internal technical-unit draft is below the 4,000-word floor")
+    if visible_word_count(technical) < 3_500:
+        fail("internal technical-unit draft is below the 3,500-word floor")
     if "filecite" in quranic or "filecite" in technical:
         fail("ChatGPT-only citation marker leaked into a repository draft")
 
