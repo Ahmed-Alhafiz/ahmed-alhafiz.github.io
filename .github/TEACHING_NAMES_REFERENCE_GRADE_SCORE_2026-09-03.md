@@ -12,14 +12,19 @@ External specialist review is also still explicitly not completed. That does not
 
 ## Evidence snapshot
 
-Latest editorial gate before this score recorded:
+Latest verified CI on commit `7ccade66c087e086b49cd167251d8728f4a957d5` is fully green:
 
+- Site Integrity: success.
+- Content Research Architecture: success.
+- Visual Review: success.
 - Arabic edition: 3,925 visible words; 28 external sources.
 - English edition: 5,224 visible words; 30 external sources.
 - Both editions pass the current depth/evidence/transparency/linking gate.
 - Machine-readable claim and reference artefacts exist, including claims JSON, BibTeX, RIS and CFF.
 - The forthcoming manuscript is treated as question origin/thematic relation rather than empirical or exegetical evidence.
 - External specialist review: not completed.
+
+The green CI confirms the current repository-level integrity gates, but it does **not** erase the manually verified asymmetry between the English and Arabic article headers. The generic multilingual validator only validates pages that already declare alternates; it does not prove that every logically paired bilingual page declares the full reciprocal set. That gap remains an explicit manual blocker rather than being hidden by a green build.
 
 ## 100-point rubric
 
@@ -52,18 +57,19 @@ Latest editorial gate before this score recorded:
 
 ### Inspectability / bilingual parity
 
-**BLOCKED.** The Arabic page currently declares only Arabic `hreflang` and has no visible language-switch block linking to the English article. Until that is corrected and tested reciprocally, the dossier is not release-complete under the governing standard.
+**BLOCKED.** The English page declares Arabic, English and x-default alternates and exposes an AR/EN switch. The Arabic page currently declares only Arabic `hreflang` and has no matching visible language-switch block. Until that is corrected and tested reciprocally, the dossier is not release-complete under the governing standard.
 
 ## Required corrections before merge
 
 1. Add reciprocal `hreflang="en"` and `x-default` to the Arabic article.
 2. Add visible AR/EN switch links to the Arabic article matching the metadata alternates.
-3. Run the multilingual switcher validator and full Site Integrity workflow after the change.
-4. Confirm Arabic and English feeds, research index, sitemap and related-book links all agree on canonical titles and URLs.
-5. Re-run the evidence-mirror byte equality checks.
-6. Confirm no production-process residue or internal markers leak into public files.
-7. Update PR #20 description to reflect the actual rebuilt bilingual dossier before merge.
+3. Add a dedicated reciprocity assertion so a logically bilingual dossier cannot pass merely because one side omits all alternate declarations.
+4. Run the multilingual switcher validator and full Site Integrity workflow after the change.
+5. Confirm Arabic and English feeds, research index, sitemap and related-book links all agree on canonical titles and URLs.
+6. Re-run the evidence-mirror byte equality checks.
+7. Confirm no production-process residue or internal markers leak into public files.
+8. Update PR #20 description to reflect the actual rebuilt bilingual dossier before merge.
 
 ## Release decision
 
-**Do not merge yet.** The dossier has a provisional **86/100** and passes the substantive religious, technical and evidence-independence gates, but bilingual reciprocity is a hard release blocker. Once that blocker is fixed and all CI gates are green, rescore the final state before changing the PR from draft or merging it.
+**Do not merge yet.** The dossier has a provisional **86/100** and all current CI workflows are green, but the manually verified bilingual reciprocity defect is a hard release blocker under the governing standard. The correct response is to fix the defect and strengthen the validator, not to treat the green build as evidence that the defect does not exist.
