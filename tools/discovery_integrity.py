@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Audit the public research discovery graph.
 
-Checks: index/feed chronology and titles, Article JSON-LD headline/date, sitemap
-and hub presence, reciprocal book links, and complete two-way hreflang plus
-visible language switching for every dossier declared bilingual.
+Checks: index/feed chronology and titles, Article JSON-LD headline and calendar
+publication/modification dates, sitemap and hub presence, reciprocal book links,
+and complete two-way hreflang plus visible language switching for every dossier
+declared bilingual.
 
-The gate deliberately does not impose one editorial x-default policy: either
-language may be the x-default, but both paired pages must declare the same valid
-canonical x-default. Article.url is optional here; if present, it must match.
+Feed timestamps are timezone-aware instants. Page JSON-LD dates are calendar
+publication dates. Calendar-date equality is therefore compared from the source
+ISO date component, while UTC conversion is used only for chronology/future checks;
+this avoids false mismatches around local midnight.
 """
 from __future__ import annotations
 
@@ -58,6 +60,10 @@ class LD(HTMLParser):
 def die(msg): raise SystemExit(msg)
 def norm(s): return re.sub(r"\s+", " ", str(s)).strip()
 def same(a, b): return norm(a).casefold() == norm(b).casefold()
+def iso_day(value):
+    if not isinstance(value, str) or len(value) < 10:
+        die(f"invalid ISO date value: {value!r}")
+    return value[:10]
 def jload(path):
     try: return json.loads(path.read_text(encoding="utf-8"))
     except Exception as e: die(f"{path.relative_to(ROOT)}: invalid JSON: {e}")
@@ -149,12 +155,13 @@ def atom(path, expected):
         if not all((u,t,p,m)) or u in entries: die(f"{path}: malformed/duplicate entry")
         pd, md = when(p, f"{path} {u} published"), when(m, f"{path} {u} updated")
         if md < pd: die(f"{path}: update before publication {u}")
-        latest = max(latest, pd, md); entries[u] = (t,p)
+        latest = max(latest, pd, md); entries[u] = (t,p,m)
     if set(entries) != set(expected): die(f"{path}: URL drift")
     for u, x in expected.items():
         if not same(entries[u][0], x["title"]): die(f"{path}: title drift {u}")
-        _, page_pub, _ = page_meta(u, x["title"])
-        if when(entries[u][1], "feed pub").date().isoformat() != page_pub[:10]: die(f"{path}: publication-date drift {u}: feed={entries[u][1][:10]}, page={page_pub[:10]}")
+        _, page_pub, page_mod = page_meta(u, x["title"])
+        if iso_day(entries[u][1]) != iso_day(page_pub): die(f"{path}: publication-date drift {u}: feed={iso_day(entries[u][1])}, page={iso_day(page_pub)}")
+        if iso_day(entries[u][2]) != iso_day(page_mod): die(f"{path}: modified-date drift {u}: feed={iso_day(entries[u][2])}, page={iso_day(page_mod)}")
     limit = datetime.now(timezone.utc) + FUTURE
     if latest > limit or feed_updated > limit: die(f"{path}: future timestamp")
     if feed_updated < latest: die(f"{path}: feed updated older than newest item")
@@ -170,10 +177,12 @@ def json_feed(path, expected):
         if not same(f.get("title", ""), x["title"]): die(f"{path}: title drift {u}")
         tags = set(f.get("tags", []))
         if x["review"] not in tags or x["book"] not in tags: die(f"{path}: review/book tags missing {u}")
-        pd, md = when(f.get("date_published", ""), f"{path} pub"), when(f.get("date_modified", ""), f"{path} mod")
+        pub_raw, mod_raw = f.get("date_published", ""), f.get("date_modified", "")
+        pd, md = when(pub_raw, f"{path} pub"), when(mod_raw, f"{path} mod")
         if md < pd or max(pd,md) > limit: die(f"{path}: chronology error {u}")
-        _, page_pub, _ = page_meta(u, x["title"])
-        if pd.date().isoformat() != page_pub[:10]: die(f"{path}: publication-date drift {u}")
+        _, page_pub, page_mod = page_meta(u, x["title"])
+        if iso_day(pub_raw) != iso_day(page_pub): die(f"{path}: publication-date drift {u}")
+        if iso_day(mod_raw) != iso_day(page_mod): die(f"{path}: modified-date drift {u}")
 
 def surfaces(indexed):
     ah = (ROOT/"articles/index.html").read_text(encoding="utf-8"); eh = (ROOT/"en/articles/index.html").read_text(encoding="utf-8")
