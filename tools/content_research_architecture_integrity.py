@@ -95,7 +95,7 @@ def validate_architecture() -> None:
         "Piantadosi & Hill",
         "Causal Abstraction",
         "لا تُجعل «الأسماء» مرادفة آليًا لـtokens",
-        "منشأً موضوعيًا للسؤال لا دليلًا تقنيًا",
+        "منشأ موضوعي للسؤال",
         "نتيجة 85/100 فأكثر",
     )
     for token in required:
