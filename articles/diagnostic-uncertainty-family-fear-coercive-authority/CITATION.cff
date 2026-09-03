@@ -1,22 +1,19 @@
 cff-version: 1.2.0
-message: "If you use this dossier or its analytical frameworks, cite this publication."
-title: "When Fear Decides Before Diagnosis: How Uncertainty Becomes Authority and Coercion in Families"
-type: article
+message: "If you use this evidence package, cite the research dossier using the preferred citation below."
+title: "When Fear Decides Before Diagnosis — evidence and citation package"
+type: dataset
 authors:
-  - family-names: Alhafiz
-    given-names: Ahmed
-    name-particle: ""
-    affiliation: Independent author and researcher
+  - family-names: "Alhafiz"
+    given-names: "Ahmed"
+    affiliation: "Independent author and researcher"
 version: "1.0"
-date-released: 2026-09-02
-url: "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/"
+date-released: "2026-09-02"
+url: "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/claims.json"
 repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
 abstract: >-
-  An Arabic and English evidence-led dossier on how ambiguous mental or
-  physical symptoms can move through family fear, premature certainty,
-  authority transfer and consent erosion to delay or harm. It proposes the
-  Fear–Certainty–Authority Cascade and the Parallel-Path Safeguard as
-  explicitly non-validated analytical syntheses.
+  Portable claim, source, and citation metadata accompanying the bilingual
+  dossier on diagnostic uncertainty, family fear, authority transfer,
+  coercion, consent erosion, and parallel-path safeguarding.
 keywords:
   - diagnostic uncertainty
   - diagnostic safety
@@ -26,3 +23,13 @@ keywords:
   - mental health
   - spiritual support
   - help-seeking
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Alhafiz"
+      given-names: "Ahmed"
+  title: "When Fear Decides Before Diagnosis: How Uncertainty Becomes Authority and Coercion in Families"
+  year: 2026
+  month: 9
+  version: "1.0"
+  url: "https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/"
