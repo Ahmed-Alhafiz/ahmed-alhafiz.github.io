@@ -2,14 +2,15 @@ name: One-time apply Ahrefs hreflang fix
 
 on:
   push:
-    branches: [ahrefs-remediation-24]
+    branches:
+      - ahrefs-remediation-24
 
 permissions:
   contents: write
 
 jobs:
   fix:
-    if: ${{ !contains(github.event.head_commit.message, '[ahrefs-hreflang-fix]') }}
+    if: "${{ !contains(github.event.head_commit.message, '[ahrefs-hreflang-fix]') }}"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
