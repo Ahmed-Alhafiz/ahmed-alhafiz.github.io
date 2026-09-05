@@ -69,6 +69,36 @@ PAGE_SPECIFIC_BANNED = {
     Path("articles/index.html"): (
         "ركيزة مرجعية",
     ),
+    Path("en/index.html"): (
+        "Official author and research platform",
+        "Enter the research desk",
+        "An author site built as a public research desk",
+        "New complete bilingual dossier",
+        "10 audited claims",
+        "JSON, BibTeX, RIS, and CFF",
+    ),
+    Path("en/about/index.html"): (
+        "Research desk",
+        "Research architecture",
+        "How a question becomes an inspectable dossier",
+        "automated validation is not specialist review",
+        "Flagship dossier",
+        "Current extended investigation",
+        "machine-readable claims",
+        "Canonical author identity",
+        "Machine-readable identity",
+    ),
+    Path("de/index.html"): (
+        "Offizielle Autoren- und Forschungsplattform",
+        "Vollständige Forschungsfassungen",
+        "automatisierte Kontrolle",
+    ),
+    Path("de/about/index.html"): (
+        "Identitätsnachweis",
+        "automatisierte Prüfung",
+        "Kanonische Autorenidentität",
+        "Maschinenlesbare Identität",
+    ),
 }
 
 COMMENT_RE = re.compile(r"<!--(.*?)-->", re.DOTALL)
