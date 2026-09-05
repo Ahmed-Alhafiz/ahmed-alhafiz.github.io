@@ -79,6 +79,15 @@ PAGE_SPECIFIC_BANNED = {
         "More than an English landing page",
         "The site distinguishes author review, automated validation, specialist review, and academic peer review.",
     ),
+    Path("en/articles/index.html"): (
+        "Independent research desk",
+        "Arguments designed to be inspected",
+        "The aim is not to imitate institutional authority",
+        "Reference dossier ·",
+        "Three labels with different evidentiary weight",
+        "English editions are released only at full argumentative depth",
+        "المكتب العربي",
+    ),
     Path("en/about/index.html"): (
         "Research desk",
         "Research architecture",
@@ -94,6 +103,8 @@ PAGE_SPECIFIC_BANNED = {
         "Offizielle Autoren- und Forschungsplattform",
         "Vollständige Forschungsfassungen",
         "automatisierte Kontrolle",
+        "COSMOLOGY",
+        "WATER / POWER",
     ),
     Path("de/about/index.html"): (
         "Identitätsnachweis",
