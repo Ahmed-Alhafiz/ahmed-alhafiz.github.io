@@ -1,4 +1,4 @@
-name: One-time Ahrefs broken URL audit
+name: One-time Ahrefs title meta audit
 
 on:
   push:
@@ -16,52 +16,38 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Find missing internal targets across repository text and live site
+      - name: Measure canonical titles and descriptions
         run: |
           python - <<'PY'
+          from html.parser import HTMLParser
           from pathlib import Path
-          from urllib.parse import urlsplit, unquote
-          from urllib.request import Request, urlopen
-          from urllib.error import HTTPError, URLError
           import re
-
-          BASE='https://ahmed-alhafiz.github.io'
-          root=Path('.').resolve()
-          text_ext={'.html','.xml','.json','.jsonld','.js','.css','.md','.txt','.rss','.atom'}
-          abs_re=re.compile(r'https://ahmed-alhafiz\.github\.io(?:/[A-Za-z0-9_./%\-]+)?')
-          refs=[]
-          for f in sorted(root.rglob('*')):
-              if not f.is_file() or '.git' in f.parts or f.suffix.lower() not in text_ext: continue
-              try: txt=f.read_text(encoding='utf-8')
-              except Exception: continue
-              for m in abs_re.finditer(txt):
-                  refs.append((f,m.group(0)))
-
-          uniq={u for _,u in refs}
-          missing_local=[]
-          live_bad=[]
-          for u in sorted(uniq):
-              pth=unquote(urlsplit(u).path)
-              p=root/pth.lstrip('/')
-              if not pth or pth=='/': p=root/'index.html'
-              elif pth.endswith('/'): p=p/'index.html'
-              elif p.is_dir(): p=p/'index.html'
-              if not p.exists():
-                  missing_local.append((u, str(p.relative_to(root)) if p.is_relative_to(root) else str(p)))
-              try:
-                  req=Request(u, headers={'User-Agent':'Mozilla/5.0 Ahrefs-remediation-check'})
-                  with urlopen(req, timeout=15) as r:
-                      code=getattr(r,'status',200)
-                      final=r.geturl()
-                  if not (200 <= code < 400): live_bad.append((u,code,final))
-              except HTTPError as e:
-                  live_bad.append((u,e.code,getattr(e,'url',u)))
-              except URLError as e:
-                  print('LIVE_ERROR',u,repr(e.reason))
-
-          print(f'ABS_INTERNAL_URLS={len(uniq)}')
-          print(f'MISSING_LOCAL_TARGETS={len(missing_local)}')
-          for u,p in missing_local: print(f'MISSING_LOCAL|{u}|{p}')
-          print(f'LIVE_NON_2XX_3XX={len(live_bad)}')
-          for u,c,f in live_bad: print(f'LIVE_BAD|{c}|{u}|{f}')
+          class P(HTMLParser):
+              def __init__(self): super().__init__(convert_charrefs=True); self.t=False; self.title=''; self.desc=''; self.canon=''
+              def handle_starttag(self,tag,attrs):
+                  a=dict(attrs); tag=tag.lower()
+                  if tag=='title': self.t=True
+                  elif tag=='meta' and a.get('name','').lower()=='description': self.desc=a.get('content','').strip()
+                  elif tag=='link' and 'canonical' in a.get('rel','').lower().split(): self.canon=a.get('href','').strip()
+              def handle_endtag(self,tag):
+                  if tag.lower()=='title': self.t=False
+              def handle_data(self,data):
+                  if self.t:self.title+=data
+          rows=[]
+          for f in sorted(Path('.').rglob('*.html')):
+              if '.git' in f.parts or f.as_posix()=='404.html' or f.name.startswith('google'): continue
+              p=P()
+              try:p.feed(f.read_text(encoding='utf-8'))
+              except Exception:continue
+              title=re.sub(r'\s+',' ',p.title).strip(); desc=re.sub(r'\s+',' ',p.desc).strip()
+              if p.canon: rows.append((f.as_posix(),len(title),len(desc),title,desc))
+          print('CANONICAL_PAGES',len(rows))
+          for tlim,dlim in [(60,155),(65,160),(70,160),(70,165),(75,160)]:
+              print(f'THRESHOLD title>{tlim}={sum(t>tlim for _,t,d,_,_ in rows)} desc>{dlim}={sum(d>dlim for _,t,d,_,_ in rows)}')
+          print('--- TITLES SORTED ---')
+          for path,t,d,title,desc in sorted(rows,key=lambda x:(-x[1],x[0])):
+              print(f'TITLE|{t}|{path}|{title}')
+          print('--- DESCRIPTIONS SORTED ---')
+          for path,t,d,title,desc in sorted(rows,key=lambda x:(-x[2],x[0])):
+              print(f'DESC|{d}|{path}|{desc}')
           PY
