@@ -133,6 +133,16 @@ def main()->int:
         if q.canonical in canonical_map and canonical_map[q.canonical]!=p:errors.append(f'{rel}: duplicate canonical with {canonical_map[q.canonical].relative_to(root)}')
         canonical_map[q.canonical]=p
         if not q.jsonld_raw:errors.append(f'{rel}: missing JSON-LD')
+        # Schema.org mainContentOfPage expects a WebPageElement, not an Article.
+        # Article↔page relationships belong on mainEntity / mainEntityOfPage.
+        for raw in q.jsonld_raw:
+            data=json.loads(raw)
+            for node in iter_jsonld_nodes(data):
+                if not isinstance(node,dict):continue
+                value=node.get('mainContentOfPage')
+                target_id=value.get('@id') if isinstance(value,dict) else value if isinstance(value,str) else ''
+                if isinstance(target_id,str) and target_id.endswith('#article'):
+                    errors.append(f'{rel}: mainContentOfPage points to an Article; use mainEntity instead')
         if q.blank_rel_errors:errors.append(f'{rel}: {q.blank_rel_errors} target=_blank links lack noopener')
         for i,img in enumerate(q.images,1):
             if not img.get('alt','').strip():errors.append(f'{rel}: image {i} missing alt')
