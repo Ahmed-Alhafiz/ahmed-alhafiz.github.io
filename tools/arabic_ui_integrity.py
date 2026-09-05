@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Protect Arabic interface quality and the public research-hub structure.
 
-The Arabic research hub may contain English titles or concise English labels
-when they are explicit destinations to an English edition. This gate rejects
-stale English interface scaffolding, requires the current Arabic hub anchors,
-and cross-checks the machine-readable research register instead of requiring
-one specific visual table layout.
+The Arabic research hub may contain English titles only when they are part of a
+proper name or explicit source metadata. Navigation and edition controls on the
+Arabic surface must remain Arabic. This gate also cross-checks the machine-readable
+research register instead of requiring one specific visual table layout.
 """
 from __future__ import annotations
 
@@ -33,6 +32,12 @@ BANNED_VISIBLE_INTERFACE = {
         "Publication register",
         "Global edition policy",
         "العربية / English",
+        "English edition",
+        "English research desk",
+    ),
+    "research-status/index.html": (
+        "Transparency register",
+        "English edition",
     ),
     "articles/water-civilization-power/index.html": (
         ">English edition</a>",

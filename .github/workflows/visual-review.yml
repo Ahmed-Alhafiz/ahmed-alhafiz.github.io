@@ -51,9 +51,11 @@ jobs:
           python -m py_compile \
             .github/visual-review/run_visual_review.py \
             .github/visual-review/run_visual_review_fixed.py \
-            .github/visual-review/verify_book_covers.py
+            .github/visual-review/verify_book_covers.py \
+            .github/visual-review/verify_sitewide_arabic_nav.py
           python .github/visual-review/run_visual_review_fixed.py
           python .github/visual-review/verify_book_covers.py
+          python .github/visual-review/verify_sitewide_arabic_nav.py
 
       - name: Upload visual review artifact
         if: always()
