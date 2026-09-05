@@ -1,0 +1,49 @@
+name: One-time Ahrefs schema fix
+
+on:
+  push:
+    branches:
+      - ahrefs-schema-remediation-25
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ahrefs-schema-remediation-25
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply exact Schema.org relation repair
+        run: |
+          set -euo pipefail
+          python tools/_apply_ahrefs_schema_fix.py
+          python -m py_compile tools/site_audit.py tools/_apply_ahrefs_schema_fix.py
+          python tools/site_audit.py
+          git diff --check
+      - name: Commit repair if needed
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo 'No repair changes remain.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            en/articles/ratq-fatq-big-bang/index.html \
+            articles/ratq-fatq-big-bang/index.html \
+            articles/sleep-paralysis-jathoom/index.html \
+            articles/spiritual-healing-exploitation-safeguarding/index.html \
+            en/articles/teaching-names-ai-understanding/index.html \
+            articles/six-days-creation-cosmic-time/index.html \
+            articles/teaching-names-ai-understanding/index.html \
+            articles/functional-seizures-vs-epilepsy/index.html \
+            tools/site_audit.py
+          git commit -m 'Fix Ahrefs Schema.org article relations'
+          git push origin HEAD:ahrefs-schema-remediation-25
