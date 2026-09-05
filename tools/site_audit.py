@@ -171,6 +171,41 @@ def main()->int:
             if t is not None and not t.exists():
                 (warnings if args.partial else errors).append(f'{p.relative_to(root)}: broken local link {h} -> {t.relative_to(root) if t.is_relative_to(root) else t}')
 
+    # Every multilingual hreflang group must expose one identical mapping,
+    # including the same x-default destination, on every member page.
+    canonical_pages={q.canonical:(p,q) for p,q in pages.items() if q.canonical}
+    checked_hreflang_groups=set()
+    for p,q in pages.items():
+        if not q.canonical or not q.alternates:continue
+        language_alts={code:url for code,url in q.alternates.items() if code!='x-default'}
+        if len(language_alts)<2:continue
+        rel=p.relative_to(root)
+        if q.lang and q.alternates.get(q.lang)!=q.canonical:
+            errors.append(f'{rel}: self hreflang {q.lang!r} does not match canonical')
+        member_urls=frozenset(language_alts.values())
+        group_key=tuple(sorted(member_urls))
+        if group_key in checked_hreflang_groups:continue
+        checked_hreflang_groups.add(group_key)
+        member_mappings=[]
+        for member_url in sorted(member_urls):
+            member=canonical_pages.get(member_url)
+            if member is None:
+                errors.append(f'{rel}: hreflang group target is not a public canonical page: {member_url}')
+                continue
+            member_path,member_page=member
+            member_language_alts={code:url for code,url in member_page.alternates.items() if code!='x-default'}
+            if frozenset(member_language_alts.values())!=member_urls:
+                errors.append(f'{member_path.relative_to(root)}: hreflang group member set differs from {rel}')
+            member_mappings.append((member_path,tuple(sorted(member_page.alternates.items()))))
+        if member_mappings:
+            reference_path,reference_mapping=member_mappings[0]
+            for member_path,mapping in member_mappings[1:]:
+                if mapping!=reference_mapping:
+                    errors.append(
+                        f'{member_path.relative_to(root)}: hreflang mapping differs from '
+                        f'{reference_path.relative_to(root)}; all group members must share the same tags and x-default'
+                    )
+
     # Sitemap coverage, local validity, and lastmod truthfulness.
     sm=root/'sitemap.xml'; urls=set(); sitemap_dates={}
     if sm.exists():
