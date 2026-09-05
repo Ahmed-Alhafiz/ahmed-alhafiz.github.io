@@ -161,18 +161,53 @@ def local_audit() -> dict[str, Any]:
     ar_feed = load_json(ROOT / "articles/feed.json")
     en_feed = load_json(ROOT / "en/articles/feed.json")
     research_index = load_json(ROOT / "articles/research-index.json")
-    class_counts: dict[str, int] = {}
-    for item in inventory.get("items", []):
+
+    inventory_list = inventory.get("items", [])
+    index_list = research_index.get("items", [])
+    inventory_items = {
+        item.get("slug"): item for item in inventory_list if isinstance(item, dict) and item.get("slug")
+    }
+    index_items = {
+        item.get("slug"): item for item in index_list if isinstance(item, dict) and item.get("slug")
+    }
+    if len(inventory_items) != len(inventory_list):
+        errors.append("data/content-inventory.json: duplicate or missing item slug")
+    if len(index_items) != len(index_list):
+        errors.append("articles/research-index.json: duplicate or missing item slug")
+    if set(inventory_items) != set(index_items):
+        errors.append(
+            "inventory/research-index slug drift: "
+            f"inventory_only={sorted(set(inventory_items) - set(index_items))}, "
+            f"index_only={sorted(set(index_items) - set(inventory_items))}"
+        )
+    for slug in sorted(set(inventory_items) & set(index_items)):
+        inventory_languages = sorted(inventory_items[slug].get("languages", []))
+        index_languages = sorted(index_items[slug].get("languages", []))
+        if inventory_languages != index_languages:
+            errors.append(
+                f"inventory/research-index language drift for {slug}: "
+                f"inventory={inventory_languages}, index={index_languages}"
+            )
+
+    class_counts: dict[str, int] = {key: 0 for key in inventory.get("classes", {})}
+    for item in inventory_list:
         item_class = item.get("class", "missing")
         class_counts[item_class] = class_counts.get(item_class, 0) + 1
     if class_counts != inventory.get("current_counts"):
         errors.append("data/content-inventory.json: declared counts do not match items")
 
+    complete_bilingual_pillars = sum(
+        1
+        for item in inventory_list
+        if item.get("class") == "pillar" and {"ar", "en"}.issubset(set(item.get("languages", [])))
+    )
+
     measured = {
         "public_html_pages": len(pages),
         "canonical_urls": len(canonicals),
         "sitemap_urls": len(sitemap_urls),
-        "research_items": len(research_index.get("items", [])),
+        "research_items": len(index_list),
+        "complete_bilingual_pillars": complete_bilingual_pillars,
         "arabic_feed_items": len(ar_feed.get("items", [])),
         "english_feed_items": len(en_feed.get("items", [])),
         "author_rel_links": author_links,
@@ -187,7 +222,8 @@ def local_audit() -> dict[str, Any]:
         "public_html_pages": len(pages),
         "canonical_urls": len(canonicals),
         "sitemap_urls": len(sitemap_urls),
-        "research_items": len(research_index.get("items", [])),
+        "research_items": len(index_list),
+        "complete_bilingual_pillars": complete_bilingual_pillars,
         "arabic_feed_items": len(ar_feed.get("items", [])),
         "english_feed_items": len(en_feed.get("items", [])),
     }

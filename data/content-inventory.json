@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-09-02",
+  "generated": "2026-09-05",
   "site": "https://ahmed-alhafiz.github.io/",
   "policy": {
     "primary_rule": "Do not publish a new URL merely to increase page count. Every indexed page must answer a distinct question, provide unique value, and disclose its evidence and review status.",
@@ -58,11 +58,11 @@
     {
       "slug": "teaching-names-ai-understanding",
       "url": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/",
-      "class": "pillar_candidate",
+      "class": "pillar",
       "book_cluster": "sirou-fi-alard",
-      "languages": ["ar"],
-      "next_action": "rebuild_then_publish_complete_english_edition",
-      "reason": "Strategically strong question, but the current international surface is incomplete. It should not be multiplied into smaller derivative posts."
+      "languages": ["ar", "en"],
+      "next_action": "hold_scope_and_measure",
+      "reason": "Complete bilingual reference dossier with a six-layer analytical framework, reciprocal discovery, portable citation assets, and the former bilingual-parity veto gate closed after final release verification."
     },
     {
       "slug": "spiritual-healing-exploitation-safeguarding",
@@ -111,8 +111,8 @@
     }
   ],
   "current_counts": {
-    "pillar": 3,
-    "pillar_candidate": 1,
+    "pillar": 4,
+    "pillar_candidate": 0,
     "supporting_brief": 3,
     "literary_guide": 1,
     "hold_for_review": 1

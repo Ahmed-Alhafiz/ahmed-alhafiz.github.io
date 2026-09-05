@@ -2,8 +2,8 @@
 """Validate the canonical Ahmed Alhafiz author entity across the site.
 
 This gate prevents identity drift, duplicate spelling pages, inconsistent
-Person nodes, unsupported external profiles, and machine-only identity claims
-that are not visible on the author pages.
+Person nodes, unsupported external profiles, machine-only identity claims,
+and stale current-control records that contradict the published author/book state.
 """
 from __future__ import annotations
 
@@ -30,6 +30,9 @@ IDENTIFIER = {
     "propertyID": "canonical-author-id",
     "value": AUTHOR_ID,
 }
+JUHAYMAN_ID = "https://ahmed-alhafiz.github.io/books/juhayman/#book"
+JUHAYMAN_TITLE = "جُهَيْمَان — خوارج بين الركن والمقام"
+STALE_JUHAYMAN_TITLE = "جهيمان — القيامة بين الركن والمقام"
 EXCLUDED_HTML = {"404.html", "google904951439b331720.html"}
 SCRIPT_RE = re.compile(
     r"<script\b[^>]*\btype=[\"']application/ld\+json[\"'][^>]*>(.*?)</script>",
@@ -180,6 +183,11 @@ def validate_manifest(errors: list[str]) -> None:
             errors.append(f"author.json: {book.get('name')} lost forthcoming status")
         if book.get("author") != {"@id": AUTHOR_ID}:
             errors.append(f"author.json: {book.get('name')} does not reference the canonical author")
+    juhayman = [book for book in books if book.get("@id") == JUHAYMAN_ID]
+    if len(juhayman) != 1:
+        errors.append(f"author.json: expected exactly one Juhayman Book node, found {len(juhayman)}")
+    elif juhayman[0].get("name") != JUHAYMAN_TITLE:
+        errors.append(f"author.json: canonical Juhayman title drifted: {juhayman[0].get('name')!r}")
 
     articles = [node for node in graph if isinstance(node, dict) and node_has_type(node, "Article")]
     if len(articles) < 4:
@@ -271,6 +279,36 @@ def validate_visible_profiles(errors: list[str]) -> None:
             errors.append(f"{rel}: visible author-manifest link missing")
 
 
+def validate_juhayman_title(errors: list[str]) -> None:
+    public_surfaces = (
+        "books/juhayman/index.html",
+        "index.html",
+        "about/index.html",
+        "en/index.html",
+        "en/about/index.html",
+        "de/index.html",
+        "de/about/index.html",
+    )
+    for rel in public_surfaces:
+        text = (ROOT / rel).read_text(encoding="utf-8")
+        if JUHAYMAN_TITLE not in text:
+            errors.append(f"{rel}: canonical Juhayman title missing")
+        if STALE_JUHAYMAN_TITLE in text:
+            errors.append(f"{rel}: stale Juhayman title returned")
+
+    control_docs = (
+        ".github/PROJECT_GOVERNING_DIRECTIVE.md",
+        ".github/SEO_SOURCE_OF_TRUTH.md",
+        ".github/CONTENT_CURRENT_CHECKPOINT.md",
+    )
+    for rel in control_docs:
+        text = (ROOT / rel).read_text(encoding="utf-8")
+        if JUHAYMAN_TITLE not in text:
+            errors.append(f"{rel}: canonical Juhayman title missing from current control record")
+        if STALE_JUHAYMAN_TITLE in text:
+            errors.append(f"{rel}: stale Juhayman title contradicts current control state")
+
+
 def validate_no_doorways(errors: list[str]) -> None:
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     aliases = ("/ahmed-alhafiz/", "/ahmad-alhafiz/", "/أحمد-الحافظ/")
@@ -294,13 +332,22 @@ def validate_strategy_data(errors: list[str]) -> None:
     items = inventory.get("items", [])
     if len(items) != 9:
         errors.append(f"content inventory: expected nine indexed research/guide items, found {len(items)}")
-    counts: dict[str, int] = {}
+    counts: dict[str, int] = {key: 0 for key in inventory.get("classes", {})}
     for item in items:
-        counts[item.get("class", "missing")] = counts.get(item.get("class", "missing"), 0) + 1
+        item_class = item.get("class", "missing")
+        counts[item_class] = counts.get(item_class, 0) + 1
     if counts != inventory.get("current_counts"):
         errors.append(f"content inventory counts drifted: computed {counts}, declared {inventory.get('current_counts')}")
-    if counts.get("pillar") != 3 or counts.get("pillar_candidate") != 1:
-        errors.append(f"content strategy must retain exactly three current pillars and one candidate: {counts}")
+    if counts.get("pillar") != 4 or counts.get("pillar_candidate") != 0:
+        errors.append(f"content strategy must retain exactly four current pillars and zero candidates: {counts}")
+
+    teaching = [item for item in items if item.get("slug") == "teaching-names-ai-understanding"]
+    if len(teaching) != 1:
+        errors.append(f"content inventory: expected one Teaching the Names record, found {len(teaching)}")
+    else:
+        item = teaching[0]
+        if item.get("class") != "pillar" or sorted(item.get("languages", [])) != ["ar", "en"]:
+            errors.append("content inventory: Teaching the Names must remain a complete Arabic/English pillar")
 
 
 def main() -> None:
@@ -308,6 +355,7 @@ def main() -> None:
     validate_manifest(errors)
     validate_html(errors)
     validate_visible_profiles(errors)
+    validate_juhayman_title(errors)
     validate_no_doorways(errors)
     validate_strategy_data(errors)
     if errors:
@@ -318,7 +366,7 @@ def main() -> None:
     print(
         "Entity integrity passed: canonical Arabic name, two Latin aliases, one author ID, "
         "two verified public profiles, one machine-readable manifest, three visible profile editions, "
-        "four forthcoming books, four reference dossiers, and no alias doorway pages."
+        "four forthcoming books, four current reference pillars, canonical Juhayman title, and no alias doorway pages."
     )
 
 

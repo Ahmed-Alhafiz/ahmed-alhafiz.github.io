@@ -1,6 +1,6 @@
 # Content Project Current Checkpoint — Ahmed Alhafiz
 
-**Updated:** 2026-09-02
+**Updated:** 2026-09-05
 
 ## Mandatory reading order
 
@@ -17,8 +17,9 @@ Before any website, research, SEO, AI-discoverability, entity, measurement, doma
 9. `.github/SITE_UX_REBUILD_10_VERIFICATION.md`
 10. `.github/UMM_ABBAS_FEAR_CERTAINTY_AUTHORITY_11_PREMERGE.md`
 11. `.github/ENTITY_MEASUREMENT_FOUNDATION_12_VERIFICATION.md`
-12. `.github/MEASUREMENT_PROTOCOL.md`
-13. `.github/CUSTOM_DOMAIN_MIGRATION_PLAN.md`
+12. `.github/TEACHING_NAMES_REFERENCE_GRADE_SCORE_2026-09-03.md`
+13. `.github/MEASUREMENT_PROTOCOL.md`
+14. `.github/CUSTOM_DOMAIN_MIGRATION_PLAN.md`
 
 ## Governing strategy
 
@@ -38,22 +39,24 @@ The site is not managed as a volume blog. It is an author-entity and reference-d
 1. «قل سيروا في الأرض فانظروا كيف بدأ الخلق» — active research cluster.
 2. «أم عباس لجلب الحبيب ورد المطلقة» — active research cluster.
 3. «كتاب الكتب» — deferred until explicit instruction.
-4. «جهيمان — القيامة بين الركن والمقام» — deferred until explicit instruction.
+4. «جُهَيْمَان — خوارج بين الركن والمقام» — deferred until explicit instruction.
 
 ## Current verified platform
 
 - Arabic, English, and German author/profile surfaces.
 - Arabic and English homepages, research hubs, methodology pages, and review registers.
 - Arabic and English Atom and JSON feeds.
-- Three complete bilingual reference dossiers:
+- Four complete bilingual reference dossiers:
   1. ratq/fatq, exegesis, and Big Bang evidence;
   2. water, civilisation, power, and justice;
-  3. diagnostic uncertainty, family fear, and coercive authority.
-- Evidence appendices, machine-readable claim ledgers, BibTeX, RIS, and `CITATION.cff` outputs.
+  3. diagnostic uncertainty, family fear, and coercive authority;
+  4. Teaching the Names and AI understanding.
+- Evidence appendices, machine-readable claim ledgers, BibTeX, RIS, and `CITATION.cff` outputs where the dossier architecture provides them.
 - Responsive editorial design with browser-based desktop/mobile visual review.
 - Explicit crawler access for `OAI-SearchBot`, `GPTBot`, and generic crawlers.
 - One canonical author entity across all public pages and one root `author.json` identity graph.
 - Automated local/live visibility-readiness monitoring and constrained IndexNow changed-URL notification.
+- Official Juhayman public title and cover are now `جُهَيْمَان — خوارج بين الركن والمقام` and `/juhayman-cover.webp`; the previous title is retired from current public/control surfaces.
 
 ## Verified release 11 — Umm Abbas fear/certainty/authority dossier
 
@@ -80,7 +83,7 @@ The site is not managed as a volume blog. It is an author-entity and reference-d
 - Visibility readiness monitor: `33626518932` — success.
 - IndexNow changed-URL notification: `33626518876` — success.
 
-Verified release state:
+Verified release state at that historical checkpoint:
 
 - 42 public HTML pages.
 - 42 unique canonical URLs.
@@ -90,18 +93,35 @@ Verified release state:
 - 10 embedded canonical Person nodes.
 - one public `author.json` graph connecting the site, three profile editions, four forthcoming books, and four reference dossiers.
 - `OAI-SearchBot`, `GPTBot`, and generic crawlers explicitly allowed at `/`.
-- live deployment audit returned zero errors across identity, robots, sitemap, feeds, research index, current pillars, and the AI pillar candidate.
+- live deployment audit returned zero errors across identity, robots, sitemap, feeds, research index, then-current pillars, and the then-current AI pillar candidate.
 - IndexNow root key verified live with HTTP 200 on attempt 5.
 - 43 changed public URLs submitted; endpoint returned HTTP 202 (`accepted_key_validation_pending`). This is transport acceptance only, not evidence of crawl, indexing, ranking, traffic, or citation.
 - full IndexNow dry-run inventory: 50 eligible sitemap and machine-surface URLs.
 - custom-domain migration plan completed but not activated.
 
+## Verified release 14 / PR #20 — Teaching Names completion + release hardening
+
+- Pull request: `#20`.
+- Final verified PR head: `b1db682417407b6a0d4af05c2ea80d3d0f11e24f`.
+- Merge to `main`: `30cbb9bc1f12e2944b125f52e40c81814855e232`.
+- Pull-request `Site integrity`: run `33958875648` — success.
+- Pull-request `Content research architecture`: run `33958875699` — success.
+- Pull-request `Citation metadata integrity`: run `33958875601` — success.
+- Pull-request `Visual review`: run `33958875839` — success.
+- GitHub Pages deployment after merge: run `33958995913` — success, including successful deploy step.
+- Visibility readiness monitor after merge: run `33958996169` — success.
+- IndexNow changed-URL notification after merge: run `33958996164` — success.
+- Teaching the Names is now a complete Arabic/English dossier; reciprocal `hreflang`, common `x-default`, and visible AR/EN switching are enforced by `tools/discovery_integrity.py`.
+- Final reference-grade score recorded for Teaching the Names: **88/100**; the former bilingual parity/discovery veto gate is closed.
+- External specialist review remains pending and is not represented as peer review.
+- The official Juhayman title changed to `جُهَيْمَان — خوارج بين الركن والمقام`; matching Arabic/English/German metadata, JSON-LD, visible book surfaces, and the official replacement cover were released without changing the frozen design system.
+
 ## Strategic content inventory
 
 Controlled by `data/content-inventory.json`:
 
-- 3 current pillars.
-- 1 pillar candidate: names and AI understanding.
+- 4 current pillars.
+- 0 pillar candidates.
 - 3 supporting briefs.
 - 1 literary guide.
 - 1 URL held for overlap review.
@@ -156,17 +176,18 @@ Permanent checks must continue to validate:
 - reciprocal research/book/evidence links;
 - medical emergency and medication boundaries;
 - canonical author name, aliases, identifier, image, email, and verified profiles;
+- the canonical Juhayman title across current public and operational source-of-truth surfaces;
 - absence of alias doorway pages;
-- content-inventory counts and anti-thin-content policy;
+- content-inventory counts and language parity with the machine research index;
 - public crawler access and machine identity manifest;
 - IndexNow host/key/request boundaries and transport-only interpretation;
 - reproducible desktop/mobile visual review;
 - absence of temporary release machinery.
 
-## Next controlled work after verified foundation 12
+## Next controlled work after verified release 14
 
-1. Observe Day-7 and Day-30 measurement windows without noisy title changes.
-2. Rebuild `teaching-names-ai-understanding` into the fourth complete bilingual pillar instead of creating derivative posts.
-3. Purchase and verify the selected custom domain before any canonical-host migration.
+1. Hold the four completed pillars stable while observing Day-7 and Day-30 measurement windows; avoid noisy title/canonical changes without evidence.
+2. Continue post-merge integrity audits and correct operational/source-of-truth drift before beginning new content expansion.
+3. Purchase and verify the selected custom domain before any canonical-host migration; the purchase decision remains with the user.
 4. Connect a current trustworthy Search Console export/API and privacy-compliant referral analytics when account authorization is available.
-5. Keep «كتاب الكتب» and «جهيمان» deferred.
+5. Keep «كتاب الكتب» and «جُهَيْمَان — خوارج بين الركن والمقام» article extraction deferred until explicit instruction.

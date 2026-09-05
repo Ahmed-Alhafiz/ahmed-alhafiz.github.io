@@ -1,6 +1,6 @@
 # SEO Source of Truth — Ahmed Alhafiz
 
-Last verified: 2026-09-02 (Europe/Vienna)
+Last verified: 2026-09-05 (Europe/Vienna)
 
 ## Governing directive and mandatory memory
 
@@ -46,21 +46,22 @@ Current strategic objective: strengthen the association between «أحمد ال�
 - Official Instagram: https://www.instagram.com/ahmed_666_8
 
 ## Verified current website baseline
-Verified from repository and public-page state on 2026-09-02:
+Verified from repository, CI, and public Pages deployment state on 2026-09-05:
 - Separate author page exists at `/about/`.
 - Separate Arabic book pages exist under `/books/`.
 - English and German versions exist under `/en/` and `/de/`.
 - A public article hub exists at `/articles/`.
-- Four reference studies are live and linked to the two active forthcoming works.
+- Four complete bilingual reference dossiers are live: ratq/fatq and Big Bang evidence; water/civilisation/power; diagnostic uncertainty/family fear/coercive authority; and Teaching the Names/AI understanding.
 - An editorial methodology page exists at `/methodology/`.
 - `robots.txt` explicitly allows `OAI-SearchBot`, `GPTBot`, and generic crawlers.
-- `sitemap.xml` and `/articles/feed.xml` include the active research pages.
+- `sitemap.xml` and Arabic/English feeds include the active research pages.
 - Google Search Console verification file exists in the repository.
-- Canonical and hreflang markup are present on the inspected priority book pages.
-- Persistent structural and editorial quality gates run through `.github/workflows/site-integrity.yml`.
+- Canonical and reciprocal hreflang markup are present on the inspected priority multilingual pages.
+- Persistent structural, research, citation-metadata, and visual quality gates run through GitHub Actions.
 - Author pages use the currently discoverable Medium profile URL `https://medium.com/@AhmedAlhafiz` in visible official links and `Person.sameAs`.
+- PR #20 was merged to `main` as `30cbb9bc1f12e2944b125f52e40c81814855e232`; GitHub Pages deployment `33958995913` completed successfully.
 
-Do NOT return to the obsolete baseline that the site is a single page without book pages or reference articles.
+Do NOT return to the obsolete baseline that the site is a single page without book pages or reference articles, or that Teaching the Names is still an Arabic-only pillar candidate.
 
 ## Priority book records
 
@@ -85,9 +86,14 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 - Public description focus currently on site: beginning of creation; religion and science; revelation and reason; limits of interpretation and knowledge.
 - Publisher / ISBN / edition fields: do not add to public pages or structured data unless independently verified from a public source or explicitly approved after publication data stabilizes.
 
-### 3) جهيمان — القيامة بين الركن والمقام
+### 3) جُهَيْمَان — خوارج بين الركن والمقام
+- Canonical public title: جُهَيْمَان — خوارج بين الركن والمقام
+- Public type/genre currently stated on site: رواية تاريخية دينية
+- Public publication state currently stated on site: قيد الإصدار
 - Official Arabic page: https://ahmed-alhafiz.github.io/books/juhayman/
-- Current public state on site: قريبًا
+- English page: https://ahmed-alhafiz.github.io/en/books/juhayman/
+- German page: https://ahmed-alhafiz.github.io/de/books/juhayman/
+- Official cover path: https://ahmed-alhafiz.github.io/juhayman-cover.webp
 - External promotion: paused until official publication.
 - Article extraction: deferred until explicit user instruction.
 
