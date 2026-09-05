@@ -1,0 +1,40 @@
+name: One-time run Ahrefs hreflang fix
+
+on:
+  push:
+    branches:
+      - ahrefs-remediation-24
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ahrefs-remediation-24
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply proven hreflang repair
+        run: python tools/_apply_ahrefs_hreflang.py
+      - name: Verify site integrity
+        run: |
+          python tools/site_audit.py
+          python -m py_compile tools/site_audit.py
+          git diff --check
+      - name: Commit only when changed
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No repair changes remain."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add en/about/index.html en/articles/index.html tools/site_audit.py
+          git commit -m 'Fix reciprocal hreflang group defaults [ahrefs-hreflang-fix]'
+          git push origin HEAD:ahrefs-remediation-24
