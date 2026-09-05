@@ -64,6 +64,27 @@ def parse(path:Path)->Page:
     for raw in q.p.jsonld_raw: json.loads(raw)
     return q.p
 
+DATE_MODIFIED_TYPES={'WebPage','ProfilePage','CollectionPage','Article','ScholarlyArticle'}
+
+def iter_jsonld_nodes(value):
+    if isinstance(value,dict):
+        yield value
+        for child in value.values():yield from iter_jsonld_nodes(child)
+    elif isinstance(value,list):
+        for child in value:yield from iter_jsonld_nodes(child)
+
+def canonical_modified_dates(page:Page,canonical:str)->set[str]:
+    dates=set()
+    for raw in page.jsonld_raw:
+        for node in iter_jsonld_nodes(json.loads(raw)):
+            if not isinstance(node,dict):continue
+            typ=node.get('@type')
+            typed=bool(DATE_MODIFIED_TYPES.intersection(typ)) if isinstance(typ,list) else typ in DATE_MODIFIED_TYPES
+            if not typed or node.get('url')!=canonical:continue
+            value=node.get('dateModified')
+            if isinstance(value,str) and value:dates.add(value[:10])
+    return dates
+
 def expected(root:Path,path:Path)->str|None:
     rel=path.relative_to(root).as_posix()
     if rel in EXCLUDED or path.name.startswith('google'): return None
@@ -150,16 +171,28 @@ def main()->int:
             if t is not None and not t.exists():
                 (warnings if args.partial else errors).append(f'{p.relative_to(root)}: broken local link {h} -> {t.relative_to(root) if t.is_relative_to(root) else t}')
 
-    # Sitemap coverage and validity.
-    sm=root/'sitemap.xml'; urls=set()
+    # Sitemap coverage, local validity, and lastmod truthfulness.
+    sm=root/'sitemap.xml'; urls=set(); sitemap_dates={}
     if sm.exists():
         try:
             tree=ET.parse(sm); ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
-            urls={n.text.strip() for n in tree.findall('s:url/s:loc',ns) if n.text}
+            for entry in tree.findall('s:url',ns):
+                loc=(entry.findtext('s:loc',default='',namespaces=ns) or '').strip()
+                lastmod=(entry.findtext('s:lastmod',default='',namespaces=ns) or '').strip()
+                if not loc:errors.append('sitemap.xml: URL entry missing loc');continue
+                if loc in urls:errors.append(f'sitemap.xml: duplicate loc {loc}');continue
+                urls.add(loc); sitemap_dates[loc]=lastmod
         except Exception as e:errors.append(f'sitemap.xml: {e}')
     elif not args.partial:errors.append('sitemap.xml missing')
     for p,q in pages.items():
-        if q.canonical and q.canonical not in urls:errors.append(f'{p.relative_to(root)}: canonical absent from sitemap')
+        if not q.canonical:continue
+        if q.canonical not in urls:errors.append(f'{p.relative_to(root)}: canonical absent from sitemap');continue
+        dates=canonical_modified_dates(q,q.canonical)
+        if len(dates)!=1:
+            errors.append(f'{p.relative_to(root)}: expected one canonical JSON-LD dateModified, found {sorted(dates)}')
+        else:
+            expected_date=next(iter(dates)); actual=sitemap_dates.get(q.canonical,'')
+            if actual!=expected_date:errors.append(f'{p.relative_to(root)}: sitemap lastmod {actual!r} != JSON-LD dateModified {expected_date!r}')
     for u in urls:
         p=site_path(root,u)
         if p is not None and not p.exists():(warnings if args.partial else errors).append(f'sitemap.xml: no local page for {u}')
