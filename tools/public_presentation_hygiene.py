@@ -76,6 +76,8 @@ PAGE_SPECIFIC_BANNED = {
         "New complete bilingual dossier",
         "10 audited claims",
         "JSON, BibTeX, RIS, and CFF",
+        "More than an English landing page",
+        "The site distinguishes author review, automated validation, specialist review, and academic peer review.",
     ),
     Path("en/about/index.html"): (
         "Research desk",
