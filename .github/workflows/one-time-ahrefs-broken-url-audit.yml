@@ -1,0 +1,69 @@
+name: One-time Ahrefs broken URL audit
+
+on:
+  push:
+    branches:
+      - ahrefs-final-cleanup-26
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Find missing internal targets including absolute same-site URLs
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlsplit, unquote
+
+          BASE='https://ahmed-alhafiz.github.io'
+          root=Path('.').resolve()
+          refs=[]
+          class P(HTMLParser):
+              def __init__(self,src): super().__init__(convert_charrefs=True); self.src=src
+              def handle_starttag(self,tag,attrs):
+                  a=dict(attrs)
+                  for key in ('href','src'):
+                      v=a.get(key)
+                      if v: refs.append((self.src,tag,key,v.strip()))
+          for f in sorted(root.rglob('*.html')):
+              if '.git' in f.parts: continue
+              try: P(f).feed(f.read_text(encoding='utf-8'))
+              except Exception as e: print('PARSE',f.relative_to(root),e)
+
+          missing=[]
+          checked=[]
+          for src,tag,key,v in refs:
+              if not v or v.startswith(('#','mailto:','tel:','javascript:','data:')): continue
+              u=urlsplit(v)
+              if u.scheme or u.netloc:
+                  origin=f'{u.scheme}://{u.netloc}'
+                  if origin!=BASE: continue
+                  raw=unquote(u.path)
+              else:
+                  raw=unquote(u.path)
+              if not raw: continue
+              if raw.startswith('/'):
+                  p=root/raw.lstrip('/')
+              else:
+                  p=src.parent/raw
+              if raw.endswith('/'):
+                  p=p/'index.html'
+              elif p.is_dir():
+                  p=p/'index.html'
+              p=p.resolve()
+              checked.append((src,tag,key,v,p))
+              if not p.exists():
+                  missing.append((src.relative_to(root).as_posix(),tag,key,v, str(p.relative_to(root)) if p.is_relative_to(root) else str(p)))
+          print(f'CHECKED_INTERNAL_REFS={len(checked)}')
+          print(f'MISSING_INTERNAL_REFS={len(missing)}')
+          for row in missing:
+              print('MISSING|'+ '|'.join(row))
+          PY
