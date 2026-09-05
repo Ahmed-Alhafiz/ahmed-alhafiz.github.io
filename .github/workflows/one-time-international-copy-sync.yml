@@ -1,0 +1,223 @@
+name: One-time international copy sync
+
+on:
+  push:
+    branches:
+      - international-copy-truth-sync-21
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: ${{ !contains(github.event.head_commit.message, '[international-copy-sync]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: international-copy-truth-sync-21
+          fetch-depth: 0
+      - name: Apply exact international copy and truth-sync replacements
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_exact(path_str, old, new, expected=1):
+              path = Path(path_str)
+              text = path.read_text(encoding='utf-8')
+              count = text.count(old)
+              if count != expected:
+                  raise SystemExit(f'{path}: expected {expected} occurrences of {old!r}, found {count}')
+              path.write_text(text.replace(old, new), encoding='utf-8')
+
+          # EN homepage: synchronize the four current bilingual pillars and naturalize public copy.
+          replace_exact(
+              'en/index.html',
+              '"numberOfItems":3,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/","name":"Ratq, fatq, and the Big Bang"},{"@type":"ListItem","position":2,"url":"https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/","name":"Water, Civilization and Power"},{"@type":"ListItem","position":3,"url":"https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/","name":"When Fear Decides Before Diagnosis"}]}',
+              '"numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://ahmed-alhafiz.github.io/en/articles/teaching-names-ai-understanding/","name":"Teaching the Names and AI: What Counts as Understanding?"},{"@type":"ListItem","position":2,"url":"https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/","name":"Ratq, fatq, and the Big Bang: text, exegesis, evidence, and limits"},{"@type":"ListItem","position":3,"url":"https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/","name":"Water, Civilization and Power: When Does Resource Governance Produce Justice—and When Does It Become Control?"},{"@type":"ListItem","position":4,"url":"https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/","name":"When Fear Decides Before Diagnosis: How Uncertainty Becomes Authority and Coercion in Families"}]}',
+          )
+          replace_exact('en/index.html', 'Official author and research platform', 'Official website of author Ahmed Alhafiz')
+          replace_exact('en/index.html', 'Enter the research desk', 'Explore the research')
+          replace_exact('en/index.html', '<strong>Open method</strong>', '<strong>Research method</strong>')
+          replace_exact('en/index.html', 'An author site built as a public research desk', 'Books and research in one author site')
+          replace_exact(
+              'en/index.html',
+              'This is the official source for Ahmed Alhafiz and his books, but it is not designed as a catalogue of covers and slogans. Its larger purpose is to publish open, traceable work around the questions from which the books emerge: what a text says, what observation supports, where interpretation begins, and how ideas become lived experience.',
+              'This is the official website of Ahmed Alhafiz, bringing together forthcoming books and research on the questions that inform them: what texts say, what evidence supports, where interpretation begins, and how ideas shape lived experience.',
+          )
+          replace_exact(
+              'en/index.html',
+              '<article class="dossier-card"><div class="kicker">Creation and time</div><h3><a href="/articles/six-days-creation-cosmic-time/" hreflang="ar">Six days of creation and cosmic time</a></h3><p>The current full edition is in Arabic. An English edition will be published only after a substantive editorial rebuild.</p><a class="more" href="/articles/six-days-creation-cosmic-time/" hreflang="ar">Read the Arabic briefing →</a></article>',
+              '<article class="dossier-card"><div class="kicker">Language, meaning and AI</div><h3><a href="/en/articles/teaching-names-ai-understanding/">Teaching the Names and AI: What Counts as Understanding?</a></h3><p>A bilingual study of Qur’an 2:30–33, classical exegesis, language models, grounding, world models, intention, and responsibility.</p><a class="more" href="/en/articles/teaching-names-ai-understanding/">Read the English dossier →</a></article>',
+          )
+          replace_exact('en/index.html', 'New complete bilingual dossier · Water / Civilization / Power', 'Bilingual research dossier · Water / Civilization / Power')
+          replace_exact('en/index.html', '<span>10 audited claims</span><span>21 annotated sources</span><span>JSON, BibTeX, RIS, and CFF</span><span>External review pending</span>', '<span>10 numbered claims</span><span>21 annotated sources</span><span>Evidence appendix</span><span>External review pending</span>')
+          replace_exact('en/index.html', 'New complete bilingual dossier · mind, family and authority', 'Bilingual research dossier · mind, family and authority')
+          replace_exact('en/index.html', '<span>Original analytical cascade</span><span>Parallel-path safeguard</span><span>JSON, BibTeX, RIS, and CFF</span><span>Specialist review pending</span>', '<span>Original analytical cascade</span><span>Parallel-path safeguard</span><span>Evidence register</span><span>Specialist review pending</span>')
+
+          # EN about: remove institutional/production language while preserving the same layout.
+          replace_exact('en/about/index.html', '<title>Ahmed Alhafiz — Author and Research Publisher</title>', '<title>Ahmed Alhafiz — Author | Official Profile</title>')
+          replace_exact('en/about/index.html', 'Ahmed Alhafiz — author and independent research publisher', 'Ahmed Alhafiz — author and writer', expected=1)
+          replace_exact('en/about/index.html', 'Ahmed Alhafiz — Author and independent research publisher', 'Ahmed Alhafiz — Author | Official Profile', expected=1)
+          replace_exact('en/about/index.html', '>Research desk</a>', '>Research</a>')
+          replace_exact('en/about/index.html', 'Narrative tests the human situation; research tests the claim', 'Fiction, history and research around shared questions')
+          replace_exact(
+              'en/about/index.html',
+              'The research desk is therefore not extended advertising for unpublished books. Each dossier begins with an independent question, relies on evidence outside the manuscript, and states its review status and limits. When a question grows from a forthcoming work, that relationship is disclosed without treating the book as evidence for its own claims.',
+              'The research published here is separate from the unpublished manuscripts. Each dossier starts from its own question, relies on sources outside the manuscript, and states its review status and limits. When a question grows from a forthcoming work, that relationship is disclosed without treating the book as evidence for its own claims.',
+          )
+          replace_exact('en/about/index.html', 'Forthcoming books + author-led independent research', 'Forthcoming books and independent research')
+          replace_exact('en/about/index.html', 'Research architecture', 'Research method')
+          replace_exact('en/about/index.html', 'How a question becomes an inspectable dossier', 'How a research question is developed')
+          replace_exact('en/about/index.html', '<h3>Bounded claims</h3>', '<h3>Specific claims</h3>')
+          replace_exact('en/about/index.html', '<h3>Visible status</h3>', '<h3>Review status</h3>')
+          replace_exact('en/about/index.html', 'Author review is not peer review; automated validation is not specialist review.', 'Author review is not specialist or peer review.')
+          replace_exact('en/about/index.html', 'Flagship dossier', 'Selected research')
+          replace_exact('en/about/index.html', '<h2>Current extended investigation</h2>', '<h2>Ratq, fatq, and the Big Bang</h2>')
+          replace_exact('en/about/index.html', 'A full English edition with a claim–evidence map, annotated source audit, machine-readable claims, and downloadable citation formats.', 'A full English edition with a claim–evidence map, annotated sources, a source appendix, and citation files.')
+          replace_exact('en/about/index.html', 'Name and identity disambiguation', 'Official name and identity')
+          replace_exact('en/about/index.html', 'Canonical author identity', 'Official author identity')
+          replace_exact('en/about/index.html', '<dt>Canonical identifier</dt>', '<dt>Official identifier</dt>')
+          replace_exact('en/about/index.html', '<dt>Canonical author page</dt>', '<dt>Official author page</dt>')
+          replace_exact('en/about/index.html', '<strong>Attribution boundary</strong>', '<strong>Identity note</strong>')
+          replace_exact('en/about/index.html', '>Machine-readable identity</a>', '>Author record</a>')
+
+          # DE homepage: natural language and replace the non-research status card with a current bilingual pillar.
+          replace_exact('de/index.html', 'Bücher in Vorbereitung, Autorenprofil und Hinweise auf überprüfbare Forschungsdossiers.', 'Bücher in Vorbereitung, Autorenprofil und Forschungsdossiers mit Quellen und ausgewiesenem Prüfstatus.')
+          replace_exact('de/index.html', '"disambiguatingDescription":"أحمد الحافظ — Ahmed Alhafiz، الكاتب المرتبط حصراً بالمؤلفات والملفات البحثية المدرجة في هذا الموقع الرسمي."', '"disambiguatingDescription":"Ahmed Alhafiz — أحمد الحافظ, Autor der auf dieser offiziellen Website aufgeführten Bücher und Forschungsdossiers."')
+          replace_exact('de/index.html', 'Offizielle Autoren- und Forschungsplattform', 'Offizielle Website des Autors Ahmed Alhafiz')
+          replace_exact('de/index.html', '<div class="kicker">Vollständige Forschungsfassungen</div>', '<div class="kicker">Ausgewählte Forschungsdossiers</div>')
+          replace_exact(
+              'de/index.html',
+              '<article class="track-card"><div><span class="track-no">TRANSPARENZ</span><h3><a href="/en/research-status/" hreflang="en">Prüfstatus statt bloßer Behauptung</a></h3><p>Autorenprüfung, automatisierte Kontrolle, Fachprüfung und Peer Review werden ausdrücklich unterschieden.</p></div><a href="/en/research-status/" hreflang="en">Prüfregister öffnen →</a></article>',
+              '<article class="track-card"><div><span class="track-no">SPRACHE / KI</span><h3><a href="/en/articles/teaching-names-ai-understanding/" hreflang="en">Teaching the Names and AI</a></h3><p>Eine zweisprachige Untersuchung zu Koran 2:30–33, klassischer Auslegung, Sprachmodellen, Bedeutung und Verantwortung.</p></div><a href="/en/articles/teaching-names-ai-understanding/" hreflang="en">Englisches Dossier öffnen →</a></article>',
+          )
+
+          # DE about: remove production-style language and keep the identity text fully German.
+          replace_exact('de/about/index.html', 'Bücher in Vorbereitung und überprüfbare Forschungsarbeit.', 'Bücher in Vorbereitung und Forschungsarbeit mit Quellen und ausgewiesenem Prüfstatus.')
+          replace_exact('de/about/index.html', '"disambiguatingDescription":"أحمد الحافظ — Ahmed Alhafiz، الكاتب المرتبط حصراً بالمؤلفات والملفات البحثية المدرجة في هذا الموقع الرسمي."', '"disambiguatingDescription":"Ahmed Alhafiz — أحمد الحافظ, Autor der auf dieser offiziellen Website aufgeführten Bücher und Forschungsdossiers."')
+          replace_exact('de/about/index.html', '>Identitätsnachweis</a>', '>Offizielle Angaben</a>')
+          replace_exact('de/about/index.html', 'Erzählung prüft den Menschen; Recherche prüft die Behauptung', 'Fiktion, Geschichte und Recherche unter gemeinsamen Fragen')
+          replace_exact('de/about/index.html', 'Bücher in Vorbereitung + unabhängige Autorenrecherche', 'Bücher in Vorbereitung und unabhängige Recherche')
+          replace_exact('de/about/index.html', '<h3>Begrenzte Behauptungen</h3>', '<h3>Klare Aussagen</h3>')
+          replace_exact('de/about/index.html', 'Autorenprüfung, automatisierte Prüfung, Fachprüfung und Peer Review sind nicht dasselbe.', 'Autorenprüfung ist weder Fachprüfung noch Peer Review.')
+          replace_exact('de/about/index.html', 'Namens- und Identitätsklärung', 'Offizieller Name und Identität')
+          replace_exact('de/about/index.html', 'Kanonische Autorenidentität', 'Offizielle Autorenidentität')
+          replace_exact('de/about/index.html', '<dt>Kanonische Kennung</dt>', '<dt>Offizielle Kennung</dt>')
+          replace_exact('de/about/index.html', '<dt>Kanonische Autorenseite</dt>', '<dt>Offizielle Autorenseite</dt>')
+          replace_exact('de/about/index.html', '<strong>Zuordnungsgrenze</strong>', '<strong>Hinweis zur Identität</strong>')
+          replace_exact('de/about/index.html', '>Maschinenlesbare Identität</a>', '>Autorendaten</a>')
+
+          # Permanent hygiene regression checks for the four international pages.
+          old_block = '''PAGE_SPECIFIC_BANNED = {
+              Path("index.html"): (
+                  "الملف البحثي المحوري",
+                  "دون قفزة دعائية",
+                  "أبحاث موثقة",
+                  "10 ادعاءات مدققة",
+              ),
+              Path("articles/index.html"): (
+                  "ركيزة مرجعية",
+              ),
+          }'''
+          new_block = '''PAGE_SPECIFIC_BANNED = {
+              Path("index.html"): (
+                  "الملف البحثي المحوري",
+                  "دون قفزة دعائية",
+                  "أبحاث موثقة",
+                  "10 ادعاءات مدققة",
+              ),
+              Path("articles/index.html"): (
+                  "ركيزة مرجعية",
+              ),
+              Path("en/index.html"): (
+                  "Official author and research platform",
+                  "Enter the research desk",
+                  "An author site built as a public research desk",
+                  "New complete bilingual dossier",
+                  "10 audited claims",
+                  "JSON, BibTeX, RIS, and CFF",
+              ),
+              Path("en/about/index.html"): (
+                  "Research desk",
+                  "Research architecture",
+                  "How a question becomes an inspectable dossier",
+                  "automated validation is not specialist review",
+                  "Flagship dossier",
+                  "Current extended investigation",
+                  "machine-readable claims",
+                  "Canonical author identity",
+                  "Machine-readable identity",
+              ),
+              Path("de/index.html"): (
+                  "Offizielle Autoren- und Forschungsplattform",
+                  "Vollständige Forschungsfassungen",
+                  "automatisierte Kontrolle",
+              ),
+              Path("de/about/index.html"): (
+                  "Identitätsnachweis",
+                  "automatisierte Prüfung",
+                  "Kanonische Autorenidentität",
+                  "Maschinenlesbare Identität",
+              ),
+          }'''
+          replace_exact('tools/public_presentation_hygiene.py', old_block, new_block)
+
+          # Permanent discovery gate: English homepage ItemList must equal the complete English-edition set.
+          helper = '''\ndef english_homepage(expected):
+              path = ROOT / "en/index.html"
+              html = path.read_text(encoding="utf-8")
+              parser = LD(); parser.feed(html)
+              target = None
+              for raw in parser.blocks:
+                  if not raw.strip():
+                      continue
+                  data = json.loads(raw)
+                  nodes = [data] if isinstance(data, dict) else []
+                  if isinstance(data, dict) and isinstance(data.get("@graph"), list):
+                      nodes += data["@graph"]
+                  for node in nodes:
+                      if isinstance(node, dict) and node.get("@type") == "ItemList" and node.get("@id") == "https://ahmed-alhafiz.github.io/en/#featured-research":
+                          target = node
+              if target is None:
+                  die("en/index.html: featured English research ItemList missing")
+              expected_urls = set(expected)
+              listed = {
+                  item.get("url")
+                  for item in target.get("itemListElement", [])
+                  if isinstance(item, dict) and item.get("url")
+              }
+              if target.get("numberOfItems") != len(expected_urls):
+                  die(f"en/index.html: English research count drift; expected {len(expected_urls)}, found {target.get('numberOfItems')}")
+              if listed != expected_urls:
+                  die(f"en/index.html: featured English research URLs drift; expected {sorted(expected_urls)}, found {sorted(listed)}")
+              for url in expected_urls:
+                  if route(url) not in html:
+                      die(f"en/index.html: current English research pillar absent from visible homepage: {url}")
+          '''
+          discovery = Path('tools/discovery_integrity.py')
+          text = discovery.read_text(encoding='utf-8')
+          marker = '\ndef main():\n'
+          if text.count(marker) != 1:
+              raise SystemExit('tools/discovery_integrity.py: main marker count drift')
+          text = text.replace(marker, helper + marker)
+          old_call = '    surfaces(ar)\n    print(f"Discovery integrity passed: {len(ar)} Arabic surfaces, {len(en)} English editions; chronology, JSON-LD metadata, reciprocal hreflang/switches, hubs, sitemap and book links agree.")'
+          new_call = '    surfaces(ar); english_homepage(en)\n    print(f"Discovery integrity passed: {len(ar)} Arabic surfaces, {len(en)} English editions; chronology, JSON-LD metadata, reciprocal hreflang/switches, hubs, sitemap, book links and English-homepage pillar inventory agree.")'
+          if text.count(old_call) != 1:
+              raise SystemExit('tools/discovery_integrity.py: surfaces call drift')
+          discovery.write_text(text.replace(old_call, new_call), encoding='utf-8')
+          PY
+          git diff --check
+      - name: Commit sync
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No changes produced"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          git commit -m "Synchronize international public copy and research inventory [international-copy-sync]"
+          git push origin HEAD:international-copy-truth-sync-21
