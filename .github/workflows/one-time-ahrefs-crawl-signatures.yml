@@ -1,0 +1,139 @@
+name: One-time Ahrefs crawl signatures
+
+on:
+  push:
+    branches:
+      - ahrefs-remediation-24
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Crawl live internal URLs and aggregate Schema signatures
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from __future__ import annotations
+          import json, re, urllib.request, urllib.error, xml.etree.ElementTree as ET
+          from collections import Counter,defaultdict,deque
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urljoin,urlparse,urldefrag
+
+          BASE='https://ahmed-alhafiz.github.io'
+          HOST='ahmed-alhafiz.github.io'
+
+          class H(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True); self.links=[]; self.alts={}; self.lang=''; self.canonical=''; self.on=False; self.buf=[]; self.jsonld=[]
+              def handle_starttag(self,tag,attrs):
+                  a={k.lower():(v or '') for k,v in attrs}; tag=tag.lower()
+                  if tag=='html':self.lang=a.get('lang','').lower()
+                  elif tag=='a' and a.get('href'):self.links.append(a['href'].strip())
+                  elif tag=='link':
+                      rel=set(a.get('rel','').lower().split())
+                      if 'canonical' in rel:self.canonical=a.get('href','').strip()
+                      if 'alternate' in rel and a.get('hreflang'):self.alts[a['hreflang'].lower()]=a.get('href','').strip()
+                  elif tag=='script' and a.get('type','').lower()=='application/ld+json':self.on=True;self.buf=[]
+              def handle_endtag(self,tag):
+                  if tag.lower()=='script' and self.on:self.jsonld.append(''.join(self.buf));self.on=False;self.buf=[]
+              def handle_data(self,data):
+                  if self.on:self.buf.append(data)
+
+          def norm(u,base=BASE+'/'):
+              u=urljoin(base,u); u=urldefrag(u)[0]; p=urlparse(u)
+              if p.scheme not in {'http','https'} or p.netloc!=HOST:return None
+              # Normalize host/scheme only; preserve path/query because crawlers may treat them as URLs.
+              return 'https://'+HOST+(p.path or '/')+(('?'+p.query) if p.query else '')
+
+          headers={'User-Agent':'Mozilla/5.0 (compatible; AhrefsRemediation/1.0)','Cache-Control':'no-cache'}
+          q=deque([BASE+'/']); seen=set(); records={}; edges=[]
+          max_urls=250
+          while q and len(seen)<max_urls:
+              requested=q.popleft()
+              if requested in seen:continue
+              seen.add(requested)
+              try:
+                  req=urllib.request.Request(requested,headers=headers)
+                  with urllib.request.urlopen(req,timeout=20) as r:
+                      final=norm(r.geturl()) or r.geturl(); status=r.status; ctype=r.headers.get('Content-Type','').split(';')[0].lower(); body=r.read()
+              except urllib.error.HTTPError as e:
+                  final=norm(e.geturl()) or e.geturl(); status=e.code; ctype=e.headers.get('Content-Type','').split(';')[0].lower(); body=e.read()
+              except Exception as e:
+                  records[requested]={'final':requested,'status':'ERR','ctype':'','error':str(e)};continue
+              rec={'final':final,'status':status,'ctype':ctype,'bytes':len(body),'redirected':final!=requested}
+              records[requested]=rec
+              if ctype in {'text/html','application/xhtml+xml'} and status==200:
+                  h=H(); h.feed(body.decode('utf-8','replace')); rec['parser']=h
+                  for raw in h.links:
+                      target=norm(raw,final)
+                      if not target:continue
+                      edges.append((final,target))
+                      if target not in seen:q.append(target)
+          print(f'LIVE_INTERNAL_CRAWL requested={len(records)} html={sum(1 for r in records.values() if r.get("parser"))} redirects={sum(1 for r in records.values() if r.get("redirected"))} errors={sum(1 for r in records.values() if r.get("status")=="ERR")}')
+          by_type=Counter(r['ctype'] for r in records.values()); print('CONTENT_TYPES',dict(by_type))
+          print('\nNON_SITEMAP_OR_VARIANT_HTML')
+          tree=ET.parse('sitemap.xml'); ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          sitemap={(n.text or '').strip() for n in tree.findall('s:url/s:loc',ns) if n.text}
+          html_requested=[]
+          for requested,r in sorted(records.items()):
+              if r.get('parser'):
+                  html_requested.append(requested)
+                  if requested not in sitemap or r['final'] not in sitemap or r['redirected']:
+                      h=r['parser']; print(f'{requested} -> {r["final"]} status={r["status"]} canonical={h.canonical!r} lang={h.lang} alts={h.alts}')
+
+          # Reciprocal audit across every crawled live HTML URL, using final URL as identity.
+          finals={}
+          for requested,r in records.items():
+              if r.get('parser'): finals[r['final']]=r['parser']
+          miss=[]
+          for src,h in finals.items():
+              for code,target in h.alts.items():
+                  if code=='x-default':continue
+                  t=norm(target,src)
+                  if not t or t not in finals:continue
+                  th=finals[t]
+                  if h.lang and th.alts.get(h.lang)!=src:miss.append((src,h.lang,code,t,th.alts.get(h.lang)))
+          print(f'ALL_CRAWLED_HREFLANG html_final={len(finals)} reciprocal_missing={len(miss)}')
+          for x in miss:print('CRAWL_MISSING_RETURN',x)
+
+          # Aggregate structurally suspicious scalar properties by signature and page count.
+          sig_pages=defaultdict(set); sig_examples={}
+          def walk(o,url,parent_type=None,path='$'):
+              if isinstance(o,list):
+                  for i,x in enumerate(o):walk(x,url,parent_type,f'{path}[{i}]')
+                  return
+              if not isinstance(o,dict):return
+              typ=o.get('@type',parent_type)
+              if isinstance(typ,list):typ='|'.join(sorted(map(str,typ)))
+              for k,v in o.items():
+                  if k.startswith('@'):
+                      if k=='@graph':walk(v,url,None,path+'.@graph')
+                      continue
+                  vals=v if isinstance(v,list) else [v]
+                  for x in vals:
+                      if not isinstance(x,(dict,list)):
+                          kind='bool' if isinstance(x,bool) else 'number' if isinstance(x,(int,float)) else 'url' if isinstance(x,str) and x.startswith('http') else 'text'
+                          sig=(str(typ),k,kind)
+                          sig_pages[sig].add(url);sig_examples.setdefault(sig,(path+'.'+k,x))
+                  walk(v,url,typ,path+'.'+k)
+          for url in sitemap:
+              p=urlparse(url); rel=p.path.lstrip('/'); f=Path(rel)/'index.html' if rel and p.path.endswith('/') else Path('index.html') if not rel else Path(rel)
+              if not f.is_file():continue
+              h=H();h.feed(f.read_text(encoding='utf-8'))
+              for raw in h.jsonld:
+                  if raw.strip():walk(json.loads(raw),url)
+          print('\nSCHEMA_SIGNATURES_PAGE_COUNTS')
+          for sig,pages in sorted(sig_pages.items(),key=lambda kv:(-len(kv[1]),kv[0])):
+              if len(pages) in {6,7,8,9,10,11}:
+                  print(f'pages={len(pages)} sig={sig} example={sig_examples[sig]}')
+                  for u in sorted(pages):print(' ',u)
+          PY
