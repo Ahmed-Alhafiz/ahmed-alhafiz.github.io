@@ -1,4 +1,4 @@
-# Temporary idempotent repair script; removed before merge.
+# Temporary idempotent repair script; trigger registered runner, removed before merge.
 from pathlib import Path
 
 REPLACEMENTS = {
