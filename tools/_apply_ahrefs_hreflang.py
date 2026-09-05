@@ -1,3 +1,4 @@
+# Temporary idempotent repair script; removed before merge.
 from pathlib import Path
 
 REPLACEMENTS = {
