@@ -1,0 +1,122 @@
+name: One-time sitemap date audit
+
+on:
+  push:
+    branches:
+      - sitemap-lastmod-integrity-23
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: sitemap-lastmod-integrity-23
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compare sitemap lastmod with canonical JSON-LD dateModified
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          ROOT = Path('.').resolve()
+          BASE = 'https://ahmed-alhafiz.github.io'
+          TYPES = {'WebPage','ProfilePage','CollectionPage','Article','ScholarlyArticle'}
+
+          class LD(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.on=False; self.buf=[]; self.blocks=[]
+              def handle_starttag(self, tag, attrs):
+                  a=dict(attrs)
+                  if tag.lower()=='script' and a.get('type','').lower()=='application/ld+json':
+                      self.on=True; self.buf=[]
+              def handle_endtag(self, tag):
+                  if tag.lower()=='script' and self.on:
+                      self.blocks.append(''.join(self.buf)); self.on=False
+              def handle_data(self, data):
+                  if self.on: self.buf.append(data)
+
+          def nodes(value):
+              if isinstance(value, dict):
+                  yield value
+                  if isinstance(value.get('@graph'), list):
+                      for child in value['@graph']:
+                          yield from nodes(child)
+              elif isinstance(value, list):
+                  for child in value:
+                      yield from nodes(child)
+
+          def page_path(url):
+              p=urlparse(url)
+              rel=p.path.lstrip('/')
+              if not rel: return ROOT/'index.html'
+              q=ROOT/rel
+              if p.path.endswith('/'): q=q/'index.html'
+              return q
+
+          tree=ET.parse('sitemap.xml')
+          ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          entries=[]
+          for u in tree.findall('s:url', ns):
+              loc=(u.findtext('s:loc', default='', namespaces=ns) or '').strip()
+              last=(u.findtext('s:lastmod', default='', namespaces=ns) or '').strip()
+              entries.append((loc,last))
+
+          mismatches=[]; missing=[]; conflicts=[]; matched=[]
+          for loc,last in entries:
+              path=page_path(loc)
+              if not path.is_file():
+                  missing.append((loc,'local page missing')); continue
+              parser=LD(); parser.feed(path.read_text(encoding='utf-8'))
+              dates=[]
+              for raw in parser.blocks:
+                  if not raw.strip(): continue
+                  data=json.loads(raw)
+                  for node in nodes(data):
+                      typ=node.get('@type')
+                      if isinstance(typ,list): ok=bool(TYPES.intersection(typ))
+                      else: ok=typ in TYPES
+                      if not ok: continue
+                      if node.get('url') != loc: continue
+                      dm=node.get('dateModified')
+                      if isinstance(dm,str) and dm:
+                          dates.append(dm[:10])
+              uniq=sorted(set(dates))
+              if not uniq:
+                  missing.append((loc,'matching JSON-LD dateModified absent'))
+                  continue
+              if len(uniq)>1:
+                  conflicts.append((loc,last,uniq)); continue
+              expected=uniq[0]
+              if last != expected:
+                  mismatches.append((loc,last,expected,str(path.relative_to(ROOT))))
+              else:
+                  matched.append((loc,last))
+
+          print(f'SITEMAP_DATE_AUDIT entries={len(entries)} matched={len(matched)} mismatches={len(mismatches)} missing_date={len(missing)} conflicts={len(conflicts)}')
+          if mismatches:
+              print('\nMISMATCHES')
+              for loc,last,expected,path in mismatches:
+                  print(f'{loc} | sitemap={last or "<missing>"} | JSON-LD={expected} | {path}')
+          if missing:
+              print('\nNO_MATCHING_DATE')
+              for loc,reason in missing:
+                  print(f'{loc} | {reason}')
+          if conflicts:
+              print('\nCONFLICTING_DATES')
+              for loc,last,dates in conflicts:
+                  print(f'{loc} | sitemap={last} | JSON-LD={dates}')
+          if conflicts:
+              raise SystemExit('Conflicting JSON-LD dateModified values require manual review.')
+          PY
