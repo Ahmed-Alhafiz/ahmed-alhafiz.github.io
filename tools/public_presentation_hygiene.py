@@ -4,7 +4,9 @@
 The site may legitimately discuss artificial intelligence as a research topic.
 This gate therefore does not ban AI terminology. It targets production-process
 phrases, draft/debug markers, prompt residue, and internal workflow language
-that should never leak into finished public editorial pages.
+that should never leak into finished public editorial pages. It also protects a
+small set of high-visibility pages from reverting to over-technical or
+unsupported promotional wording that has already been explicitly corrected.
 """
 from __future__ import annotations
 
@@ -50,6 +52,20 @@ BANNED_PATTERNS = {
     ),
 }
 
+# These exact homepage phrases were removed because they either expose an
+# internal checking concept, overstate verification, or read as production/
+# promotional copy rather than a natural author-site description.
+PAGE_SPECIFIC_BANNED = {
+    Path("index.html"): (
+        "الملف البحثي المحوري",
+        "دون قفزة دعائية",
+        "الفحص الآلي",
+        "أبحاث موثقة",
+        "موثقة بالمصادر",
+        "10 ادعاءات مدققة",
+    ),
+}
+
 # HTML comments are not visible, but they are public source and can leak build notes.
 COMMENT_RE = re.compile(r"<!--(.*?)-->", re.DOTALL)
 COMMENT_MARKER_RE = re.compile(
@@ -76,6 +92,12 @@ def main() -> None:
                 snippet = re.sub(r"\s+", " ", match.group(0)).strip()
                 errors.append(f"{rel}: {label}: {snippet!r}")
 
+        for phrase in PAGE_SPECIFIC_BANNED.get(rel, ()):
+            if phrase in text:
+                errors.append(
+                    f"{rel}: corrected homepage wording regressed: {phrase!r}"
+                )
+
         if path.suffix == ".html":
             for comment in COMMENT_RE.findall(text):
                 marker = COMMENT_MARKER_RE.search(comment)
@@ -92,7 +114,8 @@ def main() -> None:
 
     print(
         f"Public presentation hygiene passed across {checked} public files: "
-        "no production-process disclosure residue, draft/debug markers, or prompt/workflow leakage."
+        "no production-process disclosure residue, draft/debug markers, prompt/workflow leakage, "
+        "or corrected homepage editorial regressions."
     )
 
 
