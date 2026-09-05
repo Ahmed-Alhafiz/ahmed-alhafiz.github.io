@@ -1,0 +1,74 @@
+/* Mobile portrait and Arabic copy-surface hardening — 2026-09-05
+   Loaded after the frozen site styles. It removes offset portrait decoration,
+   prevents narrow-screen clipping, and keeps the Arabic navigation fully visible. */
+
+.home-hero::before{
+  background:
+    radial-gradient(circle at 15% 20%,rgba(65,127,151,.42),transparent 34%),
+    radial-gradient(circle at 86% 75%,rgba(180,94,61,.28),transparent 34%);
+}
+
+.hero-portrait,.profile-portrait{
+  overflow:hidden;
+  border-radius:22px;
+  box-shadow:0 0 0 1px rgba(240,173,133,.58),0 34px 100px rgba(0,0,0,.40);
+}
+.hero-portrait::before,.profile-portrait::after{display:none!important}
+.hero-portrait img,.profile-portrait img{
+  border-radius:inherit;
+  box-shadow:none!important;
+}
+
+.home-hero-grid>div:first-child,.profile-grid>div:first-child{
+  min-width:0;
+  max-width:100%;
+}
+.home-hero h1,.profile-hero h1,.home-hero .latin,.profile-latin,
+.home-hero .hero-statement,.profile-hero .lead{
+  max-width:100%;
+}
+
+@media(max-width:620px){
+  .wrap,.narrow{width:min(100% - 32px,var(--max))}
+  .header-inner{gap:8px 10px;padding-top:8px}
+  html[lang="ar"] .nav{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:0;
+    width:100%;
+    overflow:visible;
+    justify-content:stretch;
+  }
+  html[lang="ar"] .nav a{
+    min-width:0;
+    padding:10px 2px 9px;
+    text-align:center;
+    font-size:12px;
+    white-space:nowrap;
+  }
+  .home-hero-grid,.profile-grid{padding:28px 0 42px;gap:26px}
+  .hero-portrait,.profile-portrait{width:min(58vw,220px)}
+  .home-hero h1,.profile-hero h1{
+    font-size:clamp(38px,11vw,46px);
+    line-height:1.14;
+    overflow-wrap:anywhere;
+  }
+  .home-hero .latin,.profile-latin{font-size:22px;line-height:1.25}
+  .home-hero .hero-statement,.profile-hero .lead{
+    font-size:16px;
+    line-height:1.75;
+    overflow-wrap:anywhere;
+  }
+  html[lang="ar"] .home-hero-grid>div:first-child,
+  html[lang="ar"] .profile-grid>div:first-child{text-align:right}
+}
+
+@media(max-width:380px){
+  .wrap,.narrow{width:min(100% - 24px,var(--max))}
+  .brand-copy strong{font-size:14px}.brand-copy span{font-size:11px}
+  .langs a{min-width:29px;padding:7px 5px}
+  html[lang="ar"] .nav a{font-size:11px;padding-inline:1px}
+  .hero-portrait,.profile-portrait{width:min(62vw,210px)}
+  .home-hero .actions,.profile-hero .actions,.book-hero .actions{grid-template-columns:1fr}
+  .home-hero h1,.profile-hero h1{font-size:clamp(36px,10.8vw,42px)}
+}

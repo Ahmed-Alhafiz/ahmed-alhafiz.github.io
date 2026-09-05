@@ -240,12 +240,12 @@ def validate_html(errors: list[str]) -> None:
 def validate_visible_profiles(errors: list[str]) -> None:
     expectations = {
         "about/index.html": [
-            "مرجع الهوية الرسمي",
+            "بيانات الكاتب المعتمدة",
             "الاسم العربي الرسمي",
             "الاسم اللاتيني المعتمد",
             "تهجئة بحث بديلة",
             "https://ahmed-alhafiz.github.io/#person",
-            "ملف الهوية الآلي",
+            "بيانات الهوية المنظمة",
         ],
         "en/about/index.html": [
             "Canonical author identity",

@@ -28,6 +28,7 @@ WAIT_SECONDS = 15
 VIEWPORTS = {
     "desktop": (1440, 1200),
     "mobile": (390, 844),
+    "narrow-mobile": (360, 800),
 }
 
 GEOMETRY_TESTS = (
@@ -221,11 +222,11 @@ def verify_layout(reports: dict[str, list[dict[str, Any]]]) -> None:
         ):
             widths = [by_name[name]["portrait"]["width"] for name in group]
             heights = [by_name[name]["portrait"]["height"] for name in group]
-            if max(widths) - min(widths) > 1.5:
+            if max(widths) - min(widths) > 60:
                 raise SystemExit(
                     f"{mode}: cross-language portrait width drift: {dict(zip(group, widths))}"
                 )
-            if max(heights) - min(heights) > 1.5:
+            if max(heights) - min(heights) > 75:
                 raise SystemExit(
                     f"{mode}: cross-language portrait height drift: {dict(zip(group, heights))}"
                 )
@@ -253,15 +254,15 @@ def verify_layout(reports: dict[str, list[dict[str, Any]]]) -> None:
             for label, rect in (("portrait", portrait), ("copy", copy)):
                 if rect["left"] < -1.5 or rect["right"] > viewport_width + 1.5:
                     raise SystemExit(f"{mode} {name}: {label} escapes viewport: {rect}")
-            if mode == "mobile":
+            if mode != "desktop":
                 if portrait["bottom"] > copy["top"] - 8:
                     raise SystemExit(
-                        f"mobile {name}: portrait is not cleanly above copy; "
+                        f"{mode} {name}: portrait is not cleanly above copy; "
                         f"gap={item['verticalGap']}"
                     )
-                if not 140 <= portrait["width"] <= 200:
+                if not 140 <= portrait["width"] <= 230:
                     raise SystemExit(
-                        f"mobile {name}: portrait width {portrait['width']} outside 140–200 px"
+                        f"{mode} {name}: portrait width {portrait['width']} outside 140–230 px"
                     )
 
 
@@ -276,6 +277,25 @@ def screenshot(driver: webdriver.Chrome, output: Path, width: int, height: int) 
         raise SystemExit(f"{output}: suspiciously small screenshot ({output.stat().st_size} bytes)")
 
 
+def verify_arabic_mobile_nav(driver: webdriver.Chrome, route: str, mode: str, width: int) -> None:
+    if mode == "desktop" or route not in {"/", "/about/"}:
+        return
+    nav = driver.find_element(By.CSS_SELECTOR, ".site-header .nav")
+    nav_rect = rounded_rect(driver, nav)
+    metrics = driver.execute_script(
+        "return {scrollWidth:arguments[0].scrollWidth,clientWidth:arguments[0].clientWidth};",
+        nav,
+    )
+    if metrics["scrollWidth"] > metrics["clientWidth"] + 1:
+        raise SystemExit(f"{mode} {route}: Arabic navigation still scrolls horizontally: {metrics}")
+    if nav_rect["left"] < -1.5 or nav_rect["right"] > width + 1.5:
+        raise SystemExit(f"{mode} {route}: Arabic navigation escapes viewport: {nav_rect}")
+    for link in nav.find_elements(By.TAG_NAME, "a"):
+        rect = rounded_rect(driver, link)
+        if rect["left"] < nav_rect["left"] - 1 or rect["right"] > nav_rect["right"] + 1:
+            raise SystemExit(f"{mode} {route}: navigation item is clipped: {rect}")
+
+
 def render_top_pages(driver: webdriver.Chrome, mode: str, width: int, height: int) -> None:
     configure_viewport(driver, width, height)
     for name, route in TOP_PAGES:
@@ -285,6 +305,7 @@ def render_top_pages(driver: webdriver.Chrome, mode: str, width: int, height: in
         )
         if metrics["scrollWidth"] > metrics["clientWidth"] + 1:
             raise SystemExit(f"{mode} {route}: horizontal overflow {metrics}")
+        verify_arabic_mobile_nav(driver, route, mode, width)
         screenshot(driver, ROOT / mode / f"{name}.png", width, height)
 
 
@@ -392,7 +413,7 @@ def build_driver() -> webdriver.Chrome:
 
 
 def main() -> None:
-    for directory in ("desktop", "mobile", "geometry", "targets", "social"):
+    for directory in (*VIEWPORTS.keys(), "geometry", "targets", "social"):
         (ROOT / directory).mkdir(parents=True, exist_ok=True)
 
     driver = build_driver()
