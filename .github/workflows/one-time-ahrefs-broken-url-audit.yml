@@ -1,4 +1,4 @@
-name: One-time Ahrefs title meta audit
+name: One-time Ahrefs title meta fix
 
 on:
   push:
@@ -6,18 +6,25 @@ on:
       - ahrefs-final-cleanup-26
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  audit:
+  fix:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ahrefs-final-cleanup-26
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Measure canonical titles and descriptions
+      - name: Apply exact Ahrefs title and meta remediation
         run: |
+          set -euo pipefail
+          python tools/_apply_ahrefs_title_meta_fix.py
+          python -m py_compile tools/site_audit.py tools/_apply_ahrefs_title_meta_fix.py
+          python tools/site_audit.py
           python - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
@@ -28,26 +35,51 @@ jobs:
                   a=dict(attrs); tag=tag.lower()
                   if tag=='title': self.t=True
                   elif tag=='meta' and a.get('name','').lower()=='description': self.desc=a.get('content','').strip()
-                  elif tag=='link' and 'canonical' in a.get('rel','').lower().split(): self.canon=a.get('href','').strip()
+                  elif tag=='link' and 'canonical' in a.get('rel','').lower().split(): self.canon=a.get('href','')
               def handle_endtag(self,tag):
-                  if tag.lower()=='title': self.t=False
+                  if tag.lower()=='title':self.t=False
               def handle_data(self,data):
                   if self.t:self.title+=data
-          rows=[]
-          for f in sorted(Path('.').rglob('*.html')):
-              if '.git' in f.parts or f.as_posix()=='404.html' or f.name.startswith('google'): continue
-              p=P()
-              try:p.feed(f.read_text(encoding='utf-8'))
-              except Exception:continue
-              title=re.sub(r'\s+',' ',p.title).strip(); desc=re.sub(r'\s+',' ',p.desc).strip()
-              if p.canon: rows.append((f.as_posix(),len(title),len(desc),title,desc))
-          print('CANONICAL_PAGES',len(rows))
-          for tlim,dlim in [(60,155),(65,160),(70,160),(70,165),(75,160)]:
-              print(f'THRESHOLD title>{tlim}={sum(t>tlim for _,t,d,_,_ in rows)} desc>{dlim}={sum(d>dlim for _,t,d,_,_ in rows)}')
-          print('--- TITLES SORTED ---')
-          for path,t,d,title,desc in sorted(rows,key=lambda x:(-x[1],x[0])):
-              print(f'TITLE|{t}|{path}|{title}')
-          print('--- DESCRIPTIONS SORTED ---')
-          for path,t,d,title,desc in sorted(rows,key=lambda x:(-x[2],x[0])):
-              print(f'DESC|{d}|{path}|{desc}')
+          bad=[]
+          for f in Path('.').rglob('*.html'):
+              if '.git' in f.parts or f.as_posix()=='404.html' or f.name.startswith('google'):continue
+              p=P(); p.feed(f.read_text(encoding='utf-8'))
+              if not p.canon:continue
+              t=len(re.sub(r'\s+',' ',p.title).strip()); d=len(re.sub(r'\s+',' ',p.desc).strip())
+              if t>70 or d>160:bad.append((f.as_posix(),t,d))
+          print('AHREFS_LENGTH_VIOLATIONS',len(bad))
+          for row in bad:print('VIOLATION',*row,sep='|')
+          if bad:raise SystemExit(1)
           PY
+          git diff --check
+      - name: Commit SEO metadata repair
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo 'No changes remain.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            de/books/umm-abbas/index.html \
+            articles/diagnostic-uncertainty-family-fear-coercive-authority/index.html \
+            en/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/index.html \
+            articles/teaching-names-ai-understanding/index.html \
+            en/books/sirou-fi-alard/index.html \
+            articles/spiritual-healing-exploitation-safeguarding/index.html \
+            articles/water-civilization-power/index.html \
+            books/sirou-fi-alard/index.html \
+            en/articles/water-civilization-power/evidence/index.html \
+            en/articles/teaching-names-ai-understanding/index.html \
+            articles/six-days-creation-cosmic-time/index.html \
+            de/about/index.html \
+            en/books/kitab-al-kutub/index.html \
+            en/index.html \
+            books/juhayman/index.html \
+            de/index.html \
+            en/articles/water-civilization-power/index.html \
+            en/research-status/index.html \
+            tools/site_audit.py
+          git commit -m 'Fix Ahrefs title and meta length warnings'
+          git push origin HEAD:ahrefs-final-cleanup-26
