@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
-"""Protect Arabic interface language and research-register structure.
+"""Protect Arabic interface quality and the public research-hub structure.
 
-English titles, scientific abbreviations, source names, and book subtitles may
-remain where they carry content. This gate targets avoidable English interface
-labels that made Arabic pages look unfinished, and it verifies that the public
-research register has one consistent column model.
+The Arabic research hub may contain English titles or concise English labels
+when they are explicit destinations to an English edition. This gate rejects
+stale English interface scaffolding, requires the current Arabic hub anchors,
+and cross-checks the machine-readable research register instead of requiring
+one specific visual table layout.
 """
 from __future__ import annotations
 
+import json
 import sys
-from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+HUB = ROOT / "articles/index.html"
+REGISTER = ROOT / "articles/research-index.json"
 
 BANNED_VISIBLE_INTERFACE = {
     "articles/index.html": (
@@ -29,9 +32,6 @@ BANNED_VISIBLE_INTERFACE = {
         "NARRATIVE",
         "Publication register",
         "Global edition policy",
-        "English research desk",
-        "Open the English desk",
-        "English edition",
         "العربية / English",
     ),
     "articles/water-civilization-power/index.html": (
@@ -39,62 +39,36 @@ BANNED_VISIBLE_INTERFACE = {
     ),
 }
 
-REQUIRED_ARABIC_LABELS = {
-    "articles/index.html": (
-        "مركز أبحاث أحمد الحافظ",
-        "الملف البحثي المحوري",
-        "ملف بحثي ثنائي اللغة",
-        "ملفات موسعة باللغة العربية",
-        "المسارات البحثية",
-        "سجل النشر",
-        "سياسة الإصدار العالمي",
-        "مركز الأبحاث بالإنجليزية",
-        "النسخة الإنجليزية",
-    ),
-    "articles/water-civilization-power/index.html": (
-        ">النسخة الإنجليزية</a>",
-    ),
+# These phrases describe the current Arabic editorial surface. They are
+# intentionally semantic rather than layout-specific so visual redesigns do
+# not force the integrity gate to preserve an obsolete table or section order.
+REQUIRED_ARABIC_HUB_TEXT = (
+    "مركز أبحاث أحمد الحافظ",
+    "تعليم الأسماء والذكاء الاصطناعي",
+    "الرتق والفتق والانفجار العظيم",
+    "الماء والحضارة والسلطة",
+    "حين يحكم الخوف قبل التشخيص",
+    "مراجعة اختصاصية خارجية: لم تتم بعد",
+)
+
+REQUIRED_REGISTER_FIELDS = {
+    "slug",
+    "title",
+    "summary",
+    "type",
+    "version",
+    "languages",
+    "review",
+    "book",
+    "url",
 }
 
 
-class DossierTableParser(HTMLParser):
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=True)
-        self.in_table = False
-        self.table_depth = 0
-        self.in_row = False
-        self.current_cells = 0
-        self.rows: list[int] = []
-
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        attributes = {key: value or "" for key, value in attrs}
-        classes = attributes.get("class", "").split()
-        tag = tag.lower()
-        if tag == "table" and "dossier-table" in classes and not self.in_table:
-            self.in_table = True
-            self.table_depth = 1
-            return
-        if not self.in_table:
-            return
-        if tag == "table":
-            self.table_depth += 1
-        elif tag == "tr":
-            self.in_row = True
-            self.current_cells = 0
-        elif self.in_row and tag in {"th", "td"}:
-            self.current_cells += 1
-
-    def handle_endtag(self, tag: str) -> None:
-        tag = tag.lower()
-        if not self.in_table:
-            return
-        if tag == "tr" and self.in_row:
-            self.rows.append(self.current_cells)
-            self.in_row = False
-        elif tag == "table":
-            self.table_depth -= 1
-            if self.table_depth == 0:
-                self.in_table = False
+def load_register() -> dict:
+    try:
+        return json.loads(REGISTER.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"ERROR: articles/research-index.json is invalid: {exc}")
 
 
 def main() -> None:
@@ -106,26 +80,56 @@ def main() -> None:
             if phrase in text:
                 errors.append(f"{rel}: avoidable English interface label remained: {phrase}")
 
-    for rel, phrases in REQUIRED_ARABIC_LABELS.items():
-        text = (ROOT / rel).read_text(encoding="utf-8")
-        for phrase in phrases:
-            if phrase not in text:
-                errors.append(f"{rel}: required Arabic interface label missing: {phrase}")
+    hub_text = HUB.read_text(encoding="utf-8")
+    for phrase in REQUIRED_ARABIC_HUB_TEXT:
+        if phrase not in hub_text:
+            errors.append(f"articles/index.html: required Arabic hub text missing: {phrase}")
 
-    hub_path = ROOT / "articles/index.html"
-    parser = DossierTableParser()
-    parser.feed(hub_path.read_text(encoding="utf-8"))
-    if not parser.rows:
-        errors.append("articles/index.html: publication register table not found")
-    elif parser.rows[0] != 5:
-        errors.append(
-            f"articles/index.html: publication register must have five headers, found {parser.rows[0]}"
-        )
-    elif any(cells != parser.rows[0] for cells in parser.rows[1:]):
-        errors.append(
-            "articles/index.html: publication register row/header mismatch: "
-            f"{parser.rows}"
-        )
+    if 'href="/en/articles/"' not in hub_text or 'hreflang="en"' not in hub_text:
+        errors.append("articles/index.html: English research hub is not clearly reachable with hreflang=en")
+
+    data = load_register()
+    items = data.get("items")
+    if not isinstance(items, list) or not items:
+        errors.append("articles/research-index.json: items must be a non-empty list")
+        items = []
+
+    seen_slugs: set[str] = set()
+    seen_urls: set[str] = set()
+    for item in items:
+        if not isinstance(item, dict):
+            errors.append("articles/research-index.json: every item must be an object")
+            continue
+        missing = sorted(field for field in REQUIRED_REGISTER_FIELDS if not item.get(field))
+        slug = item.get("slug", "<unknown>")
+        if missing:
+            errors.append(f"articles/research-index.json: {slug} missing {', '.join(missing)}")
+            continue
+
+        if slug in seen_slugs:
+            errors.append(f"articles/research-index.json: duplicate slug {slug}")
+        seen_slugs.add(slug)
+
+        url = item["url"]
+        if url in seen_urls:
+            errors.append(f"articles/research-index.json: duplicate URL {url}")
+        seen_urls.add(url)
+
+        languages = item["languages"]
+        if not isinstance(languages, list) or "ar" not in languages:
+            errors.append(f"articles/research-index.json: {slug} must declare Arabic")
+        if "en" in languages and (not item.get("english_url") or not item.get("english_title")):
+            errors.append(f"articles/research-index.json: {slug} declares English without english_url/english_title")
+
+        local_path = "/" + url.removeprefix("https://ahmed-alhafiz.github.io/")
+        if local_path not in hub_text:
+            errors.append(f"articles/index.html: research surface not linked from hub: {local_path}")
+
+    # The current public program intentionally contains nine Arabic research
+    # surfaces. A count change must be an explicit editorial change rather than
+    # accidental register drift.
+    if len(items) != 9:
+        errors.append(f"articles/research-index.json: expected 9 current research surfaces, found {len(items)}")
 
     if errors:
         for error in errors:
@@ -133,9 +137,9 @@ def main() -> None:
         raise SystemExit(1)
 
     print(
-        "Arabic UI integrity passed: research labels are localized, the English "
-        "edition remains clearly reachable, and every publication-register row "
-        "matches the five-column header."
+        "Arabic UI integrity passed: current Arabic hub language is localized, "
+        "the English edition remains reachable, and nine research surfaces are "
+        "consistent with the machine-readable publication register."
     )
 
 

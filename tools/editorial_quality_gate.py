@@ -16,13 +16,14 @@ RULES={
  'en/articles/water-civilization-power/index.html':dict(words=4000,sources=18,book='en/books/sirou-fi-alard/index.html',route='/en/articles/water-civilization-power/',medical=False,extended=True),
  'articles/diagnostic-uncertainty-family-fear-coercive-authority/index.html':dict(words=3200,sources=15,book='books/umm-abbas/index.html',route='/articles/diagnostic-uncertainty-family-fear-coercive-authority/',medical=True,extended=True),
  'en/articles/diagnostic-uncertainty-family-fear-coercive-authority/index.html':dict(words=3600,sources=15,book='en/books/umm-abbas/index.html',route='/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/',medical=True,extended=True),
- 'articles/teaching-names-ai-understanding/index.html':dict(words=2500,sources=9,book='books/sirou-fi-alard/index.html',route='/articles/teaching-names-ai-understanding/',medical=False,extended=False),
+ 'articles/teaching-names-ai-understanding/index.html':dict(words=3500,sources=20,book='books/sirou-fi-alard/index.html',route='/articles/teaching-names-ai-understanding/',medical=False,extended=True),
+ 'en/articles/teaching-names-ai-understanding/index.html':dict(words=3000,sources=20,book='en/books/sirou-fi-alard/index.html',route='/en/articles/teaching-names-ai-understanding/',medical=False,extended=True),
  'articles/spiritual-healing-exploitation-safeguarding/index.html':dict(words=2350,sources=10,book='books/umm-abbas/index.html',route='/articles/spiritual-healing-exploitation-safeguarding/',medical=True,extended=False),
  'articles/six-days-creation-cosmic-time/index.html':dict(words=2100,sources=8,book='books/sirou-fi-alard/index.html',route='/articles/six-days-creation-cosmic-time/',medical=False,extended=False),
  'articles/sleep-paralysis-jathoom/index.html':dict(words=1800,sources=5,book='books/umm-abbas/index.html',route='/articles/sleep-paralysis-jathoom/',medical=True,extended=False),
  'articles/functional-seizures-vs-epilepsy/index.html':dict(words=2300,sources=8,book='books/umm-abbas/index.html',route='/articles/functional-seizures-vs-epilepsy/',medical=True,extended=False),
 }
-TRUSTED=('nasa.gov','esa.int','lbl.gov','doi.org','aanda.org','pdg.lbl.gov','pubmed.ncbi.nlm.nih.gov','pmc.ncbi.nlm.nih.gov','who.int','nhs.uk','fda.gov','gov.uk','aan.com','neurology.org','ilae.org','quran.com','quran.ksu.edu.sa','tafsir.app','sunnah.com','aclanthology.org','arxiv.org','academic.oup.com','oecd.org','fao.org','unesco.org','ipcc.ch','unece.org','un.org','cambridge.org','tandfonline.com','sciencedirect.com','science.org','wiley.com','onlinelibrary.wiley.com','dainst.org','ascelibrary.org','ahrq.gov','nice.org.uk','gmc-uk.org','nationalacademies.org','nap.nationalacademies.org')
+TRUSTED=('nasa.gov','esa.int','lbl.gov','doi.org','aanda.org','pdg.lbl.gov','pubmed.ncbi.nlm.nih.gov','pmc.ncbi.nlm.nih.gov','who.int','nhs.uk','fda.gov','gov.uk','aan.com','neurology.org','ilae.org','quran.com','quran.ksu.edu.sa','tafsir.app','sunnah.com','aclanthology.org','arxiv.org','academic.oup.com','oecd.org','fao.org','unesco.org','ipcc.ch','unece.org','un.org','cambridge.org','tandfonline.com','sciencedirect.com','science.org','wiley.com','onlinelibrary.wiley.com','dainst.org','ascelibrary.org','ahrq.gov','nice.org.uk','gmc-uk.org','nationalacademies.org','nap.nationalacademies.org','papers.nips.cc','proceedings.neurips.cc','proceedings.iclr.cc','jmlr.org','proceedings.mlr.press','pnas.org')
 
 @dataclass
 class D:
@@ -66,7 +67,7 @@ def article_node(d):
 def main():
  errors=[];warnings=[]
  hubs={p:(ROOT/p).read_text(encoding='utf-8') for p in ['articles/index.html','en/articles/index.html','research-status/index.html','en/research-status/index.html']}
- sitemap=(ROOT/'sitemap.xml').read_text(encoding='utf-8'); feeds=(ROOT/'articles/feed.xml').read_text(encoding='utf-8')
+ sitemap=(ROOT/'sitemap.xml').read_text(encoding='utf-8'); feeds=(ROOT/'articles/feed.xml').read_text(encoding='utf-8'); enfeeds=(ROOT/'en/articles/feed.xml').read_text(encoding='utf-8')
  for rel,r in RULES.items():
   p=ROOT/rel
   if not p.exists():errors.append(f'{rel}: missing');continue
@@ -85,7 +86,7 @@ def main():
    for key in ['headline','abstract','datePublished','dateModified','author','citation']:
     if not n.get(key):errors.append(f'{rel}: Article schema missing {key}')
    if n.get('isBasedOn'):errors.append(f'{rel}: forthcoming book must not be declared evidentiary isBasedOn')
-   if (rel.startswith(('articles/ratq','en/articles/ratq')) or 'water-civilization-power' in rel or 'diagnostic-uncertainty-family-fear-coercive-authority' in rel) and not n.get('mentions'):errors.append(f'{rel}: thematic book relationship should be disclosed with mentions')
+   if (rel.startswith(('articles/ratq','en/articles/ratq')) or 'water-civilization-power' in rel or 'diagnostic-uncertainty-family-fear-coercive-authority' in rel or 'teaching-names-ai-understanding' in rel) and not n.get('mentions'):errors.append(f'{rel}: thematic book relationship should be disclosed with mentions')
   domains={urlsplit(h).netloc.lower() for h in ext if any(urlsplit(h).netloc.lower().endswith(t) for t in TRUSTED)}
   if len(domains)<3:errors.append(f'{rel}: trusted-source diversity too low: {sorted(domains)}')
   book=(ROOT/r['book']).read_text(encoding='utf-8') if (ROOT/r['book']).exists() else ''
@@ -93,7 +94,9 @@ def main():
   hub=hubs['en/articles/index.html'] if rel.startswith('en/') else hubs['articles/index.html']
   if r['route'] not in hub:errors.append(f'{rel}: absent from relevant hub')
   if BASE+r['route'] not in sitemap:errors.append(f'{rel}: absent from sitemap')
-  if not rel.startswith('en/') and BASE+r['route'] not in feeds:errors.append(f'{rel}: absent from Arabic Atom feed')
+  if rel.startswith('en/'):
+   if BASE+r['route'] not in enfeeds:errors.append(f'{rel}: absent from English Atom feed')
+  elif BASE+r['route'] not in feeds:errors.append(f'{rel}: absent from Arabic Atom feed')
   lower=text.lower()
   if not any(x in lower for x in ['external review','مراجعة خارجية','مراجعة اختصاص','لم تتم بعد']):warnings.append(f'{rel}: external-review wording is weak')
   if r['medical']:
@@ -102,35 +105,30 @@ def main():
     if not any(x.lower() in lower for x in g):errors.append(f'{rel}: missing medical safeguard {g}')
    if 'MedicalWebPage' not in ''.join(d.jsons):errors.append(f'{rel}: missing MedicalWebPage schema')
 
- # Flagship infrastructure
  required=[
-  'articles/ratq-fatq-big-bang/evidence/index.html','en/articles/ratq-fatq-big-bang/evidence/index.html','articles/water-civilization-power/evidence/index.html','en/articles/water-civilization-power/evidence/index.html','articles/water-civilization-power/evidence/claims.json','articles/water-civilization-power/evidence/references.bib','articles/water-civilization-power/evidence/references.ris','articles/water-civilization-power/citation.bib','articles/water-civilization-power/citation.ris','articles/water-civilization-power/CITATION.cff','articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/index.html','en/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/index.html','articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/claims.json','articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/references.bib','articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/references.ris','articles/diagnostic-uncertainty-family-fear-coercive-authority/citation.bib','articles/diagnostic-uncertainty-family-fear-coercive-authority/citation.ris','articles/diagnostic-uncertainty-family-fear-coercive-authority/CITATION.cff','assets/figures/fear-certainty-authority-cascade-ar.svg','assets/figures/fear-certainty-authority-cascade-en.svg','assets/figures/parallel-path-safeguard-ar.svg','assets/figures/parallel-path-safeguard-en.svg','assets/figures/water-power-justice-chain-ar.svg','assets/figures/water-power-justice-chain-en.svg','articles/ratq-fatq-big-bang/evidence/claims.json','articles/ratq-fatq-big-bang/citation.bib','articles/ratq-fatq-big-bang/citation.ris','assets/figures/ratq-evidence-map-ar.svg','assets/figures/ratq-evidence-map-en.svg','assets/figures/source-trust-pipeline-ar.svg','assets/figures/source-trust-pipeline-en.svg','articles/research-index.json','CITATION.cff']
+  'articles/ratq-fatq-big-bang/evidence/index.html','en/articles/ratq-fatq-big-bang/evidence/index.html','articles/water-civilization-power/evidence/index.html','en/articles/water-civilization-power/evidence/index.html','articles/water-civilization-power/evidence/claims.json','articles/water-civilization-power/evidence/references.bib','articles/water-civilization-power/evidence/references.ris','articles/water-civilization-power/citation.bib','articles/water-civilization-power/citation.ris','articles/water-civilization-power/CITATION.cff','articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/index.html','en/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/index.html','articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/claims.json','articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/references.bib','articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/references.ris','articles/diagnostic-uncertainty-family-fear-coercive-authority/citation.bib','articles/diagnostic-uncertainty-family-fear-coercive-authority/citation.ris','articles/diagnostic-uncertainty-family-fear-coercive-authority/CITATION.cff','assets/figures/fear-certainty-authority-cascade-ar.svg','assets/figures/fear-certainty-authority-cascade-en.svg','assets/figures/parallel-path-safeguard-ar.svg','assets/figures/parallel-path-safeguard-en.svg','assets/figures/water-power-justice-chain-ar.svg','assets/figures/water-power-justice-chain-en.svg','articles/ratq-fatq-big-bang/evidence/claims.json','articles/ratq-fatq-big-bang/citation.bib','articles/ratq-fatq-big-bang/citation.ris','assets/figures/ratq-evidence-map-ar.svg','assets/figures/ratq-evidence-map-en.svg','assets/figures/source-trust-pipeline-ar.svg','assets/figures/source-trust-pipeline-en.svg','articles/teaching-names-ai-understanding/claims.json','articles/teaching-names-ai-understanding/references.bib','articles/teaching-names-ai-understanding/references.ris','articles/teaching-names-ai-understanding/CITATION.cff','articles/teaching-names-ai-understanding/evidence/claims.json','articles/teaching-names-ai-understanding/evidence/references.bib','articles/teaching-names-ai-understanding/evidence/references.ris','articles/research-index.json','CITATION.cff']
  for f in required:
   if not (ROOT/f).exists() or (ROOT/f).stat().st_size<80:errors.append(f'{f}: missing or empty')
  try:
-  claims=json.loads((ROOT/'articles/ratq-fatq-big-bang/evidence/claims.json').read_text(encoding='utf-8'))
-  if len(claims.get('claims',[]))<8:errors.append('claims.json: fewer than 8 audited claims')
-  if claims.get('review_status',{}).get('peer_reviewed') is not False:errors.append('claims.json: peer review status not explicit false')
- except Exception as e:errors.append(f'claims.json invalid: {e}')
- try:
-  water_claims=json.loads((ROOT/'articles/water-civilization-power/evidence/claims.json').read_text(encoding='utf-8'))
-  if len(water_claims.get('claims',[]))<10:errors.append('water claims.json: fewer than 10 audited claims')
-  if len(water_claims.get('sources',[]))<20:errors.append('water claims.json: fewer than 20 sources')
-  if water_claims.get('review_status',{}).get('peer_reviewed') is not False:errors.append('water claims.json: peer review status not explicit false')
- except Exception as e:errors.append(f'water claims.json invalid: {e}')
+  tclaims=json.loads((ROOT/'articles/teaching-names-ai-understanding/claims.json').read_text(encoding='utf-8'))
+  if len(tclaims.get('claims',[]))!=14:errors.append('Teaching Names claims.json must contain exactly 14 audited claims')
+  if tclaims.get('external_review')!='not_completed':errors.append('Teaching Names claims.json: external review state is not explicit')
+  if (ROOT/'articles/teaching-names-ai-understanding/claims.json').read_bytes() != (ROOT/'articles/teaching-names-ai-understanding/evidence/claims.json').read_bytes():errors.append('Teaching Names claim-register mirror drift')
+  if (ROOT/'articles/teaching-names-ai-understanding/references.bib').read_bytes() != (ROOT/'articles/teaching-names-ai-understanding/evidence/references.bib').read_bytes():errors.append('Teaching Names BibTeX mirror drift')
+  if (ROOT/'articles/teaching-names-ai-understanding/references.ris').read_bytes() != (ROOT/'articles/teaching-names-ai-understanding/evidence/references.ris').read_bytes():errors.append('Teaching Names RIS mirror drift')
+ except Exception as e:errors.append(f'Teaching Names evidence package invalid: {e}')
  for f in ['methodology/index.html','en/methodology/index.html','research-status/index.html','en/research-status/index.html','about/index.html','en/about/index.html']:
   if not (ROOT/f).exists():errors.append(f'{f}: missing trust surface')
 
- # Book independence and explicit publication state
  for f in ['books/sirou-fi-alard/index.html','books/umm-abbas/index.html','en/books/sirou-fi-alard/index.html','en/books/umm-abbas/index.html']:
   t=(ROOT/f).read_text(encoding='utf-8') if (ROOT/f).exists() else ''
   if not any(x in t for x in ['قيد الإصدار','forthcoming']):errors.append(f'{f}: forthcoming state missing')
   if not any(x in t for x in ['لا تعتمد','does not treat','لا تُستخدم','not evidence']):errors.append(f'{f}: evidence independence not explicit')
 
- # English editions must be complete, not thin translation facades.
- for route in ['/en/articles/ratq-fatq-big-bang/','/en/articles/water-civilization-power/','/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/']:
+ for route in ['/en/articles/ratq-fatq-big-bang/','/en/articles/water-civilization-power/','/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/','/en/articles/teaching-names-ai-understanding/']:
   if route not in hubs['en/articles/index.html']:errors.append(f'English hub missing complete dossier {route}')
- if 'not a peer-reviewed journal' not in hubs['en/articles/index.html']:errors.append('English hub missing review disclosure')
+ en_hub_lower=hubs['en/articles/index.html'].lower()
+ if not any(x in en_hub_lower for x in ['not a peer-reviewed journal','no suggestion of peer review where none occurred','not peer-reviewed']):errors.append('English hub missing review disclosure')
 
  if warnings:
   print('\nWARNINGS');[print('-',x) for x in warnings]

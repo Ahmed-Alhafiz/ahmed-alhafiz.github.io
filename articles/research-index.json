@@ -8,7 +8,7 @@
   },
   "editorial_policy": "https://ahmed-alhafiz.github.io/methodology/",
   "review_register": "https://ahmed-alhafiz.github.io/research-status/",
-  "generated": "2026-09-02",
+  "generated": "2026-09-03",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
@@ -17,10 +17,7 @@
       "summary": "ملف موسع يفصل النص القرآني وتاريخ التفسير عن الرصد والنموذج العلمي والاستنتاج الفلسفي، مع خريطة ادعاء ودليل ونسخة إنجليزية.",
       "type": "ملف بحثي موسع",
       "version": "2.0",
-      "languages": [
-        "ar",
-        "en"
-      ],
+      "languages": ["ar", "en"],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/",
@@ -41,10 +38,7 @@
       "type": "ملف بحثي موسع ثنائي اللغة",
       "english_type": "Extended bilingual research dossier",
       "version": "1.0",
-      "languages": [
-        "ar",
-        "en"
-      ],
+      "languages": ["ar", "en"],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/",
@@ -66,10 +60,7 @@
       "english_summary": "An evidence-led dossier on how an ambiguous symptom can move through family fear, premature certainty, authority transfer and consent erosion—and how a parallel-path safeguard preserves assessment, voice and voluntary spiritual support.",
       "type": "ملف بحثي موسع",
       "version": "1.0",
-      "languages": [
-        "ar",
-        "en"
-      ],
+      "languages": ["ar", "en"],
       "review": "author_review_complete_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
@@ -83,26 +74,30 @@
     },
     {
       "slug": "teaching-names-ai-understanding",
-      "title": "تعليم الأسماء والذكاء الاصطناعي: هل تفهم الآلة الكلمات أم تتنبأ بها؟",
-      "summary": "دراسة تفصل بين الرمز والعلاقة الإحصائية والتمثيل المفهومي والتأسيس في العالم والقصد والمسؤولية.",
-      "type": "ملف بحثي موسع",
-      "version": "1.0",
-      "languages": [
-        "ar"
-      ],
+      "title": "تعليم الأسماء والذكاء الاصطناعي: من الاسم إلى العالم والمسؤولية",
+      "english_title": "Teaching the Names and AI: What Counts as Understanding?",
+      "summary": "ملف ثنائي اللغة يفصل سؤال الفهم إلى ست طبقات: الرمز، العلاقات، التركيب والتعميم، التأريض، الاستخدام السببي لنموذج العالم، ثم القصد والمسؤولية، مع إبقاء الوعي سؤالًا منفصلًا.",
+      "english_summary": "A bilingual dossier separating symbol use, relational structure, compositional generalization, grounding, causal world-model use, intention and responsibility, while treating consciousness as a separate unresolved question.",
+      "type": "ملف بحثي موسع ثنائي اللغة",
+      "english_type": "Extended bilingual research dossier",
+      "version": "2.0",
+      "languages": ["ar", "en"],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
-      "url": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/"
+      "url": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/",
+      "english_url": "https://ahmed-alhafiz.github.io/en/articles/teaching-names-ai-understanding/",
+      "claims_json": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/claims.json",
+      "references_bib": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/references.bib",
+      "references_ris": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/references.ris",
+      "citation_cff": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/CITATION.cff"
     },
     {
       "slug": "spiritual-healing-exploitation-safeguarding",
-      "title": "حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض؟",
+      "title": "حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض من الدجل والاعتداء؟",
       "summary": "ملف حماية يميز الدعم الروحي الطوعي عن الإكراه والعزل والاستغلال واللمس بلا موافقة وتأخير الرعاية الطبية.",
       "type": "ملف حماية وصحة",
       "version": "1.0",
-      "languages": [
-        "ar"
-      ],
+      "languages": ["ar"],
       "review": "author_review_complete_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/"
@@ -113,9 +108,7 @@
       "summary": "موجز طبي تثقيفي عن آليتي الحالتين، وفيديو-EEG، وتعايشهما، وحدود التشخيص من الحركة أو الفيديو وحدهما.",
       "type": "موجز طبي تثقيفي",
       "version": "1.0",
-      "languages": [
-        "ar"
-      ],
+      "languages": ["ar"],
       "review": "medical_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/"
@@ -126,9 +119,7 @@
       "summary": "موجز أدلة يفصل ما يثبته النص وتنوع التفسير عن قياسات الزمن الكوني وما لا تسمح به المطابقة القسرية.",
       "type": "موجز أدلة",
       "version": "1.0",
-      "languages": [
-        "ar"
-      ],
+      "languages": ["ar"],
       "review": "external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/"
@@ -139,22 +130,18 @@
       "summary": "موجز طبي ثقافي لشلل النوم وثقل الصدر والإحساس بالحضور، مع حدود التفسير ومتى يلزم التقييم الطبي.",
       "type": "موجز طبي ثقافي",
       "version": "1.0",
-      "languages": [
-        "ar"
-      ],
+      "languages": ["ar"],
       "review": "medical_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/"
     },
     {
       "slug": "arabic-psychological-horror",
-      "title": "الرعب النفسي العربي: كيف يعمل الخوف حين لا نعرف مصدره؟",
+      "title": "روايات رعب نفسي عربية: دليل تحليلي للاختيار والقراءة",
       "summary": "دليل تحليلي يميز مركز الخوف النفسي عن مجرد وجود حدث خارق أو صدمة، ويربط الغموض بالتفسير والسلطة داخل الحكاية.",
       "type": "دليل تحليلي",
       "version": "2.0",
-      "languages": [
-        "ar"
-      ],
+      "languages": ["ar"],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/"

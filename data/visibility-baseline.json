@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "baseline_date": "2026-09-02",
+  "baseline_date": "2026-09-03",
   "site": {
     "canonical_origin": "https://ahmed-alhafiz.github.io",
     "canonical_author_id": "https://ahmed-alhafiz.github.io/#person",
@@ -12,13 +12,13 @@
     "robots": "https://ahmed-alhafiz.github.io/robots.txt"
   },
   "technical_baseline": {
-    "public_html_pages": 42,
-    "canonical_urls": 42,
-    "sitemap_urls": 42,
+    "public_html_pages": 43,
+    "canonical_urls": 43,
+    "sitemap_urls": 43,
     "research_items": 9,
-    "complete_bilingual_pillars": 3,
+    "complete_bilingual_pillars": 4,
     "arabic_feed_items": 9,
-    "english_feed_items": 3,
+    "english_feed_items": 4,
     "oai_searchbot": "explicitly_allowed",
     "gptbot": "explicitly_allowed",
     "generic_crawlers": "allowed",

@@ -117,7 +117,7 @@
     {
       "@type": "Book",
       "@id": "https://ahmed-alhafiz.github.io/books/juhayman/#book",
-      "name": "جهيمان — القيامة بين الركن والمقام",
+      "name": "جُهَيْمَان — خوارج بين الركن والمقام",
       "url": "https://ahmed-alhafiz.github.io/books/juhayman/",
       "inLanguage": "ar",
       "creativeWorkStatus": "Forthcoming; not yet officially published",
@@ -177,5 +177,5 @@
       }
     }
   ],
-  "dateModified": "2026-09-02"
+  "dateModified": "2026-09-05"
 }

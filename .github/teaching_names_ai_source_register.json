@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.3-superseded",
+  "updated": "2026-09-03",
+  "status": "superseded_by_verified_claim_register",
+  "publication_state": "article_not_yet_rewritten_or_published",
+  "pillar": {
+    "slug": "teaching-names-ai-understanding",
+    "arabic_url": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/",
+    "english_url": "https://ahmed-alhafiz.github.io/en/articles/teaching-names-ai-understanding/",
+    "framework_ar": "مصفوفة الاسم–العالم–المسؤولية",
+    "framework_en": "The Name–World–Responsibility Matrix",
+    "thematic_origin": {
+      "work": "قل سيروا في الأرض فانظروا كيف بدأ الخلق",
+      "pages_reviewed": "37–54",
+      "relationship": "question_origin_only_not_empirical_evidence"
+    },
+    "external_review": "not_completed"
+  },
+  "authoritative_research_files": {
+    "architecture": ".github/TEACHING_NAMES_AI_REBUILD_ARCHITECTURE.md",
+    "primary_tafsir_verification": ".github/TEACHING_NAMES_TAFSIR_VERIFICATION_2026-09-03.md",
+    "primary_technical_verification": ".github/TEACHING_NAMES_TECHNICAL_VERIFICATION_2026-09-03.md",
+    "verified_claim_evidence_register": ".github/teaching_names_ai_verified_claims.json",
+    "quranic_unit_draft": ".github/drafts/TEACHING_NAMES_ARABIC_DRAFT_01_QURANIC_UNIT.md",
+    "technical_unit_draft": ".github/drafts/TEACHING_NAMES_ARABIC_DRAFT_02_TECHNICAL_UNIT.md"
+  },
+  "supersession_reasons": [
+    {
+      "issue": "R06 attributed a naming-capacity formulation to al-Raghib without a directly verified edition and page.",
+      "correction": "The attribution is excluded. Abu Hayyan is the fifth verified exegetical source, while Ibn Ashur carries the explicit naming-and-expression-capacity discussion."
+    },
+    {
+      "issue": "A15 was a synthetic grouping of two papers rather than an independent source.",
+      "correction": "A15 is now Hewitt and Liang's primary control-task probing paper, DOI 10.18653/v1/D19-1275."
+    },
+    {
+      "issue": "The planning graph used one-way support arrays and mixed support with opposition.",
+      "correction": "The verified register contains reciprocal claim-to-source and source-to-claim support and qualification arrays."
+    },
+    {
+      "issue": "The planning register was written before source-by-source primary verification.",
+      "correction": "It must not be cited, published, or treated as the current evidence manifest."
+    }
+  ],
+  "rules": [
+    "Do not restore the retired claims or source list from git history into a public article.",
+    "Do not treat the author's manuscript as Qur'anic exegesis or empirical AI evidence.",
+    "Do not claim that the public article has been rewritten until both Arabic and English editions pass the release gates.",
+    "Do not use the 2026 frontier preprint as evidence of phenomenal consciousness.",
+    "Use the verified claim-evidence register as the sole machine-readable research source of truth for the rebuild."
+  ]
+}
