@@ -1,0 +1,48 @@
+name: One-time entity label migration
+
+on:
+  push:
+    branches:
+      - international-copy-truth-sync-21
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: ${{ !contains(github.event.head_commit.message, '[entity-label-migration]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: international-copy-truth-sync-21
+          fetch-depth: 0
+      - name: Migrate visible identity label expectations only
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('tools/entity_integrity.py')
+          text = path.read_text(encoding='utf-8')
+          replacements = {
+              '"Canonical author identity"': '"Official author identity"',
+              '"Machine-readable identity"': '"Author record"',
+              '"Kanonische Autorenidentität"': '"Offizielle Autorenidentität"',
+              '"Maschinenlesbare Identität"': '"Autorendaten"',
+          }
+          for old, new in replacements.items():
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'Expected one {old}, found {count}')
+              text = text.replace(old, new)
+          path.write_text(text, encoding='utf-8')
+          PY
+          git diff --check
+      - name: Commit migration
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools/entity_integrity.py
+          git commit -m "Align entity gate with natural public identity labels [entity-label-migration]"
+          git push origin HEAD:international-copy-truth-sync-21
