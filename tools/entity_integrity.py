@@ -248,20 +248,20 @@ def validate_visible_profiles(errors: list[str]) -> None:
             "بيانات الهوية المنظمة",
         ],
         "en/about/index.html": [
-            "Canonical author identity",
+            "Official author identity",
             "Official Arabic name",
             "Preferred Latin name",
             "Search transliteration",
             "https://ahmed-alhafiz.github.io/#person",
-            "Machine-readable identity",
+            "Author record",
         ],
         "de/about/index.html": [
-            "Kanonische Autorenidentität",
+            "Offizielle Autorenidentität",
             "Offizieller arabischer Name",
             "Bevorzugter lateinischer Name",
             "Alternative Suchschreibweise",
             "https://ahmed-alhafiz.github.io/#person",
-            "Maschinenlesbare Identität",
+            "Autorendaten",
         ],
     }
     for rel, tokens in expectations.items():

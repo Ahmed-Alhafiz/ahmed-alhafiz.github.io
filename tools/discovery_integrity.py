@@ -197,12 +197,43 @@ def surfaces(indexed):
             eu = x["english_url"]; er = route(eu)
             if eu not in urls or er not in eh: die(f"{x['slug']}: English hub/sitemap omission")
 
+def english_homepage(expected):
+    path = ROOT / "en/index.html"
+    html = path.read_text(encoding="utf-8")
+    parser = LD(); parser.feed(html)
+    target = None
+    for raw in parser.blocks:
+        if not raw.strip():
+            continue
+        data = json.loads(raw)
+        nodes = [data] if isinstance(data, dict) else []
+        if isinstance(data, dict) and isinstance(data.get("@graph"), list):
+            nodes += data["@graph"]
+        for node in nodes:
+            if isinstance(node, dict) and node.get("@type") == "ItemList" and node.get("@id") == "https://ahmed-alhafiz.github.io/en/#featured-research":
+                target = node
+    if target is None:
+        die("en/index.html: featured English research ItemList missing")
+    expected_urls = set(expected)
+    listed = {
+        item.get("url")
+        for item in target.get("itemListElement", [])
+        if isinstance(item, dict) and item.get("url")
+    }
+    if target.get("numberOfItems") != len(expected_urls):
+        die(f"en/index.html: English research count drift; expected {len(expected_urls)}, found {target.get('numberOfItems')}")
+    if listed != expected_urls:
+        die(f"en/index.html: featured English research URLs drift; expected {sorted(expected_urls)}, found {sorted(listed)}")
+    for url in expected_urls:
+        if route(url) not in html:
+            die(f"en/index.html: current English research pillar absent from visible homepage: {url}")
+
 def main():
     ar = index_data(); en = {x["english_url"]:{**x,"title":x["english_title"]} for x in ar.values() if x.get("english_url")}
     atom(ROOT/"articles/feed.xml", ar); json_feed(ROOT/"articles/feed.json", ar)
     atom(ROOT/"en/articles/feed.xml", en); json_feed(ROOT/"en/articles/feed.json", en)
-    surfaces(ar)
-    print(f"Discovery integrity passed: {len(ar)} Arabic surfaces, {len(en)} English editions; chronology, JSON-LD metadata, reciprocal hreflang/switches, hubs, sitemap and book links agree.")
+    surfaces(ar); english_homepage(en)
+    print(f"Discovery integrity passed: {len(ar)} Arabic surfaces, {len(en)} English editions; chronology, JSON-LD metadata, reciprocal hreflang/switches, hubs, sitemap, book links and English-homepage pillar inventory agree.")
 
 if __name__ == "__main__":
     try: main()
