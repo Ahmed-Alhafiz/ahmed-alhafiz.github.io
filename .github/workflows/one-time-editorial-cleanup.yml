@@ -35,8 +35,8 @@ jobs:
               if count:
                   footer_hits += count
                   path.write_text(text.replace(old_footer, new_footer), encoding='utf-8')
-          if footer_hits != 18:
-              raise SystemExit(f'Expected 18 old footer occurrences, found {footer_hits}')
+          if footer_hits != 19:
+              raise SystemExit(f'Expected 19 old footer occurrences, found {footer_hits}')
 
           def replace_exact(path_str, old, new, expected=1):
               path = Path(path_str)
