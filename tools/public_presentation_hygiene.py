@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-"""Reject internal production residue from public-facing site files.
+"""Reject internal production residue and over-technical public wording.
 
 The site may legitimately discuss artificial intelligence as a research topic.
 This gate therefore does not ban AI terminology. It targets production-process
-phrases, draft/debug markers, prompt residue, and internal workflow language
-that should never leak into finished public editorial pages. It also protects a
-small set of high-visibility pages from reverting to over-technical or
-unsupported promotional wording that has already been explicitly corrected.
+phrases, draft/debug markers, prompt residue, and a narrow set of public-facing
+phrases that either expose internal checking language or overstate review status.
 """
 from __future__ import annotations
 
@@ -21,7 +19,6 @@ PUBLIC_HTML = [
 ]
 PUBLIC_TEXT = [ROOT / "robots.txt", ROOT / "sitemap.xml"]
 
-# Narrow patterns: production disclosure/residue, not legitimate topical discussion.
 BANNED_PATTERNS = {
     "explicit AI-production disclosure": re.compile(
         r"(?:AI assistance|AI[- ]assisted(?:\s+(?:planning|drafting|editing|comparison|checks?))?|"
@@ -52,21 +49,28 @@ BANNED_PATTERNS = {
     ),
 }
 
-# These exact homepage phrases were removed because they either expose an
-# internal checking concept, overstate verification, or read as production/
-# promotional copy rather than a natural author-site description.
+# Public phrases already judged too strong, too technical, or too production-like.
+# These are exact matches so legitimate discussion of verification or automation
+# in research subject matter is not banned.
+GLOBAL_PUBLIC_BANNED = (
+    "الموقع الرسمي للمؤلفات والملفات البحثية الموثقة",
+    "موثقة بالمصادر",
+    "الفحص الآلي",
+    "مكتب الأبحاث المستقل",
+)
+
 PAGE_SPECIFIC_BANNED = {
     Path("index.html"): (
         "الملف البحثي المحوري",
         "دون قفزة دعائية",
-        "الفحص الآلي",
         "أبحاث موثقة",
-        "موثقة بالمصادر",
         "10 ادعاءات مدققة",
+    ),
+    Path("articles/index.html"): (
+        "ركيزة مرجعية",
     ),
 }
 
-# HTML comments are not visible, but they are public source and can leak build notes.
 COMMENT_RE = re.compile(r"<!--(.*?)-->", re.DOTALL)
 COMMENT_MARKER_RE = re.compile(
     r"(?:TODO|FIXME|prompt|draft|temporary|debug|generated|"
@@ -92,11 +96,13 @@ def main() -> None:
                 snippet = re.sub(r"\s+", " ", match.group(0)).strip()
                 errors.append(f"{rel}: {label}: {snippet!r}")
 
+        for phrase in GLOBAL_PUBLIC_BANNED:
+            if phrase in text:
+                errors.append(f"{rel}: public editorial wording requires cleanup: {phrase!r}")
+
         for phrase in PAGE_SPECIFIC_BANNED.get(rel, ()):
             if phrase in text:
-                errors.append(
-                    f"{rel}: corrected homepage wording regressed: {phrase!r}"
-                )
+                errors.append(f"{rel}: corrected page wording regressed: {phrase!r}")
 
         if path.suffix == ".html":
             for comment in COMMENT_RE.findall(text):
@@ -114,8 +120,8 @@ def main() -> None:
 
     print(
         f"Public presentation hygiene passed across {checked} public files: "
-        "no production-process disclosure residue, draft/debug markers, prompt/workflow leakage, "
-        "or corrected homepage editorial regressions."
+        "no production-process residue, prompt leakage, corrected-page regressions, "
+        "or banned over-technical/overstated public wording."
     )
 
 
