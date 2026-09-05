@@ -1,60 +1,40 @@
 name: One-time hreflang group audit
+
 on:
   push:
-    branches: [ahrefs-remediation-24]
+    branches:
+      - ahrefs-remediation-24
+
 permissions:
-  contents: read
+  contents: write
+
 jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ahrefs-remediation-24
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Check identical hreflang sets and x-default per group
+      - name: Apply proven Ahrefs hreflang repair
+        run: python tools/_apply_ahrefs_hreflang.py
+      - name: Verify full site integrity
+        run: |
+          python tools/site_audit.py
+          python -m py_compile tools/site_audit.py
+          git diff --check
+      - name: Commit repair if needed
         shell: bash
         run: |
-          set -euo pipefail
-          python - <<'PY'
-          import xml.etree.ElementTree as ET
-          from collections import defaultdict
-          from html.parser import HTMLParser
-          from pathlib import Path
-          from urllib.parse import urlparse
-          BASE='https://ahmed-alhafiz.github.io'
-          class P(HTMLParser):
-              def __init__(self):super().__init__();self.lang='';self.alts={};self.canonical=''
-              def handle_starttag(self,t,a):
-                  d=dict(a)
-                  if t=='html':self.lang=d.get('lang','')
-                  if t=='link':
-                      rel=set(d.get('rel','').split())
-                      if 'canonical' in rel:self.canonical=d.get('href','')
-                      if 'alternate' in rel and d.get('hreflang'):self.alts[d['hreflang']]=d.get('href','')
-          def fp(url):
-              p=urlparse(url);r=p.path.lstrip('/')
-              return Path('index.html') if not r else Path(r)/'index.html' if p.path.endswith('/') else Path(r)
-          root=ET.parse('sitemap.xml');ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
-          urls=[x.text.strip() for x in root.findall('s:url/s:loc',ns)]
-          pages={}
-          for u in urls:
-              q=P();q.feed(fp(u).read_text(encoding='utf-8'));pages[u]=q
-          groups=defaultdict(list)
-          noxd=[]
-          for u,q in pages.items():
-              langs={k:v for k,v in q.alts.items() if k!='x-default'}
-              if len(langs)>1:
-                  key=tuple(sorted(langs.values()));groups[key].append((u,q))
-                  if 'x-default' not in q.alts:noxd.append(u)
-          inconsistent=[]
-          for key,members in groups.items():
-              maps={tuple(sorted(q.alts.items())) for _,q in members}
-              if len(maps)>1:
-                  inconsistent.append((key,members,maps))
-          print(f'GROUP_AUDIT groups={len(groups)} group_pages={sum(len(v) for v in groups.values())} missing_xdefault={len(noxd)} inconsistent_groups={len(inconsistent)}')
-          for u in noxd:print('MISSING_XDEFAULT',u)
-          for key,members,maps in inconsistent:
-              print('\nINCONSISTENT_GROUP expected-members=',key)
-              for u,q in members:print(u,'lang=',q.lang,'alts=',q.alts)
-          PY
+          if git diff --quiet; then
+            echo "No repair changes remain."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add en/about/index.html en/articles/index.html tools/site_audit.py
+          git commit -m 'Fix reciprocal hreflang group defaults [ahrefs-hreflang-fix]'
+          git push origin HEAD:ahrefs-remediation-24
