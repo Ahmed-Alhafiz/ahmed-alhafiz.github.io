@@ -289,6 +289,24 @@ def main()->int:
         width,height=struct.unpack('>II',data[16:24])
         if (width,height)!=(1200,630):errors.append(f'{card_rel}: expected 1200x630, found {width}x{height}')
 
+    # GA4 measurement integrity: one centralized loader on every public page.
+    ga4_id='G-TYFF6MTK0Y'
+    ga4_asset='assets/analytics-ga4-28.js'
+    ga4_tag='<script defer src="/assets/analytics-ga4-28.js"></script>'
+    ga4_path=root/ga4_asset
+    if not ga4_path.exists():
+        errors.append(f'{ga4_asset}: missing centralized GA4 loader')
+    else:
+        ga4_source=ga4_path.read_text(encoding='utf-8')
+        if ga4_source.count(ga4_id)!=1:errors.append(f'{ga4_asset}: expected exactly one measurement ID {ga4_id}')
+        for marker in ('allow_google_signals: false','allow_ad_personalization_signals: false','send_page_view: true'):
+            if marker not in ga4_source:errors.append(f'{ga4_asset}: privacy/measurement marker missing: {marker}')
+    for p in htmls:
+        page_source=p.read_text(encoding='utf-8')
+        count=page_source.count(ga4_tag)
+        if count!=1:errors.append(f'{p.relative_to(root)}: expected one centralized GA4 loader tag, found {count}')
+        if ga4_id in page_source:errors.append(f'{p.relative_to(root)}: GA4 measurement ID must stay centralized in {ga4_asset}')
+
     robots=(root/'robots.txt').read_text(encoding='utf-8') if (root/'robots.txt').exists() else ''
     for token in ['OAI-SearchBot','GPTBot','Sitemap: https://ahmed-alhafiz.github.io/sitemap.xml']:
         if token not in robots:errors.append(f'robots.txt missing {token}')
