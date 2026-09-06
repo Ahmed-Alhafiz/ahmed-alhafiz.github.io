@@ -1,0 +1,45 @@
+name: GA4 one-shot installer
+
+on:
+  push:
+    branches: [ga4-analytics-install-28]
+    paths:
+      - ".github/workflows/ga4-install-one-shot.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: ga4-analytics-install-28
+          fetch-depth: 0
+
+      - name: Use Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install centralized GA4 measurement
+        run: |
+          set -euo pipefail
+          python tools/install_ga4_one_shot.py
+          python tools/site_audit.py
+
+      - name: Commit generated site changes
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html' assets/analytics-ga4-28.js tools/site_audit.py
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+            exit 0
+          fi
+          git commit -m "Install centralized GA4 measurement"
+          git push origin HEAD:ga4-analytics-install-28
