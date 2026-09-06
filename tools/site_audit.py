@@ -139,6 +139,10 @@ def main()->int:
             data=json.loads(raw)
             for node in iter_jsonld_nodes(data):
                 if not isinstance(node,dict):continue
+                typ=node.get('@type')
+                node_types=set(typ) if isinstance(typ,list) else {typ}
+                if 'Article' in node_types and not node.get('image'):
+                    errors.append(f'{rel}: Article structured data missing image')
                 value=node.get('mainContentOfPage')
                 target_id=value.get('@id') if isinstance(value,dict) else value if isinstance(value,str) else ''
                 if isinstance(target_id,str) and target_id.endswith('#article'):
