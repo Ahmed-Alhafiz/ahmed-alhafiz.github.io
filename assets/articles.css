@@ -1,3 +1,8 @@
 /* Shared dossier styles. The versioned base preserves the frozen design; the hardening layer fixes site-wide responsive defects. */
 @import url("/assets/articles-base-17.css");
 @import url("/assets/global-hardening-17.css");
+/* Keep linked reading sections visible below the persistent site header. */
+#reading-path, #medium-reading { scroll-margin-top: 7rem; }
+@media (max-width: 640px) {
+  #reading-path, #medium-reading { scroll-margin-top: 12rem; }
+}
