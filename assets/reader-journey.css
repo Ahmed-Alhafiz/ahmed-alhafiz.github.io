@@ -1,7 +1,6 @@
 /* Focused reading paths for the Arabic homepage and two forthcoming books. */
 .reader-home .home-hero-grid{min-height:580px;padding-block:54px;gap:60px}
 .reader-home .home-hero h1{font-size:clamp(50px,6.5vw,84px)}
-.reader-home .hero-portrait{width:min(100%,310px)}
 .reader-home .home-hero .hero-statement{font-size:clamp(18px,1.8vw,22px)}
 .reader-home #works,.reader-home #medium-reading,.book-journey #about-book,.book-journey #reading-start,.book-journey #medium-reading,.book-journey #research{scroll-margin-top:7rem}
 .section-intro{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:32px}
@@ -45,7 +44,6 @@
 }
 @media(max-width:620px){
   .reader-home .home-hero-grid{min-height:0;padding-block:28px 40px;gap:25px}
-  .reader-home .hero-portrait{width:150px}
   .reader-home .home-hero h1{font-size:43px}
   .reader-home .home-hero .hero-statement{font-size:17px}
   .reader-home .section{padding-block:50px}
