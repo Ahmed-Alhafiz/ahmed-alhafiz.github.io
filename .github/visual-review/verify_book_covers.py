@@ -303,8 +303,14 @@ def capture_works(driver: webdriver.Chrome, mode: str, width: int, height: int) 
         if float(driver.execute_script("return window.scrollY")) <= 0 or visible < 180:
             raise SystemExit(f"{mode} {language}: works section was not captured visibly: {target_rect}")
         cards = driver.find_elements(By.CSS_SELECTOR, "#works .book-card-cover")
-        if len(cards) != 4:
-            raise SystemExit(f"{mode} {language}: expected four cropped book cards, found {len(cards)}")
+        expected_count = 2 if language == "ar" else 4
+        if len(cards) != expected_count:
+            raise SystemExit(f"{mode} {language}: expected {expected_count} cropped book cards, found {len(cards)}")
+        if language == "ar":
+            expected_sources = {f"{BASE}/sirou-fi-alard-cover.webp", f"{BASE}/umm-abbas-cover.webp"}
+            actual_sources = {card.find_element(By.TAG_NAME, "img").get_attribute("src") for card in cards}
+            if actual_sources != expected_sources:
+                raise SystemExit(f"{mode} {language}: focused book covers differ: {actual_sources}")
         for card in cards:
             box = rect(driver, card)
             ratio = box["width"] / box["height"]
