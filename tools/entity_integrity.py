@@ -291,7 +291,9 @@ def validate_juhayman_title(errors: list[str]) -> None:
     )
     for rel in public_surfaces:
         text = (ROOT / rel).read_text(encoding="utf-8")
-        if JUHAYMAN_TITLE not in text:
+        # A focused Arabic homepage may link to the complete catalogue instead.
+        requires_title = rel != "index.html" or "/books/juhayman/" in text
+        if requires_title and JUHAYMAN_TITLE not in text:
             errors.append(f"{rel}: canonical Juhayman title missing")
         if STALE_JUHAYMAN_TITLE in text:
             errors.append(f"{rel}: stale Juhayman title returned")
