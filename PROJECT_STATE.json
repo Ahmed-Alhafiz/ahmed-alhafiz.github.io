@@ -1,18 +1,27 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "project": "ahmed-alhafiz.github.io",
   "project_name_ar": "الموقع الرسمي لأحمد الحافظ",
-  "updated_at": "2026-09-11T19:00:00+02:00",
+  "updated_at": "2026-09-12T09:42:00+02:00",
+  "source_of_truth": "GitHub",
   "authoritative_branch": "handoff/safe-transfer-2026-09-11",
   "published_branch": "main",
+  "verified_remote_parent_sha": "1ea7582b70dd424f6036bee20e99288f3b15f576",
+  "published_main_sha": "c1a886f089be2e33c43bd69e56223ea795bd4bee",
+  "state_semantics": "This checkpoint commit is newer than verified_remote_parent_sha. Always read the current remote branch HEAD before editing; do not treat the parent SHA as the live HEAD.",
   "handoff_document": "HANDOFF.md",
   "governance": {
     "active": true,
+    "policy_version": "2.1",
     "constitution": "PROJECT_CONSTITUTION.md",
     "product_spec": "PRODUCT_SPEC.md",
     "decisions": "DECISIONS.md",
     "quality_gates": "QUALITY_GATES.md",
     "agent_rules": "AGENTS.md",
+    "laptop_credit_policy": "LAPTOP_CREDIT_POLICY.md",
+    "device_handoff_protocol": "DEVICE_HANDOFF_PROTOCOL.md",
+    "active_branch_governance_synced_to_main": true,
+    "branch_protection_active": false,
     "precedence": [
       "latest_explicit_user_instruction",
       "PROJECT_CONSTITUTION.md",
@@ -27,24 +36,34 @@
   "status": {
     "development_in_progress": false,
     "handoff_ready": true,
-    "governance_initialized": true,
-    "site_content_changed_by_governance_setup": false,
-    "public_release_ready": false
+    "site_content_changed_by_this_checkpoint": false,
+    "published_main_verified": true,
+    "new_release_pending": false,
+    "manuscripts_received": false
   },
-  "known_evidence": {
-    "previous_site_integrity": "pass",
-    "previous_publication_hygiene": "pass",
-    "previous_editorial_quality": "pass",
-    "previous_ux_checks": "pass",
-    "previous_arabic_ui_checks": "pass",
-    "previous_citation_metadata": "pass",
-    "previous_visual_review": "pass",
-    "new_governance_live_verification": "not_applicable_until_merged_or_published"
+  "last_verified": {
+    "main_governance_integrity": "pass",
+    "main_site_integrity": "pass",
+    "main_citation_metadata_integrity": "pass",
+    "main_content_research_architecture": "pass",
+    "visual_review_on_same_governance_change_tree": "pass",
+    "active_branch_pr_policy_sync": "included in this checkpoint"
   },
-  "next_required_action": "Read governance files, verify remote HEAD, then apply QUALITY_GATES.md to the next site task.",
+  "unverified": [
+    "Future content derived from the unpublished manuscripts until those manuscripts are actually received and read",
+    "Any future live SEO/ranking/AI-citation outcome not backed by fresh data"
+  ],
+  "blockers": [
+    "GitHub branch protection/ruleset for main is not active yet"
+  ],
+  "local_only_items": [
+    "Local QA logs under site-handoff setup-results",
+    "Local work folders site-book-journey-2026-09-11 and site-reference-upgrade-2026-09-10 until another-device verification is complete"
+  ],
+  "next_action": "Enable main branch protection. For the next content task, read the governing files first; if it depends on the manuscripts, read the manuscripts before drafting or making factual claims.",
   "notes": [
-    "Do not infer live publication from a successful handoff branch commit.",
-    "Do not invent factual claims, sources, reviews, rankings, or AI-search visibility.",
+    "Quality, factual accuracy, source integrity, and UX outrank credit savings; laptop work must still follow LAPTOP_CREDIT_POLICY.md.",
+    "Do not claim rankings, reviews, AI-search visibility, or publication facts without evidence.",
     "Do not use destructive Git cleanup commands without explicit authorization."
   ]
 }
