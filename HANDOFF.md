@@ -70,3 +70,36 @@
 - لا تحذف مجلدي العمل المحليين `site-book-journey-2026-09-11` و`site-reference-upgrade-2026-09-10` قبل التأكد من فتح فرع التسليم والتحقق منه على الجهاز الآخر.
 - سجلات الفحص المحلي في `C:\Users\xxx\Ahmed-Projects\setup-results\site-handoff-2026-09-11` ليست مصدر المشروع.
 - لا تستخدم `git reset --hard` أو `git clean` أو force push أو حذف الفروع لتسوية حالة النقل.
+
+## Phone-first SEO / Indexing checkpoint — 12 سبتمبر 2026
+
+- تم تنفيذ الفحص من الهاتف، مع الالتزام بقاعدة Phone-first وعدم نقل أي عمل قادر عليه الهاتف إلى اللابتوب.
+- HEAD البعيد الذي بُني عليه هذا checkpoint قبل تحديث `HANDOFF.md`: `95a659de3aa7f36dfb84697c3e0ac8279df4c339` على `handoff/safe-transfer-2026-09-11`.
+- `main` المنشور بقي عند `c1a886f089be2e33c43bd69e56223ea795bd4bee`؛ لم يحدث نشر أو تعديل لمحتوى الموقع في هذه المرحلة.
+- Google Search Console خلال آخر 28 يومًا حتى 9 سبتمبر 2026: 26 نقرة، 126 ظهورًا، CTR نحو 20.63%، ومتوسط موضع نحو 6.74.
+- `sitemap.xml` يحتوي 43 URL. Indexing Tracker يسجل: 43 متتبعة، 2 مفهرسة، 41 غير مفهرسة، دون أخطاء أو warnings نشطة. التفصيل الحالي: 40 `URL is unknown to Google`، صفحتان `Submitted and indexed`، وصفحة واحدة `Crawled - currently not indexed`.
+- الصفحتان المفهرستان المثبتتان: `/` و`/about/`.
+- أُعيد فحص أهم 10 صفحات عبر Google URL Inspection؛ بقيت الصفحات ذات الأولوية غير مفهرسة في آخر تحقق.
+- فحص On-page مباشر لعينة الصفحات المهمة أثبت أنها ترجع 200 وقابلة للفهرسة، مع canonical ذاتي وبدون `noindex`، ولا توجد عيوب SEO حرجة/عالية/متوسطة في العينة. الربط الداخلي من الرئيسية ومركز الأبحاث موجود ومباشر.
+- GA4 مثبت مركزيًا منذ 6 سبتمبر 2026، ولذلك أرقام GA4 قبل هذا التاريخ غير متاحة. التتبع يعمل حاليًا؛ لا يوجد دليل مثبت على عطل GA4.
+- Bing Webmaster Tools غير مهيأ في الاتصال الحالي، وIndexNow غير مهيأ حاليًا؛ لا توجد submissions مسجلة.
+
+### Laptop-only / manual-browser step
+
+**المطلوب فقط على اللابتوب:** استخدام واجهة Google Search Console عبر متصفح مسجل الدخول لتنفيذ `URL Inspection` ثم `Request indexing` للصفحات التالية، واحدة تلو الأخرى:
+
+1. `https://ahmed-alhafiz.github.io/articles/`
+2. `https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/`
+3. `https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/`
+4. `https://ahmed-alhafiz.github.io/articles/water-civilization-power/`
+5. `https://ahmed-alhafiz.github.io/books/sirou-fi-alard/`
+6. `https://ahmed-alhafiz.github.io/books/umm-abbas/`
+7. `https://ahmed-alhafiz.github.io/books/juhayman/`
+
+**سبب التحويل:** الأدوات المتاحة على الهاتف تستطيع قراءة Search Console، URL Inspection، التتبع والتحليل، لكنها لا تعرض إجراء Google UI الخاص بـ`Request indexing`. التحويل هنا بسبب قدرة غير متاحة، وليس لأن اللابتوب أفضل عمومًا.
+
+**تعليمات اللابتوب:**
+- لا تعِد تحليل SEO أو URL Inspection أو On-page audits المذكورة أعلاه ما لم تتغير مدخلاتها؛ استخدم الدليل الحالي.
+- لا تعدل كود الموقع ولا `main` لهذه الخطوة.
+- بعد تنفيذ طلبات الفهرسة، وثّق فقط أي نجاح/رفض/حد يومي ظهر في Search Console، ثم أعد بقية العمل إلى الهاتف.
+- أول خطوة قبل التنفيذ: تحقق من HEAD البعيد الحالي واقرأ `LAPTOP_CREDIT_POLICY.md` و`DEVICE_HANDOFF_PROTOCOL.md` وموضع هذا القسم في `HANDOFF.md`.
