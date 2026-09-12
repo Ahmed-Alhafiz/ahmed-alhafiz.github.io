@@ -9,6 +9,7 @@ permissions:
 
 jobs:
   render:
+    name: "Visual review / render"
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
