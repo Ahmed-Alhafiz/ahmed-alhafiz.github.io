@@ -12,8 +12,12 @@ on:
       - 'HANDOFF_TEMPLATE.md'
       - 'PROJECT_STATE_TEMPLATE.json'
       - 'PROJECT_STATE.json'
+      - 'PROJECT_OS.json'
+      - 'DEVICE_HANDOFF_PROTOCOL.md'
+      - 'BRANCH_PROTECTION.md'
       - '.github/governance/**'
       - '.github/workflows/governance-integrity.yml'
+      - '.github/workflows/pr-policy.yml'
       - '.github/PULL_REQUEST_TEMPLATE.md'
   push:
     branches: [main]
@@ -26,8 +30,12 @@ on:
       - 'HANDOFF_TEMPLATE.md'
       - 'PROJECT_STATE_TEMPLATE.json'
       - 'PROJECT_STATE.json'
+      - 'PROJECT_OS.json'
+      - 'DEVICE_HANDOFF_PROTOCOL.md'
+      - 'BRANCH_PROTECTION.md'
       - '.github/governance/**'
       - '.github/workflows/governance-integrity.yml'
+      - '.github/workflows/pr-policy.yml'
       - '.github/PULL_REQUEST_TEMPLATE.md'
   workflow_dispatch:
 permissions:
@@ -44,6 +52,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Compile governance policy
+        run: python3 -m py_compile .github/governance/validate.py .github/governance/pr_policy.py
       - name: Validate governance contract
         run: python3 .github/governance/validate.py
       - name: Check whitespace
