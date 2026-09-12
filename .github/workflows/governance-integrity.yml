@@ -1,0 +1,50 @@
+name: Governance integrity
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'PROJECT_CONSTITUTION.md'
+      - 'PRODUCT_SPEC.md'
+      - 'DECISIONS.md'
+      - 'QUALITY_GATES.md'
+      - 'AGENTS.md'
+      - 'HANDOFF_TEMPLATE.md'
+      - 'PROJECT_STATE_TEMPLATE.json'
+      - 'PROJECT_STATE.json'
+      - '.github/governance/**'
+      - '.github/workflows/governance-integrity.yml'
+      - '.github/PULL_REQUEST_TEMPLATE.md'
+  push:
+    branches: [main]
+    paths:
+      - 'PROJECT_CONSTITUTION.md'
+      - 'PRODUCT_SPEC.md'
+      - 'DECISIONS.md'
+      - 'QUALITY_GATES.md'
+      - 'AGENTS.md'
+      - 'HANDOFF_TEMPLATE.md'
+      - 'PROJECT_STATE_TEMPLATE.json'
+      - 'PROJECT_STATE.json'
+      - '.github/governance/**'
+      - '.github/workflows/governance-integrity.yml'
+      - '.github/PULL_REQUEST_TEMPLATE.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: governance-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate governance contract
+        run: python3 .github/governance/validate.py
+      - name: Check whitespace
+        run: git diff --check
