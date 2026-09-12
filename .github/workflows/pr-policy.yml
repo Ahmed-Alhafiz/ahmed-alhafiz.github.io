@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   policy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - name: Checkout protected base policy
@@ -24,8 +24,13 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Fetch proposed head without executing it
+        shell: bash
         env:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-        run: git fetch --no-tags origin "$HEAD_SHA"
-      - name: Validate pull request policy
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.clone_url }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags "$HEAD_REPO" "$HEAD_SHA"
+          test "$(git rev-parse FETCH_HEAD)" = "$HEAD_SHA"
+      - name: Validate pull request policy from protected base
         run: python3 .github/governance/pr_policy.py
