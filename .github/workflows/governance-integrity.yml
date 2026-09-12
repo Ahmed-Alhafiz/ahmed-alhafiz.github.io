@@ -1,0 +1,62 @@
+name: Governance integrity
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+    paths:
+      - 'PROJECT_CONSTITUTION.md'
+      - 'PRODUCT_SPEC.md'
+      - 'DECISIONS.md'
+      - 'QUALITY_GATES.md'
+      - 'AGENTS.md'
+      - 'HANDOFF_TEMPLATE.md'
+      - 'PROJECT_STATE_TEMPLATE.json'
+      - 'PROJECT_STATE.json'
+      - 'PROJECT_OS.json'
+      - 'DEVICE_HANDOFF_PROTOCOL.md'
+      - 'LAPTOP_CREDIT_POLICY.md'
+      - 'BRANCH_PROTECTION.md'
+      - '.github/governance/**'
+      - '.github/workflows/governance-integrity.yml'
+      - '.github/workflows/pr-policy.yml'
+      - '.github/PULL_REQUEST_TEMPLATE.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: governance-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Compile governance policy
+        run: python3 -m py_compile .github/governance/validate.py .github/governance/pr_policy.py
+      - name: Validate governance contract
+        run: python3 .github/governance/validate.py
+      - name: Check changed-file whitespace
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
+            git diff --check "$BASE_SHA" "$HEAD_SHA"
+          elif git rev-parse HEAD^ >/dev/null 2>&1; then
+            git diff --check HEAD^ HEAD
+          else
+            git diff --check
+          fi
