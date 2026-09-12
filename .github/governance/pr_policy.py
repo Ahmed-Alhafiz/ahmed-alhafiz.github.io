@@ -14,24 +14,32 @@ PR = EVENT.get("pull_request")
 if not PR:
     print("PR policy: no pull_request payload; nothing to validate.")
     raise SystemExit(0)
+
 BODY = PR.get("body") or ""
-BASE = PR["base"]["sha"]
+BASE = os.environ.get("PROTECTED_BASE_SHA", "").strip()
 HEAD = PR["head"]["sha"]
+if not BASE:
+    raise SystemExit("PR POLICY FAILED: PROTECTED_BASE_SHA was not provided by the trusted base workflow")
 CONFIG = json.loads((ROOT / "PROJECT_OS.json").read_text(encoding="utf-8"))
 POLICY = CONFIG["path_policy"]
 errors: list[str] = []
 
+
 def run(*args: str) -> str:
     return subprocess.check_output(args, cwd=ROOT, text=True, encoding="utf-8", errors="replace")
+
 
 def matches(path: str, patterns: list[str]) -> bool:
     return any(fnmatch.fnmatch(path, pat) for pat in patterns)
 
+
 def section(title: str) -> str:
-    m = re.search(rf"(?ms)^##\s+{re.escape(title)}\s*$\n(.*?)(?=^##\s+|\Z)", BODY)
+    pattern = rf"(?ms)^##\s+{re.escape(title)}\s*$\n(.*?)(?=^##\s+|\Z)"
+    m = re.search(pattern, BODY)
     return m.group(1).strip() if m else ""
 
-for title in ["الهدف", "مستوى المخاطر", "التحقق", "مراجعة نقدية / Red Team", "ما لم يُفحص", "الرجوع"]:
+
+for title in ("الهدف", "مستوى المخاطر", "التحقق", "مراجعة نقدية / Red Team", "ما لم يُفحص", "الرجوع"):
     if len(section(title)) < 20:
         errors.append(f"PR section is missing or too weak: {title}")
 
@@ -56,17 +64,24 @@ if len(risks) != 1:
     errors.append("Select exactly one risk level P0/P1/P2/P3 in the PR body")
 risk = risks[0] if len(risks) == 1 else None
 
-changes = []
+try:
+    run("git", "cat-file", "-e", f"{BASE}^{{commit}}")
+    run("git", "cat-file", "-e", f"{HEAD}^{{commit}}")
+except subprocess.CalledProcessError:
+    raise SystemExit("PR POLICY FAILED: trusted base or proposed head commit is unavailable locally")
+
+changes: list[tuple[str, str]] = []
 for line in run("git", "diff", "--name-status", BASE, HEAD).splitlines():
     if line.strip():
         parts = line.split("\t")
         changes.append((parts[0], parts[-1]))
 paths = [p for _, p in changes]
+
 code_changed = any(matches(p, POLICY.get("code", [])) for p in paths)
 ui_changed = any(matches(p, POLICY.get("ui", [])) for p in paths)
 sensitive_changed = any(matches(p, POLICY.get("sensitive", [])) for p in paths)
 governance_changed = any(matches(p, POLICY.get("governance", [])) for p in paths)
-test_deleted = any(s.startswith("D") and matches(p, POLICY.get("tests", [])) for s, p in changes)
+test_deleted = any(status.startswith("D") and matches(p, POLICY.get("tests", [])) for status, p in changes)
 
 if code_changed and len(section("التحقق")) < 60:
     errors.append("Code/product changes require concrete verification evidence")
@@ -118,9 +133,10 @@ for checkbox in (
 
 if errors:
     print("PR POLICY FAILED")
-    print(f"Changed files: {len(paths)} | code={code_changed} ui={ui_changed} sensitive={sensitive_changed} governance={governance_changed}")
+    print(f"Base={BASE[:12]} Head={HEAD[:12]} changed={len(paths)} code={code_changed} ui={ui_changed} sensitive={sensitive_changed} governance={governance_changed}")
     for item in errors:
         print(f"- {item}")
     raise SystemExit(1)
+
 print("PR POLICY PASSED")
-print(f"Risk={risk}; changed={len(paths)}; code={code_changed}; ui={ui_changed}; sensitive={sensitive_changed}; governance={governance_changed}")
+print(f"Base={BASE[:12]} Head={HEAD[:12]} Risk={risk}; changed={len(paths)}; code={code_changed}; ui={ui_changed}; sensitive={sensitive_changed}; governance={governance_changed})")
