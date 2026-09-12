@@ -139,4 +139,4 @@ if errors:
     raise SystemExit(1)
 
 print("PR POLICY PASSED")
-print(f"Base={BASE[:12]} Head={HEAD[:12]} Risk={risk}; changed={len(paths)}; code={code_changed}; ui={ui_changed}; sensitive={sensitive_changed}; governance={governance_changed})")
+print(f"Base={BASE[:12]} Head={HEAD[:12]} Risk={risk}; changed={len(paths)}; code={code_changed}; ui={ui_changed}; sensitive={sensitive_changed}; governance={governance_changed}")
