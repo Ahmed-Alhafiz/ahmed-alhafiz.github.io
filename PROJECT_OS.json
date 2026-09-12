@@ -2,7 +2,7 @@
   "schema_version": 2,
   "project": "ahmed-alhafiz.github.io",
   "project_name_ar": "الموقع الرسمي لأحمد الحافظ",
-  "policy_version": "2.0",
+  "policy_version": "2.1",
   "protected_branch": "main",
   "enforcement": {
     "branch_protection_required": true,
@@ -20,8 +20,13 @@
     "live_state_file": "PROJECT_STATE.json"
   },
   "cost_control": {
+    "policy_file": "LAPTOP_CREDIT_POLICY.md",
+    "quality_first": true,
     "heavy_ci_before_ready_pr": false,
     "prefer_local_or_targeted_checks_during_iteration": true,
+    "reuse_valid_evidence_when_inputs_are_unchanged": true,
+    "avoid_redundant_parallel_agents": true,
+    "checkpoint_before_credit_exhaustion": true,
     "quality_may_not_be_reduced_to_save_cost": true
   },
   "path_policy": {
@@ -29,6 +34,6 @@
     "ui": ["*.html", "**/*.html", "assets/**"],
     "sensitive": ["articles/**", "data/**", "author.json", "CITATION.cff"],
     "tests": ["tools/**", ".github/visual-review/**"],
-    "governance": ["PROJECT_CONSTITUTION.md", "PRODUCT_SPEC.md", "DECISIONS.md", "QUALITY_GATES.md", "AGENTS.md", "PROJECT_OS.json", "DEVICE_HANDOFF_PROTOCOL.md", "BRANCH_PROTECTION.md", ".github/governance/**", ".github/workflows/pr-policy.yml", ".github/workflows/governance-integrity.yml", ".github/PULL_REQUEST_TEMPLATE.md"]
+    "governance": ["PROJECT_CONSTITUTION.md", "PRODUCT_SPEC.md", "DECISIONS.md", "QUALITY_GATES.md", "AGENTS.md", "PROJECT_OS.json", "DEVICE_HANDOFF_PROTOCOL.md", "LAPTOP_CREDIT_POLICY.md", "BRANCH_PROTECTION.md", ".github/governance/**", ".github/workflows/pr-policy.yml", ".github/workflows/governance-integrity.yml", ".github/PULL_REQUEST_TEMPLATE.md"]
   }
 }
