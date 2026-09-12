@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "project": "<project-name>",
+  "branch": "<working-branch>",
+  "head_sha": "<verified-remote-sha>",
+  "status": "checkpoint",
+  "updated_at": "YYYY-MM-DDTHH:MM:SS+02:00",
+  "current_task": "<current task or null>",
+  "next_action": "<single precise next action>",
+  "last_verified": {
+    "git_remote_matches": false,
+    "tests": [],
+    "builds": [],
+    "device_or_browser_checks": []
+  },
+  "unverified": [],
+  "blockers": [],
+  "local_only_items": [],
+  "notes": "Do not claim a check here unless it was actually performed. HANDOFF.md is the human-readable companion."
+}
