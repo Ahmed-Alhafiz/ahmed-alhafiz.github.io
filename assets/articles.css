@@ -4,6 +4,7 @@
 @import url("/assets/book-editorial-human.css");
 @import url("/assets/research-editorial-human.css");
 @import url("/assets/profile-editorial-human.css");
+@import url("/assets/methodology-editorial-human.css");
 /* Keep linked reading sections visible below the persistent site header. */
 #reading-path, #medium-reading { scroll-margin-top: 7rem; }
 @media (max-width: 640px) {
