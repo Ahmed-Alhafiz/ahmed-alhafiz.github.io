@@ -15,10 +15,10 @@
 - أُغلق تعارض الحوكمة في PR #52: استُعيد `PROJECT_STATE.json` و`HANDOFF.md`، ورُبطا بـ`PROJECT_OS.json`.
 - أُضيف `validate_live_state.py` إلى Governance integrity للتحقق من وجود ملفي الحالة وترابطهما.
 - PR #52 اندمج بنجاح وأصبح `main` على `71348b952456bbe11e823fe4585bbbfb42b409f6`.
+- أُعدّ checkpoint بعد الدمج لتسجيل الحالة المستقرة دون تغيير صفحات الموقع.
 
 ## ما يجري العمل عليه الآن
-- لا يوجد تطوير جديد.
-- هذه مزامنة checkpoint بعد الدمج فقط.
+- لا يوجد عمل تطويري جارٍ.
 - الخطوة التشغيلية التالية هي قياس نتائج Google indexing والزيارات من الهاتف قبل أي تعديل جديد.
 
 ## التحقق المنجز
@@ -27,7 +27,7 @@
 - Site integrity وCitation metadata integrity وContent research architecture بعد الدمج نجحت على نفس HEAD.
 - GitHub Pages deployment run 299 نجح على نفس HEAD.
 - `Protect main` ما زال Active، يستهدف default branch، بلا bypass actors، ويتطلب الفحوص الستة المعتمدة.
-- لا توجد Pull Requests مفتوحة بعد دمج PR #52.
+- لا توجد Pull Requests مفتوحة بعد دمج PR #52 وقبل checkpoint sync.
 
 ## ما لم يُفحص / حدود الدليل
 - نتائج فهرسة Google بعد طلبات `Request indexing` اليدوية الأخيرة لم تُقَس بعد.
