@@ -1,53 +1,56 @@
 # HANDOFF — الحالة الحية للموقع
 
-آخر تحديث: 2026-09-13 08:17 Europe/Vienna
+آخر تحديث: 2026-09-13 09:03 Europe/Vienna
 
 ## الحالة الحالية
 - المستودع: `Ahmed-Alhafiz/ahmed-alhafiz.github.io`.
-- الفرع العامل: `governance/restore-live-state-2026-09-13`.
-- الفرع المنشور: `main`.
-- HEAD المتحقق لـ`main` قبل هذا checkpoint: `efe621cc7abd29b7314bc6297d12c2c474163cea`.
-- GitHub هو مصدر الحقيقة؛ اقرأ HEAD البعيد الحالي قبل أي تعديل لأن تحديث هذا الملف نفسه يقدّم HEAD.
-- `Protect main` فعّال، بلا bypass، ويتطلب Pull Request وستة status checks.
-- لا توجد Pull Requests مفتوحة عند بدء هذه المرحلة.
+- الفرع الرسمي/المنشور: `main`.
+- HEAD المتحقق لـ`main` قبل PR إصلاح الحوكمة: `efe621cc7abd29b7314bc6297d12c2c474163cea`.
+- لا تعامل SHA المكتوب داخل checkpoint كـHEAD ذاتي متجدد؛ GitHub remote هو المرجع النهائي ويجب قراءته قبل أي تعديل.
+- Ruleset `Protect main` فعّال على الفرع الافتراضي، بلا bypass actors، ويطلب Pull Request وستة status checks.
+- لا يوجد تطوير موقع جارٍ في هذا checkpoint، ولا يوجد blocker معروف يحتاج اللابتوب.
 
 ## ما تم فعليًا
-- انتهت جولة UX السابقة حتى PR #51 ونُشرت على `main`.
-- ثبت أن `PROJECT_OS.json` يسمّي `PROJECT_STATE.json` ملف الحالة الحي.
-- ثبت أن `DEVICE_HANDOFF_PROTOCOL.md` يفرض تحديث `HANDOFF.md` و`PROJECT_STATE.json`.
-- ثبت أن `AGENTS.md` يفرض قراءة `HANDOFF.md`.
-- ثبت أن الملفين غير موجودين على `main`، لذلك الغياب تعارض حوكمة فعلي.
-- أُنشئ فرع إصلاح مستقل من `main@efe621cc7abd29b7314bc6297d12c2c474163cea`.
+- أُغلقت جولة UX الرئيسية حتى PR #51 ونُشرت على `main`: إصلاح الرسومات العربية، تهذيب الرئيسية والكتب ومركز الأبحاث وصفحة الكاتب والمنهج، وتوسيع Visual Review.
+- ثبت أن `PROJECT_STATE.json` و`HANDOFF.md` كانا مفقودين من `main` رغم أن `PROJECT_OS.json` و`DEVICE_HANDOFF_PROTOCOL.md` و`AGENTS.md` تتطلب حالة/تسليم حيًا.
+- أُعيد إنشاء `PROJECT_STATE.json` و`HANDOFF.md` على فرع إصلاح مستقل.
+- أُضيف `live_handoff_file: HANDOFF.md` إلى `PROJECT_OS.json`، وأضيفت live/template state files إلى governance path policy.
+- أُضيف `.github/governance/validate_live_state.py` للتحقق من وجود الملفين وبنيتهما وترابطهما مع `PROJECT_OS.json`.
+- عُدّل `Governance integrity` لتشغيل validator الجديد ومراقبة `HANDOFF.md` على push.
 
 ## ما يجري العمل عليه الآن
-- استعادة `PROJECT_STATE.json` و`HANDOFF.md`.
-- جعل Governance integrity يفشل مستقبلًا إذا غاب أي منهما.
-- لا تغيير على صفحات الموقع أو محتواها في هذه المرحلة.
+- لا يوجد تطوير منتج/موقع جديد.
+- PR الحوكمة الحالي يمر بجولة الفحص النهائية بعد تحديث checkpoint metadata فقط.
+- بعد الدمج، العمل التالي يعود إلى الهاتف لمتابعة Google indexing والقياس، وليس إلى تطوير جديد بلا بيانات.
 
 ## التحقق المنجز
 - PR #51: الفحوص الستة المطلوبة نجحت قبل الدمج.
-- بعد الدمج: Site integrity وCitation metadata integrity وContent research architecture نجحت على `main`.
 - GitHub Pages run 298: ناجح على `main@efe621cc7abd29b7314bc6297d12c2c474163cea`.
-- Ruleset `Protect main`: Active مع ستة required checks وبلا bypass actors.
+- PR #52 — أول دورة فحص كاملة على head `a3c422e8f5ac88e3d78f06060adb15bb9157e529`: Governance integrity وSite integrity وVisual review وContent research architecture وCitation metadata integrity كلها ناجحة.
+- سجل Governance integrity أكد صراحة تشغيل `validate_live_state.py` وظهور: `Governance integrity PASSED` و`Live governance state PASSED`.
+- Ruleset `Protect main`: Active، يستهدف default branch، بلا bypass، ويتطلب `Governance integrity / validate`, `Site integrity / audit`, `Visual review / render`, `Content research architecture / validate`, `Citation metadata integrity / validate`, `PR policy / policy`.
 
 ## ما لم يُفحص / حدود الدليل
-- فحوص PR إصلاح الحوكمة الحالي لم تعمل بعد عند كتابة هذه النسخة الأولية.
-- نتائج فهرسة Google بعد طلبات الفهرسة اليدوية الأخيرة لم تُقَس بعد.
+- جولة الفحوص النهائية بعد تحديث ملفي checkpoint metadata يجب أن تنجح قبل الدمج؛ لا تُستخدم نتائج HEAD السابق بدلها إذا تغير الإدخال.
+- نتائج فهرسة Google بعد طلبات `Request indexing` اليدوية الأخيرة لم تُقَس بعد.
+- لا يوجد ادعاء جديد عن ranking أو AI citation أو traffic.
 
 ## المخاطر أو الـblockers
-- يبقى `main` بلا ملفي الحالة الحية حتى دمج هذا الإصلاح.
-- لا يوجد blocker يحتاج اللابتوب حاليًا.
+- لا توجد P0/P1 معروفة مفتوحة ضمن إصلاح الحوكمة بعد نجاح أول دورة فحوص.
+- لا يوجد Laptop-only blocker معروف.
+- الخطر المتبقي قبل الدمج فقط هو فشل أي check على HEAD النهائي؛ عندها لا يُدمج حتى يُفهم السبب ويُصلح.
 
 ## الخطوة التالية الدقيقة
-1. حدّث `PROJECT_OS.json` وGovernance integrity لحماية الملفين وفرض وجودهما.
-2. افتح PR وشغّل الفحوص المطلوبة.
-3. حدّث ملفي الحالة بنتائج الفحوص الفعلية، ثم ادمج عبر PR فقط.
-4. بعد الإغلاق، ارجع إلى متابعة الفهرسة والقياس من الهاتف.
+1. أكمل الفحوص المطلوبة على HEAD النهائي للـPR.
+2. شغّل PR Policy بعد تحويل PR إلى Ready.
+3. إذا نجحت الستة كلها، ادمج عبر Squash merge وتحقق من `main` وRuleset وعدم وجود PR مفتوح.
+4. بعدها أعد فحص نتائج Google indexing/measurement من الهاتف قبل أي تطوير جديد.
 
 ## ملفات أو بيانات محلية لا تنتقل عبر Git
-- لا يوجد شيء معروف؛ العمل في هذه الجلسة يتم عبر GitHub.
+- لا يوجد شيء معروف في هذه الجلسة؛ العمل كله عبر GitHub.
 
 ## فحص الاستلام على الجهاز الآخر
-1. اقرأ HEAD الفعلي من GitHub.
-2. اقرأ ملفات الحوكمة ثم `PROJECT_STATE.json` وهذا الملف.
-3. لا تكرر فحصًا ما زالت مدخلاته دون تغيير.
+1. اقرأ HEAD الفعلي من GitHub قبل أي عمل.
+2. اقرأ `PROJECT_CONSTITUTION.md`, `PRODUCT_SPEC.md`, `DECISIONS.md`, `QUALITY_GATES.md`, `AGENTS.md`, `PROJECT_STATE.json`, ثم هذا الملف.
+3. على اللابتوب اقرأ أيضًا `LAPTOP_CREDIT_POLICY.md`.
+4. لا تكرر فحصًا بقيت مدخلاته كما هي؛ نفّذ أقصر preflight مناسب للمهمة الجديدة.
