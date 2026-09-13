@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "project": "ahmed-alhafiz.github.io",
+  "source_of_truth": "GitHub",
+  "branch": "governance/restore-live-state-2026-09-13",
+  "head_sha": "efe621cc7abd29b7314bc6297d12c2c474163cea",
+  "head_sha_semantics": "Verified remote base SHA before this checkpoint commit. Always re-read the current remote branch HEAD before editing; the checkpoint commit itself advances HEAD.",
+  "status": "checkpoint",
+  "updated_at": "2026-09-13T08:17:00+02:00",
+  "current_task": "Restore the missing live governance state and handoff files and enforce their presence in Governance integrity.",
+  "next_action": "Complete the governance repair PR, require all protected checks to pass, merge it, then return to phone-first indexing and measurement monitoring.",
+  "last_verified": {
+    "git_remote_matches": true,
+    "tests": [
+      "PR #51 required checks passed before merge: Governance integrity, Site integrity, Visual review, Content research architecture, Citation metadata integrity, and PR policy.",
+      "After PR #51 merged to main, Site integrity, Citation metadata integrity, and Content research architecture passed on main@efe621cc7abd29b7314bc6297d12c2c474163cea.",
+      "Protect main ruleset is active and requires six status checks with no bypass actors."
+    ],
+    "builds": [
+      "GitHub Pages deployment run 298 completed successfully for main@efe621cc7abd29b7314bc6297d12c2c474163cea."
+    ],
+    "device_or_browser_checks": [
+      "PR #51 Visual review passed across desktop, mobile, and narrow-mobile, including the methodology and research-status pages added to the permanent visual gate."
+    ]
+  },
+  "unverified": [
+    "This governance repair branch has not yet passed its own required checks at the time this initial checkpoint file is created.",
+    "Google indexing outcomes after the recent manual Request indexing submissions have not yet been rechecked."
+  ],
+  "blockers": [
+    "PROJECT_STATE.json and HANDOFF.md are absent from main until this governance repair is merged."
+  ],
+  "local_only_items": [],
+  "notes": "Do not treat head_sha as self-referential. GitHub is authoritative; always read the current remote branch HEAD. No laptop-only blocker is known for the next planned work."
+}
