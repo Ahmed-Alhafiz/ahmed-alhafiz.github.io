@@ -17,7 +17,8 @@
     "source_of_truth": "GitHub",
     "concurrent_work_on_same_branch_allowed": false,
     "protocol": "DEVICE_HANDOFF_PROTOCOL.md",
-    "live_state_file": "PROJECT_STATE.json"
+    "live_state_file": "PROJECT_STATE.json",
+    "live_handoff_file": "HANDOFF.md"
   },
   "cost_control": {
     "policy_file": "LAPTOP_CREDIT_POLICY.md",
@@ -40,6 +41,6 @@
     "ui": ["*.html", "**/*.html", "assets/**"],
     "sensitive": ["articles/**", "data/**", "author.json", "CITATION.cff"],
     "tests": ["tools/**", ".github/visual-review/**"],
-    "governance": ["PROJECT_CONSTITUTION.md", "PRODUCT_SPEC.md", "DECISIONS.md", "QUALITY_GATES.md", "AGENTS.md", "PROJECT_OS.json", "DEVICE_HANDOFF_PROTOCOL.md", "LAPTOP_CREDIT_POLICY.md", "BRANCH_PROTECTION.md", ".github/governance/**", ".github/workflows/pr-policy.yml", ".github/workflows/governance-integrity.yml", ".github/PULL_REQUEST_TEMPLATE.md"]
+    "governance": ["PROJECT_CONSTITUTION.md", "PRODUCT_SPEC.md", "DECISIONS.md", "QUALITY_GATES.md", "AGENTS.md", "HANDOFF.md", "HANDOFF_TEMPLATE.md", "PROJECT_STATE.json", "PROJECT_STATE_TEMPLATE.json", "PROJECT_OS.json", "DEVICE_HANDOFF_PROTOCOL.md", "LAPTOP_CREDIT_POLICY.md", "BRANCH_PROTECTION.md", ".github/governance/**", ".github/workflows/pr-policy.yml", ".github/workflows/governance-integrity.yml", ".github/PULL_REQUEST_TEMPLATE.md"]
   }
 }
