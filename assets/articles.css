@@ -2,6 +2,7 @@
 @import url("/assets/articles-base-17.css");
 @import url("/assets/global-hardening-17.css");
 @import url("/assets/book-editorial-human.css");
+@import url("/assets/research-editorial-human.css");
 /* Keep linked reading sections visible below the persistent site header. */
 #reading-path, #medium-reading { scroll-margin-top: 7rem; }
 @media (max-width: 640px) {
