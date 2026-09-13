@@ -71,3 +71,32 @@
   .book-summary h3{font-size:20px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Human editorial pass — homepage only. Keep the author site calm, specific, and less card-driven. */
+.reader-home .home-hero::before{background:linear-gradient(180deg,rgba(255,255,255,.025),transparent 46%)}
+.reader-home .eyebrow,.reader-home .kicker{font-family:inherit;letter-spacing:0;text-transform:none;font-weight:650}
+.reader-home .home-hero .actions{gap:24px;align-items:center}
+.reader-home .home-hero .btn{min-height:auto;padding:3px 0 5px;border:0;border-bottom:1px solid rgba(255,255,255,.42);border-radius:0;background:transparent;box-shadow:none;color:#eef3f6;font-size:14px;transform:none}
+.reader-home .home-hero .btn.primary{background:transparent;color:#fff;border-color:#f0ad85}
+.reader-home .home-hero .btn:hover,.reader-home .home-hero .btn:focus-visible{background:transparent;box-shadow:none;border-color:#fff;transform:none}
+.reader-home .hero-index{gap:0;background:transparent;border:0;border-top:1px solid rgba(255,255,255,.20);border-radius:0;overflow:visible}
+.reader-home .hero-index a{background:transparent;border-bottom:1px solid rgba(255,255,255,.12)}
+.reader-home .hero-index a:hover,.reader-home .hero-index a:focus-visible{background:transparent}
+.reader-home .hero-portrait{border-radius:10px;box-shadow:0 0 0 1px rgba(240,173,133,.40),0 18px 54px rgba(0,0,0,.26)}
+.reader-home .focused-book{border-radius:5px;box-shadow:none;border-inline-start:3px solid rgba(155,79,55,.55)}
+.reader-home .focused-book .book-cover-link{border-radius:2px;box-shadow:0 8px 18px rgba(11,23,36,.14)}
+.reader-home .reading-next{border-radius:4px}
+@media(max-width:620px){
+  .reader-home .home-hero-grid{padding-block:24px 34px;gap:18px}
+  .reader-home .hero-portrait{justify-self:end;border-radius:8px}
+  .reader-home .home-hero h1{font-size:40px;line-height:1.16;margin-block:5px 6px}
+  .reader-home .home-hero .latin{font-size:19px;color:#dca27f}
+  .reader-home .home-hero .hero-statement{font-size:16px;line-height:1.78;margin-top:14px}
+  .reader-home .home-hero .actions{display:flex;gap:22px;margin-top:18px}
+  .reader-home .home-hero .btn{font-size:13px;padding-inline:0}
+  .reader-home .hero-index{margin-top:20px}
+  .reader-home .hero-index a{padding:10px 0}
+  .reader-home .hero-index strong{font-size:13px}
+  .reader-home .hero-index span{font-size:11px;margin-top:3px}
+  .reader-home .focused-book{border-radius:4px;padding:18px}
+}
