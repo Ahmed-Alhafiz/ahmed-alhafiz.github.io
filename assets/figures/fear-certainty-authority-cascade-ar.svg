@@ -6,7 +6,7 @@
   <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#071019" flood-opacity=".22"/></filter>
   <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#d88b64"/></marker>
   <style>
-    .ar{font-family:"Noto Sans Arabic","DejaVu Sans",Arial,sans-serif;direction:rtl;unicode-bidi:bidi-override}.title{font-size:43px;font-weight:800;fill:#fff}.subtitle{font-size:20px;fill:#c7d3db}.stage{font-size:22px;font-weight:800;fill:#17202a}.note{font-size:15px;fill:#52616d}.number{font-family:Arial,sans-serif;font-size:19px;font-weight:800;fill:#fff}.interrupt{font-size:17px;font-weight:700;fill:#e8f1f5}
+    .ar{font-family:"Noto Sans Arabic","DejaVu Sans",Arial,sans-serif}.title{font-size:43px;font-weight:800;fill:#fff}.subtitle{font-size:20px;fill:#c7d3db}.stage{font-size:22px;font-weight:800;fill:#17202a}.note{font-size:15px;fill:#52616d}.number{font-family:Arial,sans-serif;font-size:19px;font-weight:800;fill:#fff}.interrupt{font-size:17px;font-weight:700;fill:#e8f1f5}
   </style>
 </defs>
 <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
