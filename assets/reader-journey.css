@@ -88,7 +88,7 @@
 .reader-home .reading-next{border-radius:4px}
 @media(max-width:620px){
   .reader-home .home-hero-grid{padding-block:24px 34px;gap:18px}
-  .reader-home .hero-portrait{width:min(39vw,150px);justify-self:end;border-radius:8px}
+  .reader-home .hero-portrait{justify-self:end;border-radius:8px}
   .reader-home .home-hero h1{font-size:40px;line-height:1.16;margin-block:5px 6px}
   .reader-home .home-hero .latin{font-size:19px;color:#dca27f}
   .reader-home .home-hero .hero-statement{font-size:16px;line-height:1.78;margin-top:14px}
