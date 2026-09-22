@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "id": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/claims.json",
+  "id": "https://ahmedalhafiz.com/articles/water-civilization-power/evidence/claims.json",
   "dossier": {
     "title_ar": "الماء والحضارة والسلطة: متى تصبح إدارة المورد عدلًا، ومتى تتحول إلى أداة سيطرة؟",
     "title_en": "Water, Civilization and Power: When Does Resource Governance Produce Justice—and When Does It Become Control?",
@@ -10,17 +10,17 @@
     "author": {
       "name_ar": "أحمد الحافظ",
       "name_en": "Ahmed Alhafiz",
-      "url": "https://ahmed-alhafiz.github.io/about/"
+      "url": "https://ahmedalhafiz.com/about/"
     },
-    "arabic_url": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/",
-    "english_url": "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/",
-    "evidence_url_ar": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/",
-    "evidence_url_en": "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/evidence/",
+    "arabic_url": "https://ahmedalhafiz.com/articles/water-civilization-power/",
+    "english_url": "https://ahmedalhafiz.com/en/articles/water-civilization-power/",
+    "evidence_url_ar": "https://ahmedalhafiz.com/articles/water-civilization-power/evidence/",
+    "evidence_url_en": "https://ahmedalhafiz.com/en/articles/water-civilization-power/evidence/",
     "related_book": {
       "name_ar": "قل سيروا في الأرض فانظروا كيف بدأ الخلق",
       "status": "forthcoming",
       "relationship": "thematic_origin_not_evidence",
-      "url": "https://ahmed-alhafiz.github.io/books/sirou-fi-alard/"
+      "url": "https://ahmedalhafiz.com/books/sirou-fi-alard/"
     }
   },
   "review_status": {

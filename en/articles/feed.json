@@ -1,19 +1,19 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
   "title": "Ahmed Alhafiz Research Desk",
-  "home_page_url": "https://ahmed-alhafiz.github.io/en/articles/",
-  "feed_url": "https://ahmed-alhafiz.github.io/en/articles/feed.json",
+  "home_page_url": "https://ahmedalhafiz.com/en/articles/",
+  "feed_url": "https://ahmedalhafiz.com/en/articles/feed.json",
   "language": "en",
   "authors": [
     {
       "name": "Ahmed Alhafiz",
-      "url": "https://ahmed-alhafiz.github.io/en/about/"
+      "url": "https://ahmedalhafiz.com/en/about/"
     }
   ],
   "items": [
     {
-      "id": "https://ahmed-alhafiz.github.io/en/articles/teaching-names-ai-understanding/",
-      "url": "https://ahmed-alhafiz.github.io/en/articles/teaching-names-ai-understanding/",
+      "id": "https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/",
+      "url": "https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/",
       "title": "Teaching the Names and AI: What Counts as Understanding?",
       "summary": "A bilingual dossier separating symbol use, relational structure, compositional generalization, grounding, causal world-model use, intention and responsibility, while treating consciousness as a separate unresolved question.",
       "date_published": "2026-09-03T12:00:00+02:00",
@@ -30,8 +30,8 @@
       "language": "en"
     },
     {
-      "id": "https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/",
-      "url": "https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/",
+      "id": "https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/",
+      "url": "https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/",
       "title": "Ratq, fatq, and the Big Bang: text, exegesis, evidence, and limits",
       "summary": "A layered inquiry into Qur’an 21:30, classical exegesis, and hot Big Bang cosmology, separating text, observation, model, and metaphysical inference.",
       "date_published": "2026-09-02T04:33:19+02:00",
@@ -46,8 +46,8 @@
       "language": "en"
     },
     {
-      "id": "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/",
-      "url": "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/",
+      "id": "https://ahmedalhafiz.com/en/articles/water-civilization-power/",
+      "url": "https://ahmedalhafiz.com/en/articles/water-civilization-power/",
       "title": "Water, Civilization and Power: When Does Resource Governance Produce Justice—and When Does It Become Control?",
       "summary": "A bilingual dossier building a six-layer chain from resource and infrastructure to data, allocation, accountability, maintenance, and resilience, tested against Ma’rib, Mesopotamia, Angkor, and contemporary water governance.",
       "date_published": "2026-09-02T05:40:00+02:00",
@@ -62,8 +62,8 @@
       "language": "en"
     },
     {
-      "id": "https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
-      "url": "https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "id": "https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "url": "https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
       "title": "When Fear Decides Before Diagnosis: How Uncertainty Becomes Authority and Coercion in Families",
       "summary": "An evidence-led dossier on how an ambiguous symptom can move through family fear, premature certainty, authority transfer and consent erosion—and how a parallel-path safeguard preserves assessment, voice and voluntary spiritual support.",
       "date_published": "2026-09-02T10:00:00+02:00",

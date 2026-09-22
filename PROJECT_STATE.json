@@ -3,12 +3,12 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "71348b952456bbe11e823fe4585bbbfb42b409f6",
-  "head_sha_semantics": "Verified main SHA after PR #52 and before this checkpoint sync. Always re-read remote main before new work.",
-  "status": "checkpoint",
-  "updated_at": "2026-09-13T09:10:00+02:00",
-  "current_task": null,
-  "next_action": "Recheck Google indexing and measurement from the phone before making new site changes.",
+  "head_sha": "3bc0518aa677e3f8c6251ae714fdb098734494fe",
+  "head_sha_semantics": "Verified source main SHA after PR #54 and before the custom-domain canonical migration branch. Always re-read remote main before new work.",
+  "status": "in_progress_premerge",
+  "updated_at": "2026-09-22T20:23:00+02:00",
+  "current_task": "Migrate all canonical/discovery/entity surfaces from the GitHub Pages hostname to https://ahmedalhafiz.com on seo/custom-domain-canonical-migration.",
+  "next_action": "Commit and push the migration branch, open a pull request, require all six checks, merge, verify the live deployment, then complete Search Console transition checks.",
   "last_verified": {
     "git_remote_matches": true,
     "tests": [
@@ -16,7 +16,9 @@
       "PR #52 merged and main advanced to 71348b952456bbe11e823fe4585bbbfb42b409f6.",
       "Post-merge Governance integrity, Site integrity, Citation metadata integrity, and Content research architecture passed on main.",
       "Protect main is active with six required checks and no bypass actors.",
-      "No open pull requests remained after PR #52 merged."
+      "No open pull requests remained after PR #52 merged.",
+      "Custom-domain infrastructure, HTTPS, www-to-apex redirect, and old GitHub Pages URL redirect were verified before starting the canonical migration.",
+      "The local canonical-migration candidate passed governance, site, discovery, entity, visibility, IndexNow dry-run, UX, Arabic UI, citation, and research-architecture checks."
     ],
     "builds": [
       "GitHub Pages deployment run 299 completed successfully for main@71348b952456bbe11e823fe4585bbbfb42b409f6."
@@ -26,9 +28,12 @@
     ]
   },
   "unverified": [
-    "Google indexing results after the recent manual indexing requests have not yet been rechecked."
+    "The custom-domain canonical migration has not yet passed remote PR checks or been verified on the live deployment.",
+    "Google Search Console indexing and canonical selection for the custom domain have not yet been measured."
   ],
   "blockers": [],
-  "local_only_items": [],
-  "notes": "GitHub is authoritative. No laptop-only blocker is known. PROJECT_STATE.json and HANDOFF.md are now part of the enforced governance contract."
+  "local_only_items": [
+    "Working clone: C:\\Users\\xxx\\Ahmed-Projects\\work\\site-seo-migration-2026-09-22"
+  ],
+  "notes": "GitHub remains authoritative. The old-host occurrences intentionally retained in historical verification and ledger records are not current canonical outputs."
 }

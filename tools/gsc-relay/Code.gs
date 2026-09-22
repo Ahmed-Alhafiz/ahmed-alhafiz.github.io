@@ -1,5 +1,5 @@
 const CONFIG = Object.freeze({
-  SITE_URL: 'https://ahmed-alhafiz.github.io/',
+  SITE_URL: 'https://ahmedalhafiz.com/',
   SUBJECT_PREFIX: '[GSC-AUTO]',
   PRIORITY_PAGE_FRAGMENTS: [
     '/books/umm-abbas/',

@@ -20,8 +20,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = "diagnostic-uncertainty-family-fear-coercive-authority"
-AR_URL = f"https://ahmed-alhafiz.github.io/articles/{SLUG}/"
-EN_URL = f"https://ahmed-alhafiz.github.io/en/articles/{SLUG}/"
+AR_URL = f"https://ahmedalhafiz.com/articles/{SLUG}/"
+EN_URL = f"https://ahmedalhafiz.com/en/articles/{SLUG}/"
 BOOK_AR = "/books/umm-abbas/"
 BOOK_EN = "/en/books/umm-abbas/"
 REVIEW = "author_review_complete_specialist_review_pending"

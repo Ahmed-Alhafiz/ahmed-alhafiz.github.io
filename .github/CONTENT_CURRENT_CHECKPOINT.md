@@ -25,7 +25,7 @@ Before any website, research, SEO, AI-discoverability, entity, measurement, doma
 
 The site is not managed as a volume blog. It is an author-entity and reference-dossier system.
 
-- One official author identity: `https://ahmed-alhafiz.github.io/#person`.
+- One official author identity: `https://ahmedalhafiz.com/#person`.
 - One canonical Arabic name: `أحمد الحافظ`.
 - One preferred Latin spelling: `Ahmed Alhafiz`.
 - One secondary transliteration for search disambiguation only: `Ahmad Alhafiz`.

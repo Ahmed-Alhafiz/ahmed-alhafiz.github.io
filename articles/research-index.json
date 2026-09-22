@@ -1,13 +1,13 @@
 {
   "schema_version": "1.1",
-  "site": "https://ahmed-alhafiz.github.io/",
+  "site": "https://ahmedalhafiz.com/",
   "publisher": {
     "name_ar": "أحمد الحافظ",
     "name_en": "Ahmed Alhafiz",
-    "profile": "https://ahmed-alhafiz.github.io/about/"
+    "profile": "https://ahmedalhafiz.com/about/"
   },
-  "editorial_policy": "https://ahmed-alhafiz.github.io/methodology/",
-  "review_register": "https://ahmed-alhafiz.github.io/research-status/",
+  "editorial_policy": "https://ahmedalhafiz.com/methodology/",
+  "review_register": "https://ahmedalhafiz.com/research-status/",
   "generated": "2026-09-03",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
@@ -20,12 +20,12 @@
       "languages": ["ar", "en"],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
-      "url": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/",
-      "english_url": "https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/",
-      "evidence_appendix": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/evidence/",
-      "claims_json": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/evidence/claims.json",
-      "citation_bib": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/citation.bib",
-      "citation_ris": "https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/citation.ris",
+      "url": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/",
+      "english_url": "https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/",
+      "evidence_appendix": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/evidence/",
+      "claims_json": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/evidence/claims.json",
+      "citation_bib": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/citation.bib",
+      "citation_ris": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/citation.ris",
       "english_title": "Ratq, fatq, and the Big Bang: text, exegesis, evidence, and limits",
       "english_summary": "A layered inquiry into Qur’an 21:30, classical exegesis, observation, cosmological modelling, and the limits of metaphysical inference."
     },
@@ -41,16 +41,16 @@
       "languages": ["ar", "en"],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
-      "url": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/",
-      "english_url": "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/",
-      "evidence_appendix": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/",
-      "english_evidence_appendix": "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/evidence/",
-      "claims_json": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/claims.json",
-      "references_bib": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/references.bib",
-      "references_ris": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/references.ris",
-      "citation_bib": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/citation.bib",
-      "citation_ris": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/citation.ris",
-      "citation_cff": "https://ahmed-alhafiz.github.io/articles/water-civilization-power/CITATION.cff"
+      "url": "https://ahmedalhafiz.com/articles/water-civilization-power/",
+      "english_url": "https://ahmedalhafiz.com/en/articles/water-civilization-power/",
+      "evidence_appendix": "https://ahmedalhafiz.com/articles/water-civilization-power/evidence/",
+      "english_evidence_appendix": "https://ahmedalhafiz.com/en/articles/water-civilization-power/evidence/",
+      "claims_json": "https://ahmedalhafiz.com/articles/water-civilization-power/evidence/claims.json",
+      "references_bib": "https://ahmedalhafiz.com/articles/water-civilization-power/evidence/references.bib",
+      "references_ris": "https://ahmedalhafiz.com/articles/water-civilization-power/evidence/references.ris",
+      "citation_bib": "https://ahmedalhafiz.com/articles/water-civilization-power/citation.bib",
+      "citation_ris": "https://ahmedalhafiz.com/articles/water-civilization-power/citation.ris",
+      "citation_cff": "https://ahmedalhafiz.com/articles/water-civilization-power/CITATION.cff"
     },
     {
       "slug": "diagnostic-uncertainty-family-fear-coercive-authority",
@@ -63,14 +63,14 @@
       "languages": ["ar", "en"],
       "review": "author_review_complete_specialist_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
-      "english_url": "https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
-      "evidence_appendix": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/",
-      "english_evidence_appendix": "https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/",
-      "claims_json": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/claims.json",
-      "citation_bib": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/citation.bib",
-      "citation_ris": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/citation.ris",
-      "citation_cff": "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/CITATION.cff"
+      "url": "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "english_url": "https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "evidence_appendix": "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/",
+      "english_evidence_appendix": "https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/",
+      "claims_json": "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/claims.json",
+      "citation_bib": "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/citation.bib",
+      "citation_ris": "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/citation.ris",
+      "citation_cff": "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/CITATION.cff"
     },
     {
       "slug": "teaching-names-ai-understanding",
@@ -84,12 +84,12 @@
       "languages": ["ar", "en"],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
-      "url": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/",
-      "english_url": "https://ahmed-alhafiz.github.io/en/articles/teaching-names-ai-understanding/",
-      "claims_json": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/claims.json",
-      "references_bib": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/references.bib",
-      "references_ris": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/references.ris",
-      "citation_cff": "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/CITATION.cff"
+      "url": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/",
+      "english_url": "https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/",
+      "claims_json": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/claims.json",
+      "references_bib": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/references.bib",
+      "references_ris": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/references.ris",
+      "citation_cff": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/CITATION.cff"
     },
     {
       "slug": "spiritual-healing-exploitation-safeguarding",
@@ -100,7 +100,7 @@
       "languages": ["ar"],
       "review": "author_review_complete_specialist_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmed-alhafiz.github.io/articles/spiritual-healing-exploitation-safeguarding/"
+      "url": "https://ahmedalhafiz.com/articles/spiritual-healing-exploitation-safeguarding/"
     },
     {
       "slug": "functional-seizures-vs-epilepsy",
@@ -111,7 +111,7 @@
       "languages": ["ar"],
       "review": "medical_specialist_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmed-alhafiz.github.io/articles/functional-seizures-vs-epilepsy/"
+      "url": "https://ahmedalhafiz.com/articles/functional-seizures-vs-epilepsy/"
     },
     {
       "slug": "six-days-creation-cosmic-time",
@@ -122,7 +122,7 @@
       "languages": ["ar"],
       "review": "external_review_pending",
       "book": "sirou-fi-alard",
-      "url": "https://ahmed-alhafiz.github.io/articles/six-days-creation-cosmic-time/"
+      "url": "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/"
     },
     {
       "slug": "sleep-paralysis-jathoom",
@@ -133,7 +133,7 @@
       "languages": ["ar"],
       "review": "medical_specialist_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmed-alhafiz.github.io/articles/sleep-paralysis-jathoom/"
+      "url": "https://ahmedalhafiz.com/articles/sleep-paralysis-jathoom/"
     },
     {
       "slug": "arabic-psychological-horror",
@@ -144,7 +144,7 @@
       "languages": ["ar"],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmed-alhafiz.github.io/guides/arabic-psychological-horror/"
+      "url": "https://ahmedalhafiz.com/guides/arabic-psychological-horror/"
     }
   ]
 }

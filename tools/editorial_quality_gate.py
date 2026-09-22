@@ -7,7 +7,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
 ROOT=Path(__file__).resolve().parents[1]
-BASE='https://ahmed-alhafiz.github.io'
+BASE='https://ahmedalhafiz.com'
 
 RULES={
  'articles/ratq-fatq-big-bang/index.html':dict(words=2800,sources=12,book='books/sirou-fi-alard/index.html',route='/articles/ratq-fatq-big-bang/',medical=False,extended=True),
@@ -71,7 +71,7 @@ def main():
  for rel,r in RULES.items():
   p=ROOT/rel
   if not p.exists():errors.append(f'{rel}: missing');continue
-  d=parse(p);text=re.sub(r'\s+',' ',' '.join(d.text));count=wc(text);ext=sorted(set(h for h in d.links if urlsplit(h).scheme in {'http','https'} and urlsplit(h).netloc!='ahmed-alhafiz.github.io'))
+  d=parse(p);text=re.sub(r'\s+',' ',' '.join(d.text));count=wc(text);ext=sorted(set(h for h in d.links if urlsplit(h).scheme in {'http','https'} and urlsplit(h).netloc!='ahmedalhafiz.com'))
   print(f'{rel}: {count} visible words, {len(ext)} external sources')
   if count<r['words']:errors.append(f'{rel}: depth {count} < {r["words"]}')
   if len(ext)<r['sources']:errors.append(f'{rel}: visible external sources {len(ext)} < {r["sources"]}')

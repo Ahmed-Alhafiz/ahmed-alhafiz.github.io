@@ -1,6 +1,6 @@
 # SEO Source of Truth — Ahmed Alhafiz
 
-Last verified: 2026-09-05 (Europe/Vienna)
+Last verified: 2026-09-22 (Europe/Vienna)
 
 ## Governing directive and mandatory memory
 
@@ -40,13 +40,13 @@ Current strategic objective: strengthen the association between «أحمد ال�
 ## Identity
 - Arabic author name: أحمد الحافظ
 - Latin author name: Ahmed Alhafiz
-- Official website: https://ahmed-alhafiz.github.io/
-- Official author page: https://ahmed-alhafiz.github.io/about/
+- Official website: https://ahmedalhafiz.com/
+- Official author page: https://ahmedalhafiz.com/about/
 - Official Medium: https://medium.com/@AhmedAlhafiz
 - Official Instagram: https://www.instagram.com/ahmed_666_8
 
 ## Verified current website baseline
-Verified from repository, CI, and public Pages deployment state on 2026-09-05:
+Verified from repository and the public GitHub Pages/custom-domain state on 2026-09-22; repository-wide canonical migration remains subject to PR checks and live post-deploy verification:
 - Separate author page exists at `/about/`.
 - Separate Arabic book pages exist under `/books/`.
 - English and German versions exist under `/en/` and `/de/`.
@@ -69,9 +69,9 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 - Canonical public title: أم عباس لجلب الحبيب ورد المطلقة
 - Public type/genre currently stated on site: رواية رعب نفسي
 - Public publication state currently stated on site: قريبًا / قيد الإصدار
-- Official Arabic page: https://ahmed-alhafiz.github.io/books/umm-abbas/
-- English page: https://ahmed-alhafiz.github.io/en/books/umm-abbas/
-- German page: https://ahmed-alhafiz.github.io/de/books/umm-abbas/
+- Official Arabic page: https://ahmedalhafiz.com/books/umm-abbas/
+- English page: https://ahmedalhafiz.com/en/books/umm-abbas/
+- German page: https://ahmedalhafiz.com/de/books/umm-abbas/
 - Public description focus currently on site: psychological horror; fear, belief, doubt, interpretation, family tension.
 - Publisher / ISBN / edition fields: do not add to public pages or structured data unless independently verified from a public source or explicitly approved after publication data stabilizes.
 
@@ -80,9 +80,9 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 - Short form used on site: سيروا في الأرض
 - Public type/genre currently stated on site: كتاب فكري ديني / الدين والعلم
 - Public publication state currently stated on site: قريبًا / قيد الإصدار
-- Official Arabic page: https://ahmed-alhafiz.github.io/books/sirou-fi-alard/
-- English page: https://ahmed-alhafiz.github.io/en/books/sirou-fi-alard/
-- German page: https://ahmed-alhafiz.github.io/de/books/sirou-fi-alard/
+- Official Arabic page: https://ahmedalhafiz.com/books/sirou-fi-alard/
+- English page: https://ahmedalhafiz.com/en/books/sirou-fi-alard/
+- German page: https://ahmedalhafiz.com/de/books/sirou-fi-alard/
 - Public description focus currently on site: beginning of creation; religion and science; revelation and reason; limits of interpretation and knowledge.
 - Publisher / ISBN / edition fields: do not add to public pages or structured data unless independently verified from a public source or explicitly approved after publication data stabilizes.
 
@@ -90,15 +90,15 @@ Do NOT return to the obsolete baseline that the site is a single page without bo
 - Canonical public title: جُهَيْمَان — خوارج بين الركن والمقام
 - Public type/genre currently stated on site: رواية تاريخية دينية
 - Public publication state currently stated on site: قيد الإصدار
-- Official Arabic page: https://ahmed-alhafiz.github.io/books/juhayman/
-- English page: https://ahmed-alhafiz.github.io/en/books/juhayman/
-- German page: https://ahmed-alhafiz.github.io/de/books/juhayman/
-- Official cover path: https://ahmed-alhafiz.github.io/juhayman-cover.webp
+- Official Arabic page: https://ahmedalhafiz.com/books/juhayman/
+- English page: https://ahmedalhafiz.com/en/books/juhayman/
+- German page: https://ahmedalhafiz.com/de/books/juhayman/
+- Official cover path: https://ahmedalhafiz.com/juhayman-cover.webp
 - External promotion: paused until official publication.
 - Article extraction: deferred until explicit user instruction.
 
 ### 4) كتاب الكتب
-- Official Arabic page: https://ahmed-alhafiz.github.io/books/kitab-al-kutub/
+- Official Arabic page: https://ahmedalhafiz.com/books/kitab-al-kutub/
 - Current public state on site: قريبًا
 - External promotion: paused until official publication.
 - Article extraction: deferred until explicit user instruction.

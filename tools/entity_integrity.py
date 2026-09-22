@@ -15,8 +15,8 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-AUTHOR_ID = "https://ahmed-alhafiz.github.io/#person"
-AUTHOR_URL = "https://ahmed-alhafiz.github.io/about/"
+AUTHOR_ID = "https://ahmedalhafiz.com/#person"
+AUTHOR_URL = "https://ahmedalhafiz.com/about/"
 AUTHOR_NAME = "أحمد الحافظ"
 ALIASES = ["Ahmed Alhafiz", "Ahmad Alhafiz"]
 EMAIL = "mailto:hhafz9924@gmail.com"
@@ -24,13 +24,13 @@ SAME_AS = [
     "https://medium.com/@AhmedAlhafiz",
     "https://www.instagram.com/ahmed_666_8",
 ]
-MANIFEST_URL = "https://ahmed-alhafiz.github.io/author.json"
+MANIFEST_URL = "https://ahmedalhafiz.com/author.json"
 IDENTIFIER = {
     "@type": "PropertyValue",
     "propertyID": "canonical-author-id",
     "value": AUTHOR_ID,
 }
-JUHAYMAN_ID = "https://ahmed-alhafiz.github.io/books/juhayman/#book"
+JUHAYMAN_ID = "https://ahmedalhafiz.com/books/juhayman/#book"
 JUHAYMAN_TITLE = "جُهَيْمَان — خوارج بين الركن والمقام"
 STALE_JUHAYMAN_TITLE = "جهيمان — القيامة بين الركن والمقام"
 EXCLUDED_HTML = {"404.html", "google904951439b331720.html"}
@@ -128,7 +128,7 @@ def validate_person(node: dict, context: str, errors: list[str]) -> None:
     if not isinstance(image, dict):
         errors.append(f"{context}: ImageObject missing")
     else:
-        expected_image = "https://ahmed-alhafiz.github.io/ahmed-alhafiz-author.png"
+        expected_image = "https://ahmedalhafiz.com/ahmed-alhafiz-author.png"
         if image.get("@type") != "ImageObject" or image.get("url") != expected_image:
             errors.append(f"{context}: canonical author image drifted")
         if image.get("width") != 1229 or image.get("height") != 1536:
@@ -155,13 +155,13 @@ def validate_manifest(errors: list[str]) -> None:
         validate_person(persons[0], "author.json", errors)
         profiles = persons[0].get("mainEntityOfPage")
         expected_profiles = [
-            "https://ahmed-alhafiz.github.io/about/",
-            "https://ahmed-alhafiz.github.io/en/about/",
-            "https://ahmed-alhafiz.github.io/de/about/",
+            "https://ahmedalhafiz.com/about/",
+            "https://ahmedalhafiz.com/en/about/",
+            "https://ahmedalhafiz.com/de/about/",
         ]
         if profiles != expected_profiles:
             errors.append("author.json: three language-specific profile URLs missing")
-        if persons[0].get("publishingPrinciples") != "https://ahmed-alhafiz.github.io/methodology/":
+        if persons[0].get("publishingPrinciples") != "https://ahmedalhafiz.com/methodology/":
             errors.append("author.json: publishingPrinciples must point to the public method page")
 
     profiles = [node for node in graph if isinstance(node, dict) and node_has_type(node, "ProfilePage")]
@@ -217,7 +217,7 @@ def validate_html(errors: list[str]) -> None:
             errors.append(f"{rel}: canonical link missing")
         else:
             parsed = urlparse(canonical_match.group(1))
-            if parsed.hostname != "ahmed-alhafiz.github.io":
+            if parsed.hostname != "ahmedalhafiz.com":
                 errors.append(f"{rel}: canonical host drifted: {canonical_match.group(1)}")
 
         for index, block in enumerate(SCRIPT_RE.findall(html), start=1):
@@ -244,7 +244,7 @@ def validate_visible_profiles(errors: list[str]) -> None:
             "الاسم العربي الرسمي",
             "الاسم اللاتيني المعتمد",
             "تهجئة بحث بديلة",
-            "https://ahmed-alhafiz.github.io/#person",
+            "https://ahmedalhafiz.com/#person",
             "بيانات الهوية المنظمة",
         ],
         "en/about/index.html": [
@@ -252,7 +252,7 @@ def validate_visible_profiles(errors: list[str]) -> None:
             "Official Arabic name",
             "Preferred Latin name",
             "Search transliteration",
-            "https://ahmed-alhafiz.github.io/#person",
+            "https://ahmedalhafiz.com/#person",
             "Author record",
         ],
         "de/about/index.html": [
@@ -260,7 +260,7 @@ def validate_visible_profiles(errors: list[str]) -> None:
             "Offizieller arabischer Name",
             "Bevorzugter lateinischer Name",
             "Alternative Suchschreibweise",
-            "https://ahmed-alhafiz.github.io/#person",
+            "https://ahmedalhafiz.com/#person",
             "Autorendaten",
         ],
     }

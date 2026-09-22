@@ -8,7 +8,7 @@ authors:
     alias: "أحمد الحافظ"
 version: "2.0"
 date-released: "2026-09-03"
-url: "https://ahmed-alhafiz.github.io/articles/teaching-names-ai-understanding/claims.json"
+url: "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/claims.json"
 repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
 abstract: >-
   Machine-readable claims and portable references accompanying the bilingual
@@ -31,4 +31,4 @@ preferred-citation:
   year: 2026
   month: 9
   version: "2.0"
-  url: "https://ahmed-alhafiz.github.io/en/articles/teaching-names-ai-understanding/"
+  url: "https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/"

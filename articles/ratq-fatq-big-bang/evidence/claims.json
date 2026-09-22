@@ -11,7 +11,7 @@
   },
   "related_forthcoming_work": {
     "title": "قل سيروا في الأرض فانظروا كيف بدأ الخلق",
-    "url": "https://ahmed-alhafiz.github.io/books/sirou-fi-alard/",
+    "url": "https://ahmedalhafiz.com/books/sirou-fi-alard/",
     "evidentiary_role": "none; thematic relationship only"
   },
   "claims": [
@@ -114,8 +114,8 @@
       "confidence": "high",
       "evidence_type": "editorial_disclosure",
       "sources": [
-        "https://ahmed-alhafiz.github.io/books/sirou-fi-alard/",
-        "https://ahmed-alhafiz.github.io/methodology/"
+        "https://ahmedalhafiz.com/books/sirou-fi-alard/",
+        "https://ahmedalhafiz.com/methodology/"
       ],
       "caveat": "The book remains unpublished and is linked only after the evidence-led argument."
     }

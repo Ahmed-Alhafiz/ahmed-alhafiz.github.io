@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
-  "baseline_date": "2026-09-06",
+  "baseline_date": "2026-09-22",
   "site": {
-    "canonical_origin": "https://ahmed-alhafiz.github.io",
-    "canonical_author_id": "https://ahmed-alhafiz.github.io/#person",
-    "author_profile_ar": "https://ahmed-alhafiz.github.io/about/",
-    "author_profile_en": "https://ahmed-alhafiz.github.io/en/about/",
-    "author_profile_de": "https://ahmed-alhafiz.github.io/de/about/",
-    "author_manifest": "https://ahmed-alhafiz.github.io/author.json",
-    "sitemap": "https://ahmed-alhafiz.github.io/sitemap.xml",
-    "robots": "https://ahmed-alhafiz.github.io/robots.txt"
+    "canonical_origin": "https://ahmedalhafiz.com",
+    "canonical_author_id": "https://ahmedalhafiz.com/#person",
+    "author_profile_ar": "https://ahmedalhafiz.com/about/",
+    "author_profile_en": "https://ahmedalhafiz.com/en/about/",
+    "author_profile_de": "https://ahmedalhafiz.com/de/about/",
+    "author_manifest": "https://ahmedalhafiz.com/author.json",
+    "sitemap": "https://ahmedalhafiz.com/sitemap.xml",
+    "robots": "https://ahmedalhafiz.com/robots.txt"
   },
   "technical_baseline": {
     "public_html_pages": 43,
@@ -23,8 +23,8 @@
     "gptbot": "explicitly_allowed",
     "generic_crawlers": "allowed",
     "structured_author_identity": "deployed_and_verified",
-    "custom_domain": "not_configured",
-    "indexnow": "configured_and_verified_submission"
+    "custom_domain": "configured_dns_https_and_redirects_verified",
+    "indexnow": "configuration_migrated_to_custom_domain_pending_post_deploy_submission"
   },
   "verified_pre_rebuild_search_console_baseline": {
     "period": {

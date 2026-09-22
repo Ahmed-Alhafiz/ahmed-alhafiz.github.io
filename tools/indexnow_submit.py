@@ -28,7 +28,7 @@ CANONICAL_RE = re.compile(
     r'<link\b[^>]*\brel=["\']canonical["\'][^>]*\bhref=["\']([^"\']+)["\']',
     re.IGNORECASE,
 )
-USER_AGENT = "AhmedAlhafiz-IndexNow/1.0 (+https://ahmed-alhafiz.github.io/about/)"
+USER_AGENT = "AhmedAlhafiz-IndexNow/1.0 (+https://ahmedalhafiz.com/about/)"
 PUBLIC_MACHINE_PATHS = {
     "author.json",
     "robots.txt",

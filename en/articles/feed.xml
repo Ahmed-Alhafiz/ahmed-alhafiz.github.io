@@ -2,19 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>Ahmed Alhafiz Research Desk</title>
   <subtitle>Full English research editions with traceable evidence and disclosed review status.</subtitle>
-  <link href="https://ahmed-alhafiz.github.io/en/articles/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://ahmed-alhafiz.github.io/en/articles/feed.json" rel="alternate" type="application/feed+json" />
-  <link href="https://ahmed-alhafiz.github.io/en/articles/" rel="alternate" type="text/html" />
-  <id>https://ahmed-alhafiz.github.io/en/articles/</id>
+  <link href="https://ahmedalhafiz.com/en/articles/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://ahmedalhafiz.com/en/articles/feed.json" rel="alternate" type="application/feed+json" />
+  <link href="https://ahmedalhafiz.com/en/articles/" rel="alternate" type="text/html" />
+  <id>https://ahmedalhafiz.com/en/articles/</id>
   <updated>2026-09-03T15:03:00+02:00</updated>
   <author>
     <name>Ahmed Alhafiz</name>
-    <uri>https://ahmed-alhafiz.github.io/en/about/</uri>
+    <uri>https://ahmedalhafiz.com/en/about/</uri>
   </author>
   <entry>
     <title>Teaching the Names and AI: What Counts as Understanding?</title>
-    <link href="https://ahmed-alhafiz.github.io/en/articles/teaching-names-ai-understanding/" />
-    <id>https://ahmed-alhafiz.github.io/en/articles/teaching-names-ai-understanding/</id>
+    <link href="https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/" />
+    <id>https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/</id>
     <published>2026-09-03T12:00:00+02:00</published>
     <updated>2026-09-03T15:03:00+02:00</updated>
     <category term="extended bilingual research dossier" />
@@ -22,8 +22,8 @@
   </entry>
   <entry>
     <title>Ratq, fatq, and the Big Bang: text, exegesis, evidence, and limits</title>
-    <link href="https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/" />
-    <id>https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/</id>
+    <link href="https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/" />
+    <id>https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/</id>
     <published>2026-09-02T04:33:19+02:00</published>
     <updated>2026-09-02T04:33:19+02:00</updated>
     <category term="extended research dossier" />
@@ -31,8 +31,8 @@
   </entry>
   <entry>
     <title>Water, Civilization and Power: When Does Resource Governance Produce Justice—and When Does It Become Control?</title>
-    <link href="https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/" />
-    <id>https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/</id>
+    <link href="https://ahmedalhafiz.com/en/articles/water-civilization-power/" />
+    <id>https://ahmedalhafiz.com/en/articles/water-civilization-power/</id>
     <published>2026-09-02T05:40:00+02:00</published>
     <updated>2026-09-02T05:40:00+02:00</updated>
     <category term="extended bilingual research dossier" />
@@ -40,8 +40,8 @@
   </entry>
   <entry>
     <title>When Fear Decides Before Diagnosis: How Uncertainty Becomes Authority and Coercion in Families</title>
-    <link href="https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/" />
-    <id>https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/</id>
+    <link href="https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/" />
+    <id>https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/</id>
     <published>2026-09-02T10:00:00+02:00</published>
     <updated>2026-09-02T10:00:00+02:00</updated>
     <category term="extended research dossier" />

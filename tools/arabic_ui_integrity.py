@@ -21,7 +21,7 @@ REGISTER = ROOT / "articles/research-index.json"
 INVENTORY = ROOT / "data/content-inventory.json"
 STATUS_AR = ROOT / "research-status/index.html"
 STATUS_EN = ROOT / "en/research-status/index.html"
-BASE_URL = "https://ahmed-alhafiz.github.io/"
+BASE_URL = "https://ahmedalhafiz.com/"
 ROW_RE = re.compile(r"<tr\b[^>]*>.*?</tr>", re.IGNORECASE | re.DOTALL)
 
 BANNED_VISIBLE_INTERFACE = {

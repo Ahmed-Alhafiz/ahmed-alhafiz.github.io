@@ -2,10 +2,10 @@
 
 Official author and independent research website.
 
-**Live site:** https://ahmed-alhafiz.github.io/
-**English edition:** https://ahmed-alhafiz.github.io/en/
-**Research desk:** https://ahmed-alhafiz.github.io/articles/
-**Editorial standards:** https://ahmed-alhafiz.github.io/methodology/
+**Live site:** https://ahmedalhafiz.com/
+**English edition:** https://ahmedalhafiz.com/en/
+**Research desk:** https://ahmedalhafiz.com/articles/
+**Editorial standards:** https://ahmedalhafiz.com/methodology/
 
 ## What the site publishes
 
