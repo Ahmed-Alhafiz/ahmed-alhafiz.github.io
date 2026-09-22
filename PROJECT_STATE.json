@@ -3,41 +3,40 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "52cdd6af836c369b9d20129dff980820b29b0927",
-  "head_sha_semantics": "Verified origin/main merge commit for PR #57 after the live Search migration and favicon deployment.",
+  "head_sha": "1802e191ae1987165e4e634753793bfa0abca8e8",
+  "head_sha_semantics": "Verified implementation merge commit for PR #59 after the bilingual press centre deployment; the following docs-only closeout records that live result.",
   "status": "complete_live_verified",
-  "updated_at": "2026-09-22T22:20:20+02:00",
-  "current_task": "Monitor Google's recrawl after the completed site move; no implementation work is open.",
-  "next_action": "Keep the old-host 301 redirects active, avoid duplicate indexing requests, and review Search Console after Google has had time to recrawl.",
+  "updated_at": "2026-09-22T22:56:00+02:00",
+  "current_task": "Monitor recrawl and indexing after the completed site move and bilingual press-centre deployment; no implementation work is open.",
+  "next_action": "Keep the old-host redirects active, avoid duplicate homepage indexing requests, and review Search Console later for the two new press URLs and name/favicon adoption.",
   "last_verified": {
     "git_remote_matches": true,
     "tests": [
-      "PR #57 passed all six required checks and merged to main at 52cdd6af836c369b9d20129dff980820b29b0927.",
-      "The custom domain, HTTPS, www-to-apex redirect, old GitHub Pages redirect, and both ownership TXT records were verified after deployment.",
-      "Google Search Console accepted the Change of Address from ahmed-alhafiz.github.io to ahmedalhafiz.com on 2026-09-22.",
-      "Google Search Console accepted the refreshed 46-URL sitemap and displays 46 discovered pages.",
-      "Google URL Inspection accepted one new indexing request for the deployed official home page.",
-      "The favicon set was regenerated as a flat, bold pen-nib mark and validated at 16, 24, 32, 48, 96, 192, and 512 pixels.",
-      "All local site, presentation, editorial, discovery, dossier, entity, visibility, UX, Arabic UI, citation, research architecture, favicon, IndexNow dry-run, and whitespace gates passed.",
-      "All six required PR checks and all seven main-branch workflows, including Pages deployment and IndexNow, completed successfully."
+      "PR #59 passed all six required checks and merged to main at 1802e191ae1987165e4e634753793bfa0abca8e8.",
+      "The accepted Google Search Console Change of Address, official custom domain, HTTPS, favicon identity, and old-host redirects remain in place from the completed migration stage.",
+      "All main-branch jobs completed successfully, including Pages deployment, IndexNow notification, build-status reporting, citation metadata, research architecture, and site integrity.",
+      "The local site, presentation, editorial, discovery, dossier, entity, visibility, UX, Arabic UI, IndexNow dry-run, and whitespace gates passed for the 48-page inventory.",
+      "GitHub CI visual review passed the new Arabic and English press pages and targeted asset sections across desktop, mobile, and narrow-mobile viewports.",
+      "The replacement media card is a valid 1733x907 PNG; its deployed SHA-256 matches the tested local asset."
     ],
     "builds": [
-      "GitHub Pages deployment for PR #57 completed successfully from main."
+      "GitHub Pages deployment for PR #59 completed successfully from main."
     ],
     "device_or_browser_checks": [
-      "All 46 sitemap URLs returned HTTP 200 after PR #57 deployment.",
-      "The public apex, www redirect, HTTP redirect, old-host path-preserving redirect, TLS SANs, DNS ownership TXT, live schema, manifest, and favicon hashes were verified after deployment.",
-      "The new pen mark and the unchanged page layout were visually checked at desktop and 390x844 mobile viewport sizes."
+      "All 48 sitemap URLs returned HTTP 200 after PR #59 deployment.",
+      "The live Arabic and English press pages returned HTTP 200 with correct canonical URLs, loaded identity assets, and no broken images.",
+      "The Arabic page was visually checked at desktop and 390x844 mobile viewport sizes with no horizontal overflow; the English page was checked for LTR structure and asset loading.",
+      "The apex, www redirect, old-host path-preserving redirect, TLS SANs, Google verification TXT, and GitHub Pages verification TXT were verified after deployment."
     ]
   },
   "unverified": [
     "Search ranking and Google's selected site name/favicon can change only after recrawl and are not guaranteed.",
-    "URL Inspection still showed the old GitHub Pages URL as Google's selected canonical immediately after the move; the new home page is now queued for priority recrawl.",
-    "GitHub Pages settings still displayed DNS Check in Progress even though public DNS, HTTPS, the custom domain, and both redirects passed independent live checks."
+    "Indexing of /press/ and /en/press/, knowledge-panel eligibility, independent citations, referral traffic, and ranking gains are not yet observed.",
+    "GitHub Pages settings previously displayed DNS Check in Progress even though public DNS, HTTPS, the custom domain, and redirects passed independent live checks."
   ],
   "blockers": [],
   "local_only_items": [
     "Working clone: C:\\Users\\xxx\\Ahmed-Projects\\work\\site-seo-migration-2026-09-22"
   ],
-  "notes": "The site move is active in Search Console, the 46-URL sitemap was refreshed, and one homepage indexing request was accepted. The single site name is أحمد الحافظ, with Ahmed Alhafiz and Ahmad Alhafiz preserved as aliases. No ranking, traffic, knowledge-panel, or AI-citation gain is claimed."
+  "notes": "The official site now has 48 public canonical pages, including a bilingual press centre. The author entity remains one canonical Person with verified Medium and Instagram profiles only. No ranking, traffic, knowledge-panel, indexing, or independent-citation gain is claimed."
 }
