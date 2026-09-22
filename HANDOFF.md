@@ -1,58 +1,47 @@
 # HANDOFF — الحالة الحية للموقع
 
-آخر تحديث: 2026-09-22 20:23 Europe/Vienna
+آخر تحديث: 2026-09-22 21:14 Europe/Vienna
 
 ## الحالة الحالية
-- المستودع: `Ahmed-Alhafiz/ahmed-alhafiz.github.io`.
-- الفرع الرسمي والمنشور: `main`.
-- HEAD المصدر المتحقق بعد دمج PR #54: `3bc0518aa677e3f8c6251ae714fdb098734494fe`.
-- GitHub هو مصدر الحقيقة؛ اقرأ HEAD البعيد الحالي قبل أي عمل جديد.
-- Ruleset `Protect main` فعّال، بلا bypass، ويتطلب Pull Request وستة status checks.
-- فرع العمل الحالي: `seo/custom-domain-canonical-migration`.
-- المهمة الحالية: نقل كل canonical/hreflang/schema/sitemap/feed/IndexNow والهوية الآلية إلى `https://ahmedalhafiz.com`.
+- المستودع: `Ahmed-Alhafiz/ahmed-alhafiz.github.io`، ومصدر الحقيقة هو GitHub.
+- الفرع المنشور: `main` على SHA `635a93b3cde68fa59c5ebadce3401533589f18b0` بعد دمج PR #55.
+- Ruleset `Protect main` فعّال ويتطلب Pull Request وستة فحوص، بلا bypass.
+- فرع العمل: `seo/author-entity-brand`.
+- المهمة: تقوية هوية الكاتب في البحث، اعتماد شعار قلم أصلي، وإضافة فهارس مؤلفات بثلاث لغات.
 
 ## ما تم فعليًا
-- انتهت جولة UX الرئيسية حتى PR #51 ونُشرت على `main`.
-- أُغلق تعارض الحوكمة في PR #52: استُعيد `PROJECT_STATE.json` و`HANDOFF.md`، ورُبطا بـ`PROJECT_OS.json`.
-- أُضيف `validate_live_state.py` إلى Governance integrity للتحقق من وجود ملفي الحالة وترابطهما.
-- PR #52 اندمج بنجاح وأصبح `main` على `71348b952456bbe11e823fe4585bbbfb42b409f6`.
-- أُعدّ checkpoint بعد الدمج لتسجيل الحالة المستقرة دون تغيير صفحات الموقع.
+- رُبط الدومين `https://ahmedalhafiz.com` بالموقع، وفُعّل HTTPS وتحويل `www` والرابط القديم إلى الدومين الأساسي.
+- هاجرت canonical وhreflang وschema وsitemap وfeed وIndexNow إلى الدومين الرسمي عبر PR #55.
+- أُنشئت ملكية Domain في Google Search Console، وقُبل Sitemap الذي كان يحوي 43 رابطًا، وطُلبت فهرسة الصفحة الرئيسية وصفحة الكاتب العربية.
+- كُشف أن `favicon.png` السابق مقطوع وغير صالح؛ استُبدل بحزمة صحيحة لشعار قلم ذهبي، مع ICO وPNG وWeb App Manifest.
+- استُبدلت علامة `AA` المرئية بشعار القلم، وأُضيفت صفحات مؤلفات عربية وإنجليزية وألمانية وروابط داخلية مباشرة إليها.
+- توسع Sitemap من 43 إلى 46 رابطًا. لم تتغير حالة الكتب: ما زالت موصوفة بوضوح بأنها قيد الإعداد وغير منشورة رسميًا.
 
 ## ما يجري العمل عليه الآن
-- اكتملت دفعة الهجرة محليًا، وتشمل 43 صفحة عامة و43 canonical و43 رابط Sitemap، إضافة إلى الخلاصات وبيانات الهوية والاستشهاد وIndexNow وأدوات الفحص.
-- لم تتغير النصوص المرئية أو التصميم أو حالة المؤلفات.
-- يلزم الآن Commit/Push ثم Pull Request والفحوص الستة والدمج والتحقق الحي.
+- تدقيق فرع `seo/author-entity-brand` محليًا، ثم رفعه عبر Pull Request محمي.
 
 ## التحقق المنجز
-- PR #52 اجتاز الستة required checks على HEAD النهائي قبل الدمج.
-- Governance integrity بعد الدمج نجح على `main@71348b952456bbe11e823fe4585bbbfb42b409f6`.
-- Site integrity وCitation metadata integrity وContent research architecture بعد الدمج نجحت على نفس HEAD.
-- GitHub Pages deployment run 299 نجح على نفس HEAD.
-- `Protect main` ما زال Active، يستهدف default branch، بلا bypass actors، ويتطلب الفحوص الستة المعتمدة.
-- لا توجد Pull Requests مفتوحة بعد دمج PR #52 وقبل checkpoint sync.
-- البنية الحية للدومين الجديد وHTTPS وتحويل `www` والرابط القديم تحققت قبل بدء الهجرة.
-- نجحت محليًا: Governance، Site Integrity، Public Hygiene، Editorial، Discovery، Dossier، Entity، Visibility، IndexNow dry-run، UX، Arabic UI، Citation Metadata، Content Research Architecture، و`git diff --check`.
+- مصدر `origin/main` المتحقق هو `635a93b3cde68fa59c5ebadce3401533589f18b0`.
+- نجحت محليًا فحوص Governance وSite وPresentation وEditorial وDiscovery وDossier وEntity وVisibility وUX وArabic UI وCitation وResearch Architecture وIndexNow dry-run و`git diff --check`.
 
 ## ما لم يُفحص / حدود الدليل
-- لم تمر الدفعة بعد بفحوص Pull Request البعيدة ولم تُنشر على `main`.
-- لم يُفحص canonical الذي اختاره Google أو ترتيب الاسم بعد الهجرة.
-- لا يوجد ادعاء جديد عن ranking أو AI citation أو traffic.
+- لا يوجد ادعاء بضمان المركز الأول أو مدة محددة لظهور اسم الموقع أو الأيقونة؛ ذلك يتوقف على إعادة زحف Google وإشارات الويب الخارجية.
+- الفرع الحالي لم يمر بعد بفحوص Pull Request البعيدة ولم يُنشر حيًا.
+- لم تُنشأ حسابات أو مراجع خارجية غير متحققة مثل Wikidata أو ORCID أو Goodreads.
 
 ## المخاطر أو الـblockers
-- لا توجد blockers معروفة حاليًا.
-- لا يوجد Laptop-only blocker معروف.
+- لا توجد عوائق معروفة حاليًا.
 
 ## الخطوة التالية الدقيقة
-1. Commit وPush للفرع ثم فتح Pull Request.
-2. انتظار الفحوص الستة ودمج الدفعة دون bypass.
-3. التحقق من الصفحة الحية وcanonical/hreflang/sitemap/robots/author.json/IndexNow.
-4. إضافة ملكية الدومين الجديد في Search Console، إرسال Sitemap، وطلب فهرسة الصفحات ذات الأولوية.
+1. تشغيل كل فحوص المشروع محليًا.
+2. Commit وPush وفتح Pull Request، ثم انتظار الفحوص الستة والدمج دون bypass.
+3. التحقق الحي من الصفحات الجديدة والشعار والـfavicon والـschema وSitemap والتحويلات.
+4. إعادة إرسال Sitemap وطلب فهرسة الصفحة الرئيسية وصفحة المؤلفات بعد النشر.
 
 ## ملفات أو بيانات محلية لا تنتقل عبر Git
-- نسخة العمل المؤقتة: `C:\Users\xxx\Ahmed-Projects\work\site-seo-migration-2026-09-22`.
+- نسخة العمل: `C:\Users\xxx\Ahmed-Projects\work\site-seo-migration-2026-09-22`.
 
 ## فحص الاستلام على الجهاز الآخر
-1. اقرأ HEAD الفعلي من GitHub قبل أي عمل.
-2. اقرأ `PROJECT_CONSTITUTION.md`, `PRODUCT_SPEC.md`, `DECISIONS.md`, `QUALITY_GATES.md`, `AGENTS.md`, `PROJECT_STATE.json`, ثم هذا الملف.
-3. على اللابتوب اقرأ أيضًا `LAPTOP_CREDIT_POLICY.md`.
-4. لا تكرر فحصًا بقيت مدخلاته كما هي؛ نفّذ أقصر preflight مناسب للمهمة الجديدة.
+1. اقرأ HEAD البعيد قبل أي تعديل.
+2. اقرأ `PROJECT_STATE.json` وملفات الحوكمة وهذا الملف.
+3. لا تكرر فحصًا لم تتغير مدخلاته.
