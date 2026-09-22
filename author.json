@@ -60,6 +60,14 @@
       "sameAs": [
         "https://medium.com/@AhmedAlhafiz",
         "https://www.instagram.com/ahmed_666_8"
+      ],
+      "subjectOf": [
+        {
+          "@id": "https://ahmedalhafiz.com/press/#page"
+        },
+        {
+          "@id": "https://ahmedalhafiz.com/en/press/#page"
+        }
       ]
     },
     {
@@ -89,6 +97,26 @@
       "name": "Ahmed Alhafiz — Schriftsteller und Autor",
       "inLanguage": "de",
       "mainEntity": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ahmedalhafiz.com/press/#page",
+      "url": "https://ahmedalhafiz.com/press/",
+      "name": "المركز الصحفي لأحمد الحافظ",
+      "inLanguage": "ar",
+      "about": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ahmedalhafiz.com/en/press/#page",
+      "url": "https://ahmedalhafiz.com/en/press/",
+      "name": "Ahmed Alhafiz Press Kit",
+      "inLanguage": "en",
+      "about": {
         "@id": "https://ahmedalhafiz.com/#person"
       }
     },
