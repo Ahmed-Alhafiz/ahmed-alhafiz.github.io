@@ -1,42 +1,45 @@
 # HANDOFF — الحالة الحية للموقع
 
-آخر تحديث: 2026-09-22 21:14 Europe/Vienna
+آخر تحديث: 2026-09-22 22:10 Europe/Vienna
 
 ## الحالة الحالية
 - المستودع: `Ahmed-Alhafiz/ahmed-alhafiz.github.io`، ومصدر الحقيقة هو GitHub.
-- الفرع المنشور: `main` على SHA `635a93b3cde68fa59c5ebadce3401533589f18b0` بعد دمج PR #55.
+- الفرع المنشور: `main` على SHA `1bbe33043406f0313fe1d8c0b9a4e6ebef2485be` بعد دمج PR #56.
 - Ruleset `Protect main` فعّال ويتطلب Pull Request وستة فحوص، بلا bypass.
-- فرع العمل: `seo/author-entity-brand`.
-- المهمة: تقوية هوية الكاتب في البحث، اعتماد شعار قلم أصلي، وإضافة فهارس مؤلفات بثلاث لغات.
+- فرع العمل: `seo/search-migration-brand-v2`.
+- المهمة: تثبيت نقل إشارات Google إلى الدومين الرسمي، وتوحيد اسم الموقع، وتقوية وضوح أيقونة القلم في نتائج البحث.
 
 ## ما تم فعليًا
 - رُبط الدومين `https://ahmedalhafiz.com` بالموقع، وفُعّل HTTPS وتحويل `www` والرابط القديم إلى الدومين الأساسي.
 - هاجرت canonical وhreflang وschema وsitemap وfeed وIndexNow إلى الدومين الرسمي عبر PR #55.
-- أُنشئت ملكية Domain في Google Search Console، وقُبل Sitemap الذي كان يحوي 43 رابطًا، وطُلبت فهرسة الصفحة الرئيسية وصفحة الكاتب العربية.
-- كُشف أن `favicon.png` السابق مقطوع وغير صالح؛ استُبدل بحزمة صحيحة لشعار قلم ذهبي، مع ICO وPNG وWeb App Manifest.
+- أُنشئت ملكية Domain في Google Search Console، ويحتوي Sitemap الحي على 46 رابطًا.
+- قُبلت رسميًا عملية **Change of Address** من `ahmed-alhafiz.github.io` إلى `ahmedalhafiz.com` بتاريخ 2026-09-22، وتعرض Search Console أن النقل جارٍ الآن.
+- أُعيد بناء حزمة favicon كقلم ذهبي عريض عالي التباين، مع ICO وPNG وSVG وWeb App Manifest.
 - استُبدلت علامة `AA` المرئية بشعار القلم، وأُضيفت صفحات مؤلفات عربية وإنجليزية وألمانية وروابط داخلية مباشرة إليها.
 - توسع Sitemap من 43 إلى 46 رابطًا. لم تتغير حالة الكتب: ما زالت موصوفة بوضوح بأنها قيد الإعداد وغير منشورة رسميًا.
 
 ## ما يجري العمل عليه الآن
-- تدقيق فرع `seo/author-entity-brand` محليًا، ثم رفعه عبر Pull Request محمي.
+- توحيد `WebSite.name` و`og:site_name` واسم التطبيق على `أحمد الحافظ`، مع إبقاء `Ahmed Alhafiz` و`Ahmad Alhafiz` أسماء بديلة حقيقية.
+- رفع التغييرات عبر Pull Request محمي، ثم تحقق حي وإعادة إرسال Sitemap وطلب زحف الصفحة الرئيسية مرة واحدة.
 
 ## التحقق المنجز
-- مصدر `origin/main` المتحقق هو `635a93b3cde68fa59c5ebadce3401533589f18b0`.
-- نجحت محليًا فحوص Governance وSite وPresentation وEditorial وDiscovery وDossier وEntity وVisibility وUX وArabic UI وCitation وResearch Architecture وIndexNow dry-run و`git diff --check`.
+- مصدر `origin/main` المتحقق هو `1bbe33043406f0313fe1d8c0b9a4e6ebef2485be`.
+- نجحت محليًا فحوص Site وPresentation وEditorial وDiscovery وDossier وEntity وVisibility وUX وArabic UI وCitation وResearch Architecture وIndexNow dry-run و`git diff --check`.
+- تحققت أبعاد favicon الفعلية: 16 و24 و32 و48 و96 و192 و512 بكسل، وفُحص الرأس والهوية على سطح المكتب وهاتف بعرض 390 بكسل.
 
 ## ما لم يُفحص / حدود الدليل
 - لا يوجد ادعاء بضمان المركز الأول أو مدة محددة لظهور اسم الموقع أو الأيقونة؛ ذلك يتوقف على إعادة زحف Google وإشارات الويب الخارجية.
 - الفرع الحالي لم يمر بعد بفحوص Pull Request البعيدة ولم يُنشر حيًا.
+- قبول النقل لا يعني تغيير النتيجة فورًا؛ ظهور الاسم والأيقونة والترتيب يبقى بيد إعادة الزحف وأنظمة Google.
 - لم تُنشأ حسابات أو مراجع خارجية غير متحققة مثل Wikidata أو ORCID أو Goodreads.
 
 ## المخاطر أو الـblockers
 - لا توجد عوائق معروفة حاليًا.
 
 ## الخطوة التالية الدقيقة
-1. تشغيل كل فحوص المشروع محليًا.
-2. Commit وPush وفتح Pull Request، ثم انتظار الفحوص الستة والدمج دون bypass.
-3. التحقق الحي من الصفحات الجديدة والشعار والـfavicon والـschema وSitemap والتحويلات.
-4. إعادة إرسال Sitemap وطلب فهرسة الصفحة الرئيسية وصفحة المؤلفات بعد النشر.
+1. Commit وPush وفتح Pull Request، ثم انتظار الفحوص الستة والدمج دون bypass.
+2. التحقق الحي من الشعار والـfavicon واسم الموقع والـschema وSitemap والتحويلات.
+3. إعادة إرسال Sitemap وطلب فهرسة الصفحة الرئيسية مرة واحدة بعد النشر.
 
 ## ملفات أو بيانات محلية لا تنتقل عبر Git
 - نسخة العمل: `C:\Users\xxx\Ahmed-Projects\work\site-seo-migration-2026-09-22`.

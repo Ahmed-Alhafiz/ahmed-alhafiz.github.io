@@ -2,37 +2,39 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "seo/author-entity-brand",
-  "head_sha": "635a93b3cde68fa59c5ebadce3401533589f18b0",
-  "head_sha_semantics": "Verified origin/main SHA after PR #55 and before the author identity and pen-brand branch.",
+  "branch": "seo/search-migration-brand-v2",
+  "head_sha": "1bbe33043406f0313fe1d8c0b9a4e6ebef2485be",
+  "head_sha_semantics": "Verified origin/main SHA after PR #56 and before the Search Console migration and favicon-hardening branch.",
   "status": "in_progress_premerge",
-  "updated_at": "2026-09-22T21:14:36+02:00",
-  "current_task": "Strengthen the verified author entity, replace the broken favicon and AA mark with an original pen emblem, and add multilingual book hubs.",
-  "next_action": "Run the complete local gate set, open a pull request, require all six checks, merge without bypass, verify the live deployment, then refresh discovery surfaces.",
+  "updated_at": "2026-09-22T22:10:29+02:00",
+  "current_task": "Complete the verified Google site move and harden the author site's selected name and favicon signals.",
+  "next_action": "Commit and push this branch, open a protected pull request, require all six checks, merge without bypass, verify the live assets and metadata, then refresh the sitemap and request a homepage recrawl once.",
   "last_verified": {
     "git_remote_matches": true,
     "tests": [
-      "PR #55 passed all six required checks and merged to main at 635a93b3cde68fa59c5ebadce3401533589f18b0.",
+      "PR #56 passed all six required checks and merged to main at 1bbe33043406f0313fe1d8c0b9a4e6ebef2485be.",
       "The custom domain, HTTPS, www-to-apex redirect, old GitHub Pages redirect, and both ownership TXT records were verified after deployment.",
-      "The Google Search Console Domain property is verified and the 43-URL sitemap was accepted before this branch.",
+      "Google Search Console accepted the Change of Address from ahmed-alhafiz.github.io to ahmedalhafiz.com on 2026-09-22.",
+      "The Google Search Console Domain property is verified and its 46-URL sitemap remains successful.",
       "Google URL Inspection accepted indexing requests for the home page and Arabic author page.",
-      "The existing favicon.png was verified to be truncated and has been replaced with a valid multi-size pen identity set.",
-      "All local governance, site, presentation, editorial, discovery, dossier, entity, visibility, UX, Arabic UI, citation, research architecture, IndexNow dry-run, and whitespace gates passed for this branch."
+      "The favicon set was regenerated as a flat, bold pen-nib mark and validated at 16, 24, 32, 48, 96, 192, and 512 pixels.",
+      "All local site, presentation, editorial, discovery, dossier, entity, visibility, UX, Arabic UI, citation, research architecture, favicon, IndexNow dry-run, and whitespace gates passed for this branch."
     ],
     "builds": [
       "GitHub Pages deployment for PR #55 completed successfully."
     ],
     "device_or_browser_checks": [
-      "The public domain and redirects were verified in a browser after PR #55 deployment."
+      "The public domain and redirects were verified in a browser after PR #56 deployment.",
+      "The new pen mark and the unchanged page layout were visually checked at desktop and 390x844 mobile viewport sizes."
     ]
   },
   "unverified": [
-    "This author-identity branch has not yet passed remote PR checks or been verified on the live deployment.",
+    "This Search migration and favicon branch has not yet passed remote PR checks or been verified on the live deployment.",
     "Search ranking and Google's selected site name/favicon can change only after recrawl and are not guaranteed."
   ],
   "blockers": [],
   "local_only_items": [
     "Working clone: C:\\Users\\xxx\\Ahmed-Projects\\work\\site-seo-migration-2026-09-22"
   ],
-  "notes": "This branch adds three book-hub URLs, taking the sitemap from 43 to 46 URLs. It does not claim publication, ranking, traffic, or AI-citation gains."
+  "notes": "The site move is active in Search Console. This branch standardizes the single site name to أحمد الحافظ, preserves Ahmed Alhafiz and Ahmad Alhafiz as aliases, and replaces the thin favicon with a high-contrast pen-nib mark. It does not claim ranking, traffic, knowledge-panel, or AI-citation gains."
 }
