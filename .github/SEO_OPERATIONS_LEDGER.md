@@ -536,3 +536,12 @@ This file is operational only. It is not an independent public source for biblio
 - Verification record: `.github/ENTITY_MEASUREMENT_FOUNDATION_12_VERIFICATION.md`.
 - Status: `EXECUTED_VERIFIED`.
 - Next: preserve the 7/30/90-day measurement windows; rebuild `teaching-names-ai-understanding` into the fourth complete bilingual pillar; do not migrate the canonical host until the user owns and verifies the selected domain.
+
+### 2026-09-22 — Custom-domain canonical migration
+- Task: author entity / domain migration / technical SEO.
+- Target/problem: GitHub Pages served `https://ahmedalhafiz.com`, but canonical, hreflang, schema, sitemap, feeds, citation assets, identity manifests, IndexNow, and integrity tooling still named the former GitHub Pages origin.
+- Action: migrated the current public and machine-readable origin to `https://ahmedalhafiz.com` across all 43 public pages, 43 sitemap URLs, Arabic/English feeds, `author.json`, research and evidence records, citation metadata, discovery configuration, GSC relay guidance, and permanent integrity checks. Historical ledger and release-verification URLs were deliberately preserved as history. The public text, visual design, URL paths, and book publication states were not changed.
+- Rollback point: `main@3bc0518aa677e3f8c6251ae714fdb098734494fe`.
+- Verification: local governance, site integrity, public hygiene, editorial, discovery, dossier, entity, visibility, IndexNow dry-run, UX, Arabic UI, citation metadata, research architecture, and `git diff --check` passed. Remote PR checks, deployment, live canonical validation, and Search Console transition remain required.
+- Status: `EXECUTED_AWAITING_MEASUREMENT`.
+- Next: merge only after all protected checks pass; verify live outputs and path-preserving redirects; submit the new sitemap and inspect priority URLs in Search Console; measure at Day 7, Day 30, and Day 90 without claiming ranking gains early.

@@ -32,8 +32,8 @@ SCRIPT_RE = re.compile(
     r"<script\b[^>]*\btype=[\"']application/ld\+json[\"'][^>]*>(.*?)</script>",
     re.IGNORECASE | re.DOTALL,
 )
-AUTHOR_ID = "https://ahmed-alhafiz.github.io/#person"
-USER_AGENT = "AhmedAlhafiz-Visibility-Audit/1.0 (+https://ahmed-alhafiz.github.io/about/)"
+AUTHOR_ID = "https://ahmedalhafiz.com/#person"
+USER_AGENT = "AhmedAlhafiz-Visibility-Audit/1.0 (+https://ahmedalhafiz.com/about/)"
 
 
 class VisibleText(HTMLParser):

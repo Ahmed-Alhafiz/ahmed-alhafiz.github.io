@@ -11,7 +11,7 @@ Purpose: provide the recurring SEO measurement task with real, finalized Search 
 - No Search Console performance data, OAuth token, password, or credential is committed to GitHub.
 
 ## One-time setup
-1. Open `https://script.new` while signed in to the same Google account that owns or can read the Search Console property `https://ahmed-alhafiz.github.io/`.
+1. Open `https://script.new` while signed in to the same Google account that owns or can read the Search Console property `https://ahmedalhafiz.com/`.
 2. Replace the default `Code.gs` with the contents of `Code.gs` in this folder.
 3. In Apps Script **Project Settings**, enable showing the `appsscript.json` manifest file in the editor, then replace its contents with this folder's `appsscript.json`.
 4. Save the project.

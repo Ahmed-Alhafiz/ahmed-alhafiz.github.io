@@ -74,7 +74,7 @@ def when(value, ctx):
     return d.astimezone(timezone.utc)
 def route(url):
     p = urlparse(url)
-    if p.scheme and p.netloc != "ahmed-alhafiz.github.io": die(f"off-site canonical research URL: {url}")
+    if p.scheme and p.netloc != "ahmedalhafiz.com": die(f"off-site canonical research URL: {url}")
     r = p.path if p.scheme else url.split("#",1)[0].split("?",1)[0]
     if not r.startswith("/"): r = "/" + r
     if not r.endswith("/"): die(f"canonical research URL lacks trailing slash: {url}")
@@ -190,7 +190,7 @@ def surfaces(indexed):
     for u, x in indexed.items():
         r = route(u)
         if r not in ah or u not in urls: die(f"{x['slug']}: absent from Arabic hub/sitemap")
-        bp = BOOKS[x["book"]]; bh = bp.read_text(encoding="utf-8"); br = "/" + str(bp.relative_to(ROOT)).removesuffix("index.html")
+        bp = BOOKS[x["book"]]; bh = bp.read_text(encoding="utf-8"); br = "/" + bp.relative_to(ROOT).as_posix().removesuffix("index.html")
         sh = page_path(u).read_text(encoding="utf-8")
         if r not in bh or br not in sh: die(f"{x['slug']}: reciprocal book link missing")
         if x.get("english_url"):
@@ -210,7 +210,7 @@ def english_homepage(expected):
         if isinstance(data, dict) and isinstance(data.get("@graph"), list):
             nodes += data["@graph"]
         for node in nodes:
-            if isinstance(node, dict) and node.get("@type") == "ItemList" and node.get("@id") == "https://ahmed-alhafiz.github.io/en/#featured-research":
+            if isinstance(node, dict) and node.get("@type") == "ItemList" and node.get("@id") == "https://ahmedalhafiz.com/en/#featured-research":
                 target = node
     if target is None:
         die("en/index.html: featured English research ItemList missing")

@@ -1,9 +1,11 @@
 # Custom Domain Migration Plan
 
-**Status:** prepared; not activated  
-**Prepared:** 2026-09-02  
-**Current canonical origin:** `https://ahmed-alhafiz.github.io`  
-**Blocking dependency:** the user must choose and purchase a domain before DNS or canonical migration can be executed.
+**Status:** infrastructure activated; repository canonical migration in progress
+**Prepared:** 2026-09-02
+**Activated:** 2026-09-22
+**Current public origin:** `https://ahmedalhafiz.com`
+**Repository rollback point:** `main@3bc0518aa677e3f8c6251ae714fdb098734494fe`
+**Remaining dependency:** merge and deploy the repository-wide canonical migration, then complete Search Console transition checks.
 
 ## 1. Recommended naming order
 
@@ -17,10 +19,10 @@ Do not acquire multiple domains merely to create duplicate sites. At most, secon
 
 ## 2. Canonical form
 
-Preferred public form after purchase:
+Selected public form:
 
-- `https://www.DOMAIN/` as the configured GitHub Pages custom domain;
-- `https://DOMAIN/` configured at DNS and redirected automatically to the `www` form;
+- `https://ahmedalhafiz.com/` as the configured GitHub Pages custom domain and canonical origin;
+- `https://www.ahmedalhafiz.com/` configured at DNS and redirected automatically to the apex form;
 - one HTTPS origin only;
 - no parallel duplicate indexable copy.
 
@@ -30,9 +32,9 @@ GitHub documents `www` as the most stable custom-domain form because it uses a C
 
 The order is security-critical.
 
-1. Purchase the selected domain through the user’s registrar account.
-2. Add and verify the domain in the user’s GitHub account before publishing DNS records.
-3. In repository **Settings → Pages**, add `www.DOMAIN` as the custom domain.
+1. Purchase the selected domain through the user’s registrar account. **Completed: `ahmedalhafiz.com`.**
+2. Add and verify the domain in the user’s GitHub account before publishing DNS records. **Completed.**
+3. In repository **Settings → Pages**, add `ahmedalhafiz.com` as the custom domain. **Completed.**
 4. At the DNS provider, add:
    - `CNAME` — host `www` — value `Ahmed-Alhafiz.github.io`.
    - Apex `A` records — host `@`:
@@ -46,13 +48,13 @@ The order is security-critical.
      - `2606:50c0:8002::153`
      - `2606:50c0:8003::153`
 5. Do not create wildcard DNS records such as `*.DOMAIN`.
-6. Verify DNS with `dig` or the registrar’s DNS inspection tool.
-7. Wait for GitHub Pages to issue the certificate, then enable **Enforce HTTPS**.
+6. Verify DNS with a public resolver or the registrar’s DNS inspection tool. **Completed for apex A/AAAA and `www` CNAME.**
+7. Wait for GitHub Pages to issue the certificate, then enable **Enforce HTTPS**. **Completed.**
 8. Confirm redirects:
-   - apex → `www`;
+   - `www` → apex;
    - HTTP → HTTPS;
    - old `github.io` URLs → the corresponding custom-domain paths.
-9. Only after live HTTPS and redirects are verified, run the repository-wide canonical migration.
+9. Only after live HTTPS and redirects are verified, run the repository-wide canonical migration. **In progress on the controlled migration branch.**
 10. Submit the new sitemap in a new Search Console domain property and monitor both old and new properties during the transition.
 
 ## 4. Repository migration batch

@@ -7,7 +7,7 @@ authors:
     given-names: "Ahmed"
 version: "1.0"
 date-released: "2026-09-02"
-url: "https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/claims.json"
+url: "https://ahmedalhafiz.com/articles/water-civilization-power/evidence/claims.json"
 repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
 abstract: "Portable claim, source, and citation metadata accompanying the bilingual water-governance research dossier."
 keywords:
@@ -28,4 +28,4 @@ preferred-citation:
   year: 2026
   month: 9
   version: "1.0"
-  url: "https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/"
+  url: "https://ahmedalhafiz.com/en/articles/water-civilization-power/"

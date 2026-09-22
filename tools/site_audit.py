@@ -12,7 +12,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-BASE='https://ahmed-alhafiz.github.io'
+BASE='https://ahmedalhafiz.com'
 EXCLUDED={'404.html'}
 
 @dataclass
@@ -160,20 +160,20 @@ def main()->int:
             if re.search(r'\b97[89][0-9\- ]{10,17}\b',source):errors.append(f'{rel}: ISBN-like number exposed on forthcoming page')
         # Paired research architecture.
         paired={
-          'articles/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/'),
-          'methodology/index.html':('en','https://ahmed-alhafiz.github.io/en/methodology/'),
-          'research-status/index.html':('en','https://ahmed-alhafiz.github.io/en/research-status/'),
-          'articles/ratq-fatq-big-bang/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/'),
-          'articles/ratq-fatq-big-bang/evidence/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/ratq-fatq-big-bang/evidence/'),
-          'articles/water-civilization-power/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/'),
-          'articles/water-civilization-power/evidence/index.html':('en','https://ahmed-alhafiz.github.io/en/articles/water-civilization-power/evidence/'),
-          'en/articles/index.html':('ar','https://ahmed-alhafiz.github.io/articles/'),
-          'en/methodology/index.html':('ar','https://ahmed-alhafiz.github.io/methodology/'),
-          'en/research-status/index.html':('ar','https://ahmed-alhafiz.github.io/research-status/'),
-          'en/articles/ratq-fatq-big-bang/index.html':('ar','https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/'),
-          'en/articles/ratq-fatq-big-bang/evidence/index.html':('ar','https://ahmed-alhafiz.github.io/articles/ratq-fatq-big-bang/evidence/'),
-          'en/articles/water-civilization-power/index.html':('ar','https://ahmed-alhafiz.github.io/articles/water-civilization-power/'),
-          'en/articles/water-civilization-power/evidence/index.html':('ar','https://ahmed-alhafiz.github.io/articles/water-civilization-power/evidence/'),
+          'articles/index.html':('en','https://ahmedalhafiz.com/en/articles/'),
+          'methodology/index.html':('en','https://ahmedalhafiz.com/en/methodology/'),
+          'research-status/index.html':('en','https://ahmedalhafiz.com/en/research-status/'),
+          'articles/ratq-fatq-big-bang/index.html':('en','https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/'),
+          'articles/ratq-fatq-big-bang/evidence/index.html':('en','https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/evidence/'),
+          'articles/water-civilization-power/index.html':('en','https://ahmedalhafiz.com/en/articles/water-civilization-power/'),
+          'articles/water-civilization-power/evidence/index.html':('en','https://ahmedalhafiz.com/en/articles/water-civilization-power/evidence/'),
+          'en/articles/index.html':('ar','https://ahmedalhafiz.com/articles/'),
+          'en/methodology/index.html':('ar','https://ahmedalhafiz.com/methodology/'),
+          'en/research-status/index.html':('ar','https://ahmedalhafiz.com/research-status/'),
+          'en/articles/ratq-fatq-big-bang/index.html':('ar','https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/'),
+          'en/articles/ratq-fatq-big-bang/evidence/index.html':('ar','https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/evidence/'),
+          'en/articles/water-civilization-power/index.html':('ar','https://ahmedalhafiz.com/articles/water-civilization-power/'),
+          'en/articles/water-civilization-power/evidence/index.html':('ar','https://ahmedalhafiz.com/articles/water-civilization-power/evidence/'),
         }
         if rel.as_posix() in paired:
             code,url=paired[rel.as_posix()]
@@ -312,7 +312,7 @@ def main()->int:
         if ga4_id in page_source:errors.append(f'{p.relative_to(root)}: GA4 measurement ID must stay centralized in {ga4_asset}')
 
     robots=(root/'robots.txt').read_text(encoding='utf-8') if (root/'robots.txt').exists() else ''
-    for token in ['OAI-SearchBot','GPTBot','Sitemap: https://ahmed-alhafiz.github.io/sitemap.xml']:
+    for token in ['OAI-SearchBot','GPTBot','Sitemap: https://ahmedalhafiz.com/sitemap.xml']:
         if token not in robots:errors.append(f'robots.txt missing {token}')
 
     # No temporary release machinery may remain in a public branch.

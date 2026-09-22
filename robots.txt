@@ -17,4 +17,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://ahmed-alhafiz.github.io/sitemap.xml
+Sitemap: https://ahmedalhafiz.com/sitemap.xml

@@ -8,7 +8,7 @@ authors:
     affiliation: "Independent author and researcher"
 version: "1.0"
 date-released: 2026-09-02
-url: "https://ahmed-alhafiz.github.io/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/claims.json"
+url: "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/claims.json"
 repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
 abstract: >-
   Portable claim, source, and citation metadata accompanying the bilingual
@@ -32,4 +32,4 @@ preferred-citation:
   year: 2026
   month: 9
   version: "1.0"
-  url: "https://ahmed-alhafiz.github.io/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/"
+  url: "https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/"
