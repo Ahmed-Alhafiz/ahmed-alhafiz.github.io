@@ -3,15 +3,16 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "1802e191ae1987165e4e634753793bfa0abca8e8",
-  "head_sha_semantics": "Verified implementation merge commit for PR #59 after the bilingual press centre deployment; the following docs-only closeout records that live result.",
+  "head_sha": "b5adef24fc6b9817402c85f093f4392dcb031ff0",
+  "head_sha_semantics": "Merge commit for PR #61, the verified ProfilePage dateModified DateTime repair; the following docs-only closeout records that live result.",
   "status": "complete_live_verified",
-  "updated_at": "2026-09-22T22:56:00+02:00",
-  "current_task": "Monitor recrawl and indexing after the completed site move and bilingual press-centre deployment; no implementation work is open.",
-  "next_action": "Keep the old-host redirects active, avoid duplicate homepage indexing requests, and review Search Console later for the two new press URLs and name/favicon adoption.",
+  "updated_at": "2026-09-23T13:33:07+02:00",
+  "current_task": "No technical implementation is open; wait for Google to recrawl the completed ProfilePage dateModified repair.",
+  "next_action": "Review Search Console only after recrawl; do not resubmit the sitemap or duplicate the homepage indexing request.",
   "last_verified": {
     "git_remote_matches": true,
     "tests": [
+      "PR #61 passed all six required checks and merged to main at b5adef24fc6b9817402c85f093f4392dcb031ff0.",
       "PR #59 passed all six required checks and merged to main at 1802e191ae1987165e4e634753793bfa0abca8e8.",
       "The accepted Google Search Console Change of Address, official custom domain, HTTPS, favicon identity, and old-host redirects remain in place from the completed migration stage.",
       "All main-branch jobs completed successfully, including Pages deployment, IndexNow notification, build-status reporting, citation metadata, research architecture, and site integrity.",
@@ -20,9 +21,11 @@
       "The replacement media card is a valid 1733x907 PNG; its deployed SHA-256 matches the tested local asset."
     ],
     "builds": [
+      "GitHub Pages served the six PR #61 targets after the merge with the repaired ProfilePage dateModified value.",
       "GitHub Pages deployment for PR #59 completed successfully from main."
     ],
     "device_or_browser_checks": [
+      "The live /, /about/, /en/, /en/about/, /de/, and /de/about/ pages each returned HTTP 200 and exposed ProfilePage JSON-LD dateModified as 2026-09-23T11:49:49+02:00.",
       "All 48 sitemap URLs returned HTTP 200 after PR #59 deployment.",
       "The live Arabic and English press pages returned HTTP 200 with correct canonical URLs, loaded identity assets, and no broken images.",
       "The Arabic page was visually checked at desktop and 390x844 mobile viewport sizes with no horizontal overflow; the English page was checked for LTR structure and asset loading.",
@@ -30,6 +33,8 @@
     ]
   },
   "unverified": [
+    "Google Search Console still needs to recrawl before its historical ProfilePage dateModified warning can be reassessed; the warning is not claimed resolved.",
+    "The latest confirmed Search Console sitemap state is successful submission/read with 46 discovered pages; no claim is made that 48 pages are indexed.",
     "Search ranking and Google's selected site name/favicon can change only after recrawl and are not guaranteed.",
     "Indexing of /press/ and /en/press/, knowledge-panel eligibility, independent citations, referral traffic, and ranking gains are not yet observed.",
     "GitHub Pages settings previously displayed DNS Check in Progress even though public DNS, HTTPS, the custom domain, and redirects passed independent live checks."

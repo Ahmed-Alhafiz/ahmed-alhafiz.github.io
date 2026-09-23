@@ -545,3 +545,13 @@ This file is operational only. It is not an independent public source for biblio
 - Verification: local governance, site integrity, public hygiene, editorial, discovery, dossier, entity, visibility, IndexNow dry-run, UX, Arabic UI, citation metadata, research architecture, and `git diff --check` passed. Remote PR checks, deployment, live canonical validation, and Search Console transition remain required.
 - Status: `EXECUTED_AWAITING_MEASUREMENT`.
 - Next: merge only after all protected checks pass; verify live outputs and path-preserving redirects; submit the new sitemap and inspect priority URLs in Search Console; measure at Day 7, Day 30, and Day 90 without claiming ranking gains early.
+
+### 2026-09-23 — ProfilePage `dateModified` DateTime repair
+- Task: structured-data correctness / post-migration monitoring.
+- Target/problem: the ProfilePage report in Google Search Console had recorded a `dateModified` warning for four items before the repair.
+- Action: PR #61 changed only the six ProfilePage JSON-LD `dateModified` values to the ISO 8601 DateTime `2026-09-23T11:49:49+02:00` and updated the corresponding six `sitemap.xml` `lastmod` values to `2026-09-23`. No visible content, facts, links, DNS, or host configuration changed.
+- PR/merge: #61; merge commit `b5adef24fc6b9817402c85f093f4392dcb031ff0`.
+- Verification: the required PR checks passed; after deployment, `/`, `/about/`, `/en/`, `/en/about/`, `/de/`, and `/de/about/` each returned HTTP 200 and exposed the exact repaired DateTime in ProfilePage JSON-LD.
+- Search Console boundary: the sitemap is confirmed successfully submitted/read, with 46 discovered pages in the last confirmed state. The historical warning cannot be claimed resolved and 48 pages cannot be claimed indexed until Google recrawls and reports new evidence.
+- Status: `EXECUTED_AWAITING_MEASUREMENT`.
+- Next: review Search Console after recrawl only; do not resubmit the sitemap or duplicate the homepage indexing request.
