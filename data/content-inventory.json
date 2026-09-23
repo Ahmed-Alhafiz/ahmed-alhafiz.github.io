@@ -34,10 +34,12 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en",
+        "de"
       ],
-      "next_action": "retain_as_central_companion_measure_queries_and_seek_specialist_review",
-      "reason": "Central Arabic companion guide separating symptoms, clinical diagnosis, cultural and spiritual interpretation, historical change, and the novel’s fictional premise; retained outside the four fully qualified pillars until a complete international and review package exists."
+      "next_action": "measure_multilingual_queries_and_seek_specialist_review",
+      "reason": "Central Arabic, English, and German companion guide separating symptoms, clinical diagnosis, cultural and spiritual interpretation, historical change, and the novel’s fictional premise; retained outside the four fully qualified pillars until an independent specialist review and evidence ledger exist."
     },
     {
       "slug": "ratq-fatq-big-bang",
