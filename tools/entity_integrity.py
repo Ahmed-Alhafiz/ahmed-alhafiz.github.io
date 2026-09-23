@@ -33,6 +33,12 @@ IDENTIFIER = {
 JUHAYMAN_ID = "https://ahmedalhafiz.com/books/juhayman/#book"
 JUHAYMAN_TITLE = "جُهَيْمَان — خوارج بين الركن والمقام"
 STALE_JUHAYMAN_TITLE = "جهيمان — القيامة بين الركن والمقام"
+UMM_ABBAS_ID = "https://ahmedalhafiz.com/books/umm-abbas/#book"
+UMM_ABBAS_GUIDE_IDS = {
+    "ar": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/#article",
+    "en": "https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/#article",
+    "de": "https://ahmedalhafiz.com/de/articles/possession-or-neurological-psychological-disorder/#article",
+}
 EXCLUDED_HTML = {"404.html", "google904951439b331720.html"}
 SCRIPT_RE = re.compile(
     r"<script\b[^>]*\btype=[\"']application/ld\+json[\"'][^>]*>(.*?)</script>",
@@ -195,6 +201,38 @@ def validate_manifest(errors: list[str]) -> None:
     for article in articles:
         if article.get("author") != {"@id": AUTHOR_ID}:
             errors.append(f"author.json: article {article.get('url')} does not reference canonical author")
+
+    article_by_id = {article.get("@id"): article for article in articles}
+    guide_by_language: dict[str, dict] = {}
+    for language, article_id in UMM_ABBAS_GUIDE_IDS.items():
+        article = article_by_id.get(article_id)
+        if article is None:
+            errors.append(f"author.json: missing {language} Umm Abbas companion guide node")
+            continue
+        guide_by_language[language] = article
+        if article.get("inLanguage") != language:
+            errors.append(f"author.json: {language} Umm Abbas guide language drifted")
+
+    arabic_guide = guide_by_language.get("ar")
+    if arabic_guide:
+        if arabic_guide.get("about") != {"@id": UMM_ABBAS_ID}:
+            errors.append("author.json: Arabic Umm Abbas guide must reference the book with about")
+        expected_translations = [
+            {"@id": UMM_ABBAS_GUIDE_IDS["en"]},
+            {"@id": UMM_ABBAS_GUIDE_IDS["de"]},
+        ]
+        if arabic_guide.get("workTranslation") != expected_translations:
+            errors.append("author.json: Arabic Umm Abbas guide must link the English and German translations")
+    for language in ("en", "de"):
+        article = guide_by_language.get(language)
+        if article and article.get("translationOfWork") != {"@id": UMM_ABBAS_GUIDE_IDS["ar"]}:
+            errors.append(f"author.json: {language} Umm Abbas guide must link back to the Arabic original")
+
+    umm_abbas = [book for book in books if book.get("@id") == UMM_ABBAS_ID]
+    if len(umm_abbas) != 1:
+        errors.append(f"author.json: expected exactly one Umm Abbas Book node, found {len(umm_abbas)}")
+    elif umm_abbas[0].get("subjectOf") != {"@id": UMM_ABBAS_GUIDE_IDS["ar"]}:
+        errors.append("author.json: Umm Abbas book must link to its Arabic companion guide")
 
 
 def validate_html(errors: list[str]) -> None:
@@ -368,7 +406,8 @@ def main() -> None:
     print(
         "Entity integrity passed: canonical Arabic name, two Latin aliases, one author ID, "
         "two verified public profiles, one machine-readable manifest, three visible profile editions, "
-        "four forthcoming books, four current reference pillars, canonical Juhayman title, and no alias doorway pages."
+        "four forthcoming books, four current reference pillars, one trilingual Umm Abbas companion-guide graph, "
+        "canonical Juhayman title, and no alias doorway pages."
     )
 
 
