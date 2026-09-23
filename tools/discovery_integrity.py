@@ -213,7 +213,9 @@ def surfaces(indexed):
         if x.get("german_url"):
             gu = x["german_url"]; gr = route(gu)
             gh = (ROOT/"de/index.html").read_text(encoding="utf-8")
-            if gu not in urls or gr not in gh: die(f"{x['slug']}: German homepage/sitemap omission")
+            gdh = (ROOT/"de/articles/index.html").read_text(encoding="utf-8")
+            if gu not in urls or gr not in gh or gr not in gdh:
+                die(f"{x['slug']}: German homepage/hub/sitemap omission")
 
 def english_homepage(expected):
     path = ROOT / "en/index.html"
