@@ -31,13 +31,13 @@
     {
       "slug": "possession-or-neurological-psychological-disorder",
       "url": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/",
-      "class": "pillar_candidate",
+      "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
         "ar"
       ],
-      "next_action": "hold_scope_measure_queries_and_seek_specialist_review",
-      "reason": "Central Arabic synthesis separating symptoms, clinical diagnosis, cultural and spiritual interpretation, historical change, and the novel’s fictional premise; it links distinct supporting briefs without replacing them."
+      "next_action": "retain_as_central_companion_measure_queries_and_seek_specialist_review",
+      "reason": "Central Arabic companion guide separating symptoms, clinical diagnosis, cultural and spiritual interpretation, historical change, and the novel’s fictional premise; retained outside the four fully qualified pillars until a complete international and review package exists."
     },
     {
       "slug": "ratq-fatq-big-bang",
@@ -146,7 +146,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 3,
+    "supporting_brief": 4,
     "literary_guide": 1,
     "hold_for_review": 1
   }
