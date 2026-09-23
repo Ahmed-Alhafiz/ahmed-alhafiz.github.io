@@ -332,8 +332,8 @@ def validate_strategy_data(errors: list[str]) -> None:
             errors.append(f"{rel}: invalid JSON: {exc}")
     inventory = json.loads((ROOT / "data/content-inventory.json").read_text(encoding="utf-8"))
     items = inventory.get("items", [])
-    if len(items) != 9:
-        errors.append(f"content inventory: expected nine indexed research/guide items, found {len(items)}")
+    if len(items) != 10:
+        errors.append(f"content inventory: expected ten indexed research/guide items, found {len(items)}")
     counts: dict[str, int] = {key: 0 for key in inventory.get("classes", {})}
     for item in items:
         item_class = item.get("class", "missing")

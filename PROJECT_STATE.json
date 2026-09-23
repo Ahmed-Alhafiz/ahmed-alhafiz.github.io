@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "main",
-  "head_sha": "b5adef24fc6b9817402c85f093f4392dcb031ff0",
-  "head_sha_semantics": "Merge commit for PR #61, the verified ProfilePage dateModified DateTime repair; the following docs-only closeout records that live result.",
-  "status": "complete_live_verified",
-  "updated_at": "2026-09-23T13:33:07+02:00",
-  "current_task": "No technical implementation is open; wait for Google to recrawl the completed ProfilePage dateModified repair.",
-  "next_action": "Review Search Console only after recrawl; do not resubmit the sitemap or duplicate the homepage indexing request.",
+  "branch": "content/umm-abbas-diagnostic-ambiguity",
+  "head_sha": "00a9477c8628f20f0786f58cba19d25b31f01bca",
+  "head_sha_semantics": "Latest functional/doc handoff commit on the working branch before this PROJECT_STATE sync; main remains b5adef24fc6b9817402c85f093f4392dcb031ff0 until PR merge.",
+  "status": "in_progress_pr_pending",
+  "updated_at": "2026-09-23T16:00:00+02:00",
+  "current_task": "Publish the Umm Abbas diagnostic-ambiguity pillar, localized book-page alignment, internal links, machine-readable index, feeds, and sitemap update through a verified pull request.",
+  "next_action": "Open PR from content/umm-abbas-diagnostic-ambiguity to main, pass all six required checks, perform editorial and responsive review, merge, then verify the 49-URL live inventory.",
   "last_verified": {
     "git_remote_matches": true,
     "tests": [
@@ -18,7 +18,8 @@
       "All main-branch jobs completed successfully, including Pages deployment, IndexNow notification, build-status reporting, citation metadata, research architecture, and site integrity.",
       "The local site, presentation, editorial, discovery, dossier, entity, visibility, UX, Arabic UI, IndexNow dry-run, and whitespace gates passed for the 48-page inventory.",
       "GitHub CI visual review passed the new Arabic and English press pages and targeted asset sections across desktop, mobile, and narrow-mobile viewports.",
-      "The replacement media card is a valid 1733x907 PNG; its deployed SHA-256 matches the tested local asset."
+      "The replacement media card is a valid 1733x907 PNG; its deployed SHA-256 matches the tested local asset.",
+      "The working branch contains the new Arabic pillar, revised Arabic/English/German Umm Abbas summaries, research-hub feature, research-index entry, JSON/Atom feed entries, and a 49-URL sitemap."
     ],
     "builds": [
       "GitHub Pages served the six PR #61 targets after the merge with the repaired ProfilePage dateModified value.",
@@ -37,11 +38,12 @@
     "The latest confirmed Search Console sitemap state is successful submission/read with 46 discovered pages; no claim is made that 48 pages are indexed.",
     "Search ranking and Google's selected site name/favicon can change only after recrawl and are not guaranteed.",
     "Indexing of /press/ and /en/press/, knowledge-panel eligibility, independent citations, referral traffic, and ranking gains are not yet observed.",
-    "GitHub Pages settings previously displayed DNS Check in Progress even though public DNS, HTTPS, the custom domain, and redirects passed independent live checks."
+    "GitHub Pages settings previously displayed DNS Check in Progress even though public DNS, HTTPS, the custom domain, and redirects passed independent live checks.",
+    "The new article and related changes are not live until the working branch PR passes checks and is merged."
   ],
   "blockers": [],
   "local_only_items": [
     "Working clone: C:\\Users\\xxx\\Ahmed-Projects\\work\\site-seo-migration-2026-09-22"
   ],
-  "notes": "The official site now has 48 public canonical pages, including a bilingual press centre. The author entity remains one canonical Person with verified Medium and Instagram profiles only. No ranking, traffic, knowledge-panel, indexing, or independent-citation gain is claimed."
+  "notes": "Working branch expands the Umm Abbas topic cluster around diagnostic ambiguity while separating medical evidence, cultural/spiritual interpretation, and the novel’s fictional hypothesis. Machine-readable discovery surfaces and the sitemap are updated. No ranking, traffic, indexing, or medical-verification gain is claimed."
 }

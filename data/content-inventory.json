@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-09-05",
+  "generated": "2026-09-23",
   "site": "https://ahmedalhafiz.com/",
   "policy": {
     "primary_rule": "Do not publish a new URL merely to increase page count. Every indexed page must answer a distinct question, provide unique value, and disclose its evidence and review status.",
@@ -29,11 +29,25 @@
   },
   "items": [
     {
+      "slug": "possession-or-neurological-psychological-disorder",
+      "url": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "next_action": "retain_as_central_companion_measure_queries_and_seek_specialist_review",
+      "reason": "Central Arabic companion guide separating symptoms, clinical diagnosis, cultural and spiritual interpretation, historical change, and the novel’s fictional premise; retained outside the four fully qualified pillars until a complete international and review package exists."
+    },
+    {
       "slug": "ratq-fatq-big-bang",
       "url": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/",
       "class": "pillar",
       "book_cluster": "sirou-fi-alard",
-      "languages": ["ar", "en"],
+      "languages": [
+        "ar",
+        "en"
+      ],
       "next_action": "hold_scope_and_measure",
       "reason": "Established bilingual dossier with claim-evidence architecture and a distinct text–exegesis–cosmology question."
     },
@@ -42,7 +56,10 @@
       "url": "https://ahmedalhafiz.com/articles/water-civilization-power/",
       "class": "pillar",
       "book_cluster": "sirou-fi-alard",
-      "languages": ["ar", "en"],
+      "languages": [
+        "ar",
+        "en"
+      ],
       "next_action": "hold_scope_and_measure",
       "reason": "Bilingual governance dossier with an original six-layer institutional model and comparative cases."
     },
@@ -51,7 +68,10 @@
       "url": "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
       "class": "pillar",
       "book_cluster": "umm-abbas",
-      "languages": ["ar", "en"],
+      "languages": [
+        "ar",
+        "en"
+      ],
       "next_action": "hold_scope_measure_and_seek_specialist_review_after_publication_policy_allows",
       "reason": "Complete bilingual dossier with two original but explicitly non-validated frameworks, 14 claims, and 19 sources."
     },
@@ -60,7 +80,10 @@
       "url": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/",
       "class": "pillar",
       "book_cluster": "sirou-fi-alard",
-      "languages": ["ar", "en"],
+      "languages": [
+        "ar",
+        "en"
+      ],
       "next_action": "hold_scope_and_measure",
       "reason": "Complete bilingual reference dossier with a six-layer analytical framework, reciprocal discovery, portable citation assets, and the former bilingual-parity veto gate closed after final release verification."
     },
@@ -69,7 +92,9 @@
       "url": "https://ahmedalhafiz.com/articles/spiritual-healing-exploitation-safeguarding/",
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "next_action": "retain_as_companion_and_avoid_scope_overlap",
       "reason": "Distinct practitioner-conduct and safeguarding question that complements the upstream family-decision pillar."
     },
@@ -78,7 +103,9 @@
       "url": "https://ahmedalhafiz.com/articles/functional-seizures-vs-epilepsy/",
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "next_action": "retain_pending_specialist_review_and_query_data",
       "reason": "Narrow medical distinction with a separate reader need; must remain conservative and visibly unreviewed by a specialist."
     },
@@ -87,7 +114,9 @@
       "url": "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/",
       "class": "hold_for_review",
       "book_cluster": "sirou-fi-alard",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "next_action": "measure_overlap_with_ratq_pillar_before_merge_or_redirect",
       "reason": "Potential intent overlap with the cosmology pillar; no consolidation should occur before baseline and link-risk review."
     },
@@ -96,7 +125,9 @@
       "url": "https://ahmedalhafiz.com/articles/sleep-paralysis-jathoom/",
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "next_action": "retain_pending_specialist_review_and_query_data",
       "reason": "Distinct medical-cultural question with clear safety relevance and a direct literary connection."
     },
@@ -105,7 +136,9 @@
       "url": "https://ahmedalhafiz.com/guides/arabic-psychological-horror/",
       "class": "literary_guide",
       "book_cluster": "umm-abbas",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "next_action": "retain_as_literary_surface_not_medical_evidence",
       "reason": "Serves craft and literary interpretation rather than clinical search intent."
     }
@@ -113,7 +146,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 3,
+    "supporting_brief": 4,
     "literary_guide": 1,
     "hold_for_review": 1
   }
