@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/umm-abbas-diagnostic-ambiguity",
-  "head_sha": "00a9477c8628f20f0786f58cba19d25b31f01bca",
-  "head_sha_semantics": "Latest functional/doc handoff commit on the working branch before this PROJECT_STATE sync; main remains b5adef24fc6b9817402c85f093f4392dcb031ff0 until PR merge.",
-  "status": "in_progress_pr_pending",
-  "updated_at": "2026-09-23T16:00:00+02:00",
-  "current_task": "Publish the Umm Abbas diagnostic-ambiguity pillar, localized book-page alignment, internal links, machine-readable index, feeds, and sitemap update through a verified pull request.",
-  "next_action": "Open PR from content/umm-abbas-diagnostic-ambiguity to main, pass all six required checks, perform editorial and responsive review, merge, then verify the 49-URL live inventory.",
+  "branch": "main",
+  "head_sha": "71da1c4951db8c8452e38443c23674adf120c226",
+  "head_sha_semantics": "Merge commit for PR #63, the verified Umm Abbas diagnostic-ambiguity content expansion; this docs-only closeout records the live result.",
+  "status": "complete_live_verified",
+  "updated_at": "2026-09-23T18:40:00+02:00",
+  "current_task": "PR #63 merged and deployed: the Umm Abbas diagnostic-ambiguity pillar and all discovery surfaces are live.",
+  "next_action": "Measure Search Console indexing and query performance only after recrawl; do not claim ranking gains before observed data.",
   "last_verified": {
     "git_remote_matches": true,
     "tests": [
@@ -19,18 +19,21 @@
       "The local site, presentation, editorial, discovery, dossier, entity, visibility, UX, Arabic UI, IndexNow dry-run, and whitespace gates passed for the 48-page inventory.",
       "GitHub CI visual review passed the new Arabic and English press pages and targeted asset sections across desktop, mobile, and narrow-mobile viewports.",
       "The replacement media card is a valid 1733x907 PNG; its deployed SHA-256 matches the tested local asset.",
-      "The working branch contains the new Arabic pillar, revised Arabic/English/German Umm Abbas summaries, research-hub feature, research-index entry, JSON/Atom feed entries, and a 49-URL sitemap."
+      "The working branch contains the new Arabic pillar, revised Arabic/English/German Umm Abbas summaries, research-hub feature, research-index entry, JSON/Atom feed entries, and a 49-URL sitemap.",
+      "PR #63 passed all six required checks and merged to main at 71da1c4951db8c8452e38443c23674adf120c226.",
+      "The live article returned HTTP 200 and exposes the expected title, canonical URL, RTL declaration, Article image, eight references, and reciprocal book link without horizontal overflow.",
+      "The live sitemap contains 49 URLs including the new article; research-index.json and feed.json each contain 10 items and exactly one record for the new slug."
     ],
     "builds": [
-      "GitHub Pages served the six PR #61 targets after the merge with the repaired ProfilePage dateModified value.",
-      "GitHub Pages deployment for PR #59 completed successfully from main."
+      "GitHub Pages deployed PR #63 from main and served the new article and revised Arabic, English, and German book pages."
     ],
     "device_or_browser_checks": [
       "The live /, /about/, /en/, /en/about/, /de/, and /de/about/ pages each returned HTTP 200 and exposed ProfilePage JSON-LD dateModified as 2026-09-23T11:49:49+02:00.",
       "All 48 sitemap URLs returned HTTP 200 after PR #59 deployment.",
       "The live Arabic and English press pages returned HTTP 200 with correct canonical URLs, loaded identity assets, and no broken images.",
       "The Arabic page was visually checked at desktop and 390x844 mobile viewport sizes with no horizontal overflow; the English page was checked for LTR structure and asset loading.",
-      "The apex, www redirect, old-host path-preserving redirect, TLS SANs, Google verification TXT, and GitHub Pages verification TXT were verified after deployment."
+      "The apex, www redirect, old-host path-preserving redirect, TLS SANs, Google verification TXT, and GitHub Pages verification TXT were verified after deployment.",
+      "Live HTTP 200 confirmed for the new article, the research hub, and all three localized Umm Abbas book pages."
     ]
   },
   "unverified": [
@@ -39,11 +42,11 @@
     "Search ranking and Google's selected site name/favicon can change only after recrawl and are not guaranteed.",
     "Indexing of /press/ and /en/press/, knowledge-panel eligibility, independent citations, referral traffic, and ranking gains are not yet observed.",
     "GitHub Pages settings previously displayed DNS Check in Progress even though public DNS, HTTPS, the custom domain, and redirects passed independent live checks.",
-    "The new article and related changes are not live until the working branch PR passes checks and is merged."
+    "Google Search Console indexing, query impressions, ranking changes, AI citations, and referral growth remain unmeasured until external systems recrawl and collect data."
   ],
   "blockers": [],
   "local_only_items": [
     "Working clone: C:\\Users\\xxx\\Ahmed-Projects\\work\\site-seo-migration-2026-09-22"
   ],
-  "notes": "Working branch expands the Umm Abbas topic cluster around diagnostic ambiguity while separating medical evidence, cultural/spiritual interpretation, and the novel’s fictional hypothesis. Machine-readable discovery surfaces and the sitemap are updated. No ranking, traffic, indexing, or medical-verification gain is claimed."
+  "notes": "The official site now has 49 public canonical pages and 10 registered research surfaces. PR #63 created the central Umm Abbas diagnostic-ambiguity guide, aligned all localized book summaries, and synchronized HTML, JSON-LD, inventory, feeds, sitemap, and review registers. No ranking, indexing, traffic, AI-citation, or medical-verification gain is claimed."
 }
