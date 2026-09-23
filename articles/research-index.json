@@ -8,9 +8,25 @@
   },
   "editorial_policy": "https://ahmedalhafiz.com/methodology/",
   "review_register": "https://ahmedalhafiz.com/research-status/",
-  "generated": "2026-09-03",
+  "generated": "2026-09-23",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
+    {
+      "slug": "possession-or-neurological-psychological-disorder",
+      "title": "المس أم مرض نفسي أو عصبي؟ لماذا قد تتشابه الأعراض؟",
+      "summary": "ملف تفسيري يفصل بين العرض والتشخيص الطبي والتفسير الروحي، ويشرح تشابه ظواهر النوم والنوبات وتبدل الإدراك، وتحول أطر فهمها تاريخيًا، وصلتها بالسؤال الروائي المركزي في أم عباس.",
+      "type": "ملف تفسيري موثق",
+      "version": "1.0",
+      "languages": ["ar"],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/",
+      "primary_sources": [
+        "https://www.nhs.uk/conditions/sleep-paralysis/",
+        "https://www.ninds.nih.gov/health-information/disorders/functional-neurologic-disorder",
+        "https://www.who.int/publications/i/item/9789240077263"
+      ]
+    },
     {
       "slug": "ratq-fatq-big-bang",
       "title": "الرتق والفتق والانفجار العظيم: تحقيق في النص والتفسير وأدلة علم الكون",
