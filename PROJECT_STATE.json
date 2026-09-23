@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "main",
-  "head_sha": "71da1c4951db8c8452e38443c23674adf120c226",
-  "head_sha_semantics": "Merge commit for PR #63, the verified Umm Abbas diagnostic-ambiguity content expansion; this docs-only closeout records the live result.",
-  "status": "complete_live_verified",
-  "updated_at": "2026-09-23T18:40:00+02:00",
-  "current_task": "PR #63 merged and deployed: the Umm Abbas diagnostic-ambiguity pillar and all discovery surfaces are live.",
-  "next_action": "Measure Search Console indexing and query performance only after recrawl; do not claim ranking gains before observed data.",
+  "branch": "content/umm-abbas-multilingual-discovery",
+  "head_sha": "5a145b10cb2b8f01916b7e1432626fd370a12e19",
+  "head_sha_semantics": "Local implementation commit for the complete Arabic, English, and German Umm Abbas symptom-overlap guide; PR and live deployment are still pending.",
+  "status": "implementation_complete_pr_pending",
+  "updated_at": "2026-09-23T20:05:00+02:00",
+  "current_task": "Publish and integrate the Umm Abbas diagnostic-ambiguity guide in Arabic, English, and German with reciprocal discovery controls.",
+  "next_action": "Push the branch, open a policy-complete pull request, require all six checks, merge only after they pass, then verify the three live editions and update this record.",
   "last_verified": {
     "git_remote_matches": true,
     "tests": [
@@ -23,6 +23,7 @@
       "PR #63 passed all six required checks and merged to main at 71da1c4951db8c8452e38443c23674adf120c226.",
       "The live article returned HTTP 200 and exposes the expected title, canonical URL, RTL declaration, Article image, eight references, and reciprocal book link without horizontal overflow.",
       "The live sitemap contains 49 URLs including the new article; research-index.json and feed.json each contain 10 items and exactly one record for the new slug."
+      ,"The multilingual implementation passes local site, presentation, editorial, discovery, dossier, entity, visibility, UX, Arabic UI, citation, research-architecture, IndexNow dry-run, governance, compile, and whitespace checks at commit 5a145b10cb2b8f01916b7e1432626fd370a12e19."
     ],
     "builds": [
       "GitHub Pages deployed PR #63 from main and served the new article and revised Arabic, English, and German book pages."
@@ -43,10 +44,11 @@
     "Indexing of /press/ and /en/press/, knowledge-panel eligibility, independent citations, referral traffic, and ranking gains are not yet observed.",
     "GitHub Pages settings previously displayed DNS Check in Progress even though public DNS, HTTPS, the custom domain, and redirects passed independent live checks.",
     "Google Search Console indexing, query impressions, ranking changes, AI citations, and referral growth remain unmeasured until external systems recrawl and collect data."
+    ,"The new English and German editions have not been deployed, visually rendered in CI, or inspected in Search Console yet. Local Selenium installation succeeded, but no Chromium-compatible browser is available in this execution environment."
   ],
   "blockers": [],
   "local_only_items": [
     "Working clone: C:\\Users\\xxx\\Ahmed-Projects\\work\\site-seo-migration-2026-09-22"
   ],
-  "notes": "The official site now has 49 public canonical pages and 10 registered research surfaces. PR #63 created the central Umm Abbas diagnostic-ambiguity guide, aligned all localized book summaries, and synchronized HTML, JSON-LD, inventory, feeds, sitemap, and review registers. No ranking, indexing, traffic, AI-citation, or medical-verification gain is claimed."
+  "notes": "The working branch raises the inventory from 49 to 51 public canonical pages by adding complete English and German editions of the central Umm Abbas guide. Reciprocal hreflang, visible language switching, home and research discovery, book links, feeds, sitemap, structured data, review registers, and automated multilingual checks are synchronized. No ranking, indexing, traffic, AI-citation, or independent medical-review gain is claimed before external evidence exists."
 }
