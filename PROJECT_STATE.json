@@ -2,66 +2,103 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/umm-abbas-multilingual-discovery",
-  "head_sha": "34e6deb95e12d3413e689fa9439ba1b556151893",
-  "head_sha_semantics": "Local implementation head for the complete Umm Abbas multilingual discovery package; push, PR, merge, deployment, visual CI, and external indexing are pending.",
-  "status": "implementation_complete_pr_pending",
-  "updated_at": "2026-09-23T22:23:14+02:00",
-  "current_task": "Publish and integrate the Umm Abbas diagnostic-ambiguity guide in Arabic, English, and German with reciprocal discovery, citation, and author-entity controls.",
-  "next_action": "On the authorized laptop, push this branch, open one policy-complete pull request, require all six checks, merge only after they pass, verify the live multilingual surfaces, then perform the consolidated Search Console follow-up.",
+  "branch": "main",
+  "head_sha": "7478e3b99aae3cab630724c3351535d0406f54b4",
+  "head_sha_semantics": "Deployed content merge from PR #65. The accompanying protected corrective PR only removes a stale hard-coded live-audit count and records this verified deployment state.",
+  "status": "deployed_monitoring",
+  "updated_at": "2026-09-24T18:46:05+02:00",
+  "current_task": "Monitor Google recrawl of the deployed Umm Abbas multilingual discovery package without repeating submissions.",
+  "next_action": "After Google recrawls, review Page indexing, multilingual query performance, and the historical ProfilePage warning; do not resubmit the sitemap or repeat the four indexing requests without new evidence.",
   "last_verified": {
     "git_remote_matches": true,
-    "local_head": "34e6deb95e12d3413e689fa9439ba1b556151893",
-    "base_main": "b6b5cd847579e14b32637f6de0b6bdd4e3f5e15f",
-    "inventory": {
-      "public_html_pages": 52,
-      "canonical_urls": 52,
-      "sitemap_urls": 52,
-      "research_items": 10,
-      "arabic_feed_items": 10,
-      "english_feed_items": 5
+    "content_pull_request": {
+      "number": 65,
+      "url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/65",
+      "status": "merged",
+      "merge_sha": "7478e3b99aae3cab630724c3351535d0406f54b4",
+      "required_checks": {
+        "PR policy / policy": "success",
+        "Governance integrity / validate": "success",
+        "Citation metadata integrity / validate": "success",
+        "Content research architecture / validate": "success",
+        "Site integrity / audit": "success",
+        "Visual review / render": "success"
+      }
     },
-    "implementation": [
-      "Complete Arabic, English, and German guide editions exist with reciprocal hreflang and visible language switching.",
-      "The guide is linked from the localized Umm Abbas book pages, relevant homepages, and Arabic, English, and German research hubs.",
-      "The German research hub exists at /de/articles/ and is included in navigation and the sitemap.",
-      "The three guide editions expose an eight-source citation graph and a direct answer about why reactions during recitation do not by themselves establish a diagnosis.",
-      "author.json connects the Umm Abbas Book node to the Arabic guide and connects the Arabic original to its English and German translations.",
-      "Automated discovery and entity gates protect the multilingual relationships from future drift."
-    ],
+    "deployment": {
+      "verified_at": "2026-09-24T18:46:05+02:00",
+      "pages_workflow": "success",
+      "pages_workflow_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/actions/runs/36028817990",
+      "https": "valid",
+      "inventory": {
+        "public_html_pages": 52,
+        "canonical_urls": 52,
+        "sitemap_urls": 52,
+        "research_items": 10,
+        "arabic_feed_items": 10,
+        "english_feed_items": 5
+      },
+      "live_surfaces": {
+        "/articles/possession-or-neurological-psychological-disorder/": "HTTP 200; canonical and reciprocal hreflang valid; 3 language links; 8 references; image HTTP 200",
+        "/en/articles/possession-or-neurological-psychological-disorder/": "HTTP 200; canonical and reciprocal hreflang valid; 3 language links; 8 references; image HTTP 200",
+        "/de/articles/possession-or-neurological-psychological-disorder/": "HTTP 200; canonical and reciprocal hreflang valid; 3 language links; 8 references; image HTTP 200",
+        "/de/articles/": "HTTP 200; canonical and reciprocal hreflang valid",
+        "/sitemap.xml": "HTTP 200; 52 URLs"
+      },
+      "responsive_evidence": "Visual review / render passed the three guide editions at desktop 1440x1200, mobile 390x844, and narrow mobile 360x800, including horizontal-overflow checks."
+    },
+    "search_console": {
+      "verified_at": "2026-09-24T18:46:05+02:00",
+      "property": "sc-domain:ahmedalhafiz.com",
+      "sitemap": {
+        "url": "https://ahmedalhafiz.com/sitemap.xml",
+        "submitted_once": true,
+        "status": "success",
+        "discovered_pages": 52
+      },
+      "indexing_requests": [
+        {
+          "url": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/",
+          "status_before_request": "indexed / URL is on Google",
+          "request": "accepted into priority crawl queue"
+        },
+        {
+          "url": "https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/",
+          "status_before_request": "discovered - currently not indexed",
+          "request": "accepted into priority crawl queue"
+        },
+        {
+          "url": "https://ahmedalhafiz.com/de/articles/possession-or-neurological-psychological-disorder/",
+          "status_before_request": "URL unknown to Google",
+          "request": "accepted into priority crawl queue"
+        },
+        {
+          "url": "https://ahmedalhafiz.com/de/articles/",
+          "status_before_request": "URL unknown to Google",
+          "request": "accepted into priority crawl queue"
+        }
+      ]
+    },
     "tests": [
       "Site audit passed with 52 pages, 52 canonicals, 52 sitemap URLs, zero errors, and zero warnings.",
       "Discovery integrity passed for 10 Arabic, 5 English, and 1 German research editions.",
       "Entity integrity passed including the trilingual Umm Abbas companion-guide graph.",
-      "Visibility audit passed locally; no external ranking, indexing, traffic, or AI-citation outcome is inferred."
-    ],
-    "stable_live_baseline": [
-      "The official domain, HTTPS, www redirect, old GitHub Pages host redirect, free domain privacy, and auto-renew were previously verified.",
-      "The Google Search Console Change of Address and sitemap were previously accepted; their data predates this unpublished branch."
+      "The post-deployment live visibility audit passed after replacing its stale literal count of 9 with the repository inventory count of 10.",
+      "JSON parsing and git diff --check passed."
     ]
   },
   "unverified": [
-    "This branch has not been pushed, reviewed, merged, deployed, or visually rendered in GitHub CI.",
-    "A Chromium-compatible browser is unavailable in the current environment, so Visual review / render must pass on the pull request.",
-    "The new Arabic, English, and German guide URLs and the German research hub have not been inspected in Google Search Console.",
-    "Google rankings, indexing, impressions, traffic, AI citations, and independent external citations remain unmeasured and are not guaranteed.",
-    "The historical Search Console ProfilePage dateModified warning must be reassessed only after Google recrawls the corrected pages."
+    "Google acceptance of an indexing request is not proof that the requested URL is indexed or ranked.",
+    "Google rankings, impressions, traffic, AI citations, and independent external citations remain unmeasured and are not guaranteed.",
+    "The historical Search Console ProfilePage warning must be reassessed only after Google recrawls the corrected pages."
   ],
-  "blockers": [
-    "Publishing requires the authenticated laptop because this environment has no authorized GitHub push credential."
+  "blockers": [],
+  "monitoring_runbook": [
+    "Wait for new Google crawl data; do not repeat sitemap or indexing submissions without a new reason.",
+    "Review Page indexing for the English and German guide URLs and the German research hub.",
+    "Review Arabic, English, and German query performance only when Search Console has enough data.",
+    "Reassess the historical ProfilePage warning after a confirmed recrawl and record only observed results."
   ],
-  "laptop_runbook": [
-    "Read PROJECT_STATE.json and HANDOFF.md, confirm the working source is this exact branch/head or import the verified bundle if needed.",
-    "Push content/umm-abbas-multilingual-discovery without rewriting history.",
-    "Open one policy-complete pull request covering all commits after b6b5cd847579e14b32637f6de0b6bdd4e3f5e15f.",
-    "Wait for PR policy / policy, Governance integrity / validate, Citation metadata integrity / validate, Content research architecture / validate, Site integrity / audit, and Visual review / render.",
-    "Do not merge if any check fails; repair on the same branch, rerun, and merge only after all six pass.",
-    "After GitHub Pages deploys, verify HTTP 200, canonical, reciprocal hreflang, language links, citation blocks, responsive layout, and no broken assets for all three guide editions and /de/articles/; verify sitemap.xml contains 52 URLs.",
-    "In Search Console, resubmit sitemap.xml once, request indexing for the three guide editions and /de/articles/, and record outcomes without claiming ranking or indexing before evidence appears.",
-    "After recrawl, review Page indexing, search performance by Arabic/English/German queries, and the historical ProfilePage warning; update PROJECT_STATE.json and HANDOFF.md with dated evidence."
-  ],
-  "local_only_items": [
-    "/workspace/scratch/cce0faa09f10/umm-abbas-multilingual-discovery.bundle"
-  ],
-  "notes": "All locally executable implementation is complete at the recorded head. Avoid adding broad unrelated pages: the current architecture keeps the site personal while using tightly related research content to support Umm Abbas discovery."
+  "local_only_items": [],
+  "notes": "The public package is deployed and technically verified. Monitoring is now the only planned work; no ranking or indexing outcome is inferred from submission acceptance."
 }

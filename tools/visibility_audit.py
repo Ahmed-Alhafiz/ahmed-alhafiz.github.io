@@ -280,6 +280,7 @@ def live_audit(origin: str) -> dict[str, Any]:
     errors: list[str] = []
     origin = origin.rstrip("/")
     inventory = load_json(ROOT / "data/content-inventory.json")
+    expected_research_items = len(inventory.get("items", []))
     critical_routes = [
         "/",
         "/about/",
@@ -331,8 +332,12 @@ def live_audit(origin: str) -> dict[str, Any]:
         if route == "/articles/research-index.json":
             try:
                 index = json.loads(body)
-                if len(index.get("items", [])) != 9:
-                    errors.append(f"live research index: expected 9 items, found {len(index.get('items', []))}")
+                actual_research_items = len(index.get("items", []))
+                if actual_research_items != expected_research_items:
+                    errors.append(
+                        "live research index: "
+                        f"expected {expected_research_items} items, found {actual_research_items}"
+                    )
             except json.JSONDecodeError as exc:
                 errors.append(f"live research index invalid JSON: {exc}")
         if route == "/sitemap.xml":
