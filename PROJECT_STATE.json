@@ -3,12 +3,12 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "7478e3b99aae3cab630724c3351535d0406f54b4",
-  "head_sha_semantics": "Deployed content merge from PR #65. The accompanying protected corrective PR only removes a stale hard-coded live-audit count and records this verified deployment state.",
+  "head_sha": "7ef37c350f6dc906c11af573f0868233e59fc26d",
+  "head_sha_semantics": "Structured-data remediation commit: eight unsupported Dataset declarations were reclassified as CreativeWork without changing visible content or design.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-24T18:46:05+02:00",
-  "current_task": "Monitor Google recrawl of the deployed Umm Abbas multilingual discovery package without repeating submissions.",
-  "next_action": "After Google recrawls, review Page indexing, multilingual query performance, and the historical ProfilePage warning; do not resubmit the sitemap or repeat the four indexing requests without new evidence.",
+  "updated_at": "2026-09-24T21:10:00+02:00",
+  "current_task": "Deploy the structured-data remediation, then monitor Google validation and recrawl without repeating indexing requests.",
+  "next_action": "After deployment, start Search Console validation for the historical Dataset and ProfilePage reports once, then wait for Google to recrawl.",
   "last_verified": {
     "git_remote_matches": true,
     "content_pull_request": {
@@ -48,8 +48,12 @@
       "responsive_evidence": "Visual review / render passed the three guide editions at desktop 1440x1200, mobile 390x844, and narrow mobile 360x800, including horizontal-overflow checks."
     },
     "search_console": {
-      "verified_at": "2026-09-24T18:46:05+02:00",
+      "verified_at": "2026-09-24T20:52:00+02:00",
       "property": "sc-domain:ahmedalhafiz.com",
+      "enhancements": {
+        "dataset": "2 valid and 4 invalid items in the historical report; 4 missing-description errors plus license, creator, and publisher recommendations. The live source exposed eight Dataset declarations without a complete declared dataset license/publisher model, so the remediation removes Dataset rich-result markup rather than inventing metadata.",
+        "profile_page": "4 valid and 0 invalid items; the historical dateModified warning still lists 4 items awaiting validation/recrawl. All six live ProfilePage dateModified values are ISO 8601 DateTime values."
+      },
       "sitemap": {
         "url": "https://ahmedalhafiz.com/sitemap.xml",
         "submitted_once": true,
@@ -79,26 +83,46 @@
         }
       ]
     },
+    "apps_script": {
+      "verified_at": "2026-09-24T21:05:00+02:00",
+      "project": "Untitled project containing runDailyGscReport",
+      "trigger": "One existing daily time-based trigger; no trigger was added or removed.",
+      "change": "SITE was corrected from https://ahmed-alhafiz.github.io/ to sc-domain:ahmedalhafiz.com and saved.",
+      "test": "One manual test was initiated. Google required OAuth reauthorization; the safe browser did not expose the spawned consent window, so the run was cancelled before the function executed."
+    },
+    "github_billing": {
+      "verified_at": "2026-09-24T20:58:00+02:00",
+      "period": "2026-09-01 through 2026-09-24",
+      "actions_total": "$35.20 gross, $9.61 billed",
+      "sku_breakdown": "Actions Linux: 4,941 min, $29.65 gross, $9.00 billed; Actions storage: 4,907.59 GB-hr, $1.65 gross, $0.61 billed; macOS 3-core: 63 min, $3.91 gross, $0 billed.",
+      "repository_breakdown": "rahma-prayer: $7.19 billed; thabatak-app: $2.43 billed; ahmed-alhafiz.github.io: $12.63 gross and $0 billed; other repositories: $0 billed. Rounded repository rows account for the one-cent display difference.",
+      "settings_changed": false
+    },
     "tests": [
       "Site audit passed with 52 pages, 52 canonicals, 52 sitemap URLs, zero errors, and zero warnings.",
       "Discovery integrity passed for 10 Arabic, 5 English, and 1 German research editions.",
       "Entity integrity passed including the trilingual Umm Abbas companion-guide graph.",
       "The post-deployment live visibility audit passed after replacing its stale literal count of 9 with the repository inventory count of 10.",
-      "JSON parsing and git diff --check passed."
+      "JSON parsing and git diff --check passed.",
+      "The targeted structured-data gate passed: zero Dataset nodes remain and all six ProfilePage dateModified values are valid ISO 8601 DateTime values.",
+      "Site integrity passed with 52 pages, 52 canonicals, 52 sitemap URLs, zero errors, and zero warnings; entity integrity passed."
     ]
   },
   "unverified": [
     "Google acceptance of an indexing request is not proof that the requested URL is indexed or ranked.",
     "Google rankings, impressions, traffic, AI citations, and independent external citations remain unmeasured and are not guaranteed.",
-    "The historical Search Console ProfilePage warning must be reassessed only after Google recrawls the corrected pages."
+    "Search Console validation acceptance is not proof that Google has completed a recrawl or removed a report.",
+    "The historical Dataset and ProfilePage reports must be reassessed only after Google recrawls the deployed pages."
   ],
-  "blockers": [],
+  "blockers": [
+    "Apps Script OAuth reauthorization still requires completing Google's consent window; the safe browser did not expose that spawned window after Review permissions was selected."
+  ],
   "monitoring_runbook": [
     "Wait for new Google crawl data; do not repeat sitemap or indexing submissions without a new reason.",
     "Review Page indexing for the English and German guide URLs and the German research hub.",
     "Review Arabic, English, and German query performance only when Search Console has enough data.",
-    "Reassess the historical ProfilePage warning after a confirmed recrawl and record only observed results."
+    "Reassess the historical Dataset and ProfilePage reports after confirmed recrawls and record only observed results."
   ],
   "local_only_items": [],
-  "notes": "The public package is deployed and technically verified. Monitoring is now the only planned work; no ranking or indexing outcome is inferred from submission acceptance."
+  "notes": "The public package remains live and technically verified. The structured-data remediation is metadata-only. No ranking or indexing outcome is inferred from submission or validation acceptance."
 }
