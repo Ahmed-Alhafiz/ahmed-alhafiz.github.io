@@ -3,8 +3,8 @@
 
 Checks: index/feed chronology and titles, Article JSON-LD headline and calendar
 publication/modification dates, sitemap and hub presence, reciprocal book links,
-and complete two-way hreflang plus visible language switching for every dossier
-declared bilingual.
+and complete reciprocal hreflang plus visible language switching for every
+declared language edition.
 
 Feed timestamps are timezone-aware instants. Page JSON-LD dates are calendar
 publication dates. Calendar-date equality is therefore compared from the source
@@ -102,25 +102,39 @@ def page_meta(url, headline):
     if not isinstance(mod, str) or not mod: die(f"{rel}: dateModified missing")
     return html, pub, mod
 
-def bilingual(item):
-    if "en" not in item["languages"]: return
-    ar, en = item["url"], item["english_url"]
-    switch_expected = {"ar": route(ar), "en": route(en)}
+def citation_graph(url, expected):
+    p = page_path(url); rel = str(p.relative_to(ROOT)); html = p.read_text(encoding="utf-8")
+    values = article(html, rel).get("citation")
+    if (not isinstance(values, list) or len(values) < 8 or
+            not set(expected).issubset(set(values)) or len(values) != len(set(values))):
+        die(f"{rel}: Article citation graph missing, duplicated, or drifted")
+
+def multilingual(item):
+    fields = {
+        "ar": ("url", "title"),
+        "en": ("english_url", "english_title"),
+        "de": ("german_url", "german_title"),
+    }
+    declared = item["languages"]
+    if len(declared) < 2:
+        return
+    editions = {lang: item[fields[lang][0]] for lang in declared}
+    switch_expected = {lang: route(url) for lang, url in editions.items()}
     seen_xdefault = []
-    for url in (ar, en):
+    for url in editions.values():
         p = page_path(url); rel = str(p.relative_to(ROOT)); html = p.read_text(encoding="utf-8")
         alts = {k.lower(): v for k, v in ALT_RE.findall(html)}
-        if alts.get("ar") != ar: die(f"{rel}: reciprocal hreflang ar missing/drifted")
-        if alts.get("en") != en: die(f"{rel}: reciprocal hreflang en missing/drifted")
+        for lang, target in editions.items():
+            if alts.get(lang) != target: die(f"{rel}: reciprocal hreflang {lang} missing/drifted")
         xd = alts.get("x-default")
-        if xd not in {ar, en}: die(f"{rel}: x-default must target one canonical language edition")
+        if xd not in set(editions.values()): die(f"{rel}: x-default must target one canonical language edition")
         seen_xdefault.append(xd)
         m = LANGS_RE.search(html)
-        if not m: die(f"{rel}: visible bilingual language switch missing")
-        visible = {lang.lower(): route(href) for href, lang in A_RE.findall(m.group(1)) if lang.lower() in {"ar","en"}}
+        if not m: die(f"{rel}: visible multilingual language switch missing")
+        visible = {lang.lower(): route(href) for href, lang in A_RE.findall(m.group(1)) if lang.lower() in editions}
         for lang, target in switch_expected.items():
             if visible.get(lang) != target: die(f"{rel}: visible {lang} switch drift")
-    if len(set(seen_xdefault)) != 1: die(f"{item['slug']}: paired pages disagree on x-default")
+    if len(set(seen_xdefault)) != 1: die(f"{item['slug']}: language editions disagree on x-default")
 
 def index_data():
     data = jload(ROOT / "articles/research-index.json"); items = data.get("items")
@@ -139,7 +153,19 @@ def index_data():
         if "en" in x["languages"]:
             if not x.get("english_title") or not x.get("english_url"): die(f"{s}: incomplete English metadata")
             if not page_path(x["english_url"]).is_file(): die(f"{s}: English page missing")
-            page_meta(x["english_url"], x["english_title"]); bilingual(x)
+            page_meta(x["english_url"], x["english_title"])
+        if "de" in x["languages"]:
+            if not x.get("german_title") or not x.get("german_url"): die(f"{s}: incomplete German metadata")
+            if not page_path(x["german_url"]).is_file(): die(f"{s}: German page missing")
+            page_meta(x["german_url"], x["german_title"])
+        unsupported = set(x["languages"]) - {"ar", "en", "de"}
+        if unsupported: die(f"{s}: unsupported declared languages: {sorted(unsupported)}")
+        multilingual(x)
+        if "de" in x["languages"]:
+            expected_citations = x.get("primary_sources", [])
+            if len(expected_citations) < 3: die(f"{s}: multilingual guide lacks primary-source inventory")
+            for lang_url in (x["url"], x["english_url"], x["german_url"]):
+                citation_graph(lang_url, expected_citations)
         urls[u] = x; slugs[s] = x
     missing = SLUGS - set(slugs)
     if missing: die(f"research-index missing surfaces: {sorted(missing)}")
@@ -196,6 +222,12 @@ def surfaces(indexed):
         if x.get("english_url"):
             eu = x["english_url"]; er = route(eu)
             if eu not in urls or er not in eh: die(f"{x['slug']}: English hub/sitemap omission")
+        if x.get("german_url"):
+            gu = x["german_url"]; gr = route(gu)
+            gh = (ROOT/"de/index.html").read_text(encoding="utf-8")
+            gdh = (ROOT/"de/articles/index.html").read_text(encoding="utf-8")
+            if gu not in urls or gr not in gh or gr not in gdh:
+                die(f"{x['slug']}: German homepage/hub/sitemap omission")
 
 def english_homepage(expected):
     path = ROOT / "en/index.html"
@@ -233,7 +265,8 @@ def main():
     atom(ROOT/"articles/feed.xml", ar); json_feed(ROOT/"articles/feed.json", ar)
     atom(ROOT/"en/articles/feed.xml", en); json_feed(ROOT/"en/articles/feed.json", en)
     surfaces(ar); english_homepage(en)
-    print(f"Discovery integrity passed: {len(ar)} Arabic surfaces, {len(en)} English editions; chronology, JSON-LD metadata, reciprocal hreflang/switches, hubs, sitemap, book links and English-homepage pillar inventory agree.")
+    de_count = sum(1 for x in ar.values() if x.get("german_url"))
+    print(f"Discovery integrity passed: {len(ar)} Arabic surfaces, {len(en)} English editions, {de_count} German editions; chronology, JSON-LD metadata, reciprocal hreflang/switches, hubs, sitemap, book links and English-homepage pillar inventory agree.")
 
 if __name__ == "__main__":
     try: main()

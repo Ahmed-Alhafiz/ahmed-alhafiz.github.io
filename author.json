@@ -140,6 +140,9 @@
       "creativeWorkStatus": "Forthcoming; not yet officially published",
       "author": {
         "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "subjectOf": {
+        "@id": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/#article"
       }
     },
     {
@@ -203,7 +206,63 @@
       "author": {
         "@id": "https://ahmedalhafiz.com/#person"
       }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/#article",
+      "headline": "المس أم مرض نفسي أو عصبي؟ لماذا قد تتشابه الأعراض؟",
+      "url": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/",
+      "inLanguage": "ar",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "about": {
+        "@id": "https://ahmedalhafiz.com/books/umm-abbas/#book"
+      },
+      "workTranslation": [
+        {
+          "@id": "https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/#article"
+        },
+        {
+          "@id": "https://ahmedalhafiz.com/de/articles/possession-or-neurological-psychological-disorder/#article"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/#article",
+      "headline": "Spirit Possession or Mental or Neurological Disorder? Why Symptoms Overlap",
+      "url": "https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/#article"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/de/articles/possession-or-neurological-psychological-disorder/#article",
+      "headline": "Besessenheit oder psychische bzw. neurologische Erkrankung? Warum Symptome ähnlich sein können",
+      "url": "https://ahmedalhafiz.com/de/articles/possession-or-neurological-psychological-disorder/",
+      "inLanguage": "de",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/#article"
+      }
     }
   ],
-  "dateModified": "2026-09-22"
+  "dateModified": "2026-09-23"
 }

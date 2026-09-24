@@ -2,51 +2,66 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "main",
-  "head_sha": "71da1c4951db8c8452e38443c23674adf120c226",
-  "head_sha_semantics": "Merge commit for PR #63, the verified Umm Abbas diagnostic-ambiguity content expansion; this docs-only closeout records the live result.",
-  "status": "complete_live_verified",
-  "updated_at": "2026-09-23T18:40:00+02:00",
-  "current_task": "PR #63 merged and deployed: the Umm Abbas diagnostic-ambiguity pillar and all discovery surfaces are live.",
-  "next_action": "Measure Search Console indexing and query performance only after recrawl; do not claim ranking gains before observed data.",
+  "branch": "content/umm-abbas-multilingual-discovery",
+  "head_sha": "34e6deb95e12d3413e689fa9439ba1b556151893",
+  "head_sha_semantics": "Local implementation head for the complete Umm Abbas multilingual discovery package; push, PR, merge, deployment, visual CI, and external indexing are pending.",
+  "status": "implementation_complete_pr_pending",
+  "updated_at": "2026-09-23T22:23:14+02:00",
+  "current_task": "Publish and integrate the Umm Abbas diagnostic-ambiguity guide in Arabic, English, and German with reciprocal discovery, citation, and author-entity controls.",
+  "next_action": "On the authorized laptop, push this branch, open one policy-complete pull request, require all six checks, merge only after they pass, verify the live multilingual surfaces, then perform the consolidated Search Console follow-up.",
   "last_verified": {
     "git_remote_matches": true,
+    "local_head": "34e6deb95e12d3413e689fa9439ba1b556151893",
+    "base_main": "b6b5cd847579e14b32637f6de0b6bdd4e3f5e15f",
+    "inventory": {
+      "public_html_pages": 52,
+      "canonical_urls": 52,
+      "sitemap_urls": 52,
+      "research_items": 10,
+      "arabic_feed_items": 10,
+      "english_feed_items": 5
+    },
+    "implementation": [
+      "Complete Arabic, English, and German guide editions exist with reciprocal hreflang and visible language switching.",
+      "The guide is linked from the localized Umm Abbas book pages, relevant homepages, and Arabic, English, and German research hubs.",
+      "The German research hub exists at /de/articles/ and is included in navigation and the sitemap.",
+      "The three guide editions expose an eight-source citation graph and a direct answer about why reactions during recitation do not by themselves establish a diagnosis.",
+      "author.json connects the Umm Abbas Book node to the Arabic guide and connects the Arabic original to its English and German translations.",
+      "Automated discovery and entity gates protect the multilingual relationships from future drift."
+    ],
     "tests": [
-      "PR #61 passed all six required checks and merged to main at b5adef24fc6b9817402c85f093f4392dcb031ff0.",
-      "PR #59 passed all six required checks and merged to main at 1802e191ae1987165e4e634753793bfa0abca8e8.",
-      "The accepted Google Search Console Change of Address, official custom domain, HTTPS, favicon identity, and old-host redirects remain in place from the completed migration stage.",
-      "All main-branch jobs completed successfully, including Pages deployment, IndexNow notification, build-status reporting, citation metadata, research architecture, and site integrity.",
-      "The local site, presentation, editorial, discovery, dossier, entity, visibility, UX, Arabic UI, IndexNow dry-run, and whitespace gates passed for the 48-page inventory.",
-      "GitHub CI visual review passed the new Arabic and English press pages and targeted asset sections across desktop, mobile, and narrow-mobile viewports.",
-      "The replacement media card is a valid 1733x907 PNG; its deployed SHA-256 matches the tested local asset.",
-      "The working branch contains the new Arabic pillar, revised Arabic/English/German Umm Abbas summaries, research-hub feature, research-index entry, JSON/Atom feed entries, and a 49-URL sitemap.",
-      "PR #63 passed all six required checks and merged to main at 71da1c4951db8c8452e38443c23674adf120c226.",
-      "The live article returned HTTP 200 and exposes the expected title, canonical URL, RTL declaration, Article image, eight references, and reciprocal book link without horizontal overflow.",
-      "The live sitemap contains 49 URLs including the new article; research-index.json and feed.json each contain 10 items and exactly one record for the new slug."
+      "Site audit passed with 52 pages, 52 canonicals, 52 sitemap URLs, zero errors, and zero warnings.",
+      "Discovery integrity passed for 10 Arabic, 5 English, and 1 German research editions.",
+      "Entity integrity passed including the trilingual Umm Abbas companion-guide graph.",
+      "Visibility audit passed locally; no external ranking, indexing, traffic, or AI-citation outcome is inferred."
     ],
-    "builds": [
-      "GitHub Pages deployed PR #63 from main and served the new article and revised Arabic, English, and German book pages."
-    ],
-    "device_or_browser_checks": [
-      "The live /, /about/, /en/, /en/about/, /de/, and /de/about/ pages each returned HTTP 200 and exposed ProfilePage JSON-LD dateModified as 2026-09-23T11:49:49+02:00.",
-      "All 48 sitemap URLs returned HTTP 200 after PR #59 deployment.",
-      "The live Arabic and English press pages returned HTTP 200 with correct canonical URLs, loaded identity assets, and no broken images.",
-      "The Arabic page was visually checked at desktop and 390x844 mobile viewport sizes with no horizontal overflow; the English page was checked for LTR structure and asset loading.",
-      "The apex, www redirect, old-host path-preserving redirect, TLS SANs, Google verification TXT, and GitHub Pages verification TXT were verified after deployment.",
-      "Live HTTP 200 confirmed for the new article, the research hub, and all three localized Umm Abbas book pages."
+    "stable_live_baseline": [
+      "The official domain, HTTPS, www redirect, old GitHub Pages host redirect, free domain privacy, and auto-renew were previously verified.",
+      "The Google Search Console Change of Address and sitemap were previously accepted; their data predates this unpublished branch."
     ]
   },
   "unverified": [
-    "Google Search Console still needs to recrawl before its historical ProfilePage dateModified warning can be reassessed; the warning is not claimed resolved.",
-    "The latest confirmed Search Console sitemap state is successful submission/read with 46 discovered pages; no claim is made that 48 pages are indexed.",
-    "Search ranking and Google's selected site name/favicon can change only after recrawl and are not guaranteed.",
-    "Indexing of /press/ and /en/press/, knowledge-panel eligibility, independent citations, referral traffic, and ranking gains are not yet observed.",
-    "GitHub Pages settings previously displayed DNS Check in Progress even though public DNS, HTTPS, the custom domain, and redirects passed independent live checks.",
-    "Google Search Console indexing, query impressions, ranking changes, AI citations, and referral growth remain unmeasured until external systems recrawl and collect data."
+    "This branch has not been pushed, reviewed, merged, deployed, or visually rendered in GitHub CI.",
+    "A Chromium-compatible browser is unavailable in the current environment, so Visual review / render must pass on the pull request.",
+    "The new Arabic, English, and German guide URLs and the German research hub have not been inspected in Google Search Console.",
+    "Google rankings, indexing, impressions, traffic, AI citations, and independent external citations remain unmeasured and are not guaranteed.",
+    "The historical Search Console ProfilePage dateModified warning must be reassessed only after Google recrawls the corrected pages."
   ],
-  "blockers": [],
+  "blockers": [
+    "Publishing requires the authenticated laptop because this environment has no authorized GitHub push credential."
+  ],
+  "laptop_runbook": [
+    "Read PROJECT_STATE.json and HANDOFF.md, confirm the working source is this exact branch/head or import the verified bundle if needed.",
+    "Push content/umm-abbas-multilingual-discovery without rewriting history.",
+    "Open one policy-complete pull request covering all commits after b6b5cd847579e14b32637f6de0b6bdd4e3f5e15f.",
+    "Wait for PR policy / policy, Governance integrity / validate, Citation metadata integrity / validate, Content research architecture / validate, Site integrity / audit, and Visual review / render.",
+    "Do not merge if any check fails; repair on the same branch, rerun, and merge only after all six pass.",
+    "After GitHub Pages deploys, verify HTTP 200, canonical, reciprocal hreflang, language links, citation blocks, responsive layout, and no broken assets for all three guide editions and /de/articles/; verify sitemap.xml contains 52 URLs.",
+    "In Search Console, resubmit sitemap.xml once, request indexing for the three guide editions and /de/articles/, and record outcomes without claiming ranking or indexing before evidence appears.",
+    "After recrawl, review Page indexing, search performance by Arabic/English/German queries, and the historical ProfilePage warning; update PROJECT_STATE.json and HANDOFF.md with dated evidence."
+  ],
   "local_only_items": [
-    "Working clone: C:\\Users\\xxx\\Ahmed-Projects\\work\\site-seo-migration-2026-09-22"
+    "/workspace/scratch/cce0faa09f10/umm-abbas-multilingual-discovery.bundle"
   ],
-  "notes": "The official site now has 49 public canonical pages and 10 registered research surfaces. PR #63 created the central Umm Abbas diagnostic-ambiguity guide, aligned all localized book summaries, and synchronized HTML, JSON-LD, inventory, feeds, sitemap, and review registers. No ranking, indexing, traffic, AI-citation, or medical-verification gain is claimed."
+  "notes": "All locally executable implementation is complete at the recorded head. Avoid adding broad unrelated pages: the current architecture keeps the site personal while using tightly related research content to support Umm Abbas discovery."
 }
