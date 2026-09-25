@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/discovery-wave-2-books-juhayman",
-  "head_sha": "8099f24db28a68938da443d63efaf6d20b20c5fb",
-  "head_sha_semantics": "origin/main base for the Discovery Wave 2 release candidate; the release commit is pending.",
-  "status": "release_candidate",
-  "updated_at": "2026-09-25T22:55:00+02:00",
-  "current_task": "Publish Discovery Wave 2 as one governed pull request: three trilingual dossiers with three evidence packages.",
-  "next_action": "Push the release branch, open one pull request, wait for the six protected checks, merge, verify GitHub Pages, then submit only the changed sitemap and new priority URLs once.",
+  "branch": "main",
+  "head_sha": "65fc0786d44a91eef91f0c17362dfe771a95e1e5",
+  "head_sha_semantics": "Verified origin/main merge commit for PR #69 after successful GitHub Pages deployment and live homepage checks.",
+  "status": "deployed_monitoring",
+  "updated_at": "2026-09-26T00:38:01+02:00",
+  "current_task": "Monitor Google recrawl and branded-query evidence after the multilingual homepage author-identity refresh.",
+  "next_action": "Wait for new Search Console data; compare the four branded queries only after Google has had time to recrawl, without repeating sitemap or indexing submissions.",
   "last_verified": {
     "git_remote_matches": true,
     "content_pull_request": {
@@ -134,20 +134,50 @@
         "public_presentation_hygiene": "passed"
       },
       "responsive_evidence": "Direct browser review passed at the default desktop viewport and 390x844 mobile for Arabic RTL and English LTR; headers, language switches, calls to action and long titles remained readable without observed horizontal page overflow."
+    },
+    "homepage_author_identity_refresh": {
+      "verified_at": "2026-09-26T00:38:01+02:00",
+      "pull_request": 69,
+      "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/69",
+      "merge_sha": "65fc0786d44a91eef91f0c17362dfe771a95e1e5",
+      "required_checks": {
+        "PR policy / policy": "success",
+        "Governance integrity / validate": "success",
+        "Citation metadata integrity / validate": "success",
+        "Content research architecture / validate": "success",
+        "Site integrity / audit": "success",
+        "Visual review / render": "success"
+      },
+      "deployment": "GitHub Pages build, deploy, audit, notification, and site-integrity checks succeeded on the merge commit.",
+      "live_result": "Arabic, English, and German homepages returned HTTP 200 over HTTPS with the bilingual name in title and H1, current natural descriptions, required section links, canonical URLs, one canonical Person node, verified sameAs only, and no horizontal overflow at 390px.",
+      "legacy_redirect": "https://ahmed-alhafiz.github.io/ returned HTTP 301 to https://ahmedalhafiz.com/; no setting was changed.",
+      "search_console_baseline": {
+        "property": "sc-domain:ahmedalhafiz.com",
+        "range": "3 months; report data currently spans 2026-09-21 through 2026-09-23",
+        "queries": {
+          "أحمد الحافظ": "0 clicks; 1 impression; 0% CTR; average position 3",
+          "الكاتب أحمد الحافظ": "0 clicks; 0 impressions; CTR and position unavailable",
+          "Ahmed Alhafiz": "0 clicks; 0 impressions; CTR and position unavailable",
+          "Ahmed Alhafiz author": "0 clicks; 0 impressions; CTR and position unavailable"
+        },
+        "actions": "Read-only baseline only; sitemap was not resubmitted and no indexing request was repeated.",
+        "boundary": "This sparse historical baseline is not evidence of a stable ranking or of an effect from PR #69."
+      }
     }
   },
   "unverified": [
-    "Wave 2 is not yet deployed in this state record. CI success, merge, live HTTP/canonical/hreflang results, Google acceptance, indexing and ranking remain unverified until observed.",
     "Google acceptance of an indexing request is not proof that the requested URL is indexed or ranked.",
     "Google rankings, impressions, traffic, AI citations, and independent external citations remain unmeasured and are not guaranteed.",
     "Search Console validation acceptance is not proof that Google has completed a recrawl or removed a report.",
-    "The historical Dataset and ProfilePage reports must be reassessed only after Google recrawls the deployed pages."
+    "The historical Dataset and ProfilePage reports must be reassessed only after Google recrawls the deployed pages.",
+    "No post-PR #69 ranking effect can be inferred from the current four-query baseline because the visible Search Console data predates the deployment."
   ],
   "blockers": [
     "Apps Script OAuth reauthorization still requires completing Google's consent window; the safe browser did not expose that spawned window after Review permissions was selected."
   ],
   "monitoring_runbook": [
     "Wait for new Google crawl data; do not repeat sitemap or indexing submissions without a new reason.",
+    "Compare the four branded queries: أحمد الحافظ، الكاتب أحمد الحافظ، Ahmed Alhafiz، and Ahmed Alhafiz author after a meaningful Search Console data window.",
     "Review Page indexing for the English and German guide URLs and the German research hub.",
     "Review Arabic, English, and German query performance only when Search Console has enough data.",
     "Reassess the historical Dataset and ProfilePage reports after confirmed recrawls and record only observed results."

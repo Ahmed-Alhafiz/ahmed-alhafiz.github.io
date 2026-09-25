@@ -555,3 +555,14 @@ This file is operational only. It is not an independent public source for biblio
 - Search Console boundary: the sitemap is confirmed successfully submitted/read, with 46 discovered pages in the last confirmed state. The historical warning cannot be claimed resolved and 48 pages cannot be claimed indexed until Google recrawls and reports new evidence.
 - Status: `EXECUTED_AWAITING_MEASUREMENT`.
 - Next: review Search Console after recrawl only; do not resubmit the sitemap or duplicate the homepage indexing request.
+
+### 2026-09-26 — Multilingual homepage author-identity refresh
+- Task: branded author identity / homepage information architecture / truthful Search Console baseline.
+- Action: made `أحمد الحافظ — Ahmed Alhafiz` the shared title, H1, WebSite name, and canonical Person name on the Arabic, English, and German homepages; replaced the outdated narrow descriptions with natural whole-site descriptions; exposed direct author, books, research, and press links; and kept the author portrait and books before the research journey.
+- Entity boundary: retained exactly one canonical Person ID, `https://ahmedalhafiz.com/#person`; retained only the previously verified Medium and Instagram `sameAs` URLs; added no account, credential, publisher, award, or ranking claim.
+- Pull request: `#69`; merge commit `65fc0786d44a91eef91f0c17362dfe771a95e1e5`.
+- Verification: all six required PR checks succeeded. The merge commit then passed GitHub Pages build/deploy and main audit checks. The Arabic, English, and German homepages returned HTTP 200 over HTTPS with the expected canonical, title, description, H1, required links, one canonical Person node, and no horizontal overflow at 390px. The former GitHub Pages URL continued to return HTTP 301 to the official domain.
+- Search Console baseline: property `sc-domain:ahmedalhafiz.com`, 3-month range, currently containing data from 2026-09-21 through 2026-09-23. Exact-query values were: `أحمد الحافظ` = 0 clicks, 1 impression, 0% CTR, average position 3; `الكاتب أحمد الحافظ`, `Ahmed Alhafiz`, and `Ahmed Alhafiz author` = 0 clicks and 0 impressions, with CTR and position unavailable.
+- Measurement boundary: the visible baseline predates deployment and does not prove a stable ranking or any effect from this release. Sitemap was not resubmitted and no indexing request was repeated.
+- Status: `EXECUTED_AWAITING_MEASUREMENT`.
+- Next: wait for recrawl and a meaningful Search Console data window, then compare the same four queries without rewriting the pages or repeating submission actions.
