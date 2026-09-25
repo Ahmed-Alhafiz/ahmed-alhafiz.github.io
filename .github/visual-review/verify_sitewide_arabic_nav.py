@@ -116,8 +116,11 @@ def main() -> None:
                     """,
                     nav,
                 )
-                if len(links) != 5:
-                    raise SystemExit(f"{route}: expected five primary links, found {len(links)}")
+                expected_links = 6 if route == "/" else 5
+                if len(links) != expected_links:
+                    raise SystemExit(
+                        f"{route}: expected {expected_links} primary links, found {len(links)}"
+                    )
                 if metrics["pageScroll"] > metrics["pageClient"] + 1:
                     raise SystemExit(f"{width}px {route}: page overflow {metrics}")
                 if metrics["navScroll"] > metrics["navClient"] + 1:
