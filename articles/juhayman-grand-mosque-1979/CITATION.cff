@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this evidence package, cite the article below."
+title: "Juhayman and the 1979 Grand Mosque Seizure: What Happened, and Why Was al-Qahtani Called the Mahdi? — evidence and citation package"
+type: dataset
+authors:
+  - family-names: "Alhafiz"
+    given-names: "Ahmed"
+    affiliation: "Independent author and researcher"
+version: "1.0"
+date-released: 2026-09-25
+url: "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/evidence/claims.json"
+repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
+abstract: >-
+  Evidence, claim and citation metadata accompanying the multilingual article.
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Alhafiz"
+      given-names: "Ahmed"
+  title: "Juhayman and the 1979 Grand Mosque Seizure: What Happened, and Why Was al-Qahtani Called the Mahdi?"
+  year: 2026
+  month: 9
+  version: "1.0"
+  url: "https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/"

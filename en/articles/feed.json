@@ -1,97 +1,113 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
-  "title": "Ahmed Alhafiz Research Desk",
-  "home_page_url": "https://ahmedalhafiz.com/en/articles/",
+  "title": "Ahmed Alhafiz Research",
+  "home_page_url": "https://ahmedalhafiz.com/en/",
   "feed_url": "https://ahmedalhafiz.com/en/articles/feed.json",
   "language": "en",
-  "authors": [
-    {
-      "name": "Ahmed Alhafiz",
-      "url": "https://ahmedalhafiz.com/en/about/"
-    }
-  ],
   "items": [
     {
       "id": "https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/",
       "url": "https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/",
       "title": "Spirit Possession or Mental or Neurological Disorder? Why Symptoms Overlap",
       "summary": "An evidence-led guide separating observed symptoms, clinical diagnosis, spiritual interpretation, historical change, and the fictional premise of Umm Abbas.",
-      "date_published": "2026-09-23T10:00:00+02:00",
-      "date_modified": "2026-09-23T10:00:00+02:00",
+      "content_text": "An evidence-led guide separating observed symptoms, clinical diagnosis, spiritual interpretation, historical change, and the fictional premise of Umm Abbas.",
+      "date_published": "2026-09-23T00:00:00+02:00",
+      "date_modified": "2026-09-23T00:00:00+02:00",
       "tags": [
-        "evidence-led guide",
-        "differential diagnosis",
-        "spirit possession beliefs",
         "author_review_complete_external_review_pending",
         "umm-abbas"
-      ],
-      "language": "en"
-    },
-    {
-      "id": "https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/",
-      "url": "https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/",
-      "title": "Teaching the Names and AI: What Counts as Understanding?",
-      "summary": "A bilingual dossier separating symbol use, relational structure, compositional generalization, grounding, causal world-model use, intention and responsibility, while treating consciousness as a separate unresolved question.",
-      "date_published": "2026-09-03T12:00:00+02:00",
-      "date_modified": "2026-09-03T15:03:00+02:00",
-      "tags": [
-        "extended bilingual research dossier",
-        "Quranic exegesis",
-        "language models",
-        "semantics",
-        "mechanistic interpretability",
-        "author_review_complete_external_review_pending",
-        "sirou-fi-alard"
-      ],
-      "language": "en"
+      ]
     },
     {
       "id": "https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/",
       "url": "https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/",
       "title": "Ratq, fatq, and the Big Bang: text, exegesis, evidence, and limits",
-      "summary": "A layered inquiry into Qur’an 21:30, classical exegesis, and hot Big Bang cosmology, separating text, observation, model, and metaphysical inference.",
-      "date_published": "2026-09-02T04:33:19+02:00",
-      "date_modified": "2026-09-02T04:33:19+02:00",
+      "summary": "A layered inquiry into Qur’an 21:30, classical exegesis, observation, cosmological modelling, and the limits of metaphysical inference.",
+      "content_text": "A layered inquiry into Qur’an 21:30, classical exegesis, observation, cosmological modelling, and the limits of metaphysical inference.",
+      "date_published": "2026-09-02T00:00:00+02:00",
+      "date_modified": "2026-09-02T00:00:00+02:00",
       "tags": [
-        "extended research dossier",
-        "Quranic exegesis",
-        "cosmology",
         "author_review_complete_external_review_pending",
         "sirou-fi-alard"
-      ],
-      "language": "en"
+      ]
     },
     {
       "id": "https://ahmedalhafiz.com/en/articles/water-civilization-power/",
       "url": "https://ahmedalhafiz.com/en/articles/water-civilization-power/",
       "title": "Water, Civilization and Power: When Does Resource Governance Produce Justice—and When Does It Become Control?",
       "summary": "A bilingual dossier building a six-layer chain from resource and infrastructure to data, allocation, accountability, maintenance, and resilience, tested against Ma’rib, Mesopotamia, Angkor, and contemporary water governance.",
-      "date_published": "2026-09-02T05:40:00+02:00",
-      "date_modified": "2026-09-02T05:40:00+02:00",
+      "content_text": "A bilingual dossier building a six-layer chain from resource and infrastructure to data, allocation, accountability, maintenance, and resilience, tested against Ma’rib, Mesopotamia, Angkor, and contemporary water governance.",
+      "date_published": "2026-09-02T00:00:00+02:00",
+      "date_modified": "2026-09-02T00:00:00+02:00",
       "tags": [
-        "extended bilingual research dossier",
-        "water governance",
-        "civilisation",
         "author_review_complete_external_review_pending",
         "sirou-fi-alard"
-      ],
-      "language": "en"
+      ]
     },
     {
       "id": "https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
       "url": "https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
       "title": "When Fear Decides Before Diagnosis: How Uncertainty Becomes Authority and Coercion in Families",
       "summary": "An evidence-led dossier on how an ambiguous symptom can move through family fear, premature certainty, authority transfer and consent erosion—and how a parallel-path safeguard preserves assessment, voice and voluntary spiritual support.",
+      "content_text": "An evidence-led dossier on how an ambiguous symptom can move through family fear, premature certainty, authority transfer and consent erosion—and how a parallel-path safeguard preserves assessment, voice and voluntary spiritual support.",
       "date_published": "2026-09-02T10:00:00+02:00",
       "date_modified": "2026-09-02T10:00:00+02:00",
       "tags": [
-        "extended research dossier",
         "author_review_complete_specialist_review_pending",
-        "umm-abbas",
-        "diagnostic safety",
-        "consent"
-      ],
-      "language": "en"
+        "umm-abbas"
+      ]
+    },
+    {
+      "id": "https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/",
+      "url": "https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/",
+      "title": "Teaching the Names and AI: What Counts as Understanding?",
+      "summary": "A bilingual dossier separating symbol use, relational structure, compositional generalization, grounding, causal world-model use, intention and responsibility, while treating consciousness as a separate unresolved question.",
+      "content_text": "A bilingual dossier separating symbol use, relational structure, compositional generalization, grounding, causal world-model use, intention and responsibility, while treating consciousness as a separate unresolved question.",
+      "date_published": "2026-09-03T00:00:00+02:00",
+      "date_modified": "2026-09-03T00:00:00+02:00",
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "sirou-fi-alard"
+      ]
+    },
+    {
+      "id": "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "url": "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "title": "Why Did Baghdad Fall in 1258? The Ibn al-Alqami Question",
+      "summary": "Why Baghdad fell to Hülegü in 1258, what sources say about Ibn al-Alqami, and why claims of secret letters and deliberate army cuts remain disputed.",
+      "content_text": "Why Baghdad fell to Hülegü in 1258, what sources say about Ibn al-Alqami, and why claims of secret letters and deliberate army cuts remain disputed.",
+      "date_published": "2026-09-25T00:00:00+02:00",
+      "date_modified": "2026-09-25T00:00:00+02:00",
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "kitab-al-kutub"
+      ]
+    },
+    {
+      "id": "https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/",
+      "url": "https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/",
+      "title": "Juhayman and the 1979 Grand Mosque Seizure: What Happened, and Why Was al-Qahtani Called the Mahdi?",
+      "summary": "A source-led guide to the 1979 Grand Mosque seizure, separating established facts from disputed claims and explaining how Juhayman's circle moved from Mahdi traditions to identifying Muhammad al-Qahtani and taking armed action.",
+      "content_text": "A source-led guide to the 1979 Grand Mosque seizure, separating established facts from disputed claims and explaining how Juhayman's circle moved from Mahdi traditions to identifying Muhammad al-Qahtani and taking armed action.",
+      "date_published": "2026-09-25T00:00:00+02:00",
+      "date_modified": "2026-09-25T00:00:00+02:00",
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "juhayman"
+      ]
+    },
+    {
+      "id": "https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/",
+      "url": "https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/",
+      "title": "How Group Certainty Becomes Violence: Seven Mechanisms That Do Not Begin with Hate",
+      "summary": "A research-led guide to uncertainty, belonging, circular evidence, rumor, self-fulfilling prophecy, sunk costs and fragmented responsibility in the path from group belief to violence.",
+      "content_text": "A research-led guide to uncertainty, belonging, circular evidence, rumor, self-fulfilling prophecy, sunk costs and fragmented responsibility in the path from group belief to violence.",
+      "date_published": "2026-09-25T00:00:00+02:00",
+      "date_modified": "2026-09-25T00:00:00+02:00",
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "juhayman"
+      ]
     }
   ]
 }

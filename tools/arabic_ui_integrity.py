@@ -276,8 +276,8 @@ def main() -> None:
         if local not in hub_text:
             errors.append(f"articles/index.html: research surface not linked from hub: {local}")
 
-    if len(items) != 10:
-        errors.append(f"articles/research-index.json: expected 10 current research surfaces, found {len(items)}")
+    if len(items) != 13:
+        errors.append(f"articles/research-index.json: expected 13 current research surfaces, found {len(items)}")
 
     validate_status_register(data, inventory, errors)
 
