@@ -17,8 +17,8 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 AUTHOR_ID = "https://ahmedalhafiz.com/#person"
 AUTHOR_URL = "https://ahmedalhafiz.com/about/"
-AUTHOR_NAME = "أحمد الحافظ"
-ALIASES = ["Ahmed Alhafiz", "Ahmad Alhafiz"]
+AUTHOR_NAME = "أحمد الحافظ — Ahmed Alhafiz"
+ALIASES = ["أحمد الحافظ", "Ahmed Alhafiz", "Ahmad Alhafiz"]
 EMAIL = "mailto:hhafz9924@gmail.com"
 SAME_AS = [
     "https://medium.com/@AhmedAlhafiz",
@@ -56,6 +56,31 @@ MANIFEST_LINK_RE = re.compile(
     r'<link\b(?=[^>]*\brel=["\']alternate["\'])(?=[^>]*\btype=["\']application/ld\+json["\'])(?=[^>]*\bhref=["\']/author\.json["\'])[^>]*>',
     re.IGNORECASE,
 )
+TITLE_RE = re.compile(r"<title>(.*?)</title>", re.IGNORECASE | re.DOTALL)
+DESCRIPTION_RE = re.compile(
+    r'<meta\b[^>]*\bname=["\']description["\'][^>]*\bcontent=["\']([^"\']+)["\']',
+    re.IGNORECASE,
+)
+H1_RE = re.compile(r"<h1\b[^>]*>(.*?)</h1>", re.IGNORECASE | re.DOTALL)
+TAG_RE = re.compile(r"<[^>]+>")
+
+HOME_REQUIREMENTS = {
+    "index.html": {
+        "title": "أحمد الحافظ — Ahmed Alhafiz | الموقع الرسمي",
+        "description": "الموقع الرسمي للكاتب أحمد الحافظ — Ahmed Alhafiz: مؤلفاته قيد الإصدار، وأبحاثه ذات المصادر المعلنة في التاريخ والدين والعلم والنفس والمجتمع.",
+        "links": ["/about/", "/books/", "/articles/", "/press/"],
+    },
+    "en/index.html": {
+        "title": "أحمد الحافظ — Ahmed Alhafiz | Official Author Website",
+        "description": "The official website of writer Ahmed Alhafiz — أحمد الحافظ: forthcoming books and source-backed research in history, religion, science, psychology, and society.",
+        "links": ["/en/about/", "/en/books/", "/en/articles/", "/en/press/"],
+    },
+    "de/index.html": {
+        "title": "أحمد الحافظ — Ahmed Alhafiz | Offizielle Autorenwebsite",
+        "description": "Offizielle Website von Ahmed Alhafiz — أحمد الحافظ: kommende Bücher und Forschung mit Quellen zu Geschichte, Religion, Wissenschaft, Psyche und Gesellschaft.",
+        "links": ["/de/about/", "/de/books/", "/de/articles/", "/en/press/"],
+    },
+}
 
 
 class VisibleText(HTMLParser):
@@ -141,6 +166,17 @@ def validate_person(node: dict, context: str, errors: list[str]) -> None:
             errors.append(f"{context}: canonical image dimensions must remain 1229×1536")
 
 
+def validate_website(node: dict, context: str, errors: list[str]) -> None:
+    if node.get("@id") != "https://ahmedalhafiz.com/#website":
+        errors.append(f"{context}: WebSite @id drifted: {node.get('@id')!r}")
+    if node.get("name") != AUTHOR_NAME:
+        errors.append(f"{context}: canonical bilingual WebSite name drifted: {node.get('name')!r}")
+    if node.get("alternateName") != ALIASES:
+        errors.append(f"{context}: WebSite alternate names must be exactly {ALIASES!r}")
+    if node.get("publisher") != {"@id": AUTHOR_ID}:
+        errors.append(f"{context}: WebSite publisher must reference the canonical Person")
+
+
 def validate_manifest(errors: list[str]) -> None:
     path = ROOT / "author.json"
     try:
@@ -154,6 +190,11 @@ def validate_manifest(errors: list[str]) -> None:
     if not isinstance(graph, list):
         errors.append("author.json: @graph missing")
         return
+    websites = [node for node in graph if isinstance(node, dict) and node_has_type(node, "WebSite")]
+    if len(websites) != 1:
+        errors.append(f"author.json: expected one WebSite, found {len(websites)}")
+    else:
+        validate_website(websites[0], "author.json", errors)
     persons = [node for node in graph if isinstance(node, dict) and node_has_type(node, "Person")]
     if len(persons) != 1:
         errors.append(f"author.json: expected one Person, found {len(persons)}")
@@ -242,6 +283,7 @@ def validate_html(errors: list[str]) -> None:
         rel = path.relative_to(ROOT).as_posix()
         html = path.read_text(encoding="utf-8")
         page_count += 1
+        page_person_count = 0
 
         author_links = AUTHOR_LINK_RE.findall(html)
         expected = expected_author_href(path)
@@ -267,12 +309,37 @@ def validate_html(errors: list[str]) -> None:
             for node in iter_nodes(data):
                 if isinstance(node, dict) and node_has_type(node, "Person"):
                     person_count += 1
+                    page_person_count += 1
                     validate_person(node, f"{rel} JSON-LD block {index}", errors)
+                if isinstance(node, dict) and node_has_type(node, "WebSite"):
+                    validate_website(node, f"{rel} JSON-LD block {index}", errors)
+        if page_person_count > 1:
+            errors.append(f"{rel}: duplicate canonical Person nodes found: {page_person_count}")
 
     if page_count < 40:
         errors.append(f"Public-page inventory unexpectedly small: {page_count}")
     if person_count < 10:
         errors.append(f"Too few canonical Person nodes were validated: {person_count}")
+
+
+def validate_homepages(errors: list[str]) -> None:
+    for rel, expected in HOME_REQUIREMENTS.items():
+        html = (ROOT / rel).read_text(encoding="utf-8")
+        title_match = TITLE_RE.search(html)
+        title = title_match.group(1).strip() if title_match else None
+        if title != expected["title"]:
+            errors.append(f"{rel}: homepage title drifted: {title!r}")
+        description_match = DESCRIPTION_RE.search(html)
+        description = description_match.group(1).strip() if description_match else None
+        if description != expected["description"]:
+            errors.append(f"{rel}: homepage description drifted: {description!r}")
+        h1_match = H1_RE.search(html)
+        h1 = " ".join(TAG_RE.sub("", h1_match.group(1)).split()) if h1_match else None
+        if h1 != AUTHOR_NAME:
+            errors.append(f"{rel}: H1 must be the canonical bilingual author name, found {h1!r}")
+        for href in expected["links"]:
+            if f'href="{href}"' not in html:
+                errors.append(f"{rel}: required homepage journey link missing: {href}")
 
 
 def validate_visible_profiles(errors: list[str]) -> None:
@@ -394,6 +461,7 @@ def main() -> None:
     errors: list[str] = []
     validate_manifest(errors)
     validate_html(errors)
+    validate_homepages(errors)
     validate_visible_profiles(errors)
     validate_juhayman_title(errors)
     validate_no_doorways(errors)
@@ -404,7 +472,7 @@ def main() -> None:
         print(f"Entity integrity failed with {len(errors)} error(s)")
         raise SystemExit(1)
     print(
-        "Entity integrity passed: canonical Arabic name, two Latin aliases, one author ID, "
+        "Entity integrity passed: canonical bilingual name, Arabic and Latin aliases, one author ID, "
         "two verified public profiles, one machine-readable manifest, three visible profile editions, "
         "four forthcoming books, four current reference pillars, one trilingual Umm Abbas companion-guide graph, "
         "canonical Juhayman title, and no alias doorway pages."

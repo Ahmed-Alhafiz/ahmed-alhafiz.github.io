@@ -5,8 +5,9 @@
       "@type": "WebSite",
       "@id": "https://ahmedalhafiz.com/#website",
       "url": "https://ahmedalhafiz.com/",
-      "name": "أحمد الحافظ",
+      "name": "أحمد الحافظ — Ahmed Alhafiz",
       "alternateName": [
+        "أحمد الحافظ",
         "Ahmed Alhafiz",
         "Ahmad Alhafiz"
       ],
@@ -22,8 +23,9 @@
     {
       "@type": "Person",
       "@id": "https://ahmedalhafiz.com/#person",
-      "name": "أحمد الحافظ",
+      "name": "أحمد الحافظ — Ahmed Alhafiz",
       "alternateName": [
+        "أحمد الحافظ",
         "Ahmed Alhafiz",
         "Ahmad Alhafiz"
       ],
