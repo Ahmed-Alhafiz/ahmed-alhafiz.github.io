@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-09-25",
+  "status": "author_review_complete_external_review_pending",
+  "claims": [
+    {
+      "id": "psy-01",
+      "claim": "Uncertainty-identity theory proposes that self-uncertainty can increase attraction to clearly bounded groups and directive leaders; it does not predict that uncertainty inevitably causes extremism.",
+      "confidence": "high-for-theory-summary",
+      "allowed_wording_ar": "قد يزيد عدم اليقين انجذاب بعض الناس إلى جماعة شديدة الوضوح، لكنه لا يقود حتماً إلى التطرف.",
+      "sources": [
+        "https://doi.org/10.1177/0963721414540168"
+      ]
+    },
+    {
+      "id": "psy-02",
+      "claim": "A meta-analysis of 90 studies found an association between identity fusion and extreme pro-group orientations, with variation across settings and measures.",
+      "confidence": "high",
+      "allowed_wording_ar": "وجد تحليل تلوي شمل 90 دراسة ارتباطاً بين اندماج الهوية والتوجهات القصوى المؤيدة للجماعة، مع اختلافات بين السياقات والمقاييس.",
+      "sources": [
+        "https://doi.org/10.1080/10463283.2023.2190267"
+      ]
+    },
+    {
+      "id": "psy-03",
+      "claim": "Rumor repetition creates familiarity but does not create independent evidence; claim accuracy requires tracing reports to independent direct observation.",
+      "confidence": "high-for-general-principle",
+      "allowed_wording_ar": "تكرار الخبر يزيد الألفة ولا يصنع مصدراً مستقلاً؛ يلزم تتبع الرواية إلى الملاحظة المباشرة الأولى.",
+      "sources": [
+        "https://doi.org/10.1111/j.1751-9004.2010.00321.x"
+      ]
+    },
+    {
+      "id": "psy-04",
+      "claim": "Self-fulfilling prophecies describe feedback in which expectations influence behavior that contributes to the expected outcome; effects are bounded and do not mean one side creates every result.",
+      "confidence": "high-for-review-summary",
+      "allowed_wording_ar": "النبوءة ذاتية التحقق حلقة تؤثر فيها التوقعات في السلوك الذي يساهم في النتيجة، وتأثيرها محدود ولا يعني أنها تخلق كل نتيجة.",
+      "sources": [
+        "https://doi.org/10.1111/j.1751-9004.2011.00375.x"
+      ]
+    },
+    {
+      "id": "psy-05",
+      "claim": "Prior investment, responsibility and other factors can increase escalation of commitment to a failing course of action.",
+      "confidence": "high-for-meta-analysis-summary",
+      "allowed_wording_ar": "قد تجعل الاستثمارات السابقة والشعور بالمسؤولية وعوامل أخرى التراجع عن مسار فاشل أصعب.",
+      "sources": [
+        "https://doi.org/10.5465/amj.2010.0696",
+        "https://doi.org/10.1177/0021886301373006"
+      ]
+    }
+  ]
+}

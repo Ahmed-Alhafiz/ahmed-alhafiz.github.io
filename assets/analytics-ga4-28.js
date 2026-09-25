@@ -13,6 +13,16 @@
     allow_ad_personalization_signals: false
   });
 
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('[data-article-to-book]');
+    if (!link) return;
+    window.gtag('event', 'article_to_book', {
+      article_slug: link.dataset.articleSlug || '',
+      book_slug: link.dataset.bookSlug || '',
+      lang: link.dataset.lang || document.documentElement.lang || ''
+    });
+  });
+
   const loader = document.createElement('script');
   loader.async = true;
   loader.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);

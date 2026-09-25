@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-09-23",
+  "generated": "2026-09-25",
   "site": "https://ahmedalhafiz.com/",
   "policy": {
     "primary_rule": "Do not publish a new URL merely to increase page count. Every indexed page must answer a distinct question, provide unique value, and disclose its evidence and review status.",
@@ -143,12 +143,69 @@
       ],
       "next_action": "retain_as_literary_surface_not_medical_evidence",
       "reason": "Serves craft and literary interpretation rather than clinical search intent."
+    },
+    {
+      "slug": "fall-of-baghdad-1258-ibn-al-alqami",
+      "url": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "class": "supporting_brief",
+      "book_cluster": "kitab-al-kutub",
+      "languages": [
+        "ar",
+        "en",
+        "de"
+      ],
+      "primary_intent": "أسباب سقوط بغداد سنة 1258 وحدود اتهام ابن العلقمي بالخيانة",
+      "does_not_target": [
+        "سيرة شاملة لهولاكو",
+        "دعاية مذهبية",
+        "ملخص رواية كتاب الكتب"
+      ],
+      "next_action": "hold_scope_measure_and_seek_independent_review",
+      "reason": "Multilingual reference article with explicit claim-evidence architecture, citation assets, and a distinct reader question."
+    },
+    {
+      "slug": "juhayman-grand-mosque-1979",
+      "url": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/",
+      "class": "supporting_brief",
+      "book_cluster": "juhayman",
+      "languages": [
+        "ar",
+        "en",
+        "de"
+      ],
+      "primary_intent": "وقائع اقتحام الحرم سنة 1979 ومسار تعيين القحطاني مهديًا",
+      "does_not_target": [
+        "ترويج خطاب الجماعة",
+        "تفاصيل أمنية تشغيلية",
+        "ملخص رواية جهيمان"
+      ],
+      "next_action": "hold_scope_measure_and_seek_independent_review",
+      "reason": "Multilingual reference article with explicit claim-evidence architecture, citation assets, and a distinct reader question."
+    },
+    {
+      "slug": "how-certainty-becomes-violence",
+      "url": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/",
+      "class": "supporting_brief",
+      "book_cluster": "juhayman",
+      "languages": [
+        "ar",
+        "en",
+        "de"
+      ],
+      "primary_intent": "الآليات النفسية والاجتماعية التي تحول يقين الجماعة إلى عنف",
+      "does_not_target": [
+        "تشخيص أفراد عن بعد",
+        "ربط التطرف بدين واحد",
+        "ملخص رواية جهيمان"
+      ],
+      "next_action": "hold_scope_measure_and_seek_independent_review",
+      "reason": "Multilingual reference article with explicit claim-evidence architecture, citation assets, and a distinct reader question."
     }
   ],
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 4,
+    "supporting_brief": 7,
     "literary_guide": 1,
     "hold_for_review": 1
   }

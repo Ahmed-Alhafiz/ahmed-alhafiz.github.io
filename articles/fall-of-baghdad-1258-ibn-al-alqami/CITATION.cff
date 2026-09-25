@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this evidence package, cite the article below."
+title: "Why Did Baghdad Fall in 1258? The Ibn al-Alqami Question — evidence and citation package"
+type: dataset
+authors:
+  - family-names: "Alhafiz"
+    given-names: "Ahmed"
+    affiliation: "Independent author and researcher"
+version: "1.0"
+date-released: 2026-09-25
+url: "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/claims.json"
+repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
+abstract: >-
+  Evidence, claim and citation metadata accompanying the multilingual article.
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Alhafiz"
+      given-names: "Ahmed"
+  title: "Why Did Baghdad Fall in 1258? The Ibn al-Alqami Question"
+  year: 2026
+  month: 9
+  version: "1.0"
+  url: "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/"

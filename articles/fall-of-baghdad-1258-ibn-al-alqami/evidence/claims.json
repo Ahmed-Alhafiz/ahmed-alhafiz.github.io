@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-09-25",
+  "status": "author_review_complete_external_review_pending",
+  "claims": [
+    {
+      "id": "alqami-01",
+      "claim": "The allegation that Ibn al-Alqami single-handedly caused Baghdad's fall cannot be treated as an uncontested fact; surviving narratives differ, and later Mamluk-era polemics expanded individual blame into broader sectarian blame.",
+      "confidence": "medium-high for source disagreement; provisional for later-memory development",
+      "allowed_wording_ar": "تظهر المصادر روايات متعارضة عن دور ابن العلقمي، ولا تسمح المادة المتاحة باختزال سقوط بغداد في خيانة رجل واحد بوصفها حقيقة غير متنازع عليها.",
+      "sources": [
+        "https://repository.digital.georgetown.edu/handle/10822/707405",
+        "https://doi.org/10.26650/iutd.727887",
+        "https://isamveri.org/pdfdrg/D195119/2008/2008_AYAZFY.pdf"
+      ],
+      "page_map": "Hançabay 2020, pp. 62-72; Ayaz, symposium paper, pp. 270-282."
+    },
+    {
+      "id": "alqami-04",
+      "claim": "Ibn al-Alqami advocated accommodation or substantial concessions in response to Mongol pressure, while rival court figures resisted; this does not by itself prove secret invitation or treason.",
+      "confidence": "medium-high-for-the-2020-study-conclusion",
+      "allowed_wording_ar": "توجد قرائن على اختلاف داخل البلاط حول التفاوض والتنازلات، لكن تأييد التسوية لا يساوي وحده إثبات مراسلة سرية أو خيانة.",
+      "sources": [
+        "https://doi.org/10.26650/iutd.727887"
+      ],
+      "page_map": "Hançabay 2020, pp. 62-65 and 71-72; Ayaz, pp. 271-272."
+    },
+    {
+      "id": "alqami-04b",
+      "claim": "The 2020 study argues that Ibn al-Alqami had lost administrative influence, that commanders favoring war remained powerful, and that this weakens the claim that he personally disbanded the Abbasid army and left Baghdad defenseless.",
+      "confidence": "medium-high-for-the-2020-study-conclusion",
+      "allowed_wording_ar": "ترجح دراسة حديثة أن نفوذ الوزير كان قد تراجع وأن قادة مؤيدين للحرب ظلوا فاعلين، وهو ما يضعف رواية أنه انفرد بحل الجيش وترك بغداد بلا دفاع؛ لكنه لا يحسم وحده كل تفاصيل مسؤوليته السياسية.",
+      "sources": [
+        "https://doi.org/10.26650/iutd.727887"
+      ],
+      "page_map": "Hançabay 2020, pp. 57-60, 66-67 and 71-72."
+    },
+    {
+      "id": "alqami-04c",
+      "claim": "The 2020 study reports that explicit claims of secret correspondence with Hulagu are concentrated in Mamluk sources, while Rashid al-Din, Ata-Malik Juvayni, Ibn al-Tiqtaqa, and al-Hawadith al-Jami'a do not report such correspondence; the study also warns that silence and sectarian proximity are not conclusive proof of innocence.",
+      "confidence": "medium-high-for-source-comparison",
+      "allowed_wording_ar": "لا تتوزع تهمة المراسلة السرية بالتساوي بين المصادر: تظهر بقوة في روايات مملوكية، بينما تغيب عن مصادر أخرى قريبة أو مختلفة الموقع. هذا التفاوت قرينة تستدعي الحذر، لا برهانًا آليًا على البراءة.",
+      "sources": [
+        "https://doi.org/10.26650/iutd.727887"
+      ],
+      "page_map": "Hançabay 2020, pp. 65-66 and 71-72; Ayaz, pp. 270-281."
+    },
+    {
+      "id": "alqami-04d",
+      "claim": "Möngke's assignment to Hülegü already encompassed conquest toward Iran, Iraq, Syria and Egypt; the wider Mongol campaign therefore cannot be explained as the result of an invitation by Ibn al-Alqami.",
+      "confidence": "high for campaign mandate; medium for causal interpretation",
+      "allowed_wording_ar": "كان تحرك هولاكو غربًا جزءًا من تكليف إمبراطوري أوسع سبق حصار بغداد؛ لذلك لا يمكن جعل مراسلة منسوبة إلى الوزير سببًا منشئًا للحملة كلها، حتى لو بقي النقاش مفتوحًا حول سلوكه داخل الأزمة.",
+      "sources": [
+        "https://doi.org/10.26650/iutd.727887",
+        "https://isamveri.org/pdfdrg/D195119/2008/2008_AYAZFY.pdf",
+        "https://books.google.com/books?id=hC5RAQAAIAAJ"
+      ],
+      "page_map": "Hançabay 2020, p. 67; Ayaz, pp. 262 and 269-270; Juvayni/Boyle vol. II, pp. 607-615 on Möngke's western-conquest mandate and mobilization."
+    },
+    {
+      "id": "alqami-04e",
+      "claim": "Army-size numbers in the narratives are contradictory and often inflated: the 100,000 figure is challenged, while reports for the field force range around fewer than 10,000 to roughly 15,000-20,000 in the modern comparison.",
+      "confidence": "medium",
+      "allowed_wording_ar": "لا يوجد رقم واحد آمن لجيش بغداد؛ تتباين الروايات بشدة، وتتعامل الدراسة الحديثة مع رقم مئة ألف بوصفه مبالغًا فيه. الأدق عرض نطاقات الروايات ومصادرها بدل اعتماد رقم دعائي واحد.",
+      "sources": [
+        "https://doi.org/10.26650/iutd.727887",
+        "https://isamveri.org/pdfdrg/D195119/2008/2008_AYAZFY.pdf"
+      ],
+      "page_map": "Hançabay 2020, pp. 66-67 and 71-72; Ayaz, pp. 274-278."
+    },
+    {
+      "id": "alqami-04f",
+      "claim": "Ibn al-Alqami's survival and temporary retention after the conquest are not standalone proof of prior collaboration, because other Abbasid officials were also spared or retained; however, some early Mamluk historians treated his retention as incriminating.",
+      "confidence": "medium-high",
+      "allowed_wording_ar": "بقاء ابن العلقمي في منصبه بعد الغزو قرينة قابلة للنقاش، لا اعترافًا مكتوبًا بالخيانة: أبقى المغول موظفين عباسيين آخرين، بينما قرأ بعض مؤرخي المماليك بقاءه بوصفه علامة تعاون.",
+      "sources": [
+        "https://doi.org/10.26650/iutd.727887",
+        "https://isamveri.org/pdfdrg/D195119/2008/2008_AYAZFY.pdf"
+      ],
+      "page_map": "Hançabay 2020, pp. 68-69 and 72; Ayaz, pp. 281-282."
+    },
+    {
+      "id": "alqami-04g",
+      "claim": "Early Mamluk narratives disagree on dates, massacre duration, casualty totals, army size, and even Ibn al-Alqami's fate, while some later authors reproduce earlier accounts closely or misattribute transmission chains.",
+      "confidence": "high for Ayaz's source comparison",
+      "allowed_wording_ar": "لا تتفق الروايات المملوكية حتى في تفاصيل أساسية مثل التاريخ والمدة والأعداد ومصير الوزير، كما تكشف المقارنة انتقال بعض الأخبار بين المؤلفين. لذلك لا يصح جمعها في صوت واحد وتسميته «إجماع المؤرخين».",
+      "sources": [
+        "https://isamveri.org/pdfdrg/D195119/2008/2008_AYAZFY.pdf",
+        "https://doi.org/10.1017/mdh.2023.38"
+      ],
+      "page_map": "Ayaz, pp. 272-282, especially pp. 278-281; Brack, Biran and Amitai 2024, pp. 8-18, especially the reduction of sixteen apparent reports to four transmission roots and the mutation of casualty figures."
+    },
+    {
+      "id": "alqami-04h",
+      "claim": "Baghdad entered the 1258 crisis with accumulated urban and political vulnerabilities, including repeated fires and floods, factional conflict, ruined spaces between quarters, and uneven defenses; these conditions complicate any monocausal betrayal account.",
+      "confidence": "medium-high for structural context",
+      "allowed_wording_ar": "واجهت بغداد الغزو وهي تحمل أزمات عمرانية وسياسية متراكمة؛ وهذا لا يجعل سقوطها حتميًا، لكنه يضعف تفسير الكارثة بخيانة فرد واحد فقط.",
+      "sources": [
+        "https://www.iranicaonline.org/articles/baghdad/baghdad-iranian-connection-ii/"
+      ],
+      "page_map": "Encyclopaedia Iranica, Baghdad ii, paragraphs on the eve of the Mongol invasion, especially lines/paragraphs describing fires, floods, factionalism, ruined quarters, and defenses."
+    }
+  ]
+}

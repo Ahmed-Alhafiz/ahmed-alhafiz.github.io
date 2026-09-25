@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "main",
-  "head_sha": "7ef37c350f6dc906c11af573f0868233e59fc26d",
-  "head_sha_semantics": "Structured-data remediation commit: eight unsupported Dataset declarations were reclassified as CreativeWork without changing visible content or design.",
-  "status": "deployed_monitoring",
-  "updated_at": "2026-09-24T21:10:00+02:00",
-  "current_task": "Deploy the structured-data remediation, then monitor Google validation and recrawl without repeating indexing requests.",
-  "next_action": "After deployment, start Search Console validation for the historical Dataset and ProfilePage reports once, then wait for Google to recrawl.",
+  "branch": "content/discovery-wave-2-books-juhayman",
+  "head_sha": "8099f24db28a68938da443d63efaf6d20b20c5fb",
+  "head_sha_semantics": "origin/main base for the Discovery Wave 2 release candidate; the release commit is pending.",
+  "status": "release_candidate",
+  "updated_at": "2026-09-25T22:55:00+02:00",
+  "current_task": "Publish Discovery Wave 2 as one governed pull request: three trilingual dossiers with three evidence packages.",
+  "next_action": "Push the release branch, open one pull request, wait for the six protected checks, merge, verify GitHub Pages, then submit only the changed sitemap and new priority URLs once.",
   "last_verified": {
     "git_remote_matches": true,
     "content_pull_request": {
@@ -106,9 +106,38 @@
       "JSON parsing and git diff --check passed.",
       "The targeted structured-data gate passed: zero Dataset nodes remain and all six ProfilePage dateModified values are valid ISO 8601 DateTime values.",
       "Site integrity passed with 52 pages, 52 canonicals, 52 sitemap URLs, zero errors, and zero warnings; entity integrity passed."
-    ]
+    ],
+    "wave2_release_candidate": {
+      "verified_at": "2026-09-25T22:55:00+02:00",
+      "branch": "content/discovery-wave-2-books-juhayman",
+      "package_sha256": "9A189084C7FD61FBFFA55B6B783FCC1C84E0B88DBBBA409572762D4D0116E275",
+      "scope": "Nine article editions (Arabic, English, German), three evidence/citation packages, reciprocal book and hub discovery, feeds, llms.txt, and article_to_book analytics.",
+      "inventory": {
+        "public_html_pages": 64,
+        "canonical_urls": 64,
+        "sitemap_urls": 64,
+        "research_items": 13,
+        "arabic_feed_items": 13,
+        "english_feed_items": 8,
+        "german_feed_items": 4
+      },
+      "local_checks": {
+        "governance_integrity": "passed",
+        "site_integrity": "passed with 0 errors and 0 warnings",
+        "citation_metadata_integrity": "passed",
+        "content_research_architecture": "passed",
+        "discovery_integrity": "passed",
+        "entity_integrity": "passed",
+        "ux_integrity": "passed",
+        "arabic_ui_integrity": "passed",
+        "visibility_audit": "passed",
+        "public_presentation_hygiene": "passed"
+      },
+      "responsive_evidence": "Direct browser review passed at the default desktop viewport and 390x844 mobile for Arabic RTL and English LTR; headers, language switches, calls to action and long titles remained readable without observed horizontal page overflow."
+    }
   },
   "unverified": [
+    "Wave 2 is not yet deployed in this state record. CI success, merge, live HTTP/canonical/hreflang results, Google acceptance, indexing and ranking remain unverified until observed.",
     "Google acceptance of an indexing request is not proof that the requested URL is indexed or ranked.",
     "Google rankings, impressions, traffic, AI citations, and independent external citations remain unmeasured and are not guaranteed.",
     "Search Console validation acceptance is not proof that Google has completed a recrawl or removed a report.",

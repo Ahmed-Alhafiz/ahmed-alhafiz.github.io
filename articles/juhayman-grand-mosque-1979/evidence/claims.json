@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-09-25",
+  "status": "author_review_complete_external_review_pending",
+  "claims": [
+    {
+      "id": "juh-01",
+      "claim": "The Grand Mosque seizure began on 20 November 1979, corresponding to 1 Muharram 1400 AH.",
+      "confidence": "high",
+      "allowed_wording_ar": "بدأ الاستيلاء على الحرم المكي في 20 نوفمبر/تشرين الثاني 1979، الموافق 1 محرم 1400هـ.",
+      "sources": [
+        "https://doi.org/10.1017/S0020743807002553",
+        "https://www.britannica.com/event/seizure-of-the-Great-Mosque-of-Mecca"
+      ]
+    },
+    {
+      "id": "juh-02",
+      "claim": "Juhayman's followers proclaimed Muhammad ibn Abdullah al-Qahtani as the Mahdi and called for allegiance to him.",
+      "confidence": "high",
+      "allowed_wording_ar": "أعلن أتباع جهيمان محمد بن عبد الله القحطاني مهديّاً ودعوا إلى بيعته.",
+      "sources": [
+        "https://doi.org/10.1017/S0020743807002553",
+        "https://www.bbc.com/news/stories-50852379"
+      ]
+    },
+    {
+      "id": "juh-03",
+      "claim": "The seizure became a siege lasting roughly two weeks; al-Qahtani died, while Juhayman was captured.",
+      "confidence": "high-in-broad-terms",
+      "allowed_wording_ar": "تحول الاستيلاء إلى حصار دام قرابة أسبوعين؛ قُتل القحطاني وأُسر جهيمان.",
+      "sources": [
+        "https://doi.org/10.1017/S0020743807002553",
+        "https://www.britannica.com/event/seizure-of-the-Great-Mosque-of-Mecca"
+      ]
+    },
+    {
+      "id": "juh-04",
+      "claim": "Sixty-three convicted participants were executed in January 1980.",
+      "confidence": "high",
+      "allowed_wording_ar": "أُعدم 63 من المدانين بالمشاركة في يناير/كانون الثاني 1980.",
+      "sources": [
+        "https://doi.org/10.1017/S0020743807002553",
+        "https://www.britannica.com/event/seizure-of-the-Great-Mosque-of-Mecca"
+      ]
+    },
+    {
+      "id": "juh-05",
+      "claim": "The movement developed from a pietist Salafi milieu in Medina and later produced a more rejectionist faction hostile to the Saudi state and state-associated scholars.",
+      "confidence": "high-for-scholarly-reconstruction",
+      "allowed_wording_ar": "تعيد دراسة هيغهامر ولاكروا نشأة الحركة إلى بيئة دعوية سلفية في المدينة خرج منها لاحقاً تيار أشد رفضاً للدولة والعلماء المرتبطين بها.",
+      "sources": [
+        "https://doi.org/10.1017/S0020743807002553"
+      ]
+    },
+    {
+      "id": "juh-06",
+      "claim": "Bunzel identifies Wahhabi heritage, rejection of Saudi rule, and apocalypticism as major themes in the group's pre-seizure writings, and argues that apocalypticism was central rather than decorative.",
+      "confidence": "high-for-author-analysis",
+      "allowed_wording_ar": "يرى كول بنزل أن التراث الوهابي ورفض الحكم السعودي والنزعة الأخروية محاور رئيسية في رسائل الجماعة، وأن البعد الأخروي كان مركزياً في قرار الاستيلاء.",
+      "sources": [
+        "https://doi.org/10.1163/15700607-20230001"
+      ]
+    },
+    {
+      "id": "juh-07",
+      "claim": "Names, claimed lineage, interpreted physical traits, dreams, and the date and place were combined by members as signs supporting al-Qahtani's identification; this describes the group's reasoning, not proof that he was the Mahdi.",
+      "confidence": "medium-high-for-attributed-group-reasoning",
+      "allowed_wording_ar": "جمعت الجماعة بين الاسم والنسب المدعى والصفات المؤولة والرؤى والتوقيت والمكان بوصفها علامات؛ وهذا وصف لمنطقها الداخلي لا إثبات لصحة الدعوى.",
+      "sources": [
+        "https://doi.org/10.1017/S0020743807002553",
+        "https://www.bbc.com/news/stories-50852379"
+      ]
+    },
+    {
+      "id": "juh-08",
+      "claim": "Exact totals for militants, hostages, casualties, weapons, and the operational role of foreign assistance vary across sources.",
+      "confidence": "high-for-source-disagreement",
+      "allowed_wording_ar": "تختلف المصادر في الأعداد الدقيقة للمسلحين والمحتجزين والضحايا والسلاح وفي تفاصيل المساعدة الأجنبية؛ لا يعتمد رقم نهائي بلا نسبة.",
+      "sources": [
+        "https://doi.org/10.1017/S0020743807002553",
+        "https://www.bbc.com/news/stories-50852379",
+        "https://www.britannica.com/event/seizure-of-the-Great-Mosque-of-Mecca"
+      ]
+    }
+  ]
+}

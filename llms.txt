@@ -1,0 +1,23 @@
+# Ahmed Alhafiz
+
+> Official author and independent research-publishing website.
+
+## Canonical identity
+- Arabic: أحمد الحافظ
+- English: Ahmed Alhafiz / Ahmed Al-Hafiz
+- Author profile: https://ahmedalhafiz.com/about/
+- Editorial methodology: https://ahmedalhafiz.com/methodology/
+- Research index: https://ahmedalhafiz.com/articles/research-index.json
+
+## Feeds
+- Arabic: https://ahmedalhafiz.com/articles/feed.xml
+- English: https://ahmedalhafiz.com/en/articles/feed.xml
+- German: https://ahmedalhafiz.com/de/articles/feed.xml
+
+## Multilingual dossiers
+- Why Did Baghdad Fall in 1258? The Ibn al-Alqami Question: https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/ (evidence: https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/)
+- Juhayman and the 1979 Grand Mosque Seizure: What Happened, and Why Was al-Qahtani Called the Mahdi?: https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/ (evidence: https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/evidence/)
+- How Group Certainty Becomes Violence: Seven Mechanisms That Do Not Begin with Hate: https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/ (evidence: https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/evidence/)
+
+## Evidence policy
+Claims are separated from literary fiction. Review status and evidence limitations are disclosed. No licence or independent review is implied unless explicitly stated.

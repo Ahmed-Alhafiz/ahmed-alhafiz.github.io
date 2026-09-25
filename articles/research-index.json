@@ -8,7 +8,7 @@
   },
   "editorial_policy": "https://ahmedalhafiz.com/methodology/",
   "review_register": "https://ahmedalhafiz.com/research-status/",
-  "generated": "2026-09-23",
+  "generated": "2026-09-25",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
@@ -17,7 +17,11 @@
       "summary": "ملف تفسيري يفصل بين العرض والتشخيص الطبي والتفسير الروحي، ويشرح تشابه ظواهر النوم والنوبات وتبدل الإدراك، وتحول أطر فهمها تاريخيًا، وصلتها بالسؤال الروائي المركزي في أم عباس.",
       "type": "ملف تفسيري موثق",
       "version": "1.0",
-      "languages": ["ar", "en", "de"],
+      "languages": [
+        "ar",
+        "en",
+        "de"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/",
@@ -39,7 +43,10 @@
       "summary": "ملف موسع يفصل النص القرآني وتاريخ التفسير عن الرصد والنموذج العلمي والاستنتاج الفلسفي، مع خريطة ادعاء ودليل ونسخة إنجليزية.",
       "type": "ملف بحثي موسع",
       "version": "2.0",
-      "languages": ["ar", "en"],
+      "languages": [
+        "ar",
+        "en"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/",
@@ -60,7 +67,10 @@
       "type": "ملف بحثي موسع ثنائي اللغة",
       "english_type": "Extended bilingual research dossier",
       "version": "1.0",
-      "languages": ["ar", "en"],
+      "languages": [
+        "ar",
+        "en"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/water-civilization-power/",
@@ -82,7 +92,10 @@
       "english_summary": "An evidence-led dossier on how an ambiguous symptom can move through family fear, premature certainty, authority transfer and consent erosion—and how a parallel-path safeguard preserves assessment, voice and voluntary spiritual support.",
       "type": "ملف بحثي موسع",
       "version": "1.0",
-      "languages": ["ar", "en"],
+      "languages": [
+        "ar",
+        "en"
+      ],
       "review": "author_review_complete_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
@@ -103,7 +116,10 @@
       "type": "ملف بحثي موسع ثنائي اللغة",
       "english_type": "Extended bilingual research dossier",
       "version": "2.0",
-      "languages": ["ar", "en"],
+      "languages": [
+        "ar",
+        "en"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/",
@@ -119,7 +135,9 @@
       "summary": "ملف حماية يميز الدعم الروحي الطوعي عن الإكراه والعزل والاستغلال واللمس بلا موافقة وتأخير الرعاية الطبية.",
       "type": "ملف حماية وصحة",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "author_review_complete_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/spiritual-healing-exploitation-safeguarding/"
@@ -130,7 +148,9 @@
       "summary": "موجز طبي تثقيفي عن آليتي الحالتين، وفيديو-EEG، وتعايشهما، وحدود التشخيص من الحركة أو الفيديو وحدهما.",
       "type": "موجز طبي تثقيفي",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "medical_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/functional-seizures-vs-epilepsy/"
@@ -141,7 +161,9 @@
       "summary": "موجز أدلة يفصل ما يثبته النص وتنوع التفسير عن قياسات الزمن الكوني وما لا تسمح به المطابقة القسرية.",
       "type": "موجز أدلة",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/"
@@ -152,7 +174,9 @@
       "summary": "موجز طبي ثقافي لشلل النوم وثقل الصدر والإحساس بالحضور، مع حدود التفسير ومتى يلزم التقييم الطبي.",
       "type": "موجز طبي ثقافي",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "medical_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/sleep-paralysis-jathoom/"
@@ -163,10 +187,112 @@
       "summary": "دليل تحليلي يميز مركز الخوف النفسي عن مجرد وجود حدث خارق أو صدمة، ويربط الغموض بالتفسير والسلطة داخل الحكاية.",
       "type": "دليل تحليلي",
       "version": "2.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/guides/arabic-psychological-horror/"
+    },
+    {
+      "slug": "fall-of-baghdad-1258-ibn-al-alqami",
+      "title": "لماذا سقطت بغداد سنة 1258؟ وهل خان ابن العلقمي الخليفة؟",
+      "english_title": "Why Did Baghdad Fall in 1258? The Ibn al-Alqami Question",
+      "german_title": "Warum fiel Bagdad 1258? Verriet Ibn al-Alqami den Kalifen?",
+      "summary": "تحقيق في أسباب سقوط بغداد على يد هولاكو، وروايات خيانة ابن العلقمي وتقليص الجيش: ماذا تقول المصادر، وأين تختلف؟",
+      "english_summary": "Why Baghdad fell to Hülegü in 1258, what sources say about Ibn al-Alqami, and why claims of secret letters and deliberate army cuts remain disputed.",
+      "german_summary": "Warum Bagdad 1258 an Hülegü fiel, was Quellen über Ibn al-Alqami sagen und weshalb geheime Briefe und ein gezielter Heeresabbau umstritten bleiben.",
+      "type": "ملف بحثي مرجعي متعدد اللغات",
+      "version": "1.0",
+      "languages": [
+        "ar",
+        "en",
+        "de"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "kitab-al-kutub",
+      "url": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "english_url": "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "german_url": "https://ahmedalhafiz.com/de/articles/fall-von-bagdad-1258-ibn-al-alqami/",
+      "evidence_appendix": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/",
+      "claims_json": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/claims.json",
+      "references_bib": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/references.bib",
+      "references_ris": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/references.ris",
+      "citation_bib": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/citation.bib",
+      "citation_ris": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/citation.ris",
+      "citation_cff": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/CITATION.cff",
+      "primary_sources": [
+        "https://doi.org/10.26650/iutd.727887",
+        "https://isamveri.org/pdfdrg/D195119/2008/2008_AYAZFY.pdf",
+        "https://doi.org/10.1017/mdh.2023.38",
+        "https://www.iranicaonline.org/articles/baghdad/baghdad-iranian-connection-ii/"
+      ]
+    },
+    {
+      "slug": "juhayman-grand-mosque-1979",
+      "title": "جهيمان واقتحام الحرم المكي سنة 1979: ماذا حدث، ولماذا قيل إن القحطاني هو المهدي؟",
+      "english_title": "Juhayman and the 1979 Grand Mosque Seizure: What Happened, and Why Was al-Qahtani Called the Mahdi?",
+      "german_title": "Dschuhaiman und die Besetzung der Großen Moschee 1979: Was geschah – und warum galt al-Qahtani als Mahdi?",
+      "summary": "تحقيق تمهيدي يفصل بين الوقائع الثابتة والادعاءات المختلف فيها في حادثة الحرم المكي سنة 1979، ويشرح كيف انتقلت جماعة جهيمان من أخبار المهدي إلى تعيين محمد القحطاني ثم البيعة والسلاح.",
+      "english_summary": "A source-led guide to the 1979 Grand Mosque seizure, separating established facts from disputed claims and explaining how Juhayman's circle moved from Mahdi traditions to identifying Muhammad al-Qahtani and taking armed action.",
+      "german_summary": "Eine quellenbasierte Einführung zur Besetzung der Großen Moschee 1979: gesicherte Tatsachen, strittige Angaben und der Weg von Mahdi-Überlieferungen zur Identifizierung Muhammad al-Qahtanis und zur bewaffneten Tat.",
+      "type": "ملف بحثي مرجعي متعدد اللغات",
+      "version": "1.0",
+      "languages": [
+        "ar",
+        "en",
+        "de"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "juhayman",
+      "url": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/",
+      "english_url": "https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/",
+      "german_url": "https://ahmedalhafiz.com/de/articles/dschuhaiman-grosse-moschee-1979/",
+      "evidence_appendix": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/evidence/",
+      "claims_json": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/evidence/claims.json",
+      "references_bib": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/evidence/references.bib",
+      "references_ris": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/evidence/references.ris",
+      "citation_bib": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/citation.bib",
+      "citation_ris": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/citation.ris",
+      "citation_cff": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/CITATION.cff",
+      "primary_sources": [
+        "https://doi.org/10.1017/S0020743800054503",
+        "https://www.jstor.org/stable/1570342",
+        "https://www.bbc.com/news/stories-50852379"
+      ]
+    },
+    {
+      "slug": "how-certainty-becomes-violence",
+      "title": "كيف يتحول اليقين الجماعي إلى عنف؟ سبع آليات لا تبدأ بالكراهية",
+      "english_title": "How Group Certainty Becomes Violence: Seven Mechanisms That Do Not Begin with Hate",
+      "german_title": "Wie Gruppen-Gewissheit in Gewalt umschlägt: Sieben Mechanismen, die nicht mit Hass beginnen",
+      "summary": "شرح بحثي لدور عدم اليقين والانتماء والدليل الدائري والشائعات والنبوءة ذاتية التحقق والكلفة الغارقة والطاعة المجزأة في انتقال الجماعات من الاعتقاد إلى العنف.",
+      "english_summary": "A research-led guide to uncertainty, belonging, circular evidence, rumor, self-fulfilling prophecy, sunk costs and fragmented responsibility in the path from group belief to violence.",
+      "german_summary": "Eine quellenbasierte Erklärung von Unsicherheit, Zugehörigkeit, zirkulären Belegen, Gerüchten, selbsterfüllender Prophezeiung, versunkenen Kosten und geteilter Verantwortung auf dem Weg zur Gewalt.",
+      "type": "ملف بحثي مرجعي متعدد اللغات",
+      "version": "1.0",
+      "languages": [
+        "ar",
+        "en",
+        "de"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "juhayman",
+      "url": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/",
+      "english_url": "https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/",
+      "german_url": "https://ahmedalhafiz.com/de/articles/wie-gewissheit-zu-gewalt-wird/",
+      "evidence_appendix": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/evidence/",
+      "claims_json": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/evidence/claims.json",
+      "references_bib": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/evidence/references.bib",
+      "references_ris": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/evidence/references.ris",
+      "citation_bib": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/citation.bib",
+      "citation_ris": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/citation.ris",
+      "citation_cff": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/CITATION.cff",
+      "primary_sources": [
+        "https://doi.org/10.1016/j.copsyc.2014.11.020",
+        "https://doi.org/10.1037/amp0001254",
+        "https://doi.org/10.1037/0003-066X.56.4.307"
+      ]
     }
   ]
 }
