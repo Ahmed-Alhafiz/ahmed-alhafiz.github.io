@@ -7,6 +7,7 @@
 .article-page .lead{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.8;max-width:72ch}
 .article-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
 .article-page .prose{font-size:1.08rem;line-height:1.95;padding-top:30px}
+.article-page .prose li[id^="ref-"]{overflow-wrap:anywhere;word-break:break-word}
 .article-page .prose h2{margin-top:2.2em}.article-page .prose h3{margin-top:1.65em}
 .article-page .table-wrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .article-page table{min-width:680px;border-collapse:collapse}.article-page th,.article-page td{padding:12px;border:1px solid var(--line,#d8cfbf);vertical-align:top}
