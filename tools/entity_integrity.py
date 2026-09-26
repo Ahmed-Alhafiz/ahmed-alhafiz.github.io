@@ -39,6 +39,26 @@ UMM_ABBAS_GUIDE_IDS = {
     "en": "https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/#article",
     "de": "https://ahmedalhafiz.com/de/articles/possession-or-neurological-psychological-disorder/#article",
 }
+NEW_COMPANIONS = {
+    "fall-of-baghdad-1258-ibn-al-alqami": {
+        "book": "https://ahmedalhafiz.com/books/kitab-al-kutub/#book",
+        "ar": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/#article",
+        "en": "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/#article",
+        "de": "https://ahmedalhafiz.com/de/articles/fall-von-bagdad-1258-ibn-al-alqami/#article",
+    },
+    "juhayman-grand-mosque-1979": {
+        "book": JUHAYMAN_ID,
+        "ar": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/#article",
+        "en": "https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/#article",
+        "de": "https://ahmedalhafiz.com/de/articles/dschuhaiman-grosse-moschee-1979/#article",
+    },
+    "how-certainty-becomes-violence": {
+        "book": JUHAYMAN_ID,
+        "ar": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/#article",
+        "en": "https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/#article",
+        "de": "https://ahmedalhafiz.com/de/articles/wie-gewissheit-zu-gewalt-wird/#article",
+    },
+}
 EXCLUDED_HTML = {"404.html", "google904951439b331720.html"}
 SCRIPT_RE = re.compile(
     r"<script\b[^>]*\btype=[\"']application/ld\+json[\"'][^>]*>(.*?)</script>",
@@ -275,6 +295,34 @@ def validate_manifest(errors: list[str]) -> None:
     elif umm_abbas[0].get("subjectOf") != {"@id": UMM_ABBAS_GUIDE_IDS["ar"]}:
         errors.append("author.json: Umm Abbas book must link to its Arabic companion guide")
 
+    for slug, expected in NEW_COMPANIONS.items():
+        ar_article = article_by_id.get(expected["ar"])
+        if ar_article is None:
+            errors.append(f"author.json: missing Arabic companion article {slug}")
+            continue
+        if ar_article.get("about") != {"@id": expected["book"]}:
+            errors.append(f"author.json: {slug} must reference its related book with about")
+        translations = [{"@id": expected["en"]}, {"@id": expected["de"]}]
+        if ar_article.get("workTranslation") != translations:
+            errors.append(f"author.json: {slug} translation graph drifted")
+        for language in ("en", "de"):
+            translated = article_by_id.get(expected[language])
+            if translated is None:
+                errors.append(f"author.json: missing {language} companion article {slug}")
+            elif translated.get("translationOfWork") != {"@id": expected["ar"]}:
+                errors.append(f"author.json: {language} {slug} must link to the Arabic original")
+
+    book_by_id = {book.get("@id"): book for book in books}
+    expected_juhayman_subjects = [
+        {"@id": NEW_COMPANIONS["juhayman-grand-mosque-1979"]["ar"]},
+        {"@id": NEW_COMPANIONS["how-certainty-becomes-violence"]["ar"]},
+    ]
+    if book_by_id.get(JUHAYMAN_ID, {}).get("subjectOf") != expected_juhayman_subjects:
+        errors.append("author.json: Juhayman book-to-research graph drifted")
+    kitab_id = NEW_COMPANIONS["fall-of-baghdad-1258-ibn-al-alqami"]["book"]
+    if book_by_id.get(kitab_id, {}).get("subjectOf") != {"@id": NEW_COMPANIONS["fall-of-baghdad-1258-ibn-al-alqami"]["ar"]}:
+        errors.append("author.json: Kitab al-Kutub book-to-research graph drifted")
+
 
 def validate_html(errors: list[str]) -> None:
     person_count = 0
@@ -313,6 +361,18 @@ def validate_html(errors: list[str]) -> None:
                     validate_person(node, f"{rel} JSON-LD block {index}", errors)
                 if isinstance(node, dict) and node_has_type(node, "WebSite"):
                     validate_website(node, f"{rel} JSON-LD block {index}", errors)
+                if isinstance(node, dict) and node_has_type(node, "Book"):
+                    if rel.endswith("books/juhayman/index.html"):
+                        expected_subjects = [
+                            {"@id": NEW_COMPANIONS["juhayman-grand-mosque-1979"]["ar"]},
+                            {"@id": NEW_COMPANIONS["how-certainty-becomes-violence"]["ar"]},
+                        ]
+                        if node.get("subjectOf") != expected_subjects:
+                            errors.append(f"{rel}: Juhayman Book schema lost its companion research links")
+                    if rel.endswith("books/kitab-al-kutub/index.html"):
+                        expected_subject = {"@id": NEW_COMPANIONS["fall-of-baghdad-1258-ibn-al-alqami"]["ar"]}
+                        if node.get("subjectOf") != expected_subject:
+                            errors.append(f"{rel}: Kitab al-Kutub Book schema lost its companion research link")
         if page_person_count > 1:
             errors.append(f"{rel}: duplicate canonical Person nodes found: {page_person_count}")
 
@@ -457,6 +517,29 @@ def validate_strategy_data(errors: list[str]) -> None:
             errors.append("content inventory: Teaching the Names must remain a complete Arabic/English pillar")
 
 
+def validate_llms_manifest(errors: list[str]) -> None:
+    path = ROOT / "llms.txt"
+    text = path.read_text(encoding="utf-8")
+    for token in ("أحمد الحافظ", "Ahmed Alhafiz", "Ahmad Alhafiz", AUTHOR_ID, MANIFEST_URL):
+        if token not in text:
+            errors.append(f"llms.txt: canonical identity token missing: {token}")
+    if "Ahmed Al-Hafiz" in text:
+        errors.append("llms.txt: unsupported Latin-name spelling returned")
+    for book_path in ("sirou-fi-alard", "umm-abbas", "juhayman", "kitab-al-kutub"):
+        if f"https://ahmedalhafiz.com/books/{book_path}/" not in text:
+            errors.append(f"llms.txt: official book missing: {book_path}")
+    for url in re.findall(r"https://ahmedalhafiz\.com/[^\s)]+", text):
+        parsed = urlparse(url)
+        local = parsed.path.lstrip("/")
+        candidate = ROOT / local
+        if not local:
+            candidate = ROOT / "index.html"
+        elif parsed.path.endswith("/"):
+            candidate = candidate / "index.html"
+        if not candidate.exists():
+            errors.append(f"llms.txt: broken official URL: {url}")
+
+
 def main() -> None:
     errors: list[str] = []
     validate_manifest(errors)
@@ -466,6 +549,7 @@ def main() -> None:
     validate_juhayman_title(errors)
     validate_no_doorways(errors)
     validate_strategy_data(errors)
+    validate_llms_manifest(errors)
     if errors:
         for error in errors:
             print(f"ERROR: {error}")
@@ -474,7 +558,7 @@ def main() -> None:
     print(
         "Entity integrity passed: canonical bilingual name, Arabic and Latin aliases, one author ID, "
         "two verified public profiles, one machine-readable manifest, three visible profile editions, "
-        "four forthcoming books, four current reference pillars, one trilingual Umm Abbas companion-guide graph, "
+        "four forthcoming books, four current reference pillars, four multilingual book-to-research graphs, "
         "canonical Juhayman title, and no alias doorway pages."
     )
 

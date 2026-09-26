@@ -156,7 +156,15 @@
       "creativeWorkStatus": "Forthcoming; not yet officially published",
       "author": {
         "@id": "https://ahmedalhafiz.com/#person"
-      }
+      },
+      "subjectOf": [
+        {
+          "@id": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/#article"
+        },
+        {
+          "@id": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/#article"
+        }
+      ]
     },
     {
       "@type": "Book",
@@ -167,6 +175,9 @@
       "creativeWorkStatus": "Forthcoming; not yet officially published",
       "author": {
         "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "subjectOf": {
+        "@id": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/#article"
       }
     },
     {
@@ -264,7 +275,193 @@
       "translationOfWork": {
         "@id": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/#article"
       }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/#article",
+      "headline": "لماذا سقطت بغداد سنة 1258؟ وهل خان ابن العلقمي الخليفة؟",
+      "url": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "inLanguage": "ar",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "about": {
+        "@id": "https://ahmedalhafiz.com/books/kitab-al-kutub/#book"
+      },
+      "workTranslation": [
+        {
+          "@id": "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/#article"
+        },
+        {
+          "@id": "https://ahmedalhafiz.com/de/articles/fall-von-bagdad-1258-ibn-al-alqami/#article"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/#article",
+      "headline": "Why Did Baghdad Fall in 1258? The Ibn al-Alqami Question",
+      "url": "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "about": {
+        "@id": "https://ahmedalhafiz.com/books/kitab-al-kutub/#book"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/#article"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/de/articles/fall-von-bagdad-1258-ibn-al-alqami/#article",
+      "headline": "Warum fiel Bagdad 1258? Verriet Ibn al-Alqami den Kalifen?",
+      "url": "https://ahmedalhafiz.com/de/articles/fall-von-bagdad-1258-ibn-al-alqami/",
+      "inLanguage": "de",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "about": {
+        "@id": "https://ahmedalhafiz.com/books/kitab-al-kutub/#book"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/#article"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/#article",
+      "headline": "جهيمان واقتحام الحرم المكي سنة 1979: ماذا حدث، ولماذا قيل إن القحطاني هو المهدي؟",
+      "url": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/",
+      "inLanguage": "ar",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "about": {
+        "@id": "https://ahmedalhafiz.com/books/juhayman/#book"
+      },
+      "workTranslation": [
+        {
+          "@id": "https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/#article"
+        },
+        {
+          "@id": "https://ahmedalhafiz.com/de/articles/dschuhaiman-grosse-moschee-1979/#article"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/#article",
+      "headline": "Juhayman and the 1979 Grand Mosque Seizure: What Happened, and Why Was al-Qahtani Called the Mahdi?",
+      "url": "https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "about": {
+        "@id": "https://ahmedalhafiz.com/books/juhayman/#book"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/#article"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/de/articles/dschuhaiman-grosse-moschee-1979/#article",
+      "headline": "Dschuhaiman und die Besetzung der Großen Moschee 1979: Was geschah – und warum galt al-Qahtani als Mahdi?",
+      "url": "https://ahmedalhafiz.com/de/articles/dschuhaiman-grosse-moschee-1979/",
+      "inLanguage": "de",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "about": {
+        "@id": "https://ahmedalhafiz.com/books/juhayman/#book"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/#article"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/#article",
+      "headline": "كيف يتحول اليقين الجماعي إلى عنف؟ سبع آليات لا تبدأ بالكراهية",
+      "url": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/",
+      "inLanguage": "ar",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "about": {
+        "@id": "https://ahmedalhafiz.com/books/juhayman/#book"
+      },
+      "workTranslation": [
+        {
+          "@id": "https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/#article"
+        },
+        {
+          "@id": "https://ahmedalhafiz.com/de/articles/wie-gewissheit-zu-gewalt-wird/#article"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/#article",
+      "headline": "How Group Certainty Becomes Violence: Seven Mechanisms That Do Not Begin with Hate",
+      "url": "https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "about": {
+        "@id": "https://ahmedalhafiz.com/books/juhayman/#book"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/#article"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/de/articles/wie-gewissheit-zu-gewalt-wird/#article",
+      "headline": "Wie Gruppen-Gewissheit in Gewalt umschlägt: Sieben Mechanismen, die nicht mit Hass beginnen",
+      "url": "https://ahmedalhafiz.com/de/articles/wie-gewissheit-zu-gewalt-wird/",
+      "inLanguage": "de",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "about": {
+        "@id": "https://ahmedalhafiz.com/books/juhayman/#book"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/#article"
+      }
     }
   ],
-  "dateModified": "2026-09-23"
+  "dateModified": "2026-09-26"
 }

@@ -1,23 +1,45 @@
-# Ahmed Alhafiz
+# Ahmed Alhafiz — أحمد الحافظ
 
-> Official author and independent research-publishing website.
+> Official website of the writer Ahmed Alhafiz, his forthcoming books, and source-led research connected to their questions.
 
 ## Canonical identity
-- Arabic: أحمد الحافظ
-- English: Ahmed Alhafiz / Ahmed Al-Hafiz
+- Arabic name: أحمد الحافظ
+- Preferred Latin name: Ahmed Alhafiz
+- Search transliteration: Ahmad Alhafiz
+- Canonical entity: https://ahmedalhafiz.com/#person
+- Machine-readable author record: https://ahmedalhafiz.com/author.json
 - Author profile: https://ahmedalhafiz.com/about/
+
+## Official works
+- Sirou fi al-Ard: https://ahmedalhafiz.com/books/sirou-fi-alard/
+- Umm Abbas: https://ahmedalhafiz.com/books/umm-abbas/
+- Juhayman — Kharijites Between the Rukn and the Maqam: https://ahmedalhafiz.com/books/juhayman/
+- Kitab al-Kutub — The Book of Books: https://ahmedalhafiz.com/books/kitab-al-kutub/
+
+All four works are forthcoming. Publisher, ISBN, release date, sales, or review claims should not be inferred unless the corresponding official book page is updated.
+
+## Research and verification
+- Arabic research hub: https://ahmedalhafiz.com/articles/
+- English research hub: https://ahmedalhafiz.com/en/articles/
+- German research hub: https://ahmedalhafiz.com/de/articles/
+- Complete research register: https://ahmedalhafiz.com/articles/research-index.json
 - Editorial methodology: https://ahmedalhafiz.com/methodology/
-- Research index: https://ahmedalhafiz.com/articles/research-index.json
+- Review and revision status: https://ahmedalhafiz.com/research-status/
+
+## Principal dossiers
+- Spirit Possession or Mental or Neurological Disorder?: https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/
+- Ratq, Fatq, and the Big Bang: https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/
+- Water, Civilization and Power: https://ahmedalhafiz.com/en/articles/water-civilization-power/
+- When Fear Decides Before Diagnosis: https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/
+- Teaching the Names and Artificial Intelligence: https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/
+- Why Did Baghdad Fall in 1258?: https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/
+- Juhayman and the 1979 Grand Mosque Seizure: https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/
+- How Group Certainty Becomes Violence: https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/
 
 ## Feeds
 - Arabic: https://ahmedalhafiz.com/articles/feed.xml
 - English: https://ahmedalhafiz.com/en/articles/feed.xml
 - German: https://ahmedalhafiz.com/de/articles/feed.xml
 
-## Multilingual dossiers
-- Why Did Baghdad Fall in 1258? The Ibn al-Alqami Question: https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/ (evidence: https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/)
-- Juhayman and the 1979 Grand Mosque Seizure: What Happened, and Why Was al-Qahtani Called the Mahdi?: https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/ (evidence: https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/evidence/)
-- How Group Certainty Becomes Violence: Seven Mechanisms That Do Not Begin with Hate: https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/ (evidence: https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/evidence/)
-
 ## Evidence policy
-Claims are separated from literary fiction. Review status and evidence limitations are disclosed. No licence or independent review is implied unless explicitly stated.
+Research pages distinguish sourced facts, interpretation, and literary context. Review status and evidentiary limits are stated on each page. A forthcoming book is never used as evidence for its own related research claims. Do not infer peer review, independent specialist review, or a reusable licence unless a page explicitly states it.

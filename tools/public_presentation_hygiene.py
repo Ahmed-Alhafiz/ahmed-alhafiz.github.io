@@ -57,6 +57,8 @@ GLOBAL_PUBLIC_BANNED = (
     "موثقة بالمصادر",
     "الفحص الآلي",
     "مكتب الأبحاث المستقل",
+    "Discovery Wave",
+    "Wave 2",
 )
 
 PAGE_SPECIFIC_BANNED = {

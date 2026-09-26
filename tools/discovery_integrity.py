@@ -267,13 +267,85 @@ def english_homepage(expected):
         if route(url) not in html:
             die(f"en/index.html: current English research pillar absent from visible homepage: {url}")
 
+def hub_structured_inventory(indexed):
+    """Keep each language hub's visible inventory and ItemList in lockstep."""
+    configs = (
+        ("articles/index.html", "ar", "url", "https://ahmedalhafiz.com/articles/#list"),
+        ("en/articles/index.html", "en", "english_url", "https://ahmedalhafiz.com/en/articles/#list"),
+        ("de/articles/index.html", "de", "german_url", "https://ahmedalhafiz.com/de/articles/#list"),
+    )
+    for rel, language, url_key, list_id in configs:
+        html = (ROOT / rel).read_text(encoding="utf-8")
+        parser = LD(); parser.feed(html)
+        target = None
+        for raw in parser.blocks:
+            data = json.loads(raw)
+            nodes = data.get("@graph", []) if isinstance(data, dict) else []
+            target = next(
+                (node for node in nodes if isinstance(node, dict) and node.get("@id") == list_id),
+                target,
+            )
+        if target is None:
+            die(f"{rel}: research ItemList missing")
+        expected = {
+            item[url_key]
+            for item in indexed.values()
+            if language in item.get("languages", []) and item.get(url_key)
+        }
+        listed = {
+            item.get("url")
+            for item in target.get("itemListElement", [])
+            if isinstance(item, dict) and item.get("url")
+        }
+        if target.get("numberOfItems") != len(expected) or listed != expected:
+            die(
+                f"{rel}: structured research inventory drift; "
+                f"expected {len(expected)} unique URLs, found {target.get('numberOfItems')}"
+            )
+
+def homepage_structured_inventory(indexed):
+    configs = (
+        ("index.html", "ar", "url", "https://ahmedalhafiz.com/#featured-research"),
+        ("en/index.html", "en", "english_url", "https://ahmedalhafiz.com/en/#featured-research"),
+        ("de/index.html", "de", "german_url", "https://ahmedalhafiz.com/de/#featured-research"),
+    )
+    for rel, language, url_key, list_id in configs:
+        html = (ROOT / rel).read_text(encoding="utf-8")
+        parser = LD(); parser.feed(html)
+        target = None
+        for raw in parser.blocks:
+            data = json.loads(raw)
+            nodes = data.get("@graph", []) if isinstance(data, dict) else []
+            target = next(
+                (node for node in nodes if isinstance(node, dict) and node.get("@id") == list_id),
+                target,
+            )
+        if target is None:
+            die(f"{rel}: homepage research ItemList missing")
+        expected = {
+            item[url_key]
+            for item in indexed.values()
+            if language in item.get("languages", []) and item.get(url_key)
+        }
+        listed = {
+            item.get("url")
+            for item in target.get("itemListElement", [])
+            if isinstance(item, dict) and item.get("url")
+        }
+        if target.get("numberOfItems") != len(expected) or listed != expected:
+            die(f"{rel}: homepage structured research inventory drift")
+        for url in expected:
+            if route(url) not in html:
+                die(f"{rel}: research URL is structured but not visibly linked: {url}")
+
 def main():
     ar = index_data(); en = {x["english_url"]:{**x,"title":x["english_title"]} for x in ar.values() if x.get("english_url")}
+    de = {x["german_url"]:{**x,"title":x["german_title"]} for x in ar.values() if x.get("german_url")}
     atom(ROOT/"articles/feed.xml", ar); json_feed(ROOT/"articles/feed.json", ar)
     atom(ROOT/"en/articles/feed.xml", en); json_feed(ROOT/"en/articles/feed.json", en)
-    surfaces(ar); english_homepage(en)
-    de_count = sum(1 for x in ar.values() if x.get("german_url"))
-    print(f"Discovery integrity passed: {len(ar)} Arabic surfaces, {len(en)} English editions, {de_count} German editions; chronology, JSON-LD metadata, reciprocal hreflang/switches, hubs, sitemap, book links and English-homepage pillar inventory agree.")
+    atom(ROOT/"de/articles/feed.xml", de)
+    surfaces(ar); english_homepage(en); hub_structured_inventory(ar); homepage_structured_inventory(ar)
+    print(f"Discovery integrity passed: {len(ar)} Arabic surfaces, {len(en)} English editions, {len(de)} German editions; chronology, JSON-LD metadata, reciprocal hreflang/switches, feeds, hubs, sitemap, book links and homepage inventories agree.")
 
 if __name__ == "__main__":
     try: main()

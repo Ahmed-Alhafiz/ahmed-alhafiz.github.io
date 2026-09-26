@@ -37,6 +37,9 @@ ROUTES = (
     "/articles/six-days-creation-cosmic-time/",
     "/articles/sleep-paralysis-jathoom/",
     "/articles/functional-seizures-vs-epilepsy/",
+    "/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+    "/articles/juhayman-grand-mosque-1979/",
+    "/articles/how-certainty-becomes-violence/",
 )
 
 

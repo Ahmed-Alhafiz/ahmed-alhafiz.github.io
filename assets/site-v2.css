@@ -324,3 +324,44 @@ footer.site-footer{background:#08121d;color:#b9c5cd;padding:38px 0 22px}
 .press-verification{background:linear-gradient(135deg,var(--paper),var(--paper-2))}.verification-list{margin:24px 0 0;padding-inline-start:24px}.verification-list li{margin:11px 0;color:var(--ink-2);line-height:1.8}.press-verification .identity-note a{color:#fff;text-decoration:underline;text-underline-offset:4px}.press-verification .identity-note p{margin-bottom:10px}
 @media(max-width:960px){.press-hero-grid,.press-layout{grid-template-columns:1fr}.press-hero-grid{min-height:0;padding:54px 0 62px;gap:30px}.press-portrait{order:-1;justify-self:center;width:min(54vw,245px)}.press-assets{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.press-hero-grid{padding:25px 0 42px;gap:23px}.press-portrait{width:min(47vw,174px)}.press-hero h1{font-size:clamp(42px,13vw,52px)}.press-hero .lead{font-size:16.5px;line-height:1.7}.press-hero .actions{display:grid;grid-template-columns:1fr;gap:9px}.press-hero .btn{width:100%;min-height:44px}.press-layout,.press-assets,.press-works{grid-template-columns:1fr}.bio-block{padding-inline-start:17px}.bio-block p{font-size:16.5px}.press-facts dl>div{grid-template-columns:1fr;gap:5px}.press-asset img{height:220px}}
+
+/* Editorial discovery system 18 — research and book continuity */
+.wave2-discovery{position:relative;overflow:hidden;background:linear-gradient(145deg,#f3eee3 0%,#ece3d2 100%);border-block:1px solid var(--line)}
+.wave2-discovery::before{content:"";position:absolute;inset:-140px auto auto -110px;width:360px;height:360px;border:1px solid rgba(155,79,55,.12);border-radius:50%;box-shadow:0 0 0 58px rgba(155,79,55,.025),0 0 0 116px rgba(155,79,55,.018);pointer-events:none}
+.wave2-discovery>.section-heading,.wave2-discovery>.card-grid,.wave2-discovery>.shell{position:relative;width:min(1180px,calc(100% - 40px));margin-inline:auto}
+.wave2-discovery>.section-heading{max-width:820px;margin-bottom:30px}
+.wave2-discovery>.section-heading h2,.wave2-discovery>.shell>h2{margin:5px 0 10px;font-size:clamp(31px,4vw,48px);line-height:1.2;color:var(--navy)}
+.wave2-discovery>.section-heading>p:last-child{max-width:720px;margin:0;color:var(--ink-2);font-size:17px;line-height:1.8}
+.wave2-discovery .card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.wave2-discovery .card{display:flex;flex-direction:column;min-width:0;padding:25px 24px 23px;border:1px solid rgba(52,62,68,.16);border-top:4px solid var(--copper);border-radius:18px;background:rgba(255,255,255,.82);box-shadow:0 16px 42px rgba(32,39,43,.07);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.wave2-discovery .card:hover,.wave2-discovery .card:focus-within{transform:translateY(-4px);border-color:rgba(155,79,55,.52);box-shadow:0 22px 52px rgba(32,39,43,.11)}
+.wave2-discovery .card h3{margin:8px 0 13px;font-size:clamp(21px,2vw,26px);line-height:1.45;color:var(--navy)}
+.wave2-discovery .card h3 a{text-decoration:none}.wave2-discovery .card h3 a:hover,.wave2-discovery .card h3 a:focus-visible{color:var(--copper)}
+.wave2-discovery .card>p:not(.eyebrow){margin:0 0 20px;color:var(--ink-2);line-height:1.8}
+.wave2-discovery .card>a:last-child{margin-top:auto;color:var(--blue);font-weight:800;text-decoration:underline;text-underline-offset:5px}
+.wave2-discovery>.shell>ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0 0;padding:0;list-style:none}
+.wave2-discovery>.shell>ul li{display:flex;align-items:center;min-height:124px;padding:20px 22px;border:1px solid rgba(52,62,68,.16);border-inline-start:4px solid var(--copper);border-radius:14px;background:rgba(255,255,255,.82);box-shadow:var(--shadow-soft)}
+.wave2-discovery>.shell>ul a{color:var(--navy);font-size:18px;font-weight:800;line-height:1.55;text-decoration:none}.wave2-discovery>.shell>ul a:hover,.wave2-discovery>.shell>ul a:focus-visible{color:var(--copper)}
+.related-research{padding-block:28px;background:linear-gradient(135deg,var(--paper),var(--paper-2))}
+.related-research+.related-research{padding-top:0}
+.related-research .shell{width:min(980px,calc(100% - 40px));margin-inline:auto;padding:24px 28px;border:1px solid var(--line);border-inline-start:5px solid var(--copper);border-radius:16px;background:var(--surface);box-shadow:var(--shadow-soft)}
+.related-research h2{margin:6px 0 0;font-size:clamp(23px,3vw,34px);line-height:1.45}.related-research h2 a{text-decoration:none}.related-research h2 a:hover,.related-research h2 a:focus-visible{color:var(--copper)}
+@media(max-width:900px){.wave2-discovery .card-grid,.wave2-discovery>.shell>ul{grid-template-columns:1fr}.wave2-discovery .card{padding:22px}.wave2-discovery>.shell>ul li{min-height:0}}
+@media(max-width:620px){.wave2-discovery>.section-heading,.wave2-discovery>.card-grid,.wave2-discovery>.shell,.related-research .shell{width:min(100% - 30px,1180px)}.wave2-discovery>.section-heading{margin-bottom:22px}.wave2-discovery .card{padding:20px 18px;border-radius:14px}.wave2-discovery .card h3{font-size:22px}.related-research{padding-block:20px}.related-research .shell{padding:20px 18px}}
+
+/* Book catalogue 18 — one coherent editorial shelf in all languages */
+.books-index .page-head{position:relative;overflow:hidden;padding:72px 0 64px;background:linear-gradient(132deg,var(--navy),#142b3d);border-bottom:1px solid var(--line-dark);color:#fff}
+.books-index .page-head::after{content:"";position:absolute;inset:auto -120px -230px auto;width:420px;height:420px;border:1px solid rgba(240,173,133,.20);border-radius:50%;box-shadow:0 0 0 68px rgba(240,173,133,.025),0 0 0 136px rgba(240,173,133,.018)}
+.books-index .page-head .wrap{position:relative;z-index:1}.books-index .page-head .kicker{color:#f0ad85}.books-index .page-head h1{max-width:900px;margin:8px 0 13px;color:#fff;font-size:clamp(46px,6vw,72px)}
+.books-index .page-head p{max-width:760px;margin:0;color:#cbd6de;font-size:18px;line-height:1.85}
+.books-index main>.section{background:var(--paper-2)}
+.books-index .works-grid{gap:22px;align-items:stretch}
+.books-index .book-card{height:100%;padding:0 0 22px;overflow:hidden;border-radius:16px;background:var(--surface)}
+.books-index .book-card>a{display:flex;height:100%;flex-direction:column}
+.books-index .book-card-cover{border-radius:0;border-bottom:1px solid var(--line)}
+.books-index .book-card h3{margin:19px 18px 7px;font-size:20px;line-height:1.45}
+.books-index .book-card p{margin:0 18px 13px;font-size:13px;line-height:1.75}
+.books-index .book-card .more{margin:auto 18px 0;padding-top:8px;text-decoration:underline;text-underline-offset:5px}
+.books-index .books-transparency{max-width:900px;margin:34px auto 0;border-inline-start:5px solid var(--copper);border-radius:14px;box-shadow:var(--shadow-soft)}
+@media(max-width:760px){.books-index .page-head{padding:50px 0 44px}.books-index .page-head p{font-size:16px}.books-index .works-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.books-index .book-card{padding-bottom:17px}.books-index .book-card h3{margin:14px 12px 6px;font-size:16px}.books-index .book-card p{margin-inline:12px;font-size:12px}.books-index .book-card .more{margin-inline:12px}}
+@media(max-width:380px){.books-index .works-grid{grid-template-columns:1fr}.books-index .book-card h3{font-size:19px}.books-index .book-card p{font-size:13px}}
