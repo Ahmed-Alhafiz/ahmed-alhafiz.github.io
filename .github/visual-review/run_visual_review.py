@@ -324,6 +324,12 @@ def render_top_pages(driver: webdriver.Chrome, mode: str, width: int, height: in
     configure_viewport(driver, width, height)
     for name, route in TOP_PAGES:
         open_page(driver, route, f"top-{mode}")
+        driver.execute_script("window.scrollTo({top:0,left:0,behavior:'auto'})")
+        time.sleep(0.08)
+        header = driver.find_element(By.CSS_SELECTOR, ".site-header")
+        header_rect = rounded_rect(driver, header)
+        if header_rect["height"] < 50 or header_rect["top"] < -1.5 or header_rect["bottom"] > height + 1.5:
+            raise SystemExit(f"{mode} {route}: site header is not visibly positioned: {header_rect}")
         metrics = driver.execute_script(
             "return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth};"
         )

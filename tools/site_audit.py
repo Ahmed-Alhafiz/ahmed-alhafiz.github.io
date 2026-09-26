@@ -152,6 +152,8 @@ def main()->int:
             data=json.loads(raw)
             for node in iter_jsonld_nodes(data):
                 if not isinstance(node,dict):continue
+                if '' in node:
+                    errors.append(f'{rel}: structured data contains an empty property name')
                 typ=node.get('@type')
                 node_types=set(typ) if isinstance(typ,list) else {typ}
                 if 'Article' in node_types and not node.get('image'):
