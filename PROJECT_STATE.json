@@ -2,17 +2,22 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/sirou-book-research-expansion-2026-09-26",
-  "head_sha": "789e1026562d241ad2cc35cca25e527405f24d8c",
-  "head_sha_semantics": "Base origin/main SHA for the current Sirou book-grounded research release candidate; branch head is recorded by Git after commit.",
-  "status": "release_candidate_local_checks_passed_visual_ci_pending",
-  "updated_at": "2026-09-26T17:10:00+02:00",
-  "current_task": "Remove the unrelated human-evolution report and publish six Arabic reports derived directly from the chapters of Sirou fi al-Ard.",
-  "next_action": "Commit and push the release candidate, open a policy-compliant PR, require CI including Visual review, inspect artifacts, merge, then verify the live site.",
+  "branch": "main",
+  "head_sha": "05589c0c44968d7c00932cebba76897f5eaa84a2",
+  "head_sha_semantics": "Verified main merge commit after PR #75 published the Sirou book-grounded series and PR #77 corrected the homepage latest-research ordering.",
+  "status": "deployed_monitoring",
+  "updated_at": "2026-09-26T17:25:00+02:00",
+  "current_task": "Sirou book-grounded research series is published and verified on the live domain.",
+  "next_action": "Monitor crawling and Search Console after a meaningful data window; do not claim indexing or ranking improvement without evidence.",
   "pending_release": {
     "branch": "content/sirou-book-research-expansion-2026-09-26",
     "base_sha": "789e1026562d241ad2cc35cca25e527405f24d8c",
-    "status": "local_checks_passed_visual_ci_pending",
+    "status": "merged_deployed_verified",
+    "pull_request": 75,
+    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/75",
+    "follow_up_pull_request": 77,
+    "follow_up_pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/77",
+    "merge_sha": "05589c0c44968d7c00932cebba76897f5eaa84a2",
     "scope": "Delete the unrelated human-evolution report and all references; add six Arabic, source-disclosed reports derived from the actual book chapters; synchronize discovery surfaces and tests.",
     "inventory": {
       "public_html_pages": 67,
@@ -24,7 +29,8 @@
       "german_feed_items": 4
     },
     "local_checks": "Site, discovery, editorial, citation, research architecture, entity, Arabic UI, publication hygiene, UX, visibility, fragment audit, and git diff check passed.",
-    "visual_review": "Local Chromium was unavailable and download failed through the network proxy. CI Visual review coverage was expanded to the six reports and the new homepage section; result pending."
+    "visual_review": "CI Visual review runs 36251219655 and 36251669918 passed with coverage for the six reports, the new homepage series, and the corrected latest-research box.",
+    "live_verification": "All six new reports rendered on ahmedalhafiz.com with their expected titles; the deleted human-evolution route rendered the site's 404 page; the homepage showed report 01 for Quran/science methodology and report 02 for religious OCD with no deleted-title residue."
   },
   "last_verified": {
     "git_remote_matches": true,
