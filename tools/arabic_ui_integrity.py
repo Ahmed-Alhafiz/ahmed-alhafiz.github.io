@@ -285,8 +285,8 @@ def main() -> None:
         if local not in hub_text:
             errors.append(f"articles/index.html: research surface not linked from hub: {local}")
 
-    if len(items) != 13:
-        errors.append(f"articles/research-index.json: expected 13 current research surfaces, found {len(items)}")
+    if len(items) != 15:
+        errors.append(f"articles/research-index.json: expected 15 current research surfaces, found {len(items)}")
 
     validate_status_register(data, inventory, errors)
 
@@ -296,7 +296,7 @@ def main() -> None:
         raise SystemExit(1)
 
     print(
-        "Arabic UI integrity passed: the Arabic hub is localized, thirteen research "
+        "Arabic UI integrity passed: the Arabic hub is localized, fifteen research "
         "surfaces match the machine register, and all four bilingual pillars have "
         "current Arabic/English status rows with synchronized versions and dates."
     )

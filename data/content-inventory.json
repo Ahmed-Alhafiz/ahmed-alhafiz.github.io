@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-09-25",
+  "generated": "2026-09-26",
   "site": "https://ahmedalhafiz.com/",
   "policy": {
     "primary_rule": "Do not publish a new URL merely to increase page count. Every indexed page must answer a distinct question, provide unique value, and disclose its evidence and review status.",
@@ -200,12 +200,34 @@
       ],
       "next_action": "hold_scope_measure_and_seek_independent_review",
       "reason": "Multilingual reference article with explicit claim-evidence architecture, citation assets, and a distinct reader question."
+    },
+    {
+      "slug": "human-evolution-common-ancestor",
+      "url": "https://ahmedalhafiz.com/articles/human-evolution-common-ancestor/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": ["ar"],
+      "primary_intent": "الإجابة العلمية عن سؤال هل الإنسان أصله قرد وشرح السلف المشترك",
+      "does_not_target": ["فتوى في خلق آدم", "إثبات الإلحاد أو نفي الخلق", "نسخة مختصرة من ملف الرتق والفتق"],
+      "next_action": "measure_query_fit_and_seek_biology_review",
+      "reason": "Distinct high-intent Arabic question answered with official human-origins sources and explicit boundaries between biology and metaphysics."
+    },
+    {
+      "slug": "religious-ocd-scrupulosity",
+      "url": "https://ahmedalhafiz.com/articles/religious-ocd-scrupulosity/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": ["ar"],
+      "primary_intent": "الفرق بين الوسواس القهري الديني وضعف الإيمان ومسارات العلاج",
+      "does_not_target": ["تشخيص شخص بعينه", "إعطاء فتوى فردية", "استبدال العلاج أو الطوارئ"],
+      "next_action": "measure_query_fit_and_seek_clinical_review",
+      "reason": "Distinct Arabic health question with explicit safety limits, official clinical guidance, and a faith-sensitive treatment boundary."
     }
   ],
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 7,
+    "supporting_brief": 9,
     "literary_guide": 1,
     "hold_for_review": 1
   }

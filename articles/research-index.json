@@ -6,9 +6,8 @@
     "name_en": "Ahmed Alhafiz",
     "profile": "https://ahmedalhafiz.com/about/"
   },
-  "editorial_policy": "https://ahmedalhafiz.com/methodology/",
   "review_register": "https://ahmedalhafiz.com/research-status/",
-  "generated": "2026-09-25",
+  "generated": "2026-09-26",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
@@ -292,6 +291,42 @@
         "https://doi.org/10.1016/j.copsyc.2014.11.020",
         "https://doi.org/10.1037/amp0001254",
         "https://doi.org/10.1037/0003-066X.56.4.307"
+      ]
+    },
+    {
+      "slug": "human-evolution-common-ancestor",
+      "title": "هل الإنسان أصله قرد؟ السلف المشترك وما تقوله نظرية التطور",
+      "summary": "تقرير يشرح الفرق بين القردة المعاصرة والسلف المشترك، وكيف تتقاطع الأحافير والتشريح والجينات، وما تستطيع البيولوجيا قوله وما يبقى سؤالًا فلسفيًا أو دينيًا.",
+      "type": "تقرير تفسيري موثق",
+      "version": "1.0",
+      "languages": ["ar"],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/human-evolution-common-ancestor/",
+      "primary_sources": [
+        "https://humanorigins.si.edu/education/frequently-asked-questions",
+        "https://humanorigins.si.edu/education/introduction-human-evolution",
+        "https://humanorigins.si.edu/education/how-do-we-know/how-do-we-know-humans-are-primates",
+        "https://humanorigins.si.edu/evidence/genetics",
+        "https://nap.nationalacademies.org/read/11876/chapter/1"
+      ]
+    },
+    {
+      "slug": "religious-ocd-scrupulosity",
+      "title": "الوسواس القهري الديني أم ضعف إيمان؟ العلامات والعلاج",
+      "summary": "دليل يشرح الأفكار الاقتحامية والتكرار وطلب الطمأنة، ويفصل الممارسة الدينية المرنة عن الحلقة القهرية، ويعرض العلاج المعرفي السلوكي مع التعرض ومنع الاستجابة بحساسية للقيم.",
+      "type": "دليل طبي تثقيفي",
+      "version": "1.0",
+      "languages": ["ar"],
+      "review": "author_review_complete_specialist_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/religious-ocd-scrupulosity/",
+      "primary_sources": [
+        "https://www.nhs.uk/mental-health/conditions/obsessive-compulsive-disorder-ocd/overview/",
+        "https://www.nhs.uk/mental-health/conditions/obsessive-compulsive-disorder-ocd/treatment/",
+        "https://www.nice.org.uk/guidance/cg31/chapter/Recommendations",
+        "https://iocdf.org/faith-ocd/what-is-ocd-scrupulosity/",
+        "https://iris.who.int/items/cdf5a576-38ed-4e03-8f6e-2b40562273e9"
       ]
     }
   ]

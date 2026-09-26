@@ -22,8 +22,10 @@ RULES={
  'articles/six-days-creation-cosmic-time/index.html':dict(words=2100,sources=8,book='books/sirou-fi-alard/index.html',route='/articles/six-days-creation-cosmic-time/',medical=False,extended=False),
  'articles/sleep-paralysis-jathoom/index.html':dict(words=1800,sources=5,book='books/umm-abbas/index.html',route='/articles/sleep-paralysis-jathoom/',medical=True,extended=False),
  'articles/functional-seizures-vs-epilepsy/index.html':dict(words=2300,sources=8,book='books/umm-abbas/index.html',route='/articles/functional-seizures-vs-epilepsy/',medical=True,extended=False),
+ 'articles/human-evolution-common-ancestor/index.html':dict(words=1050,sources=5,book='books/sirou-fi-alard/index.html',route='/articles/human-evolution-common-ancestor/',medical=False,extended=False),
+ 'articles/religious-ocd-scrupulosity/index.html':dict(words=1050,sources=7,book='books/umm-abbas/index.html',route='/articles/religious-ocd-scrupulosity/',medical=True,extended=False),
 }
-TRUSTED=('nasa.gov','esa.int','lbl.gov','doi.org','aanda.org','pdg.lbl.gov','pubmed.ncbi.nlm.nih.gov','pmc.ncbi.nlm.nih.gov','who.int','nhs.uk','fda.gov','gov.uk','aan.com','neurology.org','ilae.org','quran.com','quran.ksu.edu.sa','tafsir.app','sunnah.com','aclanthology.org','arxiv.org','academic.oup.com','oecd.org','fao.org','unesco.org','ipcc.ch','unece.org','un.org','cambridge.org','tandfonline.com','sciencedirect.com','science.org','wiley.com','onlinelibrary.wiley.com','dainst.org','ascelibrary.org','ahrq.gov','nice.org.uk','gmc-uk.org','nationalacademies.org','nap.nationalacademies.org','papers.nips.cc','proceedings.neurips.cc','proceedings.iclr.cc','jmlr.org','proceedings.mlr.press','pnas.org')
+TRUSTED=('nasa.gov','esa.int','lbl.gov','doi.org','aanda.org','pdg.lbl.gov','pubmed.ncbi.nlm.nih.gov','pmc.ncbi.nlm.nih.gov','who.int','nhs.uk','fda.gov','gov.uk','aan.com','neurology.org','ilae.org','quran.com','quran.ksu.edu.sa','tafsir.app','sunnah.com','aclanthology.org','arxiv.org','academic.oup.com','oecd.org','fao.org','unesco.org','ipcc.ch','unece.org','un.org','cambridge.org','tandfonline.com','sciencedirect.com','science.org','wiley.com','onlinelibrary.wiley.com','dainst.org','ascelibrary.org','ahrq.gov','nice.org.uk','gmc-uk.org','nationalacademies.org','nap.nationalacademies.org','humanorigins.si.edu','iocdf.org','psychiatry.org','papers.nips.cc','proceedings.neurips.cc','proceedings.iclr.cc','jmlr.org','proceedings.mlr.press','pnas.org')
 
 @dataclass
 class D:
@@ -117,7 +119,7 @@ def main():
   if (ROOT/'articles/teaching-names-ai-understanding/references.bib').read_bytes() != (ROOT/'articles/teaching-names-ai-understanding/evidence/references.bib').read_bytes():errors.append('Teaching Names BibTeX mirror drift')
   if (ROOT/'articles/teaching-names-ai-understanding/references.ris').read_bytes() != (ROOT/'articles/teaching-names-ai-understanding/evidence/references.ris').read_bytes():errors.append('Teaching Names RIS mirror drift')
  except Exception as e:errors.append(f'Teaching Names evidence package invalid: {e}')
- for f in ['methodology/index.html','en/methodology/index.html','research-status/index.html','en/research-status/index.html','about/index.html','en/about/index.html']:
+ for f in ['research-status/index.html','en/research-status/index.html','about/index.html','en/about/index.html']:
   if not (ROOT/f).exists():errors.append(f'{f}: missing trust surface')
 
  for f in ['books/sirou-fi-alard/index.html','books/umm-abbas/index.html','en/books/sirou-fi-alard/index.html','en/books/umm-abbas/index.html']:

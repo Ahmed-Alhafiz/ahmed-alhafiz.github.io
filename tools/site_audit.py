@@ -174,14 +174,12 @@ def main()->int:
         # Paired research architecture.
         paired={
           'articles/index.html':('en','https://ahmedalhafiz.com/en/articles/'),
-          'methodology/index.html':('en','https://ahmedalhafiz.com/en/methodology/'),
           'research-status/index.html':('en','https://ahmedalhafiz.com/en/research-status/'),
           'articles/ratq-fatq-big-bang/index.html':('en','https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/'),
           'articles/ratq-fatq-big-bang/evidence/index.html':('en','https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/evidence/'),
           'articles/water-civilization-power/index.html':('en','https://ahmedalhafiz.com/en/articles/water-civilization-power/'),
           'articles/water-civilization-power/evidence/index.html':('en','https://ahmedalhafiz.com/en/articles/water-civilization-power/evidence/'),
           'en/articles/index.html':('ar','https://ahmedalhafiz.com/articles/'),
-          'en/methodology/index.html':('ar','https://ahmedalhafiz.com/methodology/'),
           'en/research-status/index.html':('ar','https://ahmedalhafiz.com/research-status/'),
           'en/articles/ratq-fatq-big-bang/index.html':('ar','https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/'),
           'en/articles/ratq-fatq-big-bang/evidence/index.html':('ar','https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/evidence/'),

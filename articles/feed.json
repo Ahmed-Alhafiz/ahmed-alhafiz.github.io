@@ -173,6 +173,26 @@
         "author_review_complete_external_review_pending",
         "juhayman"
       ]
+    },
+    {
+      "id": "https://ahmedalhafiz.com/articles/human-evolution-common-ancestor/",
+      "url": "https://ahmedalhafiz.com/articles/human-evolution-common-ancestor/",
+      "title": "هل الإنسان أصله قرد؟ السلف المشترك وما تقوله نظرية التطور",
+      "summary": "تقرير يشرح الفرق بين القردة المعاصرة والسلف المشترك، وأدلة الأحافير والتشريح والجينات، وحدود ما تستطيع البيولوجيا حسمه.",
+      "content_text": "تقرير يشرح الفرق بين القردة المعاصرة والسلف المشترك، وأدلة الأحافير والتشريح والجينات، وحدود ما تستطيع البيولوجيا حسمه.",
+      "date_published": "2026-09-26T00:00:00+02:00",
+      "date_modified": "2026-09-26T00:00:00+02:00",
+      "tags": ["author_review_complete_external_review_pending", "sirou-fi-alard"]
+    },
+    {
+      "id": "https://ahmedalhafiz.com/articles/religious-ocd-scrupulosity/",
+      "url": "https://ahmedalhafiz.com/articles/religious-ocd-scrupulosity/",
+      "title": "الوسواس القهري الديني أم ضعف إيمان؟ العلامات والعلاج",
+      "summary": "دليل عن الأفكار الاقتحامية والتكرار وطلب الطمأنة، والفرق بين الممارسة المرنة والحلقة القهرية، والعلاج الحساس للقيم.",
+      "content_text": "دليل عن الأفكار الاقتحامية والتكرار وطلب الطمأنة، والفرق بين الممارسة المرنة والحلقة القهرية، والعلاج الحساس للقيم.",
+      "date_published": "2026-09-26T00:00:00+02:00",
+      "date_modified": "2026-09-26T00:00:00+02:00",
+      "tags": ["author_review_complete_specialist_review_pending", "umm-abbas"]
     }
   ]
 }
