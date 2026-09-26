@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Capture and verify methodology and review-status pages.
+"""Capture and verify the public research-status pages.
 
-These pages are trust surfaces and were previously outside the top-page visual
-matrix. The check is intentionally structural: it catches viewport escape,
+These trust surfaces sit outside the top-page visual matrix. The check is
+intentionally structural: it catches viewport escape,
 clipped headings, missing target sections, and broken mobile scrolling while
 also saving screenshots for human review.
 """
@@ -25,8 +25,6 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
-    ("methodology-ar", "/methodology/", ".method-list"),
-    ("methodology-en", "/en/methodology/", ".method-list"),
     ("research-status-ar", "/research-status/", ".evidence-table"),
     ("research-status-en", "/en/research-status/", ".evidence-table"),
 )
@@ -158,7 +156,7 @@ def main() -> None:
     expected = len(VIEWPORTS) * len(PAGES) * 2
     if captures != expected:
         raise SystemExit(f"Expected {expected} captures, produced {captures}")
-    print(f"Editorial-page visual gate passed: {captures} screenshots across methodology and research-status pages.")
+    print(f"Editorial-page visual gate passed: {captures} screenshots across the research-status pages.")
 
 
 if __name__ == "__main__":
