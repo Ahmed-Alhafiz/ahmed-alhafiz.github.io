@@ -27,7 +27,12 @@ ATOM = {"a": "http://www.w3.org/2005/Atom"}
 SM = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
 FUTURE = timedelta(minutes=10)
 SLUGS = {
-    "human-evolution-common-ancestor",
+    "quran-science-method-evidence",
+    "human-embryo-quran-stages",
+    "brain-consciousness-spirit-limits",
+    "water-life-molecular-properties",
+    "iron-fire-light-matter-energy",
+    "civilization-knowledge-justice-collapse",
     "religious-ocd-scrupulosity",
     "how-certainty-becomes-violence",
     "juhayman-grand-mosque-1979",
