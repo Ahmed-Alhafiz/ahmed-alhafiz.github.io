@@ -42,6 +42,9 @@ BANNED_VISIBLE_INTERFACE = {
         "العربية / English",
         "English edition",
         "English research desk",
+        "Discovery Wave",
+        "Research dossiers",
+        "Research dossier",
     ),
     "research-status/index.html": (
         "Transparency register",
@@ -49,6 +52,12 @@ BANNED_VISIBLE_INTERFACE = {
     ),
     "articles/water-civilization-power/index.html": (
         ">English edition</a>",
+    ),
+    "books/kitab-al-kutub/index.html": (
+        "Research companion",
+    ),
+    "books/juhayman/index.html": (
+        "Research companion",
     ),
 }
 
@@ -287,7 +296,7 @@ def main() -> None:
         raise SystemExit(1)
 
     print(
-        "Arabic UI integrity passed: the Arabic hub is localized, ten research "
+        "Arabic UI integrity passed: the Arabic hub is localized, thirteen research "
         "surfaces match the machine register, and all four bilingual pillars have "
         "current Arabic/English status rows with synchronized versions and dates."
     )

@@ -21,11 +21,12 @@ class Page:
     lang:str=''; direction:str=''; title:str=''; description:str=''; robots:str=''; canonical:str=''
     h1:int=0; hrefs:list[str]=field(default_factory=list); images:list[dict]=field(default_factory=list)
     jsonld_raw:list[str]=field(default_factory=list); alternates:dict[str,str]=field(default_factory=dict)
-    blank_rel_errors:int=0; text:list[str]=field(default_factory=list)
+    blank_rel_errors:int=0; heading_errors:int=0; text:list[str]=field(default_factory=list)
+    og_title:str=''; og_description:str=''; og_url:str=''
 
 class Parser(HTMLParser):
     def __init__(self,path:Path):
-        super().__init__(convert_charrefs=True); self.p=Page(path); self.title_on=False; self.json_on=False; self.buf=[]; self.ignore=0
+        super().__init__(convert_charrefs=True); self.p=Page(path); self.title_on=False; self.json_on=False; self.buf=[]; self.ignore=0; self.heading_stack=[]
     def attrs(self,a): return {k.lower():(v or '') for k,v in a}
     def handle_starttag(self,tag,attrs):
         tag=tag.lower(); a=self.attrs(attrs)
@@ -34,11 +35,16 @@ class Parser(HTMLParser):
         elif tag=='meta':
             if a.get('name','').lower()=='description': self.p.description=a.get('content','').strip()
             if a.get('name','').lower()=='robots': self.p.robots=a.get('content','').lower()
+            if a.get('property','').lower()=='og:title': self.p.og_title=a.get('content','').strip()
+            if a.get('property','').lower()=='og:description': self.p.og_description=a.get('content','').strip()
+            if a.get('property','').lower()=='og:url': self.p.og_url=a.get('content','').strip()
         elif tag=='link':
             rel=set(a.get('rel','').lower().split())
             if 'canonical' in rel: self.p.canonical=a.get('href','').strip()
             if 'alternate' in rel and a.get('hreflang'): self.p.alternates[a['hreflang'].lower()]=a.get('href','').strip()
-        elif tag=='h1': self.p.h1+=1
+        elif tag in {'h1','h2','h3','h4','h5','h6'}:
+            if tag=='h1':self.p.h1+=1
+            self.heading_stack.append(tag)
         elif tag=='a':
             if a.get('href'): self.p.hrefs.append(a['href'].strip())
             if a.get('target','').lower()=='_blank' and 'noopener' not in set(a.get('rel','').lower().split()): self.p.blank_rel_errors+=1
@@ -50,6 +56,8 @@ class Parser(HTMLParser):
     def handle_endtag(self,tag):
         tag=tag.lower()
         if tag=='title': self.title_on=False
+        elif tag in {'h1','h2','h3','h4','h5','h6'}:
+            if not self.heading_stack or self.heading_stack.pop()!=tag:self.p.heading_errors+=1
         elif tag=='script' and self.json_on:
             raw=''.join(self.buf).strip(); self.json_on=False; self.buf=[]
             if raw:self.p.jsonld_raw.append(raw)
@@ -60,7 +68,7 @@ class Parser(HTMLParser):
         elif not self.ignore and data.strip():self.p.text.append(data.strip())
 
 def parse(path:Path)->Page:
-    q=Parser(path); q.feed(path.read_text(encoding='utf-8')); q.close(); q.p.title=re.sub(r'\s+',' ',q.p.title).strip()
+    q=Parser(path); q.feed(path.read_text(encoding='utf-8')); q.close(); q.p.heading_errors+=len(q.heading_stack); q.p.title=re.sub(r'\s+',' ',q.p.title).strip()
     for raw in q.p.jsonld_raw: json.loads(raw)
     return q.p
 
@@ -112,7 +120,7 @@ def site_path(root:Path,url:str)->Path|None:
 
 def main()->int:
     ap=argparse.ArgumentParser(); ap.add_argument('--root',default=str(Path(__file__).resolve().parents[1])); ap.add_argument('--partial',action='store_true'); args=ap.parse_args()
-    root=Path(args.root).resolve(); errors=[]; warnings=[]; pages={}; canonical_map={}
+    root=Path(args.root).resolve(); errors=[]; warnings=[]; pages={}; canonical_map={}; title_map={}; description_map={}
     htmls=sorted(p for p in root.rglob('*.html') if '.git' not in p.parts and p.relative_to(root).as_posix() not in EXCLUDED and not p.name.startswith('google'))
     for p in htmls:
         rel=p.relative_to(root)
@@ -126,10 +134,15 @@ def main()->int:
         elif not 20<=len(q.title)<=70:warnings.append(f'{rel}: title length {len(q.title)}')
         if not q.description:errors.append(f'{rel}: missing description')
         elif not 65<=len(q.description)<=160:warnings.append(f'{rel}: description length {len(q.description)}')
+        if not q.og_title or not q.og_description:errors.append(f'{rel}: Open Graph title/description missing')
+        if q.title:title_map.setdefault(q.title,[]).append(rel)
+        if q.description:description_map.setdefault(q.description,[]).append(rel)
         if q.h1!=1:errors.append(f'{rel}: expected one H1, found {q.h1}')
+        if q.heading_errors:errors.append(f'{rel}: malformed heading markup')
         if 'index' not in q.robots:errors.append(f'{rel}: robots does not explicitly allow indexing')
         if not q.canonical:errors.append(f'{rel}: missing canonical')
         elif exp and q.canonical!=exp:errors.append(f'{rel}: canonical mismatch {q.canonical} != {exp}')
+        if q.og_url!=q.canonical:errors.append(f'{rel}: og:url mismatch {q.og_url!r} != {q.canonical!r}')
         if q.canonical in canonical_map and canonical_map[q.canonical]!=p:errors.append(f'{rel}: duplicate canonical with {canonical_map[q.canonical].relative_to(root)}')
         canonical_map[q.canonical]=p
         if not q.jsonld_raw:errors.append(f'{rel}: missing JSON-LD')
@@ -178,6 +191,11 @@ def main()->int:
         if rel.as_posix() in paired:
             code,url=paired[rel.as_posix()]
             if q.alternates.get(code)!=url:errors.append(f'{rel}: missing/incorrect hreflang {code}')
+
+    for title, rels in title_map.items():
+        if len(rels)>1:errors.append(f'duplicate page title {title!r}: {", ".join(map(str,rels))}')
+    for description, rels in description_map.items():
+        if len(rels)>1:errors.append(f'duplicate meta description {description!r}: {", ".join(map(str,rels))}')
 
     for p,q in pages.items():
         for h in q.hrefs:
@@ -247,7 +265,7 @@ def main()->int:
         if p is not None and not p.exists():(warnings if args.partial else errors).append(f'sitemap.xml: no local page for {u}')
 
     # XML/JSON feeds and manifest.
-    for f in ['articles/feed.xml','en/articles/feed.xml']:
+    for f in ['articles/feed.xml','en/articles/feed.xml','de/articles/feed.xml']:
         p=root/f
         if not p.exists():errors.append(f'{f}: missing')
         else:

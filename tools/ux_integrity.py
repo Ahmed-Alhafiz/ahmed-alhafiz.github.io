@@ -138,6 +138,7 @@ def validate_public_page(path: Path, errors: list[str]) -> int:
     rel = path.relative_to(ROOT).as_posix()
     html = path.read_text(encoding="utf-8")
 
+    language = ""
     match = HTML_RE.search(html)
     if not match:
         errors.append(f"{rel}: html lang/dir declaration missing")
@@ -148,11 +149,19 @@ def validate_public_page(path: Path, errors: list[str]) -> int:
         if direction != expected:
             errors.append(f"{rel}: dir={direction!r}, expected {expected!r} for {language}")
 
+    if 'class="site-header"' not in html or 'class="nav"' not in html:
+        errors.append(f"{rel}: unified site header/navigation missing")
+    if 'class="shell nav-wrap"' in html or 'class="skip-link"' in html:
+        errors.append(f"{rel}: legacy article shell remained")
+
     footers = FOOTER_RE.findall(html)
     if len(footers) != 1:
         errors.append(f"{rel}: expected one footer, found {len(footers)}")
     if html.count('id="site-footer"') != 1:
         errors.append(f"{rel}: rebuilt footer ID missing or duplicated")
+    expected_footer_home = "/" if language == "ar" else f"/{language}/"
+    if f'class="footer-name" href="{expected_footer_home}"' not in html:
+        errors.append(f"{rel}: footer identity does not return to the {language} homepage")
 
     parser = FooterParser()
     parser.feed(html)
@@ -230,6 +239,22 @@ def validate_priority_pages(errors: list[str]) -> None:
             if token in html:
                 errors.append(f"{rel}: legacy book-layout token remained: {token}")
 
+    for rel in ("books/index.html", "en/books/index.html", "de/books/index.html"):
+        html = (ROOT / rel).read_text(encoding="utf-8")
+        if '<body class="books-index">' not in html:
+            errors.append(f"{rel}: editorial book-catalogue layout hook missing")
+
+    for path in (ROOT / "de").rglob("index.html"):
+        html = path.read_text(encoding="utf-8")
+        nav = re.search(r'<nav\b[^>]*class=["\'][^"\']*\bnav\b[^"\']*["\'][^>]*>(.*?)</nav>', html, re.I | re.S)
+        if nav and 'href="/en/articles/"' in nav.group(1):
+            errors.append(f"{path.relative_to(ROOT)}: German navigation points to the English research hub")
+
+    ar_home = (ROOT / "index.html").read_text(encoding="utf-8")
+    for slug in BOOK_SLUGS:
+        if f'href="/books/{slug}/"' not in ar_home:
+            errors.append(f"index.html: Arabic homepage omits the book {slug}")
+
 
 def validate_css(errors: list[str]) -> None:
     css = (ROOT / "assets/site-v2.css").read_text(encoding="utf-8")
@@ -253,6 +278,11 @@ def validate_css(errors: list[str]) -> None:
         ".book-hero-cover img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center}",
         ".book-card-cover{display:block;width:100%;aspect-ratio:2/3;overflow:hidden",
         ".book-card .book-card-cover img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover",
+        "Editorial discovery system 18",
+        ".wave2-discovery .card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))",
+        ".related-research .shell",
+        "Book catalogue 18",
+        ".books-index .book-card>a{display:flex;height:100%;flex-direction:column}",
     )
     for token in required:
         if token not in css:

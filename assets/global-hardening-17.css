@@ -29,7 +29,7 @@
 
   html[lang="ar"] .nav{
     display:grid;
-    grid-template-columns:repeat(5,minmax(0,1fr));
+    grid-template-columns:repeat(3,minmax(0,1fr));
     gap:0;
     width:100%;
     overflow:visible;
@@ -37,7 +37,10 @@
   }
   html[lang="ar"] .nav a{
     min-width:0;
-    padding:10px 2px 9px;
+    min-height:40px;
+    display:grid;
+    place-items:center;
+    padding:7px 3px 6px;
     text-align:center;
     font-size:12px;
     white-space:nowrap;
