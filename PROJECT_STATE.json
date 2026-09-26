@@ -3,16 +3,16 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "5e13f017364929e4537b14d80c342506cbf7c9d0",
-  "head_sha_semantics": "Verified origin/main merge commit for PR #71 after successful required checks, GitHub Pages deployment, and live multilingual checks.",
+  "head_sha": "3b341b94839900f2d009b89070991b0022c157cc",
+  "head_sha_semantics": "Verified origin/main merge commit for PR #73 after all six required checks, GitHub Pages deployment, and live checks of the homepage, both new reports, and removed routes.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-26T15:28:00+02:00",
-  "current_task": "Review and publish the Editorial Authority v2 branch: simplified information architecture, stronger mobile-first homepage, and two demand-led Arabic research reports.",
-  "next_action": "Obtain action-time approval, then merge PR #73; verify the GitHub Pages deployment and the affected live pages before declaring publication complete.",
+  "updated_at": "2026-09-26T16:07:00+02:00",
+  "current_task": "Editorial Authority v2 is deployed and in monitoring: simplified information architecture, stronger mobile-first homepage, and two demand-led Arabic research reports.",
+  "next_action": "Monitor crawling and Search Console after a meaningful data window; do not claim ranking improvement or repeat indexing submissions without new evidence.",
   "pending_release": {
     "branch": "design/editorial-authority-v2",
     "base_sha": "f717e6af6126391dd545fed86ecb859b8999bdaa",
-    "status": "ready_for_merge_pending_approval",
+    "status": "merged_deployed_verified",
     "pull_request": 73,
     "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/73",
     "scope": "Remove Press and Method sections; introduce a compact editorial-authority interface; publish Arabic reports on human evolution/common ancestry and religious OCD/scrupulosity.",
@@ -25,8 +25,11 @@
       "english_feed_items": 8,
       "german_feed_items": 4
     },
-    "external_review": "Site integrity, Governance integrity, Citation metadata integrity, and Content research architecture passed on remote commit e3cd4739195d757a7e0372152ce1073492d23fb8.",
-    "visual_review": "Run 36245199705 passed on e3cd4739195d757a7e0372152ce1073492d23fb8. The reviewed artifact includes the Arabic homepage and both new reports at desktop, mobile, and narrow-mobile sizes; header visibility, portrait geometry, overflow, navigation, covers, editorial status pages, target sections, and social-card checks passed."
+    "merge_sha": "3b341b94839900f2d009b89070991b0022c157cc",
+    "pages_workflow": 36247322572,
+    "external_review": "PR policy, Site integrity, Governance integrity, Citation metadata integrity, Content research architecture, and Visual review passed before merge; all seven post-merge workflows succeeded on 3b341b94839900f2d009b89070991b0022c157cc.",
+    "visual_review": "Run 36245515219 passed on 58493cd70a4c10429c53b545660e4ef227530fd8. The reviewed artifact includes the Arabic homepage and both new reports at desktop, mobile, and narrow-mobile sizes; header visibility, portrait geometry, overflow, navigation, covers, editorial status pages, target sections, and social-card checks passed.",
+    "live_verification": "Homepage and both new reports rendered on ahmedalhafiz.com with correct headings/canonicals and no horizontal overflow; the OCD MedicalWebPage @id is valid; /press/ and /methodology/ render the noindex 404 page."
   },
   "last_verified": {
     "git_remote_matches": true,
