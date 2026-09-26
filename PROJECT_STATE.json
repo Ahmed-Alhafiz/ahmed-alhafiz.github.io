@@ -6,13 +6,13 @@
   "head_sha": "5e13f017364929e4537b14d80c342506cbf7c9d0",
   "head_sha_semantics": "Verified origin/main merge commit for PR #71 after successful required checks, GitHub Pages deployment, and live multilingual checks.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-26T15:12:00+02:00",
+  "updated_at": "2026-09-26T15:28:00+02:00",
   "current_task": "Review and publish the Editorial Authority v2 branch: simplified information architecture, stronger mobile-first homepage, and two demand-led Arabic research reports.",
-  "next_action": "Push the PR #73 visual correction, require CI including Visual review, inspect mobile and desktop artifacts, then merge only after the required checks and review are complete.",
+  "next_action": "Obtain action-time approval, then merge PR #73; verify the GitHub Pages deployment and the affected live pages before declaring publication complete.",
   "pending_release": {
     "branch": "design/editorial-authority-v2",
     "base_sha": "f717e6af6126391dd545fed86ecb859b8999bdaa",
-    "status": "pull_request_open_visual_fix_pending_ci",
+    "status": "ready_for_merge_pending_approval",
     "pull_request": 73,
     "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/73",
     "scope": "Remove Press and Method sections; introduce a compact editorial-authority interface; publish Arabic reports on human evolution/common ancestry and religious OCD/scrupulosity.",
@@ -25,8 +25,8 @@
       "english_feed_items": 8,
       "german_feed_items": 4
     },
-    "external_review": "Four non-visual required checks passed on remote commit 7cd24d27b87239f688dfac41ca66862ef6125ef5.",
-    "visual_review": "Initial run failed because the Arabic homepage portrait was 260px versus 340px in English/German. The local correction sets 280px desktop, restores consistent mobile stacking/width, removes deleted Press/Methodology routes from the visual inventory, updates the four-link navigation assertion, and adds both new reports to mobile navigation coverage; CI rerun pending."
+    "external_review": "Site integrity, Governance integrity, Citation metadata integrity, and Content research architecture passed on remote commit e3cd4739195d757a7e0372152ce1073492d23fb8.",
+    "visual_review": "Run 36245199705 passed on e3cd4739195d757a7e0372152ce1073492d23fb8. The reviewed artifact includes the Arabic homepage and both new reports at desktop, mobile, and narrow-mobile sizes; header visibility, portrait geometry, overflow, navigation, covers, editorial status pages, target sections, and social-card checks passed."
   },
   "last_verified": {
     "git_remote_matches": true,
