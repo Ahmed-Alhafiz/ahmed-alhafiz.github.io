@@ -402,6 +402,7 @@ def validate_homepages(errors: list[str]) -> None:
 def validate_visible_profiles(errors: list[str]) -> None:
     expectations = {
         "about/index.html": [
+            "الكاتب أحمد الحافظ",
             "بيانات الكاتب المعتمدة",
             "الاسم العربي الرسمي",
             "الاسم اللاتيني المعتمد",
