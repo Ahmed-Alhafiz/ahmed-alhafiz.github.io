@@ -311,7 +311,7 @@ def main() -> None:
         f"{len(pages)} public pages, {wrapped_cards} cropped book cards, "
         "one compact footer each, three official contact channels, no duplicate "
         "language footers, no public GitHub identity, stable tri-language portrait "
-        "markup, mobile portrait-first stacking, and forced 2:3 book-cover frames."
+        "markup, compact mobile portrait treatment, and forced 2:3 book-cover frames."
     )
 
 

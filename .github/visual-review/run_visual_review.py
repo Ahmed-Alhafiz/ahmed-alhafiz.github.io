@@ -47,8 +47,6 @@ TOP_PAGES = (
     ("about-ar", "/about/"),
     ("about-en", "/en/about/"),
     ("about-de", "/de/about/"),
-    ("press-ar", "/press/"),
-    ("press-en", "/en/press/"),
     ("research-ar", "/articles/"),
     ("research-en", "/en/articles/"),
     ("research-de", "/de/articles/"),
@@ -58,6 +56,8 @@ TOP_PAGES = (
     ("possession-guide-ar", "/articles/possession-or-neurological-psychological-disorder/"),
     ("possession-guide-en", "/en/articles/possession-or-neurological-psychological-disorder/"),
     ("possession-guide-de", "/de/articles/possession-or-neurological-psychological-disorder/"),
+    ("human-evolution-ar", "/articles/human-evolution-common-ancestor/"),
+    ("religious-ocd-ar", "/articles/religious-ocd-scrupulosity/"),
     ("ratq-ar", "/articles/ratq-fatq-big-bang/"),
     ("ratq-en", "/en/articles/ratq-fatq-big-bang/"),
     ("water-ar", "/articles/water-civilization-power/"),
@@ -102,8 +102,6 @@ TARGET_PAGES = (
     ("about-ar-identity", "/about/", "#identity", "start"),
     ("about-en-identity", "/en/about/", "#identity", "start"),
     ("about-de-identity", "/de/about/", "#identity", "start"),
-    ("press-ar-assets", "/press/", "#assets", "start"),
-    ("press-en-assets", "/en/press/", "#assets", "start"),
     ("home-ar-latest-research", "/", "#latest-research", "start"),
     ("home-en-latest-research", "/en/", "#wave2-home-links", "start"),
     ("home-de-latest-research", "/de/", "#wave2-home-links", "start"),
@@ -326,6 +324,12 @@ def render_top_pages(driver: webdriver.Chrome, mode: str, width: int, height: in
     configure_viewport(driver, width, height)
     for name, route in TOP_PAGES:
         open_page(driver, route, f"top-{mode}")
+        driver.execute_script("window.scrollTo({top:0,left:0,behavior:'auto'})")
+        time.sleep(0.08)
+        header = driver.find_element(By.CSS_SELECTOR, ".site-header")
+        header_rect = rounded_rect(driver, header)
+        if header_rect["height"] < 50 or header_rect["top"] < -1.5 or header_rect["bottom"] > height + 1.5:
+            raise SystemExit(f"{mode} {route}: site header is not visibly positioned: {header_rect}")
         metrics = driver.execute_script(
             "return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth};"
         )

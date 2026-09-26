@@ -23,10 +23,11 @@ All four works are forthcoming. Publisher, ISBN, release date, sales, or review 
 - English research hub: https://ahmedalhafiz.com/en/articles/
 - German research hub: https://ahmedalhafiz.com/de/articles/
 - Complete research register: https://ahmedalhafiz.com/articles/research-index.json
-- Editorial methodology: https://ahmedalhafiz.com/methodology/
 - Review and revision status: https://ahmedalhafiz.com/research-status/
 
 ## Principal dossiers
+- Human evolution and the common ancestor (Arabic): https://ahmedalhafiz.com/articles/human-evolution-common-ancestor/
+- Religious OCD and scrupulosity (Arabic): https://ahmedalhafiz.com/articles/religious-ocd-scrupulosity/
 - Spirit Possession or Mental or Neurological Disorder?: https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/
 - Ratq, Fatq, and the Big Bang: https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/
 - Water, Civilization and Power: https://ahmedalhafiz.com/en/articles/water-civilization-power/

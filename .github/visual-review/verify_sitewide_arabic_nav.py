@@ -22,7 +22,6 @@ ROUTES = (
     "/",
     "/about/",
     "/articles/",
-    "/methodology/",
     "/research-status/",
     "/guides/arabic-psychological-horror/",
     "/books/sirou-fi-alard/",
@@ -37,6 +36,8 @@ ROUTES = (
     "/articles/six-days-creation-cosmic-time/",
     "/articles/sleep-paralysis-jathoom/",
     "/articles/functional-seizures-vs-epilepsy/",
+    "/articles/human-evolution-common-ancestor/",
+    "/articles/religious-ocd-scrupulosity/",
     "/articles/fall-of-baghdad-1258-ibn-al-alqami/",
     "/articles/juhayman-grand-mosque-1979/",
     "/articles/how-certainty-becomes-violence/",
@@ -119,7 +120,7 @@ def main() -> None:
                     """,
                     nav,
                 )
-                expected_links = 6 if route == "/" else 5
+                expected_links = 4
                 if len(links) != expected_links:
                     raise SystemExit(
                         f"{route}: expected {expected_links} primary links, found {len(links)}"

@@ -88,17 +88,17 @@ HOME_REQUIREMENTS = {
     "index.html": {
         "title": "أحمد الحافظ — Ahmed Alhafiz | الموقع الرسمي",
         "description": "الموقع الرسمي للكاتب أحمد الحافظ — Ahmed Alhafiz: مؤلفاته قيد الإصدار، وأبحاثه ذات المصادر المعلنة في التاريخ والدين والعلم والنفس والمجتمع.",
-        "links": ["/about/", "/books/", "/articles/", "/press/"],
+        "links": ["/about/", "/books/", "/articles/"],
     },
     "en/index.html": {
         "title": "أحمد الحافظ — Ahmed Alhafiz | Official Author Website",
         "description": "The official website of writer Ahmed Alhafiz — أحمد الحافظ: forthcoming books and source-backed research in history, religion, science, psychology, and society.",
-        "links": ["/en/about/", "/en/books/", "/en/articles/", "/en/press/"],
+        "links": ["/en/about/", "/en/books/", "/en/articles/"],
     },
     "de/index.html": {
         "title": "أحمد الحافظ — Ahmed Alhafiz | Offizielle Autorenwebsite",
         "description": "Offizielle Website von Ahmed Alhafiz — أحمد الحافظ: kommende Bücher und Forschung mit Quellen zu Geschichte, Religion, Wissenschaft, Psyche und Gesellschaft.",
-        "links": ["/de/about/", "/de/books/", "/de/articles/", "/en/press/"],
+        "links": ["/de/about/", "/de/books/", "/de/articles/"],
     },
 }
 
@@ -228,9 +228,6 @@ def validate_manifest(errors: list[str]) -> None:
         ]
         if profiles != expected_profiles:
             errors.append("author.json: three language-specific profile URLs missing")
-        if persons[0].get("publishingPrinciples") != "https://ahmedalhafiz.com/methodology/":
-            errors.append("author.json: publishingPrinciples must point to the public method page")
-
     profiles = [node for node in graph if isinstance(node, dict) and node_has_type(node, "ProfilePage")]
     if len(profiles) != 3:
         errors.append(f"author.json: expected three ProfilePage nodes, found {len(profiles)}")
@@ -497,8 +494,8 @@ def validate_strategy_data(errors: list[str]) -> None:
             errors.append(f"{rel}: invalid JSON: {exc}")
     inventory = json.loads((ROOT / "data/content-inventory.json").read_text(encoding="utf-8"))
     items = inventory.get("items", [])
-    if len(items) != 13:
-        errors.append(f"content inventory: expected thirteen indexed research/guide items, found {len(items)}")
+    if len(items) != 15:
+        errors.append(f"content inventory: expected fifteen indexed research/guide items, found {len(items)}")
     counts: dict[str, int] = {key: 0 for key in inventory.get("classes", {})}
     for item in items:
         item_class = item.get("class", "missing")
