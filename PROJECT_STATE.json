@@ -3,14 +3,50 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "65fc0786d44a91eef91f0c17362dfe771a95e1e5",
-  "head_sha_semantics": "Verified origin/main merge commit for PR #69 after successful GitHub Pages deployment and live homepage checks.",
+  "head_sha": "5e13f017364929e4537b14d80c342506cbf7c9d0",
+  "head_sha_semantics": "Verified origin/main merge commit for PR #71 after successful required checks, GitHub Pages deployment, and live multilingual checks.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-26T00:38:01+02:00",
-  "current_task": "Monitor Google recrawl and branded-query evidence after the multilingual homepage author-identity refresh.",
-  "next_action": "Wait for new Search Console data; compare the four branded queries only after Google has had time to recrawl, without repeating sitemap or indexing submissions.",
+  "updated_at": "2026-09-26T12:54:00+02:00",
+  "current_task": "Monitor Google recrawl, indexing, and branded-query evidence after the multilingual editorial and discovery release.",
+  "next_action": "Wait for new Search Console data; measure at the 14-, 28-, and 56-day windows without repeating sitemap or indexing submissions unless new evidence requires it.",
   "last_verified": {
     "git_remote_matches": true,
+    "editorial_discovery_release": {
+      "verified_at": "2026-09-26T12:49:00+02:00",
+      "pull_request": 71,
+      "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/71",
+      "merge_sha": "5e13f017364929e4537b14d80c342506cbf7c9d0",
+      "scope": "Multilingual editorial discovery, four-book homepage inventory, unified research surfaces, structured discovery data, responsive coverage, and long-reference overflow correction.",
+      "required_checks": {
+        "PR policy / policy": "success",
+        "Governance integrity / validate": "success",
+        "Citation metadata integrity / validate": "success",
+        "Content research architecture / validate": "success",
+        "Site integrity / audit": "success",
+        "Visual review / render": "success"
+      },
+      "visual_review": "Run 36235831630 passed with 201 exact-size screenshots, 6 portrait tests across 3 viewports, 54 verified targeted captures, and 4 social cards.",
+      "deployment": {
+        "pages_workflow": "success",
+        "pages_workflow_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/actions/runs/36236648082",
+        "inventory": {
+          "public_html_pages": 64,
+          "canonical_urls": 64,
+          "sitemap_urls": 64,
+          "research_items": 13,
+          "arabic_feed_items": 13,
+          "english_feed_items": 8,
+          "german_feed_items": 4
+        },
+        "live_result": "Arabic, English, and German homepages showed four book cards with correct language direction and no horizontal overflow; /articles/how-certainty-becomes-violence/ showed seven references with no horizontal overflow after the long-URL fix."
+      },
+      "post_merge_checks": "Site integrity, Content research architecture, Visibility readiness monitor, IndexNow changed-URL notification, and Citation metadata integrity succeeded on the merge commit.",
+      "measurement_windows": {
+        "day_14": "2026-10-10",
+        "day_28": "2026-10-24",
+        "day_56": "2026-11-21"
+      }
+    },
     "content_pull_request": {
       "number": 65,
       "url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/65",
@@ -183,5 +219,5 @@
     "Reassess the historical Dataset and ProfilePage reports after confirmed recrawls and record only observed results."
   ],
   "local_only_items": [],
-  "notes": "The public package remains live and technically verified. The structured-data remediation is metadata-only. No ranking or indexing outcome is inferred from submission or validation acceptance."
+  "notes": "PR #71 is live and technically verified at merge commit 5e13f017364929e4537b14d80c342506cbf7c9d0. No ranking, indexing, traffic, or AI-citation outcome is inferred from checks, deployment, submission, or validation acceptance."
 }
