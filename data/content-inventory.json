@@ -29,6 +29,108 @@
   },
   "items": [
     {
+      "slug": "quran-science-method-evidence",
+      "url": "https://ahmedalhafiz.com/articles/quran-science-method-evidence/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "القرآن والعلم: كيف نميّز بين الآية والتفسير والنظرية؟",
+      "does_not_target": [
+        "اختزال الكتاب في ملخص",
+        "مطابقة علمية قسرية",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
+      "next_action": "measure_query_fit_and_seek_independent_review",
+      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
+    },
+    {
+      "slug": "human-embryo-quran-stages",
+      "url": "https://ahmedalhafiz.com/articles/human-embryo-quran-stages/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "أطوار الجنين في القرآن وعلم الأجنة: ماذا نعرف وما حدود المطابقة؟",
+      "does_not_target": [
+        "اختزال الكتاب في ملخص",
+        "مطابقة علمية قسرية",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
+      "next_action": "measure_query_fit_and_seek_independent_review",
+      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
+    },
+    {
+      "slug": "brain-consciousness-spirit-limits",
+      "url": "https://ahmedalhafiz.com/articles/brain-consciousness-spirit-limits/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "الدماغ والوعي والروح: ماذا يفسر علم الأعصاب وما الذي يبقى مفتوحًا؟",
+      "does_not_target": [
+        "اختزال الكتاب في ملخص",
+        "مطابقة علمية قسرية",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
+      "next_action": "measure_query_fit_and_seek_independent_review",
+      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
+    },
+    {
+      "slug": "water-life-molecular-properties",
+      "url": "https://ahmedalhafiz.com/articles/water-life-molecular-properties/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "وجعلنا من الماء كل شيء حي: لماذا لا تستغني الخلية عن الماء؟",
+      "does_not_target": [
+        "اختزال الكتاب في ملخص",
+        "مطابقة علمية قسرية",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
+      "next_action": "measure_query_fit_and_seek_independent_review",
+      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
+    },
+    {
+      "slug": "iron-fire-light-matter-energy",
+      "url": "https://ahmedalhafiz.com/articles/iron-fire-light-matter-energy/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "الحديد والنار والنور: كيف تتحول المادة والطاقة إلى حضارة ومسؤولية؟",
+      "does_not_target": [
+        "اختزال الكتاب في ملخص",
+        "مطابقة علمية قسرية",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
+      "next_action": "measure_query_fit_and_seek_independent_review",
+      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
+    },
+    {
+      "slug": "civilization-knowledge-justice-collapse",
+      "url": "https://ahmedalhafiz.com/articles/civilization-knowledge-justice-collapse/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "لماذا تنهض الحضارات وتسقط؟ المعرفة والماء والعدل والذاكرة",
+      "does_not_target": [
+        "اختزال الكتاب في ملخص",
+        "مطابقة علمية قسرية",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
+      "next_action": "measure_query_fit_and_seek_independent_review",
+      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
+    },
+    {
       "slug": "possession-or-neurological-psychological-disorder",
       "url": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/",
       "class": "supporting_brief",
@@ -202,24 +304,19 @@
       "reason": "Multilingual reference article with explicit claim-evidence architecture, citation assets, and a distinct reader question."
     },
     {
-      "slug": "human-evolution-common-ancestor",
-      "url": "https://ahmedalhafiz.com/articles/human-evolution-common-ancestor/",
-      "class": "supporting_brief",
-      "book_cluster": "sirou-fi-alard",
-      "languages": ["ar"],
-      "primary_intent": "الإجابة العلمية عن سؤال هل الإنسان أصله قرد وشرح السلف المشترك",
-      "does_not_target": ["فتوى في خلق آدم", "إثبات الإلحاد أو نفي الخلق", "نسخة مختصرة من ملف الرتق والفتق"],
-      "next_action": "measure_query_fit_and_seek_biology_review",
-      "reason": "Distinct high-intent Arabic question answered with official human-origins sources and explicit boundaries between biology and metaphysics."
-    },
-    {
       "slug": "religious-ocd-scrupulosity",
       "url": "https://ahmedalhafiz.com/articles/religious-ocd-scrupulosity/",
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "primary_intent": "الفرق بين الوسواس القهري الديني وضعف الإيمان ومسارات العلاج",
-      "does_not_target": ["تشخيص شخص بعينه", "إعطاء فتوى فردية", "استبدال العلاج أو الطوارئ"],
+      "does_not_target": [
+        "تشخيص شخص بعينه",
+        "إعطاء فتوى فردية",
+        "استبدال العلاج أو الطوارئ"
+      ],
       "next_action": "measure_query_fit_and_seek_clinical_review",
       "reason": "Distinct Arabic health question with explicit safety limits, official clinical guidance, and a faith-sensitive treatment boundary."
     }
@@ -227,7 +324,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 9,
+    "supporting_brief": 14,
     "literary_guide": 1,
     "hold_for_review": 1
   }
