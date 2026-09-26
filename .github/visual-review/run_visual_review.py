@@ -56,6 +56,8 @@ TOP_PAGES = (
     ("possession-guide-ar", "/articles/possession-or-neurological-psychological-disorder/"),
     ("possession-guide-en", "/en/articles/possession-or-neurological-psychological-disorder/"),
     ("possession-guide-de", "/de/articles/possession-or-neurological-psychological-disorder/"),
+    ("human-evolution-ar", "/articles/human-evolution-common-ancestor/"),
+    ("religious-ocd-ar", "/articles/religious-ocd-scrupulosity/"),
     ("ratq-ar", "/articles/ratq-fatq-big-bang/"),
     ("ratq-en", "/en/articles/ratq-fatq-big-bang/"),
     ("water-ar", "/articles/water-civilization-power/"),
