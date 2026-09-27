@@ -6,6 +6,26 @@
   "language": "ar",
   "items": [
     {
+      "id": "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/",
+      "url": "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/",
+      "title": "كيف بُني هرم خوفو؟ ما الذي تكشفه يوميات مرر فعلًا؟",
+      "summary": "تحقيق في برديات وادي الجرف وما تثبته عن نقل حجر طرة وتنظيم العمل، وما لا تكشفه عن رفع الكتل وشكل المنحدرات.",
+      "content_text": "توثق يوميات مرر جزءًا مباشرًا من سلسلة إمداد مشروع خوفو، لكنها ليست مخططًا كاملًا لطريقة بناء الهرم.",
+      "date_published": "2026-09-27T00:00:00+02:00",
+      "date_modified": "2026-09-27T00:00:00+02:00",
+      "tags": ["author_review_complete_external_review_pending", "sirou-fi-alard"]
+    },
+    {
+      "id": "https://ahmedalhafiz.com/articles/green-tree-fire-photosynthesis/",
+      "url": "https://ahmedalhafiz.com/articles/green-tree-fire-photosynthesis/",
+      "title": "﴿من الشجر الأخضر نارًا﴾: ماذا تعني الآية؟ وهل تشرح البناء الضوئي؟",
+      "summary": "قراءة تفصل بين سياق الاحتجاج على البعث، والتفسير الموروث، والشرح العلمي لتخزين النبات طاقة الضوء وتحررها بالاحتراق.",
+      "content_text": "البناء الضوئي يشرح كيف تختزن المادة النباتية طاقة، لكنه لا يحصر معنى الآية ولا يحولها إلى مصطلح علمي حديث.",
+      "date_published": "2026-09-27T00:00:00+02:00",
+      "date_modified": "2026-09-27T00:00:00+02:00",
+      "tags": ["author_review_complete_external_review_pending", "sirou-fi-alard"]
+    },
+    {
       "id": "https://ahmedalhafiz.com/articles/anzalna-iron-meteorites/",
       "url": "https://ahmedalhafiz.com/articles/anzalna-iron-meteorites/",
       "title": "﴿وأنزلنا الحديد﴾: هل يتحدث القرآن عن النيازك؟",

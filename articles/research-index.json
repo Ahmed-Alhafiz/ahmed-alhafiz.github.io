@@ -11,6 +11,42 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "how-khufu-pyramid-built-merer-diary",
+      "title": "كيف بُني هرم خوفو؟ ما الذي تكشفه يوميات مرر فعلًا؟",
+      "summary": "تحقيق في برديات وادي الجرف ولوجستيات نقل حجر طرة إلى آخت خوفو، مع فصل ما تثبته اليوميات عما لا تقوله عن رفع الكتل أو شكل المنحدرات.",
+      "type": "تحقيق أثري تاريخي موثق",
+      "version": "1.0",
+      "languages": ["ar"],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/",
+      "primary_sources": [
+        "https://www.ifao.egnet.net/publications/catalogue/9782724707069/",
+        "https://www.ifao.egnet.net/uploads/publications/divers/MIFAO136_ann_01.pdf",
+        "https://www.ifao.egnet.net/recherche/archeologie/ouadi-el-jarf/",
+        "https://doi.org/10.5615/neareastarch.77.1.0004",
+        "https://aeraweb.org/projects/lost-city/"
+      ]
+    },
+    {
+      "slug": "green-tree-fire-photosynthesis",
+      "title": "﴿من الشجر الأخضر نارًا﴾: ماذا تعني الآية؟ وهل تشرح البناء الضوئي؟",
+      "summary": "تحقيق يضع سياق الآية في الاستدلال على البعث إلى جوار التفسير الموروث والشرح العلمي لتخزين النبات طاقة الضوء وحدود المطابقة.",
+      "type": "تحقيق تفسيري علمي موثق",
+      "version": "1.0",
+      "languages": ["ar"],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/green-tree-fire-photosynthesis/",
+      "primary_sources": [
+        "https://quran.com/36/77-83",
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura36-aya80.html",
+        "https://quran.ksu.edu.sa/tafseer/katheer/sura36-aya80.html",
+        "https://science.nasa.gov/earth/earth-observatory/the-carbon-cycle/",
+        "https://www.energy.gov/cmei/fuels/bioenergy-basics"
+      ]
+    },
+    {
       "slug": "anzalna-iron-meteorites",
       "title": "﴿وأنزلنا الحديد﴾: هل يتحدث القرآن عن النيازك؟",
       "summary": "تحقيق يفصل بين معنى الإنزال في التفسير، والأصل النجمي لذرات الحديد، والحديد النيزكي، وتكوّن الأرض؛ من غير حصر معنى الآية في فرضية علمية واحدة.",
