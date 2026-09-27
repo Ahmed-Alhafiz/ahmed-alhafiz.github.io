@@ -3,12 +3,12 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "05589c0c44968d7c00932cebba76897f5eaa84a2",
-  "head_sha_semantics": "Verified main merge commit after PR #75 published the Sirou book-grounded series and PR #77 corrected the homepage latest-research ordering.",
+  "head_sha": "c8fee224bca16b7e4e1a7c1730d87fd1260b416d",
+  "head_sha_semantics": "Verified main merge commit after PR #79 strengthened the Arabic author identity and thematic reading paths, with GitHub Pages deployment and live verification complete.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-26T17:25:00+02:00",
-  "current_task": "Sirou book-grounded research series is published and verified on the live domain.",
-  "next_action": "Monitor crawling and Search Console after a meaningful data window; do not claim indexing or ranking improvement without evidence.",
+  "updated_at": "2026-09-27T16:40:00+02:00",
+  "current_task": "Arabic author-identity and thematic internal-link improvements from PR #79 are published and verified on the live domain.",
+  "next_action": "Wait for the 14-, 28-, and 56-day measurement windows; monitor crawling, branded queries, and external authority without claiming indexing or ranking gains before evidence.",
   "pending_release": {
     "branch": "content/sirou-book-research-expansion-2026-09-26",
     "base_sha": "789e1026562d241ad2cc35cca25e527405f24d8c",
@@ -222,6 +222,32 @@
         "actions": "Read-only baseline only; sitemap was not resubmitted and no indexing request was repeated.",
         "boundary": "This sparse historical baseline is not evidence of a stable ranking or of an effect from PR #69."
       }
+    },
+    "arabic_authority_growth": {
+      "verified_at": "2026-09-27T16:40:00+02:00",
+      "pull_request": 79,
+      "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/79",
+      "merge_sha": "c8fee224bca16b7e4e1a7c1730d87fd1260b416d",
+      "scope": "Strengthen the Arabic author identity on the about page and add accurate thematic reading paths across six Sirou-derived research reports.",
+      "required_checks": {
+        "PR policy / policy": "success",
+        "Governance integrity / validate": "success",
+        "Citation metadata integrity / validate": "success",
+        "Content research architecture / validate": "success",
+        "Site integrity / audit": "success",
+        "Visual review / render": "success"
+      },
+      "deployment": {
+        "pages_workflow": "success",
+        "pages_workflow_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/actions/runs/36319567899",
+        "live_result": "The live /about/ page rendered the title «الكاتب أحمد الحافظ — Ahmed Alhafiz | السيرة والمؤلفات» and H1 «الكاتب أحمد الحافظ»; post-merge integrity, governance, citation, research architecture, visibility, and IndexNow workflows succeeded."
+      },
+      "measurement_windows": {
+        "day_14": "2026-10-10",
+        "day_28": "2026-10-24",
+        "day_56": "2026-11-21"
+      },
+      "evidence_limit": "Deployment and live rendering are verified; no claim is made that Google indexing, ranking, impressions, or external citations improved."
     }
   },
   "unverified": [

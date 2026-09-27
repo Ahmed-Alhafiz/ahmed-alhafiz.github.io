@@ -5,7 +5,7 @@ Official author and independent research website.
 **Live site:** https://ahmedalhafiz.com/
 **English edition:** https://ahmedalhafiz.com/en/
 **Research desk:** https://ahmedalhafiz.com/articles/
-**Editorial standards:** https://ahmedalhafiz.com/methodology/
+**Research status:** https://ahmedalhafiz.com/research-status/
 
 ## What the site publishes
 
