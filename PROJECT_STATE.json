@@ -9,6 +9,13 @@
   "updated_at": "2026-09-27T23:50:00+02:00",
   "current_task": "The ten existing Sirou articles are strengthened, published, and live-verified on their canonical URLs; no new article has been started.",
   "next_action": "Seek independent tafsir and domain-specialist review, then monitor Search Console query fit and analytics before prioritizing any new supporting article.",
+  "sirou_work_batch_policy": {
+    "maximum_articles_per_batch": 2,
+    "one_content_pull_request_at_a_time": true,
+    "checkpoint_after_each_batch": true,
+    "next_batch_waits_for_previous_result": true,
+    "reason": "Keep the work recoverable and avoid oversized review, test, or deployment runs."
+  },
   "latest_ten_article_release": {
     "branch": "content/sirou-ten-article-audit-rebuild",
     "base_sha": "5a5284ffdb94b28cf25fce89d0f47c7ed1328196",
