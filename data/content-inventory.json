@@ -36,13 +36,13 @@
       "languages": [
         "ar"
       ],
-      "primary_intent": "القرآن والعلم: كيف نميّز بين الآية والتفسير والنظرية؟",
+      "primary_intent": "الإعجاز العلمي في القرآن: كيف نميّز بين دلالة الآية والنظرية العلمية؟",
       "does_not_target": [
         "اختزال الكتاب في ملخص",
         "مطابقة علمية قسرية",
         "استخدام المخطوط بوصفه دليلًا"
       ],
-      "next_action": "measure_query_fit_and_seek_independent_review",
+      "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
     },
     {
@@ -53,13 +53,13 @@
       "languages": [
         "ar"
       ],
-      "primary_intent": "أطوار الجنين في القرآن وعلم الأجنة: ماذا نعرف وما حدود المطابقة؟",
+      "primary_intent": "مراحل خلق الجنين في القرآن: قراءة علمية بلا مبالغة",
       "does_not_target": [
         "اختزال الكتاب في ملخص",
         "مطابقة علمية قسرية",
         "استخدام المخطوط بوصفه دليلًا"
       ],
-      "next_action": "measure_query_fit_and_seek_independent_review",
+      "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
     },
     {
@@ -70,13 +70,13 @@
       "languages": [
         "ar"
       ],
-      "primary_intent": "الدماغ والوعي والروح: ماذا يفسر علم الأعصاب وما الذي يبقى مفتوحًا؟",
+      "primary_intent": "الدماغ والوعي والروح: ماذا يفسر علم الأعصاب وما الذي يبقى خارج القياس؟",
       "does_not_target": [
         "اختزال الكتاب في ملخص",
         "مطابقة علمية قسرية",
         "استخدام المخطوط بوصفه دليلًا"
       ],
-      "next_action": "measure_query_fit_and_seek_independent_review",
+      "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
     },
     {
@@ -104,13 +104,13 @@
       "languages": [
         "ar"
       ],
-      "primary_intent": "الحديد والنار والنور: كيف تتحول المادة والطاقة إلى حضارة ومسؤولية؟",
+      "primary_intent": "الحديد والنار والنور: من مادة الكون إلى أمانة الحضارة",
       "does_not_target": [
         "اختزال الكتاب في ملخص",
         "مطابقة علمية قسرية",
         "استخدام المخطوط بوصفه دليلًا"
       ],
-      "next_action": "measure_query_fit_and_seek_independent_review",
+      "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
     },
     {
@@ -121,13 +121,13 @@
       "languages": [
         "ar"
       ],
-      "primary_intent": "لماذا تنهض الحضارات وتسقط؟ المعرفة والماء والعدل والذاكرة",
+      "primary_intent": "لماذا تنهار الحضارات؟ الماء والسلطة والعدل في سنن العمران",
       "does_not_target": [
         "اختزال الكتاب في ملخص",
         "مطابقة علمية قسرية",
         "استخدام المخطوط بوصفه دليلًا"
       ],
-      "next_action": "measure_query_fit_and_seek_independent_review",
+      "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
     },
     {
@@ -152,8 +152,9 @@
         "ar",
         "en"
       ],
-      "next_action": "hold_scope_and_measure",
-      "reason": "Established bilingual dossier with claim-evidence architecture and a distinct text–exegesis–cosmology question."
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Established bilingual dossier with claim-evidence architecture and a distinct text–exegesis–cosmology question.",
+      "primary_intent": "هل الرتق والفتق هو الانفجار العظيم؟ تحقيق قرآني وعلمي بلا مبالغة"
     },
     {
       "slug": "water-civilization-power",
@@ -164,8 +165,9 @@
         "ar",
         "en"
       ],
-      "next_action": "hold_scope_and_measure",
-      "reason": "Bilingual governance dossier with an original six-layer institutional model and comparative cases."
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Bilingual governance dossier with an original six-layer institutional model and comparative cases.",
+      "primary_intent": "الماء والحضارة والسلطة: متى تصبح إدارة المورد عدلًا، ومتى تتحول إلى أداة سيطرة؟"
     },
     {
       "slug": "diagnostic-uncertainty-family-fear-coercive-authority",
@@ -188,8 +190,9 @@
         "ar",
         "en"
       ],
-      "next_action": "hold_scope_and_measure",
-      "reason": "Complete bilingual reference dossier with a six-layer analytical framework, reciprocal discovery, portable citation assets, and the former bilingual-parity veto gate closed after final release verification."
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Complete bilingual reference dossier with a six-layer analytical framework, reciprocal discovery, portable citation assets, and the former bilingual-parity veto gate closed after final release verification.",
+      "primary_intent": "تعليم الأسماء والذكاء الاصطناعي: من الاسم إلى العالم والمسؤولية"
     },
     {
       "slug": "spiritual-healing-exploitation-safeguarding",
@@ -216,13 +219,14 @@
     {
       "slug": "six-days-creation-cosmic-time",
       "url": "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/",
-      "class": "hold_for_review",
+      "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
         "ar"
       ],
-      "next_action": "measure_overlap_with_ratq_pillar_before_merge_or_redirect",
-      "reason": "Potential intent overlap with the cosmology pillar; no consolidation should occur before baseline and link-risk review."
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Potential intent overlap with the cosmology pillar; no consolidation should occur before baseline and link-risk review.",
+      "primary_intent": "هل خلق الله الكون في ستة أيام؟ معنى اليوم بين القرآن وعلم الكون"
     },
     {
       "slug": "sleep-paralysis-jathoom",
@@ -324,8 +328,8 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 14,
+    "supporting_brief": 15,
     "literary_guide": 1,
-    "hold_for_review": 1
+    "hold_for_review": 0
   }
 }
