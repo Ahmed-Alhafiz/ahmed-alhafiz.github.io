@@ -3,12 +3,12 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "486bd1e34128be1455cb26cc96e462f7586b2e5d",
-  "head_sha_semantics": "Verified main merge commit after PR #88 sharpened search intent and source placement in the two-article iron and Marib batch, passed all required checks, deployed, and was verified live.",
+  "head_sha": "d7e440d9fb6a144a60230291cd8fc86d8df49519",
+  "head_sha_semantics": "Verified main merge commit for PR #90, the two-article Merer diary and green-tree/fire batch; all required PR checks passed and both canonical pages were verified live.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-27T23:55:00+02:00",
-  "current_task": "Sirou supporting batch 2 is complete: the iron/meteorites and Marib/Sayl al-Arim investigations are published and live-verified; no article from the next batch has been started.",
-  "next_action": "Seek independent tafsir, astrophysics, and South Arabian archaeology review and monitor Search Console query fit before authorizing the next maximum-two-article batch.",
+  "updated_at": "2026-09-28T00:08:00+02:00",
+  "current_task": "Sirou supporting batch 3 is complete: the Merer/Khufu and green-tree/fire investigations are published and live-verified; no article from batch 4 has been started.",
+  "next_action": "Seek independent Egyptology, tafsir, and plant-science review and measure query fit in Search Console before authorizing the next maximum-two-article batch.",
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
     "one_content_pull_request_at_a_time": true,
@@ -17,33 +17,25 @@
     "reason": "Keep the work recoverable and avoid oversized review, test, or deployment runs."
   },
   "latest_supporting_batch": {
-    "batch_number": 2,
+    "batch_number": 3,
     "status": "merged_deployed_verified",
-    "branch": "content/sirou-supporting-batch-2-iron-marib",
-    "base_sha": "54fb2df7406f8d8fdac5465ccd20c2829051cd42",
-    "scope": "Publish exactly two Arabic supporting investigations tied to Sirou pages 131–134 and 91–94, while separating manuscript inspiration from tafsir, scientific, inscriptional, and archaeological evidence.",
+    "branch": "content/sirou-supporting-batch-3-merer-green-fire",
+    "base_sha": "eb0dd8cebe78617595b45f274ba2cba733abaed3",
+    "scope": "Publish exactly two Arabic supporting investigations tied to Sirou pages 83–84 and 134–137, while separating manuscript inspiration from Egyptological, tafsir, botanical, and energy evidence.",
     "articles": [
-      "https://ahmedalhafiz.com/articles/anzalna-iron-meteorites/",
-      "https://ahmedalhafiz.com/articles/marib-dam-sayl-al-arim/"
+      "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/",
+      "https://ahmedalhafiz.com/articles/green-tree-fire-photosynthesis/"
     ],
-    "roadmap_progress": "6 of 24 bounded supporting briefs completed; the next batch has not started.",
-    "pull_request": 86,
-    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/86",
-    "merge_sha": "0d6102c3cacce623b6969dbed20797c3964e2c52",
-    "inventory": "69 public pages; 69 canonicals; 69 sitemap URLs; 22 Arabic research items; 17 supporting briefs.",
-    "local_checks": "Editorial, citation, research architecture, discovery, Arabic UI, UX, site integrity, entity integrity, public presentation, visibility, JSON parsing, and git diff check passed.",
-    "required_checks": "Governance, site integrity, citation metadata, content research architecture, and Visual review passed on PR #86.",
-    "deployment": "GitHub Pages workflow 36351148291 and IndexNow workflow 36351148837 succeeded. Visibility run 36351148938 initially observed the pre-deploy 20-item live index, then succeeded when rerun after Pages completed.",
-    "live_verification": "Both canonical article URLs returned HTTP 200 with their expected H1, and the live research index returned 22 items.",
-    "search_polish": {
-      "pull_request": 88,
-      "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/88",
-      "merge_sha": "486bd1e34128be1455cb26cc96e462f7586b2e5d",
-      "scope": "Address two active search-result claims without adding URLs: the Surah 57 versus Fe-57 numerology and the number of Marib Dam collapses; place primary-source links at the claims.",
-      "result": "Iron article: 2045 visible words and 15 external sources. Marib article: 2094 visible words and 14 external sources. Structured FAQs were synchronized.",
-      "verification": "All local gates and CI Visual review passed; Pages and IndexNow succeeded; both new sections were confirmed live over HTTP 200."
-    },
-    "evidence_limit": "Publication and live rendering are verified; independent specialist review, indexing, ranking, traffic, and external citation gains are not claimed."
+    "roadmap_progress": "8 of 24 bounded supporting briefs completed; the next batch has not started.",
+    "pull_request": 90,
+    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/90",
+    "merge_sha": "d7e440d9fb6a144a60230291cd8fc86d8df49519",
+    "inventory": "71 public pages; 71 canonicals; 71 sitemap URLs; 24 Arabic research items; 19 supporting briefs.",
+    "local_checks": "Editorial, citation, research architecture, discovery, Arabic UI, UX, site integrity, entity integrity, public presentation, visibility, JSON/XML parsing, visible-to-structured FAQ synchronization, and git diff check passed.",
+    "required_checks": "Governance, site integrity, citation metadata, content research architecture, and Visual review passed on PR #90.",
+    "deployment": "The merged main revision rendered both new canonical pages on ahmedalhafiz.com after PR #90 completed.",
+    "live_verification": "Both canonical article URLs rendered their expected H1, full Arabic RTL content, and current publication metadata. The cloud browser blocked direct opening of the raw research-index JSON; the 24-item count is verified by the repository discovery gate and merged main data, not claimed as a live JSON response check.",
+    "evidence_limit": "Publication and live rendering are verified; independent Egyptology, tafsir, and plant-science review, indexing, ranking, traffic, and external citation gains are not claimed."
   },
   "latest_ten_article_release": {
     "branch": "content/sirou-ten-article-audit-rebuild",
