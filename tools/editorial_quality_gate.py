@@ -10,6 +10,8 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'articles/anzalna-iron-meteorites/index.html':dict(words=1700,sources=10,book='books/sirou-fi-alard/index.html',route='/articles/anzalna-iron-meteorites/',medical=False,extended=False),
+ 'articles/marib-dam-sayl-al-arim/index.html':dict(words=1800,sources=10,book='books/sirou-fi-alard/index.html',route='/articles/marib-dam-sayl-al-arim/',medical=False,extended=False),
  'articles/ratq-fatq-big-bang/index.html':dict(words=2800,sources=12,book='books/sirou-fi-alard/index.html',route='/articles/ratq-fatq-big-bang/',medical=False,extended=True),
  'en/articles/ratq-fatq-big-bang/index.html':dict(words=2500,sources=12,book='en/books/sirou-fi-alard/index.html',route='/en/articles/ratq-fatq-big-bang/',medical=False,extended=True),
  'articles/water-civilization-power/index.html':dict(words=3600,sources=18,book='books/sirou-fi-alard/index.html',route='/articles/water-civilization-power/',medical=False,extended=True),

@@ -11,6 +11,44 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "anzalna-iron-meteorites",
+      "title": "﴿وأنزلنا الحديد﴾: هل يتحدث القرآن عن النيازك؟",
+      "summary": "تحقيق يفصل بين معنى الإنزال في التفسير، والأصل النجمي لذرات الحديد، والحديد النيزكي، وتكوّن الأرض؛ من غير حصر معنى الآية في فرضية علمية واحدة.",
+      "type": "تحقيق تفسيري علمي موثق",
+      "version": "1.0",
+      "languages": ["ar"],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/anzalna-iron-meteorites/",
+      "primary_sources": [
+        "https://quran.com/57/25",
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura57-aya25.html",
+        "https://tafsir.app/kashaf/57/25",
+        "https://science.nasa.gov/astrobiology/learning-resources/alp/are-we-really-made-of-star-stuff/",
+        "https://doi.org/10.1007/s00159-022-00146-x",
+        "https://doi.org/10.1111/maps.12664"
+      ]
+    },
+    {
+      "slug": "marib-dam-sayl-al-arim",
+      "title": "سد مأرب وسيل العرم: ماذا يقول القرآن وماذا تثبت الآثار؟",
+      "summary": "تحقيق يضع قصة سبأ وسيل العرم إلى جوار آثار نظام مأرب المائي ونقوش إصلاحه، ويحدد ما يثبته كل نوع من الأدلة وما يبقى خارج قدرته.",
+      "type": "تحقيق تفسيري أثري موثق",
+      "version": "1.0",
+      "languages": ["ar"],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/marib-dam-sayl-al-arim/",
+      "primary_sources": [
+        "https://quran.com/34/15-17",
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura34-aya16.html",
+        "https://whc.unesco.org/en/list/1700/",
+        "https://whc.unesco.org/document/198691",
+        "https://doi.org/10.34780/f7ge-f0u9",
+        "https://doi.org/10.1006/jasc.2000.0518"
+      ]
+    },
+    {
       "slug": "quran-science-method-evidence",
       "title": "الإعجاز العلمي في القرآن: كيف نميّز بين دلالة الآية والنظرية العلمية؟",
       "summary": "منهج عملي يفرّق بين نص القرآن وتفسيره والبيانات والنماذج العلمية، ويبيّن متى تكون المقارنة معتبرة ومتى تتحول إلى تكلّف يضر بالنص والعلم.",

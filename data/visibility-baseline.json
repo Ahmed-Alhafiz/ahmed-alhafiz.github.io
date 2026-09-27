@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "baseline_date": "2026-09-26",
+  "baseline_date": "2026-09-27",
   "site": {
     "canonical_origin": "https://ahmedalhafiz.com",
     "canonical_author_id": "https://ahmedalhafiz.com/#person",
@@ -12,12 +12,12 @@
     "robots": "https://ahmedalhafiz.com/robots.txt"
   },
   "technical_baseline": {
-    "public_html_pages": 67,
-    "canonical_urls": 67,
-    "sitemap_urls": 67,
-    "research_items": 20,
+    "public_html_pages": 69,
+    "canonical_urls": 69,
+    "sitemap_urls": 69,
+    "research_items": 22,
     "complete_bilingual_pillars": 4,
-    "arabic_feed_items": 20,
+    "arabic_feed_items": 22,
     "english_feed_items": 8,
     "oai_searchbot": "explicitly_allowed",
     "gptbot": "explicitly_allowed",
