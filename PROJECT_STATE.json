@@ -3,8 +3,8 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "0d6102c3cacce623b6969dbed20797c3964e2c52",
-  "head_sha_semantics": "Verified main merge commit after PR #86 published the two-article iron and Marib supporting batch, passed all required checks, deployed, and was verified live.",
+  "head_sha": "486bd1e34128be1455cb26cc96e462f7586b2e5d",
+  "head_sha_semantics": "Verified main merge commit after PR #88 sharpened search intent and source placement in the two-article iron and Marib batch, passed all required checks, deployed, and was verified live.",
   "status": "deployed_monitoring",
   "updated_at": "2026-09-27T23:55:00+02:00",
   "current_task": "Sirou supporting batch 2 is complete: the iron/meteorites and Marib/Sayl al-Arim investigations are published and live-verified; no article from the next batch has been started.",
@@ -35,6 +35,14 @@
     "required_checks": "Governance, site integrity, citation metadata, content research architecture, and Visual review passed on PR #86.",
     "deployment": "GitHub Pages workflow 36351148291 and IndexNow workflow 36351148837 succeeded. Visibility run 36351148938 initially observed the pre-deploy 20-item live index, then succeeded when rerun after Pages completed.",
     "live_verification": "Both canonical article URLs returned HTTP 200 with their expected H1, and the live research index returned 22 items.",
+    "search_polish": {
+      "pull_request": 88,
+      "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/88",
+      "merge_sha": "486bd1e34128be1455cb26cc96e462f7586b2e5d",
+      "scope": "Address two active search-result claims without adding URLs: the Surah 57 versus Fe-57 numerology and the number of Marib Dam collapses; place primary-source links at the claims.",
+      "result": "Iron article: 2045 visible words and 15 external sources. Marib article: 2094 visible words and 14 external sources. Structured FAQs were synchronized.",
+      "verification": "All local gates and CI Visual review passed; Pages and IndexNow succeeded; both new sections were confirmed live over HTTP 200."
+    },
     "evidence_limit": "Publication and live rendering are verified; independent specialist review, indexing, ranking, traffic, and external citation gains are not claimed."
   },
   "latest_ten_article_release": {
