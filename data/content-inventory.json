@@ -29,6 +29,28 @@
   },
   "items": [
     {
+      "slug": "how-khufu-pyramid-built-merer-diary",
+      "url": "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": ["ar"],
+      "primary_intent": "كيف بني هرم خوفو وما الذي تثبته يوميات مرر وبرديات وادي الجرف",
+      "does_not_target": ["حسم شكل المنحدرات", "شرح رفع كل كتلة", "استخدام المخطوط بوصفه دليلًا"],
+      "next_action": "seek_independent_egyptology_review_and_measure_query_fit",
+      "reason": "A distinct archaeology question grounded in the official papyrus publication and bounded against claims the diary cannot establish."
+    },
+    {
+      "slug": "green-tree-fire-photosynthesis",
+      "url": "https://ahmedalhafiz.com/articles/green-tree-fire-photosynthesis/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": ["ar"],
+      "primary_intent": "معنى من الشجر الأخضر نارًا وعلاقتها بالبناء الضوئي والطاقة",
+      "does_not_target": ["حصر الآية في البناء الضوئي", "تعيين الوقود الأحفوري معنى وحيدًا", "استخدام المخطوط بوصفه دليلًا"],
+      "next_action": "seek_independent_tafsir_and_botany_review_and_measure_query_fit",
+      "reason": "A distinct tafsir-and-science question with explicit boundaries between resurrection context, classical interpretation, and modern plant-energy explanations."
+    },
+    {
       "slug": "anzalna-iron-meteorites",
       "url": "https://ahmedalhafiz.com/articles/anzalna-iron-meteorites/",
       "class": "supporting_brief",
@@ -350,7 +372,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 17,
+    "supporting_brief": 19,
     "literary_guide": 1,
     "hold_for_review": 0
   }
