@@ -1,3 +1,16 @@
+## إصدار منشور ومتحقق — تقوية هوية الكاتب ومسارات القراءة
+
+آخر تحديث: 2026-09-27 16:40 Europe/Vienna
+
+- الحالة: `deployed_monitoring` على `main` عند merge commit `c8fee224bca16b7e4e1a7c1730d87fd1260b416d`.
+- دُمج [PR #79](https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/79) بعد نجاح الفحوص الستة المطلوبة، ثم نجح نشر GitHub Pages في workflow رقم `36319567899`.
+- ثُبّت عنوان صفحة السيرة وH1 بصيغة «الكاتب أحمد الحافظ»، وأضيفت مسارات قراءة موضوعية دقيقة بين ستة تقارير مشتقة من كتاب «سيرو» وصفحات الكتب والأبحاث ذات الصلة.
+- نجحت بعد الدمج مهام Site integrity وContent research architecture وCitation metadata integrity وGovernance integrity وVisibility readiness monitor وIndexNow changed-URL notification.
+- تحقق حيًا أن `/about/` يعرض العنوان «الكاتب أحمد الحافظ — Ahmed Alhafiz | السيرة والمؤلفات» وH1 «الكاتب أحمد الحافظ».
+- لا يثبت هذا الإصدار فهرسة Google أو تحسن الترتيب أو الظهور. نقاط القياس المعتمدة تبقى 2026-10-10 و2026-10-24 و2026-11-21.
+
+---
+
 # HANDOFF — إطلاق نظام التحرير والاكتشاف متعدد اللغات
 
 ## مرشح تحسين الهوية العربية ومسارات القراءة
