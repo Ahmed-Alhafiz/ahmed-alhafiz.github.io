@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "status": "draft_not_published",
+  "article_slug": "how-khufu-pyramid-built-merer-diary",
+  "title": "كيف بُني هرم خوفو؟ ما الذي تكشفه يوميات مرر فعلًا؟",
+  "author": "أحمد الحافظ",
+  "book_connection": {
+    "title": "قل سيروا في الأرض فانظروا كيف بدأ الخلق",
+    "pages": [83, 84],
+    "direct_quote_scope": "برديات وادي الجرف ويوميات مرر بوصفها نافذة على اللوجستيات ونقل حجر طرة إلى الهرم عبر الماء",
+    "role": "origin_of_argument_not_public_evidence"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "اكتُشف أرشيف وادي الجرف سنة 2013، وهو مؤرخ بأواخر عهد خوفو ويعد أقدم أرشيف بردي مكتشف في مصر حتى الآن.",
+      "confidence": "high",
+      "evidence": [
+        "https://www.ifao.egnet.net/publications/catalogue/9782724707069/",
+        "https://www.ifao.egnet.net/recherche/archeologie/ouadi-el-jarf/"
+      ]
+    },
+    {
+      "id": "C2",
+      "claim": "يضم الأرشيف حسابات للمواد والمؤن وسجلات يومية لأنشطة فريق من البحارة على مدى أشهر.",
+      "confidence": "high",
+      "evidence": [
+        "https://www.ifao.egnet.net/publications/catalogue/9782724707069/"
+      ]
+    },
+    {
+      "id": "C3",
+      "claim": "تسجل يوميات مرر نقل الحجر الجيري من محاجر طرة إلى مشروع الهرم الأكبر في الجيزة عبر الممرات المائية.",
+      "confidence": "high",
+      "evidence": [
+        "https://www.ifao.egnet.net/uploads/publications/divers/MIFAO136_ann_01.pdf",
+        "https://www.ifao.egnet.net/publications/catalogue/9782724707069/"
+      ]
+    },
+    {
+      "id": "C4",
+      "claim": "يرجح تاليه أن فريق مرر ضم نحو أربعين رجلًا وكان ينجز في المتوسط رحلتين أو ثلاثًا ذهابًا وإيابًا كل عشرة أيام.",
+      "confidence": "scholarly_reconstruction_not_direct_headcount",
+      "evidence": [
+        "Tallet 2017, English Annex, pp. 157-160",
+        "https://www.ifao.egnet.net/uploads/publications/divers/MIFAO136_ann_01.pdf"
+      ]
+    },
+    {
+      "id": "C5",
+      "claim": "يرجح أن السجل يعود إلى السنة 26 من حكم خوفو، قرب نهاية عهده، وربما ارتبط بتركيب أجزاء من كسوة حجر طرة.",
+      "confidence": "high_for_date; probable_for_casing_function",
+      "evidence": [
+        "Tallet 2017, English Annex, pp. 159-160",
+        "https://www.ifao.egnet.net/uploads/publications/divers/MIFAO136_ann_01.pdf"
+      ]
+    },
+    {
+      "id": "C6",
+      "claim": "تذكر اليوميات آخت خوفو ورو-شي خوفو وعنخ حاف ضمن شبكة المشروع الإدارية والمائية.",
+      "confidence": "high_for_mentions; interpretive_for_exact_site_identifications",
+      "evidence": [
+        "Tallet 2017, English Annex, pp. 151-153, 160-161",
+        "https://www.ifao.egnet.net/uploads/publications/divers/MIFAO136_ann_01.pdf"
+      ]
+    },
+    {
+      "id": "C7",
+      "claim": "لا تذكر اليوميات تقنيات رفع الكتل أو شكل المنحدرات المستخدمة في بناء الهرم.",
+      "confidence": "high_explicit_source_statement",
+      "evidence": [
+        "Tallet 2017, English Annex, p. 151",
+        "https://www.ifao.egnet.net/uploads/publications/divers/MIFAO136_ann_01.pdf"
+      ]
+    },
+    {
+      "id": "C8",
+      "claim": "تكشف حفريات مدينة بناة الأهرام منشآت سكن وعمل وإمداد، منها ورش ومخابز ومخازن ومكاتب إدارية.",
+      "confidence": "high",
+      "evidence": [
+        "https://aeraweb.org/projects/lost-city/"
+      ]
+    },
+    {
+      "id": "C9",
+      "claim": "الدليل المتاح يثبت قوة عمل منظمة ومدعومة، لكنه لا يسمح ليوميات مرر وحدها بحسم الوضع القانوني والاجتماعي لكل العاملين أو نفي كل صور العمل الإلزامي.",
+      "confidence": "methodological_conclusion",
+      "evidence": ["C2", "C3", "C7", "C8"]
+    },
+    {
+      "id": "C10",
+      "claim": "الاستنتاج المركزي للمقال: البرديات تشرح لوجستيات موثقة من بناء الهرم، ولا تقدم وصفًا كاملًا لجميع تقنيات البناء.",
+      "confidence": "high_analytical_conclusion",
+      "evidence": ["C3", "C6", "C7", "C8"]
+    }
+  ]
+}
+
