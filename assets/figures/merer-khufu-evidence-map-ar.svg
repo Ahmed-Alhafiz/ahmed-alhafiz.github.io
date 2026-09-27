@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">ماذا تثبت يوميات مرر عن بناء هرم خوفو؟</title>
+  <desc id="desc">رسم معلوماتي يوضح الطريق من محاجر طرة إلى آخت خوفو، ويفصل بين ما تثبته البرديات وما لا تثبته.</desc>
+  <rect width="1600" height="900" fill="#f5efe4"/>
+  <rect x="60" y="55" width="1480" height="790" rx="34" fill="#fffaf1" stroke="#c39a55" stroke-width="4"/>
+  <text x="800" y="130" text-anchor="middle" direction="rtl" font-family="Arial, sans-serif" font-size="50" font-weight="700" fill="#162a2f">ماذا تكشف يوميات مرر عن بناء هرم خوفو؟</text>
+  <text x="800" y="183" text-anchor="middle" direction="rtl" font-family="Arial, sans-serif" font-size="26" fill="#5e5548">دليل على سلسلة الإمداد — لا مخطط كامل لتقنيات الرفع</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="1120" y="255" width="330" height="175" rx="26" fill="#173d46"/>
+    <text x="1285" y="318" text-anchor="middle" direction="rtl" font-size="34" font-weight="700" fill="#fff">محاجر طرة</text>
+    <text x="1285" y="365" text-anchor="middle" direction="rtl" font-size="25" fill="#e7d7b7">حجر جيري أبيض</text>
+    <text x="1285" y="401" text-anchor="middle" direction="rtl" font-size="22" fill="#e7d7b7">تحميل القوارب</text>
+
+    <path d="M1090 343 H955" stroke="#b87c2b" stroke-width="10" stroke-linecap="round"/>
+    <polygon points="955,343 985,325 985,361" fill="#b87c2b"/>
+
+    <rect x="635" y="255" width="290" height="175" rx="26" fill="#2d6771"/>
+    <text x="780" y="318" text-anchor="middle" direction="rtl" font-size="34" font-weight="700" fill="#fff">عبر الماء</text>
+    <text x="780" y="365" text-anchor="middle" direction="rtl" font-size="25" fill="#eaf3f2">النيل والمجاري</text>
+    <text x="780" y="401" text-anchor="middle" direction="rtl" font-size="22" fill="#eaf3f2">رحلات وأيام مبيت</text>
+
+    <path d="M605 343 H470" stroke="#b87c2b" stroke-width="10" stroke-linecap="round"/>
+    <polygon points="470,343 500,325 500,361" fill="#b87c2b"/>
+
+    <rect x="150" y="255" width="290" height="175" rx="26" fill="#173d46"/>
+    <text x="295" y="318" text-anchor="middle" direction="rtl" font-size="34" font-weight="700" fill="#fff">آخت خوفو</text>
+    <text x="295" y="365" text-anchor="middle" direction="rtl" font-size="25" fill="#e7d7b7">منطقة مشروع الهرم</text>
+    <text x="295" y="401" text-anchor="middle" direction="rtl" font-size="22" fill="#e7d7b7">التسليم والإدارة</text>
+
+    <rect x="825" y="505" width="625" height="245" rx="28" fill="#e5f0ea" stroke="#3e7f64" stroke-width="3"/>
+    <text x="1137" y="560" text-anchor="middle" direction="rtl" font-size="32" font-weight="700" fill="#245540">ما تثبته البرديات</text>
+    <text x="1137" y="615" text-anchor="middle" direction="rtl" font-size="24" fill="#263b36">نقل حجر طرة بالقوارب</text>
+    <text x="1137" y="660" text-anchor="middle" direction="rtl" font-size="24" fill="#263b36">فرق منظمة وسجل أيام ومسؤولون</text>
+    <text x="1137" y="705" text-anchor="middle" direction="rtl" font-size="24" fill="#263b36">شبكة مائية وإدارية إلى الجيزة</text>
+
+    <rect x="150" y="505" width="625" height="245" rx="28" fill="#f5e5df" stroke="#a8503d" stroke-width="3"/>
+    <text x="462" y="560" text-anchor="middle" direction="rtl" font-size="32" font-weight="700" fill="#843827">ما لا تثبته البرديات</text>
+    <text x="462" y="615" text-anchor="middle" direction="rtl" font-size="24" fill="#4b312b">شكل المنحدرات</text>
+    <text x="462" y="660" text-anchor="middle" direction="rtl" font-size="24" fill="#4b312b">طريقة رفع كل كتلة</text>
+    <text x="462" y="705" text-anchor="middle" direction="rtl" font-size="24" fill="#4b312b">تفسير كامل لكل مراحل البناء</text>
+
+    <text x="800" y="814" text-anchor="middle" direction="rtl" font-size="22" fill="#6b5b47">من مقال مرتبط بكتاب «قل سيروا في الأرض فانظروا كيف بدأ الخلق» — أحمد الحافظ</text>
+  </g>
+</svg>
