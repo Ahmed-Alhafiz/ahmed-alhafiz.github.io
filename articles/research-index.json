@@ -11,6 +11,48 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "before-big-bang-science-limits",
+      "title": "ماذا كان قبل الانفجار العظيم؟ ما يعرفه العلم وما لا يعرفه",
+      "summary": "تحقيق يميز بين الكون الحار والتضخم والتفرد، ويعرض حدود نماذج اللابداية والارتداد من غير تحويل الفيزياء إلى برهان على العدم أو الخلق.",
+      "type": "تحقيق في علم الكون وفلسفة البداية",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/before-big-bang-science-limits/",
+      "primary_sources": [
+        "https://science.nasa.gov/universe/the-big-bang/",
+        "https://wmap.gsfc.nasa.gov/universe/bb_cosmo_infl.html",
+        "https://arxiv.org/abs/gr-qc/0110012",
+        "https://arxiv.org/abs/1108.0893",
+        "https://arxiv.org/abs/1812.01760",
+        "https://quran.com/21/30"
+      ]
+    },
+    {
+      "slug": "writing-changed-human-history",
+      "title": "لماذا غيّرت الكتابة تاريخ الإنسان؟ القلم بوصفه ذاكرة حضارية",
+      "summary": "تحقيق يشرح كيف وسعت الكتابة الذاكرة والتراكم والعدل، من ألواح الرافدين وبردية رند إلى بغداد، مع تقييد صورة اسوداد دجلة بالحبر.",
+      "type": "تحقيق في تاريخ الكتابة والحضارة",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/writing-changed-human-history/",
+      "primary_sources": [
+        "https://www.metmuseum.org/essays/the-origins-of-writing",
+        "https://www.metmuseum.org/art/collection/search/327385",
+        "https://www.britishmuseum.org/collection/object/Y_EA10057",
+        "https://cdli.earth/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8579038/",
+        "https://quran.com/2/282"
+      ]
+    },
+    {
       "slug": "injustice-fall-of-states-quran-history",
       "title": "هل الظلم سبب سقوط الدول؟ جواب قرآني وتاريخي بلا تبسيط",
       "summary": "تحقيق يشرح كيف يضعف الظلم الثقة والشرعية والمعلومة والقدرة المؤسسية، ويفرق بين السنن القرآنية والتفسير التاريخي المركب والتوقيت الغيبي.",

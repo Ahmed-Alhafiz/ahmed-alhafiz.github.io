@@ -29,6 +29,40 @@
   },
   "items": [
     {
+      "slug": "before-big-bang-science-limits",
+      "url": "https://ahmedalhafiz.com/articles/before-big-bang-science-limits/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "ماذا كان قبل الانفجار العظيم وبداية الزمن وحدود النماذج الكونية",
+      "does_not_target": [
+        "ادعاء أن الانفجار العظيم خلق من عدم",
+        "عرض نموذج كمومي بوصفه حقيقة مثبتة",
+        "استخدام الكتاب بوصفه دليلًا"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Distinct book-derived search intent with explicit evidence boundaries and no claim that the manuscript proves public facts."
+    },
+    {
+      "slug": "writing-changed-human-history",
+      "url": "https://ahmedalhafiz.com/articles/writing-changed-human-history/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "أهمية الكتابة في قيام الحضارات والقلم بوصفه ذاكرة خارجية",
+      "does_not_target": [
+        "اعتبار الكتابة سبب الحضارة الوحيد",
+        "اعتبار كل مكتوب حقيقة",
+        "تقديم صورة حبر دجلة بوصفها قياسًا تاريخيًا"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Distinct book-derived search intent with explicit evidence boundaries and no claim that the manuscript proves public facts."
+    },
+    {
       "slug": "injustice-fall-of-states-quran-history",
       "url": "https://ahmedalhafiz.com/articles/injustice-fall-of-states-quran-history/",
       "class": "supporting_brief",
@@ -532,7 +566,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 27,
+    "supporting_brief": 29,
     "literary_guide": 1,
     "hold_for_review": 0
   }
