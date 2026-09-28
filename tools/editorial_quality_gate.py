@@ -10,6 +10,8 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'articles/turing-test-ai-consciousness/index.html':dict(words=1800,sources=9,book='books/sirou-fi-alard/index.html',route='/articles/turing-test-ai-consciousness/',medical=False,extended=False),
+ 'articles/river-civilizations-water-state/index.html':dict(words=1800,sources=10,book='books/sirou-fi-alard/index.html',route='/articles/river-civilizations-water-state/',medical=False,extended=False),
  'articles/universe-expansion-wa-inna-lamusiun/index.html':dict(words=1800,sources=9,book='books/sirou-fi-alard/index.html',route='/articles/universe-expansion-wa-inna-lamusiun/',medical=False,extended=False),
  'articles/madain-salih-thamud-nabataean-tombs/index.html':dict(words=1800,sources=9,book='books/sirou-fi-alard/index.html',route='/articles/madain-salih-thamud-nabataean-tombs/',medical=False,extended=False),
  'articles/how-khufu-pyramid-built-merer-diary/index.html':dict(words=1800,sources=7,book='books/sirou-fi-alard/index.html',route='/articles/how-khufu-pyramid-built-merer-diary/',medical=False,extended=False),
