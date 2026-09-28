@@ -29,6 +29,23 @@
   },
   "items": [
     {
+      "slug": "quran-day-thousand-fifty-thousand-years-relativity",
+      "url": "https://ahmedalhafiz.com/articles/quran-day-thousand-fifty-thousand-years-relativity/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "تفسير يوم كألف سنة وخمسين ألف سنة وهل يتعارض القرآن أو يتنبأ بالنسبية",
+      "does_not_target": [
+        "مدة أيام خلق السماوات والأرض",
+        "تحويل الأيام الغيبية إلى معادلة فيزيائية",
+        "استعمال المخطوطة دليلًا للتفسير أو الفيزياء"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Distinct question anchored to book pages 28–35, with direct tafsir and experimental sources and explicit boundary against a relativity proof."
+    },
+    {
       "slug": "before-big-bang-science-limits",
       "url": "https://ahmedalhafiz.com/articles/before-big-bang-science-limits/",
       "class": "supporting_brief",
@@ -566,7 +583,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 29,
+    "supporting_brief": 30,
     "literary_guide": 1,
     "hold_for_review": 0
   }

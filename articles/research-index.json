@@ -11,6 +11,27 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "quran-day-thousand-fifty-thousand-years-relativity",
+      "title": "يوم كألف سنة ويوم بخمسين ألف سنة: هل يتعارض القرآن؟ وهل يتحدث عن النسبية؟",
+      "summary": "تفسير سياقات الألف والخمسين ألفًا في الحج والسجدة والمعارج، وحدود الاستشهاد بالنسبية وحديث اليوم الذي كسنة، مع تجربة الساعات الذرية.",
+      "type": "تحقيق قرآني في الزمن وحدود النسبية",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/quran-day-thousand-fifty-thousand-years-relativity/",
+      "primary_sources": [
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura22-aya47.html",
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura32-aya5.html",
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura70-aya4.html",
+        "https://islamweb.net/ar/library/index.php?ID=5300&bk_no=1&flag=1&page=bookcontents",
+        "https://doi.org/10.1126/science.1192720",
+        "https://www.nist.gov/news-events/news/2010/09/nist-pair-aluminum-atomic-clocks-reveal-einsteins-relativity-personal-scale"
+      ]
+    },
+    {
       "slug": "before-big-bang-science-limits",
       "title": "ماذا كان قبل الانفجار العظيم؟ ما يعرفه العلم وما لا يعرفه",
       "summary": "تحقيق يميز بين الكون الحار والتضخم والتفرد، ويعرض حدود نماذج اللابداية والارتداد من غير تحويل الفيزياء إلى برهان على العدم أو الخلق.",
