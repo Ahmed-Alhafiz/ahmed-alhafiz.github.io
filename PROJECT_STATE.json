@@ -3,12 +3,12 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "a0322e885d7c603ba25af3c1dbf34938b72740c2",
-  "head_sha_semantics": "Verified main merge commit for PR #96, the two-article universe-age and language-origin batch; all required PR checks passed and both canonical pages were verified live.",
+  "head_sha": "e2b2a705e751b888b0823981a05685802bcbe49d",
+  "head_sha_semantics": "Verified main merge commit for PR #98, the two-article injustice/state-collapse and DNA/genetic-information batch; all required PR checks passed and both canonical pages were verified live.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-28T06:02:00+02:00",
-  "current_task": "Sirou supporting batch 6 is complete: the universe-age and Adam/language-origin investigations are published and live-verified; no article from batch 7 has been started.",
-  "next_action": "Seek independent astronomy, tafsir, and linguistics review and measure query fit in Search Console before authorizing the next maximum-two-article batch.",
+  "updated_at": "2026-09-28T06:36:00+02:00",
+  "current_task": "Sirou supporting batch 7 is complete: the injustice/state-collapse and DNA/genetic-information investigations are published and live-verified; no article from batch 8 has been started.",
+  "next_action": "Seek independent history, Islamic-studies, and molecular-biology review and measure query fit in Search Console before authorizing the next maximum-two-article batch.",
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
     "one_content_pull_request_at_a_time": true,
@@ -17,25 +17,25 @@
     "reason": "Keep the work recoverable and avoid oversized review, test, or deployment runs."
   },
   "latest_supporting_batch": {
-    "batch_number": 6,
+    "batch_number": 7,
     "status": "merged_deployed_verified",
-    "branch": "content/sirou-supporting-batch-6",
-    "base_sha": "3d9bf651559f0fb6bb7e248d1fba4eda1cba805d",
-    "scope": "Publish exactly two Arabic supporting investigations tied to Sirou pages 22–25 and 32–43, while separating manuscript inspiration from evidence about cosmic age, cosmological models, Adam’s names, and language origins.",
+    "branch": "content/sirou-supporting-batch-7",
+    "base_sha": "702477514dc6ba9abc9460254896c16cb124b9e0",
+    "scope": "Publish exactly two Arabic supporting investigations tied to Sirou pages 74–79, 96–104, and 123–129, while separating Quranic moral judgment from historical causation and genetic code from computer-code and metaphysical analogies.",
     "articles": [
-      "https://ahmedalhafiz.com/articles/age-of-universe-13-8-billion-years/",
-      "https://ahmedalhafiz.com/articles/adam-all-languages-origin-language/"
+      "https://ahmedalhafiz.com/articles/injustice-fall-of-states-quran-history/",
+      "https://ahmedalhafiz.com/articles/dna-code-genetic-information/"
     ],
-    "roadmap_progress": "14 of 24 bounded supporting briefs completed; the next batch has not started.",
-    "pull_request": 96,
-    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/96",
-    "merge_sha": "a0322e885d7c603ba25af3c1dbf34938b72740c2",
-    "inventory": "78 public pages; 78 canonicals; 78 sitemap URLs; 30 Arabic research items; 25 supporting briefs.",
+    "roadmap_progress": "16 of 24 bounded supporting briefs completed; the next batch has not started.",
+    "pull_request": 98,
+    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/98",
+    "merge_sha": "e2b2a705e751b888b0823981a05685802bcbe49d",
+    "inventory": "80 public pages; 80 canonicals; 80 sitemap URLs; 32 Arabic research items; 27 supporting briefs.",
     "local_checks": "Editorial, citation, research architecture, discovery, Arabic UI, UX, site integrity, entity integrity, public presentation, visibility, JSON/XML parsing, visible-to-structured FAQ synchronization, IndexNow dry-run, and git diff check passed; site audit reported zero errors and zero warnings.",
-    "required_checks": "Governance, site integrity, citation metadata, content research architecture, and Visual review passed on PR #96; Visual review run 36375693256 succeeded.",
-    "deployment": "The merged main revision rendered both new canonical pages on ahmedalhafiz.com after PR #96 completed.",
-    "live_verification": "Both canonical article URLs rendered their expected H1, full Arabic RTL content, direct book-page markers, tables, FAQs, sources, and internal navigation on the canonical domain.",
-    "evidence_limit": "Publication and live rendering are verified; independent astronomy, tafsir, and linguistics review, indexing, ranking, traffic, and external citation gains are not claimed."
+    "required_checks": "Governance, site integrity, citation metadata, content research architecture, and Visual review passed on PR #98; Visual review run 36378143755 succeeded.",
+    "deployment": "The merged main revision rendered both new canonical pages on ahmedalhafiz.com after PR #98 completed.",
+    "live_verification": "Both canonical article URLs rendered their expected H1 and canonical URL, full Arabic RTL content, direct book-page markers, tables, sources, and internal navigation on the canonical domain.",
+    "evidence_limit": "Publication and live rendering are verified; independent history, Islamic-studies, and molecular-biology review, indexing, ranking, traffic, and external citation gains are not claimed."
   },
   "latest_ten_article_release": {
     "branch": "content/sirou-ten-article-audit-rebuild",
