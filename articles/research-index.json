@@ -7,9 +7,33 @@
     "profile": "https://ahmedalhafiz.com/about/"
   },
   "review_register": "https://ahmedalhafiz.com/research-status/",
-  "generated": "2026-09-27",
+  "generated": "2026-09-28",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
+    {
+      "slug": "universe-expansion-wa-inna-lamusiun",
+      "title": "هل الكون يتمدد؟ معنى ﴿وإنا لموسعون﴾ بين التفسير وعلم الفلك",
+      "summary": "تحقيق يشرح أدلة تمدد الكون ثم يقارنها بدلالة وإنا لموسعون من غير تحويل الآية إلى معادلة فلكية أو حصر تفسيرها في قراءة حديثة.",
+      "type": "تحقيق تفسيري فلكي موثق",
+      "version": "1.0",
+      "languages": ["ar"],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/",
+      "primary_sources": ["https://quran.ksu.edu.sa/tafseer/tabary/sura51-aya47.html", "https://www.pnas.org/doi/10.1073/pnas.15.3.168", "https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-cosmological-redshift/", "https://www.esa.int/Science_Exploration/Space_Science/Planck/Planck_and_the_cosmic_microwave_background", "https://doi.org/10.1051/0004-6361/201833910"]
+    },
+    {
+      "slug": "madain-salih-thamud-nabataean-tombs",
+      "title": "هل مدائن صالح هي ديار ثمود؟ ماذا تقول الآثار فعلًا؟",
+      "summary": "تحقيق يفرق بين صلة الحِجر بقوم ثمود في المصادر الإسلامية وبين التاريخ النبطي لمعظم المدافن والواجهات الباقية.",
+      "type": "تحقيق أثري تفسيري موثق",
+      "version": "1.0",
+      "languages": ["ar"],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/madain-salih-thamud-nabataean-tombs/",
+      "primary_sources": ["https://quran.com/15/80-84", "https://dorar.net/hadith/sharh/3156", "https://whc.unesco.org/en/list/1293/", "https://archeologie.culture.gouv.fr/en/hegra", "https://krc.orient.ox.ac.uk/ociana/index.php/13-scripts/42-thamudic.html"]
+    },
     {
       "slug": "how-khufu-pyramid-built-merer-diary",
       "title": "كيف بُني هرم خوفو؟ ما الذي تكشفه يوميات مرر فعلًا؟",
