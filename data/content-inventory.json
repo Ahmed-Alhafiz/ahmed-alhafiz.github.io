@@ -29,6 +29,40 @@
   },
   "items": [
     {
+      "slug": "injustice-fall-of-states-quran-history",
+      "url": "https://ahmedalhafiz.com/articles/injustice-fall-of-states-quran-history/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "الظلم وسقوط الدول وأسباب انهيار الدول",
+      "does_not_target": [
+        "تحديد موعد غيبي لسقوط دولة بعينها",
+        "اختزال كل انهيار تاريخي في سبب واحد",
+        "استخدام الكتاب بوصفه دليلًا"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "A distinct Quran-and-history query that expands the justice and collapse chapter into observable institutional mechanisms without promising immediate downfall."
+    },
+    {
+      "slug": "dna-code-genetic-information",
+      "url": "https://ahmedalhafiz.com/articles/dna-code-genetic-information/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل DNA شيفرة ومعنى المعلومات الوراثية وكيف تعمل الخلية",
+      "does_not_target": [
+        "مساواة الجينوم حرفيًا ببرنامج حاسوبي",
+        "ادعاء أن كل DNA يشفر بروتينًا",
+        "استخدام لفظ المعلومات برهانًا ميتافيزيقيًا مستقلًا"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "A distinct molecular-biology query that directly expands the book’s DNA, RNA, ribosome, water, and energy discussion while policing the code metaphor."
+    },
+    {
       "slug": "age-of-universe-13-8-billion-years",
       "url": "https://ahmedalhafiz.com/articles/age-of-universe-13-8-billion-years/",
       "class": "supporting_brief",
@@ -498,7 +532,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 25,
+    "supporting_brief": 27,
     "literary_guide": 1,
     "hold_for_review": 0
   }
