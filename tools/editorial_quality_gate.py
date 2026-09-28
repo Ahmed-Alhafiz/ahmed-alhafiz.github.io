@@ -10,6 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'articles/quran-day-thousand-fifty-thousand-years-relativity/index.html':dict(words=1700,sources=6,book='books/sirou-fi-alard/index.html',route='/articles/quran-day-thousand-fifty-thousand-years-relativity/',medical=False,extended=False),
  'articles/injustice-fall-of-states-quran-history/index.html':dict(words=1800,sources=10,book='books/sirou-fi-alard/index.html',route='/articles/injustice-fall-of-states-quran-history/',medical=False,extended=False),
  'articles/dna-code-genetic-information/index.html':dict(words=1800,sources=10,book='books/sirou-fi-alard/index.html',route='/articles/dna-code-genetic-information/',medical=False,extended=False),
  'articles/age-of-universe-13-8-billion-years/index.html':dict(words=1800,sources=9,book='books/sirou-fi-alard/index.html',route='/articles/age-of-universe-13-8-billion-years/',medical=False,extended=False),
