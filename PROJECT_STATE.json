@@ -18,15 +18,24 @@
   },
   "latest_supporting_batch": {
     "batch_number": 9,
-    "status": "publication_candidate_author_approved",
+    "status": "merged_deployed_verified",
     "branch": "content/sirou-time-verses-batch-9",
     "base_sha": "2cc7c32f30211fdd0e1ab50c2f06a8051dc40b6e",
-    "scope": "One approved Arabic investigation on the thousand and fifty-thousand year verses, book pages 28–35, with direct tafsir and clock evidence and synchronized discovery.",
+    "scope": "Publish one author-approved Arabic investigation on thousand and fifty-thousand year verses, book pages 28–35.",
     "articles": [
       "https://ahmedalhafiz.com/articles/quran-day-thousand-fifty-thousand-years-relativity/"
     ],
-    "roadmap_progress": "Recount against merged batch 8 before closing; candidate one additional distinct brief.",
-    "evidence_limit": "Author approved. Independent tafsir and physics review, live deployment, indexing, ranking and traffic unverified."
+    "roadmap_progress": "19 of 24 bounded supporting briefs completed after this one-article batch.",
+    "pull_request": 102,
+    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/102",
+    "merge_sha": "8b91763778a03d298f2766f7a16046b2873f5df1",
+    "correction_pull_request": 103,
+    "correction_merge_sha": "527bd29f5914a375c498152bc88a73d5badf19d2",
+    "inventory": "83 public pages; 83 canonicals; 83 sitemap URLs; 35 research/guide items; 30 supporting briefs.",
+    "required_checks": "PR policy, governance, site integrity, citation metadata, research architecture and visual review passed for PR #102 and #103.",
+    "deployment": "GitHub Pages deployment of corrected main revision succeeded.",
+    "live_verification": "Canonical article page rendered expected H1, direct book link, sources and both readable equations; no broken placeholder math.",
+    "evidence_limit": "Independent tafsir and physics review, indexing, ranking, traffic, and external citation gains are not claimed."
   },
   "latest_ten_article_release": {
     "branch": "content/sirou-ten-article-audit-rebuild",
