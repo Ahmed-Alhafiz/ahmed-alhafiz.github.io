@@ -2,8 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>أبحاث أحمد الحافظ</title>
   <id>https://ahmedalhafiz.com/</id>
-  <updated>2026-09-27T00:00:00+02:00</updated>
+  <updated>2026-09-28T00:00:00+02:00</updated>
   <link href="https://ahmedalhafiz.com/articles/feed.xml" rel="self" />
+  <entry>
+    <title>هل الكون يتمدد؟ معنى ﴿وإنا لموسعون﴾ بين التفسير وعلم الفلك</title>
+    <id>https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/</id>
+    <link href="https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/" />
+    <published>2026-09-28T00:00:00+02:00</published>
+    <updated>2026-09-28T00:00:00+02:00</updated>
+    <summary>تحقيق في أدلة تمدد الكون ودلالة وإنا لموسعون، مع فصل الرصد الفلكي عن التفسير وحدود دعوى الإعجاز العلمي.</summary>
+  </entry>
+  <entry>
+    <title>هل مدائن صالح هي ديار ثمود؟ ماذا تقول الآثار فعلًا؟</title>
+    <id>https://ahmedalhafiz.com/articles/madain-salih-thamud-nabataean-tombs/</id>
+    <link href="https://ahmedalhafiz.com/articles/madain-salih-thamud-nabataean-tombs/" />
+    <published>2026-09-28T00:00:00+02:00</published>
+    <updated>2026-09-28T00:00:00+02:00</updated>
+    <summary>تحقيق يفرق بين ارتباط الحِجر بثمود وبين التاريخ النبطي لمعظم المقابر والواجهات الصخرية الشهيرة الباقية اليوم.</summary>
+  </entry>
   <entry>
     <title>كيف بُني هرم خوفو؟ ما الذي تكشفه يوميات مرر فعلًا؟</title>
     <id>https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/</id>

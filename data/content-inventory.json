@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-09-27",
+  "generated": "2026-09-28",
   "site": "https://ahmedalhafiz.com/",
   "policy": {
     "primary_rule": "Do not publish a new URL merely to increase page count. Every indexed page must answer a distinct question, provide unique value, and disclose its evidence and review status.",
@@ -28,6 +28,28 @@
     "hold_for_review": "Retained while overlap, traffic, external links, and consolidation risk are measured."
   },
   "items": [
+    {
+      "slug": "universe-expansion-wa-inna-lamusiun",
+      "url": "https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": ["ar"],
+      "primary_intent": "هل الكون يتمدد وما معنى وإنا لموسعون في التفسير وعلم الفلك",
+      "does_not_target": ["إثبات الوحي بالعلم التجريبي", "استخراج قانون هابل من الآية", "حسم توتر هابل"],
+      "next_action": "seek_independent_tafsir_and_cosmology_review_and_measure_query_fit",
+      "reason": "A distinct search question connecting a specific book passage to primary cosmology sources while preserving the boundary between text, tafsir, observation, and inference."
+    },
+    {
+      "slug": "madain-salih-thamud-nabataean-tombs",
+      "url": "https://ahmedalhafiz.com/articles/madain-salih-thamud-nabataean-tombs/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": ["ar"],
+      "primary_intent": "هل مدائن صالح هي ديار ثمود وهل القصر الفريد من بيوتهم",
+      "does_not_target": ["نفي الصلة الدينية بين الحِجر وثمود", "نسبة كل أثر في الموقع إلى قوم واحد", "استخدام المخطوط بوصفه دليلًا"],
+      "next_action": "seek_independent_archaeology_and_tafsir_review_and_measure_query_fit",
+      "reason": "A distinct archaeology question that corrects a common attribution error while preserving the difference between the identity of a place and the date of its surviving monuments."
+    },
     {
       "slug": "how-khufu-pyramid-built-merer-diary",
       "url": "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/",
@@ -372,7 +394,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 19,
+    "supporting_brief": 21,
     "literary_guide": 1,
     "hold_for_review": 0
   }
