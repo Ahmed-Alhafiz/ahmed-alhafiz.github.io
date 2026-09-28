@@ -29,6 +29,40 @@
   },
   "items": [
     {
+      "slug": "age-of-universe-13-8-billion-years",
+      "url": "https://ahmedalhafiz.com/articles/age-of-universe-13-8-billion-years/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "كم عمر الكون وكيف عرف العلماء أنه 13.8 مليار سنة",
+      "does_not_target": [
+        "تحويل العمر إلى قياس مباشر بلا نموذج",
+        "القول إن توتر هابل أبطل الكون الحار المتمدد",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "A distinct cosmology query that expands the book’s discussion of WMAP, Planck, cosmic time, and the limits of models without competing with the expansion or Big Bang pillars."
+    },
+    {
+      "slug": "adam-all-languages-origin-language",
+      "url": "https://ahmedalhafiz.com/articles/adam-all-languages-origin-language/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل علم الله آدم جميع اللغات وما معنى وعلم آدم الأسماء كلها",
+      "does_not_target": [
+        "الجزم باسم لغة آدم بلا نص صحيح صريح",
+        "مساواة الأسماء بكل اللغات التاريخية",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "A distinct tafsir-and-language-origin query tied to the book’s treatment of names, concepts, and knowledge, while avoiding overlap with the AI-focused Teaching the Names pillar."
+    },
+    {
       "slug": "turing-test-ai-consciousness",
       "url": "https://ahmedalhafiz.com/articles/turing-test-ai-consciousness/",
       "class": "supporting_brief",
@@ -464,7 +498,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 23,
+    "supporting_brief": 25,
     "literary_guide": 1,
     "hold_for_review": 0
   }
