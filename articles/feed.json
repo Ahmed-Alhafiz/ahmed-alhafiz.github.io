@@ -6,6 +6,32 @@
   "language": "ar",
   "items": [
     {
+      "id": "https://ahmedalhafiz.com/articles/turing-test-ai-consciousness/",
+      "url": "https://ahmedalhafiz.com/articles/turing-test-ai-consciousness/",
+      "title": "هل اختبار تورنغ يثبت أن الذكاء الاصطناعي واعٍ؟",
+      "summary": "تحقيق يشرح ما يقيسه اختبار تورنغ، ولماذا لا يثبت الوعي أو الفهم أو النية، وكيف نقرأ نجاح النماذج اللغوية فيه بلا تهويل ولا إنكار.",
+      "content_text": "اختبار تورنغ يقيس القدرة على إنتاج محادثة مقنعة في شروط محددة؛ ولا يقيس مباشرة الخبرة الذاتية أو النية أو المسؤولية.",
+      "date_published": "2026-09-28T00:00:00+02:00",
+      "date_modified": "2026-09-28T00:00:00+02:00",
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "sirou-fi-alard"
+      ]
+    },
+    {
+      "id": "https://ahmedalhafiz.com/articles/river-civilizations-water-state/",
+      "url": "https://ahmedalhafiz.com/articles/river-civilizations-water-state/",
+      "title": "لماذا قامت الحضارات القديمة حول الأنهار؟ من الماء إلى الدولة",
+      "summary": "تحقيق يشرح كيف ساعد الماء والزراعة والفائض والنقل في نشوء المدن والدول، ولماذا لا يكفي النهر وحده لصنع حضارة.",
+      "content_text": "وفرت الأنهار الماء والتربة والنقل، لكن الفائض لا يصير حضارة بلا تخزين وتخصص وسجلات وقواعد وصيانة وتكيف مع الخطر.",
+      "date_published": "2026-09-28T00:00:00+02:00",
+      "date_modified": "2026-09-28T00:00:00+02:00",
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "sirou-fi-alard"
+      ]
+    },
+    {
       "id": "https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/",
       "url": "https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/",
       "title": "هل الكون يتمدد؟ معنى ﴿وإنا لموسعون﴾ بين التفسير وعلم الفلك",
@@ -13,7 +39,10 @@
       "content_text": "تمدد الكون حقيقة رصدية، أما قراءة وإنا لموسعون بوصفها إشارة إليه فوجه ممكن لا معادلة فلكية ولا المعنى التراثي الوحيد.",
       "date_published": "2026-09-28T00:00:00+02:00",
       "date_modified": "2026-09-28T00:00:00+02:00",
-      "tags": ["author_review_complete_external_review_pending", "sirou-fi-alard"]
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "sirou-fi-alard"
+      ]
     },
     {
       "id": "https://ahmedalhafiz.com/articles/madain-salih-thamud-nabataean-tombs/",
@@ -23,7 +52,10 @@
       "content_text": "المكان مرتبط بثمود في المصادر الإسلامية، لكن معظم الواجهات المزخرفة الباقية مدافن نبطية؛ وهو فرق يحفظ دقة النص والأثر معًا.",
       "date_published": "2026-09-28T00:00:00+02:00",
       "date_modified": "2026-09-28T00:00:00+02:00",
-      "tags": ["author_review_complete_external_review_pending", "sirou-fi-alard"]
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "sirou-fi-alard"
+      ]
     },
     {
       "id": "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/",
@@ -33,7 +65,10 @@
       "content_text": "توثق يوميات مرر جزءًا مباشرًا من سلسلة إمداد مشروع خوفو، لكنها ليست مخططًا كاملًا لطريقة بناء الهرم.",
       "date_published": "2026-09-27T00:00:00+02:00",
       "date_modified": "2026-09-27T00:00:00+02:00",
-      "tags": ["author_review_complete_external_review_pending", "sirou-fi-alard"]
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "sirou-fi-alard"
+      ]
     },
     {
       "id": "https://ahmedalhafiz.com/articles/green-tree-fire-photosynthesis/",
@@ -43,7 +78,10 @@
       "content_text": "البناء الضوئي يشرح كيف تختزن المادة النباتية طاقة، لكنه لا يحصر معنى الآية ولا يحولها إلى مصطلح علمي حديث.",
       "date_published": "2026-09-27T00:00:00+02:00",
       "date_modified": "2026-09-27T00:00:00+02:00",
-      "tags": ["author_review_complete_external_review_pending", "sirou-fi-alard"]
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "sirou-fi-alard"
+      ]
     },
     {
       "id": "https://ahmedalhafiz.com/articles/anzalna-iron-meteorites/",
@@ -53,7 +91,10 @@
       "content_text": "الأصل النجمي لذرات الحديد حقيقة، ووجود الحديد النيزكي حقيقة أخرى؛ لكنهما لا يحصران معنى الآية في سقوط النيازك.",
       "date_published": "2026-09-27T00:00:00+02:00",
       "date_modified": "2026-09-27T00:00:00+02:00",
-      "tags": ["author_review_complete_external_review_pending", "sirou-fi-alard"]
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "sirou-fi-alard"
+      ]
     },
     {
       "id": "https://ahmedalhafiz.com/articles/marib-dam-sayl-al-arim/",
@@ -63,7 +104,10 @@
       "content_text": "يثبت القرآن نعمة سبأ وإعراضها وسيل العرم، وتثبت الآثار نظام مأرب المائي وإصلاحاته؛ ولا تعيّن الآثار وحدها حادثًا واحدًا بوصفه السيل القرآني.",
       "date_published": "2026-09-27T00:00:00+02:00",
       "date_modified": "2026-09-27T00:00:00+02:00",
-      "tags": ["author_review_complete_external_review_pending", "sirou-fi-alard"]
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "sirou-fi-alard"
+      ]
     },
     {
       "id": "https://ahmedalhafiz.com/articles/quran-science-method-evidence/",

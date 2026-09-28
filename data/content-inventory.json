@@ -29,13 +29,53 @@
   },
   "items": [
     {
+      "slug": "turing-test-ai-consciousness",
+      "url": "https://ahmedalhafiz.com/articles/turing-test-ai-consciousness/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل اختبار تورنغ يثبت أن الذكاء الاصطناعي واعٍ وهل النموذج اللغوي يفهم",
+      "does_not_target": [
+        "إثبات وعي النماذج الحالية",
+        "نفي إمكان الوعي الاصطناعي مستقبلًا",
+        "اعتبار الطلاقة مسؤولية أخلاقية"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "A distinct AI-and-consciousness question tied to the book's discussion of Turing, language, intention, and human responsibility, with explicit separation between behavioural performance and subjective experience."
+    },
+    {
+      "slug": "river-civilizations-water-state",
+      "url": "https://ahmedalhafiz.com/articles/river-civilizations-water-state/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "لماذا قامت الحضارات القديمة حول الأنهار وكيف تحول الماء والفائض إلى مدينة ودولة",
+      "does_not_target": [
+        "اختزال نشوء الدولة في الري",
+        "القول إن النهر وحده يصنع الحضارة",
+        "رد انهيار الحضارات إلى سبب بيئي واحد"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "A distinct search question that expands the book's water-to-state chain using archaeological and hydrological evidence while rejecting river and hydraulic determinism."
+    },
+    {
       "slug": "universe-expansion-wa-inna-lamusiun",
       "url": "https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/",
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "primary_intent": "هل الكون يتمدد وما معنى وإنا لموسعون في التفسير وعلم الفلك",
-      "does_not_target": ["إثبات الوحي بالعلم التجريبي", "استخراج قانون هابل من الآية", "حسم توتر هابل"],
+      "does_not_target": [
+        "إثبات الوحي بالعلم التجريبي",
+        "استخراج قانون هابل من الآية",
+        "حسم توتر هابل"
+      ],
       "next_action": "seek_independent_tafsir_and_cosmology_review_and_measure_query_fit",
       "reason": "A distinct search question connecting a specific book passage to primary cosmology sources while preserving the boundary between text, tafsir, observation, and inference."
     },
@@ -44,9 +84,15 @@
       "url": "https://ahmedalhafiz.com/articles/madain-salih-thamud-nabataean-tombs/",
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "primary_intent": "هل مدائن صالح هي ديار ثمود وهل القصر الفريد من بيوتهم",
-      "does_not_target": ["نفي الصلة الدينية بين الحِجر وثمود", "نسبة كل أثر في الموقع إلى قوم واحد", "استخدام المخطوط بوصفه دليلًا"],
+      "does_not_target": [
+        "نفي الصلة الدينية بين الحِجر وثمود",
+        "نسبة كل أثر في الموقع إلى قوم واحد",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
       "next_action": "seek_independent_archaeology_and_tafsir_review_and_measure_query_fit",
       "reason": "A distinct archaeology question that corrects a common attribution error while preserving the difference between the identity of a place and the date of its surviving monuments."
     },
@@ -55,9 +101,15 @@
       "url": "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/",
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "primary_intent": "كيف بني هرم خوفو وما الذي تثبته يوميات مرر وبرديات وادي الجرف",
-      "does_not_target": ["حسم شكل المنحدرات", "شرح رفع كل كتلة", "استخدام المخطوط بوصفه دليلًا"],
+      "does_not_target": [
+        "حسم شكل المنحدرات",
+        "شرح رفع كل كتلة",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
       "next_action": "seek_independent_egyptology_review_and_measure_query_fit",
       "reason": "A distinct archaeology question grounded in the official papyrus publication and bounded against claims the diary cannot establish."
     },
@@ -66,9 +118,15 @@
       "url": "https://ahmedalhafiz.com/articles/green-tree-fire-photosynthesis/",
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "primary_intent": "معنى من الشجر الأخضر نارًا وعلاقتها بالبناء الضوئي والطاقة",
-      "does_not_target": ["حصر الآية في البناء الضوئي", "تعيين الوقود الأحفوري معنى وحيدًا", "استخدام المخطوط بوصفه دليلًا"],
+      "does_not_target": [
+        "حصر الآية في البناء الضوئي",
+        "تعيين الوقود الأحفوري معنى وحيدًا",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
       "next_action": "seek_independent_tafsir_and_botany_review_and_measure_query_fit",
       "reason": "A distinct tafsir-and-science question with explicit boundaries between resurrection context, classical interpretation, and modern plant-energy explanations."
     },
@@ -77,9 +135,15 @@
       "url": "https://ahmedalhafiz.com/articles/anzalna-iron-meteorites/",
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "primary_intent": "معنى وأنزلنا الحديد وعلاقة الحديد بالنيازك والأصل النجمي",
-      "does_not_target": ["كل المادة والطاقة", "إثبات الإعجاز بمجرد التشابه", "استخدام المخطوط بوصفه دليلًا"],
+      "does_not_target": [
+        "كل المادة والطاقة",
+        "إثبات الإعجاز بمجرد التشابه",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
       "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "A distinct interpretation-and-science question with primary tafsir, astronomy, geoscience, and archaeometallurgy sources."
     },
@@ -88,9 +152,15 @@
       "url": "https://ahmedalhafiz.com/articles/marib-dam-sayl-al-arim/",
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "primary_intent": "سد مأرب وسيل العرم بين القرآن والتفسير والآثار",
-      "does_not_target": ["تاريخ الحضارات كله", "إثبات السببية الغيبية بالحجر", "استخدام المخطوط بوصفه دليلًا"],
+      "does_not_target": [
+        "تاريخ الحضارات كله",
+        "إثبات السببية الغيبية بالحجر",
+        "استخدام المخطوط بوصفه دليلًا"
+      ],
       "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "A distinct Quranic-archaeological question with explicit boundaries between revelation, tafsir, inscriptions, and material evidence."
     },
@@ -394,7 +464,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 21,
+    "supporting_brief": 23,
     "literary_guide": 1,
     "hold_for_review": 0
   }

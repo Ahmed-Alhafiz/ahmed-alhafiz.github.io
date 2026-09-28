@@ -11,16 +11,64 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "turing-test-ai-consciousness",
+      "title": "هل اختبار تورنغ يثبت أن الذكاء الاصطناعي واعٍ؟",
+      "summary": "تحقيق يشرح ما يقيسه اختبار تورنغ، ولماذا لا يثبت الوعي أو الفهم أو النية، وكيف نقرأ نجاح النماذج اللغوية فيه بلا تهويل ولا إنكار.",
+      "type": "تحقيق في الذكاء الاصطناعي وفلسفة العقل",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/turing-test-ai-consciousness/",
+      "primary_sources": [
+        "https://academic.oup.com/mind/article/LIX/236/433/986238",
+        "https://arxiv.org/abs/2503.23674",
+        "https://arxiv.org/abs/2308.08708",
+        "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/minds-brains-and-programs/DC644B47A4299C637C89772FACC2706A",
+        "https://arxiv.org/abs/1706.03762"
+      ]
+    },
+    {
+      "slug": "river-civilizations-water-state",
+      "title": "لماذا قامت الحضارات القديمة حول الأنهار؟ من الماء إلى الدولة",
+      "summary": "تحقيق يشرح كيف ساعد الماء والزراعة والفائض والنقل في نشوء المدن والدول، ولماذا لا يكفي النهر وحده لصنع حضارة.",
+      "type": "تحقيق أثري تاريخي في نشوء الحضارة",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/river-civilizations-water-state/",
+      "primary_sources": [
+        "https://www.nature.com/articles/s41467-017-01643-9",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC2867764/",
+        "https://wires.onlinelibrary.wiley.com/doi/10.1002/wat2.1230",
+        "https://refubium.fu-berlin.de/handle/fub188/23835",
+        "https://www.fao.org/4/t0234e/t0234e03.htm"
+      ]
+    },
+    {
       "slug": "universe-expansion-wa-inna-lamusiun",
       "title": "هل الكون يتمدد؟ معنى ﴿وإنا لموسعون﴾ بين التفسير وعلم الفلك",
       "summary": "تحقيق يشرح أدلة تمدد الكون ثم يقارنها بدلالة وإنا لموسعون من غير تحويل الآية إلى معادلة فلكية أو حصر تفسيرها في قراءة حديثة.",
       "type": "تحقيق تفسيري فلكي موثق",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/",
-      "primary_sources": ["https://quran.ksu.edu.sa/tafseer/tabary/sura51-aya47.html", "https://www.pnas.org/doi/10.1073/pnas.15.3.168", "https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-cosmological-redshift/", "https://www.esa.int/Science_Exploration/Space_Science/Planck/Planck_and_the_cosmic_microwave_background", "https://doi.org/10.1051/0004-6361/201833910"]
+      "primary_sources": [
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura51-aya47.html",
+        "https://www.pnas.org/doi/10.1073/pnas.15.3.168",
+        "https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-cosmological-redshift/",
+        "https://www.esa.int/Science_Exploration/Space_Science/Planck/Planck_and_the_cosmic_microwave_background",
+        "https://doi.org/10.1051/0004-6361/201833910"
+      ]
     },
     {
       "slug": "madain-salih-thamud-nabataean-tombs",
@@ -28,11 +76,19 @@
       "summary": "تحقيق يفرق بين صلة الحِجر بقوم ثمود في المصادر الإسلامية وبين التاريخ النبطي لمعظم المدافن والواجهات الباقية.",
       "type": "تحقيق أثري تفسيري موثق",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/madain-salih-thamud-nabataean-tombs/",
-      "primary_sources": ["https://quran.com/15/80-84", "https://dorar.net/hadith/sharh/3156", "https://whc.unesco.org/en/list/1293/", "https://archeologie.culture.gouv.fr/en/hegra", "https://krc.orient.ox.ac.uk/ociana/index.php/13-scripts/42-thamudic.html"]
+      "primary_sources": [
+        "https://quran.com/15/80-84",
+        "https://dorar.net/hadith/sharh/3156",
+        "https://whc.unesco.org/en/list/1293/",
+        "https://archeologie.culture.gouv.fr/en/hegra",
+        "https://krc.orient.ox.ac.uk/ociana/index.php/13-scripts/42-thamudic.html"
+      ]
     },
     {
       "slug": "how-khufu-pyramid-built-merer-diary",
@@ -40,7 +96,9 @@
       "summary": "تحقيق في برديات وادي الجرف ولوجستيات نقل حجر طرة إلى آخت خوفو، مع فصل ما تثبته اليوميات عما لا تقوله عن رفع الكتل أو شكل المنحدرات.",
       "type": "تحقيق أثري تاريخي موثق",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/",
@@ -58,7 +116,9 @@
       "summary": "تحقيق يضع سياق الآية في الاستدلال على البعث إلى جوار التفسير الموروث والشرح العلمي لتخزين النبات طاقة الضوء وحدود المطابقة.",
       "type": "تحقيق تفسيري علمي موثق",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/green-tree-fire-photosynthesis/",
@@ -76,7 +136,9 @@
       "summary": "تحقيق يفصل بين معنى الإنزال في التفسير، والأصل النجمي لذرات الحديد، والحديد النيزكي، وتكوّن الأرض؛ من غير حصر معنى الآية في فرضية علمية واحدة.",
       "type": "تحقيق تفسيري علمي موثق",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/anzalna-iron-meteorites/",
@@ -95,7 +157,9 @@
       "summary": "تحقيق يضع قصة سبأ وسيل العرم إلى جوار آثار نظام مأرب المائي ونقوش إصلاحه، ويحدد ما يثبته كل نوع من الأدلة وما يبقى خارج قدرته.",
       "type": "تحقيق تفسيري أثري موثق",
       "version": "1.0",
-      "languages": ["ar"],
+      "languages": [
+        "ar"
+      ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/marib-dam-sayl-al-arim/",
