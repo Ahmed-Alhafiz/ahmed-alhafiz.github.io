@@ -114,7 +114,7 @@ TARGET_PAGES = (
     ("home-en-latest-research", "/en/", "#wave2-home-links", "start"),
     ("home-de-latest-research", "/de/", "#wave2-home-links", "start"),
     ("before-big-bang-table", "/articles/before-big-bang-science-limits/", ".article-body .table-scroll", "start"),
-    ("writing-history-justice", "/articles/writing-changed-human-history/", "#justice", "start"),
+    ("writing-history-justice", "/articles/writing-changed-human-history/", "#justice + p", "start"),
     ("fear-cascade-ar", "/articles/diagnostic-uncertainty-family-fear-coercive-authority/", "#cascade-figure", "start"),
     ("fear-parallel-ar", "/articles/diagnostic-uncertainty-family-fear-coercive-authority/", "#parallel-figure", "start"),
     ("fear-cascade-en", "/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/", "#cascade-figure", "start"),
