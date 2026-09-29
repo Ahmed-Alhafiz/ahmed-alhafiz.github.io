@@ -3,12 +3,23 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "c006e968b52340d83ae3b3a14c1bd4b59a96c277",
-  "head_sha_semantics": "Verified main content merge for author-approved Mesopotamian salinity investigation PR #107; documentation checkpoint may add a subsequent main commit.",
+  "head_sha": "5974a166ed75804535ca69e43bdfcc06fa13f561",
+  "head_sha_semantics": "Verified main content merge for author-approved two-article revision PR #110; documentation checkpoint may add a subsequent main commit.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-29T07:25:00+02:00",
-  "current_task": "Sirou salinity batch 11 published and live-verified; editorial audit and humanizing revisions for Sirou-only articles in progress.",
-  "next_action": "Finish full qualitative audit of 27 Arabic Sirou articles and three corresponding English pillar editions; prepare substantial targeted revisions and show Ahmed each changed article before adoption. Do not touch other-book articles.",
+  "updated_at": "2026-09-29T12:04:00+02:00",
+  "current_task": "Two author-approved Sirou revisions published and live-verified; next ratq/fatq article fully revised for author review, not published.",
+  "next_action": "Show Ahmed the complete revised ratq/fatq article before approval; if approved, replace only its existing URL in the next small content PR. Continue qualitative audit of remaining Sirou articles, leaving other-book articles untouched.",
+  "latest_approved_revision": {
+    "status": "merged_deployed_live_verified",
+    "pull_request": 110,
+    "merge_sha": "5974a166ed75804535ca69e43bdfcc06fa13f561",
+    "articles": [
+      "https://ahmedalhafiz.com/articles/before-big-bang-science-limits/",
+      "https://ahmedalhafiz.com/articles/writing-changed-human-history/"
+    ],
+    "verification": "Six required PR checks passed; both canonical pages opened live with approved H1, main text, sources and author-review boundary. No independent specialist review or traffic result claimed.",
+    "next_preview": "ratq-fatq-big-bang-review.md, complete article prepared for author review only; no site change authorized yet."
+  },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
     "one_content_pull_request_at_a_time": true,
