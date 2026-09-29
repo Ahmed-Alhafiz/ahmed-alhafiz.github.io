@@ -3,12 +3,12 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "e2b2a705e751b888b0823981a05685802bcbe49d",
-  "head_sha_semantics": "Verified main merge commit for PR #98, the two-article injustice/state-collapse and DNA/genetic-information batch; all required PR checks passed and both canonical pages were verified live.",
+  "head_sha": "90f28f7a0e145eee3438490480d683761485d2fc",
+  "head_sha_semantics": "Verified main content merge for author-approved Nile/Egypt investigation PR #105; documentation checkpoint may add a subsequent main commit.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-28T06:36:00+02:00",
-  "current_task": "Sirou supporting batch 7 is complete: the injustice/state-collapse and DNA/genetic-information investigations are published and live-verified; no article from batch 8 has been started.",
-  "next_action": "Seek independent history, Islamic-studies, and molecular-biology review and measure query fit in Search Console before authorizing the next maximum-two-article batch.",
+  "updated_at": "2026-09-29T06:02:29+02:00",
+  "current_task": "Sirou supporting batch 10 complete: author-approved Nile/Egypt investigation published and live-verified; no subsequent draft approved or published.",
+  "next_action": "Match remaining 4 of 24 distinct book-linked questions against existing site pages, draft the next deeply sourced article, and show it to Ahmed before approval or publication.",
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
     "one_content_pull_request_at_a_time": true,
@@ -17,25 +17,23 @@
     "reason": "Keep the work recoverable and avoid oversized review, test, or deployment runs."
   },
   "latest_supporting_batch": {
-    "batch_number": 9,
+    "batch_number": 10,
     "status": "merged_deployed_verified",
-    "branch": "content/sirou-time-verses-batch-9",
-    "base_sha": "2cc7c32f30211fdd0e1ab50c2f06a8051dc40b6e",
-    "scope": "Publish one author-approved Arabic investigation on thousand and fifty-thousand year verses, book pages 28–35.",
+    "branch": "content/sirou-nile-batch-10",
+    "base_sha": "6b46918ca8bb19a4821691760e2105ea866ad8c9",
+    "scope": "Publish one author-approved Arabic investigation on the Nile, ancient Egypt and Pharaoh, book pages 82–88.",
     "articles": [
-      "https://ahmedalhafiz.com/articles/quran-day-thousand-fifty-thousand-years-relativity/"
+      "https://ahmedalhafiz.com/articles/nile-ancient-egypt-flood-calendar-state/"
     ],
-    "roadmap_progress": "19 of 24 bounded supporting briefs completed after this one-article batch.",
-    "pull_request": 102,
-    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/102",
-    "merge_sha": "8b91763778a03d298f2766f7a16046b2873f5df1",
-    "correction_pull_request": 103,
-    "correction_merge_sha": "527bd29f5914a375c498152bc88a73d5badf19d2",
-    "inventory": "83 public pages; 83 canonicals; 83 sitemap URLs; 35 research/guide items; 30 supporting briefs.",
-    "required_checks": "PR policy, governance, site integrity, citation metadata, research architecture and visual review passed for PR #102 and #103.",
-    "deployment": "GitHub Pages deployment of corrected main revision succeeded.",
-    "live_verification": "Canonical article page rendered expected H1, direct book link, sources and both readable equations; no broken placeholder math.",
-    "evidence_limit": "Independent tafsir and physics review, indexing, ranking, traffic, and external citation gains are not claimed."
+    "roadmap_progress": "20 of 24 bounded supporting briefs completed after this one-article batch.",
+    "pull_request": 105,
+    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/105",
+    "merge_sha": "90f28f7a0e145eee3438490480d683761485d2fc",
+    "inventory": "84 public pages; 84 canonicals; 84 sitemap URLs; 36 research/guide items; 31 supporting briefs.",
+    "required_checks": "PR policy, governance, site integrity, citation metadata, research architecture and visual review passed; responsive snapshots explicitly include new article and sources.",
+    "deployment": "GitHub Pages workflow 36519558495 succeeded; visibility monitor rerun succeeded after deployment race.",
+    "live_verification": "Canonical article page rendered expected H1, approved body, source list and direct book link on custom domain.",
+    "evidence_limit": "Independent Egyptology/tafsir review, indexing, ranking, traffic and external citations not claimed."
   },
   "latest_ten_article_release": {
     "branch": "content/sirou-ten-article-audit-rebuild",
