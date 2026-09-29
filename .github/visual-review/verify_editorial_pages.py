@@ -27,6 +27,7 @@ VIEWPORTS = {
 PAGES = (
     ("research-status-ar", "/research-status/", ".evidence-table"),
     ("research-status-en", "/en/research-status/", ".evidence-table"),
+    ("nile-egypt-ar", "/articles/nile-ancient-egypt-flood-calendar-state/", ".source-list"),
 )
 
 
@@ -156,7 +157,7 @@ def main() -> None:
     expected = len(VIEWPORTS) * len(PAGES) * 2
     if captures != expected:
         raise SystemExit(f"Expected {expected} captures, produced {captures}")
-    print(f"Editorial-page visual gate passed: {captures} screenshots across the research-status pages.")
+    print(f"Editorial-page visual gate passed: {captures} screenshots across editorial pages.")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-09-28",
+  "generated": "2026-09-29",
   "site": "https://ahmedalhafiz.com/",
   "policy": {
     "primary_rule": "Do not publish a new URL merely to increase page count. Every indexed page must answer a distinct question, provide unique value, and disclose its evidence and review status.",
@@ -28,6 +28,23 @@
     "hold_for_review": "Retained while overlap, traffic, external links, and consolidation risk are measured."
   },
   "items": [
+    {
+      "slug": "nile-ancient-egypt-flood-calendar-state",
+      "url": "https://ahmedalhafiz.com/articles/nile-ancient-egypt-flood-calendar-state/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "كيف صنع النيل حضارة مصر القديمة وما معنى افتخار فرعون بالأنهار في سورة الزخرف",
+      "does_not_target": [
+        "مقارنة جميع حضارات الأنهار",
+        "نظرية عامة عن الماء والدولة",
+        "هوية فرعون موسى التاريخية"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Distinct Nile-specific primary document and Quran-context investigation anchored to book pages 82–88."
+    },
     {
       "slug": "quran-day-thousand-fifty-thousand-years-relativity",
       "url": "https://ahmedalhafiz.com/articles/quran-day-thousand-fifty-thousand-years-relativity/",
@@ -583,7 +600,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 30,
+    "supporting_brief": 31,
     "literary_guide": 1,
     "hold_for_review": 0
   }
