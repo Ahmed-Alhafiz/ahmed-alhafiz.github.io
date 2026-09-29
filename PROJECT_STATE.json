@@ -3,12 +3,12 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "90f28f7a0e145eee3438490480d683761485d2fc",
-  "head_sha_semantics": "Verified main content merge for author-approved Nile/Egypt investigation PR #105; documentation checkpoint may add a subsequent main commit.",
+  "head_sha": "c006e968b52340d83ae3b3a14c1bd4b59a96c277",
+  "head_sha_semantics": "Verified main content merge for author-approved Mesopotamian salinity investigation PR #107; documentation checkpoint may add a subsequent main commit.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-29T06:02:29+02:00",
-  "current_task": "Sirou supporting batch 10 complete: author-approved Nile/Egypt investigation published and live-verified; no subsequent draft approved or published.",
-  "next_action": "Match remaining 4 of 24 distinct book-linked questions against existing site pages, draft the next deeply sourced article, and show it to Ahmed before approval or publication.",
+  "updated_at": "2026-09-29T07:25:00+02:00",
+  "current_task": "Sirou salinity batch 11 published and live-verified; editorial audit and humanizing revisions for Sirou-only articles in progress.",
+  "next_action": "Finish full qualitative audit of 27 Arabic Sirou articles and three corresponding English pillar editions; prepare substantial targeted revisions and show Ahmed each changed article before adoption. Do not touch other-book articles.",
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
     "one_content_pull_request_at_a_time": true,
@@ -17,23 +17,23 @@
     "reason": "Keep the work recoverable and avoid oversized review, test, or deployment runs."
   },
   "latest_supporting_batch": {
-    "batch_number": 10,
+    "batch_number": 11,
     "status": "merged_deployed_verified",
-    "branch": "content/sirou-nile-batch-10",
-    "base_sha": "6b46918ca8bb19a4821691760e2105ea866ad8c9",
-    "scope": "Publish one author-approved Arabic investigation on the Nile, ancient Egypt and Pharaoh, book pages 82–88.",
+    "branch": "feat/sirou-mesopotamia-salinity-batch-11",
+    "base_sha": "3ac41e792cf232ef7bd7572c8506960dcb7e66a1",
+    "scope": "Publish one author-approved Arabic investigation on Mesopotamian irrigation and soil salinity, book pages 89–91.",
     "articles": [
-      "https://ahmedalhafiz.com/articles/nile-ancient-egypt-flood-calendar-state/"
+      "https://ahmedalhafiz.com/articles/mesopotamia-irrigation-soil-salinity-collapse/"
     ],
-    "roadmap_progress": "20 of 24 bounded supporting briefs completed after this one-article batch.",
-    "pull_request": 105,
-    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/105",
-    "merge_sha": "90f28f7a0e145eee3438490480d683761485d2fc",
-    "inventory": "84 public pages; 84 canonicals; 84 sitemap URLs; 36 research/guide items; 31 supporting briefs.",
-    "required_checks": "PR policy, governance, site integrity, citation metadata, research architecture and visual review passed; responsive snapshots explicitly include new article and sources.",
-    "deployment": "GitHub Pages workflow 36519558495 succeeded; visibility monitor rerun succeeded after deployment race.",
-    "live_verification": "Canonical article page rendered expected H1, approved body, source list and direct book link on custom domain.",
-    "evidence_limit": "Independent Egyptology/tafsir review, indexing, ranking, traffic and external citations not claimed."
+    "roadmap_progress": "21 of 24 bounded supporting briefs completed after this one-article batch.",
+    "pull_request": 107,
+    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/107",
+    "merge_sha": "c006e968b52340d83ae3b3a14c1bd4b59a96c277",
+    "inventory": "85 public pages; 85 canonicals; 85 sitemap URLs; 37 research/guide items; 32 supporting briefs.",
+    "required_checks": "PR policy, governance, site integrity, citation metadata, research architecture and visual review passed after inventory count correction.",
+    "deployment": "Verified live on custom domain; GitHub Pages run ID was not captured in this checkpoint.",
+    "live_verification": "Canonical article rendered expected H1, body, ten numbered source items and book link on custom domain.",
+    "evidence_limit": "Independent archaeology/soil/tafsir review, indexing, ranking, traffic and external citations not claimed."
   },
   "latest_ten_article_release": {
     "branch": "content/sirou-ten-article-audit-rebuild",
