@@ -321,5 +321,11 @@
     "Reassess the historical Dataset and ProfilePage reports after confirmed recrawls and record only observed results."
   ],
   "local_only_items": [],
-  "notes": "PR #71 is live and technically verified at merge commit 5e13f017364929e4537b14d80c342506cbf7c9d0. No ranking, indexing, traffic, or AI-citation outcome is inferred from checks, deployment, submission, or validation acceptance."
+  "notes": "PR #71 is live and technically verified at merge commit 5e13f017364929e4537b14d80c342506cbf7c9d0. No ranking, indexing, traffic, or AI-citation outcome is inferred from checks, deployment, submission, or validation acceptance.",
+  "author_editorial_review_gate": {
+    "scope": "all articles associated with any of Ahmed Alhafiz works; current editing scope remains Sirou fi al-Ard only",
+    "before_showing_article": "Read the relevant manuscript passage and entire article; exhaust material improvements in evidence, religious/scientific depth, length, natural authorial voice, distinct search intent and direct book relevance; verify important source-to-claim links and remove internal drafting residue.",
+    "fixed_questions": "Is this the strongest defensible version now? Am I satisfied? Is a specific stronger alternative still available? Does it directly strengthen the book and answer a real related search question? Are religious and scientific depth sufficient for the subject?",
+    "decision": "Do not send an article while known substantive improvements remain. Present each complete article to Ahmed before adopting or publishing it; await his decision. Never promise ranking or absolute perfection."
+  }
 }
