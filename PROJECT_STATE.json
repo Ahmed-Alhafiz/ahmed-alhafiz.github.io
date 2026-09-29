@@ -3,22 +3,21 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "5974a166ed75804535ca69e43bdfcc06fa13f561",
-  "head_sha_semantics": "Verified main content merge for author-approved two-article revision PR #110; documentation checkpoint may add a subsequent main commit.",
+  "head_sha": "c4dd24b6fdebdbd907e8922f941679880fdb7470",
+  "head_sha_semantics": "Verified main content merge for author-approved ratq/fatq PR #112; documentation checkpoint may add a subsequent main commit.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-29T12:04:00+02:00",
-  "current_task": "Two author-approved Sirou revisions published and live-verified; next ratq/fatq article fully revised for author review, not published.",
-  "next_action": "Show Ahmed the complete revised ratq/fatq article before approval; if approved, replace only its existing URL in the next small content PR. Continue qualitative audit of remaining Sirou articles, leaving other-book articles untouched.",
+  "updated_at": "2026-09-29T18:49:28+02:00",
+  "current_task": "Author-approved ratq/fatq article published and live-verified; six-days creation article revised in full for author review only.",
+  "next_action": "Show Ahmed the complete revised six-days article; do not publish or change its site page before approval. Continue Sirou-only article quality audit in small batches.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
-    "pull_request": 110,
-    "merge_sha": "5974a166ed75804535ca69e43bdfcc06fa13f561",
+    "pull_request": 112,
+    "merge_sha": "c4dd24b6fdebdbd907e8922f941679880fdb7470",
     "articles": [
-      "https://ahmedalhafiz.com/articles/before-big-bang-science-limits/",
-      "https://ahmedalhafiz.com/articles/writing-changed-human-history/"
+      "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/"
     ],
-    "verification": "Six required PR checks passed; both canonical pages opened live with approved H1, main text, sources and author-review boundary. No independent specialist review or traffic result claimed.",
-    "next_preview": "ratq-fatq-big-bang-review.md, complete article prepared for author review only; no site change authorized yet."
+    "verification": "Five content/visual PR workflows passed; PR policy passed; canonical page opened live with approved H1, full argument, nine reference items, book links and 29 September source review. CI visual geometry passed including ratq on desktop/390/360; artifact images not manually inspected. No independent specialist review or traffic result claimed.",
+    "next_preview": "six-days-creation-review.md: full revised article grounded in book pages 25–35 and primary exegesis/astronomy sources, saved for Ahmed review only; no site change authorized yet."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
