@@ -7,9 +7,29 @@
     "profile": "https://ahmedalhafiz.com/about/"
   },
   "review_register": "https://ahmedalhafiz.com/research-status/",
-  "generated": "2026-09-28",
+  "generated": "2026-09-29",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
+    {
+      "slug": "nile-ancient-egypt-flood-calendar-state",
+      "title": "كيف صنع النيل حضارة مصر القديمة؟ من الفيضان والحساب إلى حجة فرعون بالأنهار",
+      "summary": "النيل والتقويم وبردية ريند ورسائل حقانخت: ماذا تثبت الآثار عن حضارة مصر؟ قراءة سياقية لافتخار فرعون بالأنهار وحدود الاستدلال.",
+      "type": "تحقيق تاريخي وقرآني في النيل وحضارة مصر",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/nile-ancient-egypt-flood-calendar-state/",
+      "primary_sources": [
+        "https://www.metmuseum.org/art/collection/search/545445",
+        "https://www.britishmuseum.org/collection/object/Y_EA10057",
+        "https://www.ucl.ac.uk/museums-static/digitalegypt/pdf/accountancy.pdf",
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura43-aya51.html",
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura43-aya54.html"
+      ]
+    },
     {
       "slug": "quran-day-thousand-fifty-thousand-years-relativity",
       "title": "يوم كألف سنة ويوم بخمسين ألف سنة: هل يتعارض القرآن؟ وهل يتحدث عن النسبية؟",

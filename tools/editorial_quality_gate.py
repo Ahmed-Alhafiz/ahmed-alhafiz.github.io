@@ -10,6 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'articles/nile-ancient-egypt-flood-calendar-state/index.html':dict(words=2200,sources=12,book='books/sirou-fi-alard/index.html',route='/articles/nile-ancient-egypt-flood-calendar-state/',medical=False,extended=False),
  'articles/quran-day-thousand-fifty-thousand-years-relativity/index.html':dict(words=1700,sources=6,book='books/sirou-fi-alard/index.html',route='/articles/quran-day-thousand-fifty-thousand-years-relativity/',medical=False,extended=False),
  'articles/injustice-fall-of-states-quran-history/index.html':dict(words=1800,sources=10,book='books/sirou-fi-alard/index.html',route='/articles/injustice-fall-of-states-quran-history/',medical=False,extended=False),
  'articles/dna-code-genetic-information/index.html':dict(words=1800,sources=10,book='books/sirou-fi-alard/index.html',route='/articles/dna-code-genetic-information/',medical=False,extended=False),
