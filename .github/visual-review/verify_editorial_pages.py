@@ -27,6 +27,7 @@ VIEWPORTS = {
 PAGES = (
     ("research-status-ar", "/research-status/", ".evidence-table"),
     ("research-status-en", "/en/research-status/", ".evidence-table"),
+    ("mesopotamia-salinity-ar", "/articles/mesopotamia-irrigation-soil-salinity-collapse/", ".source-list"),
     ("nile-egypt-ar", "/articles/nile-ancient-egypt-flood-calendar-state/", ".source-list"),
 )
 

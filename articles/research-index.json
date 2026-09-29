@@ -11,6 +11,28 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "mesopotamia-irrigation-soil-salinity-collapse",
+      "title": "هل أسقط الملح حضارة بلاد الرافدين؟ قصة الماء الذي أعطى المدن حياتها وهدد حقولها",
+      "summary": "ملوحة التربة في بلاد الرافدين حقيقة زراعية وتاريخية، لكن هل تكفي لتفسير سقوط حضارة؟ قراءة للألواح القديمة وآلية الري والخلاف بين الباحثين، في سياق آيات الحرث والعمران.",
+      "type": "تحقيق علمي وتاريخي وقرآني في ري بلاد الرافدين",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/mesopotamia-irrigation-soil-salinity-collapse/",
+      "primary_sources": [
+        "https://www.fao.org/4/t0234e/t0234e03.htm",
+        "https://www.cambridge.org/core/journals/iraq/article/new-insights-on-the-role-of-environmental-dynamics-shaping-southern-mesopotamia-from-the-preubaid-to-the-early-islamic-period/F7084E4BF1171D8B77021B286BFE300C",
+        "https://doi.org/10.1126/science.128.3334.1251",
+        "https://discovery.ucl.ac.uk/id/eprint/1412087/",
+        "https://doi.org/10.1002/gea.21548",
+        "https://quran.com/56/63-70",
+        "https://quran.com/ar/30%3A9/tafsirs/ar-tafsir-al-tabari"
+      ]
+    },
+    {
       "slug": "nile-ancient-egypt-flood-calendar-state",
       "title": "كيف صنع النيل حضارة مصر القديمة؟ من الفيضان والحساب إلى حجة فرعون بالأنهار",
       "summary": "النيل والتقويم وبردية ريند ورسائل حقانخت: ماذا تثبت الآثار عن حضارة مصر؟ قراءة سياقية لافتخار فرعون بالأنهار وحدود الاستدلال.",
