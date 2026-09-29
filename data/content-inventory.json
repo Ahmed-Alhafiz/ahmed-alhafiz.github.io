@@ -29,6 +29,23 @@
   },
   "items": [
     {
+      "slug": "mesopotamia-irrigation-soil-salinity-collapse",
+      "url": "https://ahmedalhafiz.com/articles/mesopotamia-irrigation-soil-salinity-collapse/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل أسقطت ملوحة التربة حضارة بلاد الرافدين وما الذي يثبته الدليل الأثري والعلمي",
+      "does_not_target": [
+        "مقارنة جميع حضارات الأنهار",
+        "نظرية عامة عن الماء والدولة",
+        "سبب واحد لسقوط جميع المدن"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Book pages 89–91 explicitly discuss irrigation, salinity and limits of a monocausal explanation."
+    },
+    {
       "slug": "nile-ancient-egypt-flood-calendar-state",
       "url": "https://ahmedalhafiz.com/articles/nile-ancient-egypt-flood-calendar-state/",
       "class": "supporting_brief",
@@ -600,7 +617,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 31,
+    "supporting_brief": 32,
     "literary_guide": 1,
     "hold_for_review": 0
   }
