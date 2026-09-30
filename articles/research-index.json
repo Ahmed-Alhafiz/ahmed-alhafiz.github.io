@@ -7,7 +7,7 @@
     "profile": "https://ahmedalhafiz.com/about/"
   },
   "review_register": "https://ahmedalhafiz.com/research-status/",
-  "generated": "2026-09-29",
+  "generated": "2026-09-30",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
@@ -433,9 +433,9 @@
     {
       "slug": "water-life-molecular-properties",
       "title": "لماذا الماء أساس الحياة؟ معنى وجعلنا من الماء كل شيء حي من الجزيء إلى الخلية",
-      "summary": "الماء وسط كيمياء الخلية وشريك في تكوّن الأغشية وطي البروتينات وعمل الأحماض النووية وتنظيم الحرارة. لكنه شرط للحياة المعروفة، لا تفسير كامل لها ولا برهانًا على وجودها بمجرد العثور عليه.",
+      "summary": "من تفسير ﴿وجعلنا من الماء كل شيء حي﴾ إلى قطبية الماء والأغشية والبروتينات وفرق البروتونات: لماذا تحتاج الحياة إلى الماء، ولماذا لا يكفي وحده لتفسير نشأتها؟",
       "type": "تقرير تفسيري موثق",
-      "version": "2.0",
+      "version": "2.1",
       "languages": [
         "ar"
       ],
@@ -444,12 +444,23 @@
       "url": "https://ahmedalhafiz.com/articles/water-life-molecular-properties/",
       "primary_sources": [
         "https://quran.com/21/30",
-        "https://quran.ksu.edu.sa/tafseer/tabary/sura21-aya30.html",
-        "https://quran.ksu.edu.sa/tafseer/qortobi/sura21-aya30.html",
+        "https://quran.com/24/45",
+        "https://quran.com/27/88",
+        "https://tafsir.app/tabari/21/30",
+        "https://tafsir.app/tabari/24/45",
+        "https://tafsir.app/tabari/27/88",
+        "https://tafsir.app/qurtubi/21/30",
+        "https://tafsir.app/qurtubi/24/45",
         "https://doi.org/10.1021/acs.chemrev.7b00259",
         "https://pmc.ncbi.nlm.nih.gov/articles/PMC5346440/",
         "https://doi.org/10.1021/acs.chemrev.5b00664",
+        "https://www.ncbi.nlm.nih.gov/books/NBK26871/",
+        "https://pubmed.ncbi.nlm.nih.gov/30410971/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK21063/",
         "https://science.nasa.gov/astrobiology/learning-resources/alp/water-so-important-for-life/",
+        "https://europa.nasa.gov/why-europa/ingredients-for-life/",
+        "https://science.nasa.gov/astrobiology/learning-resources/alp/how-did-life-first-emerge-on-earth/",
+        "https://pubmed.ncbi.nlm.nih.gov/39585974/",
         "https://pubmed.ncbi.nlm.nih.gov/33192606/"
       ]
     },
