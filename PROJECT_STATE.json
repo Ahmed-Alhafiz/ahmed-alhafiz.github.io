@@ -3,21 +3,21 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "c4dd24b6fdebdbd907e8922f941679880fdb7470",
-  "head_sha_semantics": "Verified main content merge for author-approved ratq/fatq PR #112; documentation checkpoint may add a subsequent main commit.",
+  "head_sha": "4c4a4413dd69bf1702ba6bf304210e58992f34a1",
+  "head_sha_semantics": "Verified main content merge for author-approved six-days PR #114; subsequent documentation checkpoint may add a new main SHA.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-29T18:49:28+02:00",
-  "current_task": "Author-approved ratq/fatq article published and live-verified; six-days creation article revised in full for author review only.",
-  "next_action": "Show Ahmed the complete revised six-days article; do not publish or change its site page before approval. Continue Sirou-only article quality audit in small batches.",
+  "updated_at": "2026-09-30T08:03:00+02:00",
+  "current_task": "Six-days creation article approved by Ahmed, merged, deployed and live-verified at its existing canonical URL.",
+  "next_action": "Review the Sirou-linked universe expansion and wa-inna-lamusiun article in full against book pages 21–25 and primary tafsir/astronomy sources; show Ahmed the complete improved version before any adoption or publication.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
-    "pull_request": 112,
-    "merge_sha": "c4dd24b6fdebdbd907e8922f941679880fdb7470",
+    "pull_request": 114,
+    "merge_sha": "4c4a4413dd69bf1702ba6bf304210e58992f34a1",
     "articles": [
-      "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/"
+      "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/"
     ],
-    "verification": "Five content/visual PR workflows passed; PR policy passed; canonical page opened live with approved H1, full argument, nine reference items, book links and 29 September source review. CI visual geometry passed including ratq on desktop/390/360; artifact images not manually inspected. No independent specialist review or traffic result claimed.",
-    "next_preview": "six-days-creation-review.md: full revised article grounded in book pages 25–35 and primary exegesis/astronomy sources, saved for Ahmed review only; no site change authorized yet."
+    "verification": "Local site/discovery/editorial/Arabic/UX checks passed; five PR workflows including responsive 1440/390/360 passed; PR policy passed; Pages deployment and post-merge checks succeeded; canonical page opened live with approved H1, body, nine reference groups, book link and 30 September source review. Artifact images not manually inspected; specialist review, indexing and traffic effect not claimed.",
+    "next_preview": "Universe expansion and wa-inna-lamusiun: read full article and book pages 21–25, verify primary sources, then prepare complete author preview outside site before approval."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
