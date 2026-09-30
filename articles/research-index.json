@@ -11,6 +11,36 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "ai-soul-consciousness-understanding-taklif",
+      "title": "هل للذكاء الاصطناعي روح أو تكليف؟ الفرق بين الذكاء والفهم والوعي والمسؤولية",
+      "summary": "ما الفرق بين الذكاء والفهم والوعي والروح والتكليف؟ تفسير الأمانة والعدل وحدود أبحاث وعي الآلة واختبار أخطائها، من كتاب قل سيروا في الأرض ص 49–54.",
+      "type": "قراءة تفسيرية وعلمية في الذكاء والفهم والوعي والتكليف",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/ai-soul-consciousness-understanding-taklif/",
+      "primary_sources": [
+        "https://quran.com/ar/al-ahzab/72",
+        "https://quran.com/ar/an-nisa/58",
+        "https://quran.com/ar/al-baqarah/286",
+        "https://quran.com/ar/al-isra/85",
+        "https://quran.com/ar/al-isra/36",
+        "https://quran.com/ar/fatir/28",
+        "https://tafsir.app/tabari/33/72",
+        "https://tafsir.app/tabari/4/58",
+        "https://tafsir.app/tabari/2/286",
+        "https://tafsir.app/tabari/17/85",
+        "https://tafsir.app/tabari/17/36",
+        "https://tafsir.app/tabari/35/28",
+        "https://arxiv.org/abs/2308.08708",
+        "https://airc.nist.gov/airmf-resources/playbook/govern/",
+        "https://airc.nist.gov/airmf-resources/playbook/measure/"
+      ]
+    },
+    {
       "slug": "difference-light-nur-quran-sun-moon",
       "title": "ما الفرق بين الضوء والنور في القرآن؟ من ضياء الشمس إلى هداية الإنسان",
       "summary": "قراءة في ضياء الشمس ونور القمر ومنازله: ماذا يقول التفسير، وكيف يشرح العلم انعكاس ضوء القمر وأطواره، ولماذا لا تُختزل آية النور في الفوتونات؟ من كتاب سيروا في الأرض، ص 140–143.",

@@ -29,6 +29,23 @@
   },
   "items": [
     {
+      "slug": "ai-soul-consciousness-understanding-taklif",
+      "url": "https://ahmedalhafiz.com/articles/ai-soul-consciousness-understanding-taklif/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل للذكاء الاصطناعي روح أو تكليف وما الفرق بين الذكاء والفهم والوعي والمسؤولية",
+      "does_not_target": [
+        "اختبار تورنغ وحده",
+        "آليات التمثيل الداخلي وحدها",
+        "علم الأعصاب والدماغ وحدهما"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Distinct M6 book pages 49–54 question; exegesis, AI evaluation and human accountability separated from prior technical and neuroscience reports."
+    },
+    {
       "slug": "difference-light-nur-quran-sun-moon",
       "url": "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/",
       "class": "supporting_brief",
@@ -651,7 +668,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 34,
+    "supporting_brief": 35,
     "literary_guide": 1,
     "hold_for_review": 0
   }
