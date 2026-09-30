@@ -11,14 +11,14 @@
   "next_action": "Prioritize ع6 light/nur after checking book pages 139–144 and overlap; read source material and present complete next article for approval before publication. M6 remains to reconcile.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
-    "pull_request": 118,
-    "merge_sha": "aa1f46a5b3e56765acac9bfc1891cc2ee07a9a02",
+    "pull_request": 120,
+    "merge_sha": "9c9563aa4cde959f68668e9c69fb0bd48dcbbb90",
     "articles": [
-      "https://ahmedalhafiz.com/articles/water-life-molecular-properties/"
+      "https://ahmedalhafiz.com/articles/how-concepts-form-adam-names-scientific-models/"
     ],
-    "verification": "Local site audit 85 pages/canonicals/sitemap URLs, zero errors and warnings; editorial gate 3196 visible words; citation, research architecture, discovery, public presentation, UX, Arabic UI, entity, dossier and governance checks passed. Five PR workflows including responsive visual review passed. Live canonical page showed approved H1, book pages 123–130, six FAQ, fifteen source groups, updated date and corrected Hibshman/Clegg/Goldstein attribution. Independent specialist review, indexing and traffic effect not claimed.",
-    "inventory": "85 public HTML pages; 36 articles plus one literary guide in Arabic research/guide inventory; 27 items directly tied to Sirou; 8 English and 4 German editions.",
-    "roadmap_progress": "21/24 original supporting-topic map covered as previously tracked; M3, M6 and ع6 need editorial completion or reconciliation with existing pages; no new article begun."
+    "verification": "Local integrity/discovery/editorial/visibility/Arabic/UX/content checks passed; five PR workflows including responsive visual review passed; canonical page opened live with H1, full text, seven FAQ, fourteen reference groups and reciprocal book link. Artifact screenshots not manually reviewed; no specialist review or indexing/traffic claim.",
+    "inventory": "86 public HTML pages; 37 articles plus one literary guide in Arabic research/guide inventory; 28 directly tied to Sirou; 8 English and 4 German editions.",
+    "roadmap_progress": "22/24 original supporting-topic map covered; M6 and ع6 remain to complete or reconcile."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
