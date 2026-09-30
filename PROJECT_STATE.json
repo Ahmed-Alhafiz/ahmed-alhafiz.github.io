@@ -3,12 +3,12 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "aa1f46a5b3e56765acac9bfc1891cc2ee07a9a02",
-  "head_sha_semantics": "Verified main content merge for author-approved water and life revision PR #118; subsequent documentation checkpoint may add a new main SHA.",
-  "status": "approved_article_publication_in_progress",
-  "updated_at": "2026-09-30T12:22:00+00:00",
-  "current_task": "Publish author-approved concepts/models article tied to Sirou book pages 39–43, verify CI and live release.",
-  "next_action": "After verified release, reconcile M6 and ع6 against book and existing coverage; present complete next article for author approval before publishing.",
+  "head_sha": "9c9563aa4cde959f68668e9c69fb0bd48dcbbb90",
+  "head_sha_semantics": "Verified main merge for author-approved concepts and models article PR #120; subsequent documentation checkpoint may add a new main SHA.",
+  "status": "deployed_monitoring",
+  "updated_at": "2026-09-30T12:49:00+00:00",
+  "current_task": "Author-approved concepts/models article merged and live-verified. Prepare next distinct Sirou article for complete author preview.",
+  "next_action": "Prioritize ع6 light/nur after checking book pages 139–144 and overlap; read source material and present complete next article for approval before publication. M6 remains to reconcile.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
     "pull_request": 118,
@@ -340,7 +340,7 @@
     "decision": "Do not send an article while known substantive improvements remain. Present each complete article to Ahmed before adopting or publishing it; await his decision. Never promise ranking or absolute perfection."
   },
   "current_approved_article": {
-    "status": "approved_publication_in_progress",
+    "status": "merged_deployed_live_verified",
     "slug": "how-concepts-form-adam-names-scientific-models",
     "url": "https://ahmedalhafiz.com/articles/how-concepts-form-adam-names-scientific-models/",
     "book_pages": "39–43",
@@ -348,6 +348,9 @@
     "faq": 7,
     "reference_groups": 14,
     "expected_inventory": "86 public HTML pages; 38 Arabic research/guide items; 28 Sirou-linked; roadmap 22/24 after successful publication",
-    "external_review": "not_completed"
+    "external_review": "not_completed",
+    "pull_request": 120,
+    "merge_sha": "9c9563aa4cde959f68668e9c69fb0bd48dcbbb90",
+    "verification": "Local integrity/discovery/editorial/visibility/Arabic/UX/content checks passed; five PR workflows including responsive visual review passed; canonical page opened live with H1, full text, seven FAQ, fourteen reference groups and reciprocal book link. Artifact screenshots not manually reviewed; no specialist review or indexing/traffic claim."
   }
 }
