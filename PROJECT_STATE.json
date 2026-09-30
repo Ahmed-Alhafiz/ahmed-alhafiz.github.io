@@ -3,22 +3,22 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "edce124430ff24b3d7eb45acd45ea50ea126af09",
-  "head_sha_semantics": "Verified main content merge for approved light/nur article PR #122; subsequent documentation checkpoint may add a new main SHA.",
+  "head_sha": "6d4c24a0eb3200a45fb6889e3be84664f11ce4b4",
+  "head_sha_semantics": "Verified main content merge for approved M6 article PR #124; subsequent documentation checkpoint may add a new main SHA.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-30T16:40:00+00:00",
-  "current_task": "Author-approved light/nur article merged and live-verified; research distinct M6 article for complete author preview.",
-  "next_action": "Read Sirou pages 51–54, audit overlap with teaching-names AI, Turing test and brain/consciousness pages, then present a distinct full M6 article for author approval before publication.",
+  "updated_at": "2026-09-30T18:10:00+00:00",
+  "current_task": "M6 article approved, published and live-verified; 24/24 Sirou supporting-topic roadmap complete.",
+  "next_action": "Audit links and thematic overlap across the completed Sirou cluster; correct concrete issues only, then measure search performance when enough Search Console data appears.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
-    "pull_request": 122,
-    "merge_sha": "edce124430ff24b3d7eb45acd45ea50ea126af09",
+    "pull_request": 124,
+    "merge_sha": "6d4c24a0eb3200a45fb6889e3be84664f11ce4b4",
     "articles": [
-      "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/"
+      "https://ahmedalhafiz.com/articles/ai-soul-consciousness-understanding-taklif/"
     ],
-    "verification": "Local site/discovery/editorial/visibility/Arabic/UX/citation/research checks passed; PR six checks passed including responsive visual review; Pages deployment succeeded; live canonical displayed full H1, approved text, seven FAQ, eight reference groups and book link. Visibility monitor initially raced deployment and read old 38-item index; rerun succeeded. Artifact screenshots not manually reviewed; no specialist review or indexing/traffic claim.",
-    "inventory": "87 public HTML pages; 38 articles plus one literary guide in Arabic research/guide inventory; 29 directly tied to Sirou; 8 English and 4 German editions.",
-    "roadmap_progress": "23/24 original supporting-topic map covered; M6 remains to complete or reconcile."
+    "verification": "Local site/discovery/editorial/visibility/Arabic/UX/citation/research checks passed; PR six checks passed including responsive visual review; Pages deployment succeeded; live canonical displayed approved H1, body, eight FAQ, references and book links. Screenshots not manually inspected; no specialist review or indexing/traffic claim.",
+    "inventory": "88 public HTML pages; 39 articles plus one literary guide in Arabic research/guide inventory; 30 directly tied to Sirou; 8 English and 4 German editions.",
+    "roadmap_progress": "24/24 original supporting-topic map covered; no planned article topics remain."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
@@ -341,16 +341,15 @@
   },
   "current_approved_article": {
     "status": "merged_deployed_live_verified",
-    "slug": "difference-light-nur-quran-sun-moon",
-    "url": "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/",
-    "book_pages": "140–143",
-    "words_visible": 3177,
-    "faq": 7,
-    "reference_groups": 8,
-    "expected_inventory": "87 public HTML pages; 39 Arabic research/guide items; 29 Sirou-linked; roadmap 23/24 after successful publication",
+    "slug": "ai-soul-consciousness-understanding-taklif",
+    "url": "https://ahmedalhafiz.com/articles/ai-soul-consciousness-understanding-taklif/",
+    "book_pages": "49–54",
+    "words_visible": 3521,
+    "faq": 8,
+    "reference_groups": 6,
     "external_review": "not_completed",
-    "pull_request": 122,
-    "merge_sha": "edce124430ff24b3d7eb45acd45ea50ea126af09",
-    "verification": "Local site/discovery/editorial/visibility/Arabic/UX/citation/research checks passed; PR six checks passed including responsive visual review; Pages deployment succeeded; live canonical displayed full H1, approved text, seven FAQ, eight reference groups and book link. Visibility monitor initially raced deployment and read old 38-item index; rerun succeeded. Artifact screenshots not manually reviewed; no specialist review or indexing/traffic claim."
+    "pull_request": 124,
+    "merge_sha": "6d4c24a0eb3200a45fb6889e3be84664f11ce4b4",
+    "verification": "Local and PR gates passed; Pages and live canonical verified. Search indexing and traffic not measured."
   }
 }
