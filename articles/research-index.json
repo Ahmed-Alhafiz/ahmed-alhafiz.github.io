@@ -239,10 +239,10 @@
     },
     {
       "slug": "universe-expansion-wa-inna-lamusiun",
-      "title": "هل الكون يتمدد؟ معنى ﴿وإنا لموسعون﴾ بين التفسير وعلم الفلك",
-      "summary": "تحقيق يشرح أدلة تمدد الكون ثم يقارنها بدلالة وإنا لموسعون من غير تحويل الآية إلى معادلة فلكية أو حصر تفسيرها في قراءة حديثة.",
+      "title": "هل الكون يتمدد؟ قراءة ﴿وإنا لموسعون﴾ في التفسير وعلم الفلك",
+      "summary": "يفصل التحقيق بين رصد تمدد الكون، ومعنى ﴿وإنا لموسعون﴾ في التفسير، ودعوى الإعجاز؛ ويربط ذلك بصفحات 21–25 من كتاب «قل سيروا في الأرض».",
       "type": "تحقيق تفسيري فلكي موثق",
-      "version": "1.0",
+      "version": "2.0",
       "languages": [
         "ar"
       ],
@@ -250,11 +250,22 @@
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/",
       "primary_sources": [
-        "https://quran.ksu.edu.sa/tafseer/tabary/sura51-aya47.html",
+        "https://quran.com/51/47",
+        "https://quran.com/51/48",
+        "https://quran.com/51/49",
+        "https://quran.com/51/50",
+        "https://tafsir.app/tabari/51/47",
+        "https://quran.ksu.edu.sa/tafseer/qortobi/sura51-aya47.html",
         "https://www.pnas.org/doi/10.1073/pnas.15.3.168",
         "https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-cosmological-redshift/",
         "https://www.esa.int/Science_Exploration/Space_Science/Planck/Planck_and_the_cosmic_microwave_background",
-        "https://doi.org/10.1051/0004-6361/201833910"
+        "https://doi.org/10.1051/0004-6361/201833910",
+        "https://science.nasa.gov/dark-energy/",
+        "https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-constant-and-tension/",
+        "https://www.greattafsirs.com/Tafsir_Library.aspx?AyahNo=47&LanguageID=1&MadhabNo=2&QuranAyat_Home=1&SoraNo=51&TafsirNo=14",
+        "https://www.esa.int/Science_Exploration/Space_Science/What_is_red_shift",
+        "https://ned.ipac.caltech.edu/level5/March08/Frieman/Frieman2.html",
+        "https://tafsir.app/tabari/29/20"
       ]
     },
     {

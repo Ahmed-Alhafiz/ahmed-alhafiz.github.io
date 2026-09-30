@@ -31,6 +31,7 @@ PAGES = (
     ("nile-egypt-ar", "/articles/nile-ancient-egypt-flood-calendar-state/", ".source-list"),
     ("ratq-fatq-ar", "/articles/ratq-fatq-big-bang/", ".table-scroll"),
     ("six-days-creation-ar", "/articles/six-days-creation-cosmic-time/", ".references"),
+    ("universe-expansion-ar", "/articles/universe-expansion-wa-inna-lamusiun/", ".table-scroll"),
 )
 
 
