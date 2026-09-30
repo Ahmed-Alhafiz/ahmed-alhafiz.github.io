@@ -3,22 +3,20 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "9c9563aa4cde959f68668e9c69fb0bd48dcbbb90",
-  "head_sha_semantics": "Verified main merge for author-approved concepts and models article PR #120; subsequent documentation checkpoint may add a new main SHA.",
-  "status": "deployed_monitoring",
-  "updated_at": "2026-09-30T12:49:00+00:00",
-  "current_task": "Author-approved concepts/models article merged and live-verified. Prepare next distinct Sirou article for complete author preview.",
-  "next_action": "Prioritize ع6 light/nur after checking book pages 139–144 and overlap; read source material and present complete next article for approval before publication. M6 remains to reconcile.",
+  "head_sha": "43e4a5288f4323728247d9c7263e9bc4c919f59a",
+  "head_sha_semantics": "Verified main documentation checkpoint before author-approved light/nur publication PR; subsequent merge will change main SHA.",
+  "status": "approved_article_publication_in_progress",
+  "updated_at": "2026-09-30T15:34:00+00:00",
+  "current_task": "Publish author-approved light and nur article tied to Sirou pages 140–143; verify CI and live release.",
+  "next_action": "After verified publication, reconcile M6 intelligence, understanding, consciousness, spirit and moral responsibility with existing pages and the book; present complete next article for author approval before publishing.",
   "latest_approved_revision": {
-    "status": "merged_deployed_live_verified",
-    "pull_request": 120,
-    "merge_sha": "9c9563aa4cde959f68668e9c69fb0bd48dcbbb90",
+    "status": "approved_publication_in_progress",
     "articles": [
-      "https://ahmedalhafiz.com/articles/how-concepts-form-adam-names-scientific-models/"
+      "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/"
     ],
-    "verification": "Local integrity/discovery/editorial/visibility/Arabic/UX/content checks passed; five PR workflows including responsive visual review passed; canonical page opened live with H1, full text, seven FAQ, fourteen reference groups and reciprocal book link. Artifact screenshots not manually reviewed; no specialist review or indexing/traffic claim.",
-    "inventory": "86 public HTML pages; 37 articles plus one literary guide in Arabic research/guide inventory; 28 directly tied to Sirou; 8 English and 4 German editions.",
-    "roadmap_progress": "22/24 original supporting-topic map covered; M6 and ع6 remain to complete or reconcile."
+    "verification": "Local site, editorial, discovery, visibility, citation and research architecture checks passed; PR CI and live verification pending. No specialist review or indexing/traffic claim.",
+    "inventory": "Expected 87 public HTML pages; 38 articles plus one literary guide in Arabic research/guide inventory; 29 directly tied to Sirou.",
+    "roadmap_progress": "23/24 original supporting topics expected after publication; M6 remains."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
@@ -340,17 +338,14 @@
     "decision": "Do not send an article while known substantive improvements remain. Present each complete article to Ahmed before adopting or publishing it; await his decision. Never promise ranking or absolute perfection."
   },
   "current_approved_article": {
-    "status": "merged_deployed_live_verified",
-    "slug": "how-concepts-form-adam-names-scientific-models",
-    "url": "https://ahmedalhafiz.com/articles/how-concepts-form-adam-names-scientific-models/",
-    "book_pages": "39–43",
-    "words_visible": 3093,
+    "status": "approved_publication_in_progress",
+    "slug": "difference-light-nur-quran-sun-moon",
+    "url": "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/",
+    "book_pages": "140–143",
+    "words_visible": 3177,
     "faq": 7,
-    "reference_groups": 14,
-    "expected_inventory": "86 public HTML pages; 38 Arabic research/guide items; 28 Sirou-linked; roadmap 22/24 after successful publication",
-    "external_review": "not_completed",
-    "pull_request": 120,
-    "merge_sha": "9c9563aa4cde959f68668e9c69fb0bd48dcbbb90",
-    "verification": "Local integrity/discovery/editorial/visibility/Arabic/UX/content checks passed; five PR workflows including responsive visual review passed; canonical page opened live with H1, full text, seven FAQ, fourteen reference groups and reciprocal book link. Artifact screenshots not manually reviewed; no specialist review or indexing/traffic claim."
+    "reference_groups": 8,
+    "expected_inventory": "87 public HTML pages; 39 Arabic research/guide items; 29 Sirou-linked; roadmap 23/24 after successful publication",
+    "external_review": "not_completed"
   }
 }
