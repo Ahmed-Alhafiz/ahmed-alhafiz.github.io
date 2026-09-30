@@ -11,6 +11,45 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "difference-light-nur-quran-sun-moon",
+      "title": "ما الفرق بين الضوء والنور في القرآن؟ من ضياء الشمس إلى هداية الإنسان",
+      "summary": "قراءة في ضياء الشمس ونور القمر ومنازله: ماذا يقول التفسير، وكيف يشرح العلم انعكاس ضوء القمر وأطواره، ولماذا لا تُختزل آية النور في الفوتونات؟ من كتاب سيروا في الأرض، ص 140–143.",
+      "type": "تحقيق تفسيري وعلمي في الضوء والنور ومنازل القمر",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/",
+      "primary_sources": [
+        "https://quran.com/10/5",
+        "https://quran.com/71/16",
+        "https://quran.com/25/61",
+        "https://quran.com/78/13",
+        "https://quran.com/36/39",
+        "https://quran.com/24/35",
+        "https://quran.com/42/52",
+        "https://tafsir.app/tabari/10/5",
+        "https://tafsir.app/tabari/25/61",
+        "https://tafsir.app/tabari/24/35",
+        "https://tafsir.app/ibn-aashoor/10/5",
+        "https://tafsir.app/ibn-aashoor/71/16",
+        "https://tafsir.app/ibn-aashoor/24/35",
+        "https://science.nasa.gov/moon/moonlight/",
+        "https://science.nasa.gov/moon/moon-phases/",
+        "https://science.nasa.gov/moon/top-moon-questions/",
+        "https://science.nasa.gov/sun/facts/",
+        "https://science.nasa.gov/ems/01_intro/",
+        "https://science.nasa.gov/ems/09_visiblelight/",
+        "https://science.nasa.gov/ems/03_behaviors/",
+        "https://science.nasa.gov/mission/webb/science-overview/science-explainers/spectroscopy-101-types-of-spectra-and-spectroscopy/",
+        "https://science.nasa.gov/mission/webb/science-overview/science-explainers/spectroscopy-101-how-absorption-and-emission-spectra-work/",
+        "https://www.energy.gov/cmei/systems/solar-photovoltaic-performance-and-efficiency-basics",
+        "https://data.nasa.gov/dataset/lro-dlre-5-global-cumulative-products-d137e"
+      ]
+    },
+    {
       "slug": "how-concepts-form-adam-names-scientific-models",
       "title": "كيف تتكوّن المفاهيم؟ من تعليم آدم الأسماء إلى النموذج العلمي",
       "summary": "كيف ينتقل الإنسان من تسمية الأشياء إلى بناء مفاهيم ونماذج قابلة للاختبار؟ قراءة في آية تعليم آدم وتفسيرها، وأبحاث تصنيف الأطفال، والجدول الدوري، وطيف النجوم، انطلاقًا من صفحات الكتاب 39–43.",

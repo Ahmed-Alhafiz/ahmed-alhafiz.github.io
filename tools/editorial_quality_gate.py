@@ -10,6 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'articles/difference-light-nur-quran-sun-moon/index.html':dict(words=2900,sources=15,book='books/sirou-fi-alard/index.html',route='/articles/difference-light-nur-quran-sun-moon/',medical=False,extended=False),
  'articles/how-concepts-form-adam-names-scientific-models/index.html':dict(words=2500,sources=12,book='books/sirou-fi-alard/index.html',route='/articles/how-concepts-form-adam-names-scientific-models/',medical=False,extended=False),
  'articles/mesopotamia-irrigation-soil-salinity-collapse/index.html':dict(words=2600,sources=10,book='books/sirou-fi-alard/index.html',route='/articles/mesopotamia-irrigation-soil-salinity-collapse/',medical=False,extended=False),
  'articles/nile-ancient-egypt-flood-calendar-state/index.html':dict(words=2200,sources=12,book='books/sirou-fi-alard/index.html',route='/articles/nile-ancient-egypt-flood-calendar-state/',medical=False,extended=False),

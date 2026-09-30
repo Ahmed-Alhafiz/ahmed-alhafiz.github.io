@@ -29,6 +29,23 @@
   },
   "items": [
     {
+      "slug": "difference-light-nur-quran-sun-moon",
+      "url": "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "ما الفرق بين الضوء والنور في القرآن من ضياء الشمس ونور القمر إلى الهداية",
+      "does_not_target": [
+        "دورة الطاقة الشمسية وحدها",
+        "الضوء الفيزيائي اسم إلهي مادي",
+        "كل نور في القرآن انعكاس"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Distinct ع6 book pages 140–143 question, with exegesis, lunar optics and contextual theology separated."
+    },
+    {
       "slug": "how-concepts-form-adam-names-scientific-models",
       "url": "https://ahmedalhafiz.com/articles/how-concepts-form-adam-names-scientific-models/",
       "class": "supporting_brief",
@@ -634,7 +651,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 33,
+    "supporting_brief": 34,
     "literary_guide": 1,
     "hold_for_review": 0
   }
