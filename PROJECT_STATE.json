@@ -3,20 +3,22 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "43e4a5288f4323728247d9c7263e9bc4c919f59a",
-  "head_sha_semantics": "Verified main documentation checkpoint before author-approved light/nur publication PR; subsequent merge will change main SHA.",
-  "status": "approved_article_publication_in_progress",
-  "updated_at": "2026-09-30T15:34:00+00:00",
-  "current_task": "Publish author-approved light and nur article tied to Sirou pages 140–143; verify CI and live release.",
-  "next_action": "After verified publication, reconcile M6 intelligence, understanding, consciousness, spirit and moral responsibility with existing pages and the book; present complete next article for author approval before publishing.",
+  "head_sha": "edce124430ff24b3d7eb45acd45ea50ea126af09",
+  "head_sha_semantics": "Verified main content merge for approved light/nur article PR #122; subsequent documentation checkpoint may add a new main SHA.",
+  "status": "deployed_monitoring",
+  "updated_at": "2026-09-30T16:40:00+00:00",
+  "current_task": "Author-approved light/nur article merged and live-verified; research distinct M6 article for complete author preview.",
+  "next_action": "Read Sirou pages 51–54, audit overlap with teaching-names AI, Turing test and brain/consciousness pages, then present a distinct full M6 article for author approval before publication.",
   "latest_approved_revision": {
-    "status": "approved_publication_in_progress",
+    "status": "merged_deployed_live_verified",
+    "pull_request": 122,
+    "merge_sha": "edce124430ff24b3d7eb45acd45ea50ea126af09",
     "articles": [
       "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/"
     ],
-    "verification": "Local site, editorial, discovery, visibility, citation and research architecture checks passed; PR CI and live verification pending. No specialist review or indexing/traffic claim.",
-    "inventory": "Expected 87 public HTML pages; 38 articles plus one literary guide in Arabic research/guide inventory; 29 directly tied to Sirou.",
-    "roadmap_progress": "23/24 original supporting topics expected after publication; M6 remains."
+    "verification": "Local site/discovery/editorial/visibility/Arabic/UX/citation/research checks passed; PR six checks passed including responsive visual review; Pages deployment succeeded; live canonical displayed full H1, approved text, seven FAQ, eight reference groups and book link. Visibility monitor initially raced deployment and read old 38-item index; rerun succeeded. Artifact screenshots not manually reviewed; no specialist review or indexing/traffic claim.",
+    "inventory": "87 public HTML pages; 38 articles plus one literary guide in Arabic research/guide inventory; 29 directly tied to Sirou; 8 English and 4 German editions.",
+    "roadmap_progress": "23/24 original supporting-topic map covered; M6 remains to complete or reconcile."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
@@ -338,7 +340,7 @@
     "decision": "Do not send an article while known substantive improvements remain. Present each complete article to Ahmed before adopting or publishing it; await his decision. Never promise ranking or absolute perfection."
   },
   "current_approved_article": {
-    "status": "approved_publication_in_progress",
+    "status": "merged_deployed_live_verified",
     "slug": "difference-light-nur-quran-sun-moon",
     "url": "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/",
     "book_pages": "140–143",
@@ -346,6 +348,9 @@
     "faq": 7,
     "reference_groups": 8,
     "expected_inventory": "87 public HTML pages; 39 Arabic research/guide items; 29 Sirou-linked; roadmap 23/24 after successful publication",
-    "external_review": "not_completed"
+    "external_review": "not_completed",
+    "pull_request": 122,
+    "merge_sha": "edce124430ff24b3d7eb45acd45ea50ea126af09",
+    "verification": "Local site/discovery/editorial/visibility/Arabic/UX/citation/research checks passed; PR six checks passed including responsive visual review; Pages deployment succeeded; live canonical displayed full H1, approved text, seven FAQ, eight reference groups and book link. Visibility monitor initially raced deployment and read old 38-item index; rerun succeeded. Artifact screenshots not manually reviewed; no specialist review or indexing/traffic claim."
   }
 }
