@@ -515,7 +515,7 @@
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Potential intent overlap with the cosmology pillar; no consolidation should occur before baseline and link-risk review.",
-      "primary_intent": "هل خلق الله الكون في ستة أيام؟ معنى اليوم بين القرآن وعلم الكون"
+      "primary_intent": "ما معنى الأيام الستة في خلق السماوات والأرض، وكيف يُفهم عمر الكون؟"
     },
     {
       "slug": "sleep-paralysis-jathoom",
