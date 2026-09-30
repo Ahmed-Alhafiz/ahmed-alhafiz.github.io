@@ -11,6 +11,40 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "how-concepts-form-adam-names-scientific-models",
+      "title": "كيف تتكوّن المفاهيم؟ من تعليم آدم الأسماء إلى النموذج العلمي",
+      "summary": "كيف ينتقل الإنسان من تسمية الأشياء إلى بناء مفاهيم ونماذج قابلة للاختبار؟ قراءة في آية تعليم آدم وتفسيرها، وأبحاث تصنيف الأطفال، والجدول الدوري، وطيف النجوم، انطلاقًا من صفحات الكتاب 39–43.",
+      "type": "تحقيق تفسيري ومعرفي في تكوّن المفاهيم والنماذج العلمية",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "sirou-fi-alard",
+      "url": "https://ahmedalhafiz.com/articles/how-concepts-form-adam-names-scientific-models/",
+      "primary_sources": [
+        "https://quran.com/ar/al-baqarah/30-33",
+        "https://quran.com/ar/an-nahl/78",
+        "https://quran.com/ar/al-isra/36",
+        "https://tafsir.app/tabari/2/31",
+        "https://tafsir.app/tabari/16/78",
+        "https://tafsir.app/tabari/17/36",
+        "https://tafsir.app/qurtubi/2/31",
+        "https://tafsir.app/alrazi/2/31",
+        "https://tafsir.app/ibn-aashoor/2/31",
+        "https://pubmed.ncbi.nlm.nih.gov/11707383/",
+        "https://pubmed.ncbi.nlm.nih.gov/32700155/",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099670",
+        "https://pubmed.ncbi.nlm.nih.gov/25819100/",
+        "https://pubmed.ncbi.nlm.nih.gov/23174337/",
+        "https://periodic-table.rsc.org/about",
+        "https://openstax.org/books/chemistry-atoms-first-2e/pages/3-6-the-periodic-table",
+        "https://science.nasa.gov/mission/webb/science-overview/science-explainers/spectroscopy-101-types-of-spectra-and-spectroscopy/",
+        "https://plato.stanford.edu/archives/fall2020/entries/models-science/",
+        "https://www.nature.com/articles/s41467-020-17785-2"
+      ]
+    },
+    {
       "slug": "mesopotamia-irrigation-soil-salinity-collapse",
       "title": "هل أسقط الملح حضارة بلاد الرافدين؟ قصة الماء الذي أعطى المدن حياتها وهدد حقولها",
       "summary": "ملوحة التربة في بلاد الرافدين حقيقة زراعية وتاريخية، لكن هل تكفي لتفسير سقوط حضارة؟ قراءة للألواح القديمة وآلية الري والخلاف بين الباحثين، في سياق آيات الحرث والعمران.",

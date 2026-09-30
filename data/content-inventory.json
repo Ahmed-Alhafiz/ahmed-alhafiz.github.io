@@ -29,6 +29,23 @@
   },
   "items": [
     {
+      "slug": "how-concepts-form-adam-names-scientific-models",
+      "url": "https://ahmedalhafiz.com/articles/how-concepts-form-adam-names-scientific-models/",
+      "class": "supporting_brief",
+      "book_cluster": "sirou-fi-alard",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "كيف تتكون المفاهيم من الاسم إلى النموذج العلمي وما صلة تعليم آدم الأسماء بذلك",
+      "does_not_target": [
+        "أصل جميع اللغات من آدم",
+        "الوعي في الذكاء الاصطناعي",
+        "الكتاب بوصفه دليلًا تجريبيًا"
+      ],
+      "next_action": "seek_independent_review_and_measure_query_fit",
+      "reason": "Distinct M3 book pages 39–43 question, with interpretation and cognitive science evidence separated."
+    },
+    {
       "slug": "mesopotamia-irrigation-soil-salinity-collapse",
       "url": "https://ahmedalhafiz.com/articles/mesopotamia-irrigation-soil-salinity-collapse/",
       "class": "supporting_brief",
@@ -617,7 +634,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 32,
+    "supporting_brief": 33,
     "literary_guide": 1,
     "hold_for_review": 0
   }
