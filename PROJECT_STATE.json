@@ -3,21 +3,21 @@
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
   "branch": "main",
-  "head_sha": "4c4a4413dd69bf1702ba6bf304210e58992f34a1",
-  "head_sha_semantics": "Verified main content merge for author-approved six-days PR #114; subsequent documentation checkpoint may add a new main SHA.",
+  "head_sha": "b1fed9fa547602500a82aec912a5f1614f27e7bd",
+  "head_sha_semantics": "Verified main content merge for author-approved universe expansion PR #116; subsequent documentation checkpoint may add a new main SHA.",
   "status": "deployed_monitoring",
-  "updated_at": "2026-09-30T08:03:00+02:00",
-  "current_task": "Six-days creation article approved by Ahmed, merged, deployed and live-verified at its existing canonical URL.",
-  "next_action": "Review the Sirou-linked universe expansion and wa-inna-lamusiun article in full against book pages 21–25 and primary tafsir/astronomy sources; show Ahmed the complete improved version before any adoption or publication.",
+  "updated_at": "2026-09-30T11:14:31+02:00",
+  "current_task": "Universe expansion and wa-inna-lamusiun article approved by Ahmed, merged, deployed and live-verified at its existing canonical URL.",
+  "next_action": "Review the Sirou-linked water and life article in full against book pages 123–130 and primary tafsir/biochemistry sources; present Ahmed the complete improved version before any adoption or publication.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
-    "pull_request": 114,
-    "merge_sha": "4c4a4413dd69bf1702ba6bf304210e58992f34a1",
+    "pull_request": 116,
+    "merge_sha": "b1fed9fa547602500a82aec912a5f1614f27e7bd",
     "articles": [
-      "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/"
+      "https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/"
     ],
-    "verification": "Local site/discovery/editorial/Arabic/UX checks passed; five PR workflows including responsive 1440/390/360 passed; PR policy passed; Pages deployment and post-merge checks succeeded; canonical page opened live with approved H1, body, nine reference groups, book link and 30 September source review. Artifact images not manually inspected; specialist review, indexing and traffic effect not claimed.",
-    "next_preview": "Universe expansion and wa-inna-lamusiun: read full article and book pages 21–25, verify primary sources, then prepare complete author preview outside site before approval."
+    "verification": "Local integrity/discovery/editorial/research/Arabic/UX checks passed; five PR workflows including responsive 1440/390/360 passed; PR policy passed; Pages deployment and post-merge checks succeeded; canonical page opened live with approved H1, scale-factor explanation, book link, five FAQ and thirteen source groups. Artifact images not manually inspected; specialist review, indexing and traffic effect not claimed.",
+    "next_preview": "Water and life: read the full article and book pages 123–130; verify primary tafsir and biochemistry sources, then present a complete author preview outside the site before approval."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
