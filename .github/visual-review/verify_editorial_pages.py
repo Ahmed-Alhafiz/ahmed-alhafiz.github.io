@@ -30,6 +30,7 @@ PAGES = (
     ("mesopotamia-salinity-ar", "/articles/mesopotamia-irrigation-soil-salinity-collapse/", ".source-list"),
     ("nile-egypt-ar", "/articles/nile-ancient-egypt-flood-calendar-state/", ".source-list"),
     ("ratq-fatq-ar", "/articles/ratq-fatq-big-bang/", ".table-scroll"),
+    ("six-days-creation-ar", "/articles/six-days-creation-cosmic-time/", ".references"),
 )
 
 
