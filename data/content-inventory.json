@@ -29,6 +29,24 @@
   },
   "items": [
     {
+      "slug": "hearing-voices-in-head",
+      "url": "https://ahmedalhafiz.com/articles/hearing-voices-in-head/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "أسباب سماع الأصوات والفرق عن الأفكار الاقتحامية وتجارب النوم وحدود تفسيرها بالمس",
+      "does_not_target": [
+        "تشخيص المس من الصوت",
+        "تفاصيل علاج الوسواس القهري",
+        "أدلة وجود الجن العامة",
+        "تشخيص فجوات الذاكرة"
+      ],
+      "next_action": "measure_query_fit_and_seek_clinical_review",
+      "reason": "Distinct voice-hearing question with official clinical sources, two original studies and direct literary analysis of the dark margin."
+    },
+    {
       "slug": "jinn-existence-quran-sunnah",
       "url": "https://ahmedalhafiz.com/articles/jinn-existence-quran-sunnah/",
       "class": "supporting_brief",
@@ -733,7 +751,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 36,
+    "supporting_brief": 37,
     "literary_guide": 2,
     "hold_for_review": 0
   }

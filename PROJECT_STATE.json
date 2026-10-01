@@ -2,22 +2,22 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/umm-abbas-jinn-2026-10-01",
-  "head_sha": "1ba9e52039648f591e33ff0c7dabb3385ca79309",
+  "branch": "content/umm-abbas-voices-2026-10-01",
+  "head_sha": "d98a74c85c401a2bb24b4eadaccf6af22e1680a4",
   "head_sha_semantics": "Verified base; release head, checks and deployment tracked in the publication pull request.",
   "status": "in_progress",
-  "updated_at": "2026-10-01T13:03:59+02:00",
-  "current_task": "Publish the author-approved Islamic textual explainer on jinn, with fifteen sources and explicit external-review limits.",
-  "next_action": "Complete local gates, one PR and responsive visual review, merge and verify live; then audit hearing-voices draft.",
+  "updated_at": "2026-10-01T14:51:20+02:00",
+  "current_task": "Publish the author-approved hearing-voices educational article with nine reference entries, two original studies and explicit clinical/religious review limits.",
+  "next_action": "Complete source gates and one responsive visual PR, publish and verify live; then read and audit the memory-gaps draft.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
-    "pull_request": 130,
-    "merge_sha": "1ba9e52039648f591e33ff0c7dabb3385ca79309",
+    "pull_request": 131,
+    "merge_sha": "d98a74c85c401a2bb24b4eadaccf6af22e1680a4",
     "articles": [
-      "https://ahmedalhafiz.com/articles/umm-abbas-family-fear/"
+      "https://ahmedalhafiz.com/articles/jinn-existence-quran-sunnah/"
     ],
-    "verification": "Six PR checks, human responsive screenshot review, Pages and live HTTP/browser checks passed. No indexing/ranking/traffic outcome inferred.",
-    "inventory": "89 public HTML pages; 41 Arabic, 8 English, 4 German library entries."
+    "verification": "Six PR checks, ten human-reviewed screenshots, Pages 36855042620 and live HTTP/browser verification passed; visibility rerun job 110345904330 passed after deployment race. No indexing/ranking/traffic outcome inferred.",
+    "inventory": "90 public HTML pages; 42 Arabic, 8 English, 4 German library entries."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
@@ -333,7 +333,7 @@
   "local_only_items": [],
   "notes": "PR #71 is live and technically verified at merge commit 5e13f017364929e4537b14d80c342506cbf7c9d0. No ranking, indexing, traffic, or AI-citation outcome is inferred from checks, deployment, submission, or validation acceptance.",
   "author_editorial_review_gate": {
-    "scope": "all articles associated with any of Ahmed Alhafiz works; current editing scope remains Sirou fi al-Ard only",
+    "scope": "All articles associated with Ahmed Alhafiz works; current publication scope is the adopted Umm Abbas hearing-voices article.",
     "before_showing_article": "Read the relevant manuscript passage and entire article; exhaust material improvements in evidence, religious/scientific depth, length, natural authorial voice, distinct search intent and direct book relevance; verify important source-to-claim links and remove internal drafting residue.",
     "fixed_questions": "Is this the strongest defensible version now? Am I satisfied? Is a specific stronger alternative still available? Does it directly strengthen the book and answer a real related search question? Are religious and scientific depth sufficient for the subject?",
     "decision": "Do not send an article while known substantive improvements remain. Present each complete article to Ahmed before adopting or publishing it; await his decision. Never promise ranking or absolute perfection."
@@ -400,29 +400,28 @@
     "local_checks": "Site 88/88/88 zero errors/warnings; stylesheet build, discovery, UX, Arabic UI, entity, hygiene, editorial, dossier, citation, architecture, visibility, governance, Python compilation and diff whitespace passed."
   },
   "umm_abbas_publication": {
-    "authorized_at": "2026-10-01T13:03:59+02:00",
-    "batch": 2,
+    "authorized_at": "2026-10-01T14:51:20+02:00",
+    "batch": 3,
     "articles": [
-      "https://ahmedalhafiz.com/articles/jinn-existence-quran-sunnah/"
+      "https://ahmedalhafiz.com/articles/hearing-voices-in-head/"
     ],
     "languages": [
       "ar"
     ],
     "independent_review": "not_completed",
     "remaining_drafts": [
-      "hearing-voices",
       "memory-gaps",
       "comparative-scriptures"
     ],
     "policy": "One completed publication batch at a time. Do not claim medical or religious specialist review. Complete translations before declaring language editions.",
     "previous_batch": {
       "status": "merged_deployed_live_verified",
-      "pull_request": 130,
-      "merge_sha": "1ba9e52039648f591e33ff0c7dabb3385ca79309",
-      "pages_run": 36851394389,
-      "visual_run": 36850377863,
-      "human_review": "10 focused desktop/mobile/narrow-mobile screenshots inspected; live Arabic article and reciprocal book link verified."
+      "pull_request": 131,
+      "merge_sha": "d98a74c85c401a2bb24b4eadaccf6af22e1680a4",
+      "pages_run": 36855042620,
+      "visual_run": 36854258019,
+      "human_review": "10 focused desktop/mobile/narrow-mobile screenshots inspected; live Arabic article, 15 references and reciprocal book link verified."
     },
-    "authorization_note": "Ahmed explicitly approved and requested publication after the disclosure that independent specialist review had not been completed; do not reintroduce a new approval gate or imply such review occurred."
+    "authorization_note": "Ahmed explicitly adopted the strengthened hearing-voices draft and ordered publication after external review was disclosed as not completed. Do not invent such review or reintroduce an approval gate. Do not resend already-published articles."
   }
 }
