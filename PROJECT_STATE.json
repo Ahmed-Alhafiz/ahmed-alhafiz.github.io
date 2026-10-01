@@ -2,23 +2,22 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/umm-abbas-literary-2026-10-01",
-  "head_sha": "e2b34d82f845909f279fd8793609d54e74e9f39a",
+  "branch": "content/umm-abbas-jinn-2026-10-01",
+  "head_sha": "1ba9e52039648f591e33ff0c7dabb3385ca79309",
   "head_sha_semantics": "Verified base; release head, checks and deployment tracked in the publication pull request.",
   "status": "in_progress",
-  "updated_at": "2026-10-01T12:28:02+02:00",
-  "current_task": "Publish one authorized Arabic literary reading of Umm Abbas; preserve forthcoming status and distinguish fiction from clinical evidence.",
-  "next_action": "Run local integrity and CI visual gates, inspect screenshots, merge and verify live; continue next draft in a separate small batch.",
+  "updated_at": "2026-10-01T13:03:59+02:00",
+  "current_task": "Publish the author-approved Islamic textual explainer on jinn, with fifteen sources and explicit external-review limits.",
+  "next_action": "Complete local gates, one PR and responsive visual review, merge and verify live; then audit hearing-voices draft.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
-    "pull_request": 124,
-    "merge_sha": "6d4c24a0eb3200a45fb6889e3be84664f11ce4b4",
+    "pull_request": 130,
+    "merge_sha": "1ba9e52039648f591e33ff0c7dabb3385ca79309",
     "articles": [
-      "https://ahmedalhafiz.com/articles/ai-soul-consciousness-understanding-taklif/"
+      "https://ahmedalhafiz.com/articles/umm-abbas-family-fear/"
     ],
-    "verification": "Local site/discovery/editorial/visibility/Arabic/UX/citation/research checks passed; PR six checks passed including responsive visual review; Pages deployment succeeded; live canonical displayed approved H1, body, eight FAQ, references and book links. Screenshots not manually inspected; no specialist review or indexing/traffic claim.",
-    "inventory": "88 public HTML pages; 39 articles plus one literary guide in Arabic research/guide inventory; 30 directly tied to Sirou; 8 English and 4 German editions.",
-    "roadmap_progress": "24/24 original supporting-topic map covered; no planned article topics remain."
+    "verification": "Six PR checks, human responsive screenshot review, Pages and live HTTP/browser checks passed. No indexing/ranking/traffic outcome inferred.",
+    "inventory": "89 public HTML pages; 41 Arabic, 8 English, 4 German library entries."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
@@ -401,21 +400,29 @@
     "local_checks": "Site 88/88/88 zero errors/warnings; stylesheet build, discovery, UX, Arabic UI, entity, hygiene, editorial, dossier, citation, architecture, visibility, governance, Python compilation and diff whitespace passed."
   },
   "umm_abbas_publication": {
-    "authorized_at": "2026-10-01T12:23:24+02:00",
-    "batch": 1,
+    "authorized_at": "2026-10-01T13:03:59+02:00",
+    "batch": 2,
     "articles": [
-      "https://ahmedalhafiz.com/articles/umm-abbas-family-fear/"
+      "https://ahmedalhafiz.com/articles/jinn-existence-quran-sunnah/"
     ],
     "languages": [
       "ar"
     ],
     "independent_review": "not_completed",
     "remaining_drafts": [
-      "jinn-existence",
       "hearing-voices",
       "memory-gaps",
       "comparative-scriptures"
     ],
-    "policy": "One completed publication batch at a time. Do not claim medical or religious specialist review. Complete translations before declaring language editions."
+    "policy": "One completed publication batch at a time. Do not claim medical or religious specialist review. Complete translations before declaring language editions.",
+    "previous_batch": {
+      "status": "merged_deployed_live_verified",
+      "pull_request": 130,
+      "merge_sha": "1ba9e52039648f591e33ff0c7dabb3385ca79309",
+      "pages_run": 36851394389,
+      "visual_run": 36850377863,
+      "human_review": "10 focused desktop/mobile/narrow-mobile screenshots inspected; live Arabic article and reciprocal book link verified."
+    },
+    "authorization_note": "Ahmed explicitly approved and requested publication after the disclosure that independent specialist review had not been completed; do not reintroduce a new approval gate or imply such review occurred."
   }
 }
