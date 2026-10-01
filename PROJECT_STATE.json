@@ -333,7 +333,7 @@
   "local_only_items": [],
   "notes": "PR #71 is live and technically verified at merge commit 5e13f017364929e4537b14d80c342506cbf7c9d0. No ranking, indexing, traffic, or AI-citation outcome is inferred from checks, deployment, submission, or validation acceptance.",
   "author_editorial_review_gate": {
-    "scope": "All articles associated with Ahmed Alhafiz works; current publication scope is the adopted Umm Abbas hearing-voices article.",
+    "scope": "All articles associated with Ahmed Alhafiz works; current publication scope is the adopted Umm Abbas memory-gaps article.",
     "before_showing_article": "Read the relevant manuscript passage and entire article; exhaust material improvements in evidence, religious/scientific depth, length, natural authorial voice, distinct search intent and direct book relevance; verify important source-to-claim links and remove internal drafting residue.",
     "fixed_questions": "Is this the strongest defensible version now? Am I satisfied? Is a specific stronger alternative still available? Does it directly strengthen the book and answer a real related search question? Are religious and scientific depth sufficient for the subject?",
     "decision": "Do not send an article while known substantive improvements remain. Present each complete article to Ahmed before adopting or publishing it; await his decision. Never promise ranking or absolute perfection."
@@ -400,28 +400,38 @@
     "local_checks": "Site 88/88/88 zero errors/warnings; stylesheet build, discovery, UX, Arabic UI, entity, hygiene, editorial, dossier, citation, architecture, visibility, governance, Python compilation and diff whitespace passed."
   },
   "umm_abbas_publication": {
-    "authorized_at": "2026-10-01T14:51:20+02:00",
-    "batch": 3,
+    "authorized_at": "2026-10-01T16:20:56+02:00",
+    "batch": 4,
     "articles": [
-      "https://ahmedalhafiz.com/articles/hearing-voices-in-head/"
+      "https://ahmedalhafiz.com/articles/memory-gaps-unremembered-actions/"
     ],
     "languages": [
       "ar"
     ],
     "independent_review": "not_completed",
     "remaining_drafts": [
-      "memory-gaps",
       "comparative-scriptures"
     ],
     "policy": "One completed publication batch at a time. Do not claim medical or religious specialist review. Complete translations before declaring language editions.",
     "previous_batch": {
       "status": "merged_deployed_live_verified",
-      "pull_request": 131,
-      "merge_sha": "d98a74c85c401a2bb24b4eadaccf6af22e1680a4",
-      "pages_run": 36855042620,
-      "visual_run": 36854258019,
-      "human_review": "10 focused desktop/mobile/narrow-mobile screenshots inspected; live Arabic article, 15 references and reciprocal book link verified."
+      "pull_request": 132,
+      "merge_sha": "338b60ee0511a5941ec4e0504b70e12caf1b29aa",
+      "pages_run": 36867026351,
+      "visual_run": 36866312857,
+      "human_review": "10 focused screenshots inspected; live article and reciprocal book link verified. Visibility-only retry succeeded after Pages, run36867027109 attempt2."
     },
-    "authorization_note": "Ahmed explicitly adopted the strengthened hearing-voices draft and ordered publication after external review was disclosed as not completed. Do not invent such review or reintroduce an approval gate. Do not resend already-published articles."
+    "authorization_note": "Ahmed adopted the strengthened memory-gaps draft and ordered publication, verification and the next step. External specialist review remains not completed; no new approval gate and no resend of published articles."
+  },
+  "umm_abbas_memory_release": {
+    "status": "prepared_for_pr_and_visual_review",
+    "branch": "content/umm-abbas-memory-2026-10-01",
+    "base_sha": "338b60ee0511a5941ec4e0504b70e12caf1b29aa",
+    "reference_groups": 12,
+    "reference_urls": 17,
+    "source_reading": "Approved private draft v2 read in full. Clinical references, original sleep study, Qur’an context and hadith verified in preceding preparation; the novel pp.70–80 and 114–116 were reread. No raw-data reanalysis or independent specialist review.",
+    "scope": "One Arabic article, reciprocal book and pillar links, feed/index/sitemap/manifest updates, focused responsive coverage.",
+    "limits": "No new translations, Google ranking or traffic results, clinical diagnosis, or independent medical/religious review.",
+    "next": "Complete local gates, inspect CI screenshots, merge and verify live; then strengthen the comparative-scriptures private draft."
   }
 }
