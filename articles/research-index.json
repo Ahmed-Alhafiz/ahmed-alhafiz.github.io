@@ -11,6 +11,19 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "depersonalization-derealization-feeling-unreal",
+      "title": "تبدد الشخصية وتبدد الواقع: الأعراض والأسباب",
+      "summary": "لماذا أشعر أن جسدي أو العالم غريب؟ الفرق بين تبدد الشخصية وتبدد الواقع، والأعراض والأسباب وطلب المساعدة، مع قراءة مباشرة لرواية أم عباس.",
+      "type": "مقال طبي تثقيفي",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/depersonalization-derealization-feeling-unreal/"
+    },
+    {
       "slug": "jinn-demons-quran-bible-torah",
       "title": "الجن والشياطين في القرآن والإنجيل والتوراة: هل المعنى واحد؟",
       "summary": "هل الجن والشياطين مفهوم واحد في القرآن والإنجيل والتوراة؟ مقارنة النصوص والترجمات وحدود تفسير الأعراض، وصلتها برواية أم عباس.",

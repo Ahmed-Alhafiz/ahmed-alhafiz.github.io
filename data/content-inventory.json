@@ -29,6 +29,24 @@
   },
   "items": [
     {
+      "slug": "depersonalization-derealization-feeling-unreal",
+      "url": "https://ahmedalhafiz.com/articles/depersonalization-derealization-feeling-unreal/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "أعراض وأسباب تبدد الشخصية وتبدد الواقع والشعور بالغربة عن الجسد أو العالم وحدود تفسير المس",
+      "does_not_target": [
+        "تشخيص المس من الشعور بالغربة",
+        "تفاصيل علاج الصرع",
+        "أدلة وجود الجن العامة",
+        "فجوات الذاكرة وسماع الأصوات"
+      ],
+      "next_action": "measure_query_fit_and_seek_clinical_review",
+      "reason": "Depersonalization and derealization: clinical references, original epilepsy study and feasibility trial, scriptural context and direct reading of the novel, pp.183–185,194,200."
+    },
+    {
       "slug": "jinn-demons-quran-bible-torah",
       "url": "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/",
       "class": "supporting_brief",
@@ -787,7 +805,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 39,
+    "supporting_brief": 40,
     "literary_guide": 2,
     "hold_for_review": 0
   }
