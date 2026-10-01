@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "performance/research-assets-2026-10-01",
-  "head_sha": "4840936b265de89dc16b8032619c065edd457d65",
-  "head_sha_semantics": "Verified live base of the performance follow-up; release head/checks/deployment will be tracked in the follow-up pull request.",
+  "branch": "content/umm-abbas-literary-2026-10-01",
+  "head_sha": "e2b34d82f845909f279fd8793609d54e74e9f39a",
+  "head_sha_semantics": "Verified base; release head, checks and deployment tracked in the publication pull request.",
   "status": "in_progress",
-  "updated_at": "2026-10-01T06:04:30.939828+00:00",
-  "current_task": "Responsive author portrait assets, flatten shared CSS imports, match research ItemList to visible order and repair profile primary controls.",
-  "next_action": "Publish isolated pull request, verify all required CI and inspect multilingual desktop/mobile screenshots, then merge and verify live. Measure current ranking only with Search Console evidence.",
+  "updated_at": "2026-10-01T12:28:02+02:00",
+  "current_task": "Publish one authorized Arabic literary reading of Umm Abbas; preserve forthcoming status and distinguish fiction from clinical evidence.",
+  "next_action": "Run local integrity and CI visual gates, inspect screenshots, merge and verify live; continue next draft in a separate small batch.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
     "pull_request": 124,
@@ -399,5 +399,23 @@
     "css_nested_requests_removed": 5,
     "limitations": "Transfer byte reduction is measured; LCP/Core Web Vitals and search-ranking gains are not measured. No new substantive translations or factual article edits.",
     "local_checks": "Site 88/88/88 zero errors/warnings; stylesheet build, discovery, UX, Arabic UI, entity, hygiene, editorial, dossier, citation, architecture, visibility, governance, Python compilation and diff whitespace passed."
+  },
+  "umm_abbas_publication": {
+    "authorized_at": "2026-10-01T12:23:24+02:00",
+    "batch": 1,
+    "articles": [
+      "https://ahmedalhafiz.com/articles/umm-abbas-family-fear/"
+    ],
+    "languages": [
+      "ar"
+    ],
+    "independent_review": "not_completed",
+    "remaining_drafts": [
+      "jinn-existence",
+      "hearing-voices",
+      "memory-gaps",
+      "comparative-scriptures"
+    ],
+    "policy": "One completed publication batch at a time. Do not claim medical or religious specialist review. Complete translations before declaring language editions."
   }
 }

@@ -20,7 +20,7 @@ TOPICS = {
     "mind": "adam-all-languages-origin-language how-concepts-form-adam-names-scientific-models teaching-names-ai-understanding turing-test-ai-consciousness ai-soul-consciousness-understanding-taklif brain-consciousness-spirit-limits human-embryo-quran-stages dna-code-genetic-information water-life-molecular-properties".split(),
     "history": "civilization-knowledge-justice-collapse water-civilization-power river-civilizations-water-state marib-dam-sayl-al-arim how-khufu-pyramid-built-merer-diary madain-salih-thamud-nabataean-tombs mesopotamia-irrigation-soil-salinity-collapse nile-ancient-egypt-flood-calendar-state injustice-fall-of-states-quran-history writing-changed-human-history fall-of-baghdad-1258-ibn-al-alqami juhayman-grand-mosque-1979".split(),
     "psychology": "possession-or-neurological-psychological-disorder functional-seizures-vs-epilepsy sleep-paralysis-jathoom religious-ocd-scrupulosity spiritual-healing-exploitation-safeguarding diagnostic-uncertainty-family-fear-coercive-authority how-certainty-becomes-violence".split(),
-    "literature": ["arabic-psychological-horror"],
+    "literature": ["arabic-psychological-horror", "umm-abbas-family-fear"],
 }
 COPY = {
     "ar": {
