@@ -26,6 +26,7 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-abbas-book-ar", "/books/umm-abbas/", "#reading-start"),
     ("umm-abbas-family-ar", "/articles/umm-abbas-family-fear/", ".related-work"),
     ("research-status-ar", "/research-status/", ".evidence-table"),
     ("research-status-en", "/en/research-status/", ".evidence-table"),
