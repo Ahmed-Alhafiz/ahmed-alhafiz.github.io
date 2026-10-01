@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "design/multilingual-reading-2026-10-01",
-  "head_sha": "1ad6e26f987425f5b1a4cb236c8a3546fea18417",
-  "head_sha_semantics": "First verified responsive release candidate in PR #128; final release head, merge, required checks and Pages deployment are tracked by PR #128 and its linked Actions runs.",
-  "status": "release_tracking",
-  "updated_at": "2026-10-01T07:17:00+02:00",
-  "current_task": "Multilingual reading release PR #128; responsive CI and human review completed for the first candidate, with discovered Arabic button/figure issues corrected and final verification tracked in the PR.",
-  "next_action": "Read PR #128 and its latest checks/deployment to resolve release state; then measure Search Console queries/indexing and compare the three translation-sync candidates. Do not start another overlapping article batch.",
+  "branch": "performance/research-assets-2026-10-01",
+  "head_sha": "4840936b265de89dc16b8032619c065edd457d65",
+  "head_sha_semantics": "Verified live base of the performance follow-up; release head/checks/deployment will be tracked in the follow-up pull request.",
+  "status": "in_progress",
+  "updated_at": "2026-10-01T06:04:30.939828+00:00",
+  "current_task": "Responsive author portrait assets, flatten shared CSS imports, match research ItemList to visible order and repair profile primary controls.",
+  "next_action": "Publish isolated pull request, verify all required CI and inspect multilingual desktop/mobile screenshots, then merge and verify live. Measure current ranking only with Search Console evidence.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
     "pull_request": 124,
@@ -355,7 +355,7 @@
   "multilingual_ux_release": {
     "branch": "design/multilingual-reading-2026-10-01",
     "base_sha": "198ffce331e40352944d66e3fa90cdffa5d8ddf0",
-    "status": "tracked_in_pull_request",
+    "status": "merged_deployed_live_verified",
     "scope": "Professional buttons, localized grouped research hubs, local progressive search, matched trilingual homepage treatment, restored evidence figure, three skip-link targets and two editorial-residue removals. Canonicals and article arguments preserved. Also removes internal-draft wording from Baghdad in three languages while retaining the full evidence boundary; fixes Arabic button specificity and natural article-figure sizing.",
     "local_checks": "Site, discovery, Arabic UI, UX, entity, public hygiene, editorial, dossiers, citation, research architecture and local visibility passed; IndexNow dry run only.",
     "translation_coverage": {
@@ -378,6 +378,26 @@
       "result": "success",
       "screenshots": 358,
       "human_review": "Reviewed trilingual home and library desktop/narrow-mobile screenshots plus Madain evidence image. Found Arabic legacy-button override and fixed-height figure whitespace; corrected and added responsive regression assertions. Final revision checks and screenshots are tracked in PR #128."
-    }
+    },
+    "merge_sha": "4840936b265de89dc16b8032619c065edd457d65",
+    "final_head_sha": "fd893ab0b9ebae158c74c29cddc195a42d79da3a",
+    "pages_run": 36819589678,
+    "final_visual_run": 36819121330,
+    "live_verification": "Three libraries (40/8/4), Arabic diacritic search/reset, trilingual buttons and restored figure checked live; no horizontal overflow. All six required PR checks and post-merge deployment workflows passed."
+  },
+  "performance_followup": {
+    "base_sha": "4840936b265de89dc16b8032619c065edd457d65",
+    "scope": "Responsive author portrait assets, flatten shared CSS imports, match research ItemList to visible order and repair profile primary controls.",
+    "status": "local_checks_then_pr",
+    "portrait_original_bytes": 202060,
+    "responsive_portrait_bytes": {
+      "348": 10236,
+      "560": 20654,
+      "840": 40424,
+      "1229": 72290
+    },
+    "css_nested_requests_removed": 5,
+    "limitations": "Transfer byte reduction is measured; LCP/Core Web Vitals and search-ranking gains are not measured. No new substantive translations or factual article edits.",
+    "local_checks": "Site 88/88/88 zero errors/warnings; stylesheet build, discovery, UX, Arabic UI, entity, hygiene, editorial, dossier, citation, architecture, visibility, governance, Python compilation and diff whitespace passed."
   }
 }

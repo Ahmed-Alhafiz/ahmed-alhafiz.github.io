@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the three research hubs from existing published feed entries.
 
-Only the hub's main element is replaced. Article copy, URLs, language groups,
+The hub's main element and matching ItemList are rebuilt. Article copy, URLs, language groups,
 feeds, author identity and book publication states remain their own sources.
 An unclassified new article fails visibly rather than silently disappearing.
 """
@@ -83,8 +83,10 @@ def build(lang: str, register: list[dict]) -> None:
     parts += ['</div></aside><div class="library-content">',
               f'<form class="library-search" role="search" hidden><label for="article-search">{c["search"]}</label><div class="library-search-field"><input id="article-search" type="search" autocomplete="off" aria-describedby="library-search-example" aria-controls="library-groups"><button type="reset" class="library-clear">{c["clear"]}</button></div><p class="library-example" id="library-search-example">{c["placeholder"]}</p><p class="library-results" role="status" aria-live="polite" aria-atomic="true" data-total="{len(feed)}" data-unit="{c["unit"]}">{len(feed)} {c["unit"]}</p></form>',
               f'<p class="library-empty" hidden>{c["empty"]}</p><div id="library-groups">']
+    ordered_entries = []
     for topic, entries in groups:
         entries.sort(key=lambda value: datetime.fromisoformat(value[1]["date_published"]), reverse=True)
+        ordered_entries.extend(entry for _, entry in entries)
         label, description = c["topics"][topic]
         parts += [f'<section class="library-group" id="topic-{topic}" aria-labelledby="heading-{topic}"><div class="library-group-head"><div><h2 id="heading-{topic}">{label}</h2><p>{description}</p></div><span class="library-group-count">{len(entries):02d}</span></div><div class="library-entries">']
         for item, entry in entries:
@@ -107,6 +109,21 @@ def build(lang: str, register: list[dict]) -> None:
     source = path.read_text()
     source, count = re.subn(r'<main\b[^>]*>.*?</main>', "\n".join(parts), source, flags=re.S)
     assert count == 1, path
+    schema_count = 0
+    def sync_schema(match: re.Match) -> str:
+        nonlocal schema_count
+        data = json.loads(match[1])
+        for node in data.get("@graph", []):
+            if node.get("@type") == "ItemList":
+                schema_count += 1
+                node["numberOfItems"] = len(ordered_entries)
+                node["itemListElement"] = [
+                    {"@type": "ListItem", "position": pos, "url": entry["url"], "name": entry["title"]}
+                    for pos, entry in enumerate(ordered_entries, 1)
+                ]
+        return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + '</script>'
+    source = re.sub(r'<script type="application/ld\+json">(.*?)</script>', sync_schema, source, flags=re.S)
+    assert schema_count == 1, f"{lang}: expected exactly one research ItemList"
     if '/assets/research-library.js' not in source:
         source = source.replace('</head>', '<script src="/assets/research-library.js" defer></script>\n</head>')
     path.write_text(source)

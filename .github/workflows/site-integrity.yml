@@ -173,6 +173,9 @@ jobs:
       - name: Validate HTML links sitemap feeds hreflang and publication safety
         run: python tools/site_audit.py
 
+      - name: Validate the shared stylesheet build matches its sources
+        run: python tools/build_article_styles.py --check
+
       - name: Reject public production residue draft markers and prompt leakage
         run: python tools/public_presentation_hygiene.py
 
