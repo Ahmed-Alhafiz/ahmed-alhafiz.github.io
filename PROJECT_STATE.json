@@ -2,22 +2,22 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/umm-abbas-scriptures-2026-10-01",
-  "head_sha": "19398d230cf955a5d2c3dcf9132d3ccbe48f697d",
+  "branch": "content/umm-abbas-dpdr-2026-10-01",
+  "head_sha": "420f8b0e669de0676f1d30cd9ac90909eded0886",
   "head_sha_semantics": "Verified base; release head, checks and deployment tracked in the publication pull request.",
   "status": "in_progress",
-  "updated_at": "2026-10-01T17:02:51+02:00",
-  "current_task": "Publish the author-adopted comparative-scriptures article with eighteen source entries and explicit limits of translation, interpretation and clinical inference.",
-  "next_action": "Complete source and responsive checks, publish and verify live; then prepare the distinct depersonalization/derealization article with clinical sources and direct novel reading.",
+  "updated_at": "2026-10-01T18:12:04+02:00",
+  "current_task": "Publish the adopted depersonalization/derealization article with ten references and explicit clinical and religious limits.",
+  "next_action": "Complete source and responsive gates, merge and verify live; then research unwanted intrusive thoughts as a distinct next article.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
-    "pull_request": 133,
-    "merge_sha": "19398d230cf955a5d2c3dcf9132d3ccbe48f697d",
+    "pull_request": 134,
+    "merge_sha": "420f8b0e669de0676f1d30cd9ac90909eded0886",
     "articles": [
-      "https://ahmedalhafiz.com/articles/memory-gaps-unremembered-actions/"
+      "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/"
     ],
-    "verification": "Six PR gates passed; ten focused screenshots inspected; Pages36878537072 and eight live HTTP/browser route checks passed. Visibility36878537283 attempt2 passed after the deployment race.",
-    "inventory": "92 public pages; 44 Arabic, 8 English, 4 German library entries."
+    "verification": "Six PR gates, ten actual screenshots, Pages36883777812 and live HTTP/browser passed; visibility36883778877 attempt2 and IndexNow36883778996 transport200 passed.",
+    "inventory": "93 public HTML pages;45 Arabic,8 English,4 German library entries."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
@@ -333,7 +333,7 @@
   "local_only_items": [],
   "notes": "PR #71 is live and technically verified at merge commit 5e13f017364929e4537b14d80c342506cbf7c9d0. No ranking, indexing, traffic, or AI-citation outcome is inferred from checks, deployment, submission, or validation acceptance.",
   "author_editorial_review_gate": {
-    "scope": "All works-related articles; current adopted scope is the second comparative-scriptures draft.",
+    "scope": "All works-related articles; current adopted scope is depersonalization/derealization with the author-approved search-topic title.",
     "before_showing_article": "Read the relevant manuscript passage and entire article; exhaust material improvements in evidence, religious/scientific depth, length, natural authorial voice, distinct search intent and direct book relevance; verify important source-to-claim links and remove internal drafting residue.",
     "fixed_questions": "Is this the strongest defensible version now? Am I satisfied? Is a specific stronger alternative still available? Does it directly strengthen the book and answer a real related search question? Are religious and scientific depth sufficient for the subject?",
     "decision": "Do not send an article while known substantive improvements remain. Present each complete article to Ahmed before adopting or publishing it; await his decision. Never promise ranking or absolute perfection."
@@ -400,28 +400,30 @@
     "local_checks": "Site 88/88/88 zero errors/warnings; stylesheet build, discovery, UX, Arabic UI, entity, hygiene, editorial, dossier, citation, architecture, visibility, governance, Python compilation and diff whitespace passed."
   },
   "umm_abbas_publication": {
-    "authorized_at": "2026-10-01T17:02:51+02:00",
-    "batch": 5,
+    "authorized_at": "2026-10-01T18:12:04+02:00",
+    "batch": 6,
     "articles": [
-      "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/"
+      "https://ahmedalhafiz.com/articles/depersonalization-derealization-feeling-unreal/"
     ],
     "languages": [
       "ar"
     ],
     "independent_review": "not_completed",
     "remaining_drafts": [
-      "depersonalization-derealization"
+      "intrusive-thoughts-research-not-published"
     ],
     "policy": "One completed publication batch at a time. Do not claim medical or religious specialist review. Complete translations before declaring language editions.",
     "previous_batch": {
       "status": "merged_deployed_live_verified",
-      "pull_request": 133,
-      "merge_sha": "19398d230cf955a5d2c3dcf9132d3ccbe48f697d",
-      "pages_run": 36878537072,
-      "visual_run": 36877147840,
-      "human_review": "Ten focused screenshots and live article/book button reviewed; visibility36878537283 attempt2 succeeded after Pages, job110427451840."
+      "pull_request": 134,
+      "merge_sha": "420f8b0e669de0676f1d30cd9ac90909eded0886",
+      "articles": [
+        "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/"
+      ],
+      "verification": "Six PR gates, ten actual screenshots, Pages36883777812 and live HTTP/browser passed; visibility36883778877 attempt2 and IndexNow36883778996 transport200 passed.",
+      "inventory": "93 public HTML pages;45 Arabic,8 English,4 German library entries."
     },
-    "authorization_note": "Ahmed adopted comparative-scriptures v2 and ordered publication, review, verification and the next step. External specialist review remains not completed; no repeated permission gate or resend of published texts."
+    "authorization_note": "Ahmed adopted the article and topic-based title and explicitly authorized publication, verification and the next step. No repeated permission gate or resend."
   },
   "umm_abbas_memory_release": {
     "status": "merged_deployed_live_verified",
@@ -439,7 +441,7 @@
     "visual_run": 36877147840
   },
   "umm_abbas_scriptures_release": {
-    "status": "prepared_for_pr_and_visual_review",
+    "status": "merged_deployed_live_verified",
     "branch": "content/umm-abbas-scriptures-2026-10-01",
     "base_sha": "19398d230cf955a5d2c3dcf9132d3ccbe48f697d",
     "reference_groups": 18,
@@ -447,6 +449,21 @@
     "source_reading": "Adopted v2 read in full; sources and novel pp184–185,194,200,202–203 actually read in preceding preparation. Distinguishes text, commentary and translation; NIMH clinical education is not an original possession experiment.",
     "scope": "One Arabic comparative religious article, reciprocal book/Islamic/pillar links, discovery surfaces and focused responsive coverage. Clinical safeguards apply without misclassifying the page as a MedicalWebPage.",
     "limits": "No independent medical, tafsir, hadith or comparative Christian/Jewish review completed; no Hebrew linguistic adjudication, new translation or measured ranking/traffic outcome.",
-    "next": "Complete gates and inspect images, merge and verify live; then research depersonalization/derealization without publishing that unadopted next draft."
+    "next": "Completed. Do not resend published article.",
+    "pull_request": 134,
+    "merge_sha": "420f8b0e669de0676f1d30cd9ac90909eded0886",
+    "pages_run": 36883777812,
+    "visual_run": 36882776901
+  },
+  "umm_abbas_dpdr_release": {
+    "status": "prepared_for_pr_and_visual_review",
+    "branch": "content/umm-abbas-dpdr-2026-10-01",
+    "base_sha": "420f8b0e669de0676f1d30cd9ac90909eded0886",
+    "reference_groups": 10,
+    "reference_urls": 10,
+    "source_reading": "Approved complete private draft read; source scopes and limits documented; novel pp183–185,194,200 actually read in preparation.",
+    "scope": "One Arabic medical educational article, reciprocal links, inventory/feed/sitemap and responsive coverage.",
+    "limits": "No external specialist review, new translation, measured keyword volume, indexing or ranking result.",
+    "next": "Complete source and responsive gates, merge and verify live; then research unwanted intrusive thoughts as a distinct next article."
   }
 }
