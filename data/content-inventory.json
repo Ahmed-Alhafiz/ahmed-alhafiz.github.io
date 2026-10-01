@@ -481,7 +481,12 @@
         "de"
       ],
       "next_action": "measure_multilingual_queries_and_seek_specialist_review",
-      "reason": "Central Arabic, English, and German companion guide separating symptoms, clinical diagnosis, cultural and spiritual interpretation, historical change, and the novel’s fictional premise; retained outside the four fully qualified pillars until an independent specialist review and evidence ledger exist."
+      "reason": "Central Arabic, English, and German companion guide separating symptoms, clinical diagnosis, cultural and spiritual interpretation, historical change, and the novel’s fictional premise; retained outside the four fully qualified pillars until an independent specialist review and evidence ledger exist.",
+      "primary_intent": "المس أم مرض نفسي أو عصبي؟ لماذا قد تتشابه الأعراض؟",
+      "does_not_target": [
+        "التفريق بين النوبات الوظيفية والصرع وحده",
+        "قرارات الأسرة قبل التشخيص وحدها"
+      ]
     },
     {
       "slug": "ratq-fatq-big-bang",
@@ -519,7 +524,12 @@
         "en"
       ],
       "next_action": "hold_scope_measure_and_seek_specialist_review_after_publication_policy_allows",
-      "reason": "Complete bilingual dossier with two original but explicitly non-validated frameworks, 14 claims, and 19 sources."
+      "reason": "Complete bilingual dossier with two original but explicitly non-validated frameworks, 14 claims, and 19 sources.",
+      "primary_intent": "حين يحكم الخوف قبل التشخيص: كيف يتحول الغموض إلى سلطة وإكراه داخل الأسرة؟",
+      "does_not_target": [
+        "تشخيص الاضطرابات من الأعراض",
+        "سلوك المعالج الروحي وحده"
+      ]
     },
     {
       "slug": "teaching-names-ai-understanding",
@@ -543,7 +553,12 @@
         "ar"
       ],
       "next_action": "retain_as_companion_and_avoid_scope_overlap",
-      "reason": "Distinct practitioner-conduct and safeguarding question that complements the upstream family-decision pillar."
+      "reason": "Distinct practitioner-conduct and safeguarding question that complements the upstream family-decision pillar.",
+      "primary_intent": "حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض من الدجل والاعتداء؟",
+      "does_not_target": [
+        "إثبات المس من الأعراض",
+        "تشخيص النوبات أو شلل النوم"
+      ]
     },
     {
       "slug": "functional-seizures-vs-epilepsy",
@@ -554,7 +569,12 @@
         "ar"
       ],
       "next_action": "retain_pending_specialist_review_and_query_data",
-      "reason": "Narrow medical distinction with a separate reader need; must remain conservative and visibly unreviewed by a specialist."
+      "reason": "Narrow medical distinction with a separate reader need; must remain conservative and visibly unreviewed by a specialist.",
+      "primary_intent": "النوبات الوظيفية والصرع: كيف يفرّق الأطباء بينهما؟",
+      "does_not_target": [
+        "تشخيص ذاتي من قائمة أعراض",
+        "كل تفسير ثقافي للمس"
+      ]
     },
     {
       "slug": "six-days-creation-cosmic-time",
@@ -577,7 +597,12 @@
         "ar"
       ],
       "next_action": "retain_pending_specialist_review_and_query_data",
-      "reason": "Distinct medical-cultural question with clear safety relevance and a direct literary connection."
+      "reason": "Distinct medical-cultural question with clear safety relevance and a direct literary connection.",
+      "primary_intent": "شلل النوم والجاثوم: لماذا نشعر بوجود كائن في الغرفة؟",
+      "does_not_target": [
+        "تشخيص الصرع",
+        "إثبات وجود كائن خارجي"
+      ]
     },
     {
       "slug": "arabic-psychological-horror",
@@ -588,7 +613,12 @@
         "ar"
       ],
       "next_action": "retain_as_literary_surface_not_medical_evidence",
-      "reason": "Serves craft and literary interpretation rather than clinical search intent."
+      "reason": "Serves craft and literary interpretation rather than clinical search intent.",
+      "primary_intent": "روايات رعب نفسي عربية: كيف تميّز النوع وتختار ما يناسبك؟",
+      "does_not_target": [
+        "التشخيص الطبي",
+        "تصنيف كل أدب الرعب العربي"
+      ]
     },
     {
       "slug": "fall-of-baghdad-1258-ibn-al-alqami",

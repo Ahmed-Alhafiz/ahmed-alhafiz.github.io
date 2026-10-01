@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "main",
-  "head_sha": "6d4c24a0eb3200a45fb6889e3be84664f11ce4b4",
-  "head_sha_semantics": "Verified main content merge for approved M6 article PR #124; subsequent documentation checkpoint may add a new main SHA.",
-  "status": "deployed_monitoring",
-  "updated_at": "2026-09-30T18:10:00+00:00",
-  "current_task": "M6 article approved, published and live-verified; 24/24 Sirou supporting-topic roadmap complete.",
-  "next_action": "Audit links and thematic overlap across the completed Sirou cluster; correct concrete issues only, then measure search performance when enough Search Console data appears.",
+  "branch": "design/multilingual-reading-2026-10-01",
+  "head_sha": "198ffce331e40352944d66e3fa90cdffa5d8ddf0",
+  "head_sha_semantics": "Verified main base for the October 1 multilingual UX release; proposed release SHA and verification are tracked in its pull request.",
+  "status": "release_in_review",
+  "updated_at": "2026-10-01T05:10:00+00:00",
+  "current_task": "Approved multilingual UX and published-page repair; all 40 Arabic research/guide entries are visibly listed, with 8 English and 4 German editions.",
+  "next_action": "Complete responsive CI and human screenshot review, merge only passing release, then verify the live custom domain. Follow up in Search Console and prioritize translation synchronization.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
     "pull_request": 124,
@@ -351,5 +351,25 @@
     "pull_request": 124,
     "merge_sha": "6d4c24a0eb3200a45fb6889e3be84664f11ce4b4",
     "verification": "Local and PR gates passed; Pages and live canonical verified. Search indexing and traffic not measured."
+  },
+  "multilingual_ux_release": {
+    "branch": "design/multilingual-reading-2026-10-01",
+    "base_sha": "198ffce331e40352944d66e3fa90cdffa5d8ddf0",
+    "status": "prepared_local_checks_passed_visual_pending",
+    "scope": "Professional buttons, localized grouped research hubs, local progressive search, matched trilingual homepage treatment, restored evidence figure, three skip-link targets and two editorial-residue removals. Canonicals and article arguments preserved.",
+    "local_checks": "Site, discovery, Arabic UI, UX, entity, public hygiene, editorial, dossiers, citation, research architecture and local visibility passed; IndexNow dry run only.",
+    "translation_coverage": {
+      "arabic_articles": 39,
+      "arabic_literary_guides": 1,
+      "english_articles": 8,
+      "german_articles": 4
+    },
+    "translation_sync_candidates": [
+      "ratq-fatq-big-bang",
+      "water-civilization-power",
+      "teaching-names-ai-understanding"
+    ],
+    "limits": "Date differences flag comparison candidates, not proved translation errors. No full semantic/specialist translation review, current Search Console rankings, or comprehensive external-link validation.",
+    "keyword_inventory": "All 40 primary intents populated and unique; six missing entries derived from existing published H1 with explicit overlap boundaries."
   }
 }

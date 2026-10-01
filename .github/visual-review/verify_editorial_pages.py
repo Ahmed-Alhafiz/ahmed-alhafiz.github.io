@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import shutil
 import time
+import json
 from pathlib import Path
 
 from selenium import webdriver
@@ -36,6 +37,10 @@ PAGES = (
     ("concepts-models-ar", "/articles/how-concepts-form-adam-names-scientific-models/", ".references"),
     ("light-nur-ar", "/articles/difference-light-nur-quran-sun-moon/", ".references"),
     ("ai-soul-taklif-ar", "/articles/ai-soul-consciousness-understanding-taklif/", ".references"),
+    ("library-ar", "/articles/", "#topic-history"),
+    ("library-en", "/en/articles/", "#topic-history"),
+    ("library-de", "/de/articles/", "#topic-psychology"),
+    ("madain-evidence-ar", "/articles/madain-salih-thamud-nabataean-tombs/", 'img[src$="madain-salih-evidence-map-ar.svg"]'),
 )
 
 
@@ -132,6 +137,42 @@ def screenshot(driver: webdriver.Chrome, path: Path, width: int, height: int) ->
         raise SystemExit(f"Suspiciously small screenshot: {path}")
 
 
+def verify_library(driver: webdriver.Chrome, route: str, name: str, width: int) -> None:
+    """Exercise filtering, reset, RTL/LTR and the readable no-script fallback."""
+    from urllib.parse import urlparse
+    lang = driver.find_element(By.CSS_SELECTOR, "html").get_attribute("lang")
+    prefix = "" if lang == "ar" else lang + "/"
+    feed = json.loads(Path(prefix, "articles/feed.json").read_text())["items"]
+    expected = {urlparse(item["url"]).path for item in feed}
+    actual = {urlparse(link.get_attribute("href")).path for link in driver.find_elements(By.CSS_SELECTOR, ".library-entry h3 a")}
+    assert expected == actual, f"{name}: visible library does not match published feed"
+    assert driver.find_element(By.CSS_SELECTOR, "html").get_attribute("dir") == ("rtl" if lang == "ar" else "ltr")
+    field = driver.find_element(By.ID, "article-search")
+    assert field.is_displayed(), f"{name}: search enhancement did not initialize"
+    query = {"ar": "الْوَعْي", "en": "Baghdad", "de": "Bagdad"}[lang]
+    visible = lambda: len([entry for entry in driver.find_elements(By.CSS_SELECTOR, ".library-entry") if entry.is_displayed()])
+    field.send_keys(query)
+    WebDriverWait(driver, 5).until(lambda _: 0 < visible() < len(feed))
+    assert_page_geometry(driver, width, f"{name}-search")
+    field.clear()
+    field.send_keys("zzzz-no-matching-article-92831")
+    WebDriverWait(driver, 5).until(lambda _: visible() == 0)
+    assert driver.find_element(By.CSS_SELECTOR, ".library-empty").is_displayed()
+    driver.find_element(By.CSS_SELECTOR, ".library-clear").click()
+    WebDriverWait(driver, 5).until(lambda _: visible() == len(feed))
+    assert not driver.find_element(By.CSS_SELECTOR, ".library-empty").is_displayed()
+    assert field.get_attribute("value") == ""
+    try:
+        driver.execute_cdp_cmd("Emulation.setScriptExecutionDisabled", {"value": True})
+        driver.get(f"{BASE}{route}?library_no_script_gate=1")
+        assert visible() == len(feed), f"{name}: articles disappear without JavaScript"
+        assert not driver.find_element(By.CSS_SELECTOR, ".library-search").is_displayed()
+    finally:
+        driver.execute_cdp_cmd("Emulation.setScriptExecutionDisabled", {"value": False})
+    driver.get(f"{BASE}{route}?editorial_visual_gate=1")
+    wait_ready(driver)
+
+
 def main() -> None:
     ROOT.mkdir(parents=True, exist_ok=True)
     driver = build_driver()
@@ -145,6 +186,12 @@ def main() -> None:
                 assert_page_geometry(driver, width, f"{mode}/{name}")
                 screenshot(driver, ROOT / mode / f"{name}-top.png", width, height)
                 captures += 1
+
+                if name.startswith("library-"):
+                    verify_library(driver, route, f"{mode}/{name}", width)
+                if name == "madain-evidence-ar":
+                    image = driver.find_element(By.CSS_SELECTOR, target_selector)
+                    WebDriverWait(driver, 10).until(lambda browser: browser.execute_script("return arguments[0].complete && arguments[0].naturalWidth > 0", image))
 
                 target = driver.find_element(By.CSS_SELECTOR, target_selector)
                 driver.execute_script(
