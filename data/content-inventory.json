@@ -29,6 +29,24 @@
   },
   "items": [
     {
+      "slug": "jinn-demons-quran-bible-torah",
+      "url": "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل معنى الجن والشياطين واحد في القرآن والإنجيل والتوراة واختلاف المصطلحات والسياقات",
+      "does_not_target": [
+        "تشخيص المس من الأعراض",
+        "علاج الأمراض النفسية",
+        "الاستدلال الإسلامي العام على وجود الجن",
+        "كل عقائد اليهودية والمسيحية"
+      ],
+      "next_action": "measure_query_fit_and_seek_comparative_specialist_review",
+      "reason": "Comparison of scriptural terms, translations and interpretation, with explicit clinical limits and direct reading of the novel, pp.184–185, 194, 200, 202–203."
+    },
+    {
       "slug": "memory-gaps-unremembered-actions",
       "url": "https://ahmedalhafiz.com/articles/memory-gaps-unremembered-actions/",
       "class": "supporting_brief",
@@ -769,7 +787,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 38,
+    "supporting_brief": 39,
     "literary_guide": 2,
     "hold_for_review": 0
   }
