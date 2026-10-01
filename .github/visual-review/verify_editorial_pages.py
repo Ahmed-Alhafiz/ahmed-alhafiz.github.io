@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Capture and verify the public research-status pages.
+"""Capture and verify editorial pages and multilingual library behavior.
 
 These trust surfaces sit outside the top-page visual matrix. The check is
 intentionally structural: it catches viewport escape,
@@ -180,6 +180,13 @@ def main() -> None:
     try:
         for mode, (width, height) in VIEWPORTS.items():
             configure(driver, width, height)
+            for home in ("/", "/en/", "/de/"):
+                driver.get(f"{BASE}{home}?controls_visual_gate=1")
+                wait_ready(driver)
+                for button in driver.find_elements(By.CSS_SELECTOR, ".home-hero .actions a.btn"):
+                    assert rect(driver, button)["height"] >= 44, f"{mode}/{home}: undersized reading control"
+                    radius = driver.execute_script("return parseFloat(getComputedStyle(arguments[0]).borderTopLeftRadius)", button)
+                    assert radius >= 6, f"{mode}/{home}: legacy flat-link styling overrides the button"
             for name, route, target_selector in PAGES:
                 driver.get(f"{BASE}{route}?editorial_visual_gate=1")
                 wait_ready(driver)
@@ -192,6 +199,8 @@ def main() -> None:
                 if name == "madain-evidence-ar":
                     image = driver.find_element(By.CSS_SELECTOR, target_selector)
                     WebDriverWait(driver, 10).until(lambda browser: browser.execute_script("return arguments[0].complete && arguments[0].naturalWidth > 0", image))
+                    box = rect(driver, image)
+                    assert abs(box["height"] / box["width"] - 760 / 1200) < .01, f"{mode}/{name}: figure aspect ratio distorted"
 
                 target = driver.find_element(By.CSS_SELECTOR, target_selector)
                 driver.execute_script(
