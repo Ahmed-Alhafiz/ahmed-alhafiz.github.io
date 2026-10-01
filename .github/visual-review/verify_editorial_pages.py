@@ -151,7 +151,9 @@ def verify_library(driver: webdriver.Chrome, route: str, name: str, width: int) 
     assert len(schema) == 1
     items = schema[0]["itemListElement"]
     assert schema[0]["numberOfItems"] == len(ordered_links) == len(items)
-    assert [(v["position"], v["url"], v["name"]) for v in items] == [(pos, link.get_attribute("href"), link.text) for pos, link in enumerate(ordered_links, 1)], f"{name}: ItemList differs from visible order/title"
+    assert {v["url"] for v in items} == {v["url"] for v in feed}, f"{name}: schema must use canonical published URLs"
+    # Selenium serves the pages on localhost; compare routes for visible links.
+    assert [(v["position"], urlparse(v["url"]).path, v["name"]) for v in items] == [(pos, urlparse(link.get_attribute("href")).path, link.text) for pos, link in enumerate(ordered_links, 1)], f"{name}: ItemList differs from visible order/title"
     assert driver.find_element(By.CSS_SELECTOR, "html").get_attribute("dir") == ("rtl" if lang == "ar" else "ltr")
     field = driver.find_element(By.ID, "article-search")
     assert field.is_displayed(), f"{name}: search enhancement did not initialize"
