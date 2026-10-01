@@ -68,3 +68,15 @@ jobs:
           path: visual-review
           retention-days: 3
           if-no-files-found: warn
+
+      - name: Upload focused publication screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: focused-publication-visual-review
+          path: |
+            visual-review/editorial-pages/*/umm-abbas-family-ar-*.png
+            visual-review/editorial-pages/*/umm-abbas-book-ar-*.png
+            visual-review/editorial-pages/*/library-ar-*.png
+          retention-days: 3
+          if-no-files-found: error
