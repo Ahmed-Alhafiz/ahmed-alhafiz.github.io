@@ -193,7 +193,11 @@ def main() -> None:
                 wait_ready(driver)
                 portrait = driver.find_element(By.CSS_SELECTOR, ".hero-portrait img, .profile-portrait img")
                 assert "/assets/portraits/" in portrait.get_property("currentSrc"), f"{mode}/{home}: responsive image not selected"
-                assert portrait.get_property("naturalWidth") >= rect(driver, portrait)["width"], f"{mode}/{home}: insufficient portrait resolution"
+                # naturalWidth on a srcset image is density-corrected CSS pixels.
+                # Decode the selected asset independently to measure actual pixels.
+                pixels = driver.execute_async_script("const done=arguments[arguments.length-1], img=new Image(); img.onload=()=>done(img.naturalWidth); img.onerror=()=>done(0); img.src=arguments[0];", portrait.get_property("currentSrc"))
+                density = driver.execute_script("return devicePixelRatio")
+                assert pixels >= rect(driver, portrait)["width"] * density - 1, f"{mode}/{home}: insufficient portrait resolution"
                 imports = driver.execute_script("return Array.from(document.styleSheets).filter(s=>(s.href||'').endsWith('/assets/articles.css')).flatMap(s=>Array.from(s.cssRules)).filter(r=>r.type===3).length")
                 assert imports == 0, f"{mode}/{home}: nested stylesheet waterfall returned"
                 for button in driver.find_elements(By.CSS_SELECTOR, ".home-hero .actions a.btn, .profile-hero .actions a.btn"):
