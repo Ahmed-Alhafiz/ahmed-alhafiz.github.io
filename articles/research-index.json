@@ -11,6 +11,19 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "jinn-existence-quran-sunnah",
+      "title": "هل الجن موجود؟ أدلة القرآن والسنة وحدود الاستدلال على المسّ",
+      "summary": "أدلة وجود الجن في القرآن والسنة، وتفسير آية المسّ وحديث مجرى الدم، مع حدود التشخيص الطبي وصلة مباشرة بالهوامش المظلمة في رواية أم عباس.",
+      "type": "مقال تثقيفي في النصوص الإسلامية",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/jinn-existence-quran-sunnah/"
+    },
+    {
       "slug": "umm-abbas-family-fear",
       "title": "أم عباس: رواية رعب نفسي عن الخوف داخل الأسرة",
       "summary": "قراءة في رواية أم عباس لأحمد الحافظ: كيف يصبح الخوف داخل الأسرة صراعًا على صوت مريم، بين الطبيب والدعم الديني وسلطة الدجل؟",
