@@ -11,6 +11,19 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "hearing-voices-in-head",
+      "title": "سماع أصوات في الرأس: الأسباب وحدود تفسيرها بالمسّ",
+      "summary": "ما أسباب سماع الأصوات؟ وما الفرق عن الأفكار الاقتحامية وتجارب النوم؟ مصادر طبية ودراستان، مع قراءة للهامش المظلم في رواية أم عباس وحدود تفسير المسّ.",
+      "type": "مقال طبي تثقيفي",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/hearing-voices-in-head/"
+    },
+    {
       "slug": "jinn-existence-quran-sunnah",
       "title": "هل الجن موجود؟ أدلة القرآن والسنة وحدود الاستدلال على المسّ",
       "summary": "أدلة وجود الجن في القرآن والسنة، وتفسير آية المسّ وحديث مجرى الدم، مع حدود التشخيص الطبي وصلة مباشرة بالهوامش المظلمة في رواية أم عباس.",
