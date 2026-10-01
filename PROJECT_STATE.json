@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "main",
-  "head_sha": "6d4c24a0eb3200a45fb6889e3be84664f11ce4b4",
-  "head_sha_semantics": "Verified main content merge for approved M6 article PR #124; subsequent documentation checkpoint may add a new main SHA.",
-  "status": "deployed_monitoring",
-  "updated_at": "2026-09-30T18:10:00+00:00",
-  "current_task": "M6 article approved, published and live-verified; 24/24 Sirou supporting-topic roadmap complete.",
-  "next_action": "Audit links and thematic overlap across the completed Sirou cluster; correct concrete issues only, then measure search performance when enough Search Console data appears.",
+  "branch": "design/multilingual-reading-2026-10-01",
+  "head_sha": "1ad6e26f987425f5b1a4cb236c8a3546fea18417",
+  "head_sha_semantics": "First verified responsive release candidate in PR #128; final release head, merge, required checks and Pages deployment are tracked by PR #128 and its linked Actions runs.",
+  "status": "release_tracking",
+  "updated_at": "2026-10-01T07:17:00+02:00",
+  "current_task": "Multilingual reading release PR #128; responsive CI and human review completed for the first candidate, with discovered Arabic button/figure issues corrected and final verification tracked in the PR.",
+  "next_action": "Read PR #128 and its latest checks/deployment to resolve release state; then measure Search Console queries/indexing and compare the three translation-sync candidates. Do not start another overlapping article batch.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
     "pull_request": 124,
@@ -351,5 +351,33 @@
     "pull_request": 124,
     "merge_sha": "6d4c24a0eb3200a45fb6889e3be84664f11ce4b4",
     "verification": "Local and PR gates passed; Pages and live canonical verified. Search indexing and traffic not measured."
+  },
+  "multilingual_ux_release": {
+    "branch": "design/multilingual-reading-2026-10-01",
+    "base_sha": "198ffce331e40352944d66e3fa90cdffa5d8ddf0",
+    "status": "tracked_in_pull_request",
+    "scope": "Professional buttons, localized grouped research hubs, local progressive search, matched trilingual homepage treatment, restored evidence figure, three skip-link targets and two editorial-residue removals. Canonicals and article arguments preserved. Also removes internal-draft wording from Baghdad in three languages while retaining the full evidence boundary; fixes Arabic button specificity and natural article-figure sizing.",
+    "local_checks": "Site, discovery, Arabic UI, UX, entity, public hygiene, editorial, dossiers, citation, research architecture and local visibility passed; IndexNow dry run only.",
+    "translation_coverage": {
+      "arabic_articles": 39,
+      "arabic_literary_guides": 1,
+      "english_articles": 8,
+      "german_articles": 4
+    },
+    "translation_sync_candidates": [
+      "ratq-fatq-big-bang",
+      "water-civilization-power",
+      "teaching-names-ai-understanding"
+    ],
+    "limits": "Date differences flag comparison candidates, not proved translation errors. No full semantic/specialist translation review, current Search Console rankings, or comprehensive external-link validation.",
+    "keyword_inventory": "All 40 primary intents populated and unique; six missing entries derived from existing published H1 with explicit overlap boundaries.",
+    "pull_request": 128,
+    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/128",
+    "responsive_evidence": {
+      "first_run": 36818411602,
+      "result": "success",
+      "screenshots": 358,
+      "human_review": "Reviewed trilingual home and library desktop/narrow-mobile screenshots plus Madain evidence image. Found Arabic legacy-button override and fixed-height figure whitespace; corrected and added responsive regression assertions. Final revision checks and screenshots are tracked in PR #128."
+    }
   }
 }

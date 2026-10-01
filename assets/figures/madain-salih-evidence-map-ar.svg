@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">مدائن صالح وثمود: ثلاثة أسئلة مختلفة</title>
+  <desc id="desc">النص الديني يربط الحجر بثمود، والمكان متعدد الطبقات التاريخية، ومعظم المدافن المشهورة الباقية نبطية. لا تكفي صلة المكان لإثبات هوية كل منشأة.</desc>
+  <rect width="1200" height="760" fill="#f3f0e8"/>
+  <rect x="44" y="44" width="1112" height="672" rx="18" fill="#fffdf8" stroke="#d7cfc1"/>
+  <g font-family="Tahoma, Arial, sans-serif" text-anchor="middle" direction="rtl">
+    <text x="600" y="116" fill="#141a22" font-size="34" font-weight="700">مدائن صالح وثمود</text>
+    <text x="600" y="161" fill="#596773" font-size="24">افصل بين صلة المكان وهوية الآثار الباقية</text>
+    <g fill="#0b1724">
+      <rect x="86" y="210" width="1028" height="122" rx="10"/>
+      <rect x="86" y="352" width="1028" height="122" rx="10"/>
+      <rect x="86" y="494" width="1028" height="122" rx="10"/>
+    </g>
+    <g fill="#e2b18e" font-size="25" font-weight="700">
+      <text x="600" y="252">١ · النص الديني</text>
+      <text x="600" y="394">٢ · المكان التاريخي</text>
+      <text x="600" y="536">٣ · الآثار الباقية</text>
+    </g>
+    <g fill="#ffffff" font-size="25">
+      <text x="600" y="298">صلة الحِجر بثمود في المصادر الإسلامية</text>
+      <text x="600" y="440">تاريخ طويل تعاقبت فيه جماعات وحضارات</text>
+      <text x="600" y="582">معظم المدافن والواجهات المشهورة نبطية</text>
+    </g>
+    <text x="600" y="669" fill="#8b4631" font-size="24" font-weight="700">صلة المكان لا تثبت أن كل منشأة باقية ثمودية</text>
+  </g>
+</svg>
