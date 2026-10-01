@@ -11,6 +11,19 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "jinn-demons-quran-bible-torah",
+      "title": "الجن والشياطين في القرآن والإنجيل والتوراة: هل المعنى واحد؟",
+      "summary": "هل الجن والشياطين مفهوم واحد في القرآن والإنجيل والتوراة؟ مقارنة النصوص والترجمات وحدود تفسير الأعراض، وصلتها برواية أم عباس.",
+      "type": "مقال ديني مقارن",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/"
+    },
+    {
       "slug": "memory-gaps-unremembered-actions",
       "title": "فجوات الذاكرة: لماذا أفعل أشياء لا أتذكرها؟",
       "summary": "لماذا أفعل أشياء لا أتذكرها؟ أسباب فجوات الذاكرة وعلاقتها بالنوم وفقدان الذاكرة التفككي، وحدود تفسيرها بالمسّ في رواية أم عباس.",
