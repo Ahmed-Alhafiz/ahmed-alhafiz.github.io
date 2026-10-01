@@ -27,6 +27,7 @@ VIEWPORTS = {
 }
 PAGES = (
     ("umm-abbas-book-ar", "/books/umm-abbas/", "#research"),
+    ("umm-abbas-memory-ar", "/articles/memory-gaps-unremembered-actions/", ".table-scroll"),
     ("umm-abbas-voices-ar", "/articles/hearing-voices-in-head/", ".table-scroll"),
     ("umm-abbas-jinn-ar", "/articles/jinn-existence-quran-sunnah/", ".references"),
     ("umm-abbas-family-ar", "/articles/umm-abbas-family-fear/", ".related-work"),

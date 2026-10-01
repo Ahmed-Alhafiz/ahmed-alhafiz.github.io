@@ -11,6 +11,19 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "memory-gaps-unremembered-actions",
+      "title": "فجوات الذاكرة: لماذا أفعل أشياء لا أتذكرها؟",
+      "summary": "لماذا أفعل أشياء لا أتذكرها؟ أسباب فجوات الذاكرة وعلاقتها بالنوم وفقدان الذاكرة التفككي، وحدود تفسيرها بالمسّ في رواية أم عباس.",
+      "type": "مقال طبي تثقيفي",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/memory-gaps-unremembered-actions/"
+    },
+    {
       "slug": "hearing-voices-in-head",
       "title": "سماع أصوات في الرأس: الأسباب وحدود تفسيرها بالمسّ",
       "summary": "ما أسباب سماع الأصوات؟ وما الفرق عن الأفكار الاقتحامية وتجارب النوم؟ مصادر طبية ودراستان، مع قراءة للهامش المظلم في رواية أم عباس وحدود تفسير المسّ.",
