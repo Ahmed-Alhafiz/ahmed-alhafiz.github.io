@@ -81,7 +81,7 @@ a.btn.primary:hover,.actions a.btn.primary:hover{background:#213f56;border-color
 .home-hero .actions a.btn.primary:hover,.profile-hero .actions a.btn.primary:hover,.book-hero .actions a.btn.primary:hover,.section.dark .actions a.btn.primary:hover{
   background:#ebbc9a;color:#08131e;
 }
-.reader-home .home-hero .actions a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 18px;border:1px solid #73818c;border-radius:8px;background:rgba(255,255,255,.045);color:#fff;text-decoration:none}
+.reader-home .home-hero .actions a.btn,.profile-hero .actions a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 18px;border:1px solid #73818c;border-radius:8px;background:rgba(255,255,255,.045);color:#fff;text-decoration:none}
 .reader-home .home-hero .actions a.btn.primary{background:#d9a27f;color:#08131e;border-color:#d9a27f}
 .reader-home .home-hero .actions a.btn:hover,.reader-home .home-hero .actions a.btn:focus-visible{background:rgba(255,255,255,.12);border-color:#e3b899}
 .reader-home .home-hero .actions a.btn.primary:hover,.reader-home .home-hero .actions a.btn.primary:focus-visible{background:#ebbc9a;color:#08131e}

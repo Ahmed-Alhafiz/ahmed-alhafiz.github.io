@@ -146,6 +146,12 @@ def verify_library(driver: webdriver.Chrome, route: str, name: str, width: int) 
     expected = {urlparse(item["url"]).path for item in feed}
     actual = {urlparse(link.get_attribute("href")).path for link in driver.find_elements(By.CSS_SELECTOR, ".library-entry h3 a")}
     assert expected == actual, f"{name}: visible library does not match published feed"
+    ordered_links = driver.find_elements(By.CSS_SELECTOR, ".library-entry h3 a")
+    schema = driver.execute_script("return Array.from(document.querySelectorAll('script[type=\"application/ld+json\"]')).flatMap(s=>JSON.parse(s.textContent)['@graph']||[]).filter(n=>n['@type']==='ItemList')")
+    assert len(schema) == 1
+    items = schema[0]["itemListElement"]
+    assert schema[0]["numberOfItems"] == len(ordered_links) == len(items)
+    assert [(v["position"], v["url"], v["name"]) for v in items] == [(pos, link.get_attribute("href"), link.text) for pos, link in enumerate(ordered_links, 1)], f"{name}: ItemList differs from visible order/title"
     assert driver.find_element(By.CSS_SELECTOR, "html").get_attribute("dir") == ("rtl" if lang == "ar" else "ltr")
     field = driver.find_element(By.ID, "article-search")
     assert field.is_displayed(), f"{name}: search enhancement did not initialize"
@@ -180,10 +186,15 @@ def main() -> None:
     try:
         for mode, (width, height) in VIEWPORTS.items():
             configure(driver, width, height)
-            for home in ("/", "/en/", "/de/"):
+            for home in ("/", "/en/", "/de/", "/about/", "/en/about/", "/de/about/"):
                 driver.get(f"{BASE}{home}?controls_visual_gate=1")
                 wait_ready(driver)
-                for button in driver.find_elements(By.CSS_SELECTOR, ".home-hero .actions a.btn"):
+                portrait = driver.find_element(By.CSS_SELECTOR, ".hero-portrait img, .profile-portrait img")
+                assert "/assets/portraits/" in portrait.get_property("currentSrc"), f"{mode}/{home}: responsive image not selected"
+                assert portrait.get_property("naturalWidth") >= rect(driver, portrait)["width"], f"{mode}/{home}: insufficient portrait resolution"
+                imports = driver.execute_script("return Array.from(document.styleSheets).filter(s=>(s.href||'').endsWith('/assets/articles.css')).flatMap(s=>Array.from(s.cssRules)).filter(r=>r.type===3).length")
+                assert imports == 0, f"{mode}/{home}: nested stylesheet waterfall returned"
+                for button in driver.find_elements(By.CSS_SELECTOR, ".home-hero .actions a.btn, .profile-hero .actions a.btn"):
                     assert rect(driver, button)["height"] >= 44, f"{mode}/{home}: undersized reading control"
                     radius = driver.execute_script("return parseFloat(getComputedStyle(arguments[0]).borderTopLeftRadius)", button)
                     assert radius >= 6, f"{mode}/{home}: legacy flat-link styling overrides the button"
