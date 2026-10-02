@@ -29,6 +29,24 @@
   },
   "items": [
     {
+      "slug": "unwanted-intrusive-thoughts-meaning",
+      "url": "https://ahmedalhafiz.com/articles/unwanted-intrusive-thoughts-meaning/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل الأفكار المخيفة غير المرغوبة تعني النية أو الفعل، ومتى تكون وسواسًا؟",
+      "does_not_target": [
+        "تشخيص شخص من فكرة وحدها",
+        "سماع الأصوات وحده",
+        "الفتوى الفردية للوسواس الديني",
+        "إثبات المس من مشهد الرواية"
+      ],
+      "next_action": "measure_query_fit_and_seek_specialist_review",
+      "reason": "Original cross-cultural studies and clinical sources, primary hadith and commentary, plus direct close reading of Umm Abbas pp.178–185."
+    },
+    {
       "slug": "depersonalization-derealization-feeling-unreal",
       "url": "https://ahmedalhafiz.com/articles/depersonalization-derealization-feeling-unreal/",
       "class": "supporting_brief",
@@ -805,7 +823,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 40,
+    "supporting_brief": 41,
     "literary_guide": 2,
     "hold_for_review": 0
   }
