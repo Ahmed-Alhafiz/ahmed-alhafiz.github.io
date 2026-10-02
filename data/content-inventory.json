@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-10-01",
+  "generated": "2026-10-02",
   "site": "https://ahmedalhafiz.com/",
   "policy": {
     "primary_rule": "Do not publish a new URL merely to increase page count. Every indexed page must answer a distinct question, provide unique value, and disclose its evidence and review status.",
@@ -28,6 +28,23 @@
     "hold_for_review": "Retained while overlap, traffic, external links, and consolidation risk are measured."
   },
   "items": [
+    {
+      "slug": "cyberbullying-university-rumor-stigma",
+      "url": "https://ahmedalhafiz.com/articles/cyberbullying-university-rumor-stigma/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "كيف أتعامل مع التنمر الإلكتروني بين طلاب الجامعة والشائعة والوصمة؟",
+      "does_not_target": [
+        "تشخيص مريم أو شخص حقيقي",
+        "نسبة كل أعراض الصحة النفسية إلى التنمر",
+        "تقرير وقوع جريمة أو نسبة الرسائل لشخص معين"
+      ],
+      "next_action": "measure_query_fit_and_seek_specialist_review",
+      "reason": "UNICEF, PLOS Mental Health review, original bystander and stigma studies, WHO, al-Tabari; close reading of Umm Abbas chapter 4."
+    },
     {
       "slug": "fear-physical-symptoms-umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/fear-physical-symptoms-umm-abbas/",
