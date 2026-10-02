@@ -75,6 +75,7 @@ jobs:
         with:
           name: focused-publication-visual-review
           path: |
+            visual-review/editorial-pages/*/umm-abbas-intrusive-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-dpdr-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-scriptures-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-memory-ar-*.png

@@ -7,9 +7,22 @@
     "profile": "https://ahmedalhafiz.com/about/"
   },
   "review_register": "https://ahmedalhafiz.com/research-status/",
-  "generated": "2026-10-01",
+  "generated": "2026-10-02",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
+    {
+      "slug": "unwanted-intrusive-thoughts-meaning",
+      "title": "تأتيني أفكار مخيفة لا أريدها: هل تعني أنني سأفعلها؟",
+      "summary": "هل تعني الأفكار المخيفة أنك تريد فعلها؟ شرح للأفكار الاقتحامية والوسواس والفرق بين الخاطر والنية، مع قراءة لمشهد مريم في رواية أم عباس.",
+      "type": "مقال طبي تثقيفي وقراءة أدبية",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/unwanted-intrusive-thoughts-meaning/"
+    },
     {
       "slug": "depersonalization-derealization-feeling-unreal",
       "title": "تبدد الشخصية وتبدد الواقع: الأعراض والأسباب",

@@ -12,12 +12,12 @@
     "robots": "https://ahmedalhafiz.com/robots.txt"
   },
   "technical_baseline": {
-    "public_html_pages": 94,
-    "canonical_urls": 94,
-    "sitemap_urls": 94,
-    "research_items": 46,
+    "public_html_pages": 95,
+    "canonical_urls": 95,
+    "sitemap_urls": 95,
+    "research_items": 47,
     "complete_bilingual_pillars": 4,
-    "arabic_feed_items": 46,
+    "arabic_feed_items": 47,
     "english_feed_items": 8,
     "oai_searchbot": "explicitly_allowed",
     "gptbot": "explicitly_allowed",

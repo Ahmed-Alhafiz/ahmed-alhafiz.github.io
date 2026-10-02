@@ -2,22 +2,22 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/umm-abbas-dpdr-2026-10-01",
-  "head_sha": "420f8b0e669de0676f1d30cd9ac90909eded0886",
-  "head_sha_semantics": "Verified base; release head, checks and deployment tracked in the publication pull request.",
+  "branch": "content/umm-abbas-intrusive-2026-10-02",
+  "head_sha": "e816229d803754b0176aaf44acc845b0d9b01dfb",
+  "head_sha_semantics": "Verified remote main base; new article release head, CI and deployment will be tracked in the pull request.",
   "status": "in_progress",
-  "updated_at": "2026-10-01T18:12:04+02:00",
-  "current_task": "Publish the adopted depersonalization/derealization article with ten references and explicit clinical and religious limits.",
-  "next_action": "Complete source and responsive gates, merge and verify live; then research unwanted intrusive thoughts as a distinct next article.",
+  "updated_at": "2026-10-02T12:50:59+02:00",
+  "current_task": "Publish author-approved Arabic article on unwanted intrusive thoughts and Umm Abbas, with 13 references and explicit medical and religious limits.",
+  "next_action": "Review source diff and responsive evidence, pass PR gates, merge and verify live; then start the next distinct Umm Abbas topic.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
-    "pull_request": 134,
-    "merge_sha": "420f8b0e669de0676f1d30cd9ac90909eded0886",
+    "pull_request": 135,
+    "merge_sha": "e816229d803754b0176aaf44acc845b0d9b01dfb",
     "articles": [
-      "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/"
+      "https://ahmedalhafiz.com/articles/depersonalization-derealization-feeling-unreal/"
     ],
-    "verification": "Six PR gates, ten actual screenshots, Pages36883777812 and live HTTP/browser passed; visibility36883778877 attempt2 and IndexNow36883778996 transport200 passed.",
-    "inventory": "93 public HTML pages;45 Arabic,8 English,4 German library entries."
+    "verification": "Six PR gates, visual screenshots, Pages and live HTTP/browser passed; visibility retried after deployment and IndexNow transport passed.",
+    "inventory": "94 public HTML pages;46 Arabic,8 English,4 German library entries."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,

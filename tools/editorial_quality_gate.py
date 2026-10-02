@@ -14,6 +14,7 @@ RULES={
  'articles/hearing-voices-in-head/index.html':dict(words=1800,sources=9,book='books/umm-abbas/index.html',route='/articles/hearing-voices-in-head/',medical=True,extended=False),
  'articles/memory-gaps-unremembered-actions/index.html':dict(words=1800,sources=12,book='books/umm-abbas/index.html',route='/articles/memory-gaps-unremembered-actions/',medical=True,extended=False),
  'articles/jinn-demons-quran-bible-torah/index.html':dict(words=2100,sources=18,book='books/umm-abbas/index.html',route='/articles/jinn-demons-quran-bible-torah/',medical=False,clinical_context=True,extended=False),
+ 'articles/unwanted-intrusive-thoughts-meaning/index.html':dict(words=1800,sources=12,book='books/umm-abbas/index.html',route='/articles/unwanted-intrusive-thoughts-meaning/',medical=True,extended=False),
  'articles/depersonalization-derealization-feeling-unreal/index.html':dict(words=1800,sources=10,book='books/umm-abbas/index.html',route='/articles/depersonalization-derealization-feeling-unreal/',medical=True,extended=False),
  'articles/jinn-existence-quran-sunnah/index.html':dict(words=1700,sources=15,book='books/umm-abbas/index.html',route='/articles/jinn-existence-quran-sunnah/',medical=False,extended=False),
  'articles/ai-soul-consciousness-understanding-taklif/index.html':dict(words=3300,sources=12,book='books/sirou-fi-alard/index.html',route='/articles/ai-soul-consciousness-understanding-taklif/',medical=False,extended=False),
