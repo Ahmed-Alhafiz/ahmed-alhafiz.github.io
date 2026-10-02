@@ -353,6 +353,10 @@ def validate_html(errors: list[str]) -> None:
                 continue
             for node in iter_nodes(data):
                 if isinstance(node, dict) and node_has_type(node, "Person"):
+                    # A Dataset creator may embed a typed reference to the one
+                    # canonical author without repeating the full profile node.
+                    if node == {"@type": "Person", "@id": AUTHOR_ID, "name": AUTHOR_NAME}:
+                        continue
                     person_count += 1
                     page_person_count += 1
                     validate_person(node, f"{rel} JSON-LD block {index}", errors)

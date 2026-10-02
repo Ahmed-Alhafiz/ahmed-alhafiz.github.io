@@ -7,6 +7,7 @@ feed/manifest integrity, and publication-safety rules for forthcoming books.
 """
 from __future__ import annotations
 import argparse, json, re, struct, sys, xml.etree.ElementTree as ET
+from datetime import datetime
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from pathlib import Path
@@ -254,6 +255,20 @@ def main()->int:
     for p,q in pages.items():
         if not q.canonical:continue
         if q.canonical not in urls:errors.append(f'{p.relative_to(root)}: canonical absent from sitemap');continue
+        for raw in q.jsonld_raw:
+            for node in iter_jsonld_nodes(json.loads(raw)):
+                if not isinstance(node,dict):continue
+                if node.get('@type')=='Dataset':
+                    creator=node.get('creator')
+                    if not node.get('description') or not isinstance(creator,dict) or creator.get('@type') not in {'Person','Organization'}:
+                        errors.append(f'{p.relative_to(root)}: Dataset requires a real description and typed creator')
+                if node.get('@type')!='ProfilePage' or node.get('url')!=q.canonical:continue
+                modified=node.get('dateModified','')
+                try:
+                    if not re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})',modified) or datetime.fromisoformat(modified.replace('Z','+00:00')).tzinfo is None:
+                        raise ValueError('expected timezone-aware ISO 8601 DateTime')
+                except (TypeError, ValueError):
+                    errors.append(f'{p.relative_to(root)}: ProfilePage.dateModified must be ISO 8601 DateTime with timezone')
         dates=canonical_modified_dates(q,q.canonical)
         if len(dates)!=1:
             errors.append(f'{p.relative_to(root)}: expected one canonical JSON-LD dateModified, found {sorted(dates)}')
