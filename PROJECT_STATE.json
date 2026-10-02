@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/umm-abbas-fear-body-2026-10-02",
-  "head_sha": "2682a18a632bcf5cce23b667fb299377b31a0553",
+  "branch": "content/umm-abbas-cyberbullying-2026-10-02",
+  "head_sha": "d238961fa4d749ee94a856f36417f296134aa2ba",
   "head_sha_semantics": "Verified remote main base; publication PR head and deployment will be tracked in the pull request.",
   "status": "in_progress",
-  "updated_at": "2026-10-02T18:24:25+02:00",
-  "current_task": "Publish author-approved Arabic article on genuine physical symptoms of fear in Umm Abbas with explicit clinical and religious limits.",
-  "next_action": "Run PR checks and focused visual review; merge, verify Pages and live article, then prepare remaining distinct Umm Abbas topic.",
+  "updated_at": "2026-10-02T23:30:00+02:00",
+  "current_task": "Publish the cyberbullying, rumor and stigma article linked directly to Umm Abbas chapter 4.",
+  "next_action": "Review PR139 checks and responsive screenshots, merge, verify Pages and live URL; next distinct topics: history and method of proving phenomena.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
     "pull_request": 137,
@@ -480,10 +480,23 @@
     "merge_sha": "2682a18a632bcf5cce23b667fb299377b31a0553"
   },
   "umm_abbas_fear_release": {
-    "status": "in_progress",
+    "status": "merged_deployed_live_verified",
     "url": "https://ahmedalhafiz.com/articles/fear-physical-symptoms-umm-abbas/",
     "source": "approved private draft, corrected Quran verse sequence and expanded clinically bounded explanation",
     "external_specialist_review": "not_completed",
-    "remaining_original_article_topics": 3
+    "remaining_original_article_topics": 3,
+    "pull_request": 138,
+    "merge_sha": "d238961fa4d749ee94a856f36417f296134aa2ba"
+  },
+  "umm_abbas_cyberbullying_release": {
+    "status": "pr_open_checks_running",
+    "url": "https://ahmedalhafiz.com/articles/cyberbullying-university-rumor-stigma/",
+    "branch": "content/umm-abbas-cyberbullying-2026-10-02",
+    "base_sha": "d238961fa4d749ee94a856f36417f296134aa2ba",
+    "pull_request": 139,
+    "source": "Private novel chapter 4, printed pp.55–64; author-approved revised article",
+    "external_specialist_review": "not_completed",
+    "keyword_volume": "not_measured",
+    "remaining_original_article_topics": 2
   }
 }
