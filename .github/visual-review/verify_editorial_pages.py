@@ -27,6 +27,7 @@ VIEWPORTS = {
 }
 PAGES = (
     ("umm-abbas-book-ar", "/books/umm-abbas/", "#research"),
+    ("umm-abbas-cyberbullying-ar", "/articles/cyberbullying-university-rumor-stigma/", ".references"),
     ("umm-abbas-fear-ar", "/articles/fear-physical-symptoms-umm-abbas/", ".references"),
     ("umm-abbas-sleepwalking-ar", "/articles/sleepwalking-why-no-memory/", ".references"),
     ("umm-abbas-intrusive-ar", "/articles/unwanted-intrusive-thoughts-meaning/", ".references"),
