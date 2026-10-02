@@ -29,6 +29,24 @@
   },
   "items": [
     {
+      "slug": "hexagram-magic-seal-of-solomon-umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/hexagram-magic-seal-of-solomon-umm-abbas/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل النجمة السداسية على ورقة دليل سحر، وما معنى خاتم سليمان؟",
+      "does_not_target": [
+        "إثبات أثر غيبي برمز هندسي",
+        "الجزم بدين مالك قطعة مجهولة",
+        "نسبة رسم نجمة سداسية إلى القرآن",
+        "الحكم الفقهي على فرد أو قطعة بلا سياق"
+      ],
+      "next_action": "measure_query_fit_and_seek_specialist_review",
+      "reason": "Primary museum object catalogues, Quran and al-Tabari; close reading of Umm Abbas pages 4–5 and 9–10."
+    },
+    {
       "slug": "cyberbullying-university-rumor-stigma",
       "url": "https://ahmedalhafiz.com/articles/cyberbullying-university-rumor-stigma/",
       "class": "supporting_brief",
@@ -876,7 +894,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 44,
+    "supporting_brief": 45,
     "literary_guide": 2,
     "hold_for_review": 0
   }

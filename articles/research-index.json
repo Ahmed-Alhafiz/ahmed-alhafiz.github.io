@@ -11,6 +11,19 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "hexagram-magic-seal-of-solomon-umm-abbas",
+      "title": "النجمة السداسية: هل تدل على السحر؟ وما معنى خاتم سليمان؟",
+      "summary": "هل وجود النجمة السداسية على ورقة يعني أنها طلسم؟ شواهد متحفية، وحدود النص القرآني، وقراءة انتقال الرمز من فيديو إلى دفتر مريم في رواية أم عباس.",
+      "type": "مقال تاريخي وقراءة أدبية",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/hexagram-magic-seal-of-solomon-umm-abbas/"
+    },
+    {
       "slug": "cyberbullying-university-rumor-stigma",
       "title": "التنمر الإلكتروني بين طلاب الجامعة: كيف توقف الشائعة والوصمة؟",
       "summary": "كيف تتحول رسائل مجموعة الجامعة إلى شائعة ووصمة؟ دليل للتعامل مع التنمر الإلكتروني، وقراءة مشهد مريم ورنا في رواية «أم عباس» لأحمد الحافظ.",

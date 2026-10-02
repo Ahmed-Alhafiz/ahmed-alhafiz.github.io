@@ -75,6 +75,7 @@ jobs:
         with:
           name: focused-publication-visual-review
           path: |
+            visual-review/editorial-pages/*/umm-abbas-hexagram-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-cyberbullying-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-fear-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-sleepwalking-ar-*.png
