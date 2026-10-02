@@ -29,6 +29,24 @@
   },
   "items": [
     {
+      "slug": "fear-physical-symptoms-umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/fear-physical-symptoms-umm-abbas/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل الخوف يسبب أعراضًا جسدية حقيقية، وكيف نفصل خبرة الشخص عن سبب العرض؟",
+      "does_not_target": [
+        "تشخيص مريم أو أي قارئ",
+        "المشي أثناء النوم والذاكرة",
+        "إثبات المس من أعراض جسدية",
+        "الإغناء عن التقييم العاجل عند ألم الصدر أو ضيق النفس"
+      ],
+      "next_action": "measure_query_fit_and_seek_specialist_review",
+      "reason": "WHO, NIMH, Mayo Clinic and NHS guidance, Quran 12:84–86 and al-Tabari, close reading of Umm Abbas pp.99–100,138,253–262."
+    },
+    {
       "slug": "sleepwalking-why-no-memory",
       "url": "https://ahmedalhafiz.com/articles/sleepwalking-why-no-memory/",
       "class": "supporting_brief",
@@ -841,7 +859,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 42,
+    "supporting_brief": 43,
     "literary_guide": 2,
     "hold_for_review": 0
   }

@@ -10,6 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'articles/fear-physical-symptoms-umm-abbas/index.html':dict(words=1750,sources=8,book='books/umm-abbas/index.html',route='/articles/fear-physical-symptoms-umm-abbas/',medical=True,extended=False),
  'articles/sleepwalking-why-no-memory/index.html':dict(words=1800,sources=9,book='books/umm-abbas/index.html',route='/articles/sleepwalking-why-no-memory/',medical=True,extended=False),
 
  'articles/hearing-voices-in-head/index.html':dict(words=1800,sources=9,book='books/umm-abbas/index.html',route='/articles/hearing-voices-in-head/',medical=True,extended=False),
@@ -169,3 +170,4 @@ def main():
   print('\nERRORS');[print('-',x) for x in errors];return 1
  print(f'\nPASS: {len(RULES)} research pages satisfy depth, evidence, transparency, linking, bilingual and medical-safety gates');return 0
 if __name__=='__main__':sys.exit(main())
+

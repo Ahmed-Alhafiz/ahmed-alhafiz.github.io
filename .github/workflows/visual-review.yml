@@ -75,6 +75,7 @@ jobs:
         with:
           name: focused-publication-visual-review
           path: |
+            visual-review/editorial-pages/*/umm-abbas-fear-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-sleepwalking-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-intrusive-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-dpdr-ar-*.png
@@ -87,3 +88,4 @@ jobs:
             visual-review/editorial-pages/*/library-ar-*.png
           retention-days: 3
           if-no-files-found: error
+

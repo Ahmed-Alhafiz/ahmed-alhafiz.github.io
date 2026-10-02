@@ -27,6 +27,7 @@ VIEWPORTS = {
 }
 PAGES = (
     ("umm-abbas-book-ar", "/books/umm-abbas/", "#research"),
+    ("umm-abbas-fear-ar", "/articles/fear-physical-symptoms-umm-abbas/", ".references"),
     ("umm-abbas-sleepwalking-ar", "/articles/sleepwalking-why-no-memory/", ".references"),
     ("umm-abbas-intrusive-ar", "/articles/unwanted-intrusive-thoughts-meaning/", ".references"),
     ("umm-abbas-dpdr-ar", "/articles/depersonalization-derealization-feeling-unreal/", ".references"),
@@ -252,3 +253,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

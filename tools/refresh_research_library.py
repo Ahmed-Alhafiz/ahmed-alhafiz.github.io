@@ -19,7 +19,7 @@ TOPICS = {
     "cosmos": "quran-science-method-evidence ratq-fatq-big-bang six-days-creation-cosmic-time before-big-bang-science-limits age-of-universe-13-8-billion-years universe-expansion-wa-inna-lamusiun quran-day-thousand-fifty-thousand-years-relativity anzalna-iron-meteorites green-tree-fire-photosynthesis difference-light-nur-quran-sun-moon iron-fire-light-matter-energy".split(),
     "mind": "adam-all-languages-origin-language how-concepts-form-adam-names-scientific-models teaching-names-ai-understanding turing-test-ai-consciousness ai-soul-consciousness-understanding-taklif brain-consciousness-spirit-limits human-embryo-quran-stages dna-code-genetic-information water-life-molecular-properties".split(),
     "history": "civilization-knowledge-justice-collapse water-civilization-power river-civilizations-water-state marib-dam-sayl-al-arim how-khufu-pyramid-built-merer-diary madain-salih-thamud-nabataean-tombs mesopotamia-irrigation-soil-salinity-collapse nile-ancient-egypt-flood-calendar-state injustice-fall-of-states-quran-history writing-changed-human-history fall-of-baghdad-1258-ibn-al-alqami juhayman-grand-mosque-1979".split(),
-    "psychology": "sleepwalking-why-no-memory unwanted-intrusive-thoughts-meaning depersonalization-derealization-feeling-unreal jinn-demons-quran-bible-torah memory-gaps-unremembered-actions hearing-voices-in-head jinn-existence-quran-sunnah possession-or-neurological-psychological-disorder functional-seizures-vs-epilepsy sleep-paralysis-jathoom religious-ocd-scrupulosity spiritual-healing-exploitation-safeguarding diagnostic-uncertainty-family-fear-coercive-authority how-certainty-becomes-violence".split(),
+    "psychology": "fear-physical-symptoms-umm-abbas sleepwalking-why-no-memory unwanted-intrusive-thoughts-meaning depersonalization-derealization-feeling-unreal jinn-demons-quran-bible-torah memory-gaps-unremembered-actions hearing-voices-in-head jinn-existence-quran-sunnah possession-or-neurological-psychological-disorder functional-seizures-vs-epilepsy sleep-paralysis-jathoom religious-ocd-scrupulosity spiritual-healing-exploitation-safeguarding diagnostic-uncertainty-family-fear-coercive-authority how-certainty-becomes-violence".split(),
     "literature": ["arabic-psychological-horror", "umm-abbas-family-fear"],
 }
 COPY = {
@@ -133,3 +133,4 @@ if __name__ == "__main__":
     register = json.loads((ROOT / "articles/research-index.json").read_text())["items"]
     for language in COPY:
         build(language, register)
+
