@@ -36,6 +36,9 @@ jobs:
           tools/indexnow_submit.py
           tools/public_presentation_hygiene.py
 
+      - name: Verify article-to-book event routing
+        run: node tools/analytics_event_integrity.js
+
       - name: Parse XML JSON feeds evidence manifests figures and every JSON-LD block
         shell: bash
         run: |
