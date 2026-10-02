@@ -11,6 +11,19 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "cyberbullying-university-rumor-stigma",
+      "title": "التنمر الإلكتروني بين طلاب الجامعة: كيف توقف الشائعة والوصمة؟",
+      "summary": "كيف تتحول رسائل مجموعة الجامعة إلى شائعة ووصمة؟ دليل للتعامل مع التنمر الإلكتروني، وقراءة مشهد مريم ورنا في رواية «أم عباس» لأحمد الحافظ.",
+      "type": "مقال اجتماعي تثقيفي وقراءة أدبية",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/cyberbullying-university-rumor-stigma/"
+    },
+    {
       "slug": "fear-physical-symptoms-umm-abbas",
       "title": "هل يسبب الخوف أعراضًا جسدية حقيقية؟ قراءة في جسد مريم في «أم عباس»",
       "summary": "هل يمكن للخوف أن يسبب خفقانًا ورجفة وغثيانًا حقيقيًا؟ شرح طبي بحدود واضحة، وقراءة لمشهد مريم في رواية «أم عباس» لأحمد الحافظ.",
