@@ -2,22 +2,22 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/umm-abbas-hexagram-2026-10-02",
-  "head_sha": "5980a6e59b970425e7abddb48a6cb621add05f11",
-  "head_sha_semantics": "Verified main base before the article PR; publication tracked in the pull request.",
-  "status": "in_progress",
-  "updated_at": "2026-10-02T23:30:00+02:00",
-  "current_task": "Publish historical hexagram and Seal of Solomon article directly tied to Umm Abbas pages 4–5 and 9–10.",
-  "next_action": "Review PR checks and responsive screenshots, merge, verify Pages and live URL; then methodology of evidence topic.",
+  "branch": "main",
+  "head_sha": "b6395268722e38b34418ffd399df1aae43230ece",
+  "head_sha_semantics": "Published merge #140; a one-page formatting follow-up is in review.",
+  "status": "merged_deployed_live_verified",
+  "updated_at": "2026-10-03T00:10:00+02:00",
+  "current_task": "Historical hexagram and Seal of Solomon article published; fix visible markdown residue in a follow-up PR.",
+  "next_action": "Merge formatting fix after CI, verify live; next distinct original-plan topic is methodology of evidence and phenomena.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
-    "pull_request": 137,
-    "merge_sha": "2682a18a632bcf5cce23b667fb299377b31a0553",
+    "pull_request": 140,
+    "merge_sha": "b6395268722e38b34418ffd399df1aae43230ece",
     "articles": [
-      "https://ahmedalhafiz.com/articles/sleepwalking-why-no-memory/"
+      "https://ahmedalhafiz.com/articles/hexagram-magic-seal-of-solomon-umm-abbas/"
     ],
-    "verification": "PR gates, Pages and live article verified; visibility monitor success on second attempt after deployment. Indexing and traffic not measured.",
-    "inventory": "96 public HTML pages and 48 Arabic research items before the fear article release."
+    "verification": "Six PR checks passed; Pages completed and live title/body/book/source links verified; visibility monitor passed after deployment on second attempt. Formatting follow-up pending.",
+    "inventory": "99 public HTML pages, 51 Arabic research items, 45 supporting briefs."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
