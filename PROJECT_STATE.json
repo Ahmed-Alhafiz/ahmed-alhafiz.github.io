@@ -2,22 +2,22 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/umm-abbas-intrusive-2026-10-02",
-  "head_sha": "e816229d803754b0176aaf44acc845b0d9b01dfb",
-  "head_sha_semantics": "Verified remote main base; new article release head, CI and deployment will be tracked in the pull request.",
+  "branch": "content/umm-abbas-sleepwalking-2026-10-02",
+  "head_sha": "cc721f9f1ad303bbdd893d9ea8770661f13c9807",
+  "head_sha_semantics": "Verified remote main base; publication PR head and deployment will be tracked in the pull request.",
   "status": "in_progress",
-  "updated_at": "2026-10-02T12:50:59+02:00",
-  "current_task": "Publish author-approved Arabic article on unwanted intrusive thoughts and Umm Abbas, with 13 references and explicit medical and religious limits.",
-  "next_action": "Review source diff and responsive evidence, pass PR gates, merge and verify live; then start the next distinct Umm Abbas topic.",
+  "updated_at": "2026-10-02T17:34:15+02:00",
+  "current_task": "Publish author-approved Arabic article on sleepwalking and memory, grounded in Umm Abbas, with 10 references and explicit clinical and religious limits.",
+  "next_action": "Check the full source diff, run PR gates and focused visual review, merge and verify live, then begin the next distinct Umm Abbas topic.",
   "latest_approved_revision": {
     "status": "merged_deployed_live_verified",
-    "pull_request": 135,
-    "merge_sha": "e816229d803754b0176aaf44acc845b0d9b01dfb",
+    "pull_request": 136,
+    "merge_sha": "cc721f9f1ad303bbdd893d9ea8770661f13c9807",
     "articles": [
-      "https://ahmedalhafiz.com/articles/depersonalization-derealization-feeling-unreal/"
+      "https://ahmedalhafiz.com/articles/unwanted-intrusive-thoughts-meaning/"
     ],
-    "verification": "Six PR gates, visual screenshots, Pages and live HTTP/browser passed; visibility retried after deployment and IndexNow transport passed.",
-    "inventory": "94 public HTML pages;46 Arabic,8 English,4 German library entries."
+    "verification": "PR gates, Pages deployment and live article checked per PR #136; indexing/traffic and specialist review not measured.",
+    "inventory": "95 public HTML pages; 47 Arabic research items before the sleepwalking release."
   },
   "sirou_work_batch_policy": {
     "maximum_articles_per_batch": 2,
@@ -465,5 +465,16 @@
     "scope": "One Arabic medical educational article, reciprocal links, inventory/feed/sitemap and responsive coverage.",
     "limits": "No external specialist review, new translation, measured keyword volume, indexing or ranking result.",
     "next": "Complete source and responsive gates, merge and verify live; then research unwanted intrusive thoughts as a distinct next article."
+  },
+  "umm_abbas_sleepwalking_release": {
+    "authorized_at": "2026-10-02T17:31:13+02:00",
+    "status": "in_progress",
+    "url": "https://ahmedalhafiz.com/articles/sleepwalking-why-no-memory/",
+    "branch": "content/umm-abbas-sleepwalking-2026-10-02",
+    "base_sha": "cc721f9f1ad303bbdd893d9ea8770661f13c9807",
+    "source": "Library article version 7 approved after revision",
+    "scope": "One Arabic article and its book/hub/feed/sitemap/review-register connections; no manuscript upload, no invented translation.",
+    "independent_review": "not_completed",
+    "next": "PR, CI and responsive screenshots, merge, live check; then start one distinct topic."
   }
 }

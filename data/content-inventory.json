@@ -29,6 +29,24 @@
   },
   "items": [
     {
+      "slug": "sleepwalking-why-no-memory",
+      "url": "https://ahmedalhafiz.com/articles/sleepwalking-why-no-memory/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "لماذا لا أتذكر ما فعلته أثناء النوم، وما حدود تفسير فعل ليلي من دون شاهد؟",
+      "does_not_target": [
+        "فجوات الذاكرة خارج النوم",
+        "تشخيص مريم من مشهد الرواية",
+        "إثبات المس من نسيان فعل ليلي",
+        "فتوى مسؤولية النائم في واقعة فردية"
+      ],
+      "next_action": "measure_query_fit_and_seek_specialist_review",
+      "reason": "NHS and Mayo clinical guidance, original adult arousal study, primary religious sources, and close reading of Umm Abbas pp.71–80,121–139."
+    },
+    {
       "slug": "unwanted-intrusive-thoughts-meaning",
       "url": "https://ahmedalhafiz.com/articles/unwanted-intrusive-thoughts-meaning/",
       "class": "supporting_brief",
@@ -823,7 +841,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 41,
+    "supporting_brief": 42,
     "literary_guide": 2,
     "hold_for_review": 0
   }

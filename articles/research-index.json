@@ -11,6 +11,19 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "sleepwalking-why-no-memory",
+      "title": "المشي أثناء النوم: لماذا لا أتذكر ما فعلته؟",
+      "summary": "تستيقظ في مكان آخر ولا تذكر كيف وصلت؟ تعرّف إلى المشي أثناء النوم وحدود النسيان كدليل، واقرأ مشاهد مريم وسجل أبيها في رواية «أم عباس».",
+      "type": "مقال طبي تثقيفي وقراءة أدبية",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/sleepwalking-why-no-memory/"
+    },
+    {
       "slug": "unwanted-intrusive-thoughts-meaning",
       "title": "تأتيني أفكار مخيفة لا أريدها: هل تعني أنني سأفعلها؟",
       "summary": "هل تعني الأفكار المخيفة أنك تريد فعلها؟ شرح للأفكار الاقتحامية والوسواس والفرق بين الخاطر والنية، مع قراءة لمشهد مريم في رواية أم عباس.",

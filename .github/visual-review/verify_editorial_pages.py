@@ -27,6 +27,7 @@ VIEWPORTS = {
 }
 PAGES = (
     ("umm-abbas-book-ar", "/books/umm-abbas/", "#research"),
+    ("umm-abbas-sleepwalking-ar", "/articles/sleepwalking-why-no-memory/", ".references"),
     ("umm-abbas-intrusive-ar", "/articles/unwanted-intrusive-thoughts-meaning/", ".references"),
     ("umm-abbas-dpdr-ar", "/articles/depersonalization-derealization-feeling-unreal/", ".references"),
     ("umm-abbas-scriptures-ar", "/articles/jinn-demons-quran-bible-torah/", ".table-scroll"),
