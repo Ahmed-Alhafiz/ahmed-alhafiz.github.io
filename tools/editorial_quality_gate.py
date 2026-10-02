@@ -170,4 +170,3 @@ def main():
   print('\nERRORS');[print('-',x) for x in errors];return 1
  print(f'\nPASS: {len(RULES)} research pages satisfy depth, evidence, transparency, linking, bilingual and medical-safety gates');return 0
 if __name__=='__main__':sys.exit(main())
-

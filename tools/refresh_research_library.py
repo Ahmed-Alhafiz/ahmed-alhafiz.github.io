@@ -133,4 +133,3 @@ if __name__ == "__main__":
     register = json.loads((ROOT / "articles/research-index.json").read_text())["items"]
     for language in COPY:
         build(language, register)
-

@@ -88,4 +88,3 @@ jobs:
             visual-review/editorial-pages/*/library-ar-*.png
           retention-days: 3
           if-no-files-found: error
-
