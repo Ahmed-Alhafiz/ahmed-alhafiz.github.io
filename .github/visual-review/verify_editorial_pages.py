@@ -38,6 +38,8 @@ PAGES = (
     ("umm-abbas-voices-ar", "/articles/hearing-voices-in-head/", ".table-scroll"),
     ("umm-abbas-jinn-ar", "/articles/jinn-existence-quran-sunnah/", ".references"),
     ("umm-abbas-family-ar", "/articles/umm-abbas-family-fear/", ".related-work"),
+    ("umm-abbas-family-en", "/en/articles/umm-abbas-family-fear/", ".related-work"),
+    ("umm-abbas-family-de", "/de/articles/umm-abbas-family-fear/", ".related-work"),
     ("research-status-ar", "/research-status/", ".evidence-table"),
     ("research-status-en", "/en/research-status/", ".evidence-table"),
     ("mesopotamia-salinity-ar", "/articles/mesopotamia-irrigation-soil-salinity-collapse/", ".source-list"),
