@@ -6,7 +6,7 @@ authors:
   - family-names: "Alhafiz"
     given-names: "Ahmed"
     affiliation: "Independent author and researcher"
-version: "1.0"
+version: "1.1"
 date-released: 2026-09-25
 url: "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/claims.json"
 repository-code: "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io"
@@ -20,5 +20,5 @@ preferred-citation:
   title: "Why Did Baghdad Fall in 1258? The Ibn al-Alqami Question"
   year: 2026
   month: 9
-  version: "1.0"
+  version: "1.1"
   url: "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/"
