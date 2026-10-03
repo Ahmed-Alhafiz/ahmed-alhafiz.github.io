@@ -169,6 +169,10 @@ def verify_library(driver: webdriver.Chrome, route: str, name: str, width: int) 
     # Selenium serves the pages on localhost; compare routes for visible links.
     assert [(v["position"], urlparse(v["url"]).path, v["name"]) for v in items] == [(pos, urlparse(link.get_attribute("href")).path, link.text) for pos, link in enumerate(ordered_links, 1)], f"{name}: ItemList differs from visible order/title"
     assert driver.find_element(By.CSS_SELECTOR, "html").get_attribute("dir") == ("rtl" if lang == "ar" else "ltr")
+    reject = driver.find_elements(By.CSS_SELECTOR, "#analytics-consent button[data-consent='denied']")
+    if reject:
+        reject[0].click()
+        WebDriverWait(driver, 5).until(lambda _: not driver.find_elements(By.ID, "analytics-consent"))
     field = driver.find_element(By.ID, "article-search")
     assert field.is_displayed(), f"{name}: search enhancement did not initialize"
     query = {"ar": "الْوَعْي", "en": "Baghdad", "de": "Bagdad"}[lang]
