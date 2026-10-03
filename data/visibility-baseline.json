@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "baseline_date": "2026-09-30",
+  "baseline_date": "2026-10-03",
   "site": {
     "canonical_origin": "https://ahmedalhafiz.com",
     "canonical_author_id": "https://ahmedalhafiz.com/#person",
@@ -12,9 +12,9 @@
     "robots": "https://ahmedalhafiz.com/robots.txt"
   },
   "technical_baseline": {
-    "public_html_pages": 101,
-    "canonical_urls": 101,
-    "sitemap_urls": 101,
+    "public_html_pages": 104,
+    "canonical_urls": 104,
+    "sitemap_urls": 104,
     "research_items": 51,
     "complete_bilingual_pillars": 4,
     "arabic_feed_items": 51,
