@@ -176,10 +176,21 @@ def index_data():
         if unsupported: die(f"{s}: unsupported declared languages: {sorted(unsupported)}")
         multilingual(x)
         if "de" in x["languages"]:
-            expected_citations = x.get("primary_sources", [])
-            if len(expected_citations) < 3: die(f"{s}: multilingual guide lacks primary-source inventory")
-            for lang_url in (x["url"], x["english_url"], x["german_url"]):
-                citation_graph(lang_url, expected_citations)
+            # An author's reading of an unpublished novel is not a sourced
+            # research guide. Require a declared source work and manuscript
+            # reading notes, not three invented independent sources.
+            if x["type"] == "قراءة أدبية في عمل المؤلف":
+                if x.get("source_work") != "https://ahmedalhafiz.com/books/umm-abbas/":
+                    die(f"{s}: literary reading lacks the declared source work")
+                for lang_url in (x["url"], x["english_url"], x["german_url"]):
+                    html = page_path(lang_url).read_text(encoding="utf-8")
+                    if 'id="reading-notes"' not in html:
+                        die(f"{s}: literary reading lacks manuscript notes: {lang_url}")
+            else:
+                expected_citations = x.get("primary_sources", [])
+                if len(expected_citations) < 3: die(f"{s}: multilingual guide lacks primary-source inventory")
+                for lang_url in (x["url"], x["english_url"], x["german_url"]):
+                    citation_graph(lang_url, expected_citations)
         urls[u] = x; slugs[s] = x
     missing = SLUGS - set(slugs)
     if missing: die(f"research-index missing surfaces: {sorted(missing)}")

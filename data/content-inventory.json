@@ -213,7 +213,9 @@
       "class": "literary_guide",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en",
+        "de"
       ],
       "primary_intent": "قراءة رواية أم عباس والخوف داخل الأسرة وصوت مريم",
       "does_not_target": [
@@ -221,7 +223,7 @@
         "إثبات المسّ علميًا",
         "دليل عام لاختيار روايات الرعب"
       ],
-      "next_action": "measure_query_fit_and_prepare_complete_translations",
+      "next_action": "measure_query_fit_after_translation_publication",
       "reason": "Distinct manuscript-based literary reading, not clinical evidence or an independent review."
     },
     {
