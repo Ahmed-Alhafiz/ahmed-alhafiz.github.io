@@ -38,12 +38,12 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout permanent branch with history
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Use Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
