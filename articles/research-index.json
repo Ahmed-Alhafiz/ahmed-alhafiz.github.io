@@ -650,7 +650,7 @@
       "title": "مراحل خلق الجنين في القرآن: قراءة علمية بلا مبالغة",
       "summary": "قراءة لغوية وتفسيرية وعلمية للنطفة والعلقة والمضغة، تشرح تداخل نمو العظم والعضل وتفصل بين دلالة النص وما يضيفه التصوير الحديث.",
       "type": "تقرير تفسيري موثق",
-      "version": "2.0",
+      "version": "2.1",
       "languages": [
         "ar"
       ],
@@ -660,8 +660,8 @@
       "primary_sources": [
         "https://quran.com/23/12-14",
         "https://quran.com/22/5",
-        "https://www.ncbi.nlm.nih.gov/sites/books/NBK546679/",
-        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5098399/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK554562/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3928720/",
         "https://pmc.ncbi.nlm.nih.gov/articles/PMC3274351/"
       ]
     },
