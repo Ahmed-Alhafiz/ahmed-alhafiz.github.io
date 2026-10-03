@@ -326,7 +326,8 @@ def main()->int:
         width,height=struct.unpack('>II',data[16:24])
         if (width,height)!=(1200,630):errors.append(f'{card_rel}: expected 1200x630, found {width}x{height}')
 
-    # GA4 measurement integrity: one centralized loader on every public page.
+    # GA4 measurement integrity: one centralized loader on every public page,
+    # but no Analytics request or cookie before explicit opt-in consent.
     ga4_id='G-TYFF6MTK0Y'
     ga4_asset='assets/analytics-ga4-28.js'
     ga4_tag='<script defer src="/assets/analytics-ga4-28.js"></script>'
@@ -336,8 +337,24 @@ def main()->int:
     else:
         ga4_source=ga4_path.read_text(encoding='utf-8')
         if ga4_source.count(ga4_id)!=1:errors.append(f'{ga4_asset}: expected exactly one measurement ID {ga4_id}')
-        for marker in ('allow_google_signals: false','allow_ad_personalization_signals: false','send_page_view: true'):
+        for marker in (
+            'allow_google_signals: false',
+            'allow_ad_personalization_signals: false',
+            'send_page_view: true',
+            "const consentKey = 'ahmedalhafiz.analyticsConsent.v1'",
+            'data-consent="granted"',
+            'data-consent="denied"',
+            'function enableAnalytics()',
+            'function disableAnalytics()',
+        ):
             if marker not in ga4_source:errors.append(f'{ga4_asset}: privacy/measurement marker missing: {marker}')
+        enable_pos=ga4_source.find('function enableAnalytics()')
+        google_pos=ga4_source.find('googletagmanager.com/gtag/js')
+        config_pos=ga4_source.find("window.gtag('config'")
+        if enable_pos<0 or google_pos<enable_pos or config_pos<enable_pos:
+            errors.append(f'{ga4_asset}: Google Analytics must not load/configure before explicit consent')
+    for privacy_rel in ('privacy/index.html','en/privacy/index.html','de/privacy/index.html'):
+        if not (root/privacy_rel).exists():errors.append(f'{privacy_rel}: required privacy page missing')
     for p in htmls:
         page_source=p.read_text(encoding='utf-8')
         count=page_source.count(ga4_tag)
