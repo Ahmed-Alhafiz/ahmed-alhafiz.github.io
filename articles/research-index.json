@@ -1062,7 +1062,8 @@
       "type": "دليل طبي تثقيفي",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_specialist_review_pending",
       "book": "umm-abbas",
@@ -1073,7 +1074,9 @@
         "https://www.nice.org.uk/guidance/cg31/chapter/Recommendations",
         "https://iocdf.org/faith-ocd/what-is-ocd-scrupulosity/",
         "https://iris.who.int/items/cdf5a576-38ed-4e03-8f6e-2b40562273e9"
-      ]
+      ],
+      "english_title": "Religious OCD or Faith? Scrupulosity Symptoms and Treatment",
+      "english_url": "https://ahmedalhafiz.com/en/articles/religious-ocd-scrupulosity/"
     }
   ]
 }
