@@ -884,7 +884,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "الفرق بين الوسواس القهري الديني وضعف الإيمان ومسارات العلاج",
       "does_not_target": [
@@ -892,8 +893,8 @@
         "إعطاء فتوى فردية",
         "استبدال العلاج أو الطوارئ"
       ],
-      "next_action": "measure_query_fit_and_seek_clinical_review",
-      "reason": "Distinct Arabic health question with explicit safety limits, official clinical guidance, and a faith-sensitive treatment boundary."
+      "next_action": "measure_query_fit_after_translation_publication_and_seek_clinical_review",
+      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, safety boundaries, source set, and stated limits; search optimization is confined to English title and metadata phrasing."
     }
   ],
   "current_counts": {
