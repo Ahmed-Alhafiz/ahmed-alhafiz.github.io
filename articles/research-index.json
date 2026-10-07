@@ -69,11 +69,14 @@
       "type": "مقال طبي تثقيفي وقراءة أدبية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/unwanted-intrusive-thoughts-meaning/"
+      "url": "https://ahmedalhafiz.com/articles/unwanted-intrusive-thoughts-meaning/",
+      "english_title": "Do Intrusive Thoughts Mean I Want to Do It? OCD & Intent",
+      "english_url": "https://ahmedalhafiz.com/en/articles/unwanted-intrusive-thoughts-meaning/"
     },
     {
       "slug": "depersonalization-derealization-feeling-unreal",
