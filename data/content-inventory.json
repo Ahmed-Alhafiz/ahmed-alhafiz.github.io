@@ -794,10 +794,11 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
-      "next_action": "retain_pending_specialist_review_and_query_data",
-      "reason": "Distinct medical-cultural question with clear safety relevance and a direct literary connection.",
+      "next_action": "measure_query_fit_after_translation_publication_and_seek_specialist_review",
+      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, cultural analysis, safety boundaries, source set, and stated limits; search optimization is confined to natural English title/description phrasing.",
       "primary_intent": "شلل النوم والجاثوم: لماذا نشعر بوجود كائن في الغرفة؟",
       "does_not_target": [
         "تشخيص الصرع",
