@@ -123,7 +123,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "أعراض وأسباب تبدد الشخصية وتبدد الواقع والشعور بالغربة عن الجسد أو العالم وحدود تفسير المس",
       "does_not_target": [
@@ -132,8 +133,8 @@
         "أدلة وجود الجن العامة",
         "فجوات الذاكرة وسماع الأصوات"
       ],
-      "next_action": "measure_query_fit_and_seek_clinical_review",
-      "reason": "Depersonalization and derealization: clinical references, original epilepsy study and feasibility trial, scriptural context and direct reading of the novel, pp.183–185,194,200."
+      "next_action": "measure_query_fit_after_translation_publication_and_seek_clinical_review",
+      "reason": "Arabic source article plus an English search-intent edition built around common natural-language DPDR queries; clinical references, an original epilepsy study, a 2026 feasibility trial and scoping review, scriptural context, and direct reading of the novel."
     },
     {
       "slug": "jinn-demons-quran-bible-torah",
