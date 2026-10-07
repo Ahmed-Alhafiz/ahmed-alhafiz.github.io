@@ -32,6 +32,7 @@ PAGES = (
     ("umm-abbas-fear-ar", "/articles/fear-physical-symptoms-umm-abbas/", ".references"),
     ("umm-abbas-sleepwalking-ar", "/articles/sleepwalking-why-no-memory/", ".references"),
     ("umm-abbas-intrusive-ar", "/articles/unwanted-intrusive-thoughts-meaning/", ".references"),
+    ("umm-abbas-intrusive-en", "/en/articles/unwanted-intrusive-thoughts-meaning/", ".references"),
     ("umm-abbas-dpdr-ar", "/articles/depersonalization-derealization-feeling-unreal/", ".references"),
     ("umm-abbas-dpdr-en", "/en/articles/depersonalization-derealization-feeling-unreal/", ".references"),
     ("umm-abbas-scriptures-ar", "/articles/jinn-demons-quran-bible-torah/", ".table-scroll"),
