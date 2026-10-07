@@ -134,7 +134,7 @@
         "فجوات الذاكرة وسماع الأصوات"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_clinical_review",
-      "reason": "Arabic source article plus an English search-intent edition built around common natural-language DPDR queries; clinical references, an original epilepsy study, a 2026 feasibility trial and scoping review, scriptural context, and direct reading of the novel."
+      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, literary reading, source set, and stated limits; search optimization is confined to natural English title/description phrasing."
     },
     {
       "slug": "jinn-demons-quran-bible-torah",
