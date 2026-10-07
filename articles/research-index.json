@@ -933,11 +933,14 @@
       "type": "موجز طبي ثقافي",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "medical_specialist_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/sleep-paralysis-jathoom/"
+      "url": "https://ahmedalhafiz.com/articles/sleep-paralysis-jathoom/",
+      "english_title": "Sleep Paralysis: Why Do You See Someone in the Room?",
+      "english_url": "https://ahmedalhafiz.com/en/articles/sleep-paralysis-jathoom/"
     },
     {
       "slug": "arabic-psychological-horror",
