@@ -341,7 +341,8 @@
       "type": "تحقيق في علم الكون وفلسفة البداية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -353,7 +354,9 @@
         "https://arxiv.org/abs/1108.0893",
         "https://arxiv.org/abs/1812.01760",
         "https://quran.com/21/30"
-      ]
+      ],
+      "english_title": "What Happened Before the Big Bang? The Limits of Science and the Question of Creation",
+      "english_url": "https://ahmedalhafiz.com/en/articles/before-big-bang-science-limits/"
     },
     {
       "slug": "writing-changed-human-history",

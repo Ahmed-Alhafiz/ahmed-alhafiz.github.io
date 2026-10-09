@@ -336,7 +336,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "ماذا كان قبل الانفجار العظيم وبداية الزمن وحدود النماذج الكونية",
       "does_not_target": [
@@ -344,8 +345,8 @@
         "عرض نموذج كمومي بوصفه حقيقة مثبتة",
         "استخدام الكتاب بوصفه دليلًا"
       ],
-      "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "Distinct book-derived search intent with explicit evidence boundaries and no claim that the manuscript proves public facts."
+      "next_action": "measure_query_fit_after_translation_publication_and_seek_independent_review",
+      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, source set, scientific and theological boundaries, and stated limits; search optimization is confined to natural English title and metadata phrasing."
     },
     {
       "slug": "writing-changed-human-history",
