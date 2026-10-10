@@ -913,11 +913,14 @@
       "type": "موجز طبي تثقيفي",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "medical_specialist_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/functional-seizures-vs-epilepsy/"
+      "url": "https://ahmedalhafiz.com/articles/functional-seizures-vs-epilepsy/",
+      "english_title": "Functional Seizures and Epilepsy: How Do Doctors Tell Them Apart?",
+      "english_url": "https://ahmedalhafiz.com/en/articles/functional-seizures-vs-epilepsy/"
     },
     {
       "slug": "six-days-creation-cosmic-time",
