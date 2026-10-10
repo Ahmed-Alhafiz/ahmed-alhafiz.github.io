@@ -179,7 +179,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "أسباب سماع الأصوات والفرق عن الأفكار الاقتحامية وتجارب النوم وحدود تفسيرها بالمس",
       "does_not_target": [
@@ -188,8 +189,8 @@
         "أدلة وجود الجن العامة",
         "تشخيص فجوات الذاكرة"
       ],
-      "next_action": "measure_query_fit_and_seek_clinical_review",
-      "reason": "Distinct voice-hearing question with official clinical sources, two original studies and direct literary analysis of the dark margin."
+      "next_action": "measure_query_fit_after_translation_publication_and_seek_clinical_review",
+      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, source set, medical and religious boundaries, and literary analysis; search optimization is confined to natural English title and metadata phrasing."
     },
     {
       "slug": "jinn-existence-quran-sunnah",
