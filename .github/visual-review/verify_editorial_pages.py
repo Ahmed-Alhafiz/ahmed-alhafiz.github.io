@@ -40,6 +40,7 @@ PAGES = (
     ("umm-abbas-scriptures-ar", "/articles/jinn-demons-quran-bible-torah/", ".table-scroll"),
     ("umm-abbas-memory-ar", "/articles/memory-gaps-unremembered-actions/", ".table-scroll"),
     ("umm-abbas-voices-ar", "/articles/hearing-voices-in-head/", ".table-scroll"),
+    ("umm-abbas-voices-en", "/en/articles/hearing-voices-in-head/", ".references"),
     ("umm-abbas-jinn-ar", "/articles/jinn-existence-quran-sunnah/", ".references"),
     ("umm-abbas-family-ar", "/articles/umm-abbas-family-fear/", ".related-work"),
     ("umm-abbas-family-en", "/en/articles/umm-abbas-family-fear/", ".related-work"),
