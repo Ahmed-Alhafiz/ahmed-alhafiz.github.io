@@ -127,11 +127,14 @@
       "type": "مقال طبي تثقيفي",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/hearing-voices-in-head/"
+      "url": "https://ahmedalhafiz.com/articles/hearing-voices-in-head/",
+      "english_title": "Hearing Voices in Your Head: Causes and the Limits of Explaining Them as Possession",
+      "english_url": "https://ahmedalhafiz.com/en/articles/hearing-voices-in-head/"
     },
     {
       "slug": "jinn-existence-quran-sunnah",
