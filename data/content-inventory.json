@@ -162,7 +162,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "لماذا أفعل أشياء لا أتذكرها وأسباب فجوات الذاكرة وعلاقتها بالنوم والتفكك وحدود تفسير المس",
       "does_not_target": [
@@ -171,8 +172,8 @@
         "أدلة وجود الجن العامة",
         "تشخيص اضطراب الهوية التفككي"
       ],
-      "next_action": "measure_query_fit_and_seek_clinical_review",
-      "reason": "Unremembered actions and memory gaps: clinical references, one original sleep study, scriptural context and direct reading of the novel, pp.71–80 and 115–116."
+      "next_action": "measure_query_fit_after_translation_publication_and_seek_clinical_review",
+      "reason": "Faithful English edition preserving the same medical, literary and religious boundaries, source set, scene locations and review status; search optimization is limited to natural English title and metadata phrasing."
     },
     {
       "slug": "hearing-voices-in-head",
