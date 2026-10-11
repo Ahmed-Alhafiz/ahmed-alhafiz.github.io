@@ -768,10 +768,11 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
-      "next_action": "retain_pending_specialist_review_and_query_data",
-      "reason": "Narrow medical distinction with a separate reader need; must remain conservative and visibly unreviewed by a specialist.",
+      "next_action": "retain_specialist_review_pending_measure_query_fit_after_translation",
+      "reason": "Narrow medical distinction with a faithful English edition preserving the same sections, claims, safety limits, source set, and unreviewed-specialist status; search optimization is limited to natural English title and metadata phrasing.",
       "primary_intent": "النوبات الوظيفية والصرع: كيف يفرّق الأطباء بينهما؟",
       "does_not_target": [
         "تشخيص ذاتي من قائمة أعراض",
