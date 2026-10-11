@@ -117,11 +117,14 @@
       "type": "مقال طبي تثقيفي",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/memory-gaps-unremembered-actions/"
+      "url": "https://ahmedalhafiz.com/articles/memory-gaps-unremembered-actions/",
+      "english_title": "Why Do I Do Things I Don’t Remember? Memory Gaps Explained",
+      "english_url": "https://ahmedalhafiz.com/en/articles/memory-gaps-unremembered-actions/"
     },
     {
       "slug": "hearing-voices-in-head",
