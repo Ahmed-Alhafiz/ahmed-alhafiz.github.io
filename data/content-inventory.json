@@ -87,7 +87,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "لماذا لا أتذكر ما فعلته أثناء النوم، وما حدود تفسير فعل ليلي من دون شاهد؟",
       "does_not_target": [
@@ -96,8 +97,8 @@
         "إثبات المس من نسيان فعل ليلي",
         "فتوى مسؤولية النائم في واقعة فردية"
       ],
-      "next_action": "measure_query_fit_and_seek_specialist_review",
-      "reason": "NHS and Mayo clinical guidance, original adult arousal study, primary religious sources, and close reading of Umm Abbas pp.71–80,121–139."
+      "next_action": "measure_query_fit_after_translation_publication_and_seek_specialist_review",
+      "reason": "Faithful English edition preserving the same medical, literary and religious boundaries, source set, scene locations and review status; search optimization is limited to natural English title and metadata phrasing."
     },
     {
       "slug": "unwanted-intrusive-thoughts-meaning",
