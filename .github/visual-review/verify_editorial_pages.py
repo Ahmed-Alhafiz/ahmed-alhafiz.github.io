@@ -53,6 +53,7 @@ PAGES = (
     ("nile-egypt-ar", "/articles/nile-ancient-egypt-flood-calendar-state/", ".source-list"),
     ("ratq-fatq-ar", "/articles/ratq-fatq-big-bang/", ".table-scroll"),
     ("sirou-before-big-bang-en", "/en/articles/before-big-bang-science-limits/", ".references"),
+    ("age-universe-en", "/en/articles/age-of-universe-13-8-billion-years/", ".references"),
     ("six-days-creation-ar", "/articles/six-days-creation-cosmic-time/", ".references"),
     ("universe-expansion-ar", "/articles/universe-expansion-wa-inna-lamusiun/", ".table-scroll"),
     ("water-life-ar", "/articles/water-life-molecular-properties/", ".references"),
