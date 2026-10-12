@@ -69,7 +69,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل الخوف يسبب أعراضًا جسدية حقيقية، وكيف نفصل خبرة الشخص عن سبب العرض؟",
       "does_not_target": [
@@ -78,8 +79,8 @@
         "إثبات المس من أعراض جسدية",
         "الإغناء عن التقييم العاجل عند ألم الصدر أو ضيق النفس"
       ],
-      "next_action": "measure_query_fit_and_seek_specialist_review",
-      "reason": "WHO, NIMH, Mayo Clinic and NHS guidance, Quran 12:84–86 and al-Tabari, close reading of Umm Abbas pp.99–100,138,253–262."
+      "next_action": "measure_query_fit_after_translation_publication_and_seek_specialist_review",
+      "reason": "Faithful English edition preserving the same medical, literary and religious boundaries, source set, warning signs and specialist-review status; SEO changes are limited to natural English title and metadata."
     },
     {
       "slug": "sleepwalking-why-no-memory",
