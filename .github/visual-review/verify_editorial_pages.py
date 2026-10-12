@@ -66,6 +66,8 @@ PAGES = (
     ("ai-soul-taklif-ar", "/articles/ai-soul-consciousness-understanding-taklif/", ".references"),
     ("khufu-merer-ar", "/articles/how-khufu-pyramid-built-merer-diary/", ".references"),
     ("khufu-merer-en", "/en/articles/how-khufu-pyramid-built-merer-diary/", ".references"),
+    ("spiritual-healing-safety-ar", "/articles/spiritual-healing-exploitation-safeguarding/", ".references"),
+    ("spiritual-healing-safety-en", "/en/articles/spiritual-healing-exploitation-safeguarding/", ".references"),
     ("library-ar", "/articles/", "#topic-history"),
     ("library-en", "/en/articles/", "#topic-history"),
     ("library-de", "/de/articles/", "#topic-psychology"),
