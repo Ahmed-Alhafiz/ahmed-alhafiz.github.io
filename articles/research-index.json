@@ -17,11 +17,14 @@
       "type": "مقال تاريخي وقراءة أدبية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/hexagram-magic-seal-of-solomon-umm-abbas/"
+      "url": "https://ahmedalhafiz.com/articles/hexagram-magic-seal-of-solomon-umm-abbas/",
+      "english_title": "Six-Pointed Star: Does It Mean Witchcraft? What Is Solomon’s Seal?",
+      "english_url": "https://ahmedalhafiz.com/en/articles/hexagram-magic-seal-of-solomon-umm-abbas/"
     },
     {
       "slug": "cyberbullying-university-rumor-stigma",
