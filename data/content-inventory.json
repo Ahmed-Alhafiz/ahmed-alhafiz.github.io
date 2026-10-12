@@ -533,7 +533,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "معنى من الشجر الأخضر نارًا وعلاقتها بالبناء الضوئي والطاقة",
       "does_not_target": [

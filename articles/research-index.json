@@ -606,7 +606,8 @@
       "type": "تحقيق تفسيري علمي موثق",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -617,7 +618,9 @@
         "https://quran.ksu.edu.sa/tafseer/katheer/sura36-aya80.html",
         "https://science.nasa.gov/earth/earth-observatory/the-carbon-cycle/",
         "https://www.energy.gov/cmei/fuels/bioenergy-basics"
-      ]
+      ],
+      "english_title": "Fire From Green Trees in Quran 36:80: Meaning, Tafsir, and Photosynthesis",
+      "english_url": "https://ahmedalhafiz.com/en/articles/green-tree-fire-photosynthesis/"
     },
     {
       "slug": "anzalna-iron-meteorites",
