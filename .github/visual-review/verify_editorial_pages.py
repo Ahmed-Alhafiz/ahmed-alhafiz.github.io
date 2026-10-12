@@ -49,6 +49,8 @@ PAGES = (
     ("umm-abbas-fear-symptoms-en", "/en/articles/fear-physical-symptoms-umm-abbas/", ".references"),
     ("umm-abbas-memory-gaps-en", "/en/articles/memory-gaps-unremembered-actions/", ".references"),
     ("umm-abbas-jinn-ar", "/articles/jinn-existence-quran-sunnah/", ".references"),
+    ("sirou-turing-ar", "/articles/turing-test-ai-consciousness/", ".references"),
+    ("sirou-turing-en", "/en/articles/turing-test-ai-consciousness/", ".references"),
     ("umm-abbas-family-ar", "/articles/umm-abbas-family-fear/", ".related-work"),
     ("umm-abbas-family-en", "/en/articles/umm-abbas-family-fear/", ".related-work"),
     ("umm-abbas-family-de", "/de/articles/umm-abbas-family-fear/", ".related-work"),
