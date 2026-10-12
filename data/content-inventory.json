@@ -34,7 +34,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل النجمة السداسية على ورقة دليل سحر، وما معنى خاتم سليمان؟",
       "does_not_target": [
@@ -43,8 +44,8 @@
         "نسبة رسم نجمة سداسية إلى القرآن",
         "الحكم الفقهي على فرد أو قطعة بلا سياق"
       ],
-      "next_action": "measure_query_fit_and_seek_specialist_review",
-      "reason": "Primary museum object catalogues, Quran and al-Tabari; close reading of Umm Abbas pages 4–5 and 9–10."
+      "next_action": "measure_query_fit_after_translation_publication_and_seek_specialist_review",
+      "reason": "Faithful English edition preserving the museum object qualifications, Quranic boundaries, literary manuscript page references and source order; the search title and metadata are adapted to the direct English question."
     },
     {
       "slug": "cyberbullying-university-rumor-stigma",
