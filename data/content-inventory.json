@@ -513,7 +513,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "كيف بني هرم خوفو وما الذي تثبته يوميات مرر وبرديات وادي الجرف",
       "does_not_target": [
@@ -521,8 +522,8 @@
         "شرح رفع كل كتلة",
         "استخدام المخطوط بوصفه دليلًا"
       ],
-      "next_action": "seek_independent_egyptology_review_and_measure_query_fit",
-      "reason": "A distinct archaeology question grounded in the official papyrus publication and bounded against claims the diary cannot establish."
+      "next_action": "seek_independent_egyptology_review_and_measure_query_fit_after_translation_publication",
+      "reason": "Full English edition preserves the papyrus-versus-inference distinctions, five-row evidence table, 8 references, original book page citation, and source order; title targets the pyramid-building question without claiming the diary solves the lifting mechanism."
     },
     {
       "slug": "green-tree-fire-photosynthesis",

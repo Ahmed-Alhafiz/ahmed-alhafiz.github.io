@@ -577,7 +577,8 @@
       "type": "تحقيق أثري تاريخي موثق",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -588,7 +589,9 @@
         "https://www.ifao.egnet.net/recherche/archeologie/ouadi-el-jarf/",
         "https://doi.org/10.5615/neareastarch.77.1.0004",
         "https://aeraweb.org/projects/lost-city/"
-      ]
+      ],
+      "english_title": "How Was Khufu’s Great Pyramid Built? What Merer’s Diary Actually Reveals",
+      "english_url": "https://ahmedalhafiz.com/en/articles/how-khufu-pyramid-built-merer-diary/"
     },
     {
       "slug": "green-tree-fire-photosynthesis",
