@@ -33,11 +33,14 @@
       "type": "مقال اجتماعي تثقيفي وقراءة أدبية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/cyberbullying-university-rumor-stigma/"
+      "url": "https://ahmedalhafiz.com/articles/cyberbullying-university-rumor-stigma/",
+      "english_title": "Cyberbullying Among University Students: How Can You Stop Rumors and Stigma?",
+      "english_url": "https://ahmedalhafiz.com/en/articles/cyberbullying-university-rumor-stigma/"
     },
     {
       "slug": "fear-physical-symptoms-umm-abbas",

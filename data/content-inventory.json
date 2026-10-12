@@ -53,7 +53,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "كيف أتعامل مع التنمر الإلكتروني بين طلاب الجامعة والشائعة والوصمة؟",
       "does_not_target": [
@@ -61,8 +62,8 @@
         "نسبة كل أعراض الصحة النفسية إلى التنمر",
         "تقرير وقوع جريمة أو نسبة الرسائل لشخص معين"
       ],
-      "next_action": "measure_query_fit_and_seek_specialist_review",
-      "reason": "UNICEF, PLOS Mental Health review, original bystander and stigma studies, WHO, al-Tabari; close reading of Umm Abbas chapter 4."
+      "next_action": "measure_query_fit_after_translation_publication_and_seek_specialist_review",
+      "reason": "Faithful English edition preserves the distinction between message and sender, limits of cross-sectional research, Qur’anic context, manuscript pages 55–64, and eight references."
     },
     {
       "slug": "fear-physical-symptoms-umm-abbas",
