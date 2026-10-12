@@ -486,7 +486,8 @@
       "type": "تحقيق في الذكاء الاصطناعي وفلسفة العقل",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -497,7 +498,9 @@
         "https://arxiv.org/abs/2308.08708",
         "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/minds-brains-and-programs/DC644B47A4299C637C89772FACC2706A",
         "https://arxiv.org/abs/1706.03762"
-      ]
+      ],
+      "english_title": "Does Passing the Turing Test Prove AI Is Conscious?",
+      "english_url": "https://ahmedalhafiz.com/en/articles/turing-test-ai-consciousness/"
     },
     {
       "slug": "river-civilizations-water-state",

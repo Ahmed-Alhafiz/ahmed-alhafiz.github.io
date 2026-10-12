@@ -445,7 +445,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل اختبار تورنغ يثبت أن الذكاء الاصطناعي واعٍ وهل النموذج اللغوي يفهم",
       "does_not_target": [
