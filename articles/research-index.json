@@ -158,11 +158,14 @@
       "type": "مقال تثقيفي في النصوص الإسلامية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/jinn-existence-quran-sunnah/"
+      "url": "https://ahmedalhafiz.com/articles/jinn-existence-quran-sunnah/",
+      "english_title": "Are Jinn Real? What the Quran and Hadith Say About Possession",
+      "english_url": "https://ahmedalhafiz.com/en/articles/jinn-existence-quran-sunnah/"
     },
     {
       "slug": "umm-abbas-family-fear",
