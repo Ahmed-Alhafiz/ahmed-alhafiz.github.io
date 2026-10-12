@@ -45,6 +45,7 @@ PAGES = (
     ("umm-abbas-functional-seizures-en", "/en/articles/functional-seizures-vs-epilepsy/", ".references"),
     ("umm-abbas-sleepwalking-en", "/en/articles/sleepwalking-why-no-memory/", ".references"),
     ("umm-abbas-hexagram-en", "/en/articles/hexagram-magic-seal-of-solomon-umm-abbas/", ".references"),
+    ("juhayman-evidence-en", "/en/articles/juhayman-grand-mosque-1979/", "table"),
     ("umm-abbas-fear-symptoms-en", "/en/articles/fear-physical-symptoms-umm-abbas/", ".references"),
     ("umm-abbas-memory-gaps-en", "/en/articles/memory-gaps-unremembered-actions/", ".references"),
     ("umm-abbas-jinn-ar", "/articles/jinn-existence-quran-sunnah/", ".references"),
