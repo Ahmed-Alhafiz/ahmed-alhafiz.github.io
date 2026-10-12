@@ -203,7 +203,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "أدلة وجود الجن في القرآن والسنة ودلالة النصوص وحدود نسبتها إلى أعراض فردية",
       "does_not_target": [
@@ -445,7 +446,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل اختبار تورنغ يثبت أن الذكاء الاصطناعي واعٍ وهل النموذج اللغوي يفهم",
       "does_not_target": [
@@ -513,7 +515,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "كيف بني هرم خوفو وما الذي تثبته يوميات مرر وبرديات وادي الجرف",
       "does_not_target": [
@@ -521,8 +524,8 @@
         "شرح رفع كل كتلة",
         "استخدام المخطوط بوصفه دليلًا"
       ],
-      "next_action": "seek_independent_egyptology_review_and_measure_query_fit",
-      "reason": "A distinct archaeology question grounded in the official papyrus publication and bounded against claims the diary cannot establish."
+      "next_action": "seek_independent_egyptology_review_and_measure_query_fit_after_translation_publication",
+      "reason": "Full English edition preserves the papyrus-versus-inference distinctions, five-row evidence table, 8 references, original book page citation, and source order; title targets the pyramid-building question without claiming the diary solves the lifting mechanism."
     },
     {
       "slug": "green-tree-fire-photosynthesis",
@@ -530,7 +533,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "معنى من الشجر الأخضر نارًا وعلاقتها بالبناء الضوئي والطاقة",
       "does_not_target": [
@@ -757,10 +761,11 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
-      "next_action": "retain_as_companion_and_avoid_scope_overlap",
-      "reason": "Distinct practitioner-conduct and safeguarding question that complements the upstream family-decision pillar.",
+      "next_action": "seek_independent_safeguarding_and_clinical_review; monitor organic query fit",
+      "reason": "English edition preserves every clinical caution, 5 safety-boundaries and 7-step protection plan, all 12 references, complete in-text citations and the original literary relation.",
       "primary_intent": "حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض من الدجل والاعتداء؟",
       "does_not_target": [
         "إثبات المس من الأعراض",
