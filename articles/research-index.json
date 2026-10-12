@@ -918,11 +918,14 @@
       "type": "ملف حماية وصحة",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_specialist_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/spiritual-healing-exploitation-safeguarding/"
+      "url": "https://ahmedalhafiz.com/articles/spiritual-healing-exploitation-safeguarding/",
+      "english_title": "When Spiritual Healing Becomes Exploitation: How Can Families Protect Patients?",
+      "english_url": "https://ahmedalhafiz.com/en/articles/spiritual-healing-exploitation-safeguarding/"
     },
     {
       "slug": "functional-seizures-vs-epilepsy",
