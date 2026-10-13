@@ -243,7 +243,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل للذكاء الاصطناعي روح أو تكليف وما الفرق بين الذكاء والفهم والوعي والمسؤولية",
       "does_not_target": [
@@ -252,7 +253,8 @@
         "علم الأعصاب والدماغ وحدهما"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "Distinct M6 book pages 49–54 question; exegesis, AI evaluation and human accountability separated from prior technical and neuroscience reports."
+      "reason": "Distinct M6 book pages 49–54 question; exegesis, AI evaluation and human accountability separated from prior technical and neuroscience reports.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/ai-soul-consciousness-understanding-taklif/"
     },
     {
       "slug": "difference-light-nur-quran-sun-moon",

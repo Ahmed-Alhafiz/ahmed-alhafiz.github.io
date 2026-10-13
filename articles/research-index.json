@@ -199,7 +199,8 @@
       "type": "قراءة تفسيرية وعلمية في الذكاء والفهم والوعي والتكليف",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -220,7 +221,9 @@
         "https://arxiv.org/abs/2308.08708",
         "https://airc.nist.gov/airmf-resources/playbook/govern/",
         "https://airc.nist.gov/airmf-resources/playbook/measure/"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/ai-soul-consciousness-understanding-taklif/",
+      "english_title": "Does AI Have a Soul? Consciousness and Responsibility"
     },
     {
       "slug": "difference-light-nur-quran-sun-moon",
