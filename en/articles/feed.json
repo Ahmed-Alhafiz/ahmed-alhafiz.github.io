@@ -6,6 +6,22 @@
   "language": "en",
   "items": [
     {
+      "id": "https://ahmedalhafiz.com/en/articles/dna-code-genetic-information/",
+      "url": "https://ahmedalhafiz.com/en/articles/dna-code-genetic-information/",
+      "title": "Is DNA Really a Code?",
+      "summary": "DNA carries replicable sequence information and the genetic code maps codons to amino acids. The cell reads and regulates it through material machinery, so a genome is not a self-running program.",
+      "content_text": "DNA carries replicable sequence information and the genetic code maps codons to amino acids. The cell reads and regulates it through material machinery, so a genome is not a self-running program.",
+      "date_published": "2026-10-13T00:00:00+02:00",
+      "date_modified": "2026-10-13T00:00:00+02:00",
+      "tags": [
+        "author_review_complete_external_review_pending",
+        "sirou-fi-alard",
+        "DNA genetic code",
+        "codons",
+        "gene expression"
+      ]
+    },
+    {
       "id": "https://ahmedalhafiz.com/en/articles/civilization-knowledge-justice-collapse/",
       "url": "https://ahmedalhafiz.com/en/articles/civilization-knowledge-justice-collapse/",
       "title": "Why Civilizations Collapse",

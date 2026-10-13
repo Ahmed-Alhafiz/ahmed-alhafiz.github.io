@@ -401,7 +401,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل DNA شيفرة ومعنى المعلومات الوراثية وكيف تعمل الخلية",
       "does_not_target": [
@@ -410,7 +411,8 @@
         "استخدام لفظ المعلومات برهانًا ميتافيزيقيًا مستقلًا"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "A distinct molecular-biology query that directly expands the book’s DNA, RNA, ribosome, water, and energy discussion while policing the code metaphor."
+      "reason": "A distinct molecular-biology query that directly expands the book’s DNA, RNA, ribosome, water, and energy discussion while policing the code metaphor.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/dna-code-genetic-information/"
     },
     {
       "slug": "age-of-universe-13-8-billion-years",
