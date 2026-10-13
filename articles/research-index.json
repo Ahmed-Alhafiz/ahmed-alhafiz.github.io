@@ -341,7 +341,8 @@
       "type": "تحقيق قرآني في الزمن وحدود النسبية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -353,7 +354,9 @@
         "https://islamweb.net/ar/library/index.php?ID=5300&bk_no=1&flag=1&page=bookcontents",
         "https://doi.org/10.1126/science.1192720",
         "https://www.nist.gov/news-events/news/2010/09/nist-pair-aluminum-atomic-clocks-reveal-einsteins-relativity-personal-scale"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/quran-day-thousand-fifty-thousand-years-relativity/",
+      "english_title": "A Thousand or Fifty Thousand Years in the Quran?"
     },
     {
       "slug": "before-big-bang-science-limits",
