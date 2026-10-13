@@ -431,7 +431,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل علم الله آدم جميع اللغات وما معنى وعلم آدم الأسماء كلها",
       "does_not_target": [
@@ -440,7 +441,8 @@
         "استخدام المخطوط بوصفه دليلًا"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "A distinct tafsir-and-language-origin query tied to the book’s treatment of names, concepts, and knowledge, while avoiding overlap with the AI-focused Teaching the Names pillar."
+      "reason": "A distinct tafsir-and-language-origin query tied to the book’s treatment of names, concepts, and knowledge, while avoiding overlap with the AI-focused Teaching the Names pillar.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/adam-all-languages-origin-language/"
     },
     {
       "slug": "turing-test-ai-consciousness",

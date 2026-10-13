@@ -472,7 +472,8 @@
       "type": "تحقيق تفسيري ولساني في أصل اللغة",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -483,7 +484,9 @@
         "https://quran.ksu.edu.sa/tafseer/qortobi/sura2-aya31.html",
         "https://sunnah.com/bukhari/65/3",
         "https://shamela.ws/book/9977/8"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/adam-all-languages-origin-language/",
+      "english_title": "Did God Teach Adam Every Language?"
     },
     {
       "slug": "turing-test-ai-consciousness",
