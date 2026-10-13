@@ -559,7 +559,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "معنى وأنزلنا الحديد وعلاقة الحديد بالنيازك والأصل النجمي",
       "does_not_target": [
@@ -568,7 +569,8 @@
         "استخدام المخطوط بوصفه دليلًا"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "A distinct interpretation-and-science question with primary tafsir, astronomy, geoscience, and archaeometallurgy sources."
+      "reason": "A distinct interpretation-and-science question with primary tafsir, astronomy, geoscience, and archaeometallurgy sources.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/anzalna-iron-meteorites/"
     },
     {
       "slug": "marib-dam-sayl-al-arim",

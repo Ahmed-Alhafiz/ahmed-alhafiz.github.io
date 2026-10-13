@@ -641,7 +641,8 @@
       "type": "تحقيق تفسيري علمي موثق",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -653,7 +654,9 @@
         "https://science.nasa.gov/astrobiology/learning-resources/alp/are-we-really-made-of-star-stuff/",
         "https://doi.org/10.1007/s00159-022-00146-x",
         "https://doi.org/10.1111/maps.12664"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/anzalna-iron-meteorites/",
+      "english_title": "Does 'We Sent Down Iron' Mean Meteorites?"
     },
     {
       "slug": "marib-dam-sayl-al-arim",
