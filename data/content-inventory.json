@@ -378,7 +378,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "الظلم وسقوط الدول وأسباب انهيار الدول",
       "does_not_target": [
@@ -387,7 +388,8 @@
         "استخدام الكتاب بوصفه دليلًا"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "A distinct Quran-and-history query that expands the justice and collapse chapter into observable institutional mechanisms without promising immediate downfall."
+      "reason": "A distinct Quran-and-history query that expands the justice and collapse chapter into observable institutional mechanisms without promising immediate downfall.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/injustice-fall-of-states-quran-history/"
     },
     {
       "slug": "dna-code-genetic-information",
