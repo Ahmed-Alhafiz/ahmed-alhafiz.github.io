@@ -279,7 +279,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "كيف تتكون المفاهيم من الاسم إلى النموذج العلمي وما صلة تعليم آدم الأسماء بذلك",
       "does_not_target": [
@@ -288,7 +289,8 @@
         "الكتاب بوصفه دليلًا تجريبيًا"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "Distinct M3 book pages 39–43 question, with interpretation and cognitive science evidence separated."
+      "reason": "Distinct M3 book pages 39–43 question, with interpretation and cognitive science evidence separated.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/how-concepts-form-adam-names-scientific-models/"
     },
     {
       "slug": "mesopotamia-irrigation-soil-salinity-collapse",
