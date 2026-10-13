@@ -67,6 +67,7 @@ PAGES = (
     ("sirou-green-tree-ar", "/articles/green-tree-fire-photosynthesis/", ".references"),
     ("sirou-green-tree-en", "/en/articles/green-tree-fire-photosynthesis/", ".references"),
     ("concepts-models-ar", "/articles/how-concepts-form-adam-names-scientific-models/", ".references"),
+    ("concepts-models-en", "/en/articles/how-concepts-form-adam-names-scientific-models/", ".references"),
     ("light-nur-ar", "/articles/difference-light-nur-quran-sun-moon/", ".references"),
     ("ai-soul-taklif-ar", "/articles/ai-soul-consciousness-understanding-taklif/", ".references"),
     ("khufu-merer-ar", "/articles/how-khufu-pyramid-built-merer-diary/", ".references"),
