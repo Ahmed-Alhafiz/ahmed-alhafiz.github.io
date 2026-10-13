@@ -26,6 +26,7 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("possession-or-disorder-en", "/en/articles/possession-or-neurological-psychological-disorder/", ".references"),
     ("diagnostic-uncertainty-en", "/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/", ".references"),
     ("umm-abbas-book-ar", "/books/umm-abbas/", "#research"),
     ("umm-abbas-hexagram-ar", "/articles/hexagram-magic-seal-of-solomon-umm-abbas/", ".references"),
