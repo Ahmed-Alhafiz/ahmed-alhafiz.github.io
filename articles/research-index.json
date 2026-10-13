@@ -993,11 +993,14 @@
       "type": "موجز أدلة",
       "version": "3.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
-      "url": "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/"
+      "url": "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/",
+      "english_url": "https://ahmedalhafiz.com/en/articles/six-days-creation-cosmic-time/",
+      "english_title": "Six Days of Creation and the Age of the Universe"
     },
     {
       "slug": "sleep-paralysis-jathoom",

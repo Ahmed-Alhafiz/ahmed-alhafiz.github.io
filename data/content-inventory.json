@@ -815,11 +815,13 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Potential intent overlap with the cosmology pillar; no consolidation should occur before baseline and link-risk review.",
-      "primary_intent": "ما معنى الأيام الستة في خلق السماوات والأرض، وكيف يُفهم عمر الكون؟"
+      "primary_intent": "ما معنى الأيام الستة في خلق السماوات والأرض، وكيف يُفهم عمر الكون؟",
+      "english_url": "https://ahmedalhafiz.com/en/articles/six-days-creation-cosmic-time/"
     },
     {
       "slug": "sleep-paralysis-jathoom",
