@@ -311,7 +311,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "كيف صنع النيل حضارة مصر القديمة وما معنى افتخار فرعون بالأنهار في سورة الزخرف",
       "does_not_target": [
@@ -320,7 +321,8 @@
         "هوية فرعون موسى التاريخية"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "Distinct Nile-specific primary document and Quran-context investigation anchored to book pages 82–88."
+      "reason": "Distinct Nile-specific primary document and Quran-context investigation anchored to book pages 82–88.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/nile-ancient-egypt-flood-calendar-state/"
     },
     {
       "slug": "quran-day-thousand-fifty-thousand-years-relativity",
