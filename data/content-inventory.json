@@ -694,7 +694,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "لماذا تنهار الحضارات؟ الماء والسلطة والعدل في سنن العمران",
       "does_not_target": [
@@ -703,7 +704,8 @@
         "استخدام المخطوط بوصفه دليلًا"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
+      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/civilization-knowledge-justice-collapse/"
     },
     {
       "slug": "possession-or-neurological-psychological-disorder",
