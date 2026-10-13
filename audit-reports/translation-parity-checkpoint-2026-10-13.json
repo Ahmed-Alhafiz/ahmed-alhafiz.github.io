@@ -1,0 +1,2967 @@
+{
+  "date": "2026-10-13",
+  "base_main": "240900aa414cfa614b905addf4b82c44a58b544c",
+  "scope": "Snapshot on the AI-soul translation branch before its publication. Concept article PR #208 is merged, Pages succeeded, and eight live discovery surfaces returned HTTP 200.",
+  "inventory_on_branch": {
+    "ar_article_directories": 50,
+    "en_article_directories": 50,
+    "de_article_directories": 5,
+    "research_originals": 51,
+    "en_feed_items": 50,
+    "sitemap_urls": 145
+  },
+  "limits": "Automated structure/source/numeric flags require complete bilingual review. An added chapter number or a spelled-out quantity may be a false positive. Matching counts do not prove semantic fidelity. Four legacy layouts were not parsed by this checker. No global completeness claim.",
+  "summary": {
+    "needs_review": 38,
+    "structural_match": 8,
+    "unassessed_legacy_layout": 4
+  },
+  "element_count_discrepancies": 21,
+  "items": [
+    {
+      "slug": "adam-all-languages-origin-language",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          13,
+          14
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          35,
+          36
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          18,
+          18
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          16,
+          16
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        11,
+        11
+      ],
+      "issues": [
+        "element_counts",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "3aa637ceb85ed6c78e09dcd1fc3e2b35365885bb1571524aae37ea987ba9bcfd",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "age-of-universe-13-8-billion-years",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          12,
+          13
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          31,
+          32
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          18,
+          18
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          17,
+          17
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        11,
+        11
+      ],
+      "issues": [
+        "element_counts",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "98e325528dc452781435ad320fcf7310f3af2bfaea4091ed4dd22d7ec6a7da96",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "ai-soul-consciousness-understanding-taklif",
+      "status": "structural_match",
+      "counts_ar_en": {
+        "h2": [
+          9,
+          9
+        ],
+        "h3": [
+          2,
+          2
+        ],
+        "p": [
+          44,
+          44
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          6,
+          6
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        25,
+        25
+      ],
+      "issues": [],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "37929beb417449ff2a51da35775275a070b38904ea2539c3b86fe22e372b4efa",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "anzalna-iron-meteorites",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          14,
+          14
+        ],
+        "h3": [
+          5,
+          5
+        ],
+        "p": [
+          33,
+          33
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          15,
+          15
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          2,
+          2
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          16,
+          16
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        15,
+        13
+      ],
+      "issues": [
+        "external_source_url_sequence",
+        "block_1_numbers",
+        "block_4_numbers",
+        "block_6_tag",
+        "block_7_tag",
+        "block_7_numbers",
+        "block_8_numbers",
+        "block_10_tag",
+        "block_11_tag",
+        "block_12_sources",
+        "block_14_tag",
+        "block_15_tag",
+        "block_18_tag",
+        "block_21_tag",
+        "block_22_tag",
+        "block_23_tag",
+        "block_26_tag",
+        "block_27_tag",
+        "block_29_numbers",
+        "block_30_tag",
+        "block_30_numbers",
+        "block_31_tag",
+        "block_34_tag",
+        "block_34_numbers",
+        "block_35_tag",
+        "block_35_numbers",
+        "block_36_sources",
+        "block_36_numbers",
+        "block_37_tag",
+        "block_37_numbers",
+        "block_39_tag",
+        "block_40_tag",
+        "block_41_tag",
+        "block_42_tag",
+        "block_43_tag",
+        "block_44_tag",
+        "block_45_tag",
+        "block_45_numbers",
+        "block_46_tag",
+        "block_46_numbers",
+        "block_47_tag",
+        "block_47_numbers",
+        "block_48_tag",
+        "block_49_tag",
+        "block_50_tag",
+        "block_50_sources",
+        "block_50_numbers",
+        "block_51_tag",
+        "block_51_sources",
+        "block_51_numbers",
+        "block_52_tag",
+        "block_52_sources",
+        "block_52_numbers",
+        "block_53_sources",
+        "block_53_numbers",
+        "block_54_sources",
+        "block_54_numbers",
+        "block_55_sources",
+        "block_55_numbers",
+        "block_56_sources",
+        "block_56_numbers",
+        "block_57_sources",
+        "block_57_numbers",
+        "block_58_sources",
+        "block_59_sources",
+        "block_59_numbers",
+        "block_60_sources",
+        "block_61_sources",
+        "block_61_numbers",
+        "block_62_sources",
+        "block_62_numbers",
+        "block_63_tag",
+        "block_63_sources",
+        "block_64_tag",
+        "block_64_sources",
+        "block_64_numbers",
+        "block_65_tag",
+        "block_65_sources"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "0bcb085c81b591a90012ee9b8fa91d61ce2102e3e77f5897f7adebf885bdcb18",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "before-big-bang-science-limits",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          15,
+          15
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          39,
+          39
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          12,
+          12
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          18,
+          18
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        25,
+        25
+      ],
+      "issues": [
+        "block_5_numbers",
+        "block_32_numbers",
+        "block_34_numbers",
+        "block_35_numbers",
+        "block_37_numbers",
+        "block_41_numbers",
+        "block_67_numbers",
+        "block_68_numbers",
+        "block_69_numbers",
+        "block_70_numbers",
+        "block_71_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "e63166c898f56fa0e90e3b3ba68a8bb72c2090528ab729550a84f52f036f4aa1",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "brain-consciousness-spirit-limits",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          14,
+          14
+        ],
+        "h3": [
+          5,
+          5
+        ],
+        "p": [
+          30,
+          30
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          18,
+          18
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          2,
+          2
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          12,
+          12
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        9,
+        9
+      ],
+      "issues": [
+        "block_4_numbers",
+        "block_5_numbers",
+        "block_6_numbers",
+        "block_48_numbers",
+        "block_49_numbers",
+        "block_50_numbers",
+        "block_51_numbers",
+        "block_59_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "291a301c9caad33f4574a20170432808f1a5db1e44e1f2890fdf5fffa43634d5",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "civilization-knowledge-justice-collapse",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          17,
+          17
+        ],
+        "h3": [
+          5,
+          5
+        ],
+        "p": [
+          61,
+          45
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          12,
+          12
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          3,
+          3
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          18,
+          19
+        ],
+        "blockquote": [
+          5,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        9,
+        9
+      ],
+      "issues": [
+        "element_counts",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "326c11a83a64e22d2fee0dad66c74464ef94a0eb514ed1d24064b7bcee2f17be",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "cyberbullying-university-rumor-stigma",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          8,
+          8
+        ],
+        "h3": [
+          3,
+          3
+        ],
+        "p": [
+          30,
+          30
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          8,
+          8
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        21,
+        21
+      ],
+      "issues": [
+        "block_22_numbers",
+        "block_23_numbers",
+        "block_45_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "f305d83f7bf248ad4cee172553ee65ddc1d866f8819bab89b9f018c3f71b656b",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "depersonalization-derealization-feeling-unreal",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          13,
+          13
+        ],
+        "h3": [
+          1,
+          1
+        ],
+        "p": [
+          41,
+          41
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          10,
+          10
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        10,
+        10
+      ],
+      "issues": [
+        "block_32_numbers",
+        "block_57_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "98f980abab9dfd98d38c711d521811e8cac0d91320606b4d884e62133321a0e8",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "diagnostic-uncertainty-family-fear-coercive-authority",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          14,
+          14
+        ],
+        "h3": [
+          10,
+          10
+        ],
+        "p": [
+          30,
+          30
+        ],
+        "table": [
+          2,
+          2
+        ],
+        "td": [
+          30,
+          30
+        ],
+        "th": [
+          6,
+          6
+        ],
+        "ol": [
+          2,
+          2
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          32,
+          32
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          2,
+          2
+        ]
+      },
+      "external_url_count_ar_en": [
+        19,
+        19
+      ],
+      "issues": [
+        "block_13_numbers",
+        "block_15_numbers",
+        "block_17_numbers",
+        "block_19_numbers",
+        "block_21_numbers",
+        "block_23_numbers",
+        "block_26_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "b147f3f7bddaa05da8a2d338f9cf68b49f75e3747c69a601b3efe832b2708f74",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "difference-light-nur-quran-sun-moon",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          13,
+          14
+        ],
+        "h3": [
+          7,
+          7
+        ],
+        "p": [
+          41,
+          25
+        ],
+        "table": [
+          0,
+          1
+        ],
+        "td": [
+          0,
+          12
+        ],
+        "th": [
+          0,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          8,
+          19
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        40,
+        19
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "1047a9231149665e6d6dbf9acaab2afb504d570c11c978f8f9e067e333bfd9ba",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "dna-code-genetic-information",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          15,
+          16
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          36,
+          36
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          18,
+          18
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          20,
+          21
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        14,
+        15
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "c4f13bba43c81d88098f86e837f1900a8fbd75e87982ae117f0b70817e56843a",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "fall-of-baghdad-1258-ibn-al-alqami",
+      "status": "unassessed_legacy_layout"
+    },
+    {
+      "slug": "fear-physical-symptoms-umm-abbas",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          8,
+          8
+        ],
+        "h3": [
+          1,
+          1
+        ],
+        "p": [
+          28,
+          28
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          8,
+          8
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        8,
+        8
+      ],
+      "issues": [
+        "block_26_numbers",
+        "block_41_numbers",
+        "block_42_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "948cf00d7872caefff4cecf1f80f8b6910e7adb857742402d257c548e5d47a94",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "functional-seizures-vs-epilepsy",
+      "status": "structural_match",
+      "counts_ar_en": {
+        "h2": [
+          20,
+          20
+        ],
+        "h3": [
+          10,
+          10
+        ],
+        "p": [
+          45,
+          45
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          13,
+          13
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          2,
+          2
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          23,
+          23
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        10,
+        10
+      ],
+      "issues": [],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "46a6fd53073f4e8173c329d2040dfe773905b4bc88b53a952f43a73e848391c2",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "green-tree-fire-photosynthesis",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          15,
+          15
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          37,
+          37
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          15,
+          15
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          2,
+          2
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          17,
+          17
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        12,
+        12
+      ],
+      "issues": [
+        "block_4_numbers",
+        "block_61_numbers",
+        "block_62_numbers",
+        "block_63_numbers",
+        "block_64_numbers",
+        "block_65_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "3ae6f6723e5cfae7a2cea53ff47162d1916502f66534e17b3314aff7301d890c",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "hearing-voices-in-head",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          12,
+          12
+        ],
+        "h3": [
+          2,
+          2
+        ],
+        "p": [
+          47,
+          47
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          9,
+          9
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          9,
+          9
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        13,
+        13
+      ],
+      "issues": [
+        "block_17_numbers",
+        "block_34_numbers",
+        "block_63_numbers",
+        "block_66_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "6ab2127471de8c6e928cf507873e086924f1e8a9d86873ad43a91987653dc6d7",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "hexagram-magic-seal-of-solomon-umm-abbas",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          7,
+          7
+        ],
+        "h3": [
+          2,
+          2
+        ],
+        "p": [
+          28,
+          28
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          8,
+          8
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        18,
+        18
+      ],
+      "issues": [
+        "block_20_numbers",
+        "block_41_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "ae4baa5721a78aa4b1abf25d4b2768561662f85fa89e1a7492b9b0df88efb870",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "how-certainty-becomes-violence",
+      "status": "unassessed_legacy_layout"
+    },
+    {
+      "slug": "how-concepts-form-adam-names-scientific-models",
+      "status": "structural_match",
+      "counts_ar_en": {
+        "h2": [
+          11,
+          11
+        ],
+        "h3": [
+          7,
+          7
+        ],
+        "p": [
+          42,
+          42
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          14,
+          14
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        41,
+        41
+      ],
+      "issues": [],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "e6fa6b2b70dd1580b84247bf0b8653295e782fdf762614299fa8223313bcfa47",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "how-khufu-pyramid-built-merer-diary",
+      "status": "structural_match",
+      "counts_ar_en": {
+        "h2": [
+          14,
+          14
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          30,
+          30
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          15,
+          15
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          2,
+          2
+        ],
+        "ul": [
+          2,
+          2
+        ],
+        "li": [
+          23,
+          23
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        11,
+        11
+      ],
+      "issues": [],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "8c43ea8a229a60d560ee96b0dd28b54ba27efff6a1ee6a3d9b790384f45d8424",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "human-embryo-quran-stages",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          17,
+          18
+        ],
+        "h3": [
+          5,
+          5
+        ],
+        "p": [
+          55,
+          23
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          24,
+          18
+        ],
+        "th": [
+          4,
+          3
+        ],
+        "ol": [
+          2,
+          1
+        ],
+        "ul": [
+          2,
+          1
+        ],
+        "li": [
+          26,
+          19
+        ],
+        "blockquote": [
+          4,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        15,
+        14
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "63f861a33e3c0e3eeb39d915504896092f50bed82bf74186cb009da7b6ab31ae",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "injustice-fall-of-states-quran-history",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          13,
+          14
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          34,
+          35
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          18,
+          18
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          18,
+          18
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        14,
+        14
+      ],
+      "issues": [
+        "element_counts",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "7ddaa6e766115b7390156dd4c673ef8b19430e3b45c7decb63442afae4617bad",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "iron-fire-light-matter-energy",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          15,
+          15
+        ],
+        "h3": [
+          5,
+          5
+        ],
+        "p": [
+          36,
+          36
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          20,
+          20
+        ],
+        "th": [
+          5,
+          5
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          11,
+          11
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        11,
+        11
+      ],
+      "issues": [
+        "block_4_numbers",
+        "block_6_numbers",
+        "block_16_numbers",
+        "block_18_numbers",
+        "block_23_numbers",
+        "block_27_numbers",
+        "block_52_numbers",
+        "block_53_numbers",
+        "block_54_numbers",
+        "block_55_numbers",
+        "block_56_numbers",
+        "block_65_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "df75d392b097c3692888020fc8a4e3b027beaa8072b5fd3be11f29323271e861",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "jinn-demons-quran-bible-torah",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          14,
+          15
+        ],
+        "h3": [
+          4,
+          7
+        ],
+        "p": [
+          50,
+          33
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          21,
+          21
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          18,
+          18
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        32,
+        18
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "8e13f9cf3ffe14ef3908f0eb721bcb8b65b84da0038ee82a9a8ac5fbeda3defd",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "jinn-existence-quran-sunnah",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          11,
+          11
+        ],
+        "h3": [
+          3,
+          3
+        ],
+        "p": [
+          45,
+          45
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          15,
+          15
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        15,
+        15
+      ],
+      "issues": [
+        "block_6_numbers",
+        "block_7_numbers",
+        "block_8_numbers",
+        "block_9_numbers",
+        "block_11_numbers",
+        "block_19_numbers",
+        "block_56_numbers",
+        "block_57_numbers",
+        "block_58_numbers",
+        "block_59_numbers",
+        "block_60_numbers",
+        "block_61_numbers",
+        "block_67_numbers",
+        "block_68_numbers",
+        "block_69_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "934138f8d7949a2b81d655ca8dde09a153ec07d4f6be56ff72ef7ba8f4eaffc6",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "juhayman-grand-mosque-1979",
+      "status": "unassessed_legacy_layout"
+    },
+    {
+      "slug": "madain-salih-thamud-nabataean-tombs",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          15,
+          15
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          39,
+          35
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          12,
+          12
+        ],
+        "th": [
+          2,
+          2
+        ],
+        "ol": [
+          2,
+          2
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          9,
+          12
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          1,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        10,
+        9
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "74281c21ddc9f55f514127072856d0d2a209d5e18d8da22f12f8f8740d6a18c7",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "marib-dam-sayl-al-arim",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          15,
+          15
+        ],
+        "h3": [
+          5,
+          5
+        ],
+        "p": [
+          35,
+          36
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          24,
+          24
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          3,
+          3
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          24,
+          24
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        15,
+        12
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "ee5f3a947b84afd693ef96e6896fe28ceff876e054e45f6d9154f8e74a2d3c87",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "memory-gaps-unremembered-actions",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          9,
+          9
+        ],
+        "h3": [
+          10,
+          10
+        ],
+        "p": [
+          51,
+          51
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          12,
+          12
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          12,
+          12
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        26,
+        26
+      ],
+      "issues": [
+        "block_44_numbers",
+        "block_47_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "b0ea6f6a7144183e52193de13e7fbe10bb40187cc29c99058e81d5820496e60c",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "mesopotamia-irrigation-soil-salinity-collapse",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          11,
+          11
+        ],
+        "h3": [
+          6,
+          6
+        ],
+        "p": [
+          55,
+          27
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          12,
+          15
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          10,
+          13
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        17,
+        13
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "57a7d51592eeb9a26246ca5614f4fa80c8b6c1d66d998e4f325711cda25b34ff",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "nile-ancient-egypt-flood-calendar-state",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          14,
+          14
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          39,
+          30
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          16,
+          16
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        24,
+        16
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "611ee2185dc81e56946f4debafbf896b19460e1d72b5658f4a550f8fcb86f786",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "possession-or-neurological-psychological-disorder",
+      "status": "structural_match",
+      "counts_ar_en": {
+        "h2": [
+          11,
+          11
+        ],
+        "h3": [
+          8,
+          8
+        ],
+        "p": [
+          25,
+          25
+        ],
+        "table": [
+          2,
+          2
+        ],
+        "td": [
+          28,
+          28
+        ],
+        "th": [
+          7,
+          7
+        ],
+        "ol": [
+          2,
+          2
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          14,
+          14
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        8,
+        8
+      ],
+      "issues": [],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "a2a1530ca5062e6bec8b6653ef104e5917111d19914cdd767648262e005d22e8",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "quran-day-thousand-fifty-thousand-years-relativity",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          14,
+          14
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          44,
+          33
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          9,
+          9
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          7,
+          9
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        12,
+        9
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "44de1a6f5c7158f2340d3836e8ad706bc017b626fe40e83bf6df35792c07bffc",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "quran-science-method-evidence",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          16,
+          16
+        ],
+        "h3": [
+          14,
+          9
+        ],
+        "p": [
+          63,
+          30
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          15,
+          15
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          6,
+          3
+        ],
+        "ul": [
+          2,
+          0
+        ],
+        "li": [
+          40,
+          29
+        ],
+        "blockquote": [
+          2,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        9,
+        11
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "ef3f5f1d080fa8aa4e7bb69883171a6f5e0b210e72bad5f7a04c50dcc22eda9b",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "ratq-fatq-big-bang",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          14,
+          15
+        ],
+        "h3": [
+          4,
+          13
+        ],
+        "p": [
+          43,
+          34
+        ],
+        "table": [
+          1,
+          3
+        ],
+        "td": [
+          9,
+          52
+        ],
+        "th": [
+          3,
+          10
+        ],
+        "ol": [
+          1,
+          3
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          9,
+          24
+        ],
+        "blockquote": [
+          0,
+          1
+        ],
+        "figure": [
+          0,
+          1
+        ]
+      },
+      "external_url_count_ar_en": [
+        24,
+        14
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "17ba363a5076b76a613d9fa662cac813e827505c9ba8fe3f5b26ae78ba0b0c70",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "religious-ocd-scrupulosity",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          10,
+          10
+        ],
+        "h3": [
+          2,
+          2
+        ],
+        "p": [
+          16,
+          16
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          10,
+          10
+        ],
+        "th": [
+          2,
+          2
+        ],
+        "ol": [
+          2,
+          2
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          18,
+          18
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        7,
+        7
+      ],
+      "issues": [
+        "block_44_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "fb2ee7cf25427344cb6d2074d865630ad51bcdcdf75d4cbd7e417ce8aa9534e0",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "river-civilizations-water-state",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          12,
+          13
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          35,
+          36
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          18,
+          18
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          10,
+          10
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        11,
+        11
+      ],
+      "issues": [
+        "element_counts",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "20b42bab34ef5917f0b31f8933a537bba3b9f360800d3b4cfc822b4aad8d535b",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "six-days-creation-cosmic-time",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          11,
+          11
+        ],
+        "h3": [
+          5,
+          5
+        ],
+        "p": [
+          38,
+          35
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          9,
+          13
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        28,
+        13
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "3330a15b6ea2d00f52023612f3f181c707740b6ea53d7b7fe4e7f4061e63cb9c",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "sleep-paralysis-jathoom",
+      "status": "structural_match",
+      "counts_ar_en": {
+        "h2": [
+          20,
+          20
+        ],
+        "h3": [
+          9,
+          9
+        ],
+        "p": [
+          39,
+          39
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          2,
+          2
+        ],
+        "ul": [
+          5,
+          5
+        ],
+        "li": [
+          36,
+          36
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        6,
+        6
+      ],
+      "issues": [],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "3bcab2f4845e66bc8eab74365aed2f6ac1f588383f303dfd47b87f196369f282",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "sleepwalking-why-no-memory",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          9,
+          9
+        ],
+        "h3": [
+          2,
+          2
+        ],
+        "p": [
+          29,
+          29
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          9,
+          9
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          10,
+          10
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        9,
+        9
+      ],
+      "issues": [
+        "block_2_numbers",
+        "block_9_numbers",
+        "block_29_numbers",
+        "block_45_numbers",
+        "block_46_numbers",
+        "block_47_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "ff19c207401dd317f6bbbaeefc97bb2f37c8b5c4f3ef55fd0645391d14d6d213",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "spiritual-healing-exploitation-safeguarding",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          16,
+          16
+        ],
+        "h3": [
+          18,
+          18
+        ],
+        "p": [
+          48,
+          48
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          18,
+          18
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          12,
+          12
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        12,
+        12
+      ],
+      "issues": [
+        "block_89_numbers",
+        "block_90_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "e601a22d64974b2067a0b7494938083497838e5365190b6b4a6422e86c721011",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "teaching-names-ai-understanding",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          23,
+          28
+        ],
+        "h3": [
+          14,
+          11
+        ],
+        "p": [
+          49,
+          61
+        ],
+        "table": [
+          3,
+          4
+        ],
+        "td": [
+          77,
+          97
+        ],
+        "th": [
+          11,
+          14
+        ],
+        "ol": [
+          3,
+          3
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          47,
+          50
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        26,
+        28
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "ed899cdcfd7e6d7a7fc5342f8b9d98120dbe21d0368548401fb132da81948a5b",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "turing-test-ai-consciousness",
+      "status": "structural_match",
+      "counts_ar_en": {
+        "h2": [
+          11,
+          11
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          28,
+          28
+        ],
+        "table": [
+          1,
+          1
+        ],
+        "td": [
+          12,
+          12
+        ],
+        "th": [
+          3,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          14,
+          14
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        10,
+        10
+      ],
+      "issues": [],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "8f4c69a43d55148f7e1e1574f5a418280ad7742d45f8cffae4f2149fd6d1aa7a",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "umm-abbas-family-fear",
+      "status": "structural_match",
+      "counts_ar_en": {
+        "h2": [
+          8,
+          8
+        ],
+        "h3": [
+          1,
+          1
+        ],
+        "p": [
+          26,
+          26
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          0,
+          0
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          5,
+          5
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        0,
+        0
+      ],
+      "issues": [],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "b92d09e8617916aabca25e3ced025e9a86a6ddbe7c05bd4e90589a9ef1e0f5aa",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "universe-expansion-wa-inna-lamusiun",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          13,
+          14
+        ],
+        "h3": [
+          5,
+          5
+        ],
+        "p": [
+          36,
+          36
+        ],
+        "table": [
+          2,
+          2
+        ],
+        "td": [
+          29,
+          29
+        ],
+        "th": [
+          5,
+          5
+        ],
+        "ol": [
+          2,
+          2
+        ],
+        "ul": [
+          1,
+          1
+        ],
+        "li": [
+          23,
+          23
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        21,
+        13
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "3962e6c39fe47cd1cfcbbc18594c81d7df8a31ae8747549714b8326e8632df03",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "unwanted-intrusive-thoughts-meaning",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          7,
+          7
+        ],
+        "h3": [
+          1,
+          1
+        ],
+        "p": [
+          23,
+          23
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          13,
+          13
+        ],
+        "blockquote": [
+          0,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        12,
+        12
+      ],
+      "issues": [
+        "block_7_numbers",
+        "block_12_numbers",
+        "block_31_numbers"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "ab75da41045d5b2cd740eeecb345414873185c18bfcc4107194da69a12271ee6",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "water-civilization-power",
+      "status": "unassessed_legacy_layout"
+    },
+    {
+      "slug": "water-life-molecular-properties",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          13,
+          13
+        ],
+        "h3": [
+          12,
+          11
+        ],
+        "p": [
+          45,
+          29
+        ],
+        "table": [
+          0,
+          1
+        ],
+        "td": [
+          0,
+          15
+        ],
+        "th": [
+          0,
+          3
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          15,
+          17
+        ],
+        "blockquote": [
+          1,
+          0
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        37,
+        17
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "c425975c3ddecbfeb92bcbce94cca197a43faaf57ca91e77d8cb74e2eec22b6c",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    },
+    {
+      "slug": "writing-changed-human-history",
+      "status": "needs_review",
+      "counts_ar_en": {
+        "h2": [
+          17,
+          19
+        ],
+        "h3": [
+          4,
+          4
+        ],
+        "p": [
+          45,
+          46
+        ],
+        "table": [
+          0,
+          0
+        ],
+        "td": [
+          0,
+          0
+        ],
+        "th": [
+          0,
+          0
+        ],
+        "ol": [
+          1,
+          1
+        ],
+        "ul": [
+          0,
+          0
+        ],
+        "li": [
+          20,
+          20
+        ],
+        "blockquote": [
+          1,
+          1
+        ],
+        "figure": [
+          0,
+          0
+        ]
+      },
+      "external_url_count_ar_en": [
+        28,
+        20
+      ],
+      "issues": [
+        "element_counts",
+        "external_source_url_sequence",
+        "block_count"
+      ],
+      "ar_body_unchanged": null,
+      "ar_body_sha256": "1c8657b728ccf3550b99630cea75e9c6e0665fb8c926446758d796f44087df32",
+      "semantic_fidelity": "requires_full_bilingual_reading"
+    }
+  ]
+}
