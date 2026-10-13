@@ -113,11 +113,14 @@
       "type": "مقال ديني مقارن",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/"
+      "url": "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/",
+      "english_url": "https://ahmedalhafiz.com/en/articles/jinn-demons-quran-bible-torah/",
+      "english_title": "Jinn and Demons in the Quran, Gospels and Torah"
     },
     {
       "slug": "memory-gaps-unremembered-actions",
