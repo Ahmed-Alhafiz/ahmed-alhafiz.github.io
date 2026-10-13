@@ -260,7 +260,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "ما الفرق بين الضوء والنور في القرآن من ضياء الشمس ونور القمر إلى الهداية",
       "does_not_target": [
@@ -269,7 +270,8 @@
         "كل نور في القرآن انعكاس"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "Distinct ع6 book pages 140–143 question, with exegesis, lunar optics and contextual theology separated."
+      "reason": "Distinct ع6 book pages 140–143 question, with exegesis, lunar optics and contextual theology separated.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/difference-light-nur-quran-sun-moon/"
     },
     {
       "slug": "how-concepts-form-adam-names-scientific-models",
