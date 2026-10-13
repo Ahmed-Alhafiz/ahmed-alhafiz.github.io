@@ -229,7 +229,8 @@
       "type": "تحقيق تفسيري وعلمي في الضوء والنور ومنازل القمر",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -259,7 +260,9 @@
         "https://science.nasa.gov/mission/webb/science-overview/science-explainers/spectroscopy-101-how-absorption-and-emission-spectra-work/",
         "https://www.energy.gov/cmei/systems/solar-photovoltaic-performance-and-efficiency-basics",
         "https://data.nasa.gov/dataset/lro-dlre-5-global-cumulative-products-d137e"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/difference-light-nur-quran-sun-moon/",
+      "english_title": "Light and Nur in the Quran: Sun and Moon"
     },
     {
       "slug": "how-concepts-form-adam-names-scientific-models",
