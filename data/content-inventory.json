@@ -508,7 +508,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل مدائن صالح هي ديار ثمود وهل القصر الفريد من بيوتهم",
       "does_not_target": [
@@ -517,7 +518,8 @@
         "استخدام المخطوط بوصفه دليلًا"
       ],
       "next_action": "seek_independent_archaeology_and_tafsir_review_and_measure_query_fit",
-      "reason": "A distinct archaeology question that corrects a common attribution error while preserving the difference between the identity of a place and the date of its surviving monuments."
+      "reason": "A distinct archaeology question that corrects a common attribution error while preserving the difference between the identity of a place and the date of its surviving monuments.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/madain-salih-thamud-nabataean-tombs/"
     },
     {
       "slug": "how-khufu-pyramid-built-merer-diary",
