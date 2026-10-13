@@ -547,7 +547,8 @@
       "type": "تحقيق تفسيري فلكي موثق",
       "version": "2.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -569,7 +570,9 @@
         "https://www.esa.int/Science_Exploration/Space_Science/What_is_red_shift",
         "https://ned.ipac.caltech.edu/level5/March08/Frieman/Frieman2.html",
         "https://tafsir.app/tabari/29/20"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/universe-expansion-wa-inna-lamusiun/",
+      "english_title": "Does Quran 51:47 Describe an Expanding Universe?"
     },
     {
       "slug": "madain-salih-thamud-nabataean-tombs",
