@@ -1,7 +1,7 @@
 {
   "scope": "All 50 Arabic/English article pairs; semantic comparison, not mechanical count equality.",
   "started": "2026-10-13",
-  "base_sha": "554fc925238a94a6a2d28bdc3101d21c99b22e63",
+  "base_sha": "4419507a2fef4ec8ae8403eaab99cd158cba113a",
   "rules": "Accept natural translation, paragraph regrouping and equivalent wording; repair omitted/added sentences, changed meanings, caveats, numbers or references. Never infer semantic fidelity from counters. No hourly automation; user cancelled it.",
   "reviewed_count": 50,
   "total": 50,
@@ -79,7 +79,7 @@
       "en_current_file_sha256": "7bb7ff217161d91b33020cf833d760f602fdfd974f5e1e7a438f5a8845f0d366",
       "repair": "Full currentAR structure restored toEN using already-faithful sentences where possible.61p/17H2/5H3/1table/15cells/18li/5blockquotes,8sourcegroups/9externalURLs and[1]–[8]sequence exact. Allnumericsequencesmatch; ARbodybyteidentical. Fullquotes, networkdefinition, physicalcausevsmeaningboundary, bookpiety/justicequestion, originalsourceorderandcitationfooter restored; original-absentanimaldetail/readinglinks/newclosingremoved.",
       "visual_correction": "Manual first-head screenshots found missing .wrap header container and an irrelevant cosmological-review label. Restored standard HTML wrapper and historical/exegetical review wording; no CSS/JS. New-head screenshots require fresh review.",
-      "publication": "PR214 merged 554fc925; six gates, fresh Ready PR Policy and actual corrected 1440/390/360 images successful; Pages and postmerge Site/Citation/Content/Visibility/IndexNow successful. Live verification recorded in next checkpoint."
+      "publication": "PR214 merged 554fc925; six gates, fresh Ready PR Policy and actual corrected 1440/390/360 images successful; Pages and postmerge Site/Citation/Content/Visibility/IndexNow successful. Live verification recorded in next checkpoint. Both AR and EN, Feed JSON/Atom and sitemap live bytes exactly matched deployed main."
     },
     "cyberbullying-university-rumor-stigma": {
       "status": "faithful",
@@ -478,7 +478,7 @@
       "en_current_file_sha256": "f222ab9e38b529e6840e577d15b8e12f8fbab08897981b8c08a65f95d2189474"
     },
     "sleep-paralysis-jathoom": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Complete104pairedblocks pluscards/citation/reviewpolicy;7.6%,7–9h,all sixsources/clinicalcaveatsfaithful.",
       "material_issues": [
         "Initial urgentassessmentwarning weakensArabic needs urgentassessment to mayrequire; reference6 repeats mayrequire whereasArabicrequires."
@@ -487,10 +487,11 @@
       "ar_current_file_sha256": "b96dc2d431c6d6e9cf750cbda8d5a46e68df0babb6d8420ada3fce1f300892e4",
       "en_current_file_sha256": "d52f060ec914adacb12cdfcb6ad8c9c4afb24fb15dafc13da1d3768612aa650e",
       "repair": "Restored original chronological order and original medical-assessment obligation in two existing sentences. No Arabic, source, citation, section or design change.",
-      "validation": "Full bilingual reading previously recorded; changed sentences reread against Arabic. All counts, source sequence and citations preserved; Arabic body byte-for-byte unchanged. Intrusive numeric flags manually verified as Arabic decimal separator and English thousands separator only; 94.3%, 1237 and source figures identical."
+      "validation": "Full bilingual reading previously recorded; changed sentences reread against Arabic. All counts, source sequence and citations preserved; Arabic body byte-for-byte unchanged. Intrusive numeric flags manually verified as Arabic decimal separator and English thousands separator only; 94.3%, 1237 and source figures identical.",
+      "publication": "PR215 merged4419507; six gates and actual12 screenshots1440/390/360 reviewed; fresh Ready PRPolicy38457669537 success; Pages andpostmergeSite/Citation/Content/Visibility/IndexNow success; both EN pages,FeedJSON,Atom,Sitemap exactlymatchdeployedmain."
     },
     "sleepwalking-why-no-memory": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "All51pairedblocks/table and10refs/citationfooterread. Allnovelpages71–80/121–139, times3:17/2:43 andmedical/theologicalcaveats faithfullypreserved.",
       "material_issues": [
         "MayoClinicreference9 omits23August2024 source date.",
@@ -498,10 +499,12 @@
       ],
       "repair_plan": "Restore only two reference details.",
       "ar_current_file_sha256": "3b78ab06377176affa1f284f191a30b6d72e854545c439630d362bd1700c0e17",
-      "en_current_file_sha256": "ffffbc0c66054f525586fd51b0b59411301ae945f862d16a57dde5b559bb2c54"
+      "en_current_file_sha256": "aaf35c200c8f3b02129ff32c34f4e933ee15c2fe45bdc40257919a2757e53091",
+      "repair": "Restored the four original source-method/date and quotation/safeguarding qualifiers recorded in material_issues. No added claim or source; Arabic unchanged.",
+      "validation": "Previously full bilingual reading unchanged except targeted replacements reread with Arabic. All element counts, citations and exact external-source URL order preserved. Numeric flags explicitly inspected: written 3:17 and thirty-five, explicit Quran chapter numbers, and English/Arabic formatting preserve the same values; source23August2024 restored."
     },
     "spiritual-healing-exploitation-safeguarding": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Full95pairedblocks,21cellstable,12sourcesandcardsread; all7protectionsteps, emergency/legal/capacitycaveatsfaithful.",
       "material_issues": [
         "Q27:65 quotation omits Say imperative.",
@@ -509,7 +512,9 @@
       ],
       "repair_plan": "Restore two small textualdetails; original hadithsummaryretainsallquotedmeanings andnaturaltranslationaccepted.",
       "ar_current_file_sha256": "7cbd931748fa01817df058966ae64045ce6f8ae55cedcffada12f6737f06afce",
-      "en_current_file_sha256": "83a5f4ea12c64b129a8937f913eb7857425b8815e9d2e78b923ab66ff734963b"
+      "en_current_file_sha256": "822e7d6245aea49725c2ae9b536cf592bcd003d24701318dcc491ba3ab72093a",
+      "repair": "Restored the four original source-method/date and quotation/safeguarding qualifiers recorded in material_issues. No added claim or source; Arabic unchanged.",
+      "validation": "Previously full bilingual reading unchanged except targeted replacements reread with Arabic. All element counts, citations and exact external-source URL order preserved. Numeric flags explicitly inspected: written 3:17 and thirty-five, explicit Quran chapter numbers, and English/Arabic formatting preserve the same values; source23August2024 restored."
     },
     "teaching-names-ai-understanding": {
       "status": "material_differences_pending_repair",
@@ -559,7 +564,7 @@
       "en_current_file_sha256": "f7c9c604f4060c9483843200ed024a1684fd6320482b704d47ddb5a56f845806"
     },
     "unwanted-intrusive-thoughts-meaning": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full44pairedblocks,13refs/footerandallnumbers/clinical/religiouscaveatsread.",
       "material_issues": [
         "Paragraph2 reverses chronologicalsequence: Arabic responsibilityquestion precedesvoice; English saysquestionisprecededbyvoice.",
@@ -569,7 +574,8 @@
       "ar_current_file_sha256": "2ac7d3a265d40637b299340e15030212e35971c593e2945584d99f8961dd785e",
       "en_current_file_sha256": "633faf387cda92adc06dedb9c008108abde2a3abf491de9c8a338e8fabb107a2",
       "repair": "Restored original chronological order and original medical-assessment obligation in two existing sentences. No Arabic, source, citation, section or design change.",
-      "validation": "Full bilingual reading previously recorded; changed sentences reread against Arabic. All counts, source sequence and citations preserved; Arabic body byte-for-byte unchanged. Intrusive numeric flags manually verified as Arabic decimal separator and English thousands separator only; 94.3%, 1237 and source figures identical."
+      "validation": "Full bilingual reading previously recorded; changed sentences reread against Arabic. All counts, source sequence and citations preserved; Arabic body byte-for-byte unchanged. Intrusive numeric flags manually verified as Arabic decimal separator and English thousands separator only; 94.3%, 1237 and source figures identical.",
+      "publication": "PR215 merged4419507; six gates and actual12 screenshots1440/390/360 reviewed; fresh Ready PRPolicy38457669537 success; Pages andpostmergeSite/Citation/Content/Visibility/IndexNow success; both EN pages,FeedJSON,Atom,Sitemap exactlymatchdeployedmain."
     },
     "water-civilization-power": {
       "status": "limited_meaning_differences_pending_repair",
@@ -616,7 +622,7 @@
       "en_current_file_sha256": "47b03f2805fe09e84a071d5da5dec4c2c6386a8c3e1b0318592b03b69264904d"
     }
   },
-  "last_checkpoint": "Full50/50 readings complete;7 meaning repairs published,2 corrected awaiting CI/manual images/publication; remaining repairs explicitly pending. No hourly automation.",
+  "last_checkpoint": "Full50/50 read;9 meaning repairs published,2 corrected awaitingCI/manual images/publication;remainingrepairs explicitlypending. Hourly automation remainscancelled.",
   "reading_complete": true,
   "remaining_reading": [],
   "note": "All50pairedtexts read in full; repairs remain pending and the entire task is not complete. Natural equivalent wording is accepted. Publishing one small batch at a time."
