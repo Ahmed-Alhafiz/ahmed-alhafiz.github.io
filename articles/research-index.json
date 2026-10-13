@@ -730,7 +730,8 @@
       "type": "تقرير تفسيري موثق",
       "version": "2.1",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -741,7 +742,9 @@
         "https://www.ncbi.nlm.nih.gov/books/NBK554562/",
         "https://pmc.ncbi.nlm.nih.gov/articles/PMC3928720/",
         "https://pmc.ncbi.nlm.nih.gov/articles/PMC3274351/"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/human-embryo-quran-stages/",
+      "english_title": "Embryonic Stages in the Quran and Modern Science"
     },
     {
       "slug": "brain-consciousness-spirit-limits",
