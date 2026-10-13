@@ -147,7 +147,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل معنى الجن والشياطين واحد في القرآن والإنجيل والتوراة واختلاف المصطلحات والسياقات",
       "does_not_target": [
@@ -157,7 +158,8 @@
         "كل عقائد اليهودية والمسيحية"
       ],
       "next_action": "measure_query_fit_and_seek_comparative_specialist_review",
-      "reason": "Comparison of scriptural terms, translations and interpretation, with explicit clinical limits and direct reading of the novel, pp.184–185, 194, 200, 202–203."
+      "reason": "Comparison of scriptural terms, translations and interpretation, with explicit clinical limits and direct reading of the novel, pp.184–185, 194, 200, 202–203.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/jinn-demons-quran-bible-torah/"
     },
     {
       "slug": "memory-gaps-unremembered-actions",
