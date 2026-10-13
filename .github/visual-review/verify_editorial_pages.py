@@ -26,6 +26,7 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("diagnostic-uncertainty-en", "/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/", ".references"),
     ("umm-abbas-book-ar", "/books/umm-abbas/", "#research"),
     ("umm-abbas-hexagram-ar", "/articles/hexagram-magic-seal-of-solomon-umm-abbas/", ".references"),
     ("umm-abbas-cyberbullying-ar", "/articles/cyberbullying-university-rumor-stigma/", ".references"),

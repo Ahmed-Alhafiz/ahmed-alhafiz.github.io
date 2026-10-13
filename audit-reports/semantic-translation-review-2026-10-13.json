@@ -1,9 +1,9 @@
 {
   "scope": "All 50 Arabic/English article pairs; semantic comparison, not mechanical count equality.",
   "started": "2026-10-13",
-  "base_sha": "f2d3f332ae3d26960adc075efbde3278368955d6",
+  "base_sha": "a45729126384d9ec670d884bec77a10b65db4ebc",
   "rules": "Accept natural translation, paragraph regrouping and equivalent wording; repair omitted/added sentences, changed meanings, caveats, numbers or references. Never infer semantic fidelity from counters. No hourly automation; user cancelled it.",
-  "reviewed_count": 16,
+  "reviewed_count": 50,
   "total": 50,
   "complete": false,
   "articles": {
@@ -12,26 +12,28 @@
       "reading": "Both complete editions read, including every table row, source and caveat.",
       "material_issues": [],
       "accepted_differences": "Natural equivalent wording and extra truthful review-status presentation; no argument or scientific/exegetical claim changed.",
-      "ar_file_sha256": "eddfc5117f1780c148380c793228677355584aba42ec2f47f3d5ad83ae49a304",
-      "en_file_sha256": "9503ca201c232e8831849497f8504177fd27020ff844b62e4d3aff4e1a2156ce"
+      "ar_current_file_sha256": "eddfc5117f1780c148380c793228677355584aba42ec2f47f3d5ad83ae49a304",
+      "en_current_file_sha256": "9503ca201c232e8831849497f8504177fd27020ff844b62e4d3aff4e1a2156ce"
     },
     "age-of-universe-13-8-billion-years": {
       "status": "faithful",
       "reading": "Both complete editions read, including every table row, source and caveat.",
       "material_issues": [],
       "accepted_differences": "Natural equivalent wording and extra truthful review-status presentation; no argument or scientific/exegetical claim changed.",
-      "ar_file_sha256": "b60b9d08ee1b677ee97120ee08f2491b739bd3d9dd282c5db9427e81f19795b6",
-      "en_file_sha256": "3bbcef76d6a83acd1f1a683ea7b79c8fe5725c2d38993af44af9e4b7a29bcc50"
+      "ar_current_file_sha256": "b60b9d08ee1b677ee97120ee08f2491b739bd3d9dd282c5db9427e81f19795b6",
+      "en_current_file_sha256": "3bbcef76d6a83acd1f1a683ea7b79c8fe5725c2d38993af44af9e4b7a29bcc50"
     },
     "ai-soul-consciousness-understanding-taklif": {
       "status": "faithful",
       "reading": "Full AR and full EN reviewed in this conversation before PRs #208/#209; unchanged inputs reused.",
       "material_issues": [],
       "ar_file_sha256": "e2278d19d2a7aced9c288a2837cb8f1ee5f423c1c220a924ae27a9a08800f31e",
-      "en_file_sha256": "afacbe04fd9f9e215eef544a42dc54ced7d58bf7f1de60c528d20e3aa69667ed"
+      "en_file_sha256": "afacbe04fd9f9e215eef544a42dc54ced7d58bf7f1de60c528d20e3aa69667ed",
+      "ar_current_file_sha256": "e2278d19d2a7aced9c288a2837cb8f1ee5f423c1c220a924ae27a9a08800f31e",
+      "en_current_file_sha256": "afacbe04fd9f9e215eef544a42dc54ced7d58bf7f1de60c528d20e3aa69667ed"
     },
     "anzalna-iron-meteorites": {
-      "status": "repaired_pending_publication",
+      "status": "repaired_published",
       "reading": "Both full editions read including tables, quotations, review status and all references.",
       "material_issues": [
         "Full Quran 57:25 quotation replaced by paraphrase; final clause about God being Strong and Mighty and unseen support not preserved.",
@@ -41,24 +43,24 @@
         "NASA and NIST paragraph-level citation links omitted; reference dates and explanatory descriptions shortened."
       ],
       "repair_plan": "Restore affected sentences, full verse, source descriptions and original reading path; leave harmless natural phrasing intact.",
-      "ar_file_sha256": "4f971752d48e90c485fe167c75fa1a48c45b943da6bb1e347ae7fc2a6ef1f559",
-      "en_file_sha256": "657602a65cf01ce80db49612f46733091c9e5e7a5ee01c3fbcd4399ba8aab18c",
-      "repair": "Restored full verse and its order, unseen support, blood/tools and pre-factory clauses, original 13 references and15 external occurrences, specific specialist-review status and original reading path. 33p/14H2/5H3/1table/18cells match. Two numeric flags are explicit English Quran chapter labels, not different numbers or claims."
+      "ar_current_file_sha256": "4f971752d48e90c485fe167c75fa1a48c45b943da6bb1e347ae7fc2a6ef1f559",
+      "en_current_file_sha256": "bf73cf32e042f64e39975cd27fe361089a3dbfafd32901a422d56f64d03cbd3a",
+      "repair": "PR211 merged a457291; sixPRchecks/freshpolicy successful; actual1440/390/360screens reviewed; Pages successful and both liveAR/EN byte-identical to main."
     },
     "before-big-bang-science-limits": {
       "status": "faithful",
       "reading": "Full AR/EN read including BGV trajectory condition, no-boundary/bounce caveats, all Quran quotations, 18 sources and table.",
       "material_issues": [],
-      "ar_file_sha256": "e265a1f9719412942100f0fdabafcf58830c6805351d77dc7f9fe66d502de1d5",
-      "en_file_sha256": "54cbfad4212fae52b3b4d5abecc447f2d239d5e7ef7d6bfda51a89c5920cb025"
+      "ar_current_file_sha256": "e265a1f9719412942100f0fdabafcf58830c6805351d77dc7f9fe66d502de1d5",
+      "en_current_file_sha256": "54cbfad4212fae52b3b4d5abecc447f2d239d5e7ef7d6bfda51a89c5920cb025"
     },
     "brain-consciousness-spirit-limits": {
       "status": "faithful",
       "reading": "Read complete AR/EN, patient caveats, three consciousness levels, four theories and 2025 test, all quotations/table/source entries.",
       "material_issues": [],
       "accepted_differences": "English edition date labels translation edition, not original publication; natural terminology.",
-      "ar_file_sha256": "7d4500cdc6e07016489dd5c580bedbab1bfca0ebf1a1d7f85757764ccef0ac2e",
-      "en_file_sha256": "710d9ecdc09c13b1444e10693cd3e44408ad9188ff0acb608d00a92377020895"
+      "ar_current_file_sha256": "7d4500cdc6e07016489dd5c580bedbab1bfca0ebf1a1d7f85757764ccef0ac2e",
+      "en_current_file_sha256": "710d9ecdc09c13b1444e10693cd3e44408ad9188ff0acb608d00a92377020895"
     },
     "civilization-knowledge-justice-collapse": {
       "status": "material_differences_pending_repair",
@@ -73,28 +75,29 @@
         "In-text [1]–[8] citations and complete bibliographic details missing; original author version/date and book-source limitation omitted; new closing paragraph added."
       ],
       "repair_plan": "Restore complete source meaning and quotations, citations and attribution; preserve acceptable regrouping only where all clauses retained.",
-      "ar_file_sha256": "cbace8fdd339c99b8658c7bf32364bcce25aa79398f24225d8b1c0b435943784",
-      "en_file_sha256": "cca6edd25d93b2a4fec1974e8c386503dc56d3b4caa59176f7839a25c461cfed"
+      "ar_current_file_sha256": "cbace8fdd339c99b8658c7bf32364bcce25aa79398f24225d8b1c0b435943784",
+      "en_current_file_sha256": "cca6edd25d93b2a4fec1974e8c386503dc56d3b4caa59176f7839a25c461cfed"
     },
     "cyberbullying-university-rumor-stigma": {
       "status": "faithful",
       "reading": "Both full texts read: all literary details, study counts 32/29593 and design limits, care/legal warnings, quotations and sources preserved.",
       "material_issues": [],
-      "ar_file_sha256": "19b7e017e99137f3d060017d4737d6481dc363a30ab98390d9ff042488fcf0ea",
-      "en_file_sha256": "bc6c6c7f9cc115d557eac816ca4ee242046b65e86ba8ab10936eee867a1dc996"
+      "ar_current_file_sha256": "19b7e017e99137f3d060017d4737d6481dc363a30ab98390d9ff042488fcf0ea",
+      "en_current_file_sha256": "bc6c6c7f9cc115d557eac816ca4ee242046b65e86ba8ab10936eee867a1dc996"
     },
     "depersonalization-derealization-feeling-unreal": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_publication",
       "reading": "Complete AR/EN read: 9/7/28 epilepsy sample, CBT30/19/63%, no efficacy inference, all emergencies/citations/bookpages preserved.",
       "material_issues": [
         "Opening شرط مهم softened to important feature; restore important diagnostic requirement.",
         "Al-Albani sahih grading reported in AR but classification omitted in EN maintext/source7; restore as reported grading, not new authentication."
       ],
-      "ar_file_sha256": "2721928778b2aa7c79d202cc3f8d5f0f82a2b5e82a7c2e18ab9f01c2be958c11",
-      "en_file_sha256": "d872a2d6fb9a8b53b6972e3ccbb266a370b95a810a580a6284cc1d2ef76fb989"
+      "ar_current_file_sha256": "2721928778b2aa7c79d202cc3f8d5f0f82a2b5e82a7c2e18ab9f01c2be958c11",
+      "en_current_file_sha256": "4769767e299190a38ebdde801f664873f3e757b8f8d8a50fd7baf5fbc660f9a1",
+      "repair": "Restored only the recorded sentence-level qualifiers and reference descriptions, preserving the Arabic body, source sequence, citations and structure."
     },
     "diagnostic-uncertainty-family-fear-coercive-authority": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_publication",
       "reading": "Full AR/EN blocks and residual figure captions, conversation cards and citation footer read.",
       "material_issues": [
         "Direct risk-question card omits request qualified help if answer yes or uncertainty persists.",
@@ -104,8 +107,9 @@
         "Voluntary-spiritual-support safeguard changes no diagnostic certainty to no exclusive diagnostic certainty."
       ],
       "repair_plan": "Targeted sentence fixes only; all main sample sizes, 19 sources, caveats and figures otherwise faithful.",
-      "ar_file_sha256": "a59b4ba883043b165b090cfee5647d52d0ec36af20fea15b06afdf945f998ecc",
-      "en_file_sha256": "9fb739e7a78759677cb1a04b435447569d0350eb8866aaac7a8510f4061337ce"
+      "ar_current_file_sha256": "a59b4ba883043b165b090cfee5647d52d0ec36af20fea15b06afdf945f998ecc",
+      "en_current_file_sha256": "fb647a2a09505ba3660bac6bd89021368bca5b33ddc6ebf0cf6a95d86111c560",
+      "repair": "Restored only the recorded sentence-level qualifiers and reference descriptions, preserving the Arabic body, source sequence, citations and structure."
     },
     "difference-light-nur-quran-sun-moon": {
       "status": "material_differences_pending_repair",
@@ -121,8 +125,8 @@
         "Conclusion two paragraphs and original reading path omitted/replaced."
       ],
       "repair_plan": "Restore complete AR-equivalent body, original source sequence/links and quotations; remove added table.",
-      "ar_file_sha256": "8f2abca29d639f2c6aa9c68aee74d64a5432e5be55d8d5e17fa5f5e3d17c85f0",
-      "en_file_sha256": "038b4c1ee84039bff8104cf0375dac9e09c92db88ca129fa0a49ad629d1b0292"
+      "ar_current_file_sha256": "8f2abca29d639f2c6aa9c68aee74d64a5432e5be55d8d5e17fa5f5e3d17c85f0",
+      "en_current_file_sha256": "038b4c1ee84039bff8104cf0375dac9e09c92db88ca129fa0a49ad629d1b0292"
     },
     "dna-code-genetic-information": {
       "status": "limited_meaning_differences_pending_repair",
@@ -134,8 +138,8 @@
         "Original transparency paragraph including book origin and Shannon/function concept distinction and entire related reading path omitted/replaced."
       ],
       "repair_plan": "Targeted restore quotations/clauses/footer, remove original-absent extra number sentence/source.",
-      "ar_file_sha256": "1f4c9a71c4e5933d501546a658ee419016466b0ce1264f42aad1a1f033e811dc",
-      "en_file_sha256": "ce5641f4f155446b8bdf8c3330f3c5bb940797241caa02b148ccad608ff0d0c5"
+      "ar_current_file_sha256": "1f4c9a71c4e5933d501546a658ee419016466b0ce1264f42aad1a1f033e811dc",
+      "en_current_file_sha256": "ce5641f4f155446b8bdf8c3330f3c5bb940797241caa02b148ccad608ff0d0c5"
     },
     "fall-of-baghdad-1258-ibn-al-alqami": {
       "status": "limited_meaning_differences_pending_repair",
@@ -147,67 +151,192 @@
         "FAQ proper name Muhammad ibn Muhammad shortened to Muhammad."
       ],
       "repair_plan": "Small sentence/name restorations; core uncertainty, responsibility and independent-source cautions faithful.",
-      "ar_file_sha256": "5b2148073944f8786270c80c8869a866c7ba03506da559ec654c1acb62c08af1",
-      "en_file_sha256": "db267aedf770bbd4daa335e50f83f4c555a750c858b1c18508fb29c8a57d3472"
+      "ar_current_file_sha256": "5b2148073944f8786270c80c8869a866c7ba03506da559ec654c1acb62c08af1",
+      "en_current_file_sha256": "db267aedf770bbd4daa335e50f83f4c555a750c858b1c18508fb29c8a57d3472"
     },
     "fear-physical-symptoms-umm-abbas": {
       "status": "faithful",
       "reading": "Full AR/EN incl every citation, emergency signs, non-diagnosis caveats, bookpages and quotations read.",
       "material_issues": [],
-      "ar_file_sha256": "3af0ad722ac91c0e8e654b74b57f5df56b7ff288f0a11a19d3c28eeb0c6f569b",
-      "en_file_sha256": "9558edbdf62009c31e0e5fe05bdc1fc97f6743c394e2c3b0944851c3c6f8f541"
+      "ar_current_file_sha256": "3af0ad722ac91c0e8e654b74b57f5df56b7ff288f0a11a19d3c28eeb0c6f569b",
+      "en_current_file_sha256": "9558edbdf62009c31e0e5fe05bdc1fc97f6743c394e2c3b0944851c3c6f8f541"
     },
     "functional-seizures-vs-epilepsy": {
-      "status": "unreviewed"
+      "status": "faithful",
+      "reading": "Read full AR/EN incl all99 blocks and residual cards. Emergency threshold, scalpEEG limitations, coexisting epilepsy14.8/7.4%, video89/86%, CODES368/12month nullprimary and secondarybenefits, medication withdrawal warnings and10 source sequence preserved.",
+      "material_issues": [],
+      "ar_current_file_sha256": "f9222c3e8ef1beae7849af1d783d13f85d020adf1efdbe79a0e96c9831e1f8cf",
+      "en_current_file_sha256": "257460199c99454364b429d82379118d4f7b4aeb2cadb1a333e4191e9fd252f5"
     },
     "green-tree-fire-photosynthesis": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full AR/EN incl all74blocks and residual FAQ question reviewed; science/formula/caveats/table/source10 all preserved.",
+      "material_issues": [
+        "Quran36:78–80 remains Arabic only and appended English summary omits forgot own creation and God knows every creation; provide complete English translation of the original quote instead of summary."
+      ],
+      "repair_plan": "One quotation paragraph correction; no need rewrite natural prose.",
+      "ar_current_file_sha256": "4ffe34869d2275ba62fab0d7ca5c4064751c7ff4d63d1885106ef42911c95cbe",
+      "en_current_file_sha256": "a83e79efd9f6bede6fdff885640662ee766d363a0692b7c426d70bd199d5954a"
     },
     "hearing-voices-in-head": {
-      "status": "unreviewed"
+      "status": "faithful",
+      "reading": "Full71 blocks/residual AR/EN read; neurological20/20 design limits, crosscultural60/20 selection, no spiritual diagnosis, emergency and medication warnings, citation/source9 sequence and manuscriptpages retained.",
+      "material_issues": [],
+      "ar_current_file_sha256": "259926748d4d422f6a7569c619964ab77c8bf974b90e52a1f55ba31fc259703d",
+      "en_current_file_sha256": "c5d53fff964d25542216369635252136cfb544f88e092fd33f0e18fe38ddc023"
     },
     "hexagram-magic-seal-of-solomon-umm-abbas": {
-      "status": "unreviewed"
+      "status": "faithful",
+      "reading": "Full AR/EN read; all dates/accession numbers, museum perhaps/provenance limits, five-by-five amulet, manuscripts4–5/9–10, religious/historical distinctions retained.",
+      "material_issues": [],
+      "ar_current_file_sha256": "20b4cad1072a5d81209353eae4125ab48a52f542210b041530340ebad3922c84",
+      "en_current_file_sha256": "da2ba59b3247cda17326f20e30991823fc8fe34c166cdfca9b1d02652038b4b6"
     },
     "how-certainty-becomes-violence": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full90 AR/EN blocks and residual citation/evidence controls read; seven mechanisms and90studies limits intact.",
+      "material_issues": [
+        "Novel responsibility question changes تصافح (shakes hands) to pledges; restore shakes hands without implying pledge.",
+        "Rumor function shared meaning-making omitted.",
+        "FAQ prior sacrifice blood softened to generic harm; preserve explicit blood reference."
+      ],
+      "repair_plan": "Three small clause restorations; no retranslation needed.",
+      "ar_current_file_sha256": "a15c6050b3c081246bbd05d6d823727d526a7b13b380dfd3d05cb0cba0941069",
+      "en_current_file_sha256": "3fa09bb541d63b5e8532b6dc18ac0a5cf8bef8a54bced895ff2bd1808f66d529"
     },
     "how-concepts-form-adam-names-scientific-models": {
       "status": "faithful",
       "reading": "Full AR and full EN reviewed in this conversation before PRs #208/#209; unchanged inputs reused.",
       "material_issues": [],
       "ar_file_sha256": "3100e48acea65d4bd942ae200754800c348b7d504a86c0f931d71905ef557aac",
-      "en_file_sha256": "074d97af6a98804a1c6f6bf598049f085fbba31f0640df5c0bde71e99ccaa890"
+      "en_file_sha256": "074d97af6a98804a1c6f6bf598049f085fbba31f0640df5c0bde71e99ccaa890",
+      "ar_current_file_sha256": "3100e48acea65d4bd942ae200754800c348b7d504a86c0f931d71905ef557aac",
+      "en_current_file_sha256": "074d97af6a98804a1c6f6bf598049f085fbba31f0640df5c0bde71e99ccaa890"
     },
     "how-khufu-pyramid-built-merer-diary": {
-      "status": "unreviewed"
+      "status": "faithful",
+      "reading": "Full72blocks plus FAQ residual read in AR/EN; 2013/40crew/2–3trips/10days/26thyear probabilities and legal-status caveats,3 evidence levels, table and8sources retained.",
+      "material_issues": [],
+      "ar_current_file_sha256": "a15e39c1f3281f43d14a2a69dc0c7a1aaed9128476e34adbac4dedbcefc7901a",
+      "en_current_file_sha256": "7157b8ad86548bc8f80fa96d8d763c403173626679161e179f414114071bf4f4"
     },
     "human-embryo-quran-stages": {
-      "status": "unreviewed"
+      "status": "material_differences_pending_repair",
+      "reading": "Both full texts read including all AR104 blocks and EN66, table, references and footer.",
+      "material_issues": [
+        "Opening human agency/memory reflection and full Quran23:12–14 quotation removed.",
+        "Numerous book-linked meanings/pages109/110/112 omitted and connected womb/alaqah/mudghah explanations condensed.",
+        "Bone/muscle methodological defense paragraphs and explicit original four exclusions shortened; retain full structural/cellular distinction.",
+        "Multiple other-creation readings including Qurtubi speech/cognition omitted.",
+        "Original four-column evidence table replaced by three columns.",
+        "Book4-part contribution and closing human limits/responsibility paragraphs omitted.",
+        "Intext[1]–[10] citations and complete bibliographic volume/pages removed; source9 duplicateTabari/booksource missing, sourcegroups13 replaced by14.",
+        "Original authorversion/date and book/evidence disclaimer replaced by new paragraph."
+      ],
+      "repair_plan": "Restore full AR-equivalent edition with original table/citation/source sequence and page references.",
+      "ar_current_file_sha256": "de57556af1d8a5602f727442a254c31fa94ead824dab7137c3688b17357d9e21",
+      "en_current_file_sha256": "12f15ba183e29bed19ff04a0c22024f691769f275c297978908f0614597541c4"
     },
     "injustice-fall-of-states-quran-history": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full AR70/EN72blocks and residuals read; five mechanisms, definitions/collapse limits, all14sources/table intact.",
+      "material_issues": [
+        "Full quoted Hud116–117,Hadid25,Rad11 replaced with paraphrases; restore quotations.",
+        "Added responsiveness to OECD trust list absent in AR.",
+        "Original evidence-transparency text about book as thesis origin replaced by new causal disclaimer; restore original full text."
+      ],
+      "repair_plan": "Targeted quotation/list/footer corrections; maintain natural prose and no need wholesale rewrite.",
+      "ar_current_file_sha256": "631ee93d608919f63c5ae679eb11499c2db5f82f7f2917eaa7ae6dae9873a7ff",
+      "en_current_file_sha256": "43d7abcf2cdab04cd69463604a6e82ea35df08f8917920ee2e21cab5f099b449"
     },
     "iron-fire-light-matter-energy": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full68blocks both editions and residual labels read; scientific mechanisms98%,30000C,15millionC and evidence/responsibility table faithful.",
+      "material_issues": [
+        "Original quoted Hadid25,Zumar6,Waqiah71–73,Yasin80,Naba13 replaced with summaries; restore exact scope of quotations.",
+        "Source descriptions supporting specific claims removed though URLs same.",
+        "Authorversion2.0/datecitation and original book/evidence-status footer replaced by new text and related-reading list not in AR."
+      ],
+      "repair_plan": "Targeted quotations/references/footer corrections.",
+      "ar_current_file_sha256": "b3406c1665e3a5616508834f2fe02d19b46723b3c8b87a349010a2adba47cea7",
+      "en_current_file_sha256": "4cd398a2a441d99126b23848af0d4be112eb427f2eaf33e67e0dbe910a830bf8"
     },
     "jinn-demons-quran-bible-torah": {
-      "status": "unreviewed"
+      "status": "material_differences_pending_repair",
+      "reading": "Both full AR87/EN74blocks including all18source entries and residualcitation read.",
+      "material_issues": [
+        "Full Quran72:1/11,18:50,6:112 quotations and source citations replaced by merged summaries.",
+        "Hadith reported sahih grading and no independent isnad verification caveat removed.",
+        "Specific Islamic responsibility nuance and story question paragraphs shortened.",
+        "Novel54–58 detail about respective scenes, continuity doctor/no money, epistemic differences and do not infer atheist identity missing.",
+        "NIMH causes/sleep/drugs and person participation in care decisions omitted.",
+        "Full18 annotated source reading-scope limitations removed, replaced with redirect to Arabic; no same article English.",
+        "Added fourthFAQ question absent inAR; changedFAQ wording to categoricalNo rather than source-scope caveat.",
+        "Original readinglinks2paragraphs and authorcitation missing; clinical/religious caution table altered."
+      ],
+      "repair_plan": "Full faithful restoration preserving source scopes/limits, claims and citation sequence, remove newFAQ.",
+      "ar_current_file_sha256": "3a3960f6c9890085a7903b9b66f3c71ed4c046faf14abd32372d2d9a319ee527",
+      "en_current_file_sha256": "bb71da5940acd4eacb34ea078299cbb89a0015f68474dc93bfd4c990a22c99c1"
     },
     "jinn-existence-quran-sunnah": {
-      "status": "unreviewed"
+      "status": "faithful",
+      "reading": "Full74 AR/EN blocks/residuals; full quotations supplied with English renderings, tafsir distinction,Qurtubi11/12,Tabarirahaqdirection,hadithgrading,clinical/FNDlimits and15refs preserved.",
+      "material_issues": [],
+      "ar_current_file_sha256": "7c65012ec47633c17cf4fcc07d6b5f4f0675e10ff72cae8e94fb3b2c5e9c9515",
+      "en_current_file_sha256": "52dee87a24a24d9d2f05a4304f46e901b5126684496e13112b02e60bc2f54405"
     },
     "juhayman-grand-mosque-1979": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "All75blocks/table/source4/FAQ/residual read AR/EN, dates and denominators all preserved.",
+      "material_issues": [
+        "Table shortens Juhayman ibn Muhammad name; restore patronymic.",
+        "One-night expression removes God as agent.",
+        "Some followers continued for a time believing alive changes to even after event unsupported time extension.",
+        "Novel bullet responsibility even in cause followers think right changed to pledge cannot erase accountability.",
+        "Table siege row omits recapture early December though maintext preserved."
+      ],
+      "repair_plan": "Small five phrase/name restorations.",
+      "ar_current_file_sha256": "b664801ce199a12b4bcc4fc271a153120ff2d9e2bd0888f4f752d040a0d2d724",
+      "en_current_file_sha256": "4a685b0d9f23812c0e2b4550f6559b4dccc75669156c11d955166a3a70c2e968"
     },
     "madain-salih-thamud-nabataean-tombs": {
-      "status": "unreviewed"
+      "status": "material_differences_pending_repair",
+      "reading": "Full AR68/EN67blocks and table/source list read.",
+      "material_issues": [
+        "Complete book connection section/pages94–96 missing.",
+        "Quran26:149 quote replaced bysummary; hadith weeping condition changed to humility/reflection.",
+        "Table original claim/classification rows reordered/replaced, missing inability identify all structuresThamud.",
+        "Some contextual clauses omitted incl geological evidence and no filling unknown with stories.",
+        "Intextcitation positions removed; original6referencegroups split9, hadith4702/2980 omitted, Saudipedia source missing, OxfordURL replaced with another sourceURL.",
+        "Original evidence/BibTeX/RIS paragraph and related reading path removed, replaced by new sourcescope paragraph."
+      ],
+      "repair_plan": "Restore original complete argument, table and source/link scope; preserve natural English in retained paragraphs.",
+      "ar_current_file_sha256": "f0e965d89492b471d4f47e579490a3d8b3bdd51d4b2fdcb7dc2418c9a10b8a03",
+      "en_current_file_sha256": "63198207bb237a264e927ec098cd8dd2f389991fd2f08893be692abd4b937092"
     },
     "marib-dam-sayl-al-arim": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full80AR/81ENblocks incl dates2005–06/456/548 and all12sources/evidence table read.",
+      "material_issues": [
+        "Quran34:15–16 full quote replaced by paraphrase.",
+        "Radiocarbon paragraph changes declining trade significance contribution to widerhistory with addedregionalpolitics.",
+        "Evidence-map first row omits good town.",
+        "Original specialist review specifically South Arabian archaeologist/forthcomingbook origin only replaced with general review disclaimer.",
+        "Original body linksUNESCO/ICOMOS/Vogt removed; source descriptions and Garbrecht title changed."
+      ],
+      "repair_plan": "Targeted quotation, source/title, qualifier and tablecell restoration.",
+      "ar_current_file_sha256": "8a9197648b410e1fa037a05d7823c77bf4e82a8b1c33077ca6ccd2e1873e89a0",
+      "en_current_file_sha256": "5215516effc5c0fedf733252b41b8e028b61afb88a965cac49814f91ec311361"
     },
     "memory-gaps-unremembered-actions": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full83blocks plus residuals both editions;15/15 sleep study correctedassociations, amnesia/FNDlogic, literarypages and12 annotatedsources preserved.",
+      "material_issues": [
+        "Verse18:63 quotation omits exclusive إلا (only/nothingbutSatan); restore full scope of original quoted phrase in heading and paragraph."
+      ],
+      "repair_plan": "Two short quotation replacements; otherwise faithful.",
+      "ar_current_file_sha256": "1fa31d0e440eb879a12965ca03503a5f70678795946c3b6e6d4caa2ec609933b",
+      "en_current_file_sha256": "95f9382284a0a357329e15d17b7b1f8b27d6f3a84ce607949e07f5022c88587d"
     },
     "mesopotamia-irrigation-soil-salinity-collapse": {
       "status": "repaired_published",
@@ -231,65 +360,251 @@
         "merge_sha": "15dd07911b96f25c83b9db1295bb7a1b81c64d56",
         "all_postmerge_checks": "success",
         "live_exact_bytes": true
-      }
+      },
+      "ar_current_file_sha256": "8e9a47426249082248f5656fad63c1a9ef882602937f04c2e5f91a83f192a7bd",
+      "en_current_file_sha256": "aa59de4daaac6fc90434683579c698b5cc42ba02e920aa2f8acaaa6e3afba494"
     },
     "nile-ancient-egypt-flood-calendar-state": {
-      "status": "unreviewed"
+      "status": "material_differences_pending_repair",
+      "reading": "Both full AR73/EN64blocks incl16originalsourcegroups and residuals read.",
+      "material_issues": [
+        "Opening Heqanakht scene and Quran43:51 quote removed.",
+        "Original calendar/civil-field nuance compressed, Rhind84problems count omitted.",
+        "Specific rent/debt/grain/flax and salary-rations Heqanakht details shortened.",
+        "Numerous full Pharaoh quotations43:46–55,79:23–24,28:38/40 and detailed tafsir/moral distinctions replaced by summaries.",
+        "Historical dated-source separation and three voices method paragraphs shortened/omitted; Hatshepsut and medical48-case question nuance lost.",
+        "Full concluding paragraph returning to afalatubsirun and human accountability omitted.",
+        "Intextcitations removed; original16groups replaced16entries with several Quran/TabariURLs missing and complete descriptions/book82–88 reference lost.",
+        "Original version/date and book-origin footer replaced with new paragraphs."
+      ],
+      "repair_plan": "Full faithful body restoration incl quotation/citation/URL sequence; preserve AR.",
+      "ar_current_file_sha256": "1f72c02a720247a3132a582e612378e9b8f5632d05ce9088979b1fd8531e0854",
+      "en_current_file_sha256": "b94a827c3ddd25f3786f3695d64bd849c25b3f83f4709f4610d7f6deaab4c0a7"
     },
     "possession-or-neurological-psychological-disorder": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full60blocks/tables/ref8/residual read; most complete faithful.",
+      "material_issues": [
+        "Four-layer explanation merges diagnostic medical hypothesis and spiritual interpretation into one sentence, weakening deliberate distinction.",
+        "Safety attempt to harm narrowed to self-harm; restore unspecified harm incl others.",
+        "Comparisontable medication causes replaced by substance-related, restore medications.",
+        "Spiritual-safeguarding named article lost original link."
+      ],
+      "repair_plan": "Targeted clause/table/link corrections only.",
+      "ar_current_file_sha256": "0c69bed9b600244fb411c048d83ecd878060808a7967941cdd4cb3e5f4fe44f4",
+      "en_current_file_sha256": "4b5ae379fcf6a9a57d25db8a818c5f0d6ccafc26e6208e49e1ba58732f6776b8"
     },
     "quran-day-thousand-fifty-thousand-years-relativity": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full63AR/61ENblocks/formulas/tables,33cm and3.6e-17,allcommentarydifferences/FAQread; core argument faithful.",
+      "material_issues": [
+        "Original table Quran quotations replaced by unmarked paraphrases.",
+        "All original seven intextfootnotes and reciprocalbacklinks removed.",
+        "Original sourceparagraphs/book28–35 entry and repeatedfootnotes consolidated into9refs losing sourceURLsequence and paper1630–1633pages.",
+        "Original authorversion/date and book/evidencefooter replaced."
+      ],
+      "repair_plan": "Restore original tablequotes, intextcitations and source/footerstructure without rewriting natural mainprose.",
+      "ar_current_file_sha256": "4c8b1b22923a744918c2254d73624f242d23e50b88ed48620efc8e8bd7aad586",
+      "en_current_file_sha256": "1cb97217fbb9dc8ee8310adf9f5c50ec1a8bba05a7ea1eba8744ca75fb97b487"
     },
     "quran-science-method-evidence": {
-      "status": "unreviewed"
+      "status": "material_differences_pending_repair",
+      "reading": "Complete126AR/85ENblocks, sources9URLs vs additions and footer read.",
+      "material_issues": [
+        "FullQuran29:20 and intentionhadith quote replaced by summaries.",
+        "Original five layers separateH3/paragraphs replaced by newtable; original evidencetable removed.",
+        "Eight question explanatory answers omitted, keeping headings only.",
+        "Bookintro7–17 principles including no fear of inquiry and applicationtoallseries shortened.",
+        "Several claimgraduation/certainty/method/disagreement clauses omitted.",
+        "Entire article-to-book section/list of followupdomains and original citationversion/date missing.",
+        "Added FAQsection fourquestions absent inAR.",
+        "SourceQuranlistfivepassages shortened; hadithsourceURLchanged andnewlinksadded, ShatibiURLchanged; original9external sequence altered."
+      ],
+      "repair_plan": "Restore full faithful edition without newFAQ/table and original fullreference sequence.",
+      "ar_current_file_sha256": "c3c5c8930e5ff534ccf000b0e3cc63f8b99d4875a68ace64858c3f5d86d519be",
+      "en_current_file_sha256": "10d6534d685f7432fe4a7b69a87cbb164881e4fe750a4b4b529d57322d94b864"
     },
     "ratq-fatq-big-bang": {
-      "status": "unreviewed"
+      "status": "material_differences_pending_repair",
+      "reading": "Full71AR/90ENblocks and all residual text read. English is a different expanded dossier rather than translation.",
+      "material_issues": [
+        "New claim map, five-layer list, evidence appendix/ledger, Hubble/Penzias/FIRAS/DESI observational sections, five errors and change criteria absent in Arabic.",
+        "Original Ibn Ashur grammar/reading, four comparison problems including Earth4.5Gyr chronology, CMB380000 identification warning, theological objections, book19–25/34/26–35 and29:20 quotation, news-reading guidance and originalFAQ absent or replaced.",
+        "Original9referencegroups and13 externalURLs replaced14different references; Quran29:20/IbnAshur/PDG2025 missing.",
+        "Original version dateSeptember29 replacedSeptember2."
+      ],
+      "repair_plan": "Replace with full faithful English translation of currentArabicbody; retain valid page technical metadata and original sources.",
+      "ar_current_file_sha256": "f2366ececdd8cc87ec546c57658855327181c02adb0ff17e17db3e15bbe00235",
+      "en_current_file_sha256": "2b9787555a14baa1c27ecc59cc96972a6929ebe33cca24ff9c77cedfe69cf453"
     },
     "religious-ocd-scrupulosity": {
-      "status": "unreviewed"
+      "status": "faithful",
+      "reading": "All47pairedblocks,12cellstable, OCDcycle, treatment/medication/emergency safeguards,7referencesandresidualcardsread. Naturaltranslationequivalent;Englishcitationdatededitionratherthanoriginalnotmeaningdifference.",
+      "material_issues": [],
+      "ar_current_file_sha256": "b07384cabd4525b482d5d2fb075242e24da3c35d2daafc79061b938a4b7baa95",
+      "en_current_file_sha256": "46191e608d20e3ed22c3eb91b230e3097a810121e177ad7d6172f96119df722d"
     },
     "river-civilizations-water-state": {
-      "status": "unreviewed"
+      "status": "faithful",
+      "reading": "Full62AR/64ENblocks and21cellstable/10sourcesandfooterread. All mechanisms, threecasecomparisons, caveats, pages60–77 andauthoritylimitsfaithful. Additionalreviewstatuspresentationmatchesoriginalreviewcaveat, notnewclaim.",
+      "material_issues": [],
+      "ar_current_file_sha256": "0db15baf298b3797009d4f8bb4cf76a19791db59cf057971e32ac2542bbc7ffe",
+      "en_current_file_sha256": "34daafe493bb16dc4a0baedc585b87b85d6c7154e1f25e34c50b428aae68cce4"
     },
     "six-days-creation-cosmic-time": {
-      "status": "unreviewed"
+      "status": "material_differences_pending_repair",
+      "reading": "All63AR/64ENblocks andresidualsread. Broadargument preserved but severalparagraphsandclauses/fullquotedtexts omitted.",
+      "material_issues": [
+        "Originalaffirmationwe believe and explicitdistinctionquestionnotwhethercreationoccurred omitted.",
+        "Q7:54/50:38/36:82/22:47 fullquotes andDajjalquotedNo estimateitsmeasure replacedsummary.",
+        "Book25–28/33–34 references and criticalquestionofpowerwisdomvsduration lost.",
+        "Original paragraph26 distinguishing cosmicage/creationdays/otherdivineday absent.",
+        "Original expandingratechanging overtime ageinversion warning and difficultyEartholderthanobservedcosmosorprecedingstars omitted.",
+        "Originalscientificgap/theologicalscopeconclusion andsomeFAQqualifiers shortened.",
+        "Nine originalsourcegroupsand17URLs replaced14references:Q22:47/32:5/70:4 absent,hadithNASAESA NISTURLs altered, originalinbodycitationsmostlyremoved.",
+        "Original readingpath, authorversion3.0 September30 andbookoriginfooter missing replacednewsummary."
+      ],
+      "repair_plan": "Restore complete faithfuledition andoriginalreferenceURLs/order without newsections.",
+      "ar_current_file_sha256": "b9f3d79c0da06b6d1a055f5668b310ebde3f00ada935febf74128b75debf7e60",
+      "en_current_file_sha256": "f222ab9e38b529e6840e577d15b8e12f8fbab08897981b8c08a65f95d2189474"
     },
     "sleep-paralysis-jathoom": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Complete104pairedblocks pluscards/citation/reviewpolicy;7.6%,7–9h,all sixsources/clinicalcaveatsfaithful.",
+      "material_issues": [
+        "Initial urgentassessmentwarning weakensArabic needs urgentassessment to mayrequire; reference6 repeats mayrequire whereasArabicrequires."
+      ],
+      "repair_plan": "Restore firm conditionalurgentassessment wording in twoexisting sentences; retainallothernaturalEnglish.",
+      "ar_current_file_sha256": "b96dc2d431c6d6e9cf750cbda8d5a46e68df0babb6d8420ada3fce1f300892e4",
+      "en_current_file_sha256": "2720423ae888ebb1781726797912c2232b64d92348d518a5e856d4a46046fb0b"
     },
     "sleepwalking-why-no-memory": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "All51pairedblocks/table and10refs/citationfooterread. Allnovelpages71–80/121–139, times3:17/2:43 andmedical/theologicalcaveats faithfullypreserved.",
+      "material_issues": [
+        "MayoClinicreference9 omits23August2024 source date.",
+        "Baldinireference10 omits explicitfulltextread methodstatement presentArabic."
+      ],
+      "repair_plan": "Restore only two reference details.",
+      "ar_current_file_sha256": "3b78ab06377176affa1f284f191a30b6d72e854545c439630d362bd1700c0e17",
+      "en_current_file_sha256": "ffffbc0c66054f525586fd51b0b59411301ae945f862d16a57dde5b559bb2c54"
     },
     "spiritual-healing-exploitation-safeguarding": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full95pairedblocks,21cellstable,12sourcesandcardsread; all7protectionsteps, emergency/legal/capacitycaveatsfaithful.",
+      "material_issues": [
+        "Q27:65 quotation omits Say imperative.",
+        "CompanionFAQ weakens original no touching to no unwanted touching; restore original boundarywording."
+      ],
+      "repair_plan": "Restore two small textualdetails; original hadithsummaryretainsallquotedmeanings andnaturaltranslationaccepted.",
+      "ar_current_file_sha256": "7cbd931748fa01817df058966ae64045ce6f8ae55cedcffada12f6737f06afce",
+      "en_current_file_sha256": "83a5f4ea12c64b129a8937f913eb7857425b8815e9d2e78b923ab66ff734963b"
     },
     "teaching-names-ai-understanding": {
-      "status": "unreviewed"
+      "status": "material_differences_pending_repair",
+      "reading": "Full136AR/154ENblocks,3originaltables/4ENtables, references/residuals read incontiguouschunks.",
+      "material_issues": [
+        "English omits entire domainsmap/book37–43 paragraph, probe glossary row, Quranquotations, explicitconsciousnesssection andnoindependentreviewlimitationlistentry.",
+        "Adds independentprobes/causal/emergence/formalcompetence sections, exegetetable, newpapersEngels/globalworkspace/humanconceptlearning absentArabic.",
+        "Othello64squares,linearvsnonlinearprobe contrast, OrderedCommonGen36models andsomeobjectioncaveats omitted.",
+        "Original matrixchanges boundaries/strongest evidence andclaimtable8rows replacednew10IDconfidence rows.",
+        "Original BiblioBibRIS CFFlocalfiles links andclaimledgerpresentation lost.",
+        "References26groups→28,orderschanged/severalURLsreplaced, preprintstatusdetailsmissing.",
+        "Original religiousbindingnotice on soul/taklif/vicegerency andoriginalfooter relatedAIarticles replacedcosmology/waterlinks."
+      ],
+      "repair_plan": "Restore fullfaithful translationofthecurrentArabicbody and exact originalsource/citationsequence; eliminate addedsectionsandclaims.",
+      "ar_current_file_sha256": "1fbf5b5e4d3cf668738dcea206d65b84bebfc9df143d94ca3378a74a5265d52c",
+      "en_current_file_sha256": "6d709847f2fe08297f7a836be044fcda92e55373c4ffcfc7821c86b052f8e329"
     },
     "turing-test-ai-consciousness": {
-      "status": "unreviewed"
+      "status": "faithful",
+      "reading": "Full58pairedblocks,15cellstable,nineexactreferences,allresearch73%/56%/5min, book51–52 andconsciousness/agencyqualifiersfaithful.",
+      "material_issues": [],
+      "ar_current_file_sha256": "d9cbd108a274cee1e2c9783fb80b5ed147b231174ecf4c9af6b817bb04fa7f38",
+      "en_current_file_sha256": "343891b3279e4473837f3a112e48fa736817c46bb42917cffa05b23b83bbe7ad"
     },
     "umm-abbas-family-fear": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full40pairedblocks,all5manuscriptpagerangesandquotes194/200 plusfooterread; literarycaveatsfaithful.",
+      "material_issues": [
+        "Humanrelationshipsessentialsignificance changedto equalweight, adding unasserted relative weightingagainstsupernaturalimagery."
+      ],
+      "repair_plan": "Change equalweight to centralimportance inexisting paragraph3.",
+      "ar_current_file_sha256": "e46f59c2f90bb6d3beda0d178bd304c7c8dd62c6871ec7dee7ea6365b1a7feae",
+      "en_current_file_sha256": "edbbf62a9e0d370ac875d4742463c44ffec6a11b3f695884344d6ed4339549b3"
     },
     "universe-expansion-wa-inna-lamusiun": {
-      "status": "unreviewed"
+      "status": "material_differences_pending_repair",
+      "reading": "Full79AR/80ENblocks/2tables/allsource/residualsread; physicalcoreargumentmostlyfaithful.",
+      "material_issues": [
+        "FullQ51:48–50and29:20quotes replacedsummary; original27 biaydin strength/nophysicaldevice warning and24 handplural distinction weakened.",
+        "Originalredshiftparagraphfinalsingleline notselfsufficient evidenceforwholeage/nature omitted; zdefinition omitted; IbnAtiyyaparagraph spacetime referenceabsence clausemissing.",
+        "Interpretationlist34 preferentialTabari/IbnZayd/IbnAtiyya detaildeleted; FAQ55 universeexpands changedto galaxiesareexpanding;FAQ58losesreportedwidening/reflection caveat.",
+        "Original13sourcegroups/16URLs withinbodylinks/order replaced13newentries/order anddifferentQuran/TabariURLs, descriptionsshortened.",
+        "Original evidenceparagraphbooknotindependentastronomyevidence andentirefourlinkreadingpath omitted, replacednewsummary."
+      ],
+      "repair_plan": "Restore missingfullparagraphs/quotes/definitions/FAQ andoriginalsources/readingpath; keepfaithfulphysicalprose.",
+      "ar_current_file_sha256": "af64212e4ddaee1e2ef59d5655c8b53692c421d53ba32656078ca711320ac054",
+      "en_current_file_sha256": "f7c9c604f4060c9483843200ed024a1684fd6320482b704d47ddb5a56f845806"
     },
     "unwanted-intrusive-thoughts-meaning": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full44pairedblocks,13refs/footerandallnumbers/clinical/religiouscaveatsread.",
+      "material_issues": [
+        "Paragraph2 reverses chronologicalsequence: Arabic responsibilityquestion precedesvoice; English saysquestionisprecededbyvoice.",
+        "Paragraph26 medicalassessmentrequires accordingtocase weakenedto canrequire."
+      ],
+      "repair_plan": "Restore original chronology andconditionalassessmentobligation in twoexisting sentences.",
+      "ar_current_file_sha256": "2ac7d3a265d40637b299340e15030212e35971c593e2945584d99f8961dd785e",
+      "en_current_file_sha256": "72cde233a80d0b4a7dd166638f6fa19c814bda996710fdbdd16d2c6d3ae3412b"
     },
     "water-civilization-power": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full106pairedblocks/44tablecells plus21fullannotatedsources/titles/exactURLsanddiagramcaptionread. Coreframework/samples/caveatsfaithful.",
+      "material_issues": [
+        "Originalchapterthree andbookpages55–104 omitted; paragraph80 conceptualpathandorganisingblessingjusticevsmonopolyquestion replaced.",
+        "Independentmeasurement question19 omitted;allocation21 energysectoromitted;humanrights29 sanitationmissing;rights54 affordability/disabilityomitted.",
+        "Marib43 originaldonotreduce turningawaytoengineeringerror caveat removedreplacednewarchaeologyvsgratitude sentence.",
+        "OriginalQ23:18fullquote→summary addsabsoluteownershipphraseabsentAR; paragraph62 addscorruptionquestionabsentAR.",
+        "Climate69 specificfloodsandscarcity changedgenericwaterinsecurity;devotionaljustice71 omitted.",
+        "All21referencecategorylabels retainuntranslatedArabic; Vogt199?yearnotinoriginalextra2023 removeunlessoriginalpaperstabletitle valid notneeded."
+      ],
+      "repair_plan": "Restore omittedclauses/bookpages andoriginalquote inexistingparagraphs; removetwoaddedclaims, normalizeEnglishsourcetypeUI.",
+      "ar_current_file_sha256": "dc369fd6c70e6316e8681add6892a6aea931ce3770e1fb8083c630383132843d",
+      "en_current_file_sha256": "3d1bf9637e333879f1a993daa286d724a25885b808b06168de844c59d9f3dcfa"
     },
     "water-life-molecular-properties": {
-      "status": "unreviewed"
+      "status": "material_differences_pending_repair",
+      "reading": "All85AR/71ENblocks,6FAQ/15originalreferences andfooterread; Englishcompressessubstantialargument.",
+      "material_issues": [
+        "Original21:30fullquote/plantslifevsanimate distinction/norockinwater/finalfaithargument,24:45fullendingdifferentlocomotionanddivinepower,27:88fullquote omitted.",
+        "OriginalbookconnectionH2 andpages125/126/128–129argumentlinks/125preparationmeasurefaithreading omitted.",
+        "Originalscientificdetails transporterATPbindingstructuralchange,mitochondriagradientfarfromequilibrium,cellrepair/failureandnosubstancemagic andreplication omissions.",
+        "Originalreflectionparagraph40 andentirebookconclusion/readingpath50 omitted.",
+        "Addedcomparisonsection/tableabsentArabic.",
+        "15originalsourcegroups→17 newentries missingTabari27:88/Qurtubi24:45/bookreference4; alldescriptionsfullauthornames/publicationtitleslost,desiccationcorrectionhistory omitted.",
+        "Originalauthorpublication26September/update30September andfromdroptolivingsystem bookfooter omitted."
+      ],
+      "repair_plan": "Restore fullfaithfulEnglishbody,exactoriginalreferences andfooter; removetableaddedwithoutArabicorigin.",
+      "ar_current_file_sha256": "b447fb909926eec009c071f0c849a12327ae9e2b3e1b59bee6d2288dcf940a2c",
+      "en_current_file_sha256": "3d90b070e1e20722b6719b86e7e6dbb20f60ac6207fd76643427ec221d834544"
     },
     "writing-changed-human-history": {
-      "status": "unreviewed"
+      "status": "limited_meaning_differences_pending_repair",
+      "reading": "Full86AR/89ENblocks/all20sourcegroupsandresidualsread. Broadhistoricalargumentfaithful.",
+      "material_issues": [
+        "OriginalQ55:3–4/96:3–5 and2:282quotations replacedsummary;originalparagraph43 repeats debtversehumanconditionsandstrongestaccountwarning omitted.",
+        "Paragraph25 concluding exegeticfairnessbetweenunequalparties omitted; paragraph41 environmentaltraces andgoodsincludedname nuance shortened.",
+        "OriginalHohol sourcebodyURLandmuseumopening sourcebodyURL lost; sourceorder Muhanna/Twilight/Quran/...Gutas changed, dates2013/2021/2018 omitted.",
+        "Originalevidenceparagraph84 omittedreplacednewsummary paragraph86 absentAR;FAQ62 rewrittenwithnewdatedfirsttabletstatement fromelsewhere."
+      ],
+      "repair_plan": "Restore omittedsentences/quotes/sourceorder andexactbodylinks; removeaddedsummaryparagraphandrestoreoriginalFAQ62.",
+      "ar_current_file_sha256": "637e867133220b9664f0249cb0b9ef28a1adb681ef8eabff8d97cc4db944cd01",
+      "en_current_file_sha256": "47b03f2805fe09e84a071d5da5dec4c2c6386a8c3e1b0318592b03b69264904d"
     }
   },
-  "last_checkpoint": "2026-10-13"
+  "last_checkpoint": "2026-10-13",
+  "reading_complete": true,
+  "remaining_reading": [],
+  "note": "All50pairedtexts read in full; repairs remain pending and the entire task is not complete. Natural equivalent wording is accepted. Publishing one small batch at a time."
 }
