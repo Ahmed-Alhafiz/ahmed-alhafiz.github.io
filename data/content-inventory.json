@@ -464,7 +464,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "لماذا قامت الحضارات القديمة حول الأنهار وكيف تحول الماء والفائض إلى مدينة ودولة",
       "does_not_target": [
@@ -473,7 +474,8 @@
         "رد انهيار الحضارات إلى سبب بيئي واحد"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "A distinct search question that expands the book's water-to-state chain using archaeological and hydrological evidence while rejecting river and hydraulic determinism."
+      "reason": "A distinct search question that expands the book's water-to-state chain using archaeological and hydrological evidence while rejecting river and hydraulic determinism.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/river-civilizations-water-state/"
     },
     {
       "slug": "universe-expansion-wa-inna-lamusiun",
