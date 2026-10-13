@@ -305,7 +305,8 @@
       "type": "تحقيق علمي وتاريخي وقرآني في ري بلاد الرافدين",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -318,7 +319,9 @@
         "https://doi.org/10.1002/gea.21548",
         "https://quran.com/56/63-70",
         "https://quran.com/ar/30%3A9/tafsirs/ar-tafsir-al-tabari"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/mesopotamia-irrigation-soil-salinity-collapse/",
+      "english_title": "Did Soil Salinity Destroy Mesopotamia?"
     },
     {
       "slug": "nile-ancient-egypt-flood-calendar-state",
