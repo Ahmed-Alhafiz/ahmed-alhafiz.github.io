@@ -1,0 +1,184 @@
+{
+  "scope": "All 50 Arabic/English article pairs; semantic comparison, not mechanical count equality.",
+  "started": "2026-10-13",
+  "base_sha": "f2d3f332ae3d26960adc075efbde3278368955d6",
+  "rules": "Accept natural translation, paragraph regrouping and equivalent wording; repair omitted/added sentences, changed meanings, caveats, numbers or references. Never infer semantic fidelity from counters. No hourly automation; user cancelled it.",
+  "reviewed_count": 3,
+  "total": 50,
+  "complete": false,
+  "articles": {
+    "adam-all-languages-origin-language": {
+      "status": "unreviewed"
+    },
+    "age-of-universe-13-8-billion-years": {
+      "status": "unreviewed"
+    },
+    "ai-soul-consciousness-understanding-taklif": {
+      "status": "faithful",
+      "reading": "Full AR and full EN reviewed in this conversation before PRs #208/#209; unchanged inputs reused.",
+      "material_issues": [],
+      "ar_file_sha256": "e2278d19d2a7aced9c288a2837cb8f1ee5f423c1c220a924ae27a9a08800f31e",
+      "en_file_sha256": "afacbe04fd9f9e215eef544a42dc54ced7d58bf7f1de60c528d20e3aa69667ed"
+    },
+    "anzalna-iron-meteorites": {
+      "status": "unreviewed"
+    },
+    "before-big-bang-science-limits": {
+      "status": "unreviewed"
+    },
+    "brain-consciousness-spirit-limits": {
+      "status": "unreviewed"
+    },
+    "civilization-knowledge-justice-collapse": {
+      "status": "unreviewed"
+    },
+    "cyberbullying-university-rumor-stigma": {
+      "status": "unreviewed"
+    },
+    "depersonalization-derealization-feeling-unreal": {
+      "status": "unreviewed"
+    },
+    "diagnostic-uncertainty-family-fear-coercive-authority": {
+      "status": "unreviewed"
+    },
+    "difference-light-nur-quran-sun-moon": {
+      "status": "unreviewed"
+    },
+    "dna-code-genetic-information": {
+      "status": "unreviewed"
+    },
+    "fall-of-baghdad-1258-ibn-al-alqami": {
+      "status": "unreviewed"
+    },
+    "fear-physical-symptoms-umm-abbas": {
+      "status": "unreviewed"
+    },
+    "functional-seizures-vs-epilepsy": {
+      "status": "unreviewed"
+    },
+    "green-tree-fire-photosynthesis": {
+      "status": "unreviewed"
+    },
+    "hearing-voices-in-head": {
+      "status": "unreviewed"
+    },
+    "hexagram-magic-seal-of-solomon-umm-abbas": {
+      "status": "unreviewed"
+    },
+    "how-certainty-becomes-violence": {
+      "status": "unreviewed"
+    },
+    "how-concepts-form-adam-names-scientific-models": {
+      "status": "faithful",
+      "reading": "Full AR and full EN reviewed in this conversation before PRs #208/#209; unchanged inputs reused.",
+      "material_issues": [],
+      "ar_file_sha256": "3100e48acea65d4bd942ae200754800c348b7d504a86c0f931d71905ef557aac",
+      "en_file_sha256": "074d97af6a98804a1c6f6bf598049f085fbba31f0640df5c0bde71e99ccaa890"
+    },
+    "how-khufu-pyramid-built-merer-diary": {
+      "status": "unreviewed"
+    },
+    "human-embryo-quran-stages": {
+      "status": "unreviewed"
+    },
+    "injustice-fall-of-states-quran-history": {
+      "status": "unreviewed"
+    },
+    "iron-fire-light-matter-energy": {
+      "status": "unreviewed"
+    },
+    "jinn-demons-quran-bible-torah": {
+      "status": "unreviewed"
+    },
+    "jinn-existence-quran-sunnah": {
+      "status": "unreviewed"
+    },
+    "juhayman-grand-mosque-1979": {
+      "status": "unreviewed"
+    },
+    "madain-salih-thamud-nabataean-tombs": {
+      "status": "unreviewed"
+    },
+    "marib-dam-sayl-al-arim": {
+      "status": "unreviewed"
+    },
+    "memory-gaps-unremembered-actions": {
+      "status": "unreviewed"
+    },
+    "mesopotamia-irrigation-soil-salinity-collapse": {
+      "status": "material_omissions_repaired_pending_publication",
+      "reading": "Read both full editions consecutively, including table and all references.",
+      "material_issues": [
+        "Opening hypothetical field scene omitted.",
+        "Salt-balance decision paradox and limits shortened.",
+        "Ancient ki-mun evidence lost approximate 2500 BCE date.",
+        "Four causal scenarios omitted.",
+        "Detailed caveats about evidence types and local river/canal chronology condensed.",
+        "Multiple Quranic quotations and ethical distinctions omitted or compressed.",
+        "Book-contribution section omitted.",
+        "Original four-question evidence table replaced with different five-row table.",
+        "References regrouped and several source URLs omitted; per-paragraph citation links lost."
+      ],
+      "repair": "Restored complete original argument, quotations, caveats, table and 10 reference groups; 55 paragraphs, 11 H2, 6 H3, 15 table cells and all 17 external link occurrences. Arabic unchanged.",
+      "ar_file_sha256": "8e9a47426249082248f5656fad63c1a9ef882602937f04c2e5f91a83f192a7bd",
+      "en_file_sha256": "54c3971e5feedee48238808177a06c7f33bf68b3e17d51e379a0da8cbce5c665"
+    },
+    "nile-ancient-egypt-flood-calendar-state": {
+      "status": "unreviewed"
+    },
+    "possession-or-neurological-psychological-disorder": {
+      "status": "unreviewed"
+    },
+    "quran-day-thousand-fifty-thousand-years-relativity": {
+      "status": "unreviewed"
+    },
+    "quran-science-method-evidence": {
+      "status": "unreviewed"
+    },
+    "ratq-fatq-big-bang": {
+      "status": "unreviewed"
+    },
+    "religious-ocd-scrupulosity": {
+      "status": "unreviewed"
+    },
+    "river-civilizations-water-state": {
+      "status": "unreviewed"
+    },
+    "six-days-creation-cosmic-time": {
+      "status": "unreviewed"
+    },
+    "sleep-paralysis-jathoom": {
+      "status": "unreviewed"
+    },
+    "sleepwalking-why-no-memory": {
+      "status": "unreviewed"
+    },
+    "spiritual-healing-exploitation-safeguarding": {
+      "status": "unreviewed"
+    },
+    "teaching-names-ai-understanding": {
+      "status": "unreviewed"
+    },
+    "turing-test-ai-consciousness": {
+      "status": "unreviewed"
+    },
+    "umm-abbas-family-fear": {
+      "status": "unreviewed"
+    },
+    "universe-expansion-wa-inna-lamusiun": {
+      "status": "unreviewed"
+    },
+    "unwanted-intrusive-thoughts-meaning": {
+      "status": "unreviewed"
+    },
+    "water-civilization-power": {
+      "status": "unreviewed"
+    },
+    "water-life-molecular-properties": {
+      "status": "unreviewed"
+    },
+    "writing-changed-human-history": {
+      "status": "unreviewed"
+    }
+  }
+}
