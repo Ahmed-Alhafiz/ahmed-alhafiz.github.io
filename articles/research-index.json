@@ -389,7 +389,8 @@
       "type": "تحقيق في تاريخ الكتابة والحضارة",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -401,7 +402,9 @@
         "https://cdli.earth/",
         "https://pmc.ncbi.nlm.nih.gov/articles/PMC8579038/",
         "https://quran.com/2/282"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/writing-changed-human-history/",
+      "english_title": "Why Writing Changed Human History"
     },
     {
       "slug": "injustice-fall-of-states-quran-history",
