@@ -619,7 +619,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "الدماغ والوعي والروح: ماذا يفسر علم الأعصاب وما الذي يبقى خارج القياس؟",
       "does_not_target": [
@@ -628,7 +629,8 @@
         "استخدام المخطوط بوصفه دليلًا"
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
-      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
+      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/brain-consciousness-spirit-limits/"
     },
     {
       "slug": "water-life-molecular-properties",
