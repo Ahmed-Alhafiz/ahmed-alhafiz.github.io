@@ -1,7 +1,7 @@
 {
   "scope": "All 50 Arabic/English article pairs; semantic comparison, not mechanical count equality.",
   "started": "2026-10-13",
-  "base_sha": "a45729126384d9ec670d884bec77a10b65db4ebc",
+  "base_sha": "c678729a94e8fca005d44b104f412635f95c8adc",
   "rules": "Accept natural translation, paragraph regrouping and equivalent wording; repair omitted/added sentences, changed meanings, caveats, numbers or references. Never infer semantic fidelity from counters. No hourly automation; user cancelled it.",
   "reviewed_count": 50,
   "total": 50,
@@ -86,7 +86,7 @@
       "en_current_file_sha256": "bc6c6c7f9cc115d557eac816ca4ee242046b65e86ba8ab10936eee867a1dc996"
     },
     "depersonalization-derealization-feeling-unreal": {
-      "status": "repaired_pending_publication",
+      "status": "repaired_published",
       "reading": "Complete AR/EN read: 9/7/28 epilepsy sample, CBT30/19/63%, no efficacy inference, all emergencies/citations/bookpages preserved.",
       "material_issues": [
         "Opening شرط مهم softened to important feature; restore important diagnostic requirement.",
@@ -94,10 +94,11 @@
       ],
       "ar_current_file_sha256": "2721928778b2aa7c79d202cc3f8d5f0f82a2b5e82a7c2e18ab9f01c2be958c11",
       "en_current_file_sha256": "4769767e299190a38ebdde801f664873f3e757b8f8d8a50fd7baf5fbc660f9a1",
-      "repair": "Restored only the recorded sentence-level qualifiers and reference descriptions, preserving the Arabic body, source sequence, citations and structure."
+      "repair": "Restored only the recorded sentence-level qualifiers and reference descriptions, preserving the Arabic body, source sequence, citations and structure.",
+      "publication": "PR212 merged c678729; allsixPRchecks/freshReadypolicy success; actual1440/390/360screensmanuallyreviewed; Pages andpostmerge Site/Citation/Content/Visibility/IndexNow successful."
     },
     "diagnostic-uncertainty-family-fear-coercive-authority": {
-      "status": "repaired_pending_publication",
+      "status": "repaired_published",
       "reading": "Full AR/EN blocks and residual figure captions, conversation cards and citation footer read.",
       "material_issues": [
         "Direct risk-question card omits request qualified help if answer yes or uncertainty persists.",
@@ -109,7 +110,8 @@
       "repair_plan": "Targeted sentence fixes only; all main sample sizes, 19 sources, caveats and figures otherwise faithful.",
       "ar_current_file_sha256": "a59b4ba883043b165b090cfee5647d52d0ec36af20fea15b06afdf945f998ecc",
       "en_current_file_sha256": "fb647a2a09505ba3660bac6bd89021368bca5b33ddc6ebf0cf6a95d86111c560",
-      "repair": "Restored only the recorded sentence-level qualifiers and reference descriptions, preserving the Arabic body, source sequence, citations and structure."
+      "repair": "Restored only the recorded sentence-level qualifiers and reference descriptions, preserving the Arabic body, source sequence, citations and structure.",
+      "publication": "PR212 merged c678729; allsixPRchecks/freshReadypolicy success; actual1440/390/360screensmanuallyreviewed; Pages andpostmerge Site/Citation/Content/Visibility/IndexNow successful."
     },
     "difference-light-nur-quran-sun-moon": {
       "status": "material_differences_pending_repair",
@@ -329,14 +331,15 @@
       "en_current_file_sha256": "5215516effc5c0fedf733252b41b8e028b61afb88a965cac49814f91ec311361"
     },
     "memory-gaps-unremembered-actions": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_publication",
       "reading": "Full83blocks plus residuals both editions;15/15 sleep study correctedassociations, amnesia/FNDlogic, literarypages and12 annotatedsources preserved.",
       "material_issues": [
         "Verse18:63 quotation omits exclusive إلا (only/nothingbutSatan); restore full scope of original quoted phrase in heading and paragraph."
       ],
       "repair_plan": "Two short quotation replacements; otherwise faithful.",
       "ar_current_file_sha256": "1fa31d0e440eb879a12965ca03503a5f70678795946c3b6e6d4caa2ec609933b",
-      "en_current_file_sha256": "95f9382284a0a357329e15d17b7b1f8b27d6f3a84ce607949e07f5022c88587d"
+      "en_current_file_sha256": "1b387b40adbf6b30a3ef31af9b33fe299e2a6fda12ce903204184978158583da",
+      "repair": "Restored the original Quranexclusivequalifier, separationofdiagnosisandspiritualinterpretation, broaderharmattemptwarning, explicitmedicationpossibility andoriginalsafeguardinglink. Arabicbodyunchanged; countsandexternalsourcesequencepreserved."
     },
     "mesopotamia-irrigation-soil-salinity-collapse": {
       "status": "repaired_published",
@@ -382,7 +385,7 @@
       "en_current_file_sha256": "b94a827c3ddd25f3786f3695d64bd849c25b3f83f4709f4610d7f6deaab4c0a7"
     },
     "possession-or-neurological-psychological-disorder": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_publication",
       "reading": "Full60blocks/tables/ref8/residual read; most complete faithful.",
       "material_issues": [
         "Four-layer explanation merges diagnostic medical hypothesis and spiritual interpretation into one sentence, weakening deliberate distinction.",
@@ -392,7 +395,8 @@
       ],
       "repair_plan": "Targeted clause/table/link corrections only.",
       "ar_current_file_sha256": "0c69bed9b600244fb411c048d83ecd878060808a7967941cdd4cb3e5f4fe44f4",
-      "en_current_file_sha256": "4b5ae379fcf6a9a57d25db8a818c5f0d6ccafc26e6208e49e1ba58732f6776b8"
+      "en_current_file_sha256": "ebf9ab3696f28a06e3acc521b31e101680df596d94fd4ee02a4941aa0a9525f8",
+      "repair": "Restored the original Quranexclusivequalifier, separationofdiagnosisandspiritualinterpretation, broaderharmattemptwarning, explicitmedicationpossibility andoriginalsafeguardinglink. Arabicbodyunchanged; countsandexternalsourcesequencepreserved."
     },
     "quran-day-thousand-fifty-thousand-years-relativity": {
       "status": "limited_meaning_differences_pending_repair",
