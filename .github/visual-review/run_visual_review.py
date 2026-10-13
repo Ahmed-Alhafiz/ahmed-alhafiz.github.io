@@ -116,7 +116,7 @@ TARGET_PAGES = (
     ("home-de-latest-research", "/de/", "#wave2-home-links", "start"),
     ("before-big-bang-table", "/articles/before-big-bang-science-limits/", ".article-body .table-scroll", "start"),
     ("brain-consciousness-en-table", "/en/articles/brain-consciousness-spirit-limits/", ".article-body .table-scroll", "start"),
-    ("brain-consciousness-en-sources", "/en/articles/brain-consciousness-spirit-limits/", "#sources", "start"),
+    ("brain-consciousness-en-sources", "/en/articles/brain-consciousness-spirit-limits/", ".article-body .references", "start"),
     ("writing-history-justice", "/articles/writing-changed-human-history/", "#justice + p", "start"),
     ("fear-cascade-ar", "/articles/diagnostic-uncertainty-family-fear-coercive-authority/", "#cascade-figure", "start"),
     ("fear-parallel-ar", "/articles/diagnostic-uncertainty-family-fear-coercive-authority/", "#parallel-figure", "start"),
