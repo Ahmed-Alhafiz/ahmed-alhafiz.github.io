@@ -512,7 +512,8 @@
       "type": "تحقيق أثري تاريخي في نشوء الحضارة",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -523,7 +524,9 @@
         "https://wires.onlinelibrary.wiley.com/doi/10.1002/wat2.1230",
         "https://refubium.fu-berlin.de/handle/fub188/23835",
         "https://www.fao.org/4/t0234e/t0234e03.htm"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/river-civilizations-water-state/",
+      "english_title": "Why Did Ancient Civilizations Grow Around Rivers?"
     },
     {
       "slug": "universe-expansion-wa-inna-lamusiun",
