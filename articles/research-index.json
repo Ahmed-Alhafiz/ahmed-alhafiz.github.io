@@ -449,7 +449,8 @@
       "type": "تحقيق في علم الكون ومنهج القياس",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -460,7 +461,9 @@
         "https://arxiv.org/abs/1807.06205",
         "https://www.esa.int/Science_Exploration/Space_Science/Cosmic_Microwave_Background_CMB_radiation",
         "https://lambda.gsfc.nasa.gov/product/wmap/dr4/sos/7year/"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/age-of-universe-13-8-billion-years/",
+      "english_title": "How Old Is the Universe? Why 13.8 Billion Years"
     },
     {
       "slug": "adam-all-languages-origin-language",
