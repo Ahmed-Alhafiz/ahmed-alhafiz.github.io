@@ -707,7 +707,8 @@
       "type": "تقرير تفسيري موثق",
       "version": "2.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -718,7 +719,9 @@
         "https://science.nasa.gov/mission/wmap/wmap-overview/",
         "https://quran.com/21/30",
         "https://quran.com/29/20"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/quran-science-method-evidence/",
+      "english_title": "Quran and Science: How to Test a Comparison"
     },
     {
       "slug": "human-embryo-quran-stages",
