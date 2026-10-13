@@ -668,7 +668,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "لماذا الماء أساس الحياة؟ معنى الآية ودور الماء في الخلية",
       "does_not_target": [
@@ -677,7 +678,8 @@
         "استخدام المخطوط بوصفه دليلًا"
       ],
       "next_action": "measure_query_fit_and_seek_independent_review",
-      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries."
+      "reason": "Distinct question derived from an explicit chapter theme, supported by disclosed external sources and clear interpretation boundaries.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/water-life-molecular-properties/"
     },
     {
       "slug": "iron-fire-light-matter-energy",

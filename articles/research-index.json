@@ -783,7 +783,8 @@
       "type": "تقرير تفسيري موثق",
       "version": "2.1",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -808,7 +809,9 @@
         "https://science.nasa.gov/astrobiology/learning-resources/alp/how-did-life-first-emerge-on-earth/",
         "https://pubmed.ncbi.nlm.nih.gov/39585974/",
         "https://pubmed.ncbi.nlm.nih.gov/33192606/"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/water-life-molecular-properties/",
+      "english_title": "Why Is Water Essential to Life?"
     },
     {
       "slug": "iron-fire-light-matter-energy",
