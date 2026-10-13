@@ -828,7 +828,8 @@
       "type": "تقرير تفسيري موثق",
       "version": "2.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -840,7 +841,9 @@
         "https://quran.com/43/51",
         "https://quran.com/13/11",
         "https://quran.com/34/15-16"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/civilization-knowledge-justice-collapse/",
+      "english_title": "Why Civilizations Collapse"
     },
     {
       "slug": "possession-or-neurological-psychological-disorder",
