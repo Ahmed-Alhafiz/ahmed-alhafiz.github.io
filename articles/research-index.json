@@ -781,7 +781,8 @@
       "type": "تقرير تفسيري موثق",
       "version": "2.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -795,7 +796,9 @@
         "https://www.noaa.gov/jetstream/lightning/how-lightning-is-created",
         "https://quran.com/78/13",
         "https://spaceplace.nasa.gov/sun-heat/en/"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/iron-fire-light-matter-energy/",
+      "english_title": "Iron, Fire and Light: Matter, Energy and Justice"
     },
     {
       "slug": "civilization-knowledge-justice-collapse",
