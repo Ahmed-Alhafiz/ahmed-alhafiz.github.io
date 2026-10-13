@@ -437,7 +437,8 @@
       "type": "تحقيق في الأحياء الجزيئية وفلسفة المعلومات",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -449,7 +450,9 @@
         "https://www.ncbi.nlm.nih.gov/books/NBK21050/",
         "https://www.nature.com/articles/227561a0",
         "https://www.nobelprize.org/prizes/medicine/1968/summary/"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/dna-code-genetic-information/",
+      "english_title": "Is DNA Really a Code?"
     },
     {
       "slug": "age-of-universe-13-8-billion-years",
