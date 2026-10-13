@@ -76,8 +76,9 @@
       ],
       "repair_plan": "Restore complete source meaning and quotations, citations and attribution; preserve acceptable regrouping only where all clauses retained.",
       "ar_current_file_sha256": "cbace8fdd339c99b8658c7bf32364bcce25aa79398f24225d8b1c0b435943784",
-      "en_current_file_sha256": "60daffa579cf4e8ebd1a3f4da5d93089f60046331df5666dcef141c1570969f8",
-      "repair": "Full currentAR structure restored toEN using already-faithful sentences where possible.61p/17H2/5H3/1table/15cells/18li/5blockquotes,8sourcegroups/9externalURLs and[1]–[8]sequence exact. Allnumericsequencesmatch; ARbodybyteidentical. Fullquotes, networkdefinition, physicalcausevsmeaningboundary, bookpiety/justicequestion, originalsourceorderandcitationfooter restored; original-absentanimaldetail/readinglinks/newclosingremoved."
+      "en_current_file_sha256": "7bb7ff217161d91b33020cf833d760f602fdfd974f5e1e7a438f5a8845f0d366",
+      "repair": "Full currentAR structure restored toEN using already-faithful sentences where possible.61p/17H2/5H3/1table/15cells/18li/5blockquotes,8sourcegroups/9externalURLs and[1]–[8]sequence exact. Allnumericsequencesmatch; ARbodybyteidentical. Fullquotes, networkdefinition, physicalcausevsmeaningboundary, bookpiety/justicequestion, originalsourceorderandcitationfooter restored; original-absentanimaldetail/readinglinks/newclosingremoved.",
+      "visual_correction": "Manual first-head screenshots found missing .wrap header container and an irrelevant cosmological-review label. Restored standard HTML wrapper and historical/exegetical review wording; no CSS/JS. New-head screenshots require fresh review."
     },
     "cyberbullying-university-rumor-stigma": {
       "status": "faithful",
