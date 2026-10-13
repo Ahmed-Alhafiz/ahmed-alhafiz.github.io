@@ -665,7 +665,8 @@
       "type": "تحقيق تفسيري أثري موثق",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -677,7 +678,9 @@
         "https://whc.unesco.org/document/198691",
         "https://doi.org/10.34780/f7ge-f0u9",
         "https://doi.org/10.1006/jasc.2000.0518"
-      ]
+      ],
+      "english_url": "https://ahmedalhafiz.com/en/articles/marib-dam-sayl-al-arim/",
+      "english_title": "Marib Dam and the Flood of al-Arim"
     },
     {
       "slug": "quran-science-method-evidence",
