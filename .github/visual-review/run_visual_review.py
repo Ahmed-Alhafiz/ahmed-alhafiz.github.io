@@ -69,7 +69,6 @@ TOP_PAGES = (
     ("iron-fire-light-ar", "/articles/iron-fire-light-matter-energy/"),
     ("iron-fire-light-en", "/en/articles/iron-fire-light-matter-energy/"),
     ("water-life-ar", "/articles/water-life-molecular-properties/"),
-    ("iron-fire-light-ar", "/articles/iron-fire-light-matter-energy/"),
     ("civilization-collapse-ar", "/articles/civilization-knowledge-justice-collapse/"),
     ("religious-ocd-ar", "/articles/religious-ocd-scrupulosity/"),
     ("before-big-bang-ar", "/articles/before-big-bang-science-limits/"),
