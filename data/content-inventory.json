@@ -491,7 +491,8 @@
       "class": "supporting_brief",
       "book_cluster": "sirou-fi-alard",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل الكون يتمدد وما معنى وإنا لموسعون في التفسير وعلم الفلك وعلاقته بكتاب قل سيروا في الأرض",
       "does_not_target": [
@@ -500,7 +501,8 @@
         "حسم توتر هابل"
       ],
       "next_action": "seek_independent_tafsir_and_cosmology_review_and_measure_query_fit",
-      "reason": "A distinct search question connecting a specific book passage to primary cosmology sources while preserving the boundary between text, tafsir, observation, and inference."
+      "reason": "A distinct search question connecting a specific book passage to primary cosmology sources while preserving the boundary between text, tafsir, observation, and inference.",
+      "english_url": "https://ahmedalhafiz.com/en/articles/universe-expansion-wa-inna-lamusiun/"
     },
     {
       "slug": "madain-salih-thamud-nabataean-tombs",
