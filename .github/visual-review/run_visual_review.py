@@ -184,7 +184,7 @@ TARGET_PAGES = (
     ("nile-egypt-en-sources", "/en/articles/nile-ancient-egypt-flood-calendar-state/", ".article-body .references", "start"),
     ("water-life-en-cell", "/en/articles/water-life-molecular-properties/", "#cell + h3 + p", "start"),
     ("water-life-en-sources", "/en/articles/water-life-molecular-properties/", ".article-body .references", "start"),
-    ("light-nur-en-table", "/en/articles/difference-light-nur-quran-sun-moon/", ".article-body .table-scroll", "start"),
+    ("light-nur-en-solar-cell", "/en/articles/difference-light-nur-quran-sun-moon/", "#solar-cell + p", "start"),
     ("light-nur-en-sources", "/en/articles/difference-light-nur-quran-sun-moon/", ".article-body .references", "start"),
     ("mesopotamia-en-table", "/en/articles/mesopotamia-irrigation-soil-salinity-collapse/", ".article-body .table-scroll", "start"),
     ("mesopotamia-en-sources", "/en/articles/mesopotamia-irrigation-soil-salinity-collapse/", ".article-body .references", "start"),

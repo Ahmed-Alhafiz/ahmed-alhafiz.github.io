@@ -26,6 +26,7 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("baghdad-sources-en", "/en/articles/fall-of-baghdad-1258-ibn-al-alqami/", "#core-sources-for-this-draft + ul"),
     ("certainty-violence-en", "/en/articles/how-certainty-becomes-violence/", "#references + ol"),
     ("civilization-collapse-en", "/en/articles/civilization-knowledge-justice-collapse/", ".references"),
     ("possession-or-disorder-en", "/en/articles/possession-or-neurological-psychological-disorder/", ".references"),
@@ -76,6 +77,7 @@ PAGES = (
     ("concepts-models-ar", "/articles/how-concepts-form-adam-names-scientific-models/", ".references"),
     ("concepts-models-en", "/en/articles/how-concepts-form-adam-names-scientific-models/", ".references"),
     ("light-nur-ar", "/articles/difference-light-nur-quran-sun-moon/", ".references"),
+    ("light-nur-en", "/en/articles/difference-light-nur-quran-sun-moon/", ".references"),
     ("ai-soul-taklif-ar", "/articles/ai-soul-consciousness-understanding-taklif/", ".references"),
     ("ai-soul-taklif-en", "/en/articles/ai-soul-consciousness-understanding-taklif/", ".references"),
     ("khufu-merer-ar", "/articles/how-khufu-pyramid-built-merer-diary/", ".references"),
