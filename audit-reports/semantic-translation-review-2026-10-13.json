@@ -472,7 +472,7 @@
       "en_current_file_sha256": "34daafe493bb16dc4a0baedc585b87b85d6c7154e1f25e34c50b428aae68cce4"
     },
     "six-days-creation-cosmic-time": {
-      "status": "material_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "All63AR/64ENblocks andresidualsread. Broadargument preserved but severalparagraphsandclauses/fullquotedtexts omitted.",
       "material_issues": [
         "Originalaffirmationwe believe and explicitdistinctionquestionnotwhethercreationoccurred omitted.",
@@ -486,7 +486,9 @@
       ],
       "repair_plan": "Restore complete faithfuledition andoriginalreferenceURLs/order without newsections.",
       "ar_current_file_sha256": "b9f3d79c0da06b6d1a055f5668b310ebde3f00ada935febf74128b75debf7e60",
-      "en_current_file_sha256": "f222ab9e38b529e6840e577d15b8e12f8fbab08897981b8c08a65f95d2189474"
+      "en_current_file_sha256": "a6180278181f4096d3d2157276d25efe5f7620825d651d038a2ef835f1a561dd",
+      "repair": "Restored all63 source blocks, original Quran/hadith quotations, affirmative faith statement and duration questions, bookpages25–35 distinctions, astronomical and theological limits,5FAQ,9originalsourcegroups/exactURLorder, version3.0 citation and original book-origin footer. TOC/FAQJSON-LD restored; headerwrap uses existing class. Arabic untouched.",
+      "validation": "CurrentArabic and resultingEnglish bodies both read in full,63blocks/5FAQ/9sourcegroups. Parity zero flags:38p/11H2/5H3/9li/table0;28externalURLs exact order and numeric sequences match; ARbody unchanged. CI/manualscreens/publication pending."
     },
     "sleep-paralysis-jathoom": {
       "status": "repaired_published",
@@ -638,7 +640,7 @@
       "en_current_file_sha256": "47b03f2805fe09e84a071d5da5dec4c2c6386a8c3e1b0318592b03b69264904d"
     }
   },
-  "last_checkpoint": "50/50 full comparisons complete; 13 meaning repairs published/live verified, 3 history/quotation repairs awaiting current-head CI/manual images; 18 other repairs pending. Hourly automation cancelled. Execution transport failed again; cloud GitHub preserves this batch.",
+  "last_checkpoint": "Full50/50 reading retained. PR218 merged; light220 andwater221 in validation. Sixdays fully restored/read locally, remote checkpoint follows; other repairs remain explicitlypending. No hourly automation.",
   "reading_complete": true,
   "remaining_reading": [],
   "note": "All50pairedtexts read in full; repairs remain pending and the entire task is not complete. Natural equivalent wording is accepted. Publishing one small batch at a time."
