@@ -1,7 +1,7 @@
 {
   "scope": "All 50 Arabic/English article pairs; semantic comparison, not mechanical count equality.",
   "started": "2026-10-13",
-  "base_sha": "4419507a2fef4ec8ae8403eaab99cd158cba113a",
+  "base_sha": "946c8745b5dff8a1a05c84f8a4f398dedfafd1bb",
   "rules": "Accept natural translation, paragraph regrouping and equivalent wording; repair omitted/added sentences, changed meanings, caveats, numbers or references. Never infer semantic fidelity from counters. No hourly automation; user cancelled it.",
   "reviewed_count": 50,
   "total": 50,
@@ -198,7 +198,7 @@
       "en_current_file_sha256": "da2ba59b3247cda17326f20e30991823fc8fe34c166cdfca9b1d02652038b4b6"
     },
     "how-certainty-becomes-violence": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Full90 AR/EN blocks and residual citation/evidence controls read; seven mechanisms and90studies limits intact.",
       "material_issues": [
         "Novel responsibility question changes تصافح (shakes hands) to pledges; restore shakes hands without implying pledge.",
@@ -207,7 +207,9 @@
       ],
       "repair_plan": "Three small clause restorations; no retranslation needed.",
       "ar_current_file_sha256": "a15c6050b3c081246bbd05d6d823727d526a7b13b380dfd3d05cb0cba0941069",
-      "en_current_file_sha256": "3fa09bb541d63b5e8532b6dc18ac0a5cf8bef8a54bced895ff2bd1808f66d529"
+      "en_current_file_sha256": "1012a7ed07aee3d4fae30bb8b2e6d61434b93f49dd744570d3b3c88435c2d3c5",
+      "repair": "Restored only the recorded sentence-level meaning differences, preserving natural English, source order and all Arabic bytes.",
+      "validation": "Prior full bilingual reading retained; all four changed passages reread with Arabic. Counts, citations, sources and manuscript page numbers unchanged. CI and actual screenshot review pending."
     },
     "how-concepts-form-adam-names-scientific-models": {
       "status": "faithful",
@@ -491,7 +493,7 @@
       "publication": "PR215 merged4419507; six gates and actual12 screenshots1440/390/360 reviewed; fresh Ready PRPolicy38457669537 success; Pages andpostmergeSite/Citation/Content/Visibility/IndexNow success; both EN pages,FeedJSON,Atom,Sitemap exactlymatchdeployedmain."
     },
     "sleepwalking-why-no-memory": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "All51pairedblocks/table and10refs/citationfooterread. Allnovelpages71–80/121–139, times3:17/2:43 andmedical/theologicalcaveats faithfullypreserved.",
       "material_issues": [
         "MayoClinicreference9 omits23August2024 source date.",
@@ -501,10 +503,11 @@
       "ar_current_file_sha256": "3b78ab06377176affa1f284f191a30b6d72e854545c439630d362bd1700c0e17",
       "en_current_file_sha256": "aaf35c200c8f3b02129ff32c34f4e933ee15c2fe45bdc40257919a2757e53091",
       "repair": "Restored the four original source-method/date and quotation/safeguarding qualifiers recorded in material_issues. No added claim or source; Arabic unchanged.",
-      "validation": "Previously full bilingual reading unchanged except targeted replacements reread with Arabic. All element counts, citations and exact external-source URL order preserved. Numeric flags explicitly inspected: written 3:17 and thirty-five, explicit Quran chapter numbers, and English/Arabic formatting preserve the same values; source23August2024 restored."
+      "validation": "Previously full bilingual reading unchanged except targeted replacements reread with Arabic. All element counts, citations and exact external-source URL order preserved. Numeric flags explicitly inspected: written 3:17 and thirty-five, explicit Quran chapter numbers, and English/Arabic formatting preserve the same values; source23August2024 restored.",
+      "publication": "PR216 merged946c8745 after successful six gates, fresh Ready policy38509901739 and actual1440/390/360 review. Pages/live verification follows in this checkpoint. Pages38509953275 and all postmerge workflows successful; both EN pages, JSON/Atom feeds and sitemap HTTP200 and byte-identical to deployed origin/main."
     },
     "spiritual-healing-exploitation-safeguarding": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full95pairedblocks,21cellstable,12sourcesandcardsread; all7protectionsteps, emergency/legal/capacitycaveatsfaithful.",
       "material_issues": [
         "Q27:65 quotation omits Say imperative.",
@@ -514,7 +517,8 @@
       "ar_current_file_sha256": "7cbd931748fa01817df058966ae64045ce6f8ae55cedcffada12f6737f06afce",
       "en_current_file_sha256": "822e7d6245aea49725c2ae9b536cf592bcd003d24701318dcc491ba3ab72093a",
       "repair": "Restored the four original source-method/date and quotation/safeguarding qualifiers recorded in material_issues. No added claim or source; Arabic unchanged.",
-      "validation": "Previously full bilingual reading unchanged except targeted replacements reread with Arabic. All element counts, citations and exact external-source URL order preserved. Numeric flags explicitly inspected: written 3:17 and thirty-five, explicit Quran chapter numbers, and English/Arabic formatting preserve the same values; source23August2024 restored."
+      "validation": "Previously full bilingual reading unchanged except targeted replacements reread with Arabic. All element counts, citations and exact external-source URL order preserved. Numeric flags explicitly inspected: written 3:17 and thirty-five, explicit Quran chapter numbers, and English/Arabic formatting preserve the same values; source23August2024 restored.",
+      "publication": "PR216 merged946c8745 after successful six gates, fresh Ready policy38509901739 and actual1440/390/360 review. Pages/live verification follows in this checkpoint. Pages38509953275 and all postmerge workflows successful; both EN pages, JSON/Atom feeds and sitemap HTTP200 and byte-identical to deployed origin/main."
     },
     "teaching-names-ai-understanding": {
       "status": "material_differences_pending_repair",
@@ -540,14 +544,16 @@
       "en_current_file_sha256": "343891b3279e4473837f3a112e48fa736817c46bb42917cffa05b23b83bbe7ad"
     },
     "umm-abbas-family-fear": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Full40pairedblocks,all5manuscriptpagerangesandquotes194/200 plusfooterread; literarycaveatsfaithful.",
       "material_issues": [
         "Humanrelationshipsessentialsignificance changedto equalweight, adding unasserted relative weightingagainstsupernaturalimagery."
       ],
       "repair_plan": "Change equalweight to centralimportance inexisting paragraph3.",
       "ar_current_file_sha256": "e46f59c2f90bb6d3beda0d178bd304c7c8dd62c6871ec7dee7ea6365b1a7feae",
-      "en_current_file_sha256": "edbbf62a9e0d370ac875d4742463c44ffec6a11b3f695884344d6ed4339549b3"
+      "en_current_file_sha256": "2c4050ff4cb41a42033cd9e8f47d21df0418592fac5e4f6460a314217f89736d",
+      "repair": "Restored only the recorded sentence-level meaning differences, preserving natural English, source order and all Arabic bytes.",
+      "validation": "Prior full bilingual reading retained; all four changed passages reread with Arabic. Counts, citations, sources and manuscript page numbers unchanged. CI and actual screenshot review pending."
     },
     "universe-expansion-wa-inna-lamusiun": {
       "status": "material_differences_pending_repair",
@@ -622,7 +628,7 @@
       "en_current_file_sha256": "47b03f2805fe09e84a071d5da5dec4c2c6386a8c3e1b0318592b03b69264904d"
     }
   },
-  "last_checkpoint": "Full50/50 read;9 meaning repairs published,2 corrected awaitingCI/manual images/publication;remainingrepairs explicitlypending. Hourly automation remainscancelled.",
+  "last_checkpoint": "50/50 full bilingual readings retained; 11 meaning repairs merged, two literary repairs prepared. Remaining repairs pending; hourly automation remains cancelled.",
   "reading_complete": true,
   "remaining_reading": [],
   "note": "All50pairedtexts read in full; repairs remain pending and the entire task is not complete. Natural equivalent wording is accepted. Publishing one small batch at a time."
