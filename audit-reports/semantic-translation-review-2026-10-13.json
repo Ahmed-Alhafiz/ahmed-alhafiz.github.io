@@ -147,7 +147,7 @@
       "en_current_file_sha256": "ce5641f4f155446b8bdf8c3330f3c5bb940797241caa02b148ccad608ff0d0c5"
     },
     "fall-of-baghdad-1258-ibn-al-alqami": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Full AR/EN including legacy body, all charges, numbers,8 sources and limitations.",
       "material_issues": [
         "Opening omitted completed one-traitor/sectarian-motive narrative assessment.",
@@ -157,7 +157,9 @@
       ],
       "repair_plan": "Small sentence/name restorations; core uncertainty, responsibility and independent-source cautions faithful.",
       "ar_current_file_sha256": "5b2148073944f8786270c80c8869a866c7ba03506da559ec654c1acb62c08af1",
-      "en_current_file_sha256": "db267aedf770bbd4daa335e50f83f4c555a750c858b1c18508fb29c8a57d3472"
+      "en_current_file_sha256": "0e66685b12ed30bb365ba4d38775ca1d53e20a57af7d6bfd16ffade7050ed41d",
+      "repair": "Restored recorded omitted or changed sentences and exact names; Juhayman evidence-table wording also restored for preparation, recapture and capture. No new factual claim, source or Arabic change. Restored the existing prose layout because article-shell incorrectly assigns the header and body to separate desktop columns, the same documented legacy issue corrected in PR217. No CSS/JS changes.",
+      "validation": "Complete bilingual reading reused; all changed passages reread against Arabic. CI and actual screenshot review pending."
     },
     "fear-physical-symptoms-umm-abbas": {
       "status": "faithful",
@@ -198,7 +200,7 @@
       "en_current_file_sha256": "da2ba59b3247cda17326f20e30991823fc8fe34c166cdfca9b1d02652038b4b6"
     },
     "how-certainty-becomes-violence": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full90 AR/EN blocks and residual citation/evidence controls read; seven mechanisms and90studies limits intact.",
       "material_issues": [
         "Novel responsibility question changes تصافح (shakes hands) to pledges; restore shakes hands without implying pledge.",
@@ -210,7 +212,8 @@
       "en_current_file_sha256": "3ec88c0d8db44085509e67ed6e318728b74143c69a43949caa1a279df1a11385",
       "repair": "Restored only the recorded sentence-level meaning differences, preserving natural English, source order and all Arabic bytes.",
       "validation": "Prior full bilingual reading retained; all four changed passages reread with Arabic. Counts, citations, sources and manuscript page numbers unchanged. CI and actual screenshot review pending.",
-      "visual_correction": "Manual desktop screenshot showed header and prose incorrectly occupying two grid columns in the legacy article-shell. Reused existing prose class on the outer article to restore normal document flow; no CSS/JS change. New-head CI/screens pending."
+      "visual_correction": "Manual desktop screenshot showed header and prose incorrectly occupying two grid columns in the legacy article-shell. Reused existing prose class on the outer article to restore normal document flow; no CSS/JS change. New-head CI/screens pending.",
+      "publication": "PR217 merged76d6314; six gates and actual1440/390/360 screenshots successful. Pages38511819635 and postmerge gates successful; both live pages, FeedJSON/Atom and sitemap HTTP200 and byte-identical to origin/main verified14October."
     },
     "how-concepts-form-adam-names-scientific-models": {
       "status": "faithful",
@@ -294,7 +297,7 @@
       "en_current_file_sha256": "52dee87a24a24d9d2f05a4304f46e901b5126684496e13112b02e60bc2f54405"
     },
     "juhayman-grand-mosque-1979": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "All75blocks/table/source4/FAQ/residual read AR/EN, dates and denominators all preserved.",
       "material_issues": [
         "Table shortens Juhayman ibn Muhammad name; restore patronymic.",
@@ -305,7 +308,9 @@
       ],
       "repair_plan": "Small five phrase/name restorations.",
       "ar_current_file_sha256": "b664801ce199a12b4bcc4fc271a153120ff2d9e2bd0888f4f752d040a0d2d724",
-      "en_current_file_sha256": "4a685b0d9f23812c0e2b4550f6559b4dccc75669156c11d955166a3a70c2e968"
+      "en_current_file_sha256": "f23bdacaadd2cf352dafc0833dd97840850035f082cbd46679ea22662af6195b",
+      "repair": "Restored recorded omitted or changed sentences and exact names; Juhayman evidence-table wording also restored for preparation, recapture and capture. No new factual claim, source or Arabic change. Restored the existing prose layout because article-shell incorrectly assigns the header and body to separate desktop columns, the same documented legacy issue corrected in PR217. No CSS/JS changes.",
+      "validation": "Complete bilingual reading reused; all changed passages reread against Arabic. CI and actual screenshot review pending."
     },
     "madain-salih-thamud-nabataean-tombs": {
       "status": "material_differences_pending_repair",
@@ -545,7 +550,7 @@
       "en_current_file_sha256": "343891b3279e4473837f3a112e48fa736817c46bb42917cffa05b23b83bbe7ad"
     },
     "umm-abbas-family-fear": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full40pairedblocks,all5manuscriptpagerangesandquotes194/200 plusfooterread; literarycaveatsfaithful.",
       "material_issues": [
         "Humanrelationshipsessentialsignificance changedto equalweight, adding unasserted relative weightingagainstsupernaturalimagery."
@@ -554,7 +559,8 @@
       "ar_current_file_sha256": "e46f59c2f90bb6d3beda0d178bd304c7c8dd62c6871ec7dee7ea6365b1a7feae",
       "en_current_file_sha256": "2c4050ff4cb41a42033cd9e8f47d21df0418592fac5e4f6460a314217f89736d",
       "repair": "Restored only the recorded sentence-level meaning differences, preserving natural English, source order and all Arabic bytes.",
-      "validation": "Prior full bilingual reading retained; all four changed passages reread with Arabic. Counts, citations, sources and manuscript page numbers unchanged. CI and actual screenshot review pending."
+      "validation": "Prior full bilingual reading retained; all four changed passages reread with Arabic. Counts, citations, sources and manuscript page numbers unchanged. CI and actual screenshot review pending.",
+      "publication": "PR217 merged76d6314; six gates and actual1440/390/360 screenshots successful. Pages38511819635 and postmerge gates successful; both live pages, FeedJSON/Atom and sitemap HTTP200 and byte-identical to origin/main verified14October."
     },
     "universe-expansion-wa-inna-lamusiun": {
       "status": "material_differences_pending_repair",
@@ -629,7 +635,7 @@
       "en_current_file_sha256": "47b03f2805fe09e84a071d5da5dec4c2c6386a8c3e1b0318592b03b69264904d"
     }
   },
-  "last_checkpoint": "50/50 full bilingual readings retained; 11 meaning repairs merged, two literary repairs prepared. Remaining repairs pending; hourly automation remains cancelled.",
+  "last_checkpoint": "All50/50 read;13 meaning repairs published and live-verified;2 historical articles corrected pending CI/manual screenshots/publication;19 other repairs pending. Hourly automation remains cancelled.",
   "reading_complete": true,
   "remaining_reading": [],
   "note": "All50pairedtexts read in full; repairs remain pending and the entire task is not complete. Natural equivalent wording is accepted. Publishing one small batch at a time."
