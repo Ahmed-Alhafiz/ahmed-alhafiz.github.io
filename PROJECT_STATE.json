@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "audit/en-translation-fidelity-complete-2026-10-14",
-  "head_sha": "2d100a42030155c97ea2ee3e9190016c2c0341aa",
+  "branch": "design/mobile-reading-2026-10-14",
+  "head_sha": "1c96274e4b61f0e84b51e89ee752f18881522c1a",
   "head_sha_semantics": "Last content release before this audit-only completion record; all100 article files and English feeds/sitemap directly verified live.",
-  "status": "translation_fidelity_complete",
+  "status": "mobile_design_validation",
   "updated_at": "2026-10-14",
-  "current_task": "Completed all50 Arabic/English semantic comparisons and34 necessary published repairs.",
-  "next_action": "Translation fidelity task complete. Do not restart repairs or hourly automation. Independent specialist review and measured external visibility remain separate uncompleted scopes.",
+  "current_task": "Mobile-first presentation refresh; all authored content preserved.",
+  "next_action": "Complete PR browser checks at 1440/390/360, inspect actual screenshots, then merge and verify live assets.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -572,5 +572,15 @@
     "next": "Translation fidelity task complete. Do not restart repairs or hourly automation. Independent specialist review and measured external visibility remain separate uncompleted scopes.",
     "limits": "Full reading complete; repairs not complete. No independent specialist review, indexing, ranking or traffic claimed.",
     "prepared_checkpoint": "792ea520c684bf537ad2d43dadf6e99800b219c7"
+  },
+  "mobile_reading_release": {
+    "base_sha": "1c96274e4b61f0e84b51e89ee752f18881522c1a",
+    "branch": "design/mobile-reading-2026-10-14",
+    "status": "local_checks_passed_browser_pending",
+    "scope": "Shared masthead, homepage hierarchy, full-text research library, article typography, native contents disclosure/current section and progress; no content changes.",
+    "content_preservation": "142 entire HTML files match base exactly after stripping only presentation asset changes.",
+    "local_checks": "Site/UX/Arabic UI/discovery/public hygiene/editorial/dossier/entity/citation/architecture/shared CSS build/JS syntax/patch whitespace passed; four unchanged metadata-length warnings.",
+    "visual_limit": "No local browser in managed environment; use the existing required GitHub Visual review workflow.",
+    "unmeasured": "Real-device Safari and field Core Web Vitals not measured."
   }
 }
