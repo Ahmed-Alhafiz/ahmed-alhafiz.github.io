@@ -26,6 +26,7 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("baghdad-sources-en", "/en/articles/fall-of-baghdad-1258-ibn-al-alqami/", "#core-sources-for-this-draft + ul"),
     ("certainty-violence-en", "/en/articles/how-certainty-becomes-violence/", "#references + ol"),
     ("civilization-collapse-en", "/en/articles/civilization-knowledge-justice-collapse/", ".references"),
     ("possession-or-disorder-en", "/en/articles/possession-or-neurological-psychological-disorder/", ".references"),
