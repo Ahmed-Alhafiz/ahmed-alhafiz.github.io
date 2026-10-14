@@ -1,0 +1,5 @@
+# Prepared complete English method translation — 14 October 2026
+
+Unpublished preparation checkpoint only. Arabic reference: current quran-science-method-evidence, file SHA256 c3c5c8930e5ff534ccf000b0e3cc63f8b99d4875a68ace64858c3f5d86d519be. The Arabic was read in full; every English paragraph was restored from that text. Generated body matches 63 paragraphs,16H2,14H3,40li,18tablecells,6ol,2ul,2blockquotes and all9externalsourceURLs in exact order. The added FAQ and five-layer table are removed; the original evidence table, eight explained questions, book links, all reference descriptions and version2.0/27September citation restored. Original published26September/modified14October retained, header wrapper fixed. No Arabic/CSS/JS change.
+
+This branch is not publication-ready: synchronize English JSON/Atom feeds/sitemap and register current-head screenshots, run local gates and CI, inspect actual1440/390/360 images, fresh Ready policy/head guard, then merge/Pages/live. The most recent publication is PR217; PR218 is still under review. Hourly automation remains cancelled.
