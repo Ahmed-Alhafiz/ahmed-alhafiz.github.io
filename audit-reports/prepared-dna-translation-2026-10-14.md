@@ -1,0 +1,5 @@
+# Unpublished DNA meaning-repair checkpoint
+
+Targeted restoration from the fully read Arabic original: removes added61/3codon claim and extraQuran reference, restores DNA dependency in reading machinery, exact scope of quoted perfected-creation phrase, source-of-book/conceptual-analysis/faith-not-laboratory disclosure and all four original reading-path links to existingEN editions. Original source order14URLs restored; numbers and original sources otherwise preserved. Existing truthful review notice retained (extraH2/p accepted as status presentation). Corrects original datePublished28September and dateModified14October, requiring feed/sitemap synchronization before PR. Header wrapper restored using existing HTML class. No Arabic/CSS/JS change.
+
+Not publication-ready: local gates/CI/current-head screenshot review, feed synchronization, Ready policy, head guard, Pages/live verification still required. This branch includes the separate complete method preview. Main13repairs live; PR218 under CI/manual review. Hourly automation cancelled.
