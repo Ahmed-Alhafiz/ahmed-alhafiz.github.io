@@ -182,7 +182,7 @@ TARGET_PAGES = (
     ("human-embryo-en-sources", "/en/articles/human-embryo-quran-stages/", ".article-body .references", "start"),
     ("nile-egypt-en-answer", "/en/articles/nile-ancient-egypt-flood-calendar-state/", ".article-body .summary-box", "start"),
     ("nile-egypt-en-sources", "/en/articles/nile-ancient-egypt-flood-calendar-state/", ".article-body .references", "start"),
-    ("water-life-en-table", "/en/articles/water-life-molecular-properties/", ".article-body .table-scroll", "start"),
+    ("water-life-en-cell", "/en/articles/water-life-molecular-properties/", "#cell + h3 + p", "start"),
     ("water-life-en-sources", "/en/articles/water-life-molecular-properties/", ".article-body .references", "start"),
     ("light-nur-en-solar-cell", "/en/articles/difference-light-nur-quran-sun-moon/", "#solar-cell + p", "start"),
     ("light-nur-en-sources", "/en/articles/difference-light-nur-quran-sun-moon/", ".article-body .references", "start"),
