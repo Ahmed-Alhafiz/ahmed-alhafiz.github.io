@@ -26,6 +26,10 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("hegra-diagram-en", "/en/articles/madain-salih-thamud-nabataean-tombs/", "figure"),
+    ("water-civilization-power-en", "/en/articles/water-civilization-power/", ".references"),
+    ("nile-ancient-egypt-flood-calendar-state-en", "/en/articles/nile-ancient-egypt-flood-calendar-state/", ".references"),
+    ("madain-salih-thamud-nabataean-tombs-en", "/en/articles/madain-salih-thamud-nabataean-tombs/", ".references"),
     ("six-days-creation-cosmic-time-en", "/en/articles/six-days-creation-cosmic-time/", ".references"),
     ("quran-day-thousand-fifty-thousand-years-relativity-en", "/en/articles/quran-day-thousand-fifty-thousand-years-relativity/", ".references"),
     ("writing-changed-human-history-en", "/en/articles/writing-changed-human-history/", ".references"),
