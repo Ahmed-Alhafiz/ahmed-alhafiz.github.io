@@ -1,7 +1,7 @@
 {
   "scope": "All 50 Arabic/English article pairs; semantic comparison, not mechanical count equality.",
   "started": "2026-10-13",
-  "base_sha": "39b83efcbeebb5545971428a0142d0fd07a5881a",
+  "base_sha": "970bd319681e8911dd6034df76a413a8e0f497f4",
   "rules": "Accept natural translation, paragraph regrouping and equivalent wording; repair omitted/added sentences, changed meanings, caveats, numbers or references. Never infer semantic fidelity from counters. No hourly automation; user cancelled it.",
   "reviewed_count": 50,
   "total": 50,
@@ -260,7 +260,7 @@
       "en_current_file_sha256": "12f15ba183e29bed19ff04a0c22024f691769f275c297978908f0614597541c4"
     },
     "injustice-fall-of-states-quran-history": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full AR70/EN72blocks and residuals read; five mechanisms, definitions/collapse limits, all14sources/table intact.",
       "material_issues": [
         "Full quoted Hud116–117,Hadid25,Rad11 replaced with paraphrases; restore quotations.",
@@ -271,10 +271,11 @@
       "ar_current_file_sha256": "631ee93d608919f63c5ae679eb11499c2db5f82f7f2917eaa7ae6dae9873a7ff",
       "en_current_file_sha256": "3ec56a7780baf9f0791af7b5d17e0f8a923c2be775a7ebe23283657a75eec0d8",
       "repair": "Targeted restoration of original quotations, omitted qualifications, exact source descriptions and original evidence/book disclosures. Preserved natural faithful prose and original numerical claims. Header uses existing wrap; original publication date restored. Original four-link reading sequence restored; existing truthful review notice explains additionalH2/p.",
-      "validation": "Full earlier bilingual reading reused for unchanged content; all altered passages, all reference descriptions and footer read against Arabic. External URLs exact original order14/11/15. Arabic unchanged. Local site/discovery/citation/research/UX/hygiene gates pass. CI/manual responsive images/publication pending."
+      "validation": "Full earlier bilingual reading reused for unchanged content; all altered passages, all reference descriptions and footer read against Arabic. External URLs exact original order14/11/15. Arabic unchanged. Local site/discovery/citation/research/UX/hygiene gates pass. CI/manual responsive images/publication pending.",
+      "publication": "PR223 merged970bd319681e8911dd6034df76a413a8e0f497f4 after all six gates,18actual screenshots reviewed at1440/390/360, freshReady policy38545994956 and Pages38546498215 successful. Both AR/EN pages and English feeds/sitemap HTTP200 and byte-identical to main."
     },
     "iron-fire-light-matter-energy": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full68blocks both editions and residual labels read; scientific mechanisms98%,30000C,15millionC and evidence/responsibility table faithful.",
       "material_issues": [
         "Original quoted Hadid25,Zumar6,Waqiah71–73,Yasin80,Naba13 replaced with summaries; restore exact scope of quotations.",
@@ -285,7 +286,8 @@
       "ar_current_file_sha256": "b3406c1665e3a5616508834f2fe02d19b46723b3c8b87a349010a2adba47cea7",
       "en_current_file_sha256": "ba7105f407d594b8f13f6c0c57076a8a8a962236b406623f1bc8d295a798bdb7",
       "repair": "Targeted restoration of original quotations, omitted qualifications, exact source descriptions and original evidence/book disclosures. Preserved natural faithful prose and original numerical claims. Header uses existing wrap; original publication date restored.",
-      "validation": "Full earlier bilingual reading reused for unchanged content; all altered passages, all reference descriptions and footer read against Arabic. External URLs exact original order14/11/15. Arabic unchanged. Local site/discovery/citation/research/UX/hygiene gates pass. CI/manual responsive images/publication pending. Parity reports six numerical-format flags:30 thousand vs30,000 and surah-name:verse vs chapter-number:verse in five sources; verified equivalent. All structural counts match; no semantic difference inferred from formatting."
+      "validation": "Full earlier bilingual reading reused for unchanged content; all altered passages, all reference descriptions and footer read against Arabic. External URLs exact original order14/11/15. Arabic unchanged. Local site/discovery/citation/research/UX/hygiene gates pass. CI/manual responsive images/publication pending. Parity reports six numerical-format flags:30 thousand vs30,000 and surah-name:verse vs chapter-number:verse in five sources; verified equivalent. All structural counts match; no semantic difference inferred from formatting.",
+      "publication": "PR223 merged970bd319681e8911dd6034df76a413a8e0f497f4 after all six gates,18actual screenshots reviewed at1440/390/360, freshReady policy38545994956 and Pages38546498215 successful. Both AR/EN pages and English feeds/sitemap HTTP200 and byte-identical to main."
     },
     "jinn-demons-quran-bible-torah": {
       "status": "material_differences_pending_repair",
@@ -344,7 +346,7 @@
       "en_current_file_sha256": "63198207bb237a264e927ec098cd8dd2f389991fd2f08893be692abd4b937092"
     },
     "marib-dam-sayl-al-arim": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full80AR/81ENblocks incl dates2005–06/456/548 and all12sources/evidence table read.",
       "material_issues": [
         "Quran34:15–16 full quote replaced by paraphrase.",
@@ -357,7 +359,8 @@
       "ar_current_file_sha256": "8a9197648b410e1fa037a05d7823c77bf4e82a8b1c33077ca6ccd2e1873e89a0",
       "en_current_file_sha256": "29b1421073bfcc4b343541ed88771ea8968f6f68d2bc08561ff9632017d65415",
       "repair": "Targeted restoration of original quotations, omitted qualifications, exact source descriptions and original evidence/book disclosures. Preserved natural faithful prose and original numerical claims. Header uses existing wrap; original publication date restored. Existing summary of already-stated source limits remains equivalent; English reading-path destination and label synchronized.",
-      "validation": "Full earlier bilingual reading reused for unchanged content; all altered passages, all reference descriptions and footer read against Arabic. External URLs exact original order14/11/15. Arabic unchanged. Local site/discovery/citation/research/UX/hygiene gates pass. CI/manual responsive images/publication pending."
+      "validation": "Full earlier bilingual reading reused for unchanged content; all altered passages, all reference descriptions and footer read against Arabic. External URLs exact original order14/11/15. Arabic unchanged. Local site/discovery/citation/research/UX/hygiene gates pass. CI/manual responsive images/publication pending.",
+      "publication": "PR223 merged970bd319681e8911dd6034df76a413a8e0f497f4 after all six gates,18actual screenshots reviewed at1440/390/360, freshReady policy38545994956 and Pages38546498215 successful. Both AR/EN pages and English feeds/sitemap HTTP200 and byte-identical to main."
     },
     "memory-gaps-unremembered-actions": {
       "status": "repaired_published",
@@ -430,7 +433,7 @@
       "publication": "PR213 merged efe421b; sixchecks/freshReadypolicy andactual1440/390/360screensreviewed; Pages andpostmergeSite/Citation/Content/Visibility/IndexNow successful."
     },
     "quran-day-thousand-fifty-thousand-years-relativity": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Full63AR/61ENblocks/formulas/tables,33cm and3.6e-17,allcommentarydifferences/FAQread; core argument faithful.",
       "material_issues": [
         "Original table Quran quotations replaced by unmarked paraphrases.",
@@ -440,7 +443,9 @@
       ],
       "repair_plan": "Restore original tablequotes, intextcitations and source/footerstructure without rewriting natural mainprose.",
       "ar_current_file_sha256": "4c8b1b22923a744918c2254d73624f242d23e50b88ed48620efc8e8bd7aad586",
-      "en_current_file_sha256": "1cb97217fbb9dc8ee8310adf9f5c50ec1a8bba05a7ea1eba8744ca75fb97b487"
+      "en_current_file_sha256": "1f631b5be2b156340defe4bdd007ccf0077e401a315d2c44be71eb8d83b437a6",
+      "repair": "Restored three original Quran quotations in the table and the full Dajjal answer; seven in-text footnotes and reciprocal backlinks, original grouped sources with book28–35 and paper1630–1633, original authorversion1.0/date and evidence/book footer. Retained equivalent existing English prose; original structure restored.",
+      "validation": "Six-days full current Arabic and resulting63 English blocks read in previous preparation and unchanged. Time/writing full earlier reading reused on unchanged paragraphs; all restored quotations, table cells, seven footnotes, source paragraphs, twenty source entries, citation/disclosure and reading-path passages read against Arabic. Local site/discovery/citation/research/UX/hygiene gates passed; CI/actual images/publication pending. Arabic unchanged. Nine numeric-format flags read individually:1000/50000 vs1,000/50,000, surah names vschapter:verse labels, and twenty-four vs24; all equivalent. Original12external URLs in order and7reciprocal footnotes restored."
     },
     "quran-science-method-evidence": {
       "status": "repaired_published",
@@ -490,7 +495,7 @@
       "en_current_file_sha256": "34daafe493bb16dc4a0baedc585b87b85d6c7154e1f25e34c50b428aae68cce4"
     },
     "six-days-creation-cosmic-time": {
-      "status": "material_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "All63AR/64ENblocks andresidualsread. Broadargument preserved but severalparagraphsandclauses/fullquotedtexts omitted.",
       "material_issues": [
         "Originalaffirmationwe believe and explicitdistinctionquestionnotwhethercreationoccurred omitted.",
@@ -504,7 +509,9 @@
       ],
       "repair_plan": "Restore complete faithfuledition andoriginalreferenceURLs/order without newsections.",
       "ar_current_file_sha256": "b9f3d79c0da06b6d1a055f5668b310ebde3f00ada935febf74128b75debf7e60",
-      "en_current_file_sha256": "f222ab9e38b529e6840e577d15b8e12f8fbab08897981b8c08a65f95d2189474"
+      "en_current_file_sha256": "a6180278181f4096d3d2157276d25efe5f7620825d651d038a2ef835f1a561dd",
+      "repair": "Restored all63 source blocks, original Quran/hadith quotations, affirmative faith statement and duration questions, bookpages25–35 distinctions, astronomical and theological limits,5FAQ,9originalsourcegroups/exactURLorder, version3.0 citation and original book-origin footer. TOC/FAQJSON-LD restored; headerwrap uses existing class. Arabic untouched.",
+      "validation": "Six-days full current Arabic and resulting63 English blocks read in previous preparation and unchanged. Time/writing full earlier reading reused on unchanged paragraphs; all restored quotations, table cells, seven footnotes, source paragraphs, twenty source entries, citation/disclosure and reading-path passages read against Arabic. Local site/discovery/citation/research/UX/hygiene gates passed; CI/actual images/publication pending. Arabic unchanged. Structural audit has zero flags; external URLs exact order28 for each article."
     },
     "sleep-paralysis-jathoom": {
       "status": "repaired_published",
@@ -646,7 +653,7 @@
       "publication": "PR221 merged 2aa88a445782384ef3646202c50116a709b398e5; all required gates and actual1440/390/360 images reviewed; fresh Ready policy38541901359 and Pages38542145898 successful. Both AR/EN and English feeds/sitemap HTTP200 and byte-identical to main."
     },
     "writing-changed-human-history": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Full86AR/89ENblocks/all20sourcegroupsandresidualsread. Broadhistoricalargumentfaithful.",
       "material_issues": [
         "OriginalQ55:3–4/96:3–5 and2:282quotations replacedsummary;originalparagraph43 repeats debtversehumanconditionsandstrongestaccountwarning omitted.",
@@ -656,10 +663,12 @@
       ],
       "repair_plan": "Restore omittedsentences/quotes/sourceorder andexactbodylinks; removeaddedsummaryparagraphandrestoreoriginalFAQ62.",
       "ar_current_file_sha256": "637e867133220b9664f0249cb0b9ef28a1adb681ef8eabff8d97cc4db944cd01",
-      "en_current_file_sha256": "47b03f2805fe09e84a071d5da5dec4c2c6386a8c3e1b0318592b03b69264904d"
+      "en_current_file_sha256": "11d430be658a32345a2dd6a1def05bb1f009d1c4188c27fc98e01e2883d0b146",
+      "repair": "Restored Quran quotations, full fairness/archives/justice conditions, original FAQ scope, all original body source links and exact reference order with dates, original evidence disclosure and reading path. Removed original-absent closing disclosure. Retained equivalent natural existing prose; original structure restored.",
+      "validation": "Six-days full current Arabic and resulting63 English blocks read in previous preparation and unchanged. Time/writing full earlier reading reused on unchanged paragraphs; all restored quotations, table cells, seven footnotes, source paragraphs, twenty source entries, citation/disclosure and reading-path passages read against Arabic. Local site/discovery/citation/research/UX/hygiene gates passed; CI/actual images/publication pending. Arabic unchanged. Structural audit has zero flags; external URLs exact order28 for each article."
     }
   },
-  "last_checkpoint": "50/50 readings complete;20 meaning repairs published/live verified;three targeted justice/matter/Marib repairs awaiting CI/images/publication;14 total remain including this batch. No hourly automation.",
+  "last_checkpoint": "50/50 readings complete;23 meaning repairs published/live verified;time/sixdays/writing3 repaired pending CI/images/publication;11 total remain including this batch. No hourly automation.",
   "reading_complete": true,
   "remaining_reading": [],
   "note": "All50pairedtexts read in full; repairs remain pending and the entire task is not complete. Natural equivalent wording is accepted. Publishing one small batch at a time."

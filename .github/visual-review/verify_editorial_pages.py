@@ -26,6 +26,10 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("six-days-creation-cosmic-time-en", "/en/articles/six-days-creation-cosmic-time/", ".references"),
+    ("quran-day-thousand-fifty-thousand-years-relativity-en", "/en/articles/quran-day-thousand-fifty-thousand-years-relativity/", ".references"),
+    ("writing-changed-human-history-en", "/en/articles/writing-changed-human-history/", ".references"),
+
     ("injustice-fall-of-states-quran-history-en", "/en/articles/injustice-fall-of-states-quran-history/", ".references"),
     ("iron-fire-light-matter-energy-en", "/en/articles/iron-fire-light-matter-energy/", ".references"),
     ("marib-dam-sayl-al-arim-en", "/en/articles/marib-dam-sayl-al-arim/", ".references"),
