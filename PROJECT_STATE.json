@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "design/mobile-reading-2026-10-14",
-  "head_sha": "1c96274e4b61f0e84b51e89ee752f18881522c1a",
-  "head_sha_semantics": "Last content release before this audit-only completion record; all100 article files and English feeds/sitemap directly verified live.",
-  "status": "mobile_design_validation",
+  "branch": "seo/approved-titles-2026-10-14",
+  "head_sha": "769dfc1fadf58a106febc9e1800e6b11a45403e0",
+  "head_sha_semantics": "Published main at the start of the approved SEO title task. This is a prepublication source checkpoint; the pull request for the recorded branch is authoritative for final head, checks, merge, Pages and live verification.",
+  "status": "approved_title_release_candidate",
   "updated_at": "2026-10-14",
-  "current_task": "Mobile-first presentation refresh; all authored content preserved.",
-  "next_action": "Read PR #228 current checks and merged status before resuming; checkpoint labels describe pre-publication state. Complete final browser gate and screenshot review, then merge/Pages/live if still unmerged.",
+  "current_task": "Apply exactly ten user-approved HTML search titles (2 AR, 8 EN); preserve all other page bytes.",
+  "next_action": "Locate the PR for seo/approved-titles-2026-10-14 and read its current checks, merge, Pages and live-verification evidence before resuming. If already merged and ten live pages verified, this task is complete; do not repeat or reapply. If unmerged, finish required checks, merge with expected head, then verify Pages and all ten live pages.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -142,242 +142,18 @@
     "live_verification": "All six new reports rendered on ahmedalhafiz.com with their expected titles; the deleted human-evolution route rendered the site's 404 page; the homepage showed report 01 for Quran/science methodology and report 02 for religious OCD with no deleted-title residue."
   },
   "last_verified": {
-    "git_remote_matches": true,
-    "editorial_discovery_release": {
-      "verified_at": "2026-09-26T12:49:00+02:00",
-      "pull_request": 71,
-      "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/71",
-      "merge_sha": "5e13f017364929e4537b14d80c342506cbf7c9d0",
-      "scope": "Multilingual editorial discovery, four-book homepage inventory, unified research surfaces, structured discovery data, responsive coverage, and long-reference overflow correction.",
-      "required_checks": {
-        "PR policy / policy": "success",
-        "Governance integrity / validate": "success",
-        "Citation metadata integrity / validate": "success",
-        "Content research architecture / validate": "success",
-        "Site integrity / audit": "success",
-        "Visual review / render": "success"
-      },
-      "visual_review": "Run 36235831630 passed with 201 exact-size screenshots, 6 portrait tests across 3 viewports, 54 verified targeted captures, and 4 social cards.",
-      "deployment": {
-        "pages_workflow": "success",
-        "pages_workflow_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/actions/runs/36236648082",
-        "inventory": {
-          "public_html_pages": 64,
-          "canonical_urls": 64,
-          "sitemap_urls": 64,
-          "research_items": 13,
-          "arabic_feed_items": 13,
-          "english_feed_items": 8,
-          "german_feed_items": 4
-        },
-        "live_result": "Arabic, English, and German homepages showed four book cards with correct language direction and no horizontal overflow; /articles/how-certainty-becomes-violence/ showed seven references with no horizontal overflow after the long-URL fix."
-      },
-      "post_merge_checks": "Site integrity, Content research architecture, Visibility readiness monitor, IndexNow changed-URL notification, and Citation metadata integrity succeeded on the merge commit.",
-      "measurement_windows": {
-        "day_14": "2026-10-10",
-        "day_28": "2026-10-24",
-        "day_56": "2026-11-21"
-      }
-    },
-    "content_pull_request": {
-      "number": 65,
-      "url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/65",
-      "status": "merged",
-      "merge_sha": "7478e3b99aae3cab630724c3351535d0406f54b4",
-      "required_checks": {
-        "PR policy / policy": "success",
-        "Governance integrity / validate": "success",
-        "Citation metadata integrity / validate": "success",
-        "Content research architecture / validate": "success",
-        "Site integrity / audit": "success",
-        "Visual review / render": "success"
-      }
-    },
-    "deployment": {
-      "verified_at": "2026-09-24T18:46:05+02:00",
-      "pages_workflow": "success",
-      "pages_workflow_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/actions/runs/36028817990",
-      "https": "valid",
-      "inventory": {
-        "public_html_pages": 52,
-        "canonical_urls": 52,
-        "sitemap_urls": 52,
-        "research_items": 10,
-        "arabic_feed_items": 10,
-        "english_feed_items": 5
-      },
-      "live_surfaces": {
-        "/articles/possession-or-neurological-psychological-disorder/": "HTTP 200; canonical and reciprocal hreflang valid; 3 language links; 8 references; image HTTP 200",
-        "/en/articles/possession-or-neurological-psychological-disorder/": "HTTP 200; canonical and reciprocal hreflang valid; 3 language links; 8 references; image HTTP 200",
-        "/de/articles/possession-or-neurological-psychological-disorder/": "HTTP 200; canonical and reciprocal hreflang valid; 3 language links; 8 references; image HTTP 200",
-        "/de/articles/": "HTTP 200; canonical and reciprocal hreflang valid",
-        "/sitemap.xml": "HTTP 200; 52 URLs"
-      },
-      "responsive_evidence": "Visual review / render passed the three guide editions at desktop 1440x1200, mobile 390x844, and narrow mobile 360x800, including horizontal-overflow checks."
-    },
-    "search_console": {
-      "verified_at": "2026-09-24T20:52:00+02:00",
-      "property": "sc-domain:ahmedalhafiz.com",
-      "enhancements": {
-        "dataset": "2 valid and 4 invalid items in the historical report; 4 missing-description errors plus license, creator, and publisher recommendations. The live source exposed eight Dataset declarations without a complete declared dataset license/publisher model, so the remediation removes Dataset rich-result markup rather than inventing metadata.",
-        "profile_page": "4 valid and 0 invalid items; the historical dateModified warning still lists 4 items awaiting validation/recrawl. All six live ProfilePage dateModified values are ISO 8601 DateTime values."
-      },
-      "sitemap": {
-        "url": "https://ahmedalhafiz.com/sitemap.xml",
-        "submitted_once": true,
-        "status": "success",
-        "discovered_pages": 52
-      },
-      "indexing_requests": [
-        {
-          "url": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/",
-          "status_before_request": "indexed / URL is on Google",
-          "request": "accepted into priority crawl queue"
-        },
-        {
-          "url": "https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/",
-          "status_before_request": "discovered - currently not indexed",
-          "request": "accepted into priority crawl queue"
-        },
-        {
-          "url": "https://ahmedalhafiz.com/de/articles/possession-or-neurological-psychological-disorder/",
-          "status_before_request": "URL unknown to Google",
-          "request": "accepted into priority crawl queue"
-        },
-        {
-          "url": "https://ahmedalhafiz.com/de/articles/",
-          "status_before_request": "URL unknown to Google",
-          "request": "accepted into priority crawl queue"
-        }
-      ]
-    },
-    "apps_script": {
-      "verified_at": "2026-09-24T21:05:00+02:00",
-      "project": "Untitled project containing runDailyGscReport",
-      "trigger": "One existing daily time-based trigger; no trigger was added or removed.",
-      "change": "SITE was corrected from https://ahmed-alhafiz.github.io/ to sc-domain:ahmedalhafiz.com and saved.",
-      "test": "One manual test was initiated. Google required OAuth reauthorization; the safe browser did not expose the spawned consent window, so the run was cancelled before the function executed."
-    },
-    "github_billing": {
-      "verified_at": "2026-09-24T20:58:00+02:00",
-      "period": "2026-09-01 through 2026-09-24",
-      "actions_total": "$35.20 gross, $9.61 billed",
-      "sku_breakdown": "Actions Linux: 4,941 min, $29.65 gross, $9.00 billed; Actions storage: 4,907.59 GB-hr, $1.65 gross, $0.61 billed; macOS 3-core: 63 min, $3.91 gross, $0 billed.",
-      "repository_breakdown": "rahma-prayer: $7.19 billed; thabatak-app: $2.43 billed; ahmed-alhafiz.github.io: $12.63 gross and $0 billed; other repositories: $0 billed. Rounded repository rows account for the one-cent display difference.",
-      "settings_changed": false
-    },
-    "tests": [
-      "Site audit passed with 52 pages, 52 canonicals, 52 sitemap URLs, zero errors, and zero warnings.",
-      "Discovery integrity passed for 10 Arabic, 5 English, and 1 German research editions.",
-      "Entity integrity passed including the trilingual Umm Abbas companion-guide graph.",
-      "The post-deployment live visibility audit passed after replacing its stale literal count of 9 with the repository inventory count of 10.",
-      "JSON parsing and git diff --check passed.",
-      "The targeted structured-data gate passed: zero Dataset nodes remain and all six ProfilePage dateModified values are valid ISO 8601 DateTime values.",
-      "Site integrity passed with 52 pages, 52 canonicals, 52 sitemap URLs, zero errors, and zero warnings; entity integrity passed."
-    ],
-    "wave2_release_candidate": {
-      "verified_at": "2026-09-25T22:55:00+02:00",
-      "branch": "content/discovery-wave-2-books-juhayman",
-      "package_sha256": "9A189084C7FD61FBFFA55B6B783FCC1C84E0B88DBBBA409572762D4D0116E275",
-      "scope": "Nine article editions (Arabic, English, German), three evidence/citation packages, reciprocal book and hub discovery, feeds, llms.txt, and article_to_book analytics.",
-      "inventory": {
-        "public_html_pages": 64,
-        "canonical_urls": 64,
-        "sitemap_urls": 64,
-        "research_items": 13,
-        "arabic_feed_items": 13,
-        "english_feed_items": 8,
-        "german_feed_items": 4
-      },
-      "local_checks": {
-        "governance_integrity": "passed",
-        "site_integrity": "passed with 0 errors and 0 warnings",
-        "citation_metadata_integrity": "passed",
-        "content_research_architecture": "passed",
-        "discovery_integrity": "passed",
-        "entity_integrity": "passed",
-        "ux_integrity": "passed",
-        "arabic_ui_integrity": "passed",
-        "visibility_audit": "passed",
-        "public_presentation_hygiene": "passed"
-      },
-      "responsive_evidence": "Direct browser review passed at the default desktop viewport and 390x844 mobile for Arabic RTL and English LTR; headers, language switches, calls to action and long titles remained readable without observed horizontal page overflow."
-    },
-    "homepage_author_identity_refresh": {
-      "verified_at": "2026-09-26T00:38:01+02:00",
-      "pull_request": 69,
-      "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/69",
-      "merge_sha": "65fc0786d44a91eef91f0c17362dfe771a95e1e5",
-      "required_checks": {
-        "PR policy / policy": "success",
-        "Governance integrity / validate": "success",
-        "Citation metadata integrity / validate": "success",
-        "Content research architecture / validate": "success",
-        "Site integrity / audit": "success",
-        "Visual review / render": "success"
-      },
-      "deployment": "GitHub Pages build, deploy, audit, notification, and site-integrity checks succeeded on the merge commit.",
-      "live_result": "Arabic, English, and German homepages returned HTTP 200 over HTTPS with the bilingual name in title and H1, current natural descriptions, required section links, canonical URLs, one canonical Person node, verified sameAs only, and no horizontal overflow at 390px.",
-      "legacy_redirect": "https://ahmed-alhafiz.github.io/ returned HTTP 301 to https://ahmedalhafiz.com/; no setting was changed.",
-      "search_console_baseline": {
-        "property": "sc-domain:ahmedalhafiz.com",
-        "range": "3 months; report data currently spans 2026-09-21 through 2026-09-23",
-        "queries": {
-          "أحمد الحافظ": "0 clicks; 1 impression; 0% CTR; average position 3",
-          "الكاتب أحمد الحافظ": "0 clicks; 0 impressions; CTR and position unavailable",
-          "Ahmed Alhafiz": "0 clicks; 0 impressions; CTR and position unavailable",
-          "Ahmed Alhafiz author": "0 clicks; 0 impressions; CTR and position unavailable"
-        },
-        "actions": "Read-only baseline only; sitemap was not resubmitted and no indexing request was repeated.",
-        "boundary": "This sparse historical baseline is not evidence of a stable ranking or of an effect from PR #69."
-      }
-    },
-    "arabic_authority_growth": {
-      "verified_at": "2026-09-27T16:40:00+02:00",
-      "pull_request": 79,
-      "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/79",
-      "merge_sha": "c8fee224bca16b7e4e1a7c1730d87fd1260b416d",
-      "scope": "Strengthen the Arabic author identity on the about page and add accurate thematic reading paths across six Sirou-derived research reports.",
-      "required_checks": {
-        "PR policy / policy": "success",
-        "Governance integrity / validate": "success",
-        "Citation metadata integrity / validate": "success",
-        "Content research architecture / validate": "success",
-        "Site integrity / audit": "success",
-        "Visual review / render": "success"
-      },
-      "deployment": {
-        "pages_workflow": "success",
-        "pages_workflow_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/actions/runs/36319567899",
-        "live_result": "The live /about/ page rendered the title «الكاتب أحمد الحافظ — Ahmed Alhafiz | السيرة والمؤلفات» and H1 «الكاتب أحمد الحافظ»; post-merge integrity, governance, citation, research architecture, visibility, and IndexNow workflows succeeded."
-      },
-      "measurement_windows": {
-        "day_14": "2026-10-10",
-        "day_28": "2026-10-24",
-        "day_56": "2026-11-21"
-      },
-      "evidence_limit": "Deployment and live rendering are verified; no claim is made that Google indexing, ranking, impressions, or external citations improved."
-    },
-    "semantic_translation_fidelity": {
-      "date": "2026-10-14",
-      "pairs": 50,
-      "repairs": 34,
-      "unchanged_faithful_pairs": 16,
-      "live_resources": 103,
-      "matched_exact_bytes": 103,
-      "main_sha": "2d100a42030155c97ea2ee3e9190016c2c0341aa"
-    }
+    "source_base_sha": "769dfc1fadf58a106febc9e1800e6b11a45403e0",
+    "approved_titles": 10,
+    "html_files_preserved_except_approved_title_elements": 147,
+    "local_check_commands_passed": 12,
+    "audit_report": "audit-reports/approved-search-titles-2026-10-14.json",
+    "prior_design_release": "PR #228 merged and deployed; no design work remains from that task."
   },
   "unverified": [
-    "Google acceptance of an indexing request is not proof that the requested URL is indexed or ranked.",
-    "Google rankings, impressions, traffic, AI citations, and independent external citations remain unmeasured and are not guaranteed.",
-    "Search Console validation acceptance is not proof that Google has completed a recrawl or removed a report.",
-    "The historical Dataset and ProfilePage reports must be reassessed only after Google recrawls the deployed pages.",
-    "No post-PR #69 ranking effect can be inferred from the current four-query baseline because the visible Search Console data predates the deployment."
+    "This source checkpoint predates this PR release: inspect current PR for CI, merge, Pages and live status.",
+    "Current Google title adoption, query volumes, organic traffic effect and field Core Web Vitals are not measured."
   ],
-  "blockers": [
-    "Apps Script OAuth reauthorization still requires completing Google's consent window; the safe browser did not expose that spawned window after Review permissions was selected."
-  ],
+  "blockers": [],
   "monitoring_runbook": [
     "Wait for new Google crawl data; do not repeat sitemap or indexing submissions without a new reason.",
     "Compare the four branded queries: أحمد الحافظ، الكاتب أحمد الحافظ، Ahmed Alhafiz، and Ahmed Alhafiz author after a meaningful Search Console data window.",
@@ -385,7 +161,9 @@
     "Review Arabic, English, and German query performance only when Search Console has enough data.",
     "Reassess the historical Dataset and ProfilePage reports after confirmed recrawls and record only observed results."
   ],
-  "local_only_items": [],
+  "local_only_items": [
+    "Research scripts and raw public-search intermediate evidence remain scratch-only; the approved user-facing report is saved persistently, and the exact publication title list plus preservation evidence are in the tracked audit report. No required implementation is local-only after branch upload."
+  ],
   "notes": "PR #71 is live and technically verified at merge commit 5e13f017364929e4537b14d80c342506cbf7c9d0. No ranking, indexing, traffic, or AI-citation outcome is inferred from checks, deployment, submission, or validation acceptance.",
   "author_editorial_review_gate": {
     "scope": "All works-related articles; current adopted scope is depersonalization/derealization with the author-approved search-topic title.",

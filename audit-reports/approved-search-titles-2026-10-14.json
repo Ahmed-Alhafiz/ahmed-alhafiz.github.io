@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-14",
+  "base_sha": "769dfc1fadf58a106febc9e1800e6b11a45403e0",
+  "scope": "Only ten user-approved HTML title elements; all other HTML bytes preserved. No H1, body, references, links, descriptions, schema, dates, assets, feeds, sitemap or German changes.",
+  "user_approval": "Explicit approval on 2026-10-14 at 20:02 Europe/Vienna of the ten titles in report version 1.",
+  "approval_report_sha256": "e83a4c365ebab534b713c7f7a21655abe098104e820fbe4837b9de3b2a7b9e91",
+  "html_files_checked": 147,
+  "changed_title_count": 10,
+  "languages": {
+    "ar": 2,
+    "en": 8,
+    "de": 0
+  },
+  "all_other_html_identical": true,
+  "changes": [
+    {
+      "path": "articles/fear-physical-symptoms-umm-abbas/index.html",
+      "url": "https://ahmedalhafiz.com/articles/fear-physical-symptoms-umm-abbas/",
+      "language": "ar",
+      "previous_title": "هل يسبب الخوف أعراضًا جسدية حقيقية؟ قراءة في جسد مريم في «أم عباس» | أحمد الحافظ",
+      "approved_title": "هل يسبب الخوف أعراضًا جسدية؟ قراءة في «أم عباس» | أحمد الحافظ",
+      "previous_sha256": "f2da36f1884f816edf87cc98e55dbcc2f879d3812d137397f602589feed17a27",
+      "new_sha256": "efc0ac057871b0c54d2293deb6d2d7842fb311b1157bbcdbf8eb0e0d71cc024b",
+      "non_title_html_sha256": "9967fea5355261c0972e19c8e067de71104c02cabd969949e235d493ce52f31b",
+      "non_title_html_byte_identical": true
+    },
+    {
+      "path": "en/articles/jinn-existence-quran-sunnah/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/jinn-existence-quran-sunnah/",
+      "language": "en",
+      "previous_title": "Are Jinn Real in Islam? Quran, Hadith & Possession Explained | Ahmed Alhafiz",
+      "approved_title": "Are Jinn Real in Islam? What the Quran and Hadith Say",
+      "previous_sha256": "bcb7c0b0336fdc0f496ef1516b4f1bc6bb506437d8dbf9aed1162a194a4726a1",
+      "new_sha256": "f4a161dcad85fafaae66cdec14501b4852ffc6e5be834d28feb006b255c3b2ef",
+      "non_title_html_sha256": "24392c81011b3614413bfdd794dd49aea368e36de546d34d986174a884d7fa71",
+      "non_title_html_byte_identical": true
+    },
+    {
+      "path": "en/articles/difference-light-nur-quran-sun-moon/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/difference-light-nur-quran-sun-moon/",
+      "language": "en",
+      "previous_title": "Light and Nur in the Quran: Sun and Moon | Ahmed Alhafiz",
+      "approved_title": "Diya and Nur in the Quran: Sunlight, Moonlight and Guidance",
+      "previous_sha256": "b14285724e385d4017ccbed985d8ff4f38f5d1a48bf2de1adb35b15d0852db05",
+      "new_sha256": "dd4d61f56fb8abd21eafa02dce5a30664dadd3bfbd74289a9e1b7ab312213388",
+      "non_title_html_sha256": "9c68ed4cdc27e4ded9d5ddfc824cb1406afba5581eb4c45d61533a3d389718a0",
+      "non_title_html_byte_identical": true
+    },
+    {
+      "path": "en/articles/dna-code-genetic-information/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/dna-code-genetic-information/",
+      "language": "en",
+      "previous_title": "Is DNA Really a Code? | Ahmed Alhafiz",
+      "approved_title": "Is DNA Really a Code? Genetic Information Explained | Ahmed Alhafiz",
+      "previous_sha256": "e51d411d15e69c95c7552c27d1582bcd9b1155e345d7458fac15522551b128b5",
+      "new_sha256": "6bb87bec4b4bab1923eb228bb2dd58feb1aece8bccbde3be53f2dde3de9ed2d8",
+      "non_title_html_sha256": "6637eeb410f3febd003f3703ec98da42128b5d83e85ac2ce1c7f443babe416c2",
+      "non_title_html_byte_identical": true
+    },
+    {
+      "path": "articles/river-civilizations-water-state/index.html",
+      "url": "https://ahmedalhafiz.com/articles/river-civilizations-water-state/",
+      "language": "ar",
+      "previous_title": "حضارات الأنهار: من الماء إلى الدولة | أحمد الحافظ",
+      "approved_title": "لماذا قامت الحضارات القديمة حول الأنهار؟ | أحمد الحافظ",
+      "previous_sha256": "96246089aeaea91526f963f52525ef2f40bf2ddeeaba711aa698fa595d7c7002",
+      "new_sha256": "22595b799e7b623e3dac8a93b99717cc9616e3fb19d09a552aae439f5260015c",
+      "non_title_html_sha256": "80161cfc3b87be528486fb7b1104ccac08ebfaaeecd17c15a832b96a8106a344",
+      "non_title_html_byte_identical": true
+    },
+    {
+      "path": "en/articles/anzalna-iron-meteorites/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/anzalna-iron-meteorites/",
+      "language": "en",
+      "previous_title": "Does 'We Sent Down Iron' Mean Meteorites? | Ahmed Alhafiz",
+      "approved_title": "Why Does the Quran Say Iron Was 'Sent Down'? | Ahmed Alhafiz",
+      "previous_sha256": "142af8fd710b2adc3440fa83b274d1de451a7e2cb8da3c46f4f09cb8c4f92c6e",
+      "new_sha256": "c8a059de638ea535d1cd40ff4ba107215fd9e001948ecf1f3f4a8dfda7853a52",
+      "non_title_html_sha256": "dfbee1fe790ae4d915599ec624207640b5ad585b78f82dd867e097d4fb614523",
+      "non_title_html_byte_identical": true
+    },
+    {
+      "path": "en/articles/quran-science-method-evidence/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/quran-science-method-evidence/",
+      "language": "en",
+      "previous_title": "Quran and Science: How to Test a Comparison | Ahmed Alhafiz",
+      "approved_title": "Quran and Science: How to Assess Scientific Miracle Claims",
+      "previous_sha256": "7261a6cfae10850a77b9b5a5966068f2f3788b0e52da591b9f35484c33c887da",
+      "new_sha256": "33d1a651d1b049984b91a52a109db4d55d93045b4a6bc2e768e381f98aeb2cfb",
+      "non_title_html_sha256": "c514789f92dedd73a12f38c99d7133aec58b0fe5ff57cf7b026b30037c630181",
+      "non_title_html_byte_identical": true
+    },
+    {
+      "path": "en/articles/ratq-fatq-big-bang/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/",
+      "language": "en",
+      "previous_title": "Ratq, Fatq, and the Big Bang: Text and Evidence | Ahmed Alhafiz",
+      "approved_title": "Does the Quran Describe the Big Bang? Meaning and Limits",
+      "previous_sha256": "d6bd7d10c6b8268aea6ff603dcb407be35ebec15eacdf943f507834ff9bbd2e8",
+      "new_sha256": "d47b5741258cd3ac384418d2b7ff740c35112b550d382d4b055eacd1c75c0897",
+      "non_title_html_sha256": "96542129893e3b2609b9b669ffb7f090bcd986b5e58d7204a0788aff7db01c4e",
+      "non_title_html_byte_identical": true
+    },
+    {
+      "path": "en/articles/juhayman-grand-mosque-1979/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/",
+      "language": "en",
+      "previous_title": "Juhayman and the 1979 Grand Mosque | Ahmed Alhafiz",
+      "approved_title": "Juhayman and the 1979 Grand Mosque Seizure | Ahmed Alhafiz",
+      "previous_sha256": "84476797d9abcb142dd952902dd48ab3db60b58e0ed0bce0ca740f9a8ae0d61c",
+      "new_sha256": "f553c2d8cce74e89fb8454d744f58258a21cc6518a676a786ca0f19e38691018",
+      "non_title_html_sha256": "2dae8763366a553b4ae193c245cabab9c03fe9b35b15a7702b5a979e803455eb",
+      "non_title_html_byte_identical": true
+    },
+    {
+      "path": "en/articles/religious-ocd-scrupulosity/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/religious-ocd-scrupulosity/",
+      "language": "en",
+      "previous_title": "Religious OCD or Faith? Scrupulosity Symptoms and Treatment",
+      "approved_title": "Religious OCD (Scrupulosity): Symptoms and Treatment | Ahmed Alhafiz",
+      "previous_sha256": "b5c1922b1d9d1279df169e952e1f07dbcc20b6cb376542f81a74ed716aa44c67",
+      "new_sha256": "0f5ab8c6c559931c3cb530ee2a6910fefef00f0a88999976170d26deb1a5382d",
+      "non_title_html_sha256": "deddea02b646fe97182203f7961e3a372d170b0794e737676d2abece8c424648",
+      "non_title_html_byte_identical": true
+    }
+  ],
+  "measurement_limits": "No current Search Console query performance, search volumes, Google title adoption, traffic improvement or field Core Web Vitals measured.",
+  "local_checks": [
+    {
+      "command": "python tools/site_audit.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/discovery_integrity.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/editorial_quality_gate.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/public_presentation_hygiene.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/ux_integrity.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/arabic_ui_integrity.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/dossier11_integrity.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/entity_integrity.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/content_research_architecture_integrity.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/citation_metadata_integrity.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/build_article_styles.py --check",
+      "exit_code": 0
+    },
+    {
+      "command": "node tools/analytics_event_integrity.js",
+      "exit_code": 0
+    }
+  ],
+  "preexisting_warnings": [
+    "de/about/index.html: description length 192",
+    "en/articles/spiritual-healing-exploitation-safeguarding/index.html: description length 164"
+  ],
+  "red_team": [
+    "Approved titles independently matched the author-approved report; only ten title elements changed.",
+    "All 147 tracked HTML files compared against base: non-title bytes in changed pages identical, every other page entirely identical.",
+    "No new medical, historical, religious, ranking or traffic claims; questions and qualification remain compatible with unchanged H1 and article bodies.",
+    "Rendered DOM, styles, images, headings, navigation and scripts are unchanged, so earlier responsive visual evidence remains applicable."
+  ]
+}
