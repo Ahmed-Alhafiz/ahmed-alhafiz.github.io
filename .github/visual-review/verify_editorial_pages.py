@@ -27,6 +27,7 @@ VIEWPORTS = {
 }
 PAGES = (
     ("hegra-diagram-en", "/en/articles/madain-salih-thamud-nabataean-tombs/", "figure"),
+    ("water-power-toc-en", "/en/articles/water-civilization-power/", ".article-layout > .toc"),
     ("water-civilization-power-en", "/en/articles/water-civilization-power/", ".references"),
     ("nile-ancient-egypt-flood-calendar-state-en", "/en/articles/nile-ancient-egypt-flood-calendar-state/", ".references"),
     ("madain-salih-thamud-nabataean-tombs-en", "/en/articles/madain-salih-thamud-nabataean-tombs/", ".references"),
