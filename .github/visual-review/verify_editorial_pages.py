@@ -26,6 +26,11 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("teaching-names-ai-understanding-en", "/en/articles/teaching-names-ai-understanding/", ".references"),
+    ("ratq-fatq-big-bang-en", "/en/articles/ratq-fatq-big-bang/", ".references"),
+    ("human-embryo-quran-stages-en", "/en/articles/human-embryo-quran-stages/", ".references"),
+    ("jinn-demons-quran-bible-torah-en", "/en/articles/jinn-demons-quran-bible-torah/", ".references"),
+    ("universe-expansion-wa-inna-lamusiun-en", "/en/articles/universe-expansion-wa-inna-lamusiun/", ".references"),
     ("injustice-fall-of-states-quran-history-en", "/en/articles/injustice-fall-of-states-quran-history/", ".references"),
     ("iron-fire-light-matter-energy-en", "/en/articles/iron-fire-light-matter-energy/", ".references"),
     ("marib-dam-sayl-al-arim-en", "/en/articles/marib-dam-sayl-al-arim/", ".references"),
