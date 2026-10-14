@@ -663,9 +663,9 @@
       ],
       "repair_plan": "Restore omittedsentences/quotes/sourceorder andexactbodylinks; removeaddedsummaryparagraphandrestoreoriginalFAQ62.",
       "ar_current_file_sha256": "637e867133220b9664f0249cb0b9ef28a1adb681ef8eabff8d97cc4db944cd01",
-      "en_current_file_sha256": "11d430be658a32345a2dd6a1def05bb1f009d1c4188c27fc98e01e2883d0b146",
+      "en_current_file_sha256": "49db593ec103acb09505ede0de86a58ab6e57c9418fd32fd4c847621034177c6",
       "repair": "Restored Quran quotations, full fairness/archives/justice conditions, original FAQ scope, all original body source links and exact reference order with dates, original evidence disclosure and reading path. Removed original-absent closing disclosure. Retained equivalent natural existing prose; original structure restored.",
-      "validation": "Six-days full current Arabic and resulting63 English blocks read in previous preparation and unchanged. Time/writing full earlier reading reused on unchanged paragraphs; all restored quotations, table cells, seven footnotes, source paragraphs, twenty source entries, citation/disclosure and reading-path passages read against Arabic. Local site/discovery/citation/research/UX/hygiene gates passed; CI/actual images/publication pending. Arabic unchanged. Structural audit has zero flags; external URLs exact order28 for each article."
+      "validation": "Six-days full current Arabic and resulting63 English blocks read in previous preparation and unchanged. Time/writing full earlier reading reused on unchanged paragraphs; all restored quotations, table cells, seven footnotes, source paragraphs, twenty source entries, citation/disclosure and reading-path passages read against Arabic. Local site/discovery/citation/research/UX/hygiene gates passed; CI/actual images/publication pending. Arabic unchanged. Structural audit has zero flags; external URLs exact order28 for each article. Manual screenshots found a pre-existing visible review-field mismatch:cosmological instead ofhistorical. Corrected the header; rerunCI and three new header screenshots required. Other page/assets inputs unchanged."
     }
   },
   "last_checkpoint": "50/50 readings complete;23 meaning repairs published/live verified;time/sixdays/writing3 repaired pending CI/images/publication;11 total remain including this batch. No hourly automation.",
