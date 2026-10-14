@@ -180,7 +180,7 @@ TARGET_PAGES = (
     ("quran-science-en-sources", "/en/articles/quran-science-method-evidence/", ".article-body .references", "start"),
     ("human-embryo-en-table", "/en/articles/human-embryo-quran-stages/", ".article-body .table-scroll", "start"),
     ("human-embryo-en-sources", "/en/articles/human-embryo-quran-stages/", ".article-body .references", "start"),
-    ("nile-egypt-en-answer", "/en/articles/nile-ancient-egypt-flood-calendar-state/", ".article-body .summary-box", "start"),
+    ("nile-egypt-en-answer", "/en/articles/nile-ancient-egypt-flood-calendar-state/", ".article-body #short-answer + p", "start"),
     ("nile-egypt-en-sources", "/en/articles/nile-ancient-egypt-flood-calendar-state/", ".article-body .references", "start"),
     ("water-life-en-cell", "/en/articles/water-life-molecular-properties/", "#cell + h3 + p", "start"),
     ("water-life-en-sources", "/en/articles/water-life-molecular-properties/", ".article-body .references", "start"),
