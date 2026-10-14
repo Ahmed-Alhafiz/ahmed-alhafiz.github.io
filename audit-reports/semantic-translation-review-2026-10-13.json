@@ -600,7 +600,7 @@
       "en_current_file_sha256": "3d1bf9637e333879f1a993daa286d724a25885b808b06168de844c59d9f3dcfa"
     },
     "water-life-molecular-properties": {
-      "status": "material_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "All85AR/71ENblocks,6FAQ/15originalreferences andfooterread; Englishcompressessubstantialargument.",
       "material_issues": [
         "Original21:30fullquote/plantslifevsanimate distinction/norockinwater/finalfaithargument,24:45fullendingdifferentlocomotionanddivinepower,27:88fullquote omitted.",
@@ -613,7 +613,9 @@
       ],
       "repair_plan": "Restore fullfaithfulEnglishbody,exactoriginalreferences andfooter; removetableaddedwithoutArabicorigin.",
       "ar_current_file_sha256": "b447fb909926eec009c071f0c849a12327ae9e2b3e1b59bee6d2288dcf940a2c",
-      "en_current_file_sha256": "3d90b070e1e20722b6719b86e7e6dbb20f60ac6207fd76643427ec221d834544"
+      "en_current_file_sha256": "449d7e0c290177c8a5f564d6fbec2d511ff2064bd3751232cd1eef3346b086e4",
+      "repair": "Restored all85 source blocks, full original Quran quotations and exegetical distinctions, all original cell mechanisms and book-page connections, original15 annotated source groups and exact URL order, correction history, citation footer and book conclusion. Removed original-absent comparison table. TOC/6FAQ JSON-LD rebuilt; header uses existing wrap. Arabic untouched.",
+      "validation": "CurrentAR and resultingEN bodies both read completely, all85 blocks including sixFAQ and15annotatedsources. Parity zero flags:45p/13H2/12H3/15li/1blockquote/no tables;37externalURLs exact order and all numeric sequences match. ARbody unchanged. Site/Discovery/Citation/ContentResearch/UX/PublicHygiene passed. CI/manualscreens/publication pending."
     },
     "writing-changed-human-history": {
       "status": "limited_meaning_differences_pending_repair",
@@ -629,7 +631,7 @@
       "en_current_file_sha256": "47b03f2805fe09e84a071d5da5dec4c2c6386a8c3e1b0318592b03b69264904d"
     }
   },
-  "last_checkpoint": "50/50 full bilingual readings retained; 11 meaning repairs merged, two literary repairs prepared. Remaining repairs pending; hourly automation remains cancelled.",
+  "last_checkpoint": "All50/50 read;13publishedrepairsrecorded;PR218 owns3;PR220owns light-nur;thisbranch restoreswater-life. CI/manualscreens/publicationpending; whole task notcomplete. No hourly automation.",
   "reading_complete": true,
   "remaining_reading": [],
   "note": "All50pairedtexts read in full; repairs remain pending and the entire task is not complete. Natural equivalent wording is accepted. Publishing one small batch at a time."
