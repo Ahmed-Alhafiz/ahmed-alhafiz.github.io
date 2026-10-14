@@ -1,7 +1,7 @@
 {
   "scope": "All 50 Arabic/English article pairs; semantic comparison, not mechanical count equality.",
   "started": "2026-10-13",
-  "base_sha": "970bd319681e8911dd6034df76a413a8e0f497f4",
+  "base_sha": "74df1f50a38830776ac25bad8d09ad7f7a112f8c",
   "rules": "Accept natural translation, paragraph regrouping and equivalent wording; repair omitted/added sentences, changed meanings, caveats, numbers or references. Never infer semantic fidelity from counters. No hourly automation; user cancelled it.",
   "reviewed_count": 50,
   "total": 50,
@@ -331,7 +331,7 @@
       "publication": "PR218 mergedcccd5b6; six gates, actual1440/390/360 screenshots and fresh Ready policy38514489374 successful. Pages38514567563/postmerge successful; three liveEN pages byte-identical to deployed main verified14October."
     },
     "madain-salih-thamud-nabataean-tombs": {
-      "status": "material_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Full AR68/EN67blocks and table/source list read.",
       "material_issues": [
         "Complete book connection section/pages94–96 missing.",
@@ -343,7 +343,9 @@
       ],
       "repair_plan": "Restore original complete argument, table and source/link scope; preserve natural English in retained paragraphs.",
       "ar_current_file_sha256": "f0e965d89492b471d4f47e579490a3d8b3bdd51d4b2fdcb7dc2418c9a10b8a03",
-      "en_current_file_sha256": "63198207bb237a264e927ec098cd8dd2f389991fd2f08893be692abd4b937092"
+      "en_current_file_sha256": "c21607de08c7ef4fbd48172e2d76556765f337d7abcd322079c59daec0aab7fc",
+      "validation": "Full current Arabic read for Hegra82/Nile73 and full translation maps produced and checked. Waterpower full earlier bilingual reading reused for unchanged material; all11 changed paragraphs and21categorylabels compared. Local site/discovery/citation/research/UX/hygiene gates passed. Arabic file hash unchanged. CI/manual images/publication pending. SingleURLflag is verified equivalent Unicode/percent-encoded Saudipedia destination;10URLs in originalorder. Original sixsourcegroups/table/figure/citationmarkers/evidence links restored. Initial visualrun38550974556 found missing .table-scroll at the restored original table. Wrapped table with existing horizontal-scroll class; content/cells unchanged. Nile capture retargeted to original short-answer paragraph instead of removed added summary-box. Current-head CI/manual images pending.",
+      "repair": "Full82-block original structure restored:book94–96, full verse, weeping condition, original2column evidence table, all cautions, six annotated reference groups and evidence/BibTeX/RIS/reading links. Original SVG translated into separateEnglish asset; Arabic SVG/body untouched."
     },
     "marib-dam-sayl-al-arim": {
       "status": "repaired_published",
@@ -401,7 +403,7 @@
       "en_current_file_sha256": "aa59de4daaac6fc90434683579c698b5cc42ba02e920aa2f8acaaa6e3afba494"
     },
     "nile-ancient-egypt-flood-calendar-state": {
-      "status": "material_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Both full AR73/EN64blocks incl16originalsourcegroups and residuals read.",
       "material_issues": [
         "Opening Heqanakht scene and Quran43:51 quote removed.",
@@ -415,7 +417,9 @@
       ],
       "repair_plan": "Full faithful body restoration incl quotation/citation/URL sequence; preserve AR.",
       "ar_current_file_sha256": "1f72c02a720247a3132a582e612378e9b8f5632d05ce9088979b1fd8531e0854",
-      "en_current_file_sha256": "b94a827c3ddd25f3786f3695d64bd849c25b3f83f4709f4610d7f6deaab4c0a7"
+      "en_current_file_sha256": "3d7e8b65647a9e274711b52b44c731f3ce37ffec94eb9a515b334b722ec91066",
+      "validation": "Full current Arabic read for Hegra82/Nile73 and full translation maps produced and checked. Waterpower full earlier bilingual reading reused for unchanged material; all11 changed paragraphs and21categorylabels compared. Local site/discovery/citation/research/UX/hygiene gates passed. Arabic file hash unchanged. CI/manual images/publication pending. Two numericflags are written-out33/15/12 ordinals vsdigits, all compared;24URLs exact originalorder,16sourcegroups andcitationmarkers restored.",
+      "repair": "Full73-block source restored:Heqanakht opening and material decisions, complete calendar/math nuance84problems/48injuries, all original Quran quotations and tafsir distinctions, three-voice method,16annotated sourcegroups, citationversion1.0/date29September and book82–88 footer. Original in-text citations and source sequence restored."
     },
     "possession-or-neurological-psychological-disorder": {
       "status": "repaired_published",
@@ -433,7 +437,7 @@
       "publication": "PR213 merged efe421b; sixchecks/freshReadypolicy andactual1440/390/360screensreviewed; Pages andpostmergeSite/Citation/Content/Visibility/IndexNow successful."
     },
     "quran-day-thousand-fifty-thousand-years-relativity": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full63AR/61ENblocks/formulas/tables,33cm and3.6e-17,allcommentarydifferences/FAQread; core argument faithful.",
       "material_issues": [
         "Original table Quran quotations replaced by unmarked paraphrases.",
@@ -445,7 +449,8 @@
       "ar_current_file_sha256": "4c8b1b22923a744918c2254d73624f242d23e50b88ed48620efc8e8bd7aad586",
       "en_current_file_sha256": "1f631b5be2b156340defe4bdd007ccf0077e401a315d2c44be71eb8d83b437a6",
       "repair": "Restored three original Quran quotations in the table and the full Dajjal answer; seven in-text footnotes and reciprocal backlinks, original grouped sources with book28–35 and paper1630–1633, original authorversion1.0/date and evidence/book footer. Retained equivalent existing English prose; original structure restored.",
-      "validation": "Six-days full current Arabic and resulting63 English blocks read in previous preparation and unchanged. Time/writing full earlier reading reused on unchanged paragraphs; all restored quotations, table cells, seven footnotes, source paragraphs, twenty source entries, citation/disclosure and reading-path passages read against Arabic. Local site/discovery/citation/research/UX/hygiene gates passed; CI/actual images/publication pending. Arabic unchanged. Nine numeric-format flags read individually:1000/50000 vs1,000/50,000, surah names vschapter:verse labels, and twenty-four vs24; all equivalent. Original12external URLs in order and7reciprocal footnotes restored."
+      "validation": "Six-days full current Arabic and resulting63 English blocks read in previous preparation and unchanged. Time/writing full earlier reading reused on unchanged paragraphs; all restored quotations, table cells, seven footnotes, source paragraphs, twenty source entries, citation/disclosure and reading-path passages read against Arabic. Local site/discovery/citation/research/UX/hygiene gates passed; CI/actual images/publication pending. Arabic unchanged. Nine numeric-format flags read individually:1000/50000 vs1,000/50,000, surah names vschapter:verse labels, and twenty-four vs24; all equivalent. Original12external URLs in order and7reciprocal footnotes restored.",
+      "publication": "PR224 merged74df1f50a38830776ac25bad8d09ad7f7a112f8c after all six gates,18actual images plus3corrected writing-head images reviewed; unchanged body/assets evidence reused. FreshReady policy38550404737 and Pages38550484102/allpostmerge successful. ThreeEN pages and Englishfeeds/sitemap HTTP200 byte-identical to main; Arabic unchanged."
     },
     "quran-science-method-evidence": {
       "status": "repaired_published",
@@ -495,7 +500,7 @@
       "en_current_file_sha256": "34daafe493bb16dc4a0baedc585b87b85d6c7154e1f25e34c50b428aae68cce4"
     },
     "six-days-creation-cosmic-time": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "All63AR/64ENblocks andresidualsread. Broadargument preserved but severalparagraphsandclauses/fullquotedtexts omitted.",
       "material_issues": [
         "Originalaffirmationwe believe and explicitdistinctionquestionnotwhethercreationoccurred omitted.",
@@ -511,7 +516,8 @@
       "ar_current_file_sha256": "b9f3d79c0da06b6d1a055f5668b310ebde3f00ada935febf74128b75debf7e60",
       "en_current_file_sha256": "a6180278181f4096d3d2157276d25efe5f7620825d651d038a2ef835f1a561dd",
       "repair": "Restored all63 source blocks, original Quran/hadith quotations, affirmative faith statement and duration questions, bookpages25–35 distinctions, astronomical and theological limits,5FAQ,9originalsourcegroups/exactURLorder, version3.0 citation and original book-origin footer. TOC/FAQJSON-LD restored; headerwrap uses existing class. Arabic untouched.",
-      "validation": "Six-days full current Arabic and resulting63 English blocks read in previous preparation and unchanged. Time/writing full earlier reading reused on unchanged paragraphs; all restored quotations, table cells, seven footnotes, source paragraphs, twenty source entries, citation/disclosure and reading-path passages read against Arabic. Local site/discovery/citation/research/UX/hygiene gates passed; CI/actual images/publication pending. Arabic unchanged. Structural audit has zero flags; external URLs exact order28 for each article."
+      "validation": "Six-days full current Arabic and resulting63 English blocks read in previous preparation and unchanged. Time/writing full earlier reading reused on unchanged paragraphs; all restored quotations, table cells, seven footnotes, source paragraphs, twenty source entries, citation/disclosure and reading-path passages read against Arabic. Local site/discovery/citation/research/UX/hygiene gates passed; CI/actual images/publication pending. Arabic unchanged. Structural audit has zero flags; external URLs exact order28 for each article.",
+      "publication": "PR224 merged74df1f50a38830776ac25bad8d09ad7f7a112f8c after all six gates,18actual images plus3corrected writing-head images reviewed; unchanged body/assets evidence reused. FreshReady policy38550404737 and Pages38550484102/allpostmerge successful. ThreeEN pages and Englishfeeds/sitemap HTTP200 byte-identical to main; Arabic unchanged."
     },
     "sleep-paralysis-jathoom": {
       "status": "repaired_published",
@@ -619,7 +625,7 @@
       "publication": "PR215 merged4419507; six gates and actual12 screenshots1440/390/360 reviewed; fresh Ready PRPolicy38457669537 success; Pages andpostmergeSite/Citation/Content/Visibility/IndexNow success; both EN pages,FeedJSON,Atom,Sitemap exactlymatchdeployedmain."
     },
     "water-civilization-power": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Full106pairedblocks/44tablecells plus21fullannotatedsources/titles/exactURLsanddiagramcaptionread. Coreframework/samples/caveatsfaithful.",
       "material_issues": [
         "Originalchapterthree andbookpages55–104 omitted; paragraph80 conceptualpathandorganisingblessingjusticevsmonopolyquestion replaced.",
@@ -631,7 +637,9 @@
       ],
       "repair_plan": "Restore omittedclauses/bookpages andoriginalquote inexistingparagraphs; removetwoaddedclaims, normalizeEnglishsourcetypeUI.",
       "ar_current_file_sha256": "dc369fd6c70e6316e8681add6892a6aea931ce3770e1fb8083c630383132843d",
-      "en_current_file_sha256": "3d1bf9637e333879f1a993daa286d724a25885b808b06168de844c59d9f3dcfa"
+      "en_current_file_sha256": "2dc49912e2d277c5b6fc92c2fd0148497f4625fc4c6f9450684586912dad535d",
+      "validation": "Full current Arabic read for Hegra82/Nile73 and full translation maps produced and checked. Waterpower full earlier bilingual reading reused for unchanged material; all11 changed paragraphs and21categorylabels compared. Local site/discovery/citation/research/UX/hygiene gates passed. Arabic file hash unchanged. CI/manual images/publication pending. Legacy article-prose is explicitly unassessed by standaloneparity tool; lxml150blocks/table and21external URLs exact originalorder verified. Counts alone are not semantic proof. Actual responsive images exposed overlapping sticky legacy TOC and inline reference categories; scoped English-only presentation now makes the TOC static and categories separate blocks. Corrected-page images still required before merge.",
+      "repair": "Targeted11 paragraphs restored:chapterthree/book55–104, independent measurement, energy allocation, sanitation, disability/affordability, no reducing turning-away to engineering error, full23:18 quote, climate floods/scarcity, devotionaljustice, original conceptualpath.21Arabic/English categorylabels madeEnglish; original-absentVogt2023 removed. Unchanged faithful English retained."
     },
     "water-life-molecular-properties": {
       "status": "repaired_published",
@@ -653,7 +661,7 @@
       "publication": "PR221 merged 2aa88a445782384ef3646202c50116a709b398e5; all required gates and actual1440/390/360 images reviewed; fresh Ready policy38541901359 and Pages38542145898 successful. Both AR/EN and English feeds/sitemap HTTP200 and byte-identical to main."
     },
     "writing-changed-human-history": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full86AR/89ENblocks/all20sourcegroupsandresidualsread. Broadhistoricalargumentfaithful.",
       "material_issues": [
         "OriginalQ55:3–4/96:3–5 and2:282quotations replacedsummary;originalparagraph43 repeats debtversehumanconditionsandstrongestaccountwarning omitted.",
@@ -665,10 +673,11 @@
       "ar_current_file_sha256": "637e867133220b9664f0249cb0b9ef28a1adb681ef8eabff8d97cc4db944cd01",
       "en_current_file_sha256": "49db593ec103acb09505ede0de86a58ab6e57c9418fd32fd4c847621034177c6",
       "repair": "Restored Quran quotations, full fairness/archives/justice conditions, original FAQ scope, all original body source links and exact reference order with dates, original evidence disclosure and reading path. Removed original-absent closing disclosure. Retained equivalent natural existing prose; original structure restored.",
-      "validation": "Six-days full current Arabic and resulting63 English blocks read in previous preparation and unchanged. Time/writing full earlier reading reused on unchanged paragraphs; all restored quotations, table cells, seven footnotes, source paragraphs, twenty source entries, citation/disclosure and reading-path passages read against Arabic. Local site/discovery/citation/research/UX/hygiene gates passed; CI/actual images/publication pending. Arabic unchanged. Structural audit has zero flags; external URLs exact order28 for each article. Manual screenshots found a pre-existing visible review-field mismatch:cosmological instead ofhistorical. Corrected the header; rerunCI and three new header screenshots required. Other page/assets inputs unchanged."
+      "validation": "Six-days full current Arabic and resulting63 English blocks read in previous preparation and unchanged. Time/writing full earlier reading reused on unchanged paragraphs; all restored quotations, table cells, seven footnotes, source paragraphs, twenty source entries, citation/disclosure and reading-path passages read against Arabic. Local site/discovery/citation/research/UX/hygiene gates passed; CI/actual images/publication pending. Arabic unchanged. Structural audit has zero flags; external URLs exact order28 for each article. Manual screenshots found a pre-existing visible review-field mismatch:cosmological instead ofhistorical. Corrected the header; rerunCI and three new header screenshots required. Other page/assets inputs unchanged.",
+      "publication": "PR224 merged74df1f50a38830776ac25bad8d09ad7f7a112f8c after all six gates,18actual images plus3corrected writing-head images reviewed; unchanged body/assets evidence reused. FreshReady policy38550404737 and Pages38550484102/allpostmerge successful. ThreeEN pages and Englishfeeds/sitemap HTTP200 byte-identical to main; Arabic unchanged."
     }
   },
-  "last_checkpoint": "50/50 readings complete;23 meaning repairs published/live verified;time/sixdays/writing3 repaired pending CI/images/publication;11 total remain including this batch. No hourly automation.",
+  "last_checkpoint": "50/50 readings complete;26 meaning repairs published/live verified;Hegra/Nile/waterpower3 prepared awaiting CI/images/publication;8 total not published including this batch. No hourly automation.",
   "reading_complete": true,
   "remaining_reading": [],
   "note": "All50pairedtexts read in full; repairs remain pending and the entire task is not complete. Natural equivalent wording is accepted. Publishing one small batch at a time."

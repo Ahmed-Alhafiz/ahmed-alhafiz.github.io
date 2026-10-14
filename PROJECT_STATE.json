@@ -552,19 +552,19 @@
     "reviewed_pairs": 50,
     "total_pairs": 50,
     "faithful_without_repair": 16,
-    "repairs_live_verified": 23,
-    "repairs_remaining": 11,
-    "current_branch": "fix/en-time-writing-fidelity-2026-10-14",
+    "repairs_live_verified": 26,
+    "repairs_remaining": 8,
+    "current_branch": "fix/en-hegra-nile-waterpower-2026-10-14",
     "current_articles": [
-      "six-days-creation-cosmic-time",
-      "quran-day-thousand-fifty-thousand-years-relativity",
-      "writing-changed-human-history"
+      "madain-salih-thamud-nabataean-tombs",
+      "nile-ancient-egypt-flood-calendar-state",
+      "water-civilization-power"
     ],
-    "verified_main": "970bd319681e8911dd6034df76a413a8e0f497f4",
-    "latest_live_pages_run": 38546498215,
+    "verified_main": "74df1f50a38830776ac25bad8d09ad7f7a112f8c",
+    "latest_live_pages_run": 38550484102,
     "hourly_automation": "cancelled_by_user; do not reactivate",
     "blocker": "none; current-head CI and manual visual review still pending",
-    "next": "Finish time/sixdays/writing CI/images/Ready/merge/Pages/live; then remaining8 repairs from semantic review queue.",
+    "next": "Finish Hegra/Nile/waterpower CI/images/Ready/merge/Pages/live; then expansion/embryo/jinn and ratq/teaching-names.",
     "limits": "Full reading complete; repairs not complete. No independent specialist review, indexing, ranking or traffic claimed.",
     "prepared_checkpoint": "8ccd6704ea0d516f2c01e9f9c9829c7341b52a0b"
   }
