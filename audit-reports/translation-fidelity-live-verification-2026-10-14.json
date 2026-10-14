@@ -1,0 +1,936 @@
+{
+  "verified_at_utc": "2026-10-14T14:28:16.017219+00:00",
+  "main_sha": "2d100a42030155c97ea2ee3e9190016c2c0341aa",
+  "scope": "All50 Arabic/English article pairs plus English JSON/Atom feeds and sitemap; exact deployed bytes against git main. Transport verification is separate from full bilingual semantic reading and actual responsive-image review.",
+  "requests": 103,
+  "matched": 103,
+  "results": [
+    {
+      "path": "articles/adam-all-languages-origin-language/index.html",
+      "url": "https://ahmedalhafiz.com/articles/adam-all-languages-origin-language/",
+      "final_url": "https://ahmedalhafiz.com/articles/adam-all-languages-origin-language/",
+      "http_status": 200,
+      "expected_sha256": "eddfc5117f1780c148380c793228677355584aba42ec2f47f3d5ad83ae49a304",
+      "actual_sha256": "eddfc5117f1780c148380c793228677355584aba42ec2f47f3d5ad83ae49a304",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/adam-all-languages-origin-language/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/adam-all-languages-origin-language/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/adam-all-languages-origin-language/",
+      "http_status": 200,
+      "expected_sha256": "9503ca201c232e8831849497f8504177fd27020ff844b62e4d3aff4e1a2156ce",
+      "actual_sha256": "9503ca201c232e8831849497f8504177fd27020ff844b62e4d3aff4e1a2156ce",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/age-of-universe-13-8-billion-years/index.html",
+      "url": "https://ahmedalhafiz.com/articles/age-of-universe-13-8-billion-years/",
+      "final_url": "https://ahmedalhafiz.com/articles/age-of-universe-13-8-billion-years/",
+      "http_status": 200,
+      "expected_sha256": "b60b9d08ee1b677ee97120ee08f2491b739bd3d9dd282c5db9427e81f19795b6",
+      "actual_sha256": "b60b9d08ee1b677ee97120ee08f2491b739bd3d9dd282c5db9427e81f19795b6",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/age-of-universe-13-8-billion-years/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/age-of-universe-13-8-billion-years/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/age-of-universe-13-8-billion-years/",
+      "http_status": 200,
+      "expected_sha256": "3bbcef76d6a83acd1f1a683ea7b79c8fe5725c2d38993af44af9e4b7a29bcc50",
+      "actual_sha256": "3bbcef76d6a83acd1f1a683ea7b79c8fe5725c2d38993af44af9e4b7a29bcc50",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/ai-soul-consciousness-understanding-taklif/index.html",
+      "url": "https://ahmedalhafiz.com/articles/ai-soul-consciousness-understanding-taklif/",
+      "final_url": "https://ahmedalhafiz.com/articles/ai-soul-consciousness-understanding-taklif/",
+      "http_status": 200,
+      "expected_sha256": "e2278d19d2a7aced9c288a2837cb8f1ee5f423c1c220a924ae27a9a08800f31e",
+      "actual_sha256": "e2278d19d2a7aced9c288a2837cb8f1ee5f423c1c220a924ae27a9a08800f31e",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/ai-soul-consciousness-understanding-taklif/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/ai-soul-consciousness-understanding-taklif/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/ai-soul-consciousness-understanding-taklif/",
+      "http_status": 200,
+      "expected_sha256": "afacbe04fd9f9e215eef544a42dc54ced7d58bf7f1de60c528d20e3aa69667ed",
+      "actual_sha256": "afacbe04fd9f9e215eef544a42dc54ced7d58bf7f1de60c528d20e3aa69667ed",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/anzalna-iron-meteorites/index.html",
+      "url": "https://ahmedalhafiz.com/articles/anzalna-iron-meteorites/",
+      "final_url": "https://ahmedalhafiz.com/articles/anzalna-iron-meteorites/",
+      "http_status": 200,
+      "expected_sha256": "4f971752d48e90c485fe167c75fa1a48c45b943da6bb1e347ae7fc2a6ef1f559",
+      "actual_sha256": "4f971752d48e90c485fe167c75fa1a48c45b943da6bb1e347ae7fc2a6ef1f559",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/anzalna-iron-meteorites/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/anzalna-iron-meteorites/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/anzalna-iron-meteorites/",
+      "http_status": 200,
+      "expected_sha256": "bf73cf32e042f64e39975cd27fe361089a3dbfafd32901a422d56f64d03cbd3a",
+      "actual_sha256": "bf73cf32e042f64e39975cd27fe361089a3dbfafd32901a422d56f64d03cbd3a",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/before-big-bang-science-limits/index.html",
+      "url": "https://ahmedalhafiz.com/articles/before-big-bang-science-limits/",
+      "final_url": "https://ahmedalhafiz.com/articles/before-big-bang-science-limits/",
+      "http_status": 200,
+      "expected_sha256": "e265a1f9719412942100f0fdabafcf58830c6805351d77dc7f9fe66d502de1d5",
+      "actual_sha256": "e265a1f9719412942100f0fdabafcf58830c6805351d77dc7f9fe66d502de1d5",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/before-big-bang-science-limits/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/before-big-bang-science-limits/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/before-big-bang-science-limits/",
+      "http_status": 200,
+      "expected_sha256": "54cbfad4212fae52b3b4d5abecc447f2d239d5e7ef7d6bfda51a89c5920cb025",
+      "actual_sha256": "54cbfad4212fae52b3b4d5abecc447f2d239d5e7ef7d6bfda51a89c5920cb025",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/brain-consciousness-spirit-limits/index.html",
+      "url": "https://ahmedalhafiz.com/articles/brain-consciousness-spirit-limits/",
+      "final_url": "https://ahmedalhafiz.com/articles/brain-consciousness-spirit-limits/",
+      "http_status": 200,
+      "expected_sha256": "7d4500cdc6e07016489dd5c580bedbab1bfca0ebf1a1d7f85757764ccef0ac2e",
+      "actual_sha256": "7d4500cdc6e07016489dd5c580bedbab1bfca0ebf1a1d7f85757764ccef0ac2e",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/brain-consciousness-spirit-limits/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/brain-consciousness-spirit-limits/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/brain-consciousness-spirit-limits/",
+      "http_status": 200,
+      "expected_sha256": "710d9ecdc09c13b1444e10693cd3e44408ad9188ff0acb608d00a92377020895",
+      "actual_sha256": "710d9ecdc09c13b1444e10693cd3e44408ad9188ff0acb608d00a92377020895",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/civilization-knowledge-justice-collapse/index.html",
+      "url": "https://ahmedalhafiz.com/articles/civilization-knowledge-justice-collapse/",
+      "final_url": "https://ahmedalhafiz.com/articles/civilization-knowledge-justice-collapse/",
+      "http_status": 200,
+      "expected_sha256": "cbace8fdd339c99b8658c7bf32364bcce25aa79398f24225d8b1c0b435943784",
+      "actual_sha256": "cbace8fdd339c99b8658c7bf32364bcce25aa79398f24225d8b1c0b435943784",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/civilization-knowledge-justice-collapse/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/civilization-knowledge-justice-collapse/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/civilization-knowledge-justice-collapse/",
+      "http_status": 200,
+      "expected_sha256": "7bb7ff217161d91b33020cf833d760f602fdfd974f5e1e7a438f5a8845f0d366",
+      "actual_sha256": "7bb7ff217161d91b33020cf833d760f602fdfd974f5e1e7a438f5a8845f0d366",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/cyberbullying-university-rumor-stigma/index.html",
+      "url": "https://ahmedalhafiz.com/articles/cyberbullying-university-rumor-stigma/",
+      "final_url": "https://ahmedalhafiz.com/articles/cyberbullying-university-rumor-stigma/",
+      "http_status": 200,
+      "expected_sha256": "19b7e017e99137f3d060017d4737d6481dc363a30ab98390d9ff042488fcf0ea",
+      "actual_sha256": "19b7e017e99137f3d060017d4737d6481dc363a30ab98390d9ff042488fcf0ea",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/cyberbullying-university-rumor-stigma/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/cyberbullying-university-rumor-stigma/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/cyberbullying-university-rumor-stigma/",
+      "http_status": 200,
+      "expected_sha256": "bc6c6c7f9cc115d557eac816ca4ee242046b65e86ba8ab10936eee867a1dc996",
+      "actual_sha256": "bc6c6c7f9cc115d557eac816ca4ee242046b65e86ba8ab10936eee867a1dc996",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/depersonalization-derealization-feeling-unreal/index.html",
+      "url": "https://ahmedalhafiz.com/articles/depersonalization-derealization-feeling-unreal/",
+      "final_url": "https://ahmedalhafiz.com/articles/depersonalization-derealization-feeling-unreal/",
+      "http_status": 200,
+      "expected_sha256": "2721928778b2aa7c79d202cc3f8d5f0f82a2b5e82a7c2e18ab9f01c2be958c11",
+      "actual_sha256": "2721928778b2aa7c79d202cc3f8d5f0f82a2b5e82a7c2e18ab9f01c2be958c11",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/depersonalization-derealization-feeling-unreal/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/depersonalization-derealization-feeling-unreal/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/depersonalization-derealization-feeling-unreal/",
+      "http_status": 200,
+      "expected_sha256": "4769767e299190a38ebdde801f664873f3e757b8f8d8a50fd7baf5fbc660f9a1",
+      "actual_sha256": "4769767e299190a38ebdde801f664873f3e757b8f8d8a50fd7baf5fbc660f9a1",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/diagnostic-uncertainty-family-fear-coercive-authority/index.html",
+      "url": "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "final_url": "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "http_status": 200,
+      "expected_sha256": "a59b4ba883043b165b090cfee5647d52d0ec36af20fea15b06afdf945f998ecc",
+      "actual_sha256": "a59b4ba883043b165b090cfee5647d52d0ec36af20fea15b06afdf945f998ecc",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/diagnostic-uncertainty-family-fear-coercive-authority/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/",
+      "http_status": 200,
+      "expected_sha256": "fb647a2a09505ba3660bac6bd89021368bca5b33ddc6ebf0cf6a95d86111c560",
+      "actual_sha256": "fb647a2a09505ba3660bac6bd89021368bca5b33ddc6ebf0cf6a95d86111c560",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/difference-light-nur-quran-sun-moon/index.html",
+      "url": "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/",
+      "final_url": "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/",
+      "http_status": 200,
+      "expected_sha256": "8f2abca29d639f2c6aa9c68aee74d64a5432e5be55d8d5e17fa5f5e3d17c85f0",
+      "actual_sha256": "8f2abca29d639f2c6aa9c68aee74d64a5432e5be55d8d5e17fa5f5e3d17c85f0",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/difference-light-nur-quran-sun-moon/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/difference-light-nur-quran-sun-moon/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/difference-light-nur-quran-sun-moon/",
+      "http_status": 200,
+      "expected_sha256": "fd53094f808235f2a8cc580f694ba006a630bb199783e72c26c8bf2253400cf5",
+      "actual_sha256": "fd53094f808235f2a8cc580f694ba006a630bb199783e72c26c8bf2253400cf5",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/dna-code-genetic-information/index.html",
+      "url": "https://ahmedalhafiz.com/articles/dna-code-genetic-information/",
+      "final_url": "https://ahmedalhafiz.com/articles/dna-code-genetic-information/",
+      "http_status": 200,
+      "expected_sha256": "1f4c9a71c4e5933d501546a658ee419016466b0ce1264f42aad1a1f033e811dc",
+      "actual_sha256": "1f4c9a71c4e5933d501546a658ee419016466b0ce1264f42aad1a1f033e811dc",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/dna-code-genetic-information/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/dna-code-genetic-information/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/dna-code-genetic-information/",
+      "http_status": 200,
+      "expected_sha256": "8196c650a3df08f928f695ba86c197bfbdad48a82a455e340245117b3cc0c30b",
+      "actual_sha256": "8196c650a3df08f928f695ba86c197bfbdad48a82a455e340245117b3cc0c30b",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/fall-of-baghdad-1258-ibn-al-alqami/index.html",
+      "url": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "final_url": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "http_status": 200,
+      "expected_sha256": "5b2148073944f8786270c80c8869a866c7ba03506da559ec654c1acb62c08af1",
+      "actual_sha256": "5b2148073944f8786270c80c8869a866c7ba03506da559ec654c1acb62c08af1",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/fall-of-baghdad-1258-ibn-al-alqami/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "http_status": 200,
+      "expected_sha256": "7bb49dea4b1e584a9bcc0f18659e7daf2d72ae027d83cfa766ab61259c6e029e",
+      "actual_sha256": "7bb49dea4b1e584a9bcc0f18659e7daf2d72ae027d83cfa766ab61259c6e029e",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/fear-physical-symptoms-umm-abbas/index.html",
+      "url": "https://ahmedalhafiz.com/articles/fear-physical-symptoms-umm-abbas/",
+      "final_url": "https://ahmedalhafiz.com/articles/fear-physical-symptoms-umm-abbas/",
+      "http_status": 200,
+      "expected_sha256": "3af0ad722ac91c0e8e654b74b57f5df56b7ff288f0a11a19d3c28eeb0c6f569b",
+      "actual_sha256": "3af0ad722ac91c0e8e654b74b57f5df56b7ff288f0a11a19d3c28eeb0c6f569b",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/fear-physical-symptoms-umm-abbas/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/fear-physical-symptoms-umm-abbas/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/fear-physical-symptoms-umm-abbas/",
+      "http_status": 200,
+      "expected_sha256": "9558edbdf62009c31e0e5fe05bdc1fc97f6743c394e2c3b0944851c3c6f8f541",
+      "actual_sha256": "9558edbdf62009c31e0e5fe05bdc1fc97f6743c394e2c3b0944851c3c6f8f541",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/functional-seizures-vs-epilepsy/index.html",
+      "url": "https://ahmedalhafiz.com/articles/functional-seizures-vs-epilepsy/",
+      "final_url": "https://ahmedalhafiz.com/articles/functional-seizures-vs-epilepsy/",
+      "http_status": 200,
+      "expected_sha256": "f9222c3e8ef1beae7849af1d783d13f85d020adf1efdbe79a0e96c9831e1f8cf",
+      "actual_sha256": "f9222c3e8ef1beae7849af1d783d13f85d020adf1efdbe79a0e96c9831e1f8cf",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/functional-seizures-vs-epilepsy/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/functional-seizures-vs-epilepsy/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/functional-seizures-vs-epilepsy/",
+      "http_status": 200,
+      "expected_sha256": "257460199c99454364b429d82379118d4f7b4aeb2cadb1a333e4191e9fd252f5",
+      "actual_sha256": "257460199c99454364b429d82379118d4f7b4aeb2cadb1a333e4191e9fd252f5",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/green-tree-fire-photosynthesis/index.html",
+      "url": "https://ahmedalhafiz.com/articles/green-tree-fire-photosynthesis/",
+      "final_url": "https://ahmedalhafiz.com/articles/green-tree-fire-photosynthesis/",
+      "http_status": 200,
+      "expected_sha256": "4ffe34869d2275ba62fab0d7ca5c4064751c7ff4d63d1885106ef42911c95cbe",
+      "actual_sha256": "4ffe34869d2275ba62fab0d7ca5c4064751c7ff4d63d1885106ef42911c95cbe",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/green-tree-fire-photosynthesis/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/green-tree-fire-photosynthesis/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/green-tree-fire-photosynthesis/",
+      "http_status": 200,
+      "expected_sha256": "06c606045718798337da5d131500f4f9f36b45f8c3ecc2e30b9d2f2b22512fd4",
+      "actual_sha256": "06c606045718798337da5d131500f4f9f36b45f8c3ecc2e30b9d2f2b22512fd4",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/hearing-voices-in-head/index.html",
+      "url": "https://ahmedalhafiz.com/articles/hearing-voices-in-head/",
+      "final_url": "https://ahmedalhafiz.com/articles/hearing-voices-in-head/",
+      "http_status": 200,
+      "expected_sha256": "259926748d4d422f6a7569c619964ab77c8bf974b90e52a1f55ba31fc259703d",
+      "actual_sha256": "259926748d4d422f6a7569c619964ab77c8bf974b90e52a1f55ba31fc259703d",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/hearing-voices-in-head/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/hearing-voices-in-head/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/hearing-voices-in-head/",
+      "http_status": 200,
+      "expected_sha256": "c5d53fff964d25542216369635252136cfb544f88e092fd33f0e18fe38ddc023",
+      "actual_sha256": "c5d53fff964d25542216369635252136cfb544f88e092fd33f0e18fe38ddc023",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/hexagram-magic-seal-of-solomon-umm-abbas/index.html",
+      "url": "https://ahmedalhafiz.com/articles/hexagram-magic-seal-of-solomon-umm-abbas/",
+      "final_url": "https://ahmedalhafiz.com/articles/hexagram-magic-seal-of-solomon-umm-abbas/",
+      "http_status": 200,
+      "expected_sha256": "20b4cad1072a5d81209353eae4125ab48a52f542210b041530340ebad3922c84",
+      "actual_sha256": "20b4cad1072a5d81209353eae4125ab48a52f542210b041530340ebad3922c84",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/hexagram-magic-seal-of-solomon-umm-abbas/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/hexagram-magic-seal-of-solomon-umm-abbas/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/hexagram-magic-seal-of-solomon-umm-abbas/",
+      "http_status": 200,
+      "expected_sha256": "da2ba59b3247cda17326f20e30991823fc8fe34c166cdfca9b1d02652038b4b6",
+      "actual_sha256": "da2ba59b3247cda17326f20e30991823fc8fe34c166cdfca9b1d02652038b4b6",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/how-certainty-becomes-violence/index.html",
+      "url": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/",
+      "final_url": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/",
+      "http_status": 200,
+      "expected_sha256": "a15c6050b3c081246bbd05d6d823727d526a7b13b380dfd3d05cb0cba0941069",
+      "actual_sha256": "a15c6050b3c081246bbd05d6d823727d526a7b13b380dfd3d05cb0cba0941069",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/how-certainty-becomes-violence/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/how-certainty-becomes-violence/",
+      "http_status": 200,
+      "expected_sha256": "3ec88c0d8db44085509e67ed6e318728b74143c69a43949caa1a279df1a11385",
+      "actual_sha256": "3ec88c0d8db44085509e67ed6e318728b74143c69a43949caa1a279df1a11385",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/how-concepts-form-adam-names-scientific-models/index.html",
+      "url": "https://ahmedalhafiz.com/articles/how-concepts-form-adam-names-scientific-models/",
+      "final_url": "https://ahmedalhafiz.com/articles/how-concepts-form-adam-names-scientific-models/",
+      "http_status": 200,
+      "expected_sha256": "3100e48acea65d4bd942ae200754800c348b7d504a86c0f931d71905ef557aac",
+      "actual_sha256": "3100e48acea65d4bd942ae200754800c348b7d504a86c0f931d71905ef557aac",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/how-concepts-form-adam-names-scientific-models/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/how-concepts-form-adam-names-scientific-models/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/how-concepts-form-adam-names-scientific-models/",
+      "http_status": 200,
+      "expected_sha256": "074d97af6a98804a1c6f6bf598049f085fbba31f0640df5c0bde71e99ccaa890",
+      "actual_sha256": "074d97af6a98804a1c6f6bf598049f085fbba31f0640df5c0bde71e99ccaa890",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/how-khufu-pyramid-built-merer-diary/index.html",
+      "url": "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/",
+      "final_url": "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/",
+      "http_status": 200,
+      "expected_sha256": "a15e39c1f3281f43d14a2a69dc0c7a1aaed9128476e34adbac4dedbcefc7901a",
+      "actual_sha256": "a15e39c1f3281f43d14a2a69dc0c7a1aaed9128476e34adbac4dedbcefc7901a",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/how-khufu-pyramid-built-merer-diary/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/how-khufu-pyramid-built-merer-diary/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/how-khufu-pyramid-built-merer-diary/",
+      "http_status": 200,
+      "expected_sha256": "7157b8ad86548bc8f80fa96d8d763c403173626679161e179f414114071bf4f4",
+      "actual_sha256": "7157b8ad86548bc8f80fa96d8d763c403173626679161e179f414114071bf4f4",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/human-embryo-quran-stages/index.html",
+      "url": "https://ahmedalhafiz.com/articles/human-embryo-quran-stages/",
+      "final_url": "https://ahmedalhafiz.com/articles/human-embryo-quran-stages/",
+      "http_status": 200,
+      "expected_sha256": "de57556af1d8a5602f727442a254c31fa94ead824dab7137c3688b17357d9e21",
+      "actual_sha256": "de57556af1d8a5602f727442a254c31fa94ead824dab7137c3688b17357d9e21",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/human-embryo-quran-stages/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/human-embryo-quran-stages/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/human-embryo-quran-stages/",
+      "http_status": 200,
+      "expected_sha256": "2ed7b25922f619affb073614ca7914cc184814cc232cb99011df7cd70bf54298",
+      "actual_sha256": "2ed7b25922f619affb073614ca7914cc184814cc232cb99011df7cd70bf54298",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/injustice-fall-of-states-quran-history/index.html",
+      "url": "https://ahmedalhafiz.com/articles/injustice-fall-of-states-quran-history/",
+      "final_url": "https://ahmedalhafiz.com/articles/injustice-fall-of-states-quran-history/",
+      "http_status": 200,
+      "expected_sha256": "631ee93d608919f63c5ae679eb11499c2db5f82f7f2917eaa7ae6dae9873a7ff",
+      "actual_sha256": "631ee93d608919f63c5ae679eb11499c2db5f82f7f2917eaa7ae6dae9873a7ff",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/injustice-fall-of-states-quran-history/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/injustice-fall-of-states-quran-history/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/injustice-fall-of-states-quran-history/",
+      "http_status": 200,
+      "expected_sha256": "3ec56a7780baf9f0791af7b5d17e0f8a923c2be775a7ebe23283657a75eec0d8",
+      "actual_sha256": "3ec56a7780baf9f0791af7b5d17e0f8a923c2be775a7ebe23283657a75eec0d8",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/iron-fire-light-matter-energy/index.html",
+      "url": "https://ahmedalhafiz.com/articles/iron-fire-light-matter-energy/",
+      "final_url": "https://ahmedalhafiz.com/articles/iron-fire-light-matter-energy/",
+      "http_status": 200,
+      "expected_sha256": "b3406c1665e3a5616508834f2fe02d19b46723b3c8b87a349010a2adba47cea7",
+      "actual_sha256": "b3406c1665e3a5616508834f2fe02d19b46723b3c8b87a349010a2adba47cea7",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/iron-fire-light-matter-energy/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/iron-fire-light-matter-energy/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/iron-fire-light-matter-energy/",
+      "http_status": 200,
+      "expected_sha256": "ba7105f407d594b8f13f6c0c57076a8a8a962236b406623f1bc8d295a798bdb7",
+      "actual_sha256": "ba7105f407d594b8f13f6c0c57076a8a8a962236b406623f1bc8d295a798bdb7",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/jinn-demons-quran-bible-torah/index.html",
+      "url": "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/",
+      "final_url": "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/",
+      "http_status": 200,
+      "expected_sha256": "3a3960f6c9890085a7903b9b66f3c71ed4c046faf14abd32372d2d9a319ee527",
+      "actual_sha256": "3a3960f6c9890085a7903b9b66f3c71ed4c046faf14abd32372d2d9a319ee527",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/jinn-demons-quran-bible-torah/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/jinn-demons-quran-bible-torah/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/jinn-demons-quran-bible-torah/",
+      "http_status": 200,
+      "expected_sha256": "790d526f36a6d8d316d904b541202b0c3d0605d2d76f2cbe0f95d36806f008a6",
+      "actual_sha256": "790d526f36a6d8d316d904b541202b0c3d0605d2d76f2cbe0f95d36806f008a6",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/jinn-existence-quran-sunnah/index.html",
+      "url": "https://ahmedalhafiz.com/articles/jinn-existence-quran-sunnah/",
+      "final_url": "https://ahmedalhafiz.com/articles/jinn-existence-quran-sunnah/",
+      "http_status": 200,
+      "expected_sha256": "7c65012ec47633c17cf4fcc07d6b5f4f0675e10ff72cae8e94fb3b2c5e9c9515",
+      "actual_sha256": "7c65012ec47633c17cf4fcc07d6b5f4f0675e10ff72cae8e94fb3b2c5e9c9515",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/jinn-existence-quran-sunnah/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/jinn-existence-quran-sunnah/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/jinn-existence-quran-sunnah/",
+      "http_status": 200,
+      "expected_sha256": "52dee87a24a24d9d2f05a4304f46e901b5126684496e13112b02e60bc2f54405",
+      "actual_sha256": "52dee87a24a24d9d2f05a4304f46e901b5126684496e13112b02e60bc2f54405",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/juhayman-grand-mosque-1979/index.html",
+      "url": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/",
+      "final_url": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/",
+      "http_status": 200,
+      "expected_sha256": "b664801ce199a12b4bcc4fc271a153120ff2d9e2bd0888f4f752d040a0d2d724",
+      "actual_sha256": "b664801ce199a12b4bcc4fc271a153120ff2d9e2bd0888f4f752d040a0d2d724",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/juhayman-grand-mosque-1979/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/juhayman-grand-mosque-1979/",
+      "http_status": 200,
+      "expected_sha256": "70b160426c6511c033fc09c78ce8fcccab1934b1cb784328cf4bfe3f0bd34c97",
+      "actual_sha256": "70b160426c6511c033fc09c78ce8fcccab1934b1cb784328cf4bfe3f0bd34c97",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/madain-salih-thamud-nabataean-tombs/index.html",
+      "url": "https://ahmedalhafiz.com/articles/madain-salih-thamud-nabataean-tombs/",
+      "final_url": "https://ahmedalhafiz.com/articles/madain-salih-thamud-nabataean-tombs/",
+      "http_status": 200,
+      "expected_sha256": "f0e965d89492b471d4f47e579490a3d8b3bdd51d4b2fdcb7dc2418c9a10b8a03",
+      "actual_sha256": "f0e965d89492b471d4f47e579490a3d8b3bdd51d4b2fdcb7dc2418c9a10b8a03",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/madain-salih-thamud-nabataean-tombs/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/madain-salih-thamud-nabataean-tombs/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/madain-salih-thamud-nabataean-tombs/",
+      "http_status": 200,
+      "expected_sha256": "c21607de08c7ef4fbd48172e2d76556765f337d7abcd322079c59daec0aab7fc",
+      "actual_sha256": "c21607de08c7ef4fbd48172e2d76556765f337d7abcd322079c59daec0aab7fc",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/marib-dam-sayl-al-arim/index.html",
+      "url": "https://ahmedalhafiz.com/articles/marib-dam-sayl-al-arim/",
+      "final_url": "https://ahmedalhafiz.com/articles/marib-dam-sayl-al-arim/",
+      "http_status": 200,
+      "expected_sha256": "8a9197648b410e1fa037a05d7823c77bf4e82a8b1c33077ca6ccd2e1873e89a0",
+      "actual_sha256": "8a9197648b410e1fa037a05d7823c77bf4e82a8b1c33077ca6ccd2e1873e89a0",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/marib-dam-sayl-al-arim/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/marib-dam-sayl-al-arim/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/marib-dam-sayl-al-arim/",
+      "http_status": 200,
+      "expected_sha256": "29b1421073bfcc4b343541ed88771ea8968f6f68d2bc08561ff9632017d65415",
+      "actual_sha256": "29b1421073bfcc4b343541ed88771ea8968f6f68d2bc08561ff9632017d65415",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/memory-gaps-unremembered-actions/index.html",
+      "url": "https://ahmedalhafiz.com/articles/memory-gaps-unremembered-actions/",
+      "final_url": "https://ahmedalhafiz.com/articles/memory-gaps-unremembered-actions/",
+      "http_status": 200,
+      "expected_sha256": "1fa31d0e440eb879a12965ca03503a5f70678795946c3b6e6d4caa2ec609933b",
+      "actual_sha256": "1fa31d0e440eb879a12965ca03503a5f70678795946c3b6e6d4caa2ec609933b",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/memory-gaps-unremembered-actions/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/memory-gaps-unremembered-actions/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/memory-gaps-unremembered-actions/",
+      "http_status": 200,
+      "expected_sha256": "1b387b40adbf6b30a3ef31af9b33fe299e2a6fda12ce903204184978158583da",
+      "actual_sha256": "1b387b40adbf6b30a3ef31af9b33fe299e2a6fda12ce903204184978158583da",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/mesopotamia-irrigation-soil-salinity-collapse/index.html",
+      "url": "https://ahmedalhafiz.com/articles/mesopotamia-irrigation-soil-salinity-collapse/",
+      "final_url": "https://ahmedalhafiz.com/articles/mesopotamia-irrigation-soil-salinity-collapse/",
+      "http_status": 200,
+      "expected_sha256": "8e9a47426249082248f5656fad63c1a9ef882602937f04c2e5f91a83f192a7bd",
+      "actual_sha256": "8e9a47426249082248f5656fad63c1a9ef882602937f04c2e5f91a83f192a7bd",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/mesopotamia-irrigation-soil-salinity-collapse/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/mesopotamia-irrigation-soil-salinity-collapse/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/mesopotamia-irrigation-soil-salinity-collapse/",
+      "http_status": 200,
+      "expected_sha256": "aa59de4daaac6fc90434683579c698b5cc42ba02e920aa2f8acaaa6e3afba494",
+      "actual_sha256": "aa59de4daaac6fc90434683579c698b5cc42ba02e920aa2f8acaaa6e3afba494",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/nile-ancient-egypt-flood-calendar-state/index.html",
+      "url": "https://ahmedalhafiz.com/articles/nile-ancient-egypt-flood-calendar-state/",
+      "final_url": "https://ahmedalhafiz.com/articles/nile-ancient-egypt-flood-calendar-state/",
+      "http_status": 200,
+      "expected_sha256": "1f72c02a720247a3132a582e612378e9b8f5632d05ce9088979b1fd8531e0854",
+      "actual_sha256": "1f72c02a720247a3132a582e612378e9b8f5632d05ce9088979b1fd8531e0854",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/nile-ancient-egypt-flood-calendar-state/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/nile-ancient-egypt-flood-calendar-state/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/nile-ancient-egypt-flood-calendar-state/",
+      "http_status": 200,
+      "expected_sha256": "3d7e8b65647a9e274711b52b44c731f3ce37ffec94eb9a515b334b722ec91066",
+      "actual_sha256": "3d7e8b65647a9e274711b52b44c731f3ce37ffec94eb9a515b334b722ec91066",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/possession-or-neurological-psychological-disorder/index.html",
+      "url": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/",
+      "final_url": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/",
+      "http_status": 200,
+      "expected_sha256": "0c69bed9b600244fb411c048d83ecd878060808a7967941cdd4cb3e5f4fe44f4",
+      "actual_sha256": "0c69bed9b600244fb411c048d83ecd878060808a7967941cdd4cb3e5f4fe44f4",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/possession-or-neurological-psychological-disorder/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/possession-or-neurological-psychological-disorder/",
+      "http_status": 200,
+      "expected_sha256": "ebf9ab3696f28a06e3acc521b31e101680df596d94fd4ee02a4941aa0a9525f8",
+      "actual_sha256": "ebf9ab3696f28a06e3acc521b31e101680df596d94fd4ee02a4941aa0a9525f8",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/quran-day-thousand-fifty-thousand-years-relativity/index.html",
+      "url": "https://ahmedalhafiz.com/articles/quran-day-thousand-fifty-thousand-years-relativity/",
+      "final_url": "https://ahmedalhafiz.com/articles/quran-day-thousand-fifty-thousand-years-relativity/",
+      "http_status": 200,
+      "expected_sha256": "4c8b1b22923a744918c2254d73624f242d23e50b88ed48620efc8e8bd7aad586",
+      "actual_sha256": "4c8b1b22923a744918c2254d73624f242d23e50b88ed48620efc8e8bd7aad586",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/quran-day-thousand-fifty-thousand-years-relativity/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/quran-day-thousand-fifty-thousand-years-relativity/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/quran-day-thousand-fifty-thousand-years-relativity/",
+      "http_status": 200,
+      "expected_sha256": "1f631b5be2b156340defe4bdd007ccf0077e401a315d2c44be71eb8d83b437a6",
+      "actual_sha256": "1f631b5be2b156340defe4bdd007ccf0077e401a315d2c44be71eb8d83b437a6",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/quran-science-method-evidence/index.html",
+      "url": "https://ahmedalhafiz.com/articles/quran-science-method-evidence/",
+      "final_url": "https://ahmedalhafiz.com/articles/quran-science-method-evidence/",
+      "http_status": 200,
+      "expected_sha256": "c3c5c8930e5ff534ccf000b0e3cc63f8b99d4875a68ace64858c3f5d86d519be",
+      "actual_sha256": "c3c5c8930e5ff534ccf000b0e3cc63f8b99d4875a68ace64858c3f5d86d519be",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/quran-science-method-evidence/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/quran-science-method-evidence/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/quran-science-method-evidence/",
+      "http_status": 200,
+      "expected_sha256": "ee6fdf48f983953537b69afe6f944455098d1bf7fee54e6ada819e8604f44530",
+      "actual_sha256": "ee6fdf48f983953537b69afe6f944455098d1bf7fee54e6ada819e8604f44530",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/ratq-fatq-big-bang/index.html",
+      "url": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/",
+      "final_url": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/",
+      "http_status": 200,
+      "expected_sha256": "f2366ececdd8cc87ec546c57658855327181c02adb0ff17e17db3e15bbe00235",
+      "actual_sha256": "f2366ececdd8cc87ec546c57658855327181c02adb0ff17e17db3e15bbe00235",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/ratq-fatq-big-bang/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/ratq-fatq-big-bang/",
+      "http_status": 200,
+      "expected_sha256": "9fdea118d785249bb950d4e63130f14c8f53db74eb45f999e7b80da7aacccb4d",
+      "actual_sha256": "9fdea118d785249bb950d4e63130f14c8f53db74eb45f999e7b80da7aacccb4d",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/religious-ocd-scrupulosity/index.html",
+      "url": "https://ahmedalhafiz.com/articles/religious-ocd-scrupulosity/",
+      "final_url": "https://ahmedalhafiz.com/articles/religious-ocd-scrupulosity/",
+      "http_status": 200,
+      "expected_sha256": "b07384cabd4525b482d5d2fb075242e24da3c35d2daafc79061b938a4b7baa95",
+      "actual_sha256": "b07384cabd4525b482d5d2fb075242e24da3c35d2daafc79061b938a4b7baa95",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/religious-ocd-scrupulosity/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/religious-ocd-scrupulosity/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/religious-ocd-scrupulosity/",
+      "http_status": 200,
+      "expected_sha256": "46191e608d20e3ed22c3eb91b230e3097a810121e177ad7d6172f96119df722d",
+      "actual_sha256": "46191e608d20e3ed22c3eb91b230e3097a810121e177ad7d6172f96119df722d",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/river-civilizations-water-state/index.html",
+      "url": "https://ahmedalhafiz.com/articles/river-civilizations-water-state/",
+      "final_url": "https://ahmedalhafiz.com/articles/river-civilizations-water-state/",
+      "http_status": 200,
+      "expected_sha256": "0db15baf298b3797009d4f8bb4cf76a19791db59cf057971e32ac2542bbc7ffe",
+      "actual_sha256": "0db15baf298b3797009d4f8bb4cf76a19791db59cf057971e32ac2542bbc7ffe",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/river-civilizations-water-state/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/river-civilizations-water-state/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/river-civilizations-water-state/",
+      "http_status": 200,
+      "expected_sha256": "34daafe493bb16dc4a0baedc585b87b85d6c7154e1f25e34c50b428aae68cce4",
+      "actual_sha256": "34daafe493bb16dc4a0baedc585b87b85d6c7154e1f25e34c50b428aae68cce4",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/six-days-creation-cosmic-time/index.html",
+      "url": "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/",
+      "final_url": "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/",
+      "http_status": 200,
+      "expected_sha256": "b9f3d79c0da06b6d1a055f5668b310ebde3f00ada935febf74128b75debf7e60",
+      "actual_sha256": "b9f3d79c0da06b6d1a055f5668b310ebde3f00ada935febf74128b75debf7e60",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/six-days-creation-cosmic-time/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/six-days-creation-cosmic-time/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/six-days-creation-cosmic-time/",
+      "http_status": 200,
+      "expected_sha256": "a6180278181f4096d3d2157276d25efe5f7620825d651d038a2ef835f1a561dd",
+      "actual_sha256": "a6180278181f4096d3d2157276d25efe5f7620825d651d038a2ef835f1a561dd",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/sleep-paralysis-jathoom/index.html",
+      "url": "https://ahmedalhafiz.com/articles/sleep-paralysis-jathoom/",
+      "final_url": "https://ahmedalhafiz.com/articles/sleep-paralysis-jathoom/",
+      "http_status": 200,
+      "expected_sha256": "b96dc2d431c6d6e9cf750cbda8d5a46e68df0babb6d8420ada3fce1f300892e4",
+      "actual_sha256": "b96dc2d431c6d6e9cf750cbda8d5a46e68df0babb6d8420ada3fce1f300892e4",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/sleep-paralysis-jathoom/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/sleep-paralysis-jathoom/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/sleep-paralysis-jathoom/",
+      "http_status": 200,
+      "expected_sha256": "d52f060ec914adacb12cdfcb6ad8c9c4afb24fb15dafc13da1d3768612aa650e",
+      "actual_sha256": "d52f060ec914adacb12cdfcb6ad8c9c4afb24fb15dafc13da1d3768612aa650e",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/sleepwalking-why-no-memory/index.html",
+      "url": "https://ahmedalhafiz.com/articles/sleepwalking-why-no-memory/",
+      "final_url": "https://ahmedalhafiz.com/articles/sleepwalking-why-no-memory/",
+      "http_status": 200,
+      "expected_sha256": "3b78ab06377176affa1f284f191a30b6d72e854545c439630d362bd1700c0e17",
+      "actual_sha256": "3b78ab06377176affa1f284f191a30b6d72e854545c439630d362bd1700c0e17",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/sleepwalking-why-no-memory/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/sleepwalking-why-no-memory/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/sleepwalking-why-no-memory/",
+      "http_status": 200,
+      "expected_sha256": "aaf35c200c8f3b02129ff32c34f4e933ee15c2fe45bdc40257919a2757e53091",
+      "actual_sha256": "aaf35c200c8f3b02129ff32c34f4e933ee15c2fe45bdc40257919a2757e53091",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/spiritual-healing-exploitation-safeguarding/index.html",
+      "url": "https://ahmedalhafiz.com/articles/spiritual-healing-exploitation-safeguarding/",
+      "final_url": "https://ahmedalhafiz.com/articles/spiritual-healing-exploitation-safeguarding/",
+      "http_status": 200,
+      "expected_sha256": "7cbd931748fa01817df058966ae64045ce6f8ae55cedcffada12f6737f06afce",
+      "actual_sha256": "7cbd931748fa01817df058966ae64045ce6f8ae55cedcffada12f6737f06afce",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/spiritual-healing-exploitation-safeguarding/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/spiritual-healing-exploitation-safeguarding/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/spiritual-healing-exploitation-safeguarding/",
+      "http_status": 200,
+      "expected_sha256": "822e7d6245aea49725c2ae9b536cf592bcd003d24701318dcc491ba3ab72093a",
+      "actual_sha256": "822e7d6245aea49725c2ae9b536cf592bcd003d24701318dcc491ba3ab72093a",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/teaching-names-ai-understanding/index.html",
+      "url": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/",
+      "final_url": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/",
+      "http_status": 200,
+      "expected_sha256": "1fbf5b5e4d3cf668738dcea206d65b84bebfc9df143d94ca3378a74a5265d52c",
+      "actual_sha256": "1fbf5b5e4d3cf668738dcea206d65b84bebfc9df143d94ca3378a74a5265d52c",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/teaching-names-ai-understanding/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/teaching-names-ai-understanding/",
+      "http_status": 200,
+      "expected_sha256": "f270c88b584080de9f51d268ba84a6ba883b140c0b1ac198363514109dee065e",
+      "actual_sha256": "f270c88b584080de9f51d268ba84a6ba883b140c0b1ac198363514109dee065e",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/turing-test-ai-consciousness/index.html",
+      "url": "https://ahmedalhafiz.com/articles/turing-test-ai-consciousness/",
+      "final_url": "https://ahmedalhafiz.com/articles/turing-test-ai-consciousness/",
+      "http_status": 200,
+      "expected_sha256": "d9cbd108a274cee1e2c9783fb80b5ed147b231174ecf4c9af6b817bb04fa7f38",
+      "actual_sha256": "d9cbd108a274cee1e2c9783fb80b5ed147b231174ecf4c9af6b817bb04fa7f38",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/turing-test-ai-consciousness/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/turing-test-ai-consciousness/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/turing-test-ai-consciousness/",
+      "http_status": 200,
+      "expected_sha256": "343891b3279e4473837f3a112e48fa736817c46bb42917cffa05b23b83bbe7ad",
+      "actual_sha256": "343891b3279e4473837f3a112e48fa736817c46bb42917cffa05b23b83bbe7ad",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/umm-abbas-family-fear/index.html",
+      "url": "https://ahmedalhafiz.com/articles/umm-abbas-family-fear/",
+      "final_url": "https://ahmedalhafiz.com/articles/umm-abbas-family-fear/",
+      "http_status": 200,
+      "expected_sha256": "e46f59c2f90bb6d3beda0d178bd304c7c8dd62c6871ec7dee7ea6365b1a7feae",
+      "actual_sha256": "e46f59c2f90bb6d3beda0d178bd304c7c8dd62c6871ec7dee7ea6365b1a7feae",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/umm-abbas-family-fear/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/umm-abbas-family-fear/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/umm-abbas-family-fear/",
+      "http_status": 200,
+      "expected_sha256": "2c4050ff4cb41a42033cd9e8f47d21df0418592fac5e4f6460a314217f89736d",
+      "actual_sha256": "2c4050ff4cb41a42033cd9e8f47d21df0418592fac5e4f6460a314217f89736d",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/universe-expansion-wa-inna-lamusiun/index.html",
+      "url": "https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/",
+      "final_url": "https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/",
+      "http_status": 200,
+      "expected_sha256": "af64212e4ddaee1e2ef59d5655c8b53692c421d53ba32656078ca711320ac054",
+      "actual_sha256": "af64212e4ddaee1e2ef59d5655c8b53692c421d53ba32656078ca711320ac054",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/universe-expansion-wa-inna-lamusiun/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/universe-expansion-wa-inna-lamusiun/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/universe-expansion-wa-inna-lamusiun/",
+      "http_status": 200,
+      "expected_sha256": "8bb87c4de6a17555fae5f1c0d722c97547d22c681663d8ff293c3c4591c180d8",
+      "actual_sha256": "8bb87c4de6a17555fae5f1c0d722c97547d22c681663d8ff293c3c4591c180d8",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/unwanted-intrusive-thoughts-meaning/index.html",
+      "url": "https://ahmedalhafiz.com/articles/unwanted-intrusive-thoughts-meaning/",
+      "final_url": "https://ahmedalhafiz.com/articles/unwanted-intrusive-thoughts-meaning/",
+      "http_status": 200,
+      "expected_sha256": "2ac7d3a265d40637b299340e15030212e35971c593e2945584d99f8961dd785e",
+      "actual_sha256": "2ac7d3a265d40637b299340e15030212e35971c593e2945584d99f8961dd785e",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/unwanted-intrusive-thoughts-meaning/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/unwanted-intrusive-thoughts-meaning/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/unwanted-intrusive-thoughts-meaning/",
+      "http_status": 200,
+      "expected_sha256": "633faf387cda92adc06dedb9c008108abde2a3abf491de9c8a338e8fabb107a2",
+      "actual_sha256": "633faf387cda92adc06dedb9c008108abde2a3abf491de9c8a338e8fabb107a2",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/water-civilization-power/index.html",
+      "url": "https://ahmedalhafiz.com/articles/water-civilization-power/",
+      "final_url": "https://ahmedalhafiz.com/articles/water-civilization-power/",
+      "http_status": 200,
+      "expected_sha256": "dc369fd6c70e6316e8681add6892a6aea931ce3770e1fb8083c630383132843d",
+      "actual_sha256": "dc369fd6c70e6316e8681add6892a6aea931ce3770e1fb8083c630383132843d",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/water-civilization-power/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/water-civilization-power/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/water-civilization-power/",
+      "http_status": 200,
+      "expected_sha256": "2dc49912e2d277c5b6fc92c2fd0148497f4625fc4c6f9450684586912dad535d",
+      "actual_sha256": "2dc49912e2d277c5b6fc92c2fd0148497f4625fc4c6f9450684586912dad535d",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/water-life-molecular-properties/index.html",
+      "url": "https://ahmedalhafiz.com/articles/water-life-molecular-properties/",
+      "final_url": "https://ahmedalhafiz.com/articles/water-life-molecular-properties/",
+      "http_status": 200,
+      "expected_sha256": "b447fb909926eec009c071f0c849a12327ae9e2b3e1b59bee6d2288dcf940a2c",
+      "actual_sha256": "b447fb909926eec009c071f0c849a12327ae9e2b3e1b59bee6d2288dcf940a2c",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/water-life-molecular-properties/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/water-life-molecular-properties/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/water-life-molecular-properties/",
+      "http_status": 200,
+      "expected_sha256": "449d7e0c290177c8a5f564d6fbec2d511ff2064bd3751232cd1eef3346b086e4",
+      "actual_sha256": "449d7e0c290177c8a5f564d6fbec2d511ff2064bd3751232cd1eef3346b086e4",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "articles/writing-changed-human-history/index.html",
+      "url": "https://ahmedalhafiz.com/articles/writing-changed-human-history/",
+      "final_url": "https://ahmedalhafiz.com/articles/writing-changed-human-history/",
+      "http_status": 200,
+      "expected_sha256": "637e867133220b9664f0249cb0b9ef28a1adb681ef8eabff8d97cc4db944cd01",
+      "actual_sha256": "637e867133220b9664f0249cb0b9ef28a1adb681ef8eabff8d97cc4db944cd01",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/writing-changed-human-history/index.html",
+      "url": "https://ahmedalhafiz.com/en/articles/writing-changed-human-history/",
+      "final_url": "https://ahmedalhafiz.com/en/articles/writing-changed-human-history/",
+      "http_status": 200,
+      "expected_sha256": "49db593ec103acb09505ede0de86a58ab6e57c9418fd32fd4c847621034177c6",
+      "actual_sha256": "49db593ec103acb09505ede0de86a58ab6e57c9418fd32fd4c847621034177c6",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/feed.json",
+      "url": "https://ahmedalhafiz.com/en/articles/feed.json",
+      "final_url": "https://ahmedalhafiz.com/en/articles/feed.json",
+      "http_status": 200,
+      "expected_sha256": "7eafe4a56139e63220ca71f7f98d5f23d81abba25734ebe95571bbae90cdb13c",
+      "actual_sha256": "7eafe4a56139e63220ca71f7f98d5f23d81abba25734ebe95571bbae90cdb13c",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "en/articles/feed.xml",
+      "url": "https://ahmedalhafiz.com/en/articles/feed.xml",
+      "final_url": "https://ahmedalhafiz.com/en/articles/feed.xml",
+      "http_status": 200,
+      "expected_sha256": "cfc0f8fe25f453f0765faf7149f50a93f2db25d4fdc9933d1eb8e0bfe39582b2",
+      "actual_sha256": "cfc0f8fe25f453f0765faf7149f50a93f2db25d4fdc9933d1eb8e0bfe39582b2",
+      "exact_main_bytes": true
+    },
+    {
+      "path": "sitemap.xml",
+      "url": "https://ahmedalhafiz.com/sitemap.xml",
+      "final_url": "https://ahmedalhafiz.com/sitemap.xml",
+      "http_status": 200,
+      "expected_sha256": "4b2a7819c0a4b21e5da122a36b1269a24e5038cb7f29b6758b15f7fd3311ea30",
+      "actual_sha256": "4b2a7819c0a4b21e5da122a36b1269a24e5038cb7f29b6758b15f7fd3311ea30",
+      "exact_main_bytes": true
+    }
+  ]
+}
