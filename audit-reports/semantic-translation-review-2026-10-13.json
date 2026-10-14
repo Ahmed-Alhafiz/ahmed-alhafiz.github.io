@@ -207,9 +207,10 @@
       ],
       "repair_plan": "Three small clause restorations; no retranslation needed.",
       "ar_current_file_sha256": "a15c6050b3c081246bbd05d6d823727d526a7b13b380dfd3d05cb0cba0941069",
-      "en_current_file_sha256": "1012a7ed07aee3d4fae30bb8b2e6d61434b93f49dd744570d3b3c88435c2d3c5",
+      "en_current_file_sha256": "3ec88c0d8db44085509e67ed6e318728b74143c69a43949caa1a279df1a11385",
       "repair": "Restored only the recorded sentence-level meaning differences, preserving natural English, source order and all Arabic bytes.",
-      "validation": "Prior full bilingual reading retained; all four changed passages reread with Arabic. Counts, citations, sources and manuscript page numbers unchanged. CI and actual screenshot review pending."
+      "validation": "Prior full bilingual reading retained; all four changed passages reread with Arabic. Counts, citations, sources and manuscript page numbers unchanged. CI and actual screenshot review pending.",
+      "visual_correction": "Manual desktop screenshot showed header and prose incorrectly occupying two grid columns in the legacy article-shell. Reused existing prose class on the outer article to restore normal document flow; no CSS/JS change. New-head CI/screens pending."
     },
     "how-concepts-form-adam-names-scientific-models": {
       "status": "faithful",
