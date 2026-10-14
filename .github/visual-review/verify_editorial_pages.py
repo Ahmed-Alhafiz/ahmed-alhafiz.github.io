@@ -26,6 +26,8 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("ratq-book-path-en", "/en/articles/ratq-fatq-big-bang/", ".related-work"),
+    ("teaching-book-path-en", "/en/articles/teaching-names-ai-understanding/", ".related-work"),
     ("expansion-certainty-en", "/en/articles/universe-expansion-wa-inna-lamusiun/", "#certainty + .table-scroll"),
     ("ratq-table-en", "/en/articles/ratq-fatq-big-bang/", ".table-scroll"),
     ("teaching-claims-en", "/en/articles/teaching-names-ai-understanding/", "#claims + .table-scroll"),

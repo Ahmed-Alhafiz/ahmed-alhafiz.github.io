@@ -501,8 +501,8 @@
       ],
       "repair_plan": "Replace with full faithful English translation of currentArabicbody; retain valid page technical metadata and original sources.",
       "ar_current_file_sha256": "f2366ececdd8cc87ec546c57658855327181c02adb0ff17e17db3e15bbe00235",
-      "en_current_file_sha256": "279f7bda4a35d3b7dda132a84d396fe0101fc9f4793aa34935788b6d899862e2",
-      "validation": "Current Arabic82blocks fully read and translated. All24 external URL appearances/9 reference groups/original3-column table retained; added claim map/evidence ledger and unrelated source list removed. Full verse, IbnAshur grammar/seeing, Earth4.5 billion years, CMB380 thousand years, four objections/theological reply, book19–25/34/26–35, news-reading limits and four originalFAQs/footer version2.0 Sep29 restored. Original publication Sep1 matches actual Arabic Article; no numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending."
+      "en_current_file_sha256": "34a6a530b1497a09553389b9ac5b63a52dee910261f4b1aaabeeaa5cbcea046a",
+      "validation": "Current Arabic82blocks fully read and translated. All24 external URL appearances/9 reference groups/original3-column table retained; added claim map/evidence ledger and unrelated source list removed. Full verse, IbnAshur grammar/seeing, Earth4.5 billion years, CMB380 thousand years, four objections/theological reply, book19–25/34/26–35, news-reading limits and four originalFAQs/footer version2.0 Sep29 restored. Original publication Sep1 matches actual Arabic Article; no numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending. Initial Site CI exposed missing related-work semantic class after restoration; original book-link wrapper now retains related-work alongside notice-box, without deleting or weakening the test. English cover alt also translated."
     },
     "religious-ocd-scrupulosity": {
       "status": "faithful",
@@ -593,8 +593,8 @@
       ],
       "repair_plan": "Restore fullfaithful translationofthecurrentArabicbody and exact originalsource/citationsequence; eliminate addedsectionsandclaims.",
       "ar_current_file_sha256": "1fbf5b5e4d3cf668738dcea206d65b84bebfc9df143d94ca3378a74a5265d52c",
-      "en_current_file_sha256": "74a433888ed2a3b3c6d87161130de625317a9aec0840848ec72f0bc7e9abf002",
-      "validation": "Current Arabic221 mapped blocks plus original summary strong/span notices, religious boundary, citation code and four buttons fully read/translated. All26 external URLs/reference groups original order, three original tables (glossary/six-layer matrix/eight-row claim appendix), original ten-test protocol and limitations preserved. Original Q2:30–33/book37–43/Othello64/OrderedCommonGen36/probe controls/causal limits restored; added probes and extra studies removed. Existing AR Bib/RIS/CFF/claims auxiliary paths retained with English labels. No numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending."
+      "en_current_file_sha256": "89b79db9d4c5fbbc9d5a4c00454edfc7b6b614111d4b692f041d79fbe0b8ee6f",
+      "validation": "Current Arabic221 mapped blocks plus original summary strong/span notices, religious boundary, citation code and four buttons fully read/translated. All26 external URLs/reference groups original order, three original tables (glossary/six-layer matrix/eight-row claim appendix), original ten-test protocol and limitations preserved. Original Q2:30–33/book37–43/Othello64/OrderedCommonGen36/probe controls/causal limits restored; added probes and extra studies removed. Existing AR Bib/RIS/CFF/claims auxiliary paths retained with English labels. No numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending. Initial Site CI exposed missing related-work semantic class after restoration; original book-link wrapper now retains related-work alongside notice-box, without deleting or weakening the test. English cover alt also translated."
     },
     "turing-test-ai-consciousness": {
       "status": "faithful",
