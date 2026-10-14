@@ -281,7 +281,19 @@ def verify_reading_controls(driver: webdriver.Chrome, width: int, height: int, m
             summary.send_keys(Keys.SPACE)
             WebDriverWait(driver, 5).until(lambda _: details.get_property("open"))
         links = details.find_elements(By.CSS_SELECTOR, "a[href^='#']")
-        assert len(links) >= 3 and all(link.is_displayed() for link in links), f"{mode}/{lang}: contents lost"
+        assert len(links) >= 3, f"{mode}/{lang}: contents lost"
+        # A long mobile contents list has its own scroll area. Verify every
+        # entry after scrolling it into view, rather than demanding that all
+        # entries fit in the same viewport at once.
+        for item in links:
+            assert item.get_attribute("textContent").strip(), f"{mode}/{lang}: empty contents link"
+            visible = driver.execute_script(
+                "arguments[0].scrollIntoView({block:'nearest',inline:'nearest',behavior:'auto'});"
+                "const r=arguments[0].getBoundingClientRect();"
+                "const list=arguments[0].closest('ol,ul,.reading-contents-links').getBoundingClientRect();"
+                "return r.width>0 && r.height>0 && r.bottom>Math.max(0,list.top) && r.top<Math.min(innerHeight,list.bottom);", item)
+            assert visible, f"{mode}/{lang}: contents link cannot be reached: {item.get_attribute('href')}"
+        driver.execute_script("arguments[0].scrollIntoView({block:'nearest',behavior:'auto'});", links[0])
         screenshot(driver, ROOT / mode / f"reading-{lang}-contents.png", width, height)
         link = links[2]
         target_id = link.get_attribute("href").split("#", 1)[1]
