@@ -26,6 +26,10 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("hegra-diagram-en", "/en/articles/madain-salih-thamud-nabataean-tombs/", "figure"),
+    ("water-civilization-power-en", "/en/articles/water-civilization-power/", ".references"),
+    ("nile-ancient-egypt-flood-calendar-state-en", "/en/articles/nile-ancient-egypt-flood-calendar-state/", ".references"),
+    ("madain-salih-thamud-nabataean-tombs-en", "/en/articles/madain-salih-thamud-nabataean-tombs/", ".references"),
     ("injustice-fall-of-states-quran-history-en", "/en/articles/injustice-fall-of-states-quran-history/", ".references"),
     ("iron-fire-light-matter-energy-en", "/en/articles/iron-fire-light-matter-energy/", ".references"),
     ("marib-dam-sayl-al-arim-en", "/en/articles/marib-dam-sayl-al-arim/", ".references"),
