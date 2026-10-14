@@ -14,10 +14,10 @@
 .author-home .hero-copy{grid-column:1;grid-row:1;min-width:0}
 .author-home .eyebrow{font:inherit;font-size:15px;letter-spacing:0;text-transform:none;color:var(--copper);margin:0 0 16px}
 .author-home .home-hero h1{display:flex;flex-direction:column;gap:10px;color:var(--ink);font-size:clamp(40px,5vw,64px);line-height:1.25;margin:0;letter-spacing:0}
-.author-home .home-hero h1 [lang=en]{font:400 .43em/1.3 Georgia,"Times New Roman",serif;color:var(--muted);letter-spacing:.01em}
+.author-home .home-hero h1 [lang=en]{font:400 .43em/1.3 Georgia,"Times New Roman",serif;color:var(--muted);letter-spacing:.01em;text-align:right}
 .author-home .identity-separator{display:none}
-html[dir=ltr] .author-home .home-hero h1 [lang=en]{order:0;font:400 1em/1.12 Georgia,"Times New Roman",serif;color:var(--ink);letter-spacing:-.025em}
-html[dir=ltr] .author-home .home-hero h1 [lang=ar]{order:1;font-size:.43em;color:var(--muted);line-height:1.5}
+html[dir=ltr] .author-home .home-hero h1 [lang=en]{order:0;font:400 1em/1.12 Georgia,"Times New Roman",serif;color:var(--ink);letter-spacing:-.025em;text-align:left}
+html[dir=ltr] .author-home .home-hero h1 [lang=ar]{order:1;font-size:.43em;color:var(--muted);line-height:1.5;text-align:left}
 .author-home .hero-portrait{grid-column:2;grid-row:1/3;justify-self:end;align-self:center;width:240px;aspect-ratio:4/5;margin:0;border:0;overflow:hidden;border-radius:5px}
 .author-home .hero-portrait img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;border:0;border-radius:0;box-shadow:none}
 .author-home .hero-introduction{grid-column:1;grid-row:2;min-width:0}
@@ -68,6 +68,7 @@ html[dir=ltr] .author-home .selected-reading-list h3{font-family:Georgia,"Times 
 .author-home .footer-meta{color:#b7c4bb}
 .author-home .social-icons.compact .social-icon{width:44px;height:44px}
 .author-home :focus-visible{outline:3px solid #86503b;outline-offset:4px}
+.author-home .site-footer :focus-visible{outline-color:#f4be9a}
 .author-home #analytics-consent.analytics-consent{border-radius:8px;max-width:900px;gap:18px;padding:14px 18px}
 .author-home #analytics-consent .analytics-consent__copy p{font-size:13px;line-height:1.65}
 .author-home #analytics-consent :is(button,a){border-radius:6px;min-height:44px;line-height:1.3}
@@ -80,8 +81,8 @@ html[dir=ltr] .author-home .selected-reading-list h3{font-family:Georgia,"Times 
 @media(max-width:640px){
   .author-home .wrap{width:calc(100% - 36px)}
   .author-home .header-inner{gap:8px 10px}
-  .author-home .nav{font-size:13px;gap:18px;border-color:#ddd8cc}
-  .author-home .nav a{min-height:44px;display:flex;align-items:center}
+  .author-home .nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;overflow:visible;justify-content:stretch;border-color:#ddd8cc}
+  .author-home .nav a{min-width:0;min-height:44px;display:grid;place-items:center;padding:7px 2px;font-size:13px;text-align:center}
   .author-home .brand{gap:9px}
   .author-home .brand-copy strong{font-size:14px}
   .author-home .brand-copy span{font-size:11px}

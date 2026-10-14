@@ -340,6 +340,9 @@ def verify_author_home(driver, width, height, mode, route):
     driver.execute_script("arguments[0].scrollIntoView({block:'start',behavior:'auto'});", reading)
     assert_page_geometry(driver, width, f'{mode}/author-home-{language}-reading')
     screenshot(driver, ROOT / mode / f'author-home-{language}-reading.png', width, height)
+    footer = driver.find_element(By.ID, 'site-footer')
+    driver.execute_script("arguments[0].scrollIntoView({block:'end',behavior:'auto'});", footer)
+    screenshot(driver, ROOT / mode / f'author-home-{language}-footer.png', width, height)
 
 
 def main() -> None:

@@ -34,16 +34,24 @@
   "homepage_bytes": {
     "index.html": {
       "before": 55662,
-      "after": 16530
+      "after": 16506
     },
     "en/index.html": {
       "before": 37179,
-      "after": 14981
+      "after": 14934
     }
   },
   "stylesheet_requests": {
     "before": 5,
     "after": 2
   },
-  "release_status": "Source checkpoint before required CI, visual review, merge, Pages and live verification. The PR for design/human-home-2026-10-14 contains the final release evidence."
+  "release_status": "Source checkpoint before required CI, visual review, merge, Pages and live verification. The PR for design/human-home-2026-10-14 contains the final release evidence.",
+  "first_visual_run": {
+    "id": 38618832374,
+    "head": "905602228334f69c8176ad6d92e0e54202987eb0",
+    "passed": "450 general screenshots and cover audit",
+    "failure": "Arabic mobile navigation was flex instead of the required hardened grid after removing unused stylesheets; restored grid in scoped homepage CSS.",
+    "human_review": "Ten actual first-pass images reviewed: AR/EN narrow top, desktop top, narrow books, selected reading and mobile footer; corrected bilingual-name alignment and simplified remaining introductory/footer wording.",
+    "next": "Require final exact-head visual pass and review fresh affected screenshots before merge."
+  }
 }
