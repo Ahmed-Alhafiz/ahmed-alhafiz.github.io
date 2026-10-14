@@ -1,7 +1,7 @@
 {
   "scope": "All 50 Arabic/English article pairs; semantic comparison, not mechanical count equality.",
   "started": "2026-10-13",
-  "base_sha": "2aa88a445782384ef3646202c50116a709b398e5",
+  "base_sha": "39b83efcbeebb5545971428a0142d0fd07a5881a",
   "rules": "Accept natural translation, paragraph regrouping and equivalent wording; repair omitted/added sentences, changed meanings, caveats, numbers or references. Never infer semantic fidelity from counters. No hourly automation; user cancelled it.",
   "reviewed_count": 50,
   "total": 50,
@@ -137,7 +137,7 @@
       "publication": "PR220 merged5e6977d; six CI gates and fresh Ready policy38540402017 successful. Actual1440/390/360 images reviewed at2d3a570 and remain valid: page and allCSS/JS byte-identical in42fd79ec. Pages38540542150 and allpostmerge successful; liveAR/EN,FeedJSON/Atom/Sitemap exactlymatchorigin/main."
     },
     "dna-code-genetic-information": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full AR/EN read; all biology mechanisms, table and sources reviewed.",
       "material_issues": [
         "Added 61 amino-acid codons/3 stops sentence not in original.",
@@ -149,7 +149,8 @@
       "ar_current_file_sha256": "1f4c9a71c4e5933d501546a658ee419016466b0ce1264f42aad1a1f033e811dc",
       "en_current_file_sha256": "8196c650a3df08f928f695ba86c197bfbdad48a82a455e340245117b3cc0c30b",
       "repair": "Removed added61/3codon claim and extra source; restored DNA dependency, original quotation, full evidence disclosure and four original reading-path links.",
-      "validation": "Complete source reading retained; restored method English read in full and all DNA altered passages compared with Arabic. Original exact external source order preserved. Arabic byte-identical. Reconciled with published Light and Water; final CI/manual images/publication pending. Fourteen external-source URLs exact/order preserved; extra truthful review notice explains one additionalH2/p rather than omitted source content."
+      "validation": "Complete source reading retained; restored method English read in full and all DNA altered passages compared with Arabic. Original exact external source order preserved. Arabic byte-identical. Reconciled with published Light and Water; final CI/manual images/publication pending. Fourteen external-source URLs exact/order preserved; extra truthful review notice explains one additionalH2/p rather than omitted source content.",
+      "publication": "PR222 merged39b83efcbeebb5545971428a0142d0fd07a5881a after all six gates, actual18 images reviewed on identical page/assets inputs, fresh Ready policy38543733838 and Pages38544224055 successful. Both AR/EN pages, English feeds and sitemap HTTP200 byte-identical to main."
     },
     "fall-of-baghdad-1258-ibn-al-alqami": {
       "status": "repaired_published",
@@ -259,7 +260,7 @@
       "en_current_file_sha256": "12f15ba183e29bed19ff04a0c22024f691769f275c297978908f0614597541c4"
     },
     "injustice-fall-of-states-quran-history": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Full AR70/EN72blocks and residuals read; five mechanisms, definitions/collapse limits, all14sources/table intact.",
       "material_issues": [
         "Full quoted Hud116–117,Hadid25,Rad11 replaced with paraphrases; restore quotations.",
@@ -268,10 +269,12 @@
       ],
       "repair_plan": "Targeted quotation/list/footer corrections; maintain natural prose and no need wholesale rewrite.",
       "ar_current_file_sha256": "631ee93d608919f63c5ae679eb11499c2db5f82f7f2917eaa7ae6dae9873a7ff",
-      "en_current_file_sha256": "43d7abcf2cdab04cd69463604a6e82ea35df08f8917920ee2e21cab5f099b449"
+      "en_current_file_sha256": "3ec56a7780baf9f0791af7b5d17e0f8a923c2be775a7ebe23283657a75eec0d8",
+      "repair": "Targeted restoration of original quotations, omitted qualifications, exact source descriptions and original evidence/book disclosures. Preserved natural faithful prose and original numerical claims. Header uses existing wrap; original publication date restored. Original four-link reading sequence restored; existing truthful review notice explains additionalH2/p.",
+      "validation": "Full earlier bilingual reading reused for unchanged content; all altered passages, all reference descriptions and footer read against Arabic. External URLs exact original order14/11/15. Arabic unchanged. Local site/discovery/citation/research/UX/hygiene gates pass. CI/manual responsive images/publication pending."
     },
     "iron-fire-light-matter-energy": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Full68blocks both editions and residual labels read; scientific mechanisms98%,30000C,15millionC and evidence/responsibility table faithful.",
       "material_issues": [
         "Original quoted Hadid25,Zumar6,Waqiah71–73,Yasin80,Naba13 replaced with summaries; restore exact scope of quotations.",
@@ -280,7 +283,9 @@
       ],
       "repair_plan": "Targeted quotations/references/footer corrections.",
       "ar_current_file_sha256": "b3406c1665e3a5616508834f2fe02d19b46723b3c8b87a349010a2adba47cea7",
-      "en_current_file_sha256": "4cd398a2a441d99126b23848af0d4be112eb427f2eaf33e67e0dbe910a830bf8"
+      "en_current_file_sha256": "ba7105f407d594b8f13f6c0c57076a8a8a962236b406623f1bc8d295a798bdb7",
+      "repair": "Targeted restoration of original quotations, omitted qualifications, exact source descriptions and original evidence/book disclosures. Preserved natural faithful prose and original numerical claims. Header uses existing wrap; original publication date restored.",
+      "validation": "Full earlier bilingual reading reused for unchanged content; all altered passages, all reference descriptions and footer read against Arabic. External URLs exact original order14/11/15. Arabic unchanged. Local site/discovery/citation/research/UX/hygiene gates pass. CI/manual responsive images/publication pending. Parity reports six numerical-format flags:30 thousand vs30,000 and surah-name:verse vs chapter-number:verse in five sources; verified equivalent. All structural counts match; no semantic difference inferred from formatting."
     },
     "jinn-demons-quran-bible-torah": {
       "status": "material_differences_pending_repair",
@@ -339,7 +344,7 @@
       "en_current_file_sha256": "63198207bb237a264e927ec098cd8dd2f389991fd2f08893be692abd4b937092"
     },
     "marib-dam-sayl-al-arim": {
-      "status": "limited_meaning_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Full80AR/81ENblocks incl dates2005–06/456/548 and all12sources/evidence table read.",
       "material_issues": [
         "Quran34:15–16 full quote replaced by paraphrase.",
@@ -350,7 +355,9 @@
       ],
       "repair_plan": "Targeted quotation, source/title, qualifier and tablecell restoration.",
       "ar_current_file_sha256": "8a9197648b410e1fa037a05d7823c77bf4e82a8b1c33077ca6ccd2e1873e89a0",
-      "en_current_file_sha256": "5215516effc5c0fedf733252b41b8e028b61afb88a965cac49814f91ec311361"
+      "en_current_file_sha256": "29b1421073bfcc4b343541ed88771ea8968f6f68d2bc08561ff9632017d65415",
+      "repair": "Targeted restoration of original quotations, omitted qualifications, exact source descriptions and original evidence/book disclosures. Preserved natural faithful prose and original numerical claims. Header uses existing wrap; original publication date restored. Existing summary of already-stated source limits remains equivalent; English reading-path destination and label synchronized.",
+      "validation": "Full earlier bilingual reading reused for unchanged content; all altered passages, all reference descriptions and footer read against Arabic. External URLs exact original order14/11/15. Arabic unchanged. Local site/discovery/citation/research/UX/hygiene gates pass. CI/manual responsive images/publication pending."
     },
     "memory-gaps-unremembered-actions": {
       "status": "repaired_published",
@@ -436,7 +443,7 @@
       "en_current_file_sha256": "1cb97217fbb9dc8ee8310adf9f5c50ec1a8bba05a7ea1eba8744ca75fb97b487"
     },
     "quran-science-method-evidence": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Complete126AR/85ENblocks, sources9URLs vs additions and footer read.",
       "material_issues": [
         "FullQuran29:20 and intentionhadith quote replaced by summaries.",
@@ -452,7 +459,8 @@
       "ar_current_file_sha256": "c3c5c8930e5ff534ccf000b0e3cc63f8b99d4875a68ace64858c3f5d86d519be",
       "en_current_file_sha256": "ee6fdf48f983953537b69afe6f944455098d1bf7fee54e6ada819e8604f44530",
       "repair": "Restored complete original method body including the five layers, evidence table, eight explained questions, full verse/hadith, original references and book/footer; removed added FAQ.",
-      "validation": "Complete source reading retained; restored method English read in full and all DNA altered passages compared with Arabic. Original exact external source order preserved. Arabic byte-identical. Reconciled with published Light and Water; final CI/manual images/publication pending. Standalone parity audit passed without flags: all counts, block tags, every numeric sequence, exact9external URLs and positions match;10referencegroups;Arabicbodyunchanged."
+      "validation": "Complete source reading retained; restored method English read in full and all DNA altered passages compared with Arabic. Original exact external source order preserved. Arabic byte-identical. Reconciled with published Light and Water; final CI/manual images/publication pending. Standalone parity audit passed without flags: all counts, block tags, every numeric sequence, exact9external URLs and positions match;10referencegroups;Arabicbodyunchanged.",
+      "publication": "PR222 merged39b83efcbeebb5545971428a0142d0fd07a5881a after all six gates, actual18 images reviewed on identical page/assets inputs, fresh Ready policy38543733838 and Pages38544224055 successful. Both AR/EN pages, English feeds and sitemap HTTP200 byte-identical to main."
     },
     "ratq-fatq-big-bang": {
       "status": "material_differences_pending_repair",
@@ -651,7 +659,7 @@
       "en_current_file_sha256": "47b03f2805fe09e84a071d5da5dec4c2c6386a8c3e1b0318592b03b69264904d"
     }
   },
-  "last_checkpoint": "50/50 readings complete;18 meaning repairs published and live verified;method andDNA repaired awaiting final gates/images/publication;16 total repairs remain including this pair. No hourly automation.",
+  "last_checkpoint": "50/50 readings complete;20 meaning repairs published/live verified;three targeted justice/matter/Marib repairs awaiting CI/images/publication;14 total remain including this batch. No hourly automation.",
   "reading_complete": true,
   "remaining_reading": [],
   "note": "All50pairedtexts read in full; repairs remain pending and the entire task is not complete. Natural equivalent wording is accepted. Publishing one small batch at a time."

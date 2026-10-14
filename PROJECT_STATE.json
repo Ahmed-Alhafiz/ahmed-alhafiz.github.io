@@ -552,18 +552,19 @@
     "reviewed_pairs": 50,
     "total_pairs": 50,
     "faithful_without_repair": 16,
-    "repairs_live_verified": 18,
-    "repairs_remaining": 16,
-    "current_branch": "fix/en-method-dna-meaning-2026-10-14",
+    "repairs_live_verified": 20,
+    "repairs_remaining": 14,
+    "current_branch": "fix/en-justice-matter-marib-2026-10-14",
     "current_articles": [
-      "quran-science-method-evidence",
-      "dna-code-genetic-information"
+      "injustice-fall-of-states-quran-history",
+      "iron-fire-light-matter-energy",
+      "marib-dam-sayl-al-arim"
     ],
-    "verified_main": "2aa88a445782384ef3646202c50116a709b398e5",
-    "latest_live_pages_run": 38542145898,
+    "verified_main": "39b83efcbeebb5545971428a0142d0fd07a5881a",
+    "latest_live_pages_run": 38544224055,
     "hourly_automation": "cancelled_by_user; do not reactivate",
     "blocker": "none; current-head CI and manual visual review still pending",
-    "next": "Complete method+DNA gates/images/Ready policy/merge/Pages/live; then targeted injustice+matter+Marib batch from saved checkpoint.",
+    "next": "Finish justice/matter/Marib CI/images/Ready/merge/Pages/live; then six-days and remaining ten repairs.",
     "limits": "Full reading complete; repairs not complete. No independent specialist review, indexing, ranking or traffic claimed.",
     "prepared_checkpoint": "8ccd6704ea0d516f2c01e9f9c9829c7341b52a0b"
   }
