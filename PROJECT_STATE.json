@@ -544,5 +544,27 @@
     "external_specialist_review": "not_completed",
     "keyword_volume": "not_measured",
     "remaining_original_article_topics": 2
+  },
+  "semantic_translation_review": {
+    "updated": "2026-10-14",
+    "status": "in_progress",
+    "reading_complete": true,
+    "reviewed_pairs": 50,
+    "total_pairs": 50,
+    "faithful_without_repair": 16,
+    "repairs_live_verified": 13,
+    "repairs_remaining": 21,
+    "current_branch": "fix/en-history-meaning-2026-10-14",
+    "current_articles": [
+      "fall-of-baghdad-1258-ibn-al-alqami",
+      "juhayman-grand-mosque-1979",
+      "green-tree-fire-photosynthesis"
+    ],
+    "verified_main": "76d63148868d8c1a7eebac928ee4b768b9fce873",
+    "latest_live_pages_run": 38511819635,
+    "hourly_automation": "cancelled_by_user; do not reactivate",
+    "blocker": "Execution transport closed again; cloud GitHub writes available. Current-head screenshots remain mandatory before merge.",
+    "next": "Complete current-head CI/manual screenshots, then restore quran-science-method-evidence in a small independent batch.",
+    "limits": "Full reading complete; repairs not complete. No independent specialist review, indexing, ranking or traffic claimed."
   }
 }
