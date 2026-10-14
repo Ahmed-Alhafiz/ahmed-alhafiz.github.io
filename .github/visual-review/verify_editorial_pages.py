@@ -75,6 +75,7 @@ PAGES = (
     ("concepts-models-ar", "/articles/how-concepts-form-adam-names-scientific-models/", ".references"),
     ("concepts-models-en", "/en/articles/how-concepts-form-adam-names-scientific-models/", ".references"),
     ("light-nur-ar", "/articles/difference-light-nur-quran-sun-moon/", ".references"),
+    ("light-nur-en", "/en/articles/difference-light-nur-quran-sun-moon/", ".references"),
     ("ai-soul-taklif-ar", "/articles/ai-soul-consciousness-understanding-taklif/", ".references"),
     ("ai-soul-taklif-en", "/en/articles/ai-soul-consciousness-understanding-taklif/", ".references"),
     ("khufu-merer-ar", "/articles/how-khufu-pyramid-built-merer-diary/", ".references"),

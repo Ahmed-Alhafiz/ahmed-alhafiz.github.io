@@ -117,7 +117,7 @@
       "publication": "PR212 merged c678729; allsixPRchecks/freshReadypolicy success; actual1440/390/360screensmanuallyreviewed; Pages andpostmerge Site/Citation/Content/Visibility/IndexNow successful."
     },
     "difference-light-nur-quran-sun-moon": {
-      "status": "material_differences_pending_repair",
+      "status": "repaired_pending_ci_visual_publication",
       "reading": "Both complete texts incl original eight source groups and all residual labels read.",
       "material_issues": [
         "Numerous full Quran quotations replaced by short summaries; Yasin39 and multiple context clauses omitted.",
@@ -131,7 +131,9 @@
       ],
       "repair_plan": "Restore complete AR-equivalent body, original source sequence/links and quotations; remove added table.",
       "ar_current_file_sha256": "8f2abca29d639f2c6aa9c68aee74d64a5432e5be55d8d5e17fa5f5e3d17c85f0",
-      "en_current_file_sha256": "038b4c1ee84039bff8104cf0375dac9e09c92db88ca129fa0a49ad629d1b0292"
+      "en_current_file_sha256": "fd53094f808235f2a8cc580f694ba006a630bb199783e72c26c8bf2253400cf5",
+      "repair": "Restored all69 source blocks, all Quran quotations, interpretation diversity, spectroscopy, solar-cell mechanism/losses, ethical applications,7FAQ, original8 source groups/exact URL order, both closing paragraphs and original reading path. Removed original-absent comparison table. TOC/FAQ JSON-LD rebuilt from restored content; header uses existing wrap. Arabic untouched.",
+      "validation": "Both currentArabic and resultingEnglish bodies read in full, including all69 translated blocks,7FAQ and8sourcegroups. Parity has zero flags:41p/13H2/7H3/8li/no tables and40externalURLs exact order; numeric sequences match and ARbody unchanged. Site/Discovery/Citation/ContentResearch/UX/PublicHygiene pass; no new integrity error. CI/manual screenshots/publication pending."
     },
     "dna-code-genetic-information": {
       "status": "limited_meaning_differences_pending_repair",
@@ -629,7 +631,7 @@
       "en_current_file_sha256": "47b03f2805fe09e84a071d5da5dec4c2c6386a8c3e1b0318592b03b69264904d"
     }
   },
-  "last_checkpoint": "50/50 full bilingual readings retained; 11 meaning repairs merged, two literary repairs prepared. Remaining repairs pending; hourly automation remains cancelled.",
+  "last_checkpoint": "All50/50 read;13 published repairs recorded;PR218 owns three additional repairs pending publication;thisbranch restoreslight-nur, CI/manualscreens pending. Remainingtask notcomplete. Hourly automation cancelled.",
   "reading_complete": true,
   "remaining_reading": [],
   "note": "All50pairedtexts read in full; repairs remain pending and the entire task is not complete. Natural equivalent wording is accepted. Publishing one small batch at a time."
