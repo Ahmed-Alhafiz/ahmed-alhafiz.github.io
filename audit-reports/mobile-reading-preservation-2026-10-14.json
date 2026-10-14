@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-14",
+  "base_sha": "1c96274e4b61f0e84b51e89ee752f18881522c1a",
+  "scope": "Mobile reading presentation only",
+  "html_pages_verified": 142,
+  "comparison": "Entire original HTML is byte-identical after removing only the added deferred presentation script and stylesheet cache query. Text, sources, headings, images, authored links, dates, canonical/hreflang and JSON-LD stay intact.",
+  "original_aggregate_sha256": "cf87c2e463e3cc673bc85586d55d7c74d8244b83b4f1118f914a24bfdeb88fb6",
+  "restored_aggregate_sha256": "cf87c2e463e3cc673bc85586d55d7c74d8244b83b4f1118f914a24bfdeb88fb6",
+  "blocking_local_errors": 0,
+  "preexisting_site_warnings": 4,
+  "visual_status": "Final verification pending after preserving approved cover fit and supporting direct-link contents.",
+  "added_script_bytes": 4893,
+  "dependencies_added": 0,
+  "runtime_network_storage_analytics_added": false,
+  "initial_visual_run": 38595285646,
+  "initial_geometry_screenshots_passed": 447
+}

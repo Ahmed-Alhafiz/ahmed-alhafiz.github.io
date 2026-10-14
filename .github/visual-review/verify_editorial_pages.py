@@ -260,6 +260,58 @@ def verify_library(driver: webdriver.Chrome, route: str, name: str, width: int) 
     wait_ready(driver)
 
 
+def verify_reading_controls(driver: webdriver.Chrome, width: int, height: int, mode: str) -> None:
+    """Check the two article layouts, native disclosure, anchors and progress."""
+    from selenium.webdriver.common.keys import Keys
+    routes = (
+        ("ar", "/articles/difference-light-nur-quran-sun-moon/"),
+        ("en", "/en/articles/water-civilization-power/"),
+        ("de", "/de/articles/possession-or-neurological-psychological-disorder/"),
+    )
+    for lang, route in routes:
+        driver.get(f"{BASE}{route}?reading_controls_gate=1")
+        wait_ready(driver)
+        for reject in driver.find_elements(By.CSS_SELECTOR, "#analytics-consent button[data-consent='denied']"):
+            reject.click()
+        details = driver.find_element(By.CSS_SELECTOR, ".reading-contents")
+        summary = details.find_element(By.TAG_NAME, "summary")
+        assert bool(details.get_property("open")) == (width > 1000), f"{mode}/{lang}: wrong initial TOC state"
+        if width <= 1000:
+            assert rect(driver, summary)["height"] >= 44
+            summary.send_keys(Keys.SPACE)
+            WebDriverWait(driver, 5).until(lambda _: details.get_property("open"))
+        links = details.find_elements(By.CSS_SELECTOR, "a[href^='#']")
+        assert len(links) >= 3, f"{mode}/{lang}: contents lost"
+        # A long mobile contents list has its own scroll area. Verify every
+        # entry after scrolling it into view, rather than demanding that all
+        # entries fit in the same viewport at once.
+        for item in links:
+            assert item.get_attribute("textContent").strip(), f"{mode}/{lang}: empty contents link"
+            visible = driver.execute_script(
+                "arguments[0].scrollIntoView({block:'nearest',inline:'nearest',behavior:'auto'});"
+                "const r=arguments[0].getBoundingClientRect();"
+                "const list=arguments[0].closest('ol,ul,.reading-contents-links').getBoundingClientRect();"
+                "return r.width>0 && r.height>0 && r.bottom>Math.max(0,list.top) && r.top<Math.min(innerHeight,list.bottom);", item)
+            assert visible, f"{mode}/{lang}: contents link cannot be reached: {item.get_attribute('href')}"
+        driver.execute_script("arguments[0].scrollIntoView({block:'nearest',behavior:'auto'});", links[0])
+        screenshot(driver, ROOT / mode / f"reading-{lang}-contents.png", width, height)
+        link = links[2]
+        target_id = link.get_attribute("href").split("#", 1)[1]
+        driver.execute_script("arguments[0].scrollIntoView({block:'center',behavior:'auto'});", link)
+        link.click()
+        WebDriverWait(driver, 5).until(lambda _: driver.current_url.endswith("#" + target_id))
+        if width <= 1000:
+            assert not details.get_property("open"), f"{mode}/{lang}: TOC did not close after selection"
+        target = driver.find_element(By.ID, target_id)
+        WebDriverWait(driver, 5).until(lambda browser: browser.execute_script(
+            "const r=arguments[0].getBoundingClientRect();const h=document.querySelector('.site-header').getBoundingClientRect().height;return r.top>=h-2 && r.top<innerHeight;", target))
+        WebDriverWait(driver, 5).until(lambda _: link.get_attribute("aria-current") == "location")
+        WebDriverWait(driver, 5).until(lambda browser: browser.execute_script(
+            "return parseFloat(getComputedStyle(document.querySelector('.reading-progress span')).transform.slice(7)) > 0"))
+        assert_page_geometry(driver, width, f"{mode}/reading-{lang}")
+        screenshot(driver, ROOT / mode / f"reading-{lang}-section.png", width, height)
+
+
 def main() -> None:
     ROOT.mkdir(parents=True, exist_ok=True)
     driver = build_driver()
@@ -267,6 +319,7 @@ def main() -> None:
     try:
         for mode, (width, height) in VIEWPORTS.items():
             configure(driver, width, height)
+            verify_reading_controls(driver, width, height, mode)
             for home in ("/", "/en/", "/de/", "/about/", "/en/about/", "/de/about/"):
                 driver.get(f"{BASE}{home}?controls_visual_gate=1")
                 wait_ready(driver)
@@ -299,6 +352,10 @@ def main() -> None:
                     assert abs(box["height"] / box["width"] - 760 / 1200) < .01, f"{mode}/{name}: figure aspect ratio distorted"
 
                 target = driver.find_element(By.CSS_SELECTOR, target_selector)
+                # Targeted TOC screenshots exercise the new mobile disclosure.
+                for details in target.find_elements(By.CSS_SELECTOR, ".reading-contents"):
+                    if not details.get_property("open"):
+                        details.find_element(By.TAG_NAME, "summary").click()
                 driver.execute_script(
                     "arguments[0].scrollIntoView({block:'center',inline:'nearest',behavior:'auto'});",
                     target,
