@@ -26,6 +26,9 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("method-evidence-table-en", "/en/articles/quran-science-method-evidence/", ".table-scroll"),
+    ("method-evidence-sources-en", "/en/articles/quran-science-method-evidence/", ".references"),
+    ("dna-information-en", "/en/articles/dna-code-genetic-information/", ".references"),
     ("baghdad-sources-en", "/en/articles/fall-of-baghdad-1258-ibn-al-alqami/", "#core-sources-for-this-draft + ul"),
     ("certainty-violence-en", "/en/articles/how-certainty-becomes-violence/", "#references + ol"),
     ("civilization-collapse-en", "/en/articles/civilization-knowledge-justice-collapse/", ".references"),
