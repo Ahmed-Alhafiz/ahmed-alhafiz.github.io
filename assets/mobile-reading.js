@@ -16,7 +16,15 @@
   if (article) {
     document.querySelectorAll('.toc').forEach(toc => {
       const title = toc.querySelector('strong, h2, h3');
-      const list = toc.querySelector('ol, ul');
+      let list = toc.querySelector('ol, ul');
+      if (!list) {
+        const links = [...toc.querySelectorAll(':scope > a')];
+        if (links.length) {
+          list = document.createElement('div');
+          list.className = 'reading-contents-links';
+          list.append(...links);
+        }
+      }
       if (!title || !list) return;
       const details = document.createElement('details');
       details.className = 'reading-contents';

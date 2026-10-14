@@ -8,7 +8,7 @@
   "status": "mobile_design_validation",
   "updated_at": "2026-10-14",
   "current_task": "Mobile-first presentation refresh; all authored content preserved.",
-  "next_action": "Complete PR browser checks at 1440/390/360, inspect actual screenshots, then merge and verify live assets.",
+  "next_action": "Read PR #228 current checks and merged status before resuming; checkpoint labels describe pre-publication state. Complete final browser gate and screenshot review, then merge/Pages/live if still unmerged.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -581,6 +581,10 @@
     "content_preservation": "142 entire HTML files match base exactly after stripping only presentation asset changes.",
     "local_checks": "Site/UX/Arabic UI/discovery/public hygiene/editorial/dossier/entity/citation/architecture/shared CSS build/JS syntax/patch whitespace passed; four unchanged metadata-length warnings.",
     "visual_limit": "No local browser in managed environment; use the existing required GitHub Visual review workflow.",
-    "unmeasured": "Real-device Safari and field Core Web Vitals not measured."
+    "unmeasured": "Real-device Safari and field Core Web Vitals not measured.",
+    "pull_request": 228,
+    "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/228",
+    "initial_visual_run": 38595285646,
+    "initial_visual_result": "447 screenshots and all portrait/overflow checks passed. Book-card fit regression identified and corrected; direct-link TOC layout supported. Final browser interaction gate pending."
   }
 }
