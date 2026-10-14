@@ -349,6 +349,14 @@ def validate_integration() -> None:
         (ROOT / "en/research-status/index.html", f"/en/articles/{SLUG}/"),
     ):
         html = path.read_text(encoding="utf-8")
+        if path.relative_to(ROOT).as_posix() in {'index.html', 'en/index.html'}:
+            # Focused homepages reach every dossier through their complete hub;
+            # direct dossier links in hubs, book pages and review records remain
+            # mandatory below. Do not count a JSON-LD string as a visible link.
+            hub = '/en/articles/' if path.parent.name == 'en' else '/articles/'
+            if f'href="{hub}"' not in html:
+                fail(f'{path.relative_to(ROOT)}: complete research hub link missing')
+            continue
         if article_url not in html:
             fail(f"{path.relative_to(ROOT)}: dossier discovery link missing")
 

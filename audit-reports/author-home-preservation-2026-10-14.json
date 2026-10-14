@@ -1,0 +1,49 @@
+{
+  "scope": "AR and EN homepage presentation and UI copy only",
+  "source_base_sha": "f6047fee01b36e496392044f9f59f14580a34ee1",
+  "protected_html_count": 145,
+  "protected_html_manifest_sha256": "c3f86333ab254eb018f5fa17c1fa8766296c22223b95371041ca1ff67a22f059",
+  "all_protected_html_byte_identical": true,
+  "all_german_tracked_files_byte_identical": true,
+  "approved_search_titles_unchanged": true,
+  "selected_articles": 3,
+  "books": 4,
+  "book_status": "forthcoming",
+  "schema_negative_checks": [
+    {
+      "case": "schema count",
+      "rejected": true,
+      "reason": "index.html: homepage schema differs from visible selection/order/titles"
+    },
+    {
+      "case": "schema-only title",
+      "rejected": true,
+      "reason": "index.html: homepage schema differs from visible selection/order/titles"
+    },
+    {
+      "case": "missing visible selected link",
+      "rejected": true,
+      "reason": "index.html: expected three distinct published article links"
+    },
+    {
+      "case": "missing complete hub links",
+      "rejected": true,
+      "reason": "index.html: visible route to complete article catalogue missing"
+    }
+  ],
+  "homepage_bytes": {
+    "index.html": {
+      "before": 55662,
+      "after": 16530
+    },
+    "en/index.html": {
+      "before": 37179,
+      "after": 14981
+    }
+  },
+  "stylesheet_requests": {
+    "before": 5,
+    "after": 2
+  },
+  "release_status": "Source checkpoint before required CI, visual review, merge, Pages and live verification. The PR for design/human-home-2026-10-14 contains the final release evidence."
+}

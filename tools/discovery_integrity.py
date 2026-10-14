@@ -69,6 +69,38 @@ class LD(HTMLParser):
         if self.on: self.buf.append(data)
 
 
+class HomeReading(HTMLParser):
+    """Read actual homepage anchors; JSON-LD text is not a visible link."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.in_selection = False
+        self.current = None
+        self.text = []
+        self.selected = []
+        self.links = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == 'ol' and 'selected-reading-list' in attrs.get('class', '').split():
+            self.in_selection = True
+        if tag == 'a':
+            self.links.append(attrs.get('href'))
+            if self.in_selection:
+                self.current = attrs.get('href')
+                self.text = []
+
+    def handle_data(self, data):
+        if self.current:
+            self.text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == 'a' and self.current:
+            self.selected.append((self.current, norm(''.join(self.text))))
+            self.current = None
+        if tag == 'ol':
+            self.in_selection = False
+
+
 def die(msg): raise SystemExit(msg)
 def norm(s): return re.sub(r"\s+", " ", str(s)).strip()
 def same(a, b): return norm(a).casefold() == norm(b).casefold()
@@ -257,33 +289,11 @@ def surfaces(indexed):
 def english_homepage(expected):
     path = ROOT / "en/index.html"
     html = path.read_text(encoding="utf-8")
-    parser = LD(); parser.feed(html)
-    target = None
-    for raw in parser.blocks:
-        if not raw.strip():
-            continue
-        data = json.loads(raw)
-        nodes = [data] if isinstance(data, dict) else []
-        if isinstance(data, dict) and isinstance(data.get("@graph"), list):
-            nodes += data["@graph"]
-        for node in nodes:
-            if isinstance(node, dict) and node.get("@type") == "ItemList" and node.get("@id") == "https://ahmedalhafiz.com/en/#featured-research":
-                target = node
-    if target is None:
-        die("en/index.html: featured English research ItemList missing")
-    expected_urls = set(expected)
-    listed = {
-        item.get("url")
-        for item in target.get("itemListElement", [])
-        if isinstance(item, dict) and item.get("url")
-    }
-    if target.get("numberOfItems") != len(expected_urls):
-        die(f"en/index.html: English research count drift; expected {len(expected_urls)}, found {target.get('numberOfItems')}")
-    if listed != expected_urls:
-        die(f"en/index.html: featured English research URLs drift; expected {sorted(expected_urls)}, found {sorted(listed)}")
-    for url in expected_urls:
-        if route(url) not in html:
-            die(f"en/index.html: current English research pillar absent from visible homepage: {url}")
+    parser = HomeReading(); parser.feed(html)
+    if '/en/articles/' not in parser.links:
+        die('en/index.html: visible route to complete English catalogue missing')
+    if any('https://ahmedalhafiz.com' + href not in expected for href, _ in parser.selected):
+        die('en/index.html: selected article is not a published English edition')
 
 def hub_structured_inventory(indexed):
     """Keep each language hub's visible inventory and ItemList in lockstep."""
@@ -345,6 +355,24 @@ def homepage_structured_inventory(indexed):
             for item in indexed.values()
             if language in item.get("languages", []) and item.get(url_key)
         }
+        if language in {'ar', 'en'}:
+            # Homepages show a small selection; hub_structured_inventory still
+            # checks every published edition in the complete article catalogue.
+            visible = HomeReading(); visible.feed(html)
+            hub = '/articles/' if language == 'ar' else '/en/articles/'
+            if hub not in visible.links:
+                die(f'{rel}: visible route to complete article catalogue missing')
+            items = target.get('itemListElement', [])
+            urls = ['https://ahmedalhafiz.com' + href for href, _ in visible.selected]
+            if len(urls) != 3 or len(set(urls)) != 3 or not set(urls) <= expected:
+                die(f'{rel}: expected three distinct published article links')
+            actual = [(item.get('url'), norm(item.get('name', ''))) for item in items]
+            wanted = list(zip(urls, [title for _, title in visible.selected]))
+            if target.get('numberOfItems') != 3 or actual != wanted:
+                die(f'{rel}: homepage schema differs from visible selection/order/titles')
+            if [item.get('position') for item in items] != [1, 2, 3]:
+                die(f'{rel}: selected-article positions drift')
+            continue
         listed = {
             item.get("url")
             for item in target.get("itemListElement", [])

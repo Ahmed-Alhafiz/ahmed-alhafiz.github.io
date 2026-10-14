@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "seo/approved-titles-2026-10-14",
-  "head_sha": "769dfc1fadf58a106febc9e1800e6b11a45403e0",
-  "head_sha_semantics": "Published main at the start of the approved SEO title task. This is a prepublication source checkpoint; the pull request for the recorded branch is authoritative for final head, checks, merge, Pages and live verification.",
-  "status": "approved_title_release_candidate",
+  "branch": "design/human-home-2026-10-14",
+  "head_sha": "f6047fee01b36e496392044f9f59f14580a34ee1",
+  "head_sha_semantics": "Published main at the start of homepage humanization. This prepublication checkpoint does not represent the new branch head; its PR holds final CI, visual, merge, Pages and live evidence.",
+  "status": "author_home_release_candidate",
   "updated_at": "2026-10-14",
-  "current_task": "Apply exactly ten user-approved HTML search titles (2 AR, 8 EN); preserve all other page bytes.",
-  "next_action": "Locate the PR for seo/approved-titles-2026-10-14 and read its current checks, merge, Pages and live-verification evidence before resuming. If already merged and ten live pages verified, this task is complete; do not repeat or reapply. If unmerged, finish required checks, merge with expected head, then verify Pages and all ten live pages.",
+  "current_task": "Humanize AR/EN homepages: personal UI copy, four forthcoming books, three selected articles, quiet mobile-first styling. Preserve all other HTML and German.",
+  "next_action": "Read current PR for design/human-home-2026-10-14 before resuming. If merged, Pages succeeded and live AR/EN homepages/assets verified, task is complete. Otherwise finish CI and actual screenshot review, correct concrete defects, merge with expected head, then verify live output.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -142,16 +142,16 @@
     "live_verification": "All six new reports rendered on ahmedalhafiz.com with their expected titles; the deleted human-evolution route rendered the site's 404 page; the homepage showed report 01 for Quran/science methodology and report 02 for religious OCD with no deleted-title residue."
   },
   "last_verified": {
-    "source_base_sha": "769dfc1fadf58a106febc9e1800e6b11a45403e0",
-    "approved_titles": 10,
-    "html_files_preserved_except_approved_title_elements": 147,
-    "local_check_commands_passed": 12,
-    "audit_report": "audit-reports/approved-search-titles-2026-10-14.json",
-    "prior_design_release": "PR #228 merged and deployed; no design work remains from that task."
+    "source_base_sha": "f6047fee01b36e496392044f9f59f14580a34ee1",
+    "protected_html_byte_identical": 145,
+    "german_unchanged": true,
+    "seo_release": "PR #229 merged, Pages succeeded, all ten titles verified live on f6047fee01b36e496392044f9f59f14580a34ee1; do not repeat.",
+    "audit_report": "audit-reports/author-home-preservation-2026-10-14.json",
+    "schema_negative_checks": 4
   },
   "unverified": [
-    "This source checkpoint predates this PR release: inspect current PR for CI, merge, Pages and live status.",
-    "Current Google title adoption, query volumes, organic traffic effect and field Core Web Vitals are not measured."
+    "This source checkpoint predates the homepage visual/CI/publication review; inspect its current PR for final evidence.",
+    "No real-device Safari test, field Core Web Vitals measurement, search-ranking or traffic outcome is claimed."
   ],
   "blockers": [],
   "monitoring_runbook": [
@@ -162,7 +162,7 @@
     "Reassess the historical Dataset and ProfilePage reports after confirmed recrawls and record only observed results."
   ],
   "local_only_items": [
-    "Research scripts and raw public-search intermediate evidence remain scratch-only; the approved user-facing report is saved persistently, and the exact publication title list plus preservation evidence are in the tracked audit report. No required implementation is local-only after branch upload."
+    "Temporary QA screenshots/scripts are scratch-only and reproducible from GitHub Actions. Required source and preservation report are tracked; final publication evidence is in the PR."
   ],
   "notes": "PR #71 is live and technically verified at merge commit 5e13f017364929e4537b14d80c342506cbf7c9d0. No ranking, indexing, traffic, or AI-citation outcome is inferred from checks, deployment, submission, or validation acceptance.",
   "author_editorial_review_gate": {
