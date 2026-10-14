@@ -5,7 +5,7 @@
   "rules": "Accept natural translation, paragraph regrouping and equivalent wording; repair omitted/added sentences, changed meanings, caveats, numbers or references. Never infer semantic fidelity from counters. No hourly automation; user cancelled it.",
   "reviewed_count": 50,
   "total": 50,
-  "complete": false,
+  "complete": true,
   "articles": {
     "adam-all-languages-origin-language": {
       "status": "faithful",
@@ -243,7 +243,7 @@
       "en_current_file_sha256": "7157b8ad86548bc8f80fa96d8d763c403173626679161e179f414114071bf4f4"
     },
     "human-embryo-quran-stages": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Both full texts read including all AR104 blocks and EN66, table, references and footer.",
       "material_issues": [
         "Opening human agency/memory reflection and full Quran23:12–14 quotation removed.",
@@ -258,7 +258,20 @@
       "repair_plan": "Restore full AR-equivalent edition with original table/citation/source sequence and page references.",
       "ar_current_file_sha256": "de57556af1d8a5602f727442a254c31fa94ead824dab7137c3688b17357d9e21",
       "en_current_file_sha256": "2ed7b25922f619affb073614ca7914cc184814cc232cb99011df7cd70bf54298",
-      "validation": "Current Arabic131blocks fully read and translated; original four-column table/13 source groups/15 external URLs/in-text1–10 preserved. Full quotations, book106–115/106–120, overlapping bone/muscle defense and four exclusions, alternative another-creation readings, PartFour contribution, resurrection/responsibility and version2.1 Oct3 footer restored. Visible original publication Sep26 matches actual Article/feed metadata. No numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending."
+      "validation": "Current Arabic131blocks fully read and translated; original four-column table/13 source groups/15 external URLs/in-text1–10 preserved. Full quotations, book106–115/106–120, overlapping bone/muscle defense and four exclusions, alternative another-creation readings, PartFour contribution, resurrection/responsibility and version2.1 Oct3 footer restored. Visible original publication Sep26 matches actual Article/feed metadata. No numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending.",
+      "publication": {
+        "pr": 226,
+        "merge_sha": "2d100a42030155c97ea2ee3e9190016c2c0341aa",
+        "ready_policy_run": 38562224850,
+        "pages_run": 38580162127,
+        "final_ci_head": "5c6ef0fd0699e7e9e3a5ccf5ca1f12e524eaa6dd",
+        "actual_visual_review": "60 initial responsive screenshots in20 QA panels at1440/390/360;9 affected final screenshots viewed individually at original resolution. Stable body/table/asset images reused after visible-date and ol-marker-only corrections.",
+        "initial_visual_artifact": 11890384517,
+        "initial_visual_zip_sha256": "32bfc796c42cf67a2ccebf7ae40881569d0e6dd6884a34b3e31894001da5956c",
+        "final_visual_artifact": 11891272497,
+        "final_visual_zip_sha256": "a017c26f654cdb047f2f34e760a9b9d34d1e2895f0caddb1b62cd193f56ddbcf",
+        "live": "Both Arabic/English editions and English feeds/sitemap independently fetched with HTTP200 and exact main bytes, within final103-resource verification."
+      }
     },
     "injustice-fall-of-states-quran-history": {
       "status": "repaired_published",
@@ -291,7 +304,7 @@
       "publication": "PR223 merged970bd319681e8911dd6034df76a413a8e0f497f4 after all six gates,18actual screenshots reviewed at1440/390/360, freshReady policy38545994956 and Pages38546498215 successful. Both AR/EN pages and English feeds/sitemap HTTP200 and byte-identical to main."
     },
     "jinn-demons-quran-bible-torah": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Both full AR87/EN74blocks including all18source entries and residualcitation read.",
       "material_issues": [
         "Full Quran72:1/11,18:50,6:112 quotations and source citations replaced by merged summaries.",
@@ -306,7 +319,20 @@
       "repair_plan": "Full faithful restoration preserving source scopes/limits, claims and citation sequence, remove newFAQ.",
       "ar_current_file_sha256": "3a3960f6c9890085a7903b9b66f3c71ed4c046faf14abd32372d2d9a319ee527",
       "en_current_file_sha256": "790d526f36a6d8d316d904b541202b0c3d0605d2d76f2cbe0f95d36806f008a6",
-      "validation": "Current full Arabic110blocks read and restored English produced/compared. 32 non-site external URLs retain sequence; remaining site URLs map to existing English equivalents. Hebrew term preserved with he/rtl. Original three FAQ questions, full verses, hadith grading limits, biblical translation/context limits, novel184–185/194/200/202–203 safeguards and 18 annotated source groups restored. No numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending. Actual60 screenshot review found old visible header dates in ratq/teaching despite correct Article/feed dates, plus duplicate browser/CSS reference markers in jinn. Header dates now match Arabic; redundant browser markers suppressed on the original ol without changing sources. Affected9 screenshots required again. Other body/shared inputs unchanged."
+      "validation": "Current full Arabic110blocks read and restored English produced/compared. 32 non-site external URLs retain sequence; remaining site URLs map to existing English equivalents. Hebrew term preserved with he/rtl. Original three FAQ questions, full verses, hadith grading limits, biblical translation/context limits, novel184–185/194/200/202–203 safeguards and 18 annotated source groups restored. No numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending. Actual60 screenshot review found old visible header dates in ratq/teaching despite correct Article/feed dates, plus duplicate browser/CSS reference markers in jinn. Header dates now match Arabic; redundant browser markers suppressed on the original ol without changing sources. Affected9 screenshots required again. Other body/shared inputs unchanged.",
+      "publication": {
+        "pr": 226,
+        "merge_sha": "2d100a42030155c97ea2ee3e9190016c2c0341aa",
+        "ready_policy_run": 38562224850,
+        "pages_run": 38580162127,
+        "final_ci_head": "5c6ef0fd0699e7e9e3a5ccf5ca1f12e524eaa6dd",
+        "actual_visual_review": "60 initial responsive screenshots in20 QA panels at1440/390/360;9 affected final screenshots viewed individually at original resolution. Stable body/table/asset images reused after visible-date and ol-marker-only corrections.",
+        "initial_visual_artifact": 11890384517,
+        "initial_visual_zip_sha256": "32bfc796c42cf67a2ccebf7ae40881569d0e6dd6884a34b3e31894001da5956c",
+        "final_visual_artifact": 11891272497,
+        "final_visual_zip_sha256": "a017c26f654cdb047f2f34e760a9b9d34d1e2895f0caddb1b62cd193f56ddbcf",
+        "live": "Both Arabic/English editions and English feeds/sitemap independently fetched with HTTP200 and exact main bytes, within final103-resource verification."
+      }
     },
     "jinn-existence-quran-sunnah": {
       "status": "faithful",
@@ -491,7 +517,7 @@
       "publication": "PR222 merged39b83efcbeebb5545971428a0142d0fd07a5881a after all six gates, actual18 images reviewed on identical page/assets inputs, fresh Ready policy38543733838 and Pages38544224055 successful. Both AR/EN pages, English feeds and sitemap HTTP200 byte-identical to main."
     },
     "ratq-fatq-big-bang": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full71AR/90ENblocks and all residual text read. English is a different expanded dossier rather than translation.",
       "material_issues": [
         "New claim map, five-layer list, evidence appendix/ledger, Hubble/Penzias/FIRAS/DESI observational sections, five errors and change criteria absent in Arabic.",
@@ -502,7 +528,20 @@
       "repair_plan": "Replace with full faithful English translation of currentArabicbody; retain valid page technical metadata and original sources.",
       "ar_current_file_sha256": "f2366ececdd8cc87ec546c57658855327181c02adb0ff17e17db3e15bbe00235",
       "en_current_file_sha256": "9fdea118d785249bb950d4e63130f14c8f53db74eb45f999e7b80da7aacccb4d",
-      "validation": "Current Arabic82blocks fully read and translated. All24 external URL appearances/9 reference groups/original3-column table retained; added claim map/evidence ledger and unrelated source list removed. Full verse, IbnAshur grammar/seeing, Earth4.5 billion years, CMB380 thousand years, four objections/theological reply, book19–25/34/26–35, news-reading limits and four originalFAQs/footer version2.0 Sep29 restored. Original publication Sep1 matches actual Arabic Article; no numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending. Initial Site CI exposed missing related-work semantic class after restoration; original book-link wrapper now retains related-work alongside notice-box, without deleting or weakening the test. English cover alt also translated. Actual60 screenshot review found old visible header dates in ratq/teaching despite correct Article/feed dates, plus duplicate browser/CSS reference markers in jinn. Header dates now match Arabic; redundant browser markers suppressed on the original ol without changing sources. Affected9 screenshots required again. Other body/shared inputs unchanged."
+      "validation": "Current Arabic82blocks fully read and translated. All24 external URL appearances/9 reference groups/original3-column table retained; added claim map/evidence ledger and unrelated source list removed. Full verse, IbnAshur grammar/seeing, Earth4.5 billion years, CMB380 thousand years, four objections/theological reply, book19–25/34/26–35, news-reading limits and four originalFAQs/footer version2.0 Sep29 restored. Original publication Sep1 matches actual Arabic Article; no numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending. Initial Site CI exposed missing related-work semantic class after restoration; original book-link wrapper now retains related-work alongside notice-box, without deleting or weakening the test. English cover alt also translated. Actual60 screenshot review found old visible header dates in ratq/teaching despite correct Article/feed dates, plus duplicate browser/CSS reference markers in jinn. Header dates now match Arabic; redundant browser markers suppressed on the original ol without changing sources. Affected9 screenshots required again. Other body/shared inputs unchanged.",
+      "publication": {
+        "pr": 226,
+        "merge_sha": "2d100a42030155c97ea2ee3e9190016c2c0341aa",
+        "ready_policy_run": 38562224850,
+        "pages_run": 38580162127,
+        "final_ci_head": "5c6ef0fd0699e7e9e3a5ccf5ca1f12e524eaa6dd",
+        "actual_visual_review": "60 initial responsive screenshots in20 QA panels at1440/390/360;9 affected final screenshots viewed individually at original resolution. Stable body/table/asset images reused after visible-date and ol-marker-only corrections.",
+        "initial_visual_artifact": 11890384517,
+        "initial_visual_zip_sha256": "32bfc796c42cf67a2ccebf7ae40881569d0e6dd6884a34b3e31894001da5956c",
+        "final_visual_artifact": 11891272497,
+        "final_visual_zip_sha256": "a017c26f654cdb047f2f34e760a9b9d34d1e2895f0caddb1b62cd193f56ddbcf",
+        "live": "Both Arabic/English editions and English feeds/sitemap independently fetched with HTTP200 and exact main bytes, within final103-resource verification."
+      }
     },
     "religious-ocd-scrupulosity": {
       "status": "faithful",
@@ -580,7 +619,7 @@
       "publication": "PR216 merged946c8745 after successful six gates, fresh Ready policy38509901739 and actual1440/390/360 review. Pages/live verification follows in this checkpoint. Pages38509953275 and all postmerge workflows successful; both EN pages, JSON/Atom feeds and sitemap HTTP200 and byte-identical to deployed origin/main."
     },
     "teaching-names-ai-understanding": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full136AR/154ENblocks,3originaltables/4ENtables, references/residuals read incontiguouschunks.",
       "material_issues": [
         "English omits entire domainsmap/book37–43 paragraph, probe glossary row, Quranquotations, explicitconsciousnesssection andnoindependentreviewlimitationlistentry.",
@@ -594,7 +633,20 @@
       "repair_plan": "Restore fullfaithful translationofthecurrentArabicbody and exact originalsource/citationsequence; eliminate addedsectionsandclaims.",
       "ar_current_file_sha256": "1fbf5b5e4d3cf668738dcea206d65b84bebfc9df143d94ca3378a74a5265d52c",
       "en_current_file_sha256": "f270c88b584080de9f51d268ba84a6ba883b140c0b1ac198363514109dee065e",
-      "validation": "Current Arabic221 mapped blocks plus original summary strong/span notices, religious boundary, citation code and four buttons fully read/translated. All26 external URLs/reference groups original order, three original tables (glossary/six-layer matrix/eight-row claim appendix), original ten-test protocol and limitations preserved. Original Q2:30–33/book37–43/Othello64/OrderedCommonGen36/probe controls/causal limits restored; added probes and extra studies removed. Existing AR Bib/RIS/CFF/claims auxiliary paths retained with English labels. No numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending. Initial Site CI exposed missing related-work semantic class after restoration; original book-link wrapper now retains related-work alongside notice-box, without deleting or weakening the test. English cover alt also translated. Actual60 screenshot review found old visible header dates in ratq/teaching despite correct Article/feed dates, plus duplicate browser/CSS reference markers in jinn. Header dates now match Arabic; redundant browser markers suppressed on the original ol without changing sources. Affected9 screenshots required again. Other body/shared inputs unchanged."
+      "validation": "Current Arabic221 mapped blocks plus original summary strong/span notices, religious boundary, citation code and four buttons fully read/translated. All26 external URLs/reference groups original order, three original tables (glossary/six-layer matrix/eight-row claim appendix), original ten-test protocol and limitations preserved. Original Q2:30–33/book37–43/Othello64/OrderedCommonGen36/probe controls/causal limits restored; added probes and extra studies removed. Existing AR Bib/RIS/CFF/claims auxiliary paths retained with English labels. No numeric flags. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending. Initial Site CI exposed missing related-work semantic class after restoration; original book-link wrapper now retains related-work alongside notice-box, without deleting or weakening the test. English cover alt also translated. Actual60 screenshot review found old visible header dates in ratq/teaching despite correct Article/feed dates, plus duplicate browser/CSS reference markers in jinn. Header dates now match Arabic; redundant browser markers suppressed on the original ol without changing sources. Affected9 screenshots required again. Other body/shared inputs unchanged.",
+      "publication": {
+        "pr": 226,
+        "merge_sha": "2d100a42030155c97ea2ee3e9190016c2c0341aa",
+        "ready_policy_run": 38562224850,
+        "pages_run": 38580162127,
+        "final_ci_head": "5c6ef0fd0699e7e9e3a5ccf5ca1f12e524eaa6dd",
+        "actual_visual_review": "60 initial responsive screenshots in20 QA panels at1440/390/360;9 affected final screenshots viewed individually at original resolution. Stable body/table/asset images reused after visible-date and ol-marker-only corrections.",
+        "initial_visual_artifact": 11890384517,
+        "initial_visual_zip_sha256": "32bfc796c42cf67a2ccebf7ae40881569d0e6dd6884a34b3e31894001da5956c",
+        "final_visual_artifact": 11891272497,
+        "final_visual_zip_sha256": "a017c26f654cdb047f2f34e760a9b9d34d1e2895f0caddb1b62cd193f56ddbcf",
+        "live": "Both Arabic/English editions and English feeds/sitemap independently fetched with HTTP200 and exact main bytes, within final103-resource verification."
+      }
     },
     "turing-test-ai-consciousness": {
       "status": "faithful",
@@ -617,7 +669,7 @@
       "publication": "PR217 merged76d6314 after six gates, fresh Ready policy38511752134 and 12 actual1440/390/360 screenshots. Pages38511819635 and all postmerge workflows successful; both EN pages, FeedJSON/Atom/Sitemap HTTP200 and byte-identical to deployed main."
     },
     "universe-expansion-wa-inna-lamusiun": {
-      "status": "repaired_pending_ci_visual_publication",
+      "status": "repaired_published",
       "reading": "Full79AR/80ENblocks/2tables/allsource/residualsread; physicalcoreargumentmostlyfaithful.",
       "material_issues": [
         "FullQ51:48–50and29:20quotes replacedsummary; original27 biaydin strength/nophysicaldevice warning and24 handplural distinction weakened.",
@@ -629,7 +681,20 @@
       "repair_plan": "Restore missingfullparagraphs/quotes/definitions/FAQ andoriginalsources/readingpath; keepfaithfulphysicalprose.",
       "ar_current_file_sha256": "af64212e4ddaee1e2ef59d5655c8b53692c421d53ba32656078ca711320ac054",
       "en_current_file_sha256": "8bb87c4de6a17555fae5f1c0d722c97547d22c681663d8ff293c3c4591c180d8",
-      "validation": "Original 111 blocks/13 reference groups restored with retained faithful English; original full reading reused and all restored passages, tables, FAQs and references compared with current Arabic. 21 non-site external URL appearances retain sequence; four numeric-format flags are equivalent chapter/verse notation and written 1990s. Original measurement/model distinction, full Quran quotations, exegetical alternatives, prayer/faith argument and reading path preserved. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending."
+      "validation": "Original 111 blocks/13 reference groups restored with retained faithful English; original full reading reused and all restored passages, tables, FAQs and references compared with current Arabic. 21 non-site external URL appearances retain sequence; four numeric-format flags are equivalent chapter/verse notation and written 1990s. Original measurement/model distinction, full Quran quotations, exegetical alternatives, prayer/faith argument and reading path preserved. Six local site/discovery/citation/research/UX/hygiene gates passed with four unchanged warnings. CI, actual responsive images and publication pending.",
+      "publication": {
+        "pr": 226,
+        "merge_sha": "2d100a42030155c97ea2ee3e9190016c2c0341aa",
+        "ready_policy_run": 38562224850,
+        "pages_run": 38580162127,
+        "final_ci_head": "5c6ef0fd0699e7e9e3a5ccf5ca1f12e524eaa6dd",
+        "actual_visual_review": "60 initial responsive screenshots in20 QA panels at1440/390/360;9 affected final screenshots viewed individually at original resolution. Stable body/table/asset images reused after visible-date and ol-marker-only corrections.",
+        "initial_visual_artifact": 11890384517,
+        "initial_visual_zip_sha256": "32bfc796c42cf67a2ccebf7ae40881569d0e6dd6884a34b3e31894001da5956c",
+        "final_visual_artifact": 11891272497,
+        "final_visual_zip_sha256": "a017c26f654cdb047f2f34e760a9b9d34d1e2895f0caddb1b62cd193f56ddbcf",
+        "live": "Both Arabic/English editions and English feeds/sitemap independently fetched with HTTP200 and exact main bytes, within final103-resource verification."
+      }
     },
     "unwanted-intrusive-thoughts-meaning": {
       "status": "repaired_published",
@@ -706,8 +771,22 @@
       "publication": "PR224 merged74df1f50a38830776ac25bad8d09ad7f7a112f8c after all six gates,18actual images plus3corrected writing-head images reviewed; unchanged body/assets evidence reused. FreshReady policy38550404737 and Pages38550484102/allpostmerge successful. ThreeEN pages and Englishfeeds/sitemap HTTP200 byte-identical to main; Arabic unchanged."
     }
   },
-  "last_checkpoint": "50/50 readings complete;26 meaning repairs published/live verified;Hegra/Nile/waterpower3 prepared awaiting CI/images/publication;8 total not published including this batch. No hourly automation.",
+  "last_checkpoint": "2026-10-14: COMPLETE.50 pairs fully read;16 faithful without repair,34 repaired/published/live verified;zero remaining repairs.",
   "reading_complete": true,
   "remaining_reading": [],
-  "note": "Full 50-pair bilingual reading complete;16 faithful without repair,29 repaired/published/live verified,5 repairs prepared pending CI/actual images/publication. No automation or independent-specialist review claimed."
+  "note": "Semantic review and publication complete. Natural equivalent translations and regrouping accepted; counters only flagged passages for reading. Arabic source files preserved. No independent specialist review, indexing, ranking or traffic outcome claimed.",
+  "completion": {
+    "date": "2026-10-14",
+    "reading_pairs": 50,
+    "faithful_without_repair": 16,
+    "repairs_published_live_verified": 34,
+    "remaining_repairs": 0,
+    "verified_main": "2d100a42030155c97ea2ee3e9190016c2c0341aa",
+    "pages_run": 38580162127,
+    "all103_resources_exact_bytes": true,
+    "live_report": "audit-reports/translation-fidelity-live-verification-2026-10-14.json",
+    "all100_current_file_hashes_match_review_records": true,
+    "source_change_boundary": "All Arabic files preserved; this completion commit edits only governance and audit evidence, not site content/styling.",
+    "warnings": "Four unchanged nonblocking title/description-length warnings."
+  }
 }
