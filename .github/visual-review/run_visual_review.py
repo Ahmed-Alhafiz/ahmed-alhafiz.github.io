@@ -141,9 +141,10 @@ TARGET_PAGES = (
     ("about-ar-identity", "/about/", "#identity", "start"),
     ("about-en-identity", "/en/about/", "#identity", "start"),
     ("about-de-identity", "/de/about/", "#identity", "start"),
-    ("home-ar-latest-research", "/", "#latest-research", "start"),
-    ("home-ar-sirou-series", "/", "#sirou-research-series", "start"),
-    ("home-en-latest-research", "/en/", "#wave2-home-links", "start"),
+    ("home-ar-selected-reading", "/", "#selected-reading", "start"),
+    ("home-ar-books", "/", "#works", "start"),
+    ("home-en-selected-reading", "/en/", "#selected-reading", "start"),
+    ("home-en-books", "/en/", "#works", "start"),
     ("home-de-latest-research", "/de/", "#wave2-home-links", "start"),
     ("before-big-bang-table", "/articles/before-big-bang-science-limits/", ".article-body .table-scroll", "start"),
     ("brain-consciousness-en-table", "/en/articles/brain-consciousness-spirit-limits/", ".article-body .table-scroll", "start"),
@@ -308,6 +309,7 @@ def measure_layout(driver: webdriver.Chrome, mode: str, width: int, height: int)
                 "copy": copy_rect,
                 "overlapArea": overlap_area(portrait_rect, copy_rect),
                 "verticalGap": round(copy_rect["top"] - portrait_rect["bottom"], 2),
+                "authorHome": driver.execute_script("return document.body.classList.contains('author-home')"),
                 **computed,
             }
         )
@@ -363,6 +365,14 @@ def verify_layout(reports: dict[str, list[dict[str, Any]]]) -> None:
                 if rect["left"] < -1.5 or rect["right"] > viewport_width + 1.5:
                     raise SystemExit(f"{mode} {name}: {label} escapes viewport: {rect}")
             if mode != "desktop":
+                if item['authorHome']:
+                    # The compact author introduction intentionally places the
+                    # portrait beside the name, with prose below both columns.
+                    if not 96 <= portrait['width'] <= 140:
+                        raise SystemExit(f'{mode} {name}: compact portrait width drift')
+                    if min(portrait['bottom'], copy['bottom']) <= max(portrait['top'], copy['top']):
+                        raise SystemExit(f'{mode} {name}: portrait and name no longer share a row')
+                    continue
                 if portrait["bottom"] > copy["top"] - 8:
                     raise SystemExit(
                         f"{mode} {name}: portrait is not cleanly above copy; "

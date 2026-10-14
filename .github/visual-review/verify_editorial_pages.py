@@ -312,6 +312,39 @@ def verify_reading_controls(driver: webdriver.Chrome, width: int, height: int, m
         screenshot(driver, ROOT / mode / f"reading-{lang}-section.png", width, height)
 
 
+def verify_author_home(driver, width, height, mode, route):
+    """Verify the actual mobile journey, rather than requiring the old layout."""
+    language = 'ar' if route == '/' else 'en'
+    reject = driver.find_elements(By.CSS_SELECTOR, '#analytics-consent [data-consent="denied"]')
+    if reject:
+        reject[0].click()
+    assert_page_geometry(driver, width, f'{mode}/author-home-{language}')
+    assert len(driver.find_elements(By.CSS_SELECTOR, '.author-book')) == 4
+    links = driver.find_elements(By.CSS_SELECTOR, '.selected-reading-list h3 a')
+    assert len(links) == 3
+    for link in links:
+        assert rect(driver, link)['height'] >= 44, f'{mode}/{language}: small reading target'
+    actions = driver.find_element(By.CSS_SELECTOR, '.home-hero .actions')
+    assert rect(driver, actions)['bottom'] < height, f'{mode}/{language}: introduction pushes main actions below fold'
+    secondary = driver.find_element(By.CSS_SELECTOR, '.home-hero .btn:not(.primary)')
+    color = driver.execute_script('return getComputedStyle(arguments[0]).color', secondary)
+    assert color == 'rgb(41, 43, 41)', f'{mode}/{language}: unreadable secondary action: {color}'
+    screenshot(driver, ROOT / mode / f'author-home-{language}-top.png', width, height)
+    secondary.click()
+    WebDriverWait(driver, 5).until(lambda _: driver.current_url.endswith('#works'))
+    target = driver.find_element(By.ID, 'works')
+    header = driver.find_element(By.CSS_SELECTOR, '.site-header')
+    WebDriverWait(driver, 5).until(lambda _: rect(driver, target)['top'] >= rect(driver, header)['bottom'] - 2)
+    screenshot(driver, ROOT / mode / f'author-home-{language}-books.png', width, height)
+    reading = driver.find_element(By.ID, 'selected-reading')
+    driver.execute_script("arguments[0].scrollIntoView({block:'start',behavior:'auto'});", reading)
+    assert_page_geometry(driver, width, f'{mode}/author-home-{language}-reading')
+    screenshot(driver, ROOT / mode / f'author-home-{language}-reading.png', width, height)
+    footer = driver.find_element(By.ID, 'site-footer')
+    driver.execute_script("arguments[0].scrollIntoView({block:'end',behavior:'auto'});", footer)
+    screenshot(driver, ROOT / mode / f'author-home-{language}-footer.png', width, height)
+
+
 def main() -> None:
     ROOT.mkdir(parents=True, exist_ok=True)
     driver = build_driver()
@@ -336,6 +369,8 @@ def main() -> None:
                     assert rect(driver, button)["height"] >= 44, f"{mode}/{home}: undersized reading control"
                     radius = driver.execute_script("return parseFloat(getComputedStyle(arguments[0]).borderTopLeftRadius)", button)
                     assert radius >= 6, f"{mode}/{home}: legacy flat-link styling overrides the button"
+                if home in {'/', '/en/'}:
+                    verify_author_home(driver, width, height, mode, home)
             for name, route, target_selector in PAGES:
                 driver.get(f"{BASE}{route}?editorial_visual_gate=1")
                 wait_ready(driver)

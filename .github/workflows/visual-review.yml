@@ -90,3 +90,24 @@ jobs:
             visual-review/editorial-pages/*/library-ar-*.png
           retention-days: 3
           if-no-files-found: error
+
+      - name: Upload focused author homepage screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: author-home-visual-review
+          path: |
+            visual-review/*/home-ar.png
+            visual-review/*/home-en.png
+            visual-review/*/home-ar-books.png
+            visual-review/*/home-en-books.png
+            visual-review/*/home-ar-selected-reading.png
+            visual-review/*/home-en-selected-reading.png
+            visual-review/*/home-ar-footer.png
+            visual-review/*/home-en-footer.png
+            visual-review/works/*-ar.png
+            visual-review/works/*-en.png
+            visual-review/editorial-pages/*/author-home-*.png
+            visual-review/geometry/*.json
+          retention-days: 3
+          if-no-files-found: error
