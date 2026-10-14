@@ -26,6 +26,10 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("injustice-fall-of-states-quran-history-en", "/en/articles/injustice-fall-of-states-quran-history/", ".references"),
+    ("iron-fire-light-matter-energy-en", "/en/articles/iron-fire-light-matter-energy/", ".references"),
+    ("marib-dam-sayl-al-arim-en", "/en/articles/marib-dam-sayl-al-arim/", ".references"),
+
     ("method-evidence-table-en", "/en/articles/quran-science-method-evidence/", ".table-scroll"),
     ("method-evidence-sources-en", "/en/articles/quran-science-method-evidence/", ".references"),
     ("dna-information-en", "/en/articles/dna-code-genetic-information/", ".references"),
