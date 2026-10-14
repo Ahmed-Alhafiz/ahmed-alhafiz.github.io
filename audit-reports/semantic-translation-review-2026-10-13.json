@@ -706,8 +706,8 @@
       "publication": "PR224 merged74df1f50a38830776ac25bad8d09ad7f7a112f8c after all six gates,18actual images plus3corrected writing-head images reviewed; unchanged body/assets evidence reused. FreshReady policy38550404737 and Pages38550484102/allpostmerge successful. ThreeEN pages and Englishfeeds/sitemap HTTP200 byte-identical to main; Arabic unchanged."
     }
   },
-  "last_checkpoint": "50/50 readings complete;26 meaning repairs published/live verified;Hegra/Nile/waterpower3 prepared awaiting CI/images/publication;8 total not published including this batch. No hourly automation.",
+  "last_checkpoint": "2026-10-14:50 full readings complete;16 faithful,29 repairs published/live verified;last5 restored, all five current-head CI passed,60 actual responsive images reviewed,9 corrected-state images pending due unavailable execution environment. Source safely stored in PR226 head5c6ef0fd0699e7e9e3a5ccf5ca1f12e524eaa6dd.",
   "reading_complete": true,
   "remaining_reading": [],
-  "note": "Full 50-pair bilingual reading complete;16 faithful without repair,29 repaired/published/live verified,5 repairs prepared pending CI/actual images/publication. No automation or independent-specialist review claimed."
+  "note": "Execution environment unavailable: exec-server transport disconnected, repeated recovery timed out; even bash pwd and image reads cannot complete. Final five source/CI all passed; nine affected final screenshots and publication/live check pending."
 }
