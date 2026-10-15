@@ -26,6 +26,12 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("related-certainty-en", "/en/articles/how-certainty-becomes-violence/", ".related-panel"),
+    ("related-light-en", "/en/articles/iron-fire-light-matter-energy/", "#related-reading"),
+    ("related-concepts-en", "/en/articles/teaching-names-ai-understanding/", "#related-reading"),
+    ("related-rivers-en", "/en/articles/river-civilizations-water-state/", "#related-reading"),
+    ("related-justice-en", "/en/articles/water-civilization-power/", "#related-reading"),
+    ("related-comparison-en", "/en/articles/anzalna-iron-meteorites/", ".notice-box:has(#related-reading)"),
     ("reader-answer-ai-ar", "/articles/ai-soul-consciousness-understanding-taklif/", "#answer"),
     ("reader-answer-ai-en", "/en/articles/ai-soul-consciousness-understanding-taklif/", "#answer"),
     ("reader-answer-concepts-ar", "/articles/how-concepts-form-adam-names-scientific-models/", "#answer"),
@@ -319,6 +325,37 @@ def verify_reading_controls(driver: webdriver.Chrome, width: int, height: int, m
         screenshot(driver, ROOT / mode / f"reading-{lang}-section.png", width, height)
 
 
+def verify_native_reading_stability(driver, width, height, mode):
+    """A late reading-control script must not move already-painted prose."""
+    driver.execute_cdp_cmd("Network.setBlockedURLs", {"urls": ["*assets/mobile-reading.js*"]})
+    try:
+        driver.get(f"{BASE}/articles/sleep-paralysis-jathoom/?native_contents_gate=1")
+        wait_ready(driver)
+        details = driver.find_element(By.CSS_SELECTOR, ".toc > details.reading-contents")
+        summary = details.find_element(By.TAG_NAME, "summary")
+        assert not details.get_property("open"), f"{mode}: native disclosure should start closed"
+        # Native controls remain usable even if enhancement never arrives.
+        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", summary)
+        summary.click()
+        assert details.get_property("open"), f"{mode}: contents needs JavaScript to open"
+        summary.click()
+        article = driver.find_element(By.CSS_SELECTOR, ".article-body")
+        before = driver.execute_script("return arguments[0].getBoundingClientRect().top + scrollY", article)
+        driver.execute_script(Path("assets/mobile-reading.js").read_text())
+        driver.execute_async_script("const done=arguments[0];requestAnimationFrame(()=>requestAnimationFrame(done));")
+        after = driver.execute_script("return arguments[0].getBoundingClientRect().top + scrollY", article)
+        assert abs(after - before) <= 1, f"{mode}: late enhancement moved prose by {after-before}px"
+        assert len(driver.find_elements(By.CSS_SELECTOR, ".toc .reading-contents")) == 1
+        assert bool(details.get_property("open")) == (width > 1000)
+        for link in driver.find_elements(By.CSS_SELECTOR, ".breadcrumbs a"):
+            line = driver.execute_script("return getComputedStyle(arguments[0]).textDecorationLine", link)
+            assert "underline" in line, f"{mode}: breadcrumb still relies only on color"
+        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", summary)
+        screenshot(driver, ROOT / mode / "native-reading-stability-ar.png", width, height)
+    finally:
+        driver.execute_cdp_cmd("Network.setBlockedURLs", {"urls": []})
+
+
 def verify_author_home(driver, width, height, mode, route):
     """Verify the actual mobile journey, rather than requiring the old layout."""
     language = 'ar' if route == '/' else 'en'
@@ -360,6 +397,7 @@ def main() -> None:
         for mode, (width, height) in VIEWPORTS.items():
             configure(driver, width, height)
             verify_reading_controls(driver, width, height, mode)
+            verify_native_reading_stability(driver, width, height, mode)
             for home in ("/", "/en/", "/de/", "/about/", "/en/about/", "/de/about/"):
                 driver.get(f"{BASE}{home}?controls_visual_gate=1")
                 wait_ready(driver)

@@ -1,0 +1,42 @@
+{
+  "phase": "before deployment",
+  "reports": [
+    {
+      "page": "https://ahmedalhafiz.com/",
+      "reportUrl": "https://pagespeed.web.dev/analysis/https-ahmedalhafiz-com/5ygnk47rc8?form_factor=mobile",
+      "performance": 100,
+      "FCP": "1.0 s",
+      "LCP": "1.1 s",
+      "TBT": "0 ms",
+      "CLS": 0,
+      "speedIndex": "2.1 s",
+      "fieldData": "No Data",
+      "device": "Emulated Moto G Power; Slow 4G; Lighthouse 13.5.0"
+    },
+    {
+      "page": "https://ahmedalhafiz.com/articles/sleep-paralysis-jathoom/",
+      "reportUrl": "https://pagespeed.web.dev/analysis/https-ahmedalhafiz-com-articles-sleep-paralysis-jathoom/v4wdjcb6x1?form_factor=mobile",
+      "performance": 94,
+      "accessibility": 96,
+      "FCP": "0.9 s",
+      "LCP": "1.1 s",
+      "TBT": "0 ms",
+      "CLS": 0.154,
+      "speedIndex": "0.9 s",
+      "fieldData": "No Data"
+    },
+    {
+      "page": "https://ahmedalhafiz.com/en/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+      "reportUrl": "https://pagespeed.web.dev/analysis/https-ahmedalhafiz-com-en-articles-fall-of-baghdad-1258-ibn-al-alqami/8mzxln5c4x?form_factor=mobile",
+      "performance": 100,
+      "accessibility": 100,
+      "FCP": "0.9 s",
+      "LCP": "1.1 s",
+      "TBT": "0 ms",
+      "CLS": 0,
+      "speedIndex": "2.3 s",
+      "fieldData": "No Data"
+    }
+  ],
+  "limits": "Lighthouse mobile lab tests, not real-user field data; no causal improvement or ranking claim. API returned quota 429; completed all three tests in official PageSpeed UI."
+}

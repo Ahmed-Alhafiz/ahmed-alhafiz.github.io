@@ -327,6 +327,46 @@ def capture_works(driver: webdriver.Chrome, mode: str, width: int, height: int) 
             raise SystemExit(f"{shot}: wrong screenshot dimensions")
 
 
+def audit_responsive_delivery() -> None:
+    """Use fresh high-density mobile sessions, avoiding cached full covers."""
+    from urllib.parse import urlparse
+
+    reports = []
+    routes = ("/", "/en/", "/articles/sleep-paralysis-jathoom/", "/en/articles/fall-of-baghdad-1258-ibn-al-alqami/")
+    for width, height, density in ((390, 844, 2), (360, 800, 3)):
+        browser = build_driver()
+        try:
+            browser.execute_cdp_cmd("Emulation.setDeviceMetricsOverride", {
+                "width": width, "height": height, "deviceScaleFactor": density, "mobile": True,
+            })
+            browser.execute_cdp_cmd("Network.setCacheDisabled", {"cacheDisabled": True})
+            for route in routes:
+                open_page(browser, route)
+                images = browser.find_elements(By.CSS_SELECTOR, "img[srcset*='/assets/book-covers/'],img[srcset*='/assets/brand/pen-mark-']")
+                assert images, f"{route}: responsive delivery missing"
+                for image in images:
+                    browser.execute_script("arguments[0].scrollIntoView({block:'center'});", image)
+                    WebDriverWait(browser, 10).until(lambda _: image.get_property("complete") and image.get_property("naturalWidth") > 0)
+                    selected = urlparse(image.get_property("currentSrc")).path
+                    original = urlparse(image.get_attribute("src")).path
+                    selected_file = Path(selected.lstrip("/"))
+                    original_file = Path(original.lstrip("/"))
+                    assert selected_file.exists(), f"{route}: missing chosen image {selected}"
+                    assert selected != original, f"{route}: downloaded full image on a small screen: {selected}"
+                    with Image.open(selected_file) as chosen:
+                        pixels = chosen.width
+                    displayed = rect(browser, image)["width"]
+                    assert pixels >= displayed * density - 1, f"{route}: inadequate image resolution at DPR {density}"
+                    assert selected_file.stat().st_size < original_file.stat().st_size * .55, f"{route}: no material transfer saving"
+                    reports.append({"route": route, "viewport": width, "density": density, "selected": selected,
+                                    "displayed_width": displayed, "pixel_width": pixels,
+                                    "bytes": selected_file.stat().st_size, "original_bytes": original_file.stat().st_size})
+        finally:
+            browser.quit()
+    (ROOT / "responsive-delivery.json").write_text(json.dumps(reports, indent=2) + "\n")
+    print(f"Responsive delivery passed: {len(reports)} complete, sufficiently sharp, smaller images at DPR2/DPR3.")
+
+
 def main() -> None:
     driver = build_driver()
     all_reports = []
@@ -343,6 +383,7 @@ def main() -> None:
         raise SystemExit("Expected 24 element-level cover screenshots")
     if len(list((ROOT / "works").glob("*.png"))) != 6:
         raise SystemExit("Expected six multilingual works-section screenshots")
+    audit_responsive_delivery()
     print(
         "Book-cover audit passed: 12 multilingual hero covers at two viewports, "
         "forced 2:3 crop, no dual black padding bands, calibrated dark-cover "
