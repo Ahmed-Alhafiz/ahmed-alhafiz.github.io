@@ -448,7 +448,20 @@ def main() -> None:
                 time.sleep(0.12)
                 box = rect(driver, target)
                 visible = max(0.0, min(float(height), box["bottom"]) - max(0.0, box["top"]))
-                if float(driver.execute_script("return window.scrollY")) <= 0 or visible < 100:
+                if name.startswith("related-"):
+                    # A valid one-link reading block can be shorter than 100px.
+                    # Require its full visible area and every new link on screen.
+                    if float(driver.execute_script("return window.scrollY")) <= 0 or visible < min(100, box["height"]) - .5:
+                        raise SystemExit(f"{mode}/{name}: reading block clipped: {box}")
+                    new_links = driver.find_elements(By.CSS_SELECTOR, "#related-reading a")
+                    assert new_links, f"{mode}/{name}: added reading links missing"
+                    header_height = driver.execute_script("return document.querySelector('.site-header').getBoundingClientRect().height")
+                    for link in new_links:
+                        link_box = rect(driver, link)
+                        assert link_box["left"] >= -1 and link_box["right"] <= width + 1, f"{mode}/{name}: clipped reading link"
+                        assert link_box["top"] >= header_height - 1 and link_box["bottom"] <= height + 1, f"{mode}/{name}: reading link outside capture"
+                        assert "/en/articles/" in link.get_attribute("href") and link.text.strip(), f"{mode}/{name}: wrong reading destination"
+                elif float(driver.execute_script("return window.scrollY")) <= 0 or visible < 100:
                     raise SystemExit(f"{mode}/{name}: target not visibly captured: {box}")
                 assert_page_geometry(driver, width, f"{mode}/{name}-target")
                 screenshot(driver, ROOT / mode / f"{name}-target.png", width, height)
