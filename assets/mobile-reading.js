@@ -26,12 +26,17 @@
         }
       }
       if (!title || !list) return;
-      const details = document.createElement('details');
-      details.className = 'reading-contents';
-      const summary = document.createElement('summary');
-      title.before(details);
-      summary.append(title);
-      details.append(summary, list);
+      // A native disclosure can be delivered with the page so a slow script
+      // never collapses an already-painted contents list above the article.
+      let details = toc.querySelector(':scope > details.reading-contents');
+      if (!details) {
+        details = document.createElement('details');
+        details.className = 'reading-contents';
+        const summary = document.createElement('summary');
+        title.before(details);
+        summary.append(title);
+        details.append(summary, list);
+      }
       contents.push(details);
       list.addEventListener('click', event => {
         if (narrow.matches && event.target.closest('a[href^="#"]')) details.open = false;
