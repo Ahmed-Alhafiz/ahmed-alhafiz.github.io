@@ -327,10 +327,13 @@ def verify_reading_controls(driver: webdriver.Chrome, width: int, height: int, m
 
 def verify_native_reading_stability(driver, width, height, mode):
     """A late reading-control script must not move already-painted prose."""
+    driver.execute_cdp_cmd("Network.enable", {})
+    driver.execute_cdp_cmd("Network.setCacheDisabled", {"cacheDisabled": True})
     driver.execute_cdp_cmd("Network.setBlockedURLs", {"urls": ["*assets/mobile-reading.js*"]})
     try:
         driver.get(f"{BASE}/articles/sleep-paralysis-jathoom/?native_contents_gate=1")
         wait_ready(driver)
+        assert not driver.find_elements(By.CSS_SELECTOR, ".reading-progress"), f"{mode}: enhancement was not isolated"
         details = driver.find_element(By.CSS_SELECTOR, ".toc > details.reading-contents")
         summary = details.find_element(By.TAG_NAME, "summary")
         assert not details.get_property("open"), f"{mode}: native disclosure should start closed"
@@ -346,6 +349,7 @@ def verify_native_reading_stability(driver, width, height, mode):
         after = driver.execute_script("return arguments[0].getBoundingClientRect().top + scrollY", article)
         assert abs(after - before) <= 1, f"{mode}: late enhancement moved prose by {after-before}px"
         assert len(driver.find_elements(By.CSS_SELECTOR, ".toc .reading-contents")) == 1
+        assert len(driver.find_elements(By.CSS_SELECTOR, ".reading-progress")) == 1
         assert bool(details.get_property("open")) == (width > 1000)
         for link in driver.find_elements(By.CSS_SELECTOR, ".breadcrumbs a"):
             line = driver.execute_script("return getComputedStyle(arguments[0]).textDecorationLine", link)
@@ -354,6 +358,7 @@ def verify_native_reading_stability(driver, width, height, mode):
         screenshot(driver, ROOT / mode / "native-reading-stability-ar.png", width, height)
     finally:
         driver.execute_cdp_cmd("Network.setBlockedURLs", {"urls": []})
+        driver.execute_cdp_cmd("Network.setCacheDisabled", {"cacheDisabled": False})
 
 
 def verify_author_home(driver, width, height, mode, route):
