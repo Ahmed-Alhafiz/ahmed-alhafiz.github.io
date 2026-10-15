@@ -1,0 +1,368 @@
+{
+  "date": "2026-10-15",
+  "base_sha": "f64d06aff82e8c4369bef64ddfe45430f4378159",
+  "authorization": "User approved implementation after the complete read-only report. Optional book naming/main-title changes and AdSense resubmission excluded.",
+  "changed_html": [
+    {
+      "path": "articles/adam-all-languages-origin-language/index.html",
+      "before_sha256": "e68ad5d4daa6eded838c5f35abcd7246d49962cc745679267423cd6a5e873ac5",
+      "after_sha256": "88eaee1cd7a46c3b35047121dc49d870232c340047235c592f30f824109af018"
+    },
+    {
+      "path": "articles/age-of-universe-13-8-billion-years/index.html",
+      "before_sha256": "9ecc320eb61082c296e8a7f7d6afd63b0e6937c3d04c237f3904ef976d02f85a",
+      "after_sha256": "3450a5e8b4c0c55052c47d9c48ee6a51c5f656e3b1431bbbf4e428d4b2a809d6"
+    },
+    {
+      "path": "articles/ai-soul-consciousness-understanding-taklif/index.html",
+      "before_sha256": "add898d01d0b4083f8b453fb7a867be478464bde044bc56c027dfa1a3887bf19",
+      "after_sha256": "172aa42f8c86b42824ee8c41069ba06c61b3153ca21134a979c352116e192069"
+    },
+    {
+      "path": "articles/before-big-bang-science-limits/index.html",
+      "before_sha256": "7df1fced1a927c785c01f843832fa797fe257d8dca59c10233e4f56aec21cb0f",
+      "after_sha256": "46000ef0baf45422f7ce261c9aba8d941004331a0732dc429191c0bdb0dd691e"
+    },
+    {
+      "path": "articles/depersonalization-derealization-feeling-unreal/index.html",
+      "before_sha256": "acbf5ee4e90b55f4f12fbb5dc941cdb82c4d643c8e39c6c82e9d037812e9b6db",
+      "after_sha256": "adb05cfbea78d2ccc6758963d559a7cbd0bc92d021185395f42150167fda3c24"
+    },
+    {
+      "path": "articles/dna-code-genetic-information/index.html",
+      "before_sha256": "9b7821a243b5b9cb9b020bf335898ed821fe58c0bfc0d33331ea70732a0f977e",
+      "after_sha256": "dfa2e8528a73174e94a45527ce33e8c4a7d09f71756ce18aca168ba86721ad7e"
+    },
+    {
+      "path": "articles/how-concepts-form-adam-names-scientific-models/index.html",
+      "before_sha256": "080960be7bf0541fe2e6764207969ab29275a3f85a9d3a9ad16122ba6bfd4324",
+      "after_sha256": "3d65cb85c032cdd490ff7886433733fa58100cbdf3079b13c78ccc0db83589e1"
+    },
+    {
+      "path": "articles/injustice-fall-of-states-quran-history/index.html",
+      "before_sha256": "14cf47e96cb7a402cf06cb718baa3d8128ab599d3f855fed2750379a9418529f",
+      "after_sha256": "4ee91a0fc28a60274172b351ab71d3b3c71e3c36d4bda9b4f66981624718883b"
+    },
+    {
+      "path": "articles/jinn-demons-quran-bible-torah/index.html",
+      "before_sha256": "7797bfb7128195e124676627db221e55353714709015c9324626ba248ac7a2c4",
+      "after_sha256": "7d9051aa734444bd7510fb9032f16bacc7b621b4b84add8e401fd95edd68e569"
+    },
+    {
+      "path": "articles/mesopotamia-irrigation-soil-salinity-collapse/index.html",
+      "before_sha256": "a4413dd482187c4b1dd21c3f6e295564051470e3778f3fb3e8215b3419f0d3f4",
+      "after_sha256": "bafb756087441eb08d784239a26b207f172615f1ff4bcfa3618a4c4bcd9a974a"
+    },
+    {
+      "path": "articles/quran-science-method-evidence/index.html",
+      "before_sha256": "4738de1e171587801e299de2c8ad330a23975e830b7538dfb4c9956eb3c95492",
+      "after_sha256": "893dabe35797b183b0ec809e04c9f1c424ee6b591430a175fc70076aef3af637"
+    },
+    {
+      "path": "articles/river-civilizations-water-state/index.html",
+      "before_sha256": "22595b799e7b623e3dac8a93b99717cc9616e3fb19d09a552aae439f5260015c",
+      "after_sha256": "acc0cd412217eaff2fcf298cc991837fa714af6c25ebca6106ae69937ae0dc1d"
+    },
+    {
+      "path": "articles/teaching-names-ai-understanding/index.html",
+      "before_sha256": "d002469deb0d9ea9f928420a8672e5d46e9fd54cca17c8feb3a1a189d1a35453",
+      "after_sha256": "b09d937ab6995c1af4061b82242e57710d6e9e739444697b6a409b5676265685"
+    },
+    {
+      "path": "articles/turing-test-ai-consciousness/index.html",
+      "before_sha256": "ae067cc7ca6c378affb38fc08951c93e26abe39ec384dfa31411f0d1c1828d25",
+      "after_sha256": "211b59ff6c63ad3dc141c6d11cac32b2ba8622b6481af5f4414f43bfca2cabaa"
+    },
+    {
+      "path": "articles/umm-abbas-family-fear/index.html",
+      "before_sha256": "5787169ea8118b504498a56cf38012fd2a4efb02ccf831b0923c23bb9e757297",
+      "after_sha256": "d6c414160a525b7905b7a98cef279aa50e86b3fdb68391f5756ca9ebe1ab3e40"
+    },
+    {
+      "path": "articles/writing-changed-human-history/index.html",
+      "before_sha256": "5a48fbd9c89a425ed91f6294f13ec2d163ff890360af23632d8040b943b5e85f",
+      "after_sha256": "834c913ca16c3a242dc2f966cdb5a17c85db4ee4bcdf01c2af059e4915605656"
+    },
+    {
+      "path": "en/articles/adam-all-languages-origin-language/index.html",
+      "before_sha256": "c9cb0eedb373f0fe86f58d8c23516352c2149125a5fb40e3623d06b370a3f828",
+      "after_sha256": "43d786b76f8deea2edd42364bfa7e21ad2988ce88c38c95442475a892cdea655"
+    },
+    {
+      "path": "en/articles/age-of-universe-13-8-billion-years/index.html",
+      "before_sha256": "5847c43403395b6871cbf0415a7ca6dac28a64d4795a676b33588c3ff50c7693",
+      "after_sha256": "3575df26345c0889081738b88c73f0e9c5478ead64d88327337719fe0ba7d3c3"
+    },
+    {
+      "path": "en/articles/ai-soul-consciousness-understanding-taklif/index.html",
+      "before_sha256": "83b3967d54f5a8569e5982578d0ee14dbf34f4788a9fdc320260d721c5429400",
+      "after_sha256": "8e932a7f8b6fa789cf58c7a0fe69f4a9893aa53e82511f46ac9d75335f75f10d"
+    },
+    {
+      "path": "en/articles/before-big-bang-science-limits/index.html",
+      "before_sha256": "8ba536c4fe36af15da5c4d4fa7c2801edab125c094ac632e2af4cd9b5e6a9fa0",
+      "after_sha256": "3656bf79c6bd9280eeafee502fdabc2848896456a39fd08cb6a08fec7e86f436"
+    },
+    {
+      "path": "en/articles/brain-consciousness-spirit-limits/index.html",
+      "before_sha256": "2e99152ed42d31557dc649d7a93c09d39b739522b4ef8254b596ccf6b791059d",
+      "after_sha256": "1feadbfcf92289ee2f0eeffc344abc2b010cb917d71e3f5690f186b958283dd1"
+    },
+    {
+      "path": "en/articles/depersonalization-derealization-feeling-unreal/index.html",
+      "before_sha256": "cfd0a48eefb9bd4b9f88b66d40e1e9ea37f19d4137976b34d5195d49af602cbb",
+      "after_sha256": "ee412f69524cb78776e95b5cad4fe848ac53f9a0dd1040e8f1f2dcf2baaa2b9b"
+    },
+    {
+      "path": "en/articles/diagnostic-uncertainty-family-fear-coercive-authority/index.html",
+      "before_sha256": "3f9a9993aad1f6ed175f0ca76820b2dcee81a6992c871d4c3d8910adb0891185",
+      "after_sha256": "3a69b6b8bd7d977379551eef9b3991329e57ff2fcb0bf96b2c3a2d087254e5ee"
+    },
+    {
+      "path": "en/articles/dna-code-genetic-information/index.html",
+      "before_sha256": "6bb87bec4b4bab1923eb228bb2dd58feb1aece8bccbde3be53f2dde3de9ed2d8",
+      "after_sha256": "335743d01db1afe5c6fa9e87010f8a0c7f45461b60f453e01eb1b64a77dd8bd5"
+    },
+    {
+      "path": "en/articles/green-tree-fire-photosynthesis/index.html",
+      "before_sha256": "199b25cd4950a071e886e1cdfdaeba8f56e7eb454b8d77b3819d0075d315706a",
+      "after_sha256": "9c738c7d7f54b2d2972acda6ee9dea44a41d83a83761826245a4b0920aed0f75"
+    },
+    {
+      "path": "en/articles/hearing-voices-in-head/index.html",
+      "before_sha256": "315bd42fbe309f5bcf2520cd1af1bb5c2253b5987f69f8648d47ead2157611db",
+      "after_sha256": "febad6589ec94c41a5c6e35086b1191dd6dda8f6d5f7c6eea378d8ed49451f74"
+    },
+    {
+      "path": "en/articles/how-concepts-form-adam-names-scientific-models/index.html",
+      "before_sha256": "2cd9afb8836361af0df7207f7428a47c61c1ab388de187b729972e81a043ddce",
+      "after_sha256": "d74408bba0229f663dce922f219cb573197c9a7486a18da6efa081d6d63364b0"
+    },
+    {
+      "path": "en/articles/how-khufu-pyramid-built-merer-diary/index.html",
+      "before_sha256": "23f41273cfe5ff20b3555af39d370f1ad6135482d1ab8e1aa9eda010e26583cf",
+      "after_sha256": "3c9cf4a8cb78e341f39d658b3d487f360c22ab35aed1e0ed352d4c723b6364d9"
+    },
+    {
+      "path": "en/articles/injustice-fall-of-states-quran-history/index.html",
+      "before_sha256": "eee8614633ed84607a9a825de3f74a2c29a48a59a5fe000730777f0b3e013095",
+      "after_sha256": "76fdc80bb73b79071b5160b0cede780ad6c8c2f83628ff95849927503e45b423"
+    },
+    {
+      "path": "en/articles/jinn-demons-quran-bible-torah/index.html",
+      "before_sha256": "46aa1fe7dd41dceb49f87466f8d6f3f2481dd3830fb7c8ab64e1b1429d73f9e0",
+      "after_sha256": "f4d3ca2470b35646192a477054cd5953bd051b3018c90a3343e54b8ccc06d096"
+    },
+    {
+      "path": "en/articles/jinn-existence-quran-sunnah/index.html",
+      "before_sha256": "f4a161dcad85fafaae66cdec14501b4852ffc6e5be834d28feb006b255c3b2ef",
+      "after_sha256": "cbc66f79f428df7c06b19b6c4d9ecbd9a54be533b9edc7af08352ffc98720fad"
+    },
+    {
+      "path": "en/articles/memory-gaps-unremembered-actions/index.html",
+      "before_sha256": "098ff821aaa3eb5b89f7b5de644276bd35cfbcd0840f4e73006c18d236d9c8ba",
+      "after_sha256": "c0e3ff925556e8796a72008a85fe37bcd5df9c4ca4fd603627c9ee1e954668b3"
+    },
+    {
+      "path": "en/articles/mesopotamia-irrigation-soil-salinity-collapse/index.html",
+      "before_sha256": "a28bc0da1b9697dc1948b4375aa56acc0ef07a4cf3b504c5e79e5e793044e629",
+      "after_sha256": "547da177d1b229ca4be90a4058a5e2601c96c1eb299bffac8e954fc8a4843d4e"
+    },
+    {
+      "path": "en/articles/possession-or-neurological-psychological-disorder/index.html",
+      "before_sha256": "2f026197cfc97aa364a6d15c9c72d1a0643b1f445241b6baf34b36ffc0926ff1",
+      "after_sha256": "a0280efe20d8e2d0d14c199d5e0bf877e004e9e0e96e66123f43d4822412d8f0"
+    },
+    {
+      "path": "en/articles/quran-day-thousand-fifty-thousand-years-relativity/index.html",
+      "before_sha256": "53992d6f29c33a861e77923f012c8f47373324852badb72d934c2fcbdb8246a5",
+      "after_sha256": "d80102338e8de7c6ab993a42e7ae640395b180eb9d77b6e2e78a19838944b500"
+    },
+    {
+      "path": "en/articles/quran-science-method-evidence/index.html",
+      "before_sha256": "33d1a651d1b049984b91a52a109db4d55d93045b4a6bc2e768e381f98aeb2cfb",
+      "after_sha256": "67e214d57428e9ab9cd80a6b7a808c27725a78d2faa0b8e096ac7cbb708fbb73"
+    },
+    {
+      "path": "en/articles/ratq-fatq-big-bang/evidence/index.html",
+      "before_sha256": "b2587dceaf5b65dd2b160487828234b0e78040f39a0a212f30251b718b3a3f3b",
+      "after_sha256": "fc6fcb0b59796420fbc3d6356f8954946d6cd54edddf238e0166cff087ec58da"
+    },
+    {
+      "path": "en/articles/river-civilizations-water-state/index.html",
+      "before_sha256": "24344c92449f3e38196e28ea6671963d944ef1aee72ff22657ed2318640266dc",
+      "after_sha256": "902ea50de3e9547c38ba31037219d7c75ceddcab5bcf7fefbb3550885d38cd6f"
+    },
+    {
+      "path": "en/articles/sleepwalking-why-no-memory/index.html",
+      "before_sha256": "7bedbfc9c229263622ab5e648f25b41152d2dbe20c4615582c06a6bf0f6992a7",
+      "after_sha256": "60793d06217456d1e6b7dfa27a035a5c00edbb965cf62713993145203516d4a6"
+    },
+    {
+      "path": "en/articles/teaching-names-ai-understanding/index.html",
+      "before_sha256": "cf32e3774d02740e62892414ffc9d41cdc7614d0c9ffa6ede01be3d50b9a1133",
+      "after_sha256": "73d9aad7885fe18e15251c370dfc1ebfca1741549548087cc06f1fc3703b7a95"
+    },
+    {
+      "path": "en/articles/turing-test-ai-consciousness/index.html",
+      "before_sha256": "c0830805c989916a4f9be334d4abed2495762085bf35e31520be3cb443494d3e",
+      "after_sha256": "4a61821bc48d674c3604aa745feb1562f71567bc5ac8e6bba9ab365455c90d83"
+    },
+    {
+      "path": "en/articles/umm-abbas-family-fear/index.html",
+      "before_sha256": "446c264a99d2f4d5068c7c6ff09e998c0ced66763681270680a08637105328a0",
+      "after_sha256": "975a2511b938684e3dfcb99925f045e48a15aad9e2621cbcaf090453997c590a"
+    },
+    {
+      "path": "en/articles/universe-expansion-wa-inna-lamusiun/index.html",
+      "before_sha256": "f250e902ed1facf5a20bb5e9c35a187b2f04e2c6ecee3836b02f7d243338983c",
+      "after_sha256": "d1f74a26c06f30ea5fea5800afc77e7217108e5ca1b83bb2c519ab2f097caa16"
+    },
+    {
+      "path": "en/articles/unwanted-intrusive-thoughts-meaning/index.html",
+      "before_sha256": "e085a457f79bb1251a0a2f5509114acaada4968fd85089baedaee8584f675640",
+      "after_sha256": "44c157efa18c9b1476a6471503bf24b993330a88a47a0c96f5fd1105e956aa7a"
+    },
+    {
+      "path": "en/articles/writing-changed-human-history/index.html",
+      "before_sha256": "39c6fc5d9f829b74afed6d7dbb6b5d4726edf3e28c86ffc1a0b30aa3c5b2efdf",
+      "after_sha256": "c62f8acde1e7eea41a4466cce03dfacfef1b36f1f83ce7dc8f5257dbc49a306b"
+    },
+    {
+      "path": "en/books/sirou-fi-alard/index.html",
+      "before_sha256": "c4810a1ff49cf82960c649c82db6a9c898cf5cc7711ee28424095d10ba2d6739",
+      "after_sha256": "60b51b37a3729de96aee0d710d2c6b2fb7b0f5188ac205e0a3b41518bad41d0a"
+    },
+    {
+      "path": "en/books/umm-abbas/index.html",
+      "before_sha256": "cc2d3945a017402be060f0da53a3ad637bbb5c6e3a252aa8bcdd25e10ea10bb0",
+      "after_sha256": "107dedcfb9c366b399c98cfcc71d068470e4160db3ddbcbd8773bef6daa2db60"
+    },
+    {
+      "path": "en/research-status/index.html",
+      "before_sha256": "26550edfeb9aa059eee1b4340d39111de3e833fb3bb266e6e84da07878966d91",
+      "after_sha256": "ef019ff0b8c527aeb4976a7413f63005e6724b1dc82eccc603a0164e82aa8841"
+    },
+    {
+      "path": "research-status/index.html",
+      "before_sha256": "a41afb64d03cf638581cec8a50baf0f4ae1760e6adf3c7d8e44dffcc548f5b47",
+      "after_sha256": "7e20e167a1aedd78b50fea94871c105a41db55c78412c7ce923303b3bbfae707"
+    }
+  ],
+  "unchanged_html_count": 98,
+  "unchanged_html": [
+    "404.html",
+    "about/index.html",
+    "articles/anzalna-iron-meteorites/index.html",
+    "articles/brain-consciousness-spirit-limits/index.html",
+    "articles/civilization-knowledge-justice-collapse/index.html",
+    "articles/cyberbullying-university-rumor-stigma/index.html",
+    "articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/index.html",
+    "articles/diagnostic-uncertainty-family-fear-coercive-authority/index.html",
+    "articles/difference-light-nur-quran-sun-moon/index.html",
+    "articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/index.html",
+    "articles/fall-of-baghdad-1258-ibn-al-alqami/index.html",
+    "articles/fear-physical-symptoms-umm-abbas/index.html",
+    "articles/functional-seizures-vs-epilepsy/index.html",
+    "articles/green-tree-fire-photosynthesis/index.html",
+    "articles/hearing-voices-in-head/index.html",
+    "articles/hexagram-magic-seal-of-solomon-umm-abbas/index.html",
+    "articles/how-certainty-becomes-violence/evidence/index.html",
+    "articles/how-certainty-becomes-violence/index.html",
+    "articles/how-khufu-pyramid-built-merer-diary/index.html",
+    "articles/human-embryo-quran-stages/index.html",
+    "articles/index.html",
+    "articles/iron-fire-light-matter-energy/index.html",
+    "articles/jinn-existence-quran-sunnah/index.html",
+    "articles/juhayman-grand-mosque-1979/evidence/index.html",
+    "articles/juhayman-grand-mosque-1979/index.html",
+    "articles/madain-salih-thamud-nabataean-tombs/evidence/index.html",
+    "articles/madain-salih-thamud-nabataean-tombs/index.html",
+    "articles/marib-dam-sayl-al-arim/index.html",
+    "articles/memory-gaps-unremembered-actions/index.html",
+    "articles/nile-ancient-egypt-flood-calendar-state/index.html",
+    "articles/possession-or-neurological-psychological-disorder/index.html",
+    "articles/quran-day-thousand-fifty-thousand-years-relativity/index.html",
+    "articles/ratq-fatq-big-bang/evidence/index.html",
+    "articles/ratq-fatq-big-bang/index.html",
+    "articles/religious-ocd-scrupulosity/index.html",
+    "articles/six-days-creation-cosmic-time/index.html",
+    "articles/sleep-paralysis-jathoom/index.html",
+    "articles/sleepwalking-why-no-memory/index.html",
+    "articles/spiritual-healing-exploitation-safeguarding/index.html",
+    "articles/universe-expansion-wa-inna-lamusiun/index.html",
+    "articles/unwanted-intrusive-thoughts-meaning/index.html",
+    "articles/water-civilization-power/evidence/index.html",
+    "articles/water-civilization-power/index.html",
+    "articles/water-life-molecular-properties/index.html",
+    "books/index.html",
+    "books/juhayman/index.html",
+    "books/kitab-al-kutub/index.html",
+    "books/sirou-fi-alard/index.html",
+    "books/umm-abbas/index.html",
+    "de/about/index.html",
+    "de/articles/dschuhaiman-grosse-moschee-1979/index.html",
+    "de/articles/fall-von-bagdad-1258-ibn-al-alqami/index.html",
+    "de/articles/index.html",
+    "de/articles/possession-or-neurological-psychological-disorder/index.html",
+    "de/articles/umm-abbas-family-fear/index.html",
+    "de/articles/wie-gewissheit-zu-gewalt-wird/index.html",
+    "de/books/index.html",
+    "de/books/juhayman/index.html",
+    "de/books/kitab-al-kutub/index.html",
+    "de/books/sirou-fi-alard/index.html",
+    "de/books/umm-abbas/index.html",
+    "de/index.html",
+    "de/privacy/index.html",
+    "en/about/index.html",
+    "en/articles/anzalna-iron-meteorites/index.html",
+    "en/articles/civilization-knowledge-justice-collapse/index.html",
+    "en/articles/cyberbullying-university-rumor-stigma/index.html",
+    "en/articles/diagnostic-uncertainty-family-fear-coercive-authority/evidence/index.html",
+    "en/articles/difference-light-nur-quran-sun-moon/index.html",
+    "en/articles/fall-of-baghdad-1258-ibn-al-alqami/index.html",
+    "en/articles/fear-physical-symptoms-umm-abbas/index.html",
+    "en/articles/functional-seizures-vs-epilepsy/index.html",
+    "en/articles/hexagram-magic-seal-of-solomon-umm-abbas/index.html",
+    "en/articles/how-certainty-becomes-violence/index.html",
+    "en/articles/human-embryo-quran-stages/index.html",
+    "en/articles/index.html",
+    "en/articles/iron-fire-light-matter-energy/index.html",
+    "en/articles/juhayman-grand-mosque-1979/index.html",
+    "en/articles/madain-salih-thamud-nabataean-tombs/index.html",
+    "en/articles/marib-dam-sayl-al-arim/index.html",
+    "en/articles/nile-ancient-egypt-flood-calendar-state/index.html",
+    "en/articles/ratq-fatq-big-bang/index.html",
+    "en/articles/religious-ocd-scrupulosity/index.html",
+    "en/articles/six-days-creation-cosmic-time/index.html",
+    "en/articles/sleep-paralysis-jathoom/index.html",
+    "en/articles/spiritual-healing-exploitation-safeguarding/index.html",
+    "en/articles/water-civilization-power/evidence/index.html",
+    "en/articles/water-civilization-power/index.html",
+    "en/articles/water-life-molecular-properties/index.html",
+    "en/books/index.html",
+    "en/books/juhayman/index.html",
+    "en/books/kitab-al-kutub/index.html",
+    "en/index.html",
+    "en/privacy/index.html",
+    "google904951439b331720.html",
+    "guides/arabic-psychological-horror/index.html",
+    "index.html",
+    "privacy/index.html"
+  ],
+  "english_reading_links_corrected": 46,
+  "english_reading_pages": 18,
+  "historical_arabic_links_retained_with_english_option": 38,
+  "direct_appendix_source_links": 10,
+  "all_147_titles_h1_canonicals_hreflang_descriptions_preserved": true,
+  "external_source_destinations_preserved_except_10_existing_counterpart_links_added": true,
+  "all_paragraphs_preserved_in_4_reordered_pages": true,
+  "first_publication_and_source_review_time_labels_preserved": true,
+  "german_html_preserved": true,
+  "clinical_claims_not_rewritten": true,
+  "optional_visible_titles_and_novel_naming_unchanged": true,
+  "no_adsense_resubmission": true,
+  "modified_dates": "Actual editorial modification dates synchronized with sitemap and existing feeds; no source-review date or original publication date advanced.",
+  "visual_review": "Required CI desktop390px360px screenshots, including seven added focused routes. Pending at source checkpoint; PR checks and artifacts carry the final result.",
+  "limits": "No independent specialist review, source-by-source revalidation, ranking/traffic measurement, or AdSense acceptance claim."
+}
