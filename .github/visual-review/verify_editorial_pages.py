@@ -26,6 +26,13 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("reader-answer-ai-ar", "/articles/ai-soul-consciousness-understanding-taklif/", "#answer"),
+    ("reader-answer-ai-en", "/en/articles/ai-soul-consciousness-understanding-taklif/", "#answer"),
+    ("reader-answer-concepts-ar", "/articles/how-concepts-form-adam-names-scientific-models/", "#answer"),
+    ("reader-answer-concepts-en", "/en/articles/how-concepts-form-adam-names-scientific-models/", "#answer"),
+    ("reader-method-ar", "/articles/quran-science-method-evidence/", "#answer"),
+    ("reader-method-en", "/en/articles/quran-science-method-evidence/", "#answer"),
+    ("reader-ratq-sources-en", "/en/articles/ratq-fatq-big-bang/evidence/", "#direct-sources + ul"),
     ("ratq-book-path-en", "/en/articles/ratq-fatq-big-bang/", ".related-work"),
     ("teaching-book-path-en", "/en/articles/teaching-names-ai-understanding/", ".related-work"),
     ("expansion-certainty-en", "/en/articles/universe-expansion-wa-inna-lamusiun/", "#certainty + .table-scroll"),

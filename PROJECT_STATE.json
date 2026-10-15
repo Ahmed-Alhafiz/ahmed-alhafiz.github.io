@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "design/human-home-2026-10-14",
-  "head_sha": "f6047fee01b36e496392044f9f59f14580a34ee1",
-  "head_sha_semantics": "Published main at the start of homepage humanization. This prepublication checkpoint does not represent the new branch head; its PR holds final CI, visual, merge, Pages and live evidence.",
-  "status": "author_home_release_candidate",
-  "updated_at": "2026-10-14",
-  "current_task": "Humanize AR/EN homepages: personal UI copy, four forthcoming books, three selected articles, quiet mobile-first styling. Preserve all other HTML and German.",
-  "next_action": "Read current PR for design/human-home-2026-10-14 before resuming. If merged, Pages succeeded and live AR/EN homepages/assets verified, task is complete. Otherwise finish CI and actual screenshot review, correct concrete defects, merge with expected head, then verify live output.",
+  "branch": "editorial/reader-paths-2026-10-15",
+  "head_sha": "f64d06aff82e8c4369bef64ddfe45430f4378159",
+  "head_sha_semantics": "Published main at the start of the approved reader-paths implementation. Prepublication source checkpoint: inspect the branch PR for final head, checks, actual screenshots, merge, Pages and live evidence.",
+  "status": "reader_paths_release_candidate",
+  "updated_at": "2026-10-15",
+  "current_task": "Implement approved factual clarifications, English reader paths, direct appendix sources, neutral AR/EN wording, answer ordering and bilingual review-state synchronization. Optional H1/book-name changes and AdSense resubmission excluded.",
+  "next_action": "Inspect the PR for editorial/reader-paths-2026-10-15. Complete required CI and actual desktop390px360px screenshot review, merge with expected head, and verify the deployed changed resources. Do not rerun a completed release.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -150,8 +150,8 @@
     "schema_negative_checks": 4
   },
   "unverified": [
-    "This source checkpoint predates the homepage visual/CI/publication review; inspect its current PR for final evidence.",
-    "No real-device Safari test, field Core Web Vitals measurement, search-ranking or traffic outcome is claimed."
+    "CI screenshots/publication are pending at this prepublication source checkpoint; the current branch PR carries final evidence.",
+    "No real-device Safari, field Core Web Vitals, ranking/traffic result or AdSense acceptance is claimed."
   ],
   "blockers": [],
   "monitoring_runbook": [
@@ -364,5 +364,23 @@
     "pull_request_url": "https://github.com/Ahmed-Alhafiz/ahmed-alhafiz.github.io/pull/228",
     "initial_visual_run": 38595285646,
     "initial_visual_result": "447 screenshots and all portrait/overflow checks passed. Book-card fit regression identified and corrected; direct-link TOC layout supported. Final browser interaction gate pending."
+  },
+  "reader_paths_release": {
+    "date": "2026-10-15",
+    "base_sha": "f64d06aff82e8c4369bef64ddfe45430f4378159",
+    "authorization": "Explicit user approval after complete read-only report",
+    "preservation_report": "audit-reports/reader-paths-preservation-2026-10-15.json",
+    "reading_navigation": {
+      "links": 46,
+      "pages": 18,
+      "historical_arabic_record_links_preserved": 38,
+      "existing_counterpart_source_links_exposed": 10
+    },
+    "html_changed": 49,
+    "html_unchanged": 98,
+    "local_checks": "Appropriate site/style/hygiene/editorial/discovery/dossier/entity/UX/ArabicUI/visibility/IndexNow dry-run/analytics checks passed. ArabicUI date coupling was repaired and rerun.",
+    "visual_scope": "Existing full responsive gate plus seven focused answer/method/appendix routes; pending at source checkpoint.",
+    "adsense_resubmitted": false,
+    "optional_h1_and_novel_naming_changed": false
   }
 }
