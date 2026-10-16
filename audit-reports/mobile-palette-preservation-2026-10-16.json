@@ -182,5 +182,6 @@
   },
   "browser_checks_added": "14 templates across1440/390/360, matching masthead/footer/paper/ink and mobile navigation order and44px targets; existing visual gates retained.",
   "limits": "Prepublication source checkpoint. CI screenshots, publication and live verification are completed on the branch PR; no claim of physical Safari testing or new search traffic.",
-  "all_original_text_seo_metadata_dates_links_images_preserved": true
+  "all_original_text_seo_metadata_dates_links_images_preserved": true,
+  "mobile_navigation_fix": "The new browser gate found40px Arabic nav targets from a more specific legacy hardening rule. Raised that rule to44px in both its loaded source forms and rebuilt the shared CSS bundle; preserved the stricter test."
 }

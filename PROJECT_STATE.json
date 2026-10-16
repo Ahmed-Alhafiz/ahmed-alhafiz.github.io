@@ -409,6 +409,7 @@
     "html_changed": 2,
     "html_byte_unchanged": 145,
     "article_texts_and_german_preserved": true,
-    "public_seo_titles_changed": false
+    "public_seo_titles_changed": false,
+    "legacy_nav_fix": "40px Arabic navigation targets were found by the new gate; both hardening sources now44px and the shared bundle rebuilt. First visual run38927959723 retains the diagnostic; rerun required."
   }
 }
