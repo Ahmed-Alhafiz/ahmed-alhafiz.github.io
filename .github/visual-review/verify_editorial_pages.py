@@ -377,7 +377,7 @@ def verify_author_home(driver, width, height, mode, route):
     assert rect(driver, actions)['bottom'] < height, f'{mode}/{language}: introduction pushes main actions below fold'
     secondary = driver.find_element(By.CSS_SELECTOR, '.home-hero .btn:not(.primary)')
     color = driver.execute_script('return getComputedStyle(arguments[0]).color', secondary)
-    assert color == 'rgb(41, 43, 41)', f'{mode}/{language}: unreadable secondary action: {color}'
+    assert color == 'rgb(20, 26, 34)', f'{mode}/{language}: unreadable secondary action: {color}'
     screenshot(driver, ROOT / mode / f'author-home-{language}-top.png', width, height)
     secondary.click()
     WebDriverWait(driver, 5).until(lambda _: driver.current_url.endswith('#works'))
@@ -394,6 +394,47 @@ def verify_author_home(driver, width, height, mode, route):
     screenshot(driver, ROOT / mode / f'author-home-{language}-footer.png', width, height)
 
 
+def verify_shared_palette(driver, width, height, mode):
+    """Keep the home masthead/paper/footer aligned with the internal pages."""
+    routes = (
+        ('library-ar', '/articles/'), ('home-ar', '/'), ('home-en', '/en/'),
+        ('home-de', '/de/'), ('library-en', '/en/articles/'),
+        ('books-ar', '/books/'), ('books-en', '/en/books/'),
+        ('book-ar', '/books/umm-abbas/'), ('book-en', '/en/books/umm-abbas/'),
+        ('about-ar', '/about/'), ('research-ar', '/research-status/'),
+        ('report-ar', '/articles/sleep-paralysis-jathoom/'),
+        ('report-en', '/en/articles/juhayman-grand-mosque-1979/'),
+        ('literary-ar', '/articles/hexagram-magic-seal-of-solomon-umm-abbas/'),
+    )
+    reference = None
+    for name, route in routes:
+        driver.get(f'{BASE}{route}?shared_palette_gate=1')
+        wait_ready(driver)
+        for reject in driver.find_elements(By.CSS_SELECTOR, '#analytics-consent [data-consent="denied"]'):
+            reject.click()
+        colors = driver.execute_script("""
+            const style = selector => getComputedStyle(document.querySelector(selector));
+            return {header:style('.site-header').backgroundColor,
+                    footer:style('.site-footer').backgroundColor,
+                    paper:style('body').backgroundColor,ink:style('body').color};
+        """)
+        if reference is None:
+            reference = colors
+        assert colors['header'] == reference['header'], f'{mode}/{name}: masthead palette drift: {colors}'
+        assert colors['footer'] == reference['footer'], f'{mode}/{name}: footer palette drift: {colors}'
+        if name.startswith('home-'):
+            assert colors['paper'] == reference['paper'] and colors['ink'] == reference['ink'], f'{mode}/{name}: home paper/ink differ from the library: {colors}'
+        assert_page_geometry(driver, width, f'{mode}/palette-{name}')
+        nav = driver.find_element(By.CSS_SELECTOR, '.nav')
+        if width <= 640:
+            brand = driver.find_element(By.CSS_SELECTOR, '.brand')
+            assert rect(driver, nav)['top'] >= rect(driver, brand)['bottom'] - 2, f'{mode}/{name}: navigation overlaps identity row'
+            for link in nav.find_elements(By.TAG_NAME, 'a'):
+                box = rect(driver, link)
+                assert box['height'] >= 44 and box['left'] >= -1 and box['right'] <= width + 1, f'{mode}/{name}: navigation target clipped or too small: {box}'
+        screenshot(driver, ROOT / mode / f'author-home-{name}-palette.png', width, height)
+
+
 def main() -> None:
     ROOT.mkdir(parents=True, exist_ok=True)
     driver = build_driver()
@@ -403,6 +444,7 @@ def main() -> None:
             configure(driver, width, height)
             verify_reading_controls(driver, width, height, mode)
             verify_native_reading_stability(driver, width, height, mode)
+            verify_shared_palette(driver, width, height, mode)
             for home in ("/", "/en/", "/de/", "/about/", "/en/about/", "/de/about/"):
                 driver.get(f"{BASE}{home}?controls_visual_gate=1")
                 wait_ready(driver)
