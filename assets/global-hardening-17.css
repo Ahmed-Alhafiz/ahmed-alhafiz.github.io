@@ -37,7 +37,7 @@
   }
   html[lang="ar"] .nav a{
     min-width:0;
-    min-height:40px;
+    min-height:44px;
     display:grid;
     place-items:center;
     padding:7px 3px 6px;

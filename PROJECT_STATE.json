@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "seo/english-related-mobile-2026-10-15",
-  "head_sha": "4b2150d0b4c68c409617b007c5dd9f244b400c22",
+  "branch": "fix/mobile-palette-2026-10-16",
+  "head_sha": "cecf6c15ca56fe9837994664080a4f352f0f0bb8",
   "head_sha_semantics": "Verified published main at the start of this bounded implementation; source checkpoint before PR/CI/merge. Inspect the branch PR for final head and deployment.",
-  "status": "related_reading_mobile_release_candidate",
-  "updated_at": "2026-10-15",
-  "current_task": "Add nine topic-related English reading links from six articles; deliver smaller responsive cover/logo variants on ten pages; stabilize native contents on the measured Arabic article and underline breadcrumb links. Preserve original article texts, metadata, dates, artwork and German HTML.",
-  "next_action": "Complete local gates, review diff, open one PR, verify required CI and actual responsive screenshots, merge at the verified head, check Pages/live bytes, and repeat the three mobile PageSpeed measurements. Do not repeat the completed PR231 release.",
+  "status": "mobile_palette_release_candidate",
+  "updated_at": "2026-10-16",
+  "current_task": "Unify author home masthead, paper, ink, primary action, footer and mobile toolbar with the existing internal-page palette; align the mobile identity/navigation rows. Preserve text and layout. Continue the five-article SEO proposal separately without changing titles before review.",
+  "next_action": "Run required gates and14-template palette/navigation checks, inspect actual1440/390/360 screenshots, then merge, Pages and exact live verification. PR232 is complete; do not repeat its work.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -402,5 +402,14 @@
     "unmeasured": "post-deploy lab metrics and field performance",
     "no_original_article_or_artwork_rewrite": true,
     "local_checks": "16 passed; logs in task workspace; required runtime/visual CI remains pending"
+  },
+  "mobile_palette_checkpoint": {
+    "source_sha_semantics": "Verified published base before this release; inspect branch PR for final CI/publication/live status.",
+    "preservation_report": "audit-reports/mobile-palette-preservation-2026-10-16.json",
+    "html_changed": 2,
+    "html_byte_unchanged": 145,
+    "article_texts_and_german_preserved": true,
+    "public_seo_titles_changed": false,
+    "legacy_nav_fix": "40px Arabic navigation targets were found by the new gate; both hardening sources now44px and the shared bundle rebuilt. First visual run38927959723 retains the diagnostic; rerun required."
   }
 }
