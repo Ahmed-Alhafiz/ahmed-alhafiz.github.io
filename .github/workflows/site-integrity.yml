@@ -206,6 +206,9 @@ jobs:
       - name: Validate Arabic interface localization and publication register structure
         run: python tools/arabic_ui_integrity.py
 
+      - name: Validate complete libraries topics and declared book reading routes
+        run: python tools/reader_library_integrity.py
+
       - name: Reject temporary release machinery
         shell: bash
         run: |

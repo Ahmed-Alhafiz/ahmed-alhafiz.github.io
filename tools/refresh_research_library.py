@@ -7,12 +7,15 @@ An unclassified new article fails visibly rather than silently disappearing.
 """
 from __future__ import annotations
 
+import argparse
 import json
 import re
 from datetime import datetime
 from html import escape
 from pathlib import Path
 from urllib.parse import urlparse
+
+from reading_paths import BOOK_LABELS, book_assignments
 
 ROOT = Path(__file__).resolve().parents[1]
 TOPICS = {
@@ -38,7 +41,7 @@ COPY = {
         "unit": "publications", "edition": "in English", "topics_label": "Browse by topic", "search": "Search the articles", "placeholder": "For example: consciousness, Baghdad, symptoms…", "clear": "Clear search", "empty": "No matching articles. Try another word or clear the search.",
         "read": "Read the article", "guide": "Read the guide", "updated": "Updated", "article": "Article and research", "guide_type": "Literary guide", "review": "Independent specialist review: not completed. These articles are not peer-reviewed.", "status": "Research and review status", "note": "The books open the questions; independent sources support the research. Each article states its review status and the limits of its claims.",
         "availability": "Available editions", "edition_note": "This page lists the published English editions. Further articles are available in Arabic; an Arabic link does not imply an English translation.", "hub_links": [("ar", "Browse all research in Arabic"), ("de", "Research in German")],
-        "topics": {"cosmos": ("Cosmos and the Qur’an", "Cosmic origins, interpretation, and the boundaries of scientific comparison."), "mind": ("Mind, intelligence, and life", "Language, understanding, and the questions raised by human and machine intelligence."), "history": ("Civilization and history", "Water, institutions, and historical events through their sources."), "psychology": ("Psychology and society", "Symptoms, interpretation, fear, and group certainty; diagnosis and safeguarding remain distinct."), "literature": ("Reading and literature", "Paths into the books and the questions they raise.")},
+        "topics": {"cosmos": ("Cosmos and the Qur’an", "Cosmic origins, interpretation, and the boundaries of scientific comparison."), "mind": ("Mind, intelligence, and life", "Language, understanding, and the questions raised by human and machine intelligence."), "history": ("Civilization and history", "Objects, institutions and historical events through their sources."), "psychology": ("Psychology and society", "Symptoms, interpretation, fear, and group certainty; diagnosis and safeguarding remain distinct."), "literature": ("Reading and literature", "Paths into the books and the questions they raise.")},
         "languages": {"ar": "Arabic", "en": "English", "de": "German"},
     },
     "de": {
@@ -55,10 +58,18 @@ COPY = {
 def tag_text(value: str) -> str:
     return escape(value, quote=True)
 
-def build(lang: str, register: list[dict]) -> None:
+def build(lang: str, register: list[dict], refresh_copy: bool = False) -> None:
     c = COPY[lang]
     prefix = "" if lang == "ar" else lang + "/"
     path = ROOT / prefix / "articles/index.html"
+    source = path.read_text()
+    # Hub summaries have received separate editorial edits. Rearranging the
+    # library must not overwrite those edits with an older feed summary.
+    existing_cards = {}
+    for card in re.findall(r'<article\b[^>]*\bdata-article="[^"]+"[^>]*>.*?</article>', source, re.S):
+        slug = re.search(r'data-article="([^"]+)"', card)[1]
+        existing_cards[slug] = card
+    associations = book_assignments(ROOT)
     feed = json.loads((ROOT / prefix / "articles/feed.json").read_text())["items"]
     by_url = {entry["url"]: entry for entry in feed}
     url_key = {"ar": "url", "en": "english_url", "de": "german_url"}[lang]
@@ -90,12 +101,21 @@ def build(lang: str, register: list[dict]) -> None:
         label, description = c["topics"][topic]
         parts += [f'<section class="library-group" id="topic-{topic}" aria-labelledby="heading-{topic}"><div class="library-group-head"><div><h2 id="heading-{topic}">{label}</h2><p>{description}</p></div><span class="library-group-count">{len(entries):02d}</span></div><div class="library-entries">']
         for item, entry in entries:
+            if not refresh_copy and item["slug"] in existing_cards:
+                card = existing_cards[item["slug"]]
+                if lang in {"ar", "en"}:
+                    book = associations[item["slug"]]
+                    card = re.sub(r' data-book="[^"]*"', '', card)
+                    card = card.replace('<article ', f'<article data-book="{book}" ', 1)
+                parts.append(card)
+                continue
             route = urlparse(entry["url"]).path
             is_guide = route.startswith("/guides/")
             modified_date = entry["date_modified"][:10]
             langs = " · ".join(c["languages"][v] for v in item["languages"])
             title, summary = tag_text(entry["title"]), tag_text(entry["summary"])
-            parts += [f'<article class="library-entry" data-article="{item["slug"]}">',
+            book_attr = f' data-book="{associations[item["slug"]]}"' if lang in {"ar", "en"} else ""
+            parts += [f'<article class="library-entry" data-article="{item["slug"]}"{book_attr}>',
                       f'<div class="library-entry-meta"><span>{c["guide_type"] if is_guide else c["article"]}</span><time datetime="{modified_date}">{c["updated"]} {modified_date}</time><small>{langs}</small></div>',
                       f'<div class="library-entry-copy"><h3><a href="{route}">{title}</a></h3><p>{summary}</p></div>',
                       f'<a class="library-read" href="{route}" aria-label="{c["guide"] if is_guide else c["read"]}: {title}"><span>{c["guide"] if is_guide else c["read"]}</span><span class="reading-arrow" aria-hidden="true">{"←" if lang == "ar" else "→"}</span></a>',
@@ -106,7 +126,6 @@ def build(lang: str, register: list[dict]) -> None:
         route = "/articles/" if other == "ar" else f"/{other}/articles/"
         parts.append(f'<a class="btn" href="{route}" hreflang="{other}">{label}</a>')
     parts += ['</div></section></div></div></section></main>']
-    source = path.read_text()
     source, count = re.subn(r'<main\b[^>]*>.*?</main>', "\n".join(parts), source, flags=re.S)
     assert count == 1, path
     schema_count = 0
@@ -126,10 +145,58 @@ def build(lang: str, register: list[dict]) -> None:
     assert schema_count == 1, f"{lang}: expected exactly one research ItemList"
     if '/assets/research-library.js' not in source:
         source = source.replace('</head>', '<script src="/assets/research-library.js" defer></script>\n</head>')
+    if lang in {"ar", "en"}:
+        source = add_book_controls(source, lang, published, associations)
     path.write_text(source)
     print(f"{lang}: {len(feed)} published entries across {len(groups)} topics")
 
+def add_book_controls(source, lang, published, associations):
+    ar = lang == "ar"
+    prefix = "" if ar else "en/"
+    counts = {book: sum(associations[item["slug"]] == book for item, _ in published) for book in BOOK_LABELS}
+    labels = {
+        "browse": "تصفح حسب" if ar else "Browse by",
+        "topic": "الموضوع" if ar else "Topic",
+        "book": "المؤلَّف" if ar else "Book",
+        "choose": "اختر المؤلَّف" if ar else "Choose a book",
+        "all": "كل المؤلفات" if ar else "All books",
+        "context": "عن الكتاب" if ar else "About the book",
+    }
+    options = ''.join(f'<option value="{book}" data-route="/{prefix}books/{book}/">{tag_text(titles[lang])} ({counts[book]})</option>' for book, titles in BOOK_LABELS.items())
+    controls = (
+        f'<fieldset class="library-view"><legend>{labels["browse"]}</legend>'
+        f'<label><input type="radio" name="library-view" value="topic" checked><span>{labels["topic"]}</span></label>'
+        f'<label><input type="radio" name="library-view" value="book"><span>{labels["book"]}</span></label></fieldset>'
+        f'<div class="library-book-filter" hidden><label for="library-book">{labels["choose"]}</label>'
+        f'<select id="library-book" aria-controls="library-groups"><option value="">{labels["all"]}</option>{options}</select></div>'
+        f'<div class="library-book-context" hidden><a href="/{prefix}books/"><span class="library-book-title"></span><span>{labels["context"]} {"←" if ar else "→"}</span></a></div>'
+    )
+    form = re.search(r'<form class="library-search".*?</form>', source, re.S)[0]
+    source = source.replace(form, '', 1)
+    form = form.replace('<form ', '<form id="library-controls" ', 1)
+    form = form.replace('<p class="library-results"', controls + '<p class="library-results"', 1)
+    boundary = '</div></section><section class="library-section">'
+    assert source.count(boundary) == 1
+    source = source.replace(boundary, f'</div></section><div class="wrap library-toolbar">{form}</div><section class="library-section">', 1)
+    # Place the disclosure after the articles in both DOM and visual order;
+    # a mobile CSS reordering would otherwise send keyboard focus backwards.
+    review = re.search(r'<div class="library-review" id="review-note">.*?</div>', source, re.S)[0]
+    source = source.replace(review, '', 1)
+    ending = '</div></section></div></div></section></main>'
+    assert source.count(ending) == 1
+    source = source.replace(ending, '</div></section>' + review + '</div></div></section></main>', 1)
+    source = source.replace('/assets/research-library.js"', '/assets/research-library.js?v=library-20261025"')
+    css = '<link rel="stylesheet" href="/assets/library-interface.css?v=library-20261025">'
+    if '/assets/library-interface.css' not in source:
+        source = source.replace('</head>', css + '\n</head>')
+    return source
+
+
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--languages', nargs='+', choices=COPY, default=list(COPY))
+    parser.add_argument('--refresh-copy', action='store_true', help='Explicitly replace edited hub cards with current feed copy')
+    args = parser.parse_args()
     register = json.loads((ROOT / "articles/research-index.json").read_text())["items"]
-    for language in COPY:
-        build(language, register)
+    for language in args.languages:
+        build(language, register, args.refresh_copy)

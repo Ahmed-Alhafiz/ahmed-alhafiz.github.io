@@ -1,4 +1,4 @@
-/* Author homepages only. Articles, book pages and German retain their styles. */
+/* The author’s library. Scoped to the Arabic and English homepages. */
 .author-home{--muted:#62645d;background:var(--paper);color:var(--ink)}
 .author-home .wrap{width:min(1100px,calc(100% - 48px))}
 .author-home .header-inner{min-height:66px;gap:22px}
@@ -11,34 +11,34 @@
 .author-home .langs a{color:#c8d2da;border-color:rgba(255,255,255,.18);border-radius:3px;min-width:40px;min-height:44px;display:grid;place-items:center}
 .author-home .langs a:hover,.author-home .langs a:focus-visible,.author-home .langs a[aria-current=page]{color:#08131e;background:#d9a27f;border-color:#d9a27f}
 .author-home .home-hero{background:transparent;color:var(--ink);border-bottom:0}
-.author-home .home-hero::before,.author-home .hero-portrait::before{display:none}
-.author-home .home-hero-grid{min-height:0;padding-block:66px 64px;display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:16px 76px;align-items:start}
-.author-home .hero-copy{grid-column:1;grid-row:1;min-width:0}
-.author-home .eyebrow{font:inherit;font-size:15px;letter-spacing:0;text-transform:none;color:var(--copper);margin:0 0 16px}
-.author-home .home-hero h1{display:flex;flex-direction:column;gap:10px;color:var(--ink);font-size:clamp(40px,5vw,64px);line-height:1.25;margin:0;letter-spacing:0}
+.author-home .home-hero::before{display:none}
+.author-home .home-hero-grid{min-height:0;padding-block:48px 38px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
+.author-home .hero-copy{grid-column:1;grid-row:1;min-width:0;display:grid;grid-template-columns:1fr auto;column-gap:12px;align-items:center}
+.author-home .eyebrow{font:inherit;font-size:14px;letter-spacing:0;text-transform:none;color:var(--copper);margin:0;grid-column:1;grid-row:1}
+.author-home .home-hero h1{grid-column:1/-1;grid-row:2;display:flex;flex-direction:column;gap:10px;color:var(--ink);font-size:clamp(38px,4.5vw,58px);line-height:1.25;margin:0;letter-spacing:0}
 .author-home .home-hero h1 [lang=en]{font:400 .43em/1.3 Georgia,"Times New Roman",serif;color:var(--muted);letter-spacing:.01em;text-align:right}
 .author-home .identity-separator{display:none}
 html[dir=ltr] .author-home .home-hero h1 [lang=en]{order:0;font:400 1em/1.12 Georgia,"Times New Roman",serif;color:var(--ink);letter-spacing:-.025em;text-align:left}
 html[dir=ltr] .author-home .home-hero h1 [lang=ar]{order:1;font-size:.43em;color:var(--muted);line-height:1.5;text-align:left}
-.author-home .hero-portrait{grid-column:2;grid-row:1/3;justify-self:end;align-self:center;width:240px;aspect-ratio:4/5;margin:0;border:0;overflow:hidden;border-radius:5px}
-.author-home .hero-portrait img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;border:0;border-radius:0;box-shadow:none}
-.author-home .hero-introduction{grid-column:1;grid-row:2;min-width:0}
-.author-home .hero-statement{font-size:20px;line-height:1.85;color:#3f4d59;margin:0;max-width:660px}
+
+
+.author-home .hero-introduction{grid-column:2;grid-row:1;min-width:0}
+.author-home .hero-statement{font-size:18px;line-height:1.85;color:#3f4d59;margin:0;max-width:660px}
 .author-home .actions{gap:12px;margin-top:23px}
 .author-home .btn{min-height:48px;padding:10px 20px;border-radius:8px;font-size:15px;line-height:1.6;border-color:#b7b1a3}
 .author-home .btn.primary{background:#10263a;color:#fff;border-color:#10263a}
 .author-home .home-hero .btn:not(.primary){color:var(--ink);border-color:#b7b1a3;background:transparent}
 .author-home .btn:hover,.author-home .btn:focus-visible{transform:none;box-shadow:none;background:#e9e4d8}
 .author-home .btn.primary:hover,.author-home .btn.primary:focus-visible{background:#213f56;border-color:#213f56}
-.author-home .author-about{display:inline-flex;gap:10px;align-items:center;min-height:44px;margin-top:12px;color:var(--copper);font-size:15px}
-.author-home .home-books,.author-home .home-reading{padding-block:44px 54px;scroll-margin-top:110px}
-.author-home .home-books .wrap{border-top:1px solid #cfc8b9;padding-top:32px}
+.author-home .author-about{grid-column:2;grid-row:1;display:inline-flex;gap:8px;align-items:center;min-height:44px;margin:0;color:var(--copper);font-size:13px}
+.author-home .home-books,.author-home .home-reading{padding-block:20px 48px;scroll-margin-top:calc(var(--masthead-height,100px) + 16px)}
+.author-home .home-books .wrap{border-top:1px solid #cfc8b9;padding-top:24px}
 .author-home .home-section-heading{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;margin-bottom:28px}
 .author-home h2{font-size:34px;line-height:1.45;margin:0;letter-spacing:0}
 html[dir=ltr] .author-home h2{font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .author-home .home-section-heading p{font-size:15px;color:var(--muted);margin:0}
 .author-home .author-books{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
-.author-home .author-book{min-width:0}
+.author-home .author-book{min-width:0;display:flex;flex-direction:column}
 .author-home .book-cover-link{display:block;width:min(100%,190px);margin-bottom:22px;box-shadow:3px 5px 10px #292b2914}
 .author-home .book-card-cover{display:block;width:100%;aspect-ratio:2/3;overflow:hidden;border-radius:2px;background:#e9e4d8}
 .author-home .book-card-cover img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;border-radius:0}
@@ -75,10 +75,10 @@ html[dir=ltr] .author-home .selected-reading-list h3{font-family:Georgia,"Times 
 .author-home #analytics-consent .analytics-consent__copy p{font-size:13px;line-height:1.65}
 .author-home #analytics-consent :is(button,a){border-radius:6px;min-height:44px;line-height:1.3}
 @media(max-width:960px){
-  .author-home .home-hero-grid{gap:16px 38px;padding-block:46px}
+  .author-home .home-hero-grid{gap:30px;padding-block:34px}
   .author-home .author-books{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 28px}
-  .author-home .author-book{display:grid;grid-template-columns:112px minmax(0,1fr);gap:20px}
-  .author-home .book-cover-link{width:112px;margin:0;align-self:start}
+  .author-home .author-book{display:flex;flex-direction:column}
+  .author-home .book-cover-link{width:min(100%,190px);align-self:start}
 }
 @media(max-width:640px){
   .author-home .wrap{width:calc(100% - 36px)}
@@ -92,31 +92,33 @@ html[dir=ltr] .author-home .selected-reading-list h3{font-family:Georgia,"Times 
   .author-home .brand-copy span{font-size:10px}
   .author-home .langs{gap:3px}
   .author-home .langs a{min-width:34px;padding-inline:5px}
-  .author-home .home-hero-grid{grid-template-columns:minmax(0,1fr) 108px;gap:22px 18px;padding-block:32px 22px}
-  .author-home .hero-portrait{grid-column:2;grid-row:1;width:108px;align-self:start;order:0}
+  .author-home .home-hero-grid{grid-template-columns:minmax(0,1fr);gap:14px;padding-block:20px 24px}
+
   .author-home .hero-copy{grid-column:1;grid-row:1;align-self:center}
-  .author-home .eyebrow{font-size:13px;margin-bottom:9px}
-  .author-home .home-hero h1{font-size:32px;line-height:1.45;gap:5px}
+  .author-home .eyebrow{font-size:13px;margin:0}
+  .author-home .home-hero h1{flex-direction:row;align-items:baseline;flex-wrap:wrap;font-size:32px;line-height:1.4;gap:3px 12px}
   .author-home .home-hero h1 [lang=en]{font-size:.5em}
   html[dir=ltr] .author-home .home-hero h1{font-size:32px;line-height:1.2}
   html[dir=ltr] .author-home .home-hero h1 [lang=ar]{font-size:.5em}
   .author-home .hero-introduction{grid-column:1/-1;grid-row:2}
-  .author-home .hero-statement{font-size:18px;line-height:1.85}
-  .author-home .actions{gap:9px;margin-top:18px}
+  .author-home .hero-statement{font-size:16px;line-height:1.8}
+  .author-home .actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:14px}
   .author-home .btn{font-size:14px;padding:10px 14px}
   .author-home .home-books,.author-home .home-reading{padding-block:30px 34px;scroll-margin-top:126px}
-  .author-home .home-books .wrap{padding-top:24px}
+  .author-home .home-books{padding-block:8px 32px}
+  .author-home .author-about{font-size:12px}
+  .author-home .home-books .wrap{padding-top:20px}
   .author-home .home-section-heading{margin-bottom:23px;gap:4px 18px}
   .author-home h2{font-size:28px}
-  .author-home .author-books{grid-template-columns:minmax(0,1fr);gap:0}
-  .author-home .author-book{grid-template-columns:96px minmax(0,1fr);gap:18px;padding-block:21px;border-top:1px solid #ddd6c8}
+  .author-home .author-books{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 18px}
+  .author-home .author-book{display:flex;flex-direction:column;gap:0;padding:0;border:0}
   .author-home .author-book:first-child{padding-top:0;border-top:0}
-  .author-home .book-cover-link{width:96px}
-  .author-home .book-summary h3{font-size:20px;line-height:1.6}
+  .author-home .book-cover-link{width:min(100%,190px);margin-bottom:14px}
+  .author-home .book-summary h3{font-size:18px;line-height:1.65}
   html[dir=ltr] .author-home .book-summary h3{font-size:23px}
   .author-home .book-original{font-size:14px}
   .author-home .book-kind{font-size:12px;margin-bottom:5px}
-  .author-home .book-description{font-size:15px;line-height:1.8}
+  .author-home .book-description{font-size:14px;line-height:1.8}
   .author-home .home-catalogue{margin-top:6px}
   .author-home .selected-reading-list li{grid-template-columns:24px minmax(0,1fr);gap:12px;padding-block:22px}
   .author-home .reading-arrow{display:none}
@@ -130,3 +132,9 @@ html[dir=ltr] .author-home .selected-reading-list h3{font-family:Georgia,"Times 
   .author-home #analytics-consent .analytics-consent__actions a{grid-column:1/-1;min-height:44px;padding:4px 8px;border:0;font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){.author-home{scroll-behavior:auto}.author-home .btn{transition:none}}
+
+/* Reading routes are navigation, separate from the book description. */
+.author-home .book-summary{display:flex;flex-direction:column;flex:1;min-width:0}
+.author-home .book-reading-link{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;border-top:1px solid #d6cfbf;margin-top:auto;color:#234c63;font-size:13px;line-height:1.6}
+.author-home .book-reading-link small{font:12px/1.4 Arial,sans-serif;color:#62645d;flex:none}
+.author-home .book-reading-link:is(:hover,:focus-visible){text-decoration:underline;text-underline-offset:4px}

@@ -225,6 +225,72 @@ def screenshot(driver: webdriver.Chrome, path: Path, width: int, height: int) ->
         raise SystemExit(f"Suspiciously small screenshot: {path}")
 
 
+def verify_book_browsing(driver, route, name, width, lang):
+    """Exercise all four book paths, intersection with search, reset and links."""
+    from selenium.webdriver.support.ui import Select
+    counts = {'sirou-fi-alard': 30, 'umm-abbas': 18 if lang == 'ar' else 17,
+              'kitab-al-kutub': 1, 'juhayman': 2}
+    total = sum(counts.values())
+    visible = lambda: [e for e in driver.find_elements(By.CSS_SELECTOR, '.library-entry') if e.is_displayed()]
+    driver.find_element(By.CSS_SELECTOR, '.library-view label:has(input[value="book"])').click()
+    select = Select(driver.find_element(By.ID, 'library-book'))
+    mode = name.split('/')[0]
+    height = driver.execute_script('return innerHeight')
+    for book, expected in counts.items():
+        select.select_by_value(book)
+        WebDriverWait(driver, 5).until(lambda _: len(visible()) == expected)
+        assert all(e.get_attribute('data-book') == book for e in visible()), f'{name}/{book}: unrelated article shown'
+        if lang == 'ar':
+            assert driver.find_element(By.CSS_SELECTOR, '.library-results').text == f'{expected} من {total} مادة'
+        context = driver.find_element(By.CSS_SELECTOR, '.library-book-context a')
+        assert context.get_attribute('href').endswith(f'/books/{book}/')
+        assert not driver.find_element(By.CSS_SELECTOR, '.library-topics').is_displayed()
+        assert driver.find_element(By.CSS_SELECTOR, '.library-review').is_displayed(), f'{name}: review disclosure lost'
+        assert_page_geometry(driver, width, f'{name}/{book}')
+        controls = driver.find_element(By.ID, 'library-controls')
+        driver.execute_script("arguments[0].scrollIntoView({block:'start',behavior:'auto'});", controls)
+        screenshot(driver, ROOT / mode / f'author-home-library-{lang}-{book}.png', width, height)
+    field = driver.find_element(By.ID, 'article-search')
+    field.send_keys('zzzz-no-matching-article-92831')
+    WebDriverWait(driver, 5).until(lambda _: not visible())
+    driver.find_element(By.CSS_SELECTOR, '.library-clear').click()
+    WebDriverWait(driver, 5).until(lambda _: len(visible()) == total)
+    assert driver.find_element(By.CSS_SELECTOR, '.library-view input[value="topic"]').is_selected()
+    driver.get(f'{BASE}{route}?book=juhayman#library-controls')
+    wait_ready(driver)
+    assert len(visible()) == 2, f'{name}: direct book link did not filter'
+    assert driver.find_element(By.CSS_SELECTOR, '.library-view input[value="book"]').is_selected()
+    driver.find_element(By.CSS_SELECTOR, '.library-clear').click()
+    WebDriverWait(driver, 5).until(lambda _: len(visible()) == total)
+    assert 'book=' not in driver.current_url, f'{name}: reset retains stale book filter'
+    driver.get(f'{BASE}{route}?book=unknown-book')
+    wait_ready(driver)
+    assert len(visible()) == total, f'{name}: unknown book hides published articles'
+    driver.get(f'{BASE}{route}?editorial_visual_gate=1')
+    wait_ready(driver)
+
+
+def verify_book_journeys(driver, width, height, mode):
+    for lang, prefix in [('ar', ''), ('en', 'en/')]:
+        for book, count in [('sirou-fi-alard', 30), ('umm-abbas', 18 if lang == 'ar' else 17), ('kitab-al-kutub', 1), ('juhayman', 2)]:
+            driver.get(f'{BASE}/{prefix}books/{book}/?reading_path_gate=1')
+            wait_ready(driver)
+            nav = driver.find_element(By.CSS_SELECTOR, '.book-route-nav')
+            assert not driver.find_elements(By.CSS_SELECTOR, '.book-section-nav'), f'{mode}/{lang}/{book}: duplicate book navigation'
+            link = nav.find_element(By.CSS_SELECTOR, '.book-route-reading')
+            assert link.get_attribute('href').endswith(f'/{prefix}articles/?book={book}#library-controls')
+            assert link.find_element(By.TAG_NAME, 'small').text == str(count)
+            for target in nav.find_elements(By.TAG_NAME, 'a'):
+                assert rect(driver, target)['height'] >= 44
+            driver.execute_script("arguments[0].scrollIntoView({block:'center',behavior:'auto'});", nav)
+            assert_page_geometry(driver, width, f'{mode}/book-{lang}-{book}')
+            screenshot(driver, ROOT / mode / f'author-home-book-route-{lang}-{book}.png', width, height)
+            nav.find_element(By.CSS_SELECTOR, 'a[href="#about-book"]').click()
+            about = driver.find_element(By.ID, 'about-book')
+            header = driver.find_element(By.CSS_SELECTOR, '.site-header')
+            WebDriverWait(driver, 5).until(lambda _: rect(driver, about)['top'] >= rect(driver, header)['bottom'] - 2)
+
+
 def verify_library(driver: webdriver.Chrome, route: str, name: str, width: int) -> None:
     """Exercise filtering, reset, RTL/LTR and the readable no-script fallback."""
     from urllib.parse import urlparse
@@ -247,6 +313,8 @@ def verify_library(driver: webdriver.Chrome, route: str, name: str, width: int) 
     if reject:
         reject[0].click()
         WebDriverWait(driver, 5).until(lambda _: not driver.find_elements(By.ID, "analytics-consent"))
+    if lang in {"ar", "en"}:
+        verify_book_browsing(driver, route, name, width, lang)
     field = driver.find_element(By.ID, "article-search")
     assert field.is_displayed(), f"{name}: search enhancement did not initialize"
     query = {"ar": "الْوَعْي", "en": "Baghdad", "de": "Bagdad"}[lang]
@@ -369,6 +437,15 @@ def verify_author_home(driver, width, height, mode, route):
         reject[0].click()
     assert_page_geometry(driver, width, f'{mode}/author-home-{language}')
     assert len(driver.find_elements(By.CSS_SELECTOR, '.author-book')) == 4
+    assert not driver.find_elements(By.CSS_SELECTOR, '.hero-portrait')
+    covers = driver.find_elements(By.CSS_SELECTOR, '.author-book .book-card-cover')
+    if width <= 640:
+        first, second = rect(driver, covers[0]), rect(driver, covers[1])
+        assert abs(first['top'] - second['top']) <= 2, f'{mode}/{language}: two-column book shelf lost'
+        assert first['top'] < height - 100, f'{mode}/{language}: no opening-screen books'
+        assert abs(first['width'] / first['height'] - 2/3) < .01
+        assert len(driver.find_elements(By.CSS_SELECTOR, '.book-reading-link')) == 4
+
     links = driver.find_elements(By.CSS_SELECTOR, '.selected-reading-list h3 a')
     assert len(links) == 3
     for link in links:
@@ -445,16 +522,21 @@ def main() -> None:
             verify_reading_controls(driver, width, height, mode)
             verify_native_reading_stability(driver, width, height, mode)
             verify_shared_palette(driver, width, height, mode)
+            verify_book_journeys(driver, width, height, mode)
             for home in ("/", "/en/", "/de/", "/about/", "/en/about/", "/de/about/"):
                 driver.get(f"{BASE}{home}?controls_visual_gate=1")
                 wait_ready(driver)
-                portrait = driver.find_element(By.CSS_SELECTOR, ".hero-portrait img, .profile-portrait img")
-                assert "/assets/portraits/" in portrait.get_property("currentSrc"), f"{mode}/{home}: responsive image not selected"
-                # naturalWidth on a srcset image is density-corrected CSS pixels.
-                # Decode the selected asset independently to measure actual pixels.
-                pixels = driver.execute_async_script("const done=arguments[arguments.length-1], img=new Image(); img.onload=()=>done(img.naturalWidth); img.onerror=()=>done(0); img.src=arguments[0];", portrait.get_property("currentSrc"))
-                density = driver.execute_script("return devicePixelRatio")
-                assert pixels >= rect(driver, portrait)["width"] * density - 1, f"{mode}/{home}: insufficient portrait resolution"
+                portraits = driver.find_elements(By.CSS_SELECTOR, ".hero-portrait img, .profile-portrait img")
+                if home in {'/', '/en/'}:
+                    assert not portraits, f"{mode}/{home}: retired home portrait returned"
+                else:
+                    portrait = driver.find_element(By.CSS_SELECTOR, ".hero-portrait img, .profile-portrait img")
+                    assert "/assets/portraits/" in portrait.get_property("currentSrc"), f"{mode}/{home}: responsive image not selected"
+                    # naturalWidth on a srcset image is density-corrected CSS pixels.
+                    # Decode the selected asset independently to measure actual pixels.
+                    pixels = driver.execute_async_script("const done=arguments[arguments.length-1], img=new Image(); img.onload=()=>done(img.naturalWidth); img.onerror=()=>done(0); img.src=arguments[0];", portrait.get_property("currentSrc"))
+                    density = driver.execute_script("return devicePixelRatio")
+                    assert pixels >= rect(driver, portrait)["width"] * density - 1, f"{mode}/{home}: insufficient portrait resolution"
                 imports = driver.execute_script("return Array.from(document.styleSheets).filter(s=>(s.href||'').endsWith('/assets/articles.css')).flatMap(s=>Array.from(s.cssRules)).filter(r=>r.type===3).length")
                 assert imports == 0, f"{mode}/{home}: nested stylesheet waterfall returned"
                 for button in driver.find_elements(By.CSS_SELECTOR, ".home-hero .actions a.btn, .profile-hero .actions a.btn"):

@@ -32,8 +32,8 @@ VIEWPORTS = {
 }
 
 GEOMETRY_TESTS = (
-    ("home-ar", "/", ".hero-portrait", ".home-hero-grid>div:first-child"),
-    ("home-en", "/en/", ".hero-portrait", ".home-hero-grid>div:first-child"),
+    ("home-ar", "/", ".author-book:first-child .book-card-cover", ".home-hero-grid>div:first-child"),
+    ("home-en", "/en/", ".author-book:first-child .book-card-cover", ".home-hero-grid>div:first-child"),
     ("home-de", "/de/", ".hero-portrait", ".home-hero-grid>div:first-child"),
     ("about-ar", "/about/", ".profile-portrait", ".profile-grid>div:first-child"),
     ("about-en", "/en/about/", ".profile-portrait", ".profile-grid>div:first-child"),
@@ -274,12 +274,12 @@ def overlap_area(first: dict[str, float], second: dict[str, float]) -> float:
 def measure_layout(driver: webdriver.Chrome, mode: str, width: int, height: int) -> list[dict[str, Any]]:
     configure_viewport(driver, width, height)
     results: list[dict[str, Any]] = []
-    for name, route, portrait_selector, copy_selector in GEOMETRY_TESTS:
+    for name, route, frame_selector, copy_selector in GEOMETRY_TESTS:
         open_page(driver, route, f"geometry-{mode}")
-        portrait = driver.find_element(By.CSS_SELECTOR, portrait_selector)
-        image = portrait.find_element(By.TAG_NAME, "img")
+        frame = driver.find_element(By.CSS_SELECTOR, frame_selector)
+        image = frame.find_element(By.TAG_NAME, "img")
         copy = driver.find_element(By.CSS_SELECTOR, copy_selector)
-        portrait_rect = rounded_rect(driver, portrait)
+        frame_rect = rounded_rect(driver, frame)
         image_rect = rounded_rect(driver, image)
         copy_rect = rounded_rect(driver, copy)
         computed = driver.execute_script(
@@ -304,12 +304,13 @@ def measure_layout(driver: webdriver.Chrome, mode: str, width: int, height: int)
                 "name": name,
                 "viewport": {"width": width, "height": height},
                 "document": document_metrics,
-                "portrait": portrait_rect,
+                "frame": frame_rect,
                 "image": image_rect,
                 "copy": copy_rect,
-                "overlapArea": overlap_area(portrait_rect, copy_rect),
-                "verticalGap": round(copy_rect["top"] - portrait_rect["bottom"], 2),
+                "overlapArea": overlap_area(frame_rect, copy_rect),
+                "verticalGap": round(copy_rect["top"] - frame_rect["bottom"], 2),
                 "authorHome": driver.execute_script("return document.body.classList.contains('author-home')"),
+                "visualKind": "book-cover" if name in {"home-ar", "home-en"} else "portrait",
                 **computed,
             }
         )
@@ -324,63 +325,64 @@ def verify_layout(reports: dict[str, list[dict[str, Any]]]) -> None:
     for mode, report in reports.items():
         by_name = {item["name"]: item for item in report}
         if len(by_name) != 6:
-            raise SystemExit(f"{mode}: duplicate or missing portrait tests")
+            raise SystemExit(f"{mode}: duplicate or missing visual geometry tests")
 
         for group in (
-            ("home-ar", "home-en", "home-de"),
+            ("home-ar", "home-en"),
             ("about-ar", "about-en", "about-de"),
         ):
-            widths = [by_name[name]["portrait"]["width"] for name in group]
-            heights = [by_name[name]["portrait"]["height"] for name in group]
+            widths = [by_name[name]["frame"]["width"] for name in group]
+            heights = [by_name[name]["frame"]["height"] for name in group]
             if max(widths) - min(widths) > 60:
                 raise SystemExit(
-                    f"{mode}: cross-language portrait width drift: {dict(zip(group, widths))}"
+                    f"{mode}: cross-language visual width drift: {dict(zip(group, widths))}"
                 )
             if max(heights) - min(heights) > 75:
                 raise SystemExit(
-                    f"{mode}: cross-language portrait height drift: {dict(zip(group, heights))}"
+                    f"{mode}: cross-language visual height drift: {dict(zip(group, heights))}"
                 )
 
         for name, item in by_name.items():
-            portrait = item["portrait"]
+            frame = item["frame"]
             image = item["image"]
             copy = item["copy"]
             document = item["document"]
-            ratio = portrait["width"] / portrait["height"]
-            if not 0.79 <= ratio <= 0.81:
-                raise SystemExit(f"{mode} {name}: portrait ratio {ratio:.4f} is not 4:5")
-            if abs(portrait["width"] - image["width"]) > 1.5 or abs(portrait["height"] - image["height"]) > 1.5:
-                raise SystemExit(f"{mode} {name}: portrait image does not fill its frame")
+            ratio = frame["width"] / frame["height"]
+            expected_ratio = 2 / 3 if item["visualKind"] == "book-cover" else 4 / 5
+            if abs(ratio - expected_ratio) > .01:
+                raise SystemExit(f"{mode} {name}: {item['visualKind']} aspect ratio drift: {ratio:.4f}")
+            if abs(frame["width"] - image["width"]) > 1.5 or abs(frame["height"] - image["height"]) > 1.5:
+                raise SystemExit(f"{mode} {name}: image does not fill its frame")
             if item["objectFit"] != "cover":
                 raise SystemExit(f"{mode} {name}: object-fit is {item['objectFit']!r}")
             if item["overlapArea"] > 2:
-                raise SystemExit(f"{mode} {name}: portrait overlaps copy by {item['overlapArea']} px²")
+                raise SystemExit(f"{mode} {name}: visual overlaps copy by {item['overlapArea']} px²")
             if document["scrollWidth"] > document["clientWidth"] + 1:
                 raise SystemExit(
                     f"{mode} {name}: horizontal overflow "
                     f"{document['scrollWidth']} > {document['clientWidth']}"
                 )
             viewport_width = item["viewport"]["width"]
-            for label, rect in (("portrait", portrait), ("copy", copy)):
+            for label, rect in (("frame", frame), ("copy", copy)):
                 if rect["left"] < -1.5 or rect["right"] > viewport_width + 1.5:
                     raise SystemExit(f"{mode} {name}: {label} escapes viewport: {rect}")
             if mode != "desktop":
                 if item['authorHome']:
-                    # The compact author introduction intentionally places the
-                    # portrait beside the name, with prose below both columns.
-                    if not 96 <= portrait['width'] <= 140:
-                        raise SystemExit(f'{mode} {name}: compact portrait width drift')
-                    if min(portrait['bottom'], copy['bottom']) <= max(portrait['top'], copy['top']):
-                        raise SystemExit(f'{mode} {name}: portrait and name no longer share a row')
+                    if not 130 <= frame['width'] <= 190:
+                        raise SystemExit(f'{mode} {name}: mobile library cover width drift')
+                    if frame['top'] >= item['viewport']['height'] - 100:
+                        raise SystemExit(f'{mode} {name}: books are not visible in the opening screen')
+                    if frame['top'] < copy['bottom']:
+                        raise SystemExit(f'{mode} {name}: cover overlaps author introduction')
                     continue
-                if portrait["bottom"] > copy["top"] - 8:
+                if frame["bottom"] > copy["top"] - 8:
                     raise SystemExit(
                         f"{mode} {name}: portrait is not cleanly above copy; "
                         f"gap={item['verticalGap']}"
                     )
-                if not 140 <= portrait["width"] <= 230:
+                if not 140 <= frame["width"] <= 230:
                     raise SystemExit(
-                        f"{mode} {name}: portrait width {portrait['width']} outside 140–230 px"
+                        f"{mode} {name}: portrait width {frame['width']} outside 140–230 px"
                     )
 
 
@@ -547,7 +549,7 @@ def main() -> None:
             for mode, (width, height) in VIEWPORTS.items()
         }
         verify_layout(reports)
-        print("Computed portrait geometry passed across Arabic, English, and German")
+        print("Computed geometry passed: two author-library covers and four preserved portraits")
 
         for mode, (width, height) in VIEWPORTS.items():
             render_top_pages(driver, mode, width, height)
@@ -560,7 +562,7 @@ def main() -> None:
     total_screenshots = (len(TOP_PAGES) + len(TARGET_PAGES)) * len(VIEWPORTS)
     print(
         f"Visual review passed: {total_screenshots} exact-size screenshots, "
-        f"{len(GEOMETRY_TESTS)} portrait tests at {len(VIEWPORTS)} viewports, "
+        f"{len(GEOMETRY_TESTS)} visual geometry tests at {len(VIEWPORTS)} viewports, "
         f"{len(TARGET_PAGES) * len(VIEWPORTS)} verified targeted captures, "
         f"and {len(SOCIAL_CARDS)} social cards."
     )
