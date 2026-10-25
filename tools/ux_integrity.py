@@ -204,7 +204,14 @@ def validate_public_page(path: Path, errors: list[str]) -> int:
 def validate_priority_pages(errors: list[str]) -> None:
     for rel, language in {**HOME_PAGES, **PROFILE_PAGES}.items():
         html = (ROOT / rel).read_text(encoding="utf-8")
-        if not PORTRAIT_RE.search(html):
+        if rel in {"index.html", "en/index.html"}:
+            if 'class="hero-portrait"' in html:
+                errors.append(f"{rel}: author-library homepage must not contain the retired hero portrait")
+            if html.count('class="author-book" data-book=') != 4:
+                errors.append(f"{rel}: expected four identified book entries")
+            if html.count('class="book-reading-link"') != 4:
+                errors.append(f"{rel}: one reading route per book is required")
+        elif not PORTRAIT_RE.search(html):
             errors.append(f"{rel}: stable 1229×1536 portrait markup missing")
         if language == "ar" and 'dir="rtl"' not in html:
             errors.append(f"{rel}: Arabic direction missing")
@@ -310,8 +317,8 @@ def main() -> None:
         "UX integrity passed: "
         f"{len(pages)} public pages, {wrapped_cards} cropped book cards, "
         "one compact footer each, three official contact channels, no duplicate "
-        "language footers, no public GitHub identity, stable tri-language portrait "
-        "markup, compact mobile portrait treatment, and forced 2:3 book-cover frames."
+        "language footers, no public GitHub identity, preserved profile/German-home portrait "
+        "markup, portrait-free AR/EN author libraries, and forced 2:3 book-cover frames."
     )
 
 

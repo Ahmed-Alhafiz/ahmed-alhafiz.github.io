@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "fix/mobile-palette-2026-10-16",
-  "head_sha": "cecf6c15ca56fe9837994664080a4f352f0f0bb8",
-  "head_sha_semantics": "Verified published main at the start of this bounded implementation; source checkpoint before PR/CI/merge. Inspect the branch PR for final head and deployment.",
-  "status": "mobile_palette_release_candidate",
-  "updated_at": "2026-10-16",
-  "current_task": "Unify author home masthead, paper, ink, primary action, footer and mobile toolbar with the existing internal-page palette; align the mobile identity/navigation rows. Preserve text and layout. Continue the five-article SEO proposal separately without changing titles before review.",
-  "next_action": "Run required gates and14-template palette/navigation checks, inspect actual1440/390/360 screenshots, then merge, Pages and exact live verification. PR232 is complete; do not repeat its work.",
+  "branch": "design/book-library-2026-10-25",
+  "head_sha": "214f027c88eff35de87da39dd2b2ebb676cf23bb",
+  "head_sha_semantics": "Published source base for the current candidate. This is not a self-reference to the uncommitted candidate or a claim of live deployment. See the branch PR for final checks and publication.",
+  "status": "book_library_release_candidate",
+  "updated_at": "2026-10-25",
+  "current_task": "Approved author-library interface: remove AR/EN home hero portrait; compact introduction; two-column mobile cover shelf; local topic/book research browsing and declared book reading routes. Preserve all article/guide copy and existing book information; German HTML unchanged.",
+  "next_action": "Complete targeted local gates, one consolidated visual CI run, actual screenshot review, then merge/Pages/live verification. Titles, AdSense, GSC and Medium are outside this release.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -411,5 +411,26 @@
     "article_texts_and_german_preserved": true,
     "public_seo_titles_changed": false,
     "legacy_nav_fix": "40px Arabic navigation targets were found by the new gate; both hardening sources now44px and the shared bundle rebuilt. First visual run38927959723 retains the diagnostic; rerun required."
+  },
+  "book_library_checkpoint": {
+    "date": "2026-10-25",
+    "source_base_sha": "214f027c88eff35de87da39dd2b2ebb676cf23bb",
+    "preservation_audit": "audit-reports/book-library-preservation-2026-10-25.json",
+    "changed_html": 14,
+    "unchanged_html": 133,
+    "book_counts_ar": {
+      "sirou-fi-alard": 30,
+      "umm-abbas": 18,
+      "kitab-al-kutub": 1,
+      "juhayman": 2
+    },
+    "book_counts_en": {
+      "sirou-fi-alard": 30,
+      "umm-abbas": 17,
+      "kitab-al-kutub": 1,
+      "juhayman": 2
+    },
+    "no_article_or_guide_copy_changes": true,
+    "status": "source candidate; final release evidence belongs to the branch PR"
   }
 }
