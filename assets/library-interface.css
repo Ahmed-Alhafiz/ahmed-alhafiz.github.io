@@ -20,7 +20,7 @@
 .research-library .library-view input[type=radio]{appearance:auto;width:17px;height:17px;min-height:0;padding:0;margin:0;border:0;flex:none;accent-color:#b9724c}
 .research-library .library-book-filter{grid-column:2;grid-row:3/6;min-width:0}
 .research-library .library-book-filter label{margin:0 0 8px}
-.research-library .library-book-filter select{width:100%;min-width:0;min-height:50px;max-width:100%;font:inherit;font-size:15px;line-height:1.6;padding:10px 12px;border:1px solid #aeb7ba;border-radius:6px;color:#141a22;background:#fffdf8;cursor:pointer}
+.research-library .library-book-filter select{width:100%;min-width:0;min-height:50px;max-width:100%;font:inherit;font-size:16px;line-height:1.6;padding:10px 12px;border:1px solid #aeb7ba;border-radius:6px;color:#141a22;background:#fffdf8;cursor:pointer}
 .research-library .library-results{grid-column:1/-1;margin:0;color:#52616b;font-size:13px;line-height:1.7}
 .research-library .library-book-context{grid-column:1;min-width:0}
 .research-library .library-book-context a{display:flex;flex-direction:column;align-items:start;gap:6px;color:#234c63;min-height:44px;line-height:1.7;padding-block:8px}
@@ -81,6 +81,8 @@
   html[dir=ltr] .research-library .library-entry-copy h3{font-size:23px;line-height:1.4}
   .book-reading-hub .book-route-nav .wrap{gap:8px 20px;padding-block:6px}
   .book-reading-hub .book-route-nav a{font-size:14px}
+  .book-reading-hub .book-route-nav[data-sections] .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}
+  .book-reading-hub .book-route-nav[data-sections] a{min-width:0;padding-block:6px}
   .book-reading-hub .book-hero-cover{width:min(40vw,150px)}
   .book-reading-hub .book-hero h1{font-size:32px;line-height:1.4}
   .book-reading-hub .related-research .shell{width:calc(100% - 36px)}

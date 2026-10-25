@@ -49,7 +49,9 @@
       link.hidden = count === 0;
       link.querySelector('small').textContent = count;
     }
-    status.textContent = `${visible} / ${entries.length} ${status.dataset.unit}`;
+    status.textContent = document.documentElement.lang === 'ar'
+      ? `${visible} من ${entries.length} ${status.dataset.unit}`
+      : `${visible} / ${entries.length} ${status.dataset.unit}`;
     empty.hidden = visible !== 0;
   }
   form.hidden = false;

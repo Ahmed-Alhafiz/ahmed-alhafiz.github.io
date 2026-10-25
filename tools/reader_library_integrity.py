@@ -50,6 +50,7 @@ def validate(root=ROOT):
         for book in BOOK_LABELS:
             page = (root / prefix / "books" / book / "index.html").read_text()
             assert 'book-reading-hub' in page and 'class="book-route-nav"' in page
+            assert 'book-section-nav' not in page, f'{lang}/{book}: duplicate reading navigation'
             assert f'href="/{prefix}articles/?book={book}#library-controls"' in page
             assert 'id="about-book"' in page
         print(f"{lang}: {len(found)} complete entries; declared book routes {dict(counts)}")

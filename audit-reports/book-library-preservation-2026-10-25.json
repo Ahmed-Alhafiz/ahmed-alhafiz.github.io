@@ -164,12 +164,12 @@
     {
       "path": "books/sirou-fi-alard/index.html",
       "previous_sha256": "c4105655ed6bfa7c7d41381061dd7628f959e3b07514243c9851c64af9aef4b5",
-      "new_sha256": "34376f9551327af3e99f445704df3c5a40cc2400e3749e1ffa6129dfa35b13db"
+      "new_sha256": "921a9edb7b99a23ab003fce9b1512ba8b202615b8739d16c09102da512aed794"
     },
     {
       "path": "books/umm-abbas/index.html",
       "previous_sha256": "a837e6f197a34b0290be66c813eaa99846d6bed7078e422bfa86e86e9fe6f3ed",
-      "new_sha256": "99d2423d113d7dacd6d62b0577c69fe6100538bd95e71bfb0e1e531c0330609b"
+      "new_sha256": "0532663ddfaf026f5b06dbcc5115e724d286923eaef0d2f7361bd3e4a6fd0255"
     },
     {
       "path": "en/articles/index.html",

@@ -240,6 +240,8 @@ def verify_book_browsing(driver, route, name, width, lang):
         select.select_by_value(book)
         WebDriverWait(driver, 5).until(lambda _: len(visible()) == expected)
         assert all(e.get_attribute('data-book') == book for e in visible()), f'{name}/{book}: unrelated article shown'
+        if lang == 'ar':
+            assert driver.find_element(By.CSS_SELECTOR, '.library-results').text == f'{expected} من {total} مادة'
         context = driver.find_element(By.CSS_SELECTOR, '.library-book-context a')
         assert context.get_attribute('href').endswith(f'/books/{book}/')
         assert not driver.find_element(By.CSS_SELECTOR, '.library-topics').is_displayed()
@@ -274,6 +276,7 @@ def verify_book_journeys(driver, width, height, mode):
             driver.get(f'{BASE}/{prefix}books/{book}/?reading_path_gate=1')
             wait_ready(driver)
             nav = driver.find_element(By.CSS_SELECTOR, '.book-route-nav')
+            assert not driver.find_elements(By.CSS_SELECTOR, '.book-section-nav'), f'{mode}/{lang}/{book}: duplicate book navigation'
             link = nav.find_element(By.CSS_SELECTOR, '.book-route-reading')
             assert link.get_attribute('href').endswith(f'/{prefix}articles/?book={book}#library-controls')
             assert link.find_element(By.TAG_NAME, 'small').text == str(count)
