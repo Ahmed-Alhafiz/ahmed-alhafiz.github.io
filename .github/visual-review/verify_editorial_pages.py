@@ -26,6 +26,8 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-abbas-shams-ar", "/articles/shams-al-maarif-truth-reading-ruling/", ".references"),
+    ("umm-abbas-shams-opening-ar", "/articles/shams-al-maarif-truth-reading-ruling/", "#answer"),
     ("related-certainty-en", "/en/articles/how-certainty-becomes-violence/", ".related-panel"),
     ("related-light-en", "/en/articles/iron-fire-light-matter-energy/", "#related-reading"),
     ("related-concepts-en", "/en/articles/teaching-names-ai-understanding/", "#related-reading"),

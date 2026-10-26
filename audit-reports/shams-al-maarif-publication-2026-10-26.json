@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-26",
+  "base_sha": "214f027c88eff35de87da39dd2b2ebb676cf23bb",
+  "approved_markdown_sha256": "49b92253d212af57754e1bcce2aea5503d600861828aa996bf28a60c676c34a3",
+  "article_and_reference_text_preserved": true,
+  "html_unchanged_count": 143,
+  "html_changed_or_added": [
+    "articles/index.html",
+    "articles/shams-al-maarif-truth-reading-ruling/index.html",
+    "books/umm-abbas/index.html",
+    "en/research-status/index.html",
+    "research-status/index.html"
+  ],
+  "limitations": [
+    "No independent specialist review",
+    "No ranking or indexing outcome measured",
+    "Responsive CI and live verification pending at this source checkpoint"
+  ]
+}

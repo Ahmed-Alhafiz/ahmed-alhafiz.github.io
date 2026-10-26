@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-10-15",
+  "generated": "2026-10-26",
   "site": "https://ahmedalhafiz.com/",
   "policy": {
     "primary_rule": "Do not publish a new URL merely to increase page count. Every indexed page must answer a distinct question, provide unique value, and disclose its evidence and review status.",
@@ -28,6 +28,23 @@
     "hold_for_review": "Retained while overlap, traffic, external links, and consolidation risk are measured."
   },
   "items": [
+    {
+      "slug": "shams-al-maarif-truth-reading-ruling",
+      "url": "https://ahmedalhafiz.com/articles/shams-al-maarif-truth-reading-ruling/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "ما حقيقة كتاب شمس المعارف، وما حكم قراءته من باب الفضول؟",
+      "does_not_target": [
+        "تحميل كتب السحر أو تعليم الطلاسم",
+        "تشخيص قارئ بعينه أو إثبات علاقة القراءة بالجن",
+        "ادعاء أن شمس المعارف مذكور بالاسم في الرواية"
+      ],
+      "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
+      "reason": "Author-approved Arabic article distinguishes manuscript history, attributed religious ruling, limited nocebo studies and literary context."
+    },
     {
       "slug": "hexagram-magic-seal-of-solomon-umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/hexagram-magic-seal-of-solomon-umm-abbas/",
@@ -961,7 +978,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 45,
+    "supporting_brief": 46,
     "literary_guide": 2,
     "hold_for_review": 0
   }

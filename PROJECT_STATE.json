@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "fix/mobile-palette-2026-10-16",
-  "head_sha": "cecf6c15ca56fe9837994664080a4f352f0f0bb8",
-  "head_sha_semantics": "Verified published main at the start of this bounded implementation; source checkpoint before PR/CI/merge. Inspect the branch PR for final head and deployment.",
-  "status": "mobile_palette_release_candidate",
-  "updated_at": "2026-10-16",
-  "current_task": "Unify author home masthead, paper, ink, primary action, footer and mobile toolbar with the existing internal-page palette; align the mobile identity/navigation rows. Preserve text and layout. Continue the five-article SEO proposal separately without changing titles before review.",
-  "next_action": "Run required gates and14-template palette/navigation checks, inspect actual1440/390/360 screenshots, then merge, Pages and exact live verification. PR232 is complete; do not repeat its work.",
+  "branch": "content/shams-al-maarif-2026-10-26",
+  "head_sha": "214f027c88eff35de87da39dd2b2ebb676cf23bb",
+  "head_sha_semantics": "Verified published base; consult this branch PR for final CI, merge and deployment.",
+  "status": "shams_al_maarif_publication_candidate",
+  "updated_at": "2026-10-26",
+  "current_task": "Publish the approved Arabic Shams al-Maarif article with unchanged copy and references; verify discovery, responsive rendering and live publication.",
+  "next_action": "Inspect this branch PR: complete required CI and actual screenshots, merge and verify live page and discovery files. Do not repeat earlier research.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -411,5 +411,17 @@
     "article_texts_and_german_preserved": true,
     "public_seo_titles_changed": false,
     "legacy_nav_fix": "40px Arabic navigation targets were found by the new gate; both hardening sources now44px and the shared bundle rebuilt. First visual run38927959723 retains the diagnostic; rerun required."
+  },
+  "shams_al_maarif_release": {
+    "url": "https://ahmedalhafiz.com/articles/shams-al-maarif-truth-reading-ruling/",
+    "authorization": "Explicit publication and verification approval in the current conversation",
+    "approved_copy_preserved": true,
+    "independent_specialist_review": "not_completed",
+    "local_checks": "ten appropriate integrity checks passed; two pre-existing metadata-length warnings",
+    "visual_review": "pending required PR workflow",
+    "source_reference_count": 9,
+    "languages": [
+      "ar"
+    ]
   }
 }
