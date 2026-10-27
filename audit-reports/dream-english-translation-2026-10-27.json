@@ -1,0 +1,15 @@
+{
+  "source_base": "add7862d8eaf9767c3953dc35949ed347155b01d",
+  "arabic_body_unchanged": true,
+  "approved_translation_blocks": 50,
+  "all_block_text_and_links_match_approved_draft": true,
+  "reference_items": 8,
+  "english_feed_count": 52,
+  "previous_English_feed_and_Atom_entries_unchanged": 51,
+  "previous_catalogue_cards_preserved": true,
+  "reciprocal_language_switches_and_hreflang": true,
+  "approved_review_pdf_sha256": "4eeb456277f6e808ae3f710467895f78f9ed8f96802f45c6b9f3f6a88318ab02",
+  "source_Arabic_sha256": "bbb7d355be1e1277fdc96fa2533b7ede6c75a0cd8c775c21fc5c0f58f1f9f158",
+  "independent_specialist_review": "not_completed",
+  "release_status": "candidate_pending_CI_visual_Pages_live_verification"
+}

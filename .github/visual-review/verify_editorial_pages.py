@@ -26,6 +26,9 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-abbas-dreams-en", "/en/articles/jinn-dream-fear-meaning/", ".references"),
+    ("umm-abbas-dreams-opening-en", "/en/articles/jinn-dream-fear-meaning/", "#answer"),
+
     ("umm-abbas-shams-en", "/en/articles/shams-al-maarif-truth-reading-ruling/", ".references"),
     ("umm-abbas-shams-opening-en", "/en/articles/shams-al-maarif-truth-reading-ruling/", "#answer"),
 
