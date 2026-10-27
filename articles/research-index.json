@@ -11,6 +11,19 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "qarin-islam-thoughts-control",
+      "title": "القرين في الإسلام: هل يعرف أفكارك ويتحكم بك؟",
+      "summary": "ما القرين في الإسلام؟ قراءة في الحديث والقرآن وأقوال العلماء حول علمه بما في النفس، وحدود ربطه بالأفكار والقرارات، بعيدًا عن الحكايات غير المثبتة.",
+      "type": "قراءة دينية وعلمية وأدبية",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/qarin-islam-thoughts-control/"
+    },
+    {
       "slug": "sprinkled-magic-water-door-evidence",
       "title": "علامات السحر المرشوش: هل الماء أمام الباب دليل؟",
       "summary": "هل الماء أمام الباب من علامات السحر المرشوش؟ قراءة دينية وعلمية في لون الأثر وتكراره، وحدود ربطه بالأعراض، والتصرف الآمن مع المواد المجهولة.",
