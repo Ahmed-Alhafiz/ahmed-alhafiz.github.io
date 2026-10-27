@@ -29,6 +29,23 @@
   },
   "items": [
     {
+      "slug": "qarin-islam-thoughts-control",
+      "url": "https://ahmedalhafiz.com/articles/qarin-islam-thoughts-control/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل يعرف القرين أفكار الإنسان ويتحكم به؟",
+      "does_not_target": [
+        "تشخيص قارئ أو إثبات قدرة غيبية من تجربة نفسية",
+        "وصفات استحضار القرين أو التواصل معه",
+        "إعادة دليل الأفكار الاقتحامية وفجوات الذاكرة"
+      ],
+      "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
+      "reason": "Approved Arabic article distinguishes Quranic uses of qarin, hadith readings, reported scholarly opinion about inner intentions, and bounded thought-suppression evidence with an early literary scene."
+    },
+    {
       "slug": "sprinkled-magic-water-door-evidence",
       "url": "https://ahmedalhafiz.com/articles/sprinkled-magic-water-door-evidence/",
       "class": "supporting_brief",
@@ -1029,7 +1046,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 49,
+    "supporting_brief": 50,
     "literary_guide": 2,
     "hold_for_review": 0
   }
