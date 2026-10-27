@@ -26,6 +26,8 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-abbas-talisman-ar", "/articles/found-talisman-paper-what-to-do/", ".references"),
+    ("umm-abbas-talisman-opening-ar", "/articles/found-talisman-paper-what-to-do/", "#answer"),
     ("umm-abbas-eye-ar", "/articles/evil-eye-envy-signs/", ".references"),
     ("umm-abbas-eye-opening-ar", "/articles/evil-eye-envy-signs/", "#answer"),
     ("umm-abbas-photo-ar", "/articles/magic-with-personal-photo/", ".references"),
