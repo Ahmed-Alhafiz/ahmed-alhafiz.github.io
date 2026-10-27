@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/eye-envy-2026-10-27",
-  "head_sha": "1c83c0c5ae3add4b827c1920ed5f17d7a2c94a2c",
+  "branch": "content/talisman-paper-2026-10-27",
+  "head_sha": "1c2e78d52498a6307c5cf28c1a28594e36fb562a",
   "head_sha_semantics": "Verified published base. Final PR is the authority for CI, visual review, merge and live verification.",
-  "status": "evil_eye_envy_publication_candidate",
+  "status": "talisman_paper_publication_candidate",
   "updated_at": "2026-10-27",
-  "current_task": "Publish approved revised Arabic evil-eye and envy article with identical body and eleven references.",
-  "next_action": "Review required PR checks and actual responsive screenshots, merge and verify live article and discovery files. Reuse full-text research already reviewed.",
+  "current_task": "Publish approved Arabic found-talisman-paper article with identical body and nine references.",
+  "next_action": "Review required PR checks and actual responsive screenshots, merge and verify live article and discovery files. Reuse full-text source review already completed.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -423,5 +423,23 @@
     "languages": [
       "ar"
     ]
+  },
+  "latest_eye_publication_checkpoint": {
+    "status": "merged_deployed_live_verified",
+    "pull_request": 241,
+    "merge_sha": "1c2e78d52498a6307c5cf28c1a28594e36fb562a",
+    "pages_run": 40458190513,
+    "article": "https://ahmedalhafiz.com/articles/evil-eye-envy-signs/",
+    "verification": "Six PR gates and actual responsive screenshots passed. Pages succeeded; 12 deployed files matched source and article internal links returned HTTP200. Visibility monitor passed after deployment; IndexNow succeeded.",
+    "inventory": "24 Arabic Umm Abbas articles plus one separate literary guide; 58 Arabic research surfaces and 152 public HTML pages."
+  },
+  "latest_talisman_publication_candidate": {
+    "status": "awaiting_pr_checks_visual_merge_and_live_verification",
+    "article": "https://ahmedalhafiz.com/articles/found-talisman-paper-what-to-do/",
+    "body_words": 1431,
+    "references": 9,
+    "inventory": "Candidate: 25 Arabic Umm Abbas articles plus one separate literary guide; 59 Arabic research surfaces and 153 public HTML pages. Not yet a live-release claim.",
+    "source_review": "Full texts of Song-Schwarz 2009 and Bahnik-Vranka 2017 and the 2020 figure-label correction already reviewed; religious rulings are attributed with Quranic-amulet disagreement. Novel chapter-two p25 is literary context only.",
+    "limits": "Independent religious specialist review, search-volume measurement, indexing and rankings not established. Final PR records release evidence."
   }
 }
