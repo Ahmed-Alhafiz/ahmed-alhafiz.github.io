@@ -26,6 +26,8 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-abbas-love-ar", "/articles/love-magic-reconciliation-ruling/", ".references"),
+    ("umm-abbas-love-opening-ar", "/articles/love-magic-reconciliation-ruling/", "#answer"),
     ("umm-abbas-dreams-ar", "/articles/jinn-dream-fear-meaning/", ".references"),
     ("umm-abbas-dreams-opening-ar", "/articles/jinn-dream-fear-meaning/", "#answer"),
     ("umm-abbas-shams-ar", "/articles/shams-al-maarif-truth-reading-ruling/", ".references"),
