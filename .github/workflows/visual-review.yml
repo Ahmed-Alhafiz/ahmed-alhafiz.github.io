@@ -75,6 +75,7 @@ jobs:
         with:
           name: focused-publication-visual-review
           path: |
+            visual-review/editorial-pages/*/umm-audit-*-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-dreams-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-dreams-opening-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-love-ar-*.png
