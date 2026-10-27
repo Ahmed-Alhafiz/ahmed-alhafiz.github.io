@@ -26,6 +26,8 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-abbas-photo-ar", "/articles/magic-with-personal-photo/", ".references"),
+    ("umm-abbas-photo-opening-ar", "/articles/magic-with-personal-photo/", "#answer"),
     ("umm-abbas-qarin-ar", "/articles/qarin-islam-thoughts-control/", ".references"),
     ("umm-abbas-qarin-opening-ar", "/articles/qarin-islam-thoughts-control/", "#answer"),
     ("umm-abbas-sprinkled-ar", "/articles/sprinkled-magic-water-door-evidence/", ".references"),
