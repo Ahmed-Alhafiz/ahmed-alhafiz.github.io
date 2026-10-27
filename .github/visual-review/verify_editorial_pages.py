@@ -26,6 +26,8 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-abbas-sprinkled-ar", "/articles/sprinkled-magic-water-door-evidence/", ".references"),
+    ("umm-abbas-sprinkled-opening-ar", "/articles/sprinkled-magic-water-door-evidence/", "#answer"),
     ("umm-abbas-love-ar", "/articles/love-magic-reconciliation-ruling/", ".references"),
     ("umm-abbas-love-opening-ar", "/articles/love-magic-reconciliation-ruling/", "#answer"),
     ("umm-abbas-dreams-ar", "/articles/jinn-dream-fear-meaning/", ".references"),

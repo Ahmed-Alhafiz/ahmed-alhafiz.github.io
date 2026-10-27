@@ -29,6 +29,23 @@
   },
   "items": [
     {
+      "slug": "sprinkled-magic-water-door-evidence",
+      "url": "https://ahmedalhafiz.com/articles/sprinkled-magic-water-door-evidence/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل الماء أمام الباب من علامات السحر المرشوش؟",
+      "does_not_target": [
+        "تشخيص سحر أو اتهام شخص من أثر مجهول",
+        "تعليم خلطات أو طقوس",
+        "إرجاع كل عرض إلى الخوف دون تقييم"
+      ],
+      "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
+      "reason": "Approved Arabic article distinguishes an unknown physical trace from its interpretation, compares two bounded nocebo findings, cites religious texts and a verified chapter-three water scene."
+    },
+    {
       "slug": "love-magic-reconciliation-ruling",
       "url": "https://ahmedalhafiz.com/articles/love-magic-reconciliation-ruling/",
       "class": "supporting_brief",
@@ -1012,7 +1029,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 48,
+    "supporting_brief": 49,
     "literary_guide": 2,
     "hold_for_review": 0
   }

@@ -10,6 +10,8 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'articles/sprinkled-magic-water-door-evidence/index.html':dict(words=1200,sources=10,book='books/umm-abbas/index.html',route='/articles/sprinkled-magic-water-door-evidence/',medical=False,extended=False),
+
  'articles/love-magic-reconciliation-ruling/index.html':dict(words=1500,sources=8,book='books/umm-abbas/index.html',route='/articles/love-magic-reconciliation-ruling/',medical=False,extended=False),
 
  'articles/jinn-dream-fear-meaning/index.html':dict(words=1300,sources=8,book='books/umm-abbas/index.html',route='/articles/jinn-dream-fear-meaning/',medical=False,extended=False),
