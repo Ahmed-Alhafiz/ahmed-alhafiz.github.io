@@ -26,6 +26,9 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-abbas-shams-en", "/en/articles/shams-al-maarif-truth-reading-ruling/", ".references"),
+    ("umm-abbas-shams-opening-en", "/en/articles/shams-al-maarif-truth-reading-ruling/", "#answer"),
+
     ("umm-audit-fear-ar", "/articles/diagnostic-uncertainty-family-fear-coercive-authority/", "#answer"),
     ("umm-audit-ruqyah-ar", "/articles/spiritual-healing-exploitation-safeguarding/", "#answer"),
     ("umm-audit-guide-ar", "/guides/arabic-psychological-horror/", "#answer"),

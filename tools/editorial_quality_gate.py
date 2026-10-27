@@ -10,6 +10,8 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'en/articles/shams-al-maarif-truth-reading-ruling/index.html':dict(words=2400,sources=9,book='en/books/umm-abbas/index.html',route='/en/articles/shams-al-maarif-truth-reading-ruling/',medical=False,extended=False),
+
  'articles/found-talisman-paper-what-to-do/index.html':dict(words=1400,sources=9,book='books/umm-abbas/index.html',route='/articles/found-talisman-paper-what-to-do/',medical=False,extended=False),
 
  'articles/evil-eye-envy-signs/index.html':dict(words=1400,sources=11,book='books/umm-abbas/index.html',route='/articles/evil-eye-envy-signs/',medical=False,extended=False),

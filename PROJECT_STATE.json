@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/umm-abbas-audit-fixes-2026-10-27",
-  "head_sha": "0c5c9cca209be8099842a6097fbd4a7f49ae3da2",
+  "branch": "content/umm-abbas-shams-en-2026-10-27",
+  "head_sha": "cadf4c9d54332adc041b562bba86b27a29ecd4e7",
   "head_sha_semantics": "Verified published base. Final PR is the authority for CI, visual review, merge and live verification.",
-  "status": "umm_abbas_editorial_audit_fixes_candidate",
-  "updated_at": "2026-10-27",
-  "current_task": "Improve the audited Arabic Umm Abbas cluster: contextual incoming links for eight recent articles, three clearer titles and concise scope separation.",
-  "next_action": "Complete local checks, PR responsive visual review, merge and verify live changed pages. Reuse the completed full-content audit and unchanged source reviews.",
+  "status": "shams_complete_english_translation_candidate",
+  "updated_at": "2026-10-27T14:05:03+01:00",
+  "current_task": "Publish the author-approved complete Shams al-Maarif English translation, verify publication, then prepare the next English article separately for approval.",
+  "next_action": "Complete local integrity checks, responsive CI screenshots, merge, Pages and live verification. The next article is jinn-dream-fear-meaning; its draft must be approved before publication.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -447,11 +447,25 @@
     "verification": "Six PR gates and actual responsive screenshots passed; 12 deployed files matched source; nine internal article links HTTP200. Pages, IndexNow and visibility monitor succeeded after deployment."
   },
   "umm_abbas_editorial_audit_fixes": {
-    "status": "source_candidate_pending_release_checks",
+    "status": "merged_deployed_live_verified",
     "scope": "14 existing Arabic article/guide pages: contextual links, three titles/descriptions, and concise repeated exposition in three articles. No new page or change of canonical URL.",
     "audit_baseline": "All 25 Arabic article texts and the separate guide reviewed; 45 live language surfaces matched source. Technical titles/descriptions unique; eight recent articles lacked incoming links from peer article bodies.",
     "source_review_boundary": "Source-review and publication dates, source references, specialist-review status, evidence-package version and English/German article bodies preserved. Editorial dates only are updated.",
     "search_data_boundary": "GSC Wizard subscription expired; Semrush API units unavailable. Public searches informed wording qualitatively; no measured search-volume or ranking claim.",
-    "remote_release_evidence": "The final PR records required CI, actual responsive screenshots, merge, Pages and live source verification."
+    "remote_release_evidence": "The final PR records required CI, actual responsive screenshots, merge, Pages and live source verification.",
+    "pull_request": 243,
+    "merge_sha": "cadf4c9d54332adc041b562bba86b27a29ecd4e7",
+    "verification": "All six PR gates, actual 18 responsive screenshots and Pages passed; 25 live files matched the intended source and 72 internal links returned HTTP200. IndexNow and visibility monitor passed."
+  },
+  "shams_english_translation_release": {
+    "status": "source_candidate_pending_release_checks",
+    "approved_pdf_library_file_id": "libfile_c708dc85b544819198fd742d4cbcfa41",
+    "approved_pdf_sha256": "d468e63c5530d2942319cc2eac99e61dc208d67d56d3852a3decf1ac1e30fb82",
+    "translation_units": 60,
+    "references": 9,
+    "arabic_body_unchanged": true,
+    "inventory": "59 Arabic research items, 51 English editions, 5 German editions and 154 public HTML pages. Umm Abbas Arabic article count remains 25 plus the separate guide.",
+    "publication_evidence": "Final branch PR records CI, actual screenshots, merge, Pages and live verification. This source checkpoint does not itself establish publication.",
+    "search_limits": "Independent qualitative study; no verified volume or keyword difficulty, and no indexing, ranking or traffic guarantee."
   }
 }
