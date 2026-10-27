@@ -95,11 +95,14 @@
       "type": "قراءة دينية وعلمية وأدبية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/jinn-dream-fear-meaning/"
+      "url": "https://ahmedalhafiz.com/articles/jinn-dream-fear-meaning/",
+      "english_title": "Seeing Jinn in Dreams: Does It Mean Possession or Magic?",
+      "english_url": "https://ahmedalhafiz.com/en/articles/jinn-dream-fear-meaning/"
     },
     {
       "slug": "shams-al-maarif-truth-reading-ruling",
