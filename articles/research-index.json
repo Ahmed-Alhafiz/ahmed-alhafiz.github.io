@@ -11,6 +11,19 @@
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
+      "slug": "magic-with-personal-photo",
+      "title": "هل يمكن عمل سحر من الصورة الشخصية؟ الحقيقة والحكم",
+      "summary": "هل يمكن عمل سحر من صورتك على الهاتف؟ قراءة في الفتوى والدليل النفسي، وحدود الاستدلال بالأعراض، وخطوات مواجهة التهديد والابتزاز بالصور، من عالم رواية أم عباس.",
+      "type": "قراءة دينية وعلمية وأدبية",
+      "version": "1.0",
+      "languages": [
+        "ar"
+      ],
+      "review": "author_review_complete_external_review_pending",
+      "book": "umm-abbas",
+      "url": "https://ahmedalhafiz.com/articles/magic-with-personal-photo/"
+    },
+    {
       "slug": "qarin-islam-thoughts-control",
       "title": "القرين في الإسلام: هل يعرف أفكارك ويتحكم بك؟",
       "summary": "ما القرين في الإسلام؟ قراءة في الحديث والقرآن وأقوال العلماء حول علمه بما في النفس، وحدود ربطه بالأفكار والقرارات، بعيدًا عن الحكايات غير المثبتة.",

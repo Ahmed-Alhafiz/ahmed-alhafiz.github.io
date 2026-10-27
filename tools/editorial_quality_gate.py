@@ -10,6 +10,8 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'articles/magic-with-personal-photo/index.html':dict(words=1350,sources=10,book='books/umm-abbas/index.html',route='/articles/magic-with-personal-photo/',medical=False,extended=False),
+
  'articles/qarin-islam-thoughts-control/index.html':dict(words=1300,sources=9,book='books/umm-abbas/index.html',route='/articles/qarin-islam-thoughts-control/',medical=False,extended=False),
 
  'articles/sprinkled-magic-water-door-evidence/index.html':dict(words=1200,sources=10,book='books/umm-abbas/index.html',route='/articles/sprinkled-magic-water-door-evidence/',medical=False,extended=False),
@@ -69,7 +71,8 @@ RULES={
  'articles/civilization-knowledge-justice-collapse/index.html':dict(words=700,sources=6,book='books/sirou-fi-alard/index.html',route='/articles/civilization-knowledge-justice-collapse/',medical=False,extended=False),
  'articles/religious-ocd-scrupulosity/index.html':dict(words=1050,sources=7,book='books/umm-abbas/index.html',route='/articles/religious-ocd-scrupulosity/',medical=True,extended=False),
 }
-TRUSTED=('nimh.nih.gov','bible.usccb.org','www.vatican.va','www.chabad.org','nist.gov','culture.gouv.fr','orient.ox.ac.uk','dorar.net','rcu.gov.sa','cnrs.fr','saudipedia.com','ifao.egnet.net','aeraweb.org','eia.gov','nasa.gov','esa.int','lbl.gov','doi.org','aanda.org','pdg.lbl.gov','ncbi.nlm.nih.gov','pubmed.ncbi.nlm.nih.gov','pmc.ncbi.nlm.nih.gov','who.int','nhs.uk','fda.gov','gov.uk','aan.com','neurology.org','ilae.org','quran.com','quran.ksu.edu.sa','tafsir.app','sunnah.com','aclanthology.org','arxiv.org','academic.oup.com','oecd.org','fao.org','unesco.org','ipcc.ch','unece.org','un.org','cambridge.org','tandfonline.com','sciencedirect.com','science.org','wiley.com','onlinelibrary.wiley.com','dainst.org','ascelibrary.org','ahrq.gov','nice.org.uk','gmc-uk.org','nationalacademies.org','nap.nationalacademies.org','humanorigins.si.edu','usgs.gov','energy.gov','noaa.gov','astrobiology.nasa.gov','iocdf.org','psychiatry.org','papers.nips.cc','proceedings.neurips.cc','proceedings.iclr.cc','jmlr.org','proceedings.mlr.press','pnas.org','genome.gov','worldbank.org','aeaweb.org','nobelprize.org','nature.com','frontiersin.org','mayoclinic.org','metmuseum.org','thejewishmuseum.org','jewishmuseum.org','kelsey.lsa.umich.edu')
+# Primary publisher and government guidance used by the approved photo article.
+TRUSTED=('brill.com','consumer.ftc.gov','esafety.gov.au','nimh.nih.gov','bible.usccb.org','www.vatican.va','www.chabad.org','nist.gov','culture.gouv.fr','orient.ox.ac.uk','dorar.net','rcu.gov.sa','cnrs.fr','saudipedia.com','ifao.egnet.net','aeraweb.org','eia.gov','nasa.gov','esa.int','lbl.gov','doi.org','aanda.org','pdg.lbl.gov','ncbi.nlm.nih.gov','pubmed.ncbi.nlm.nih.gov','pmc.ncbi.nlm.nih.gov','who.int','nhs.uk','fda.gov','gov.uk','aan.com','neurology.org','ilae.org','quran.com','quran.ksu.edu.sa','tafsir.app','sunnah.com','aclanthology.org','arxiv.org','academic.oup.com','oecd.org','fao.org','unesco.org','ipcc.ch','unece.org','un.org','cambridge.org','tandfonline.com','sciencedirect.com','science.org','wiley.com','onlinelibrary.wiley.com','dainst.org','ascelibrary.org','ahrq.gov','nice.org.uk','gmc-uk.org','nationalacademies.org','nap.nationalacademies.org','humanorigins.si.edu','usgs.gov','energy.gov','noaa.gov','astrobiology.nasa.gov','iocdf.org','psychiatry.org','papers.nips.cc','proceedings.neurips.cc','proceedings.iclr.cc','jmlr.org','proceedings.mlr.press','pnas.org','genome.gov','worldbank.org','aeaweb.org','nobelprize.org','nature.com','frontiersin.org','mayoclinic.org','metmuseum.org','thejewishmuseum.org','jewishmuseum.org','kelsey.lsa.umich.edu')
 
 @dataclass
 class D:
