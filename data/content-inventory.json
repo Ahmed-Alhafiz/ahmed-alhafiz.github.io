@@ -918,7 +918,7 @@
       ],
       "next_action": "hold_scope_measure_and_seek_specialist_review_after_publication_policy_allows",
       "reason": "Complete bilingual dossier with two original but explicitly non-validated frameworks, 14 claims, and 19 sources.",
-      "primary_intent": "حين يحكم الخوف قبل التشخيص: كيف يتحول الغموض إلى سلطة وإكراه داخل الأسرة؟",
+      "primary_intent": "الخوف من المسّ داخل الأسرة: كيف نحمي المريض؟",
       "does_not_target": [
         "تشخيص الاضطرابات من الأعراض",
         "سلوك المعالج الروحي وحده"
@@ -948,7 +948,7 @@
       ],
       "next_action": "seek_independent_safeguarding_and_clinical_review; monitor organic query fit",
       "reason": "English edition preserves every clinical caution, 5 safety-boundaries and 7-step protection plan, all 12 references, complete in-text citations and the original literary relation.",
-      "primary_intent": "حين يتحول العلاج الروحي إلى استغلال: كيف تحمي الأسرة المريض من الدجل والاعتداء؟",
+      "primary_intent": "الرقية والدجل: علامات الاستغلال وكيف تحمي المريض؟",
       "does_not_target": [
         "إثبات المس من الأعراض",
         "تشخيص النوبات أو شلل النوم"
@@ -1012,7 +1012,7 @@
       ],
       "next_action": "retain_as_literary_surface_not_medical_evidence",
       "reason": "Serves craft and literary interpretation rather than clinical search intent.",
-      "primary_intent": "روايات رعب نفسي عربية: كيف تميّز النوع وتختار ما يناسبك؟",
+      "primary_intent": "الرعب النفسي في الروايات العربية: كيف تميّزه وتختار ما يناسبك؟",
       "does_not_target": [
         "التشخيص الطبي",
         "تصنيف كل أدب الرعب العربي"

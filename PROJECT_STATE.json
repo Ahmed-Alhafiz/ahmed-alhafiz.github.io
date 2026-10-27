@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/talisman-paper-2026-10-27",
-  "head_sha": "1c2e78d52498a6307c5cf28c1a28594e36fb562a",
+  "branch": "content/umm-abbas-audit-fixes-2026-10-27",
+  "head_sha": "0c5c9cca209be8099842a6097fbd4a7f49ae3da2",
   "head_sha_semantics": "Verified published base. Final PR is the authority for CI, visual review, merge and live verification.",
-  "status": "talisman_paper_publication_candidate",
+  "status": "umm_abbas_editorial_audit_fixes_candidate",
   "updated_at": "2026-10-27",
-  "current_task": "Publish approved Arabic found-talisman-paper article with identical body and nine references.",
-  "next_action": "Review required PR checks and actual responsive screenshots, merge and verify live article and discovery files. Reuse full-text source review already completed.",
+  "current_task": "Improve the audited Arabic Umm Abbas cluster: contextual incoming links for eight recent articles, three clearer titles and concise scope separation.",
+  "next_action": "Complete local checks, PR responsive visual review, merge and verify live changed pages. Reuse the completed full-content audit and unchanged source reviews.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -434,12 +434,24 @@
     "inventory": "24 Arabic Umm Abbas articles plus one separate literary guide; 58 Arabic research surfaces and 152 public HTML pages."
   },
   "latest_talisman_publication_candidate": {
-    "status": "awaiting_pr_checks_visual_merge_and_live_verification",
+    "status": "merged_deployed_live_verified",
     "article": "https://ahmedalhafiz.com/articles/found-talisman-paper-what-to-do/",
     "body_words": 1431,
     "references": 9,
-    "inventory": "Candidate: 25 Arabic Umm Abbas articles plus one separate literary guide; 59 Arabic research surfaces and 153 public HTML pages. Not yet a live-release claim.",
+    "inventory": "25 Arabic Umm Abbas articles plus one separate literary guide; 59 Arabic research surfaces and 153 public HTML pages.",
     "source_review": "Full texts of Song-Schwarz 2009 and Bahnik-Vranka 2017 and the 2020 figure-label correction already reviewed; religious rulings are attributed with Quranic-amulet disagreement. Novel chapter-two p25 is literary context only.",
-    "limits": "Independent religious specialist review, search-volume measurement, indexing and rankings not established. Final PR records release evidence."
+    "limits": "Independent religious specialist review, search-volume measurement, indexing and rankings not established. Final PR records release evidence.",
+    "pull_request": 242,
+    "merge_sha": "0c5c9cca209be8099842a6097fbd4a7f49ae3da2",
+    "pages_run": 40467940929,
+    "verification": "Six PR gates and actual responsive screenshots passed; 12 deployed files matched source; nine internal article links HTTP200. Pages, IndexNow and visibility monitor succeeded after deployment."
+  },
+  "umm_abbas_editorial_audit_fixes": {
+    "status": "source_candidate_pending_release_checks",
+    "scope": "14 existing Arabic article/guide pages: contextual links, three titles/descriptions, and concise repeated exposition in three articles. No new page or change of canonical URL.",
+    "audit_baseline": "All 25 Arabic article texts and the separate guide reviewed; 45 live language surfaces matched source. Technical titles/descriptions unique; eight recent articles lacked incoming links from peer article bodies.",
+    "source_review_boundary": "Source-review and publication dates, source references, specialist-review status, evidence-package version and English/German article bodies preserved. Editorial dates only are updated.",
+    "search_data_boundary": "GSC Wizard subscription expired; Semrush API units unavailable. Public searches informed wording qualitatively; no measured search-volume or ranking claim.",
+    "remote_release_evidence": "The final PR records required CI, actual responsive screenshots, merge, Pages and live source verification."
   }
 }

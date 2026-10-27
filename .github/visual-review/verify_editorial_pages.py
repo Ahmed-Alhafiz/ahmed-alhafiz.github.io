@@ -26,6 +26,10 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-audit-fear-ar", "/articles/diagnostic-uncertainty-family-fear-coercive-authority/", "#answer"),
+    ("umm-audit-ruqyah-ar", "/articles/spiritual-healing-exploitation-safeguarding/", "#answer"),
+    ("umm-audit-guide-ar", "/guides/arabic-psychological-horror/", "#answer"),
+
     ("umm-abbas-talisman-ar", "/articles/found-talisman-paper-what-to-do/", ".references"),
     ("umm-abbas-talisman-opening-ar", "/articles/found-talisman-paper-what-to-do/", "#answer"),
     ("umm-abbas-eye-ar", "/articles/evil-eye-envy-signs/", ".references"),
