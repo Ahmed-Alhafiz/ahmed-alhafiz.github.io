@@ -10,6 +10,8 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'articles/jinn-dream-fear-meaning/index.html':dict(words=1300,sources=8,book='books/umm-abbas/index.html',route='/articles/jinn-dream-fear-meaning/',medical=False,extended=False),
+
  'articles/shams-al-maarif-truth-reading-ruling/index.html':dict(words=1500,sources=9,book='books/umm-abbas/index.html',route='/articles/shams-al-maarif-truth-reading-ruling/',medical=False,extended=False),
 
  'articles/hexagram-magic-seal-of-solomon-umm-abbas/index.html':dict(words=1800,sources=8,book='books/umm-abbas/index.html',route='/articles/hexagram-magic-seal-of-solomon-umm-abbas/',medical=False,extended=False),

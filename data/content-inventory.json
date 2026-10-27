@@ -29,6 +29,23 @@
   },
   "items": [
     {
+      "slug": "jinn-dream-fear-meaning",
+      "url": "https://ahmedalhafiz.com/articles/jinn-dream-fear-meaning/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "هل رؤية الجن في المنام تدل على المسّ أو السحر؟",
+      "does_not_target": [
+        "قاموس رموز أو تأويل شخصي للمنامات",
+        "إثبات المسّ أو السحر من حلم",
+        "شرح شلل النوم التفصيلي الذي له مقال مستقل"
+      ],
+      "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
+      "reason": "Approved Arabic article on dream interpretation, religious boundaries, emotional memory and literary context."
+    },
+    {
       "slug": "shams-al-maarif-truth-reading-ruling",
       "url": "https://ahmedalhafiz.com/articles/shams-al-maarif-truth-reading-ruling/",
       "class": "supporting_brief",
@@ -978,7 +995,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 46,
+    "supporting_brief": 47,
     "literary_guide": 2,
     "hold_for_review": 0
   }

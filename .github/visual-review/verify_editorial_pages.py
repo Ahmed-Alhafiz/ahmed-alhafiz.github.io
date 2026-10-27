@@ -26,6 +26,8 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-abbas-dreams-ar", "/articles/jinn-dream-fear-meaning/", ".references"),
+    ("umm-abbas-dreams-opening-ar", "/articles/jinn-dream-fear-meaning/", "#answer"),
     ("umm-abbas-shams-ar", "/articles/shams-al-maarif-truth-reading-ruling/", ".references"),
     ("umm-abbas-shams-opening-ar", "/articles/shams-al-maarif-truth-reading-ruling/", "#answer"),
     ("related-certainty-en", "/en/articles/how-certainty-becomes-violence/", ".related-panel"),
