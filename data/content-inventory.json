@@ -29,6 +29,23 @@
   },
   "items": [
     {
+      "slug": "evil-eye-envy-signs",
+      "url": "https://ahmedalhafiz.com/articles/evil-eye-envy-signs/",
+      "class": "supporting_brief",
+      "book_cluster": "umm-abbas",
+      "languages": [
+        "ar"
+      ],
+      "primary_intent": "ما علامات العين والحسد، وما الذي تثبته الأعراض؟",
+      "does_not_target": [
+        "تشخيص قارئ أو الجزم بسبب غيبي من قائمة أعراض",
+        "تعيين حاسد أو اتهام شخص بلا دليل",
+        "إعادة دليل أعراض الخوف الجسدية أو علاج الوسواس"
+      ],
+      "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
+      "reason": "Approved revised Arabic article distinguishes religious texts on the evil eye, probabilistic symptom lists, psychological envy and causal inference; full-text review covers the 2009 Spanish daily-recall study (39 analysed of49) and the 2023 nine-study review (seven cross-sectional); chapter-eight scene is literary context without later spoilers."
+    },
+    {
       "slug": "magic-with-personal-photo",
       "url": "https://ahmedalhafiz.com/articles/magic-with-personal-photo/",
       "class": "supporting_brief",
@@ -1063,7 +1080,7 @@
   "current_counts": {
     "pillar": 4,
     "pillar_candidate": 0,
-    "supporting_brief": 51,
+    "supporting_brief": 52,
     "literary_guide": 2,
     "hold_for_review": 0
   }

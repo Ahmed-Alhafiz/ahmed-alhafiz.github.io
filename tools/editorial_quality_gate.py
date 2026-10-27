@@ -10,6 +10,8 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'articles/evil-eye-envy-signs/index.html':dict(words=1400,sources=11,book='books/umm-abbas/index.html',route='/articles/evil-eye-envy-signs/',medical=False,extended=False),
+
  'articles/magic-with-personal-photo/index.html':dict(words=1350,sources=10,book='books/umm-abbas/index.html',route='/articles/magic-with-personal-photo/',medical=False,extended=False),
 
  'articles/qarin-islam-thoughts-control/index.html':dict(words=1300,sources=9,book='books/umm-abbas/index.html',route='/articles/qarin-islam-thoughts-control/',medical=False,extended=False),
