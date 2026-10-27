@@ -26,6 +26,8 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-abbas-eye-ar", "/articles/evil-eye-envy-signs/", ".references"),
+    ("umm-abbas-eye-opening-ar", "/articles/evil-eye-envy-signs/", "#answer"),
     ("umm-abbas-photo-ar", "/articles/magic-with-personal-photo/", ".references"),
     ("umm-abbas-photo-opening-ar", "/articles/magic-with-personal-photo/", "#answer"),
     ("umm-abbas-qarin-ar", "/articles/qarin-islam-thoughts-control/", ".references"),
