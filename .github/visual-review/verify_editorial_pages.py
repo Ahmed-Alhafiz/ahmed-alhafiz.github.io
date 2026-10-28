@@ -26,7 +26,7 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
-    ("indonesia-ratq-opening", "/id/articles/big-bang-dalam-al-quran/", "#answer"),
+    ("indonesia-ratq-opening", "/id/articles/big-bang-dalam-al-quran/", '[data-unit="R011"]'),
     ("indonesia-ratq-table", "/id/articles/big-bang-dalam-al-quran/", ".table-scroll"),
     ("indonesia-ratq-references", "/id/articles/big-bang-dalam-al-quran/", ".references"),
     ("indonesia-home", "/id/", "#selected-reading"),
