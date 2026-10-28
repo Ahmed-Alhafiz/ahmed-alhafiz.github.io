@@ -1061,7 +1061,8 @@
       "languages": [
         "ar",
         "en",
-        "de"
+        "de",
+        "id"
       ],
       "primary_intent": "وقائع اقتحام الحرم سنة 1979 ومسار تعيين القحطاني مهديًا",
       "does_not_target": [
@@ -1070,7 +1071,10 @@
         "ملخص رواية جهيمان"
       ],
       "next_action": "hold_scope_measure_and_seek_independent_review",
-      "reason": "Multilingual reference article with explicit claim-evidence architecture, citation assets, and a distinct reader question."
+      "reason": "Multilingual reference article with explicit claim-evidence architecture, citation assets, and a distinct reader question.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/juhaiman-masjidil-haram-1979/",
+      "indonesian_title": "Juhaiman 1979: Pengepungan Masjidil Haram dan Klaim Mahdi",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; specialist_review_pending"
     },
     {
       "slug": "how-certainty-becomes-violence",

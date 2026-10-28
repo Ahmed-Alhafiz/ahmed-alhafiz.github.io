@@ -43,6 +43,15 @@ function harness(page, lang = 'id', consent = null, blockedStorage = false) {
   return {window,document,nodes,reset,storage,events,click,googleLoads};
 }
 const article = `${origin}/id/articles/ketindihan-melihat-sosok/`;
+for (const [slug, book] of [['big-bang-dalam-al-quran', 'sirou-fi-alard'], ['juhaiman-masjidil-haram-1979', 'juhayman']]) {
+  const page = `${origin}/id/articles/${slug}/`;
+  for (const consent of [null, 'denied']) {
+    const env = harness(page, 'id', consent); env.click(`/books/${book}/`);
+    equal(env.googleLoads(), 0); equal(env.events(), []);
+  }
+  const env = harness(page, 'id', 'granted'); env.click(`/books/${book}/`);
+  equal(env.events(), [{name:'article_to_book',article_slug:slug,book_slug:book,lang:'id'}]);
+}
 for (const consent of [null, 'denied', 'invalid']) {
   const env = harness(article, 'id', consent);
   equal(env.googleLoads(), 0);

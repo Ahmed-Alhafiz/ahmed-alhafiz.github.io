@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "publish/id-ratq-20261028",
-  "head_sha": "ff99a9dd41484709eabde9cd4e62c399d7b33083",
+  "branch": "publish/id-juhayman-20261028",
+  "head_sha": "8f502e194b7dc8b4b06bba8284b848974fdff8e9",
   "head_sha_semantics": "Verified published base. Final PR is the authority for CI, visual review, merge and live verification.",
-  "status": "indonesian_second_article_approved_release_candidate",
-  "updated_at": "2026-10-28T18:16:45.813716+00:00",
-  "current_task": "Publish the complete approved Indonesian ratq/fatq article; preserve current language content.",
-  "next_action": "Pass CI and visual review, merge, verify Pages and live parity. Further translations require their own approval.",
+  "status": "indonesian_third_article_approved_release_candidate",
+  "updated_at": "2026-10-28T21:14:07.494988+00:00",
+  "current_task": "Publish the complete approved Indonesian Juhayman 1979 translation; preserve existing language bodies.",
+  "next_action": "Pass required CI and responsive visual checks, merge, verify Pages and live parity. Further translations require their own review approval.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -603,7 +603,7 @@
     "merge_sha": "ff99a9dd41484709eabde9cd4e62c399d7b33083"
   },
   "indonesian_second_article_release": {
-    "status": "approved_release_candidate",
+    "status": "published_and_live_verified",
     "authorization": "أمر أحمد بعد عرض المقال الثاني: النشر التلقائي بعد التحقق أو الإصلاح التلقائي.",
     "url": "https://ahmedalhafiz.com/id/articles/big-bang-dalam-al-quran/",
     "source_url": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/",
@@ -613,6 +613,20 @@
     "reference_urls": 11,
     "independent_specialist_review": false,
     "public_html_pages": 167,
-    "publication_evidence": "This is a source checkpoint; final PR, Pages and live verification record actual publication."
+    "publication_evidence": "This is a source checkpoint; final PR, Pages and live verification record actual publication.",
+    "pr": 249,
+    "merge_sha": "8f502e194b7dc8b4b06bba8284b848974fdff8e9"
+  },
+  "indonesian_third_article_release": {
+    "status": "approved_release_candidate",
+    "authorization": "أمر أحمد بعد عرض المقال الثالث: انشر تلقائيًا إذا اجتاز الفحوص، وإلا أصلح تلقائيًا.",
+    "url": "https://ahmedalhafiz.com/id/articles/juhaiman-masjidil-haram-1979/",
+    "source_url": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/",
+    "translation_version": "id-juhayman-v1.1",
+    "units": 106,
+    "reference_entries": 4,
+    "independent_specialist_review": false,
+    "public_html_pages": 168,
+    "publication_evidence": "Release source checkpoint only; final PR, Pages and live verification establish actual publication."
   }
 }

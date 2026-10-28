@@ -26,6 +26,9 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("indonesia-juhayman-opening", "/id/articles/juhaiman-masjidil-haram-1979/", '[data-unit="J006"]'),
+    ("indonesia-juhayman-table", "/id/articles/juhaiman-masjidil-haram-1979/", ".table-scroll"),
+    ("indonesia-juhayman-references", "/id/articles/juhaiman-masjidil-haram-1979/", "#ref-1"),
     ("indonesia-ratq-opening", "/id/articles/big-bang-dalam-al-quran/", '[data-unit="R011"]'),
     ("indonesia-ratq-table", "/id/articles/big-bang-dalam-al-quran/", ".table-scroll"),
     ("indonesia-ratq-references", "/id/articles/big-bang-dalam-al-quran/", ".references"),
@@ -520,6 +523,17 @@ def main() -> None:
                     ))
                     quran_font = driver.execute_script("return getComputedStyle(document.querySelector('.quran-arabic')).fontFamily")
                     assert quran_font.startswith('"Amiri Quran"'), f"{mode}/{name}: Quran font missing"
+                if name.startswith("indonesia-juhayman-"):
+                    assert len(driver.find_elements(By.CSS_SELECTOR, 'main [data-unit]')) == 106, f"{mode}/{name}: incomplete translation"
+                    assert len(driver.find_elements(By.CSS_SELECTOR, 'main table tbody tr')) == 9, f"{mode}/{name}: missing table data"
+                    WebDriverWait(driver, 10).until(lambda browser: browser.execute_script(
+                        "return document.fonts.status==='loaded' && document.fonts.check('24px \"Amiri Quran\"','يُصلحه الله في ليلة');"
+                    ))
+                    quote_font = driver.execute_script("return getComputedStyle(document.querySelector('.arabic-quotation')).fontFamily")
+                    assert quote_font.startswith('"Amiri Quran"'), f"{mode}/{name}: Arabic quotation font missing"
+                    reference_styles = driver.execute_script("return [...document.querySelectorAll('li[id^=\"ref-\"]')].map(li=>({native:getComputedStyle(li).listStyleType,before:getComputedStyle(li,'::before').content}));")
+                    assert len(reference_styles) == 4, f"{mode}/{name}: missing references"
+                    assert all(r['native'] == 'decimal' and r['before'] in ('none','normal','\"\"') for r in reference_styles), f"{mode}/{name}: duplicate or missing native numbering"
                 single_number_references = {
                     "umm-abbas-sprinkled-en": 10,
                     "umm-abbas-qarin-en": 9,

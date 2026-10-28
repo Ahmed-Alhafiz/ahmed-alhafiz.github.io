@@ -1251,7 +1251,8 @@
       "languages": [
         "ar",
         "en",
-        "de"
+        "de",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "juhayman",
@@ -1269,7 +1270,9 @@
         "https://doi.org/10.1017/S0020743800054503",
         "https://www.jstor.org/stable/1570342",
         "https://www.bbc.com/news/stories-50852379"
-      ]
+      ],
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/juhaiman-masjidil-haram-1979/",
+      "indonesian_title": "Juhaiman 1979: Pengepungan Masjidil Haram dan Klaim Mahdi"
     },
     {
       "slug": "how-certainty-becomes-violence",

@@ -536,6 +536,55 @@
         "name": "Lampiran klaim dan bukti (bahasa Arab)",
         "inLanguage": "ar"
       }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/juhaiman-masjidil-haram-1979/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/juhaiman-masjidil-haram-1979/",
+      "name": "Juhaiman 1979: Klaim Mahdi di Masjidil Haram | Ahmed Alhafiz",
+      "headline": "Juhaiman 1979: Pengepungan Masjidil Haram dan Klaim Mahdi",
+      "description": "Apa yang terjadi dalam pengepungan Masjidil Haram 1979? Ahmed Alhafiz menelaah Juhaiman, klaim al-Qahtani sebagai Mahdi, dan batas bukti sejarahnya.",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "publisher": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://ahmedalhafiz.com/id/articles/juhaiman-masjidil-haram-1979/#page"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/#article"
+      },
+      "datePublished": "2026-10-28",
+      "dateModified": "2026-10-28",
+      "isAccessibleForFree": true,
+      "image": "https://ahmedalhafiz.com/ahmed-alhafiz-social-card.png",
+      "version": "Indonesian translation 1.1; Arabic source 2026-09-25",
+      "articleSection": [
+        "Sejarah",
+        "Agama dan kekerasan"
+      ],
+      "citation": [
+        "https://doi.org/10.1017/S0020743807002553",
+        "https://doi.org/10.1163/15700607-20230001",
+        "https://www.bbc.com/news/stories-50852379",
+        "https://www.britannica.com/event/seizure-of-the-Great-Mosque-of-Mecca"
+      ],
+      "mentions": {
+        "@type": "Book",
+        "url": "https://ahmedalhafiz.com/books/juhayman/"
+      },
+      "hasPart": {
+        "@type": "WebPage",
+        "url": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/evidence/",
+        "name": "Berkas bukti dan sitasi (bahasa Arab)",
+        "inLanguage": "ar"
+      }
     }
   ],
   "dateModified": "2026-10-28"
