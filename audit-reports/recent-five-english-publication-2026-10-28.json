@@ -81,9 +81,10 @@
   ],
   "units": 260,
   "references": 49,
-  "comparison": "Every p/h2/li rendered unit equals the approved PDF attachment; reference numbers are supplied by the ordered list. Arabic bodies and external source URL order are unchanged.",
+  "comparison": "Every p/h2/li rendered unit equals the approved PDF attachment. Reference numbers use the existing CSS counter; native list markers and duplicated text prefixes are suppressed. Arabic bodies and external source URL order are unchanged.",
   "limits": "Qualitative search study only. No measured keyword volume, difficulty, ranking or traffic guarantee. Independent medical and religious specialist review remains pending.",
   "publication_evidence": "The final PR records CI, responsive screenshots, merge, Pages and live verification; this candidate checkpoint is not publication proof.",
   "presentation_gate_context": "The exact FTC subject phrase real, altered or AI-generated images is permitted as research content. Regression cases confirm standalone production disclosures, a disclosure elsewhere in the same page, and internal-draft residue remain rejected.",
-  "existing_hub_cards_preserved": "All 53 existing English cards and Arabic cards outside the five new language labels remain byte-identical."
+  "existing_hub_cards_preserved": "All 53 existing English cards and Arabic cards outside the five new language labels remain byte-identical.",
+  "visual_red_team": "The first successful responsive run exposed duplicate native/pseudo-element reference markers. Native markers are now suppressed only on the five new English pages, and a computed-style regression assertion verifies one numbering system before release."
 }

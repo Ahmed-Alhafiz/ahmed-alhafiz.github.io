@@ -505,6 +505,26 @@ def main() -> None:
             for name, route, target_selector in PAGES:
                 driver.get(f"{BASE}{route}?editorial_visual_gate=1")
                 wait_ready(driver)
+                single_number_references = {
+                    "umm-abbas-sprinkled-en": 10,
+                    "umm-abbas-qarin-en": 9,
+                    "umm-abbas-photo-en": 10,
+                    "umm-abbas-eye-en": 11,
+                    "umm-abbas-talisman-en": 9,
+                }
+                if name in single_number_references:
+                    reference_styles = driver.execute_script("""
+                        return [...document.querySelectorAll('.references li[id^="ref-"]')].map(li => ({
+                            native: getComputedStyle(li).listStyleType,
+                            before: getComputedStyle(li, '::before').content,
+                            text: li.textContent.trim()
+                        }));
+                    """)
+                    assert len(reference_styles) == single_number_references[name], f"{mode}/{name}: missing references"
+                    for reference in reference_styles:
+                        assert reference['native'] == 'none', f"{mode}/{name}: duplicate native list marker"
+                        assert reference['before'] not in ('none', 'normal', '""'), f"{mode}/{name}: missing reference counter"
+                        assert not reference['text'].startswith('['), f"{mode}/{name}: duplicate textual reference number"
                 assert_page_geometry(driver, width, f"{mode}/{name}")
                 screenshot(driver, ROOT / mode / f"{name}-top.png", width, height)
                 captures += 1
