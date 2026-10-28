@@ -76,6 +76,16 @@ jobs:
           name: focused-publication-visual-review
           path: |
             visual-review/editorial-pages/*/umm-audit-*-ar-*.png
+            visual-review/editorial-pages/*/umm-abbas-sprinkled-en-*.png
+            visual-review/editorial-pages/*/umm-abbas-sprinkled-opening-en-*.png
+            visual-review/editorial-pages/*/umm-abbas-qarin-en-*.png
+            visual-review/editorial-pages/*/umm-abbas-qarin-opening-en-*.png
+            visual-review/editorial-pages/*/umm-abbas-photo-en-*.png
+            visual-review/editorial-pages/*/umm-abbas-photo-opening-en-*.png
+            visual-review/editorial-pages/*/umm-abbas-eye-en-*.png
+            visual-review/editorial-pages/*/umm-abbas-eye-opening-en-*.png
+            visual-review/editorial-pages/*/umm-abbas-talisman-en-*.png
+            visual-review/editorial-pages/*/umm-abbas-talisman-opening-en-*.png
             visual-review/editorial-pages/*/umm-abbas-love-en-*.png
             visual-review/editorial-pages/*/umm-abbas-love-opening-en-*.png
             visual-review/editorial-pages/*/umm-abbas-dreams-en-*.png

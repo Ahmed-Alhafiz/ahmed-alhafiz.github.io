@@ -7,7 +7,7 @@
     "profile": "https://ahmedalhafiz.com/about/"
   },
   "review_register": "https://ahmedalhafiz.com/research-status/",
-  "generated": "2026-10-28T08:10:38+01:00",
+  "generated": "2026-10-28T09:58:40+01:00",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
@@ -17,11 +17,14 @@
       "type": "قراءة دينية وعلمية وأدبية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/found-talisman-paper-what-to-do/"
+      "url": "https://ahmedalhafiz.com/articles/found-talisman-paper-what-to-do/",
+      "english_title": "Found a Paper with Strange Symbols? What to Do in Islam",
+      "english_url": "https://ahmedalhafiz.com/en/articles/found-talisman-paper-what-to-do/"
     },
     {
       "slug": "evil-eye-envy-signs",
@@ -30,11 +33,14 @@
       "type": "قراءة دينية وعلمية وأدبية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/evil-eye-envy-signs/"
+      "url": "https://ahmedalhafiz.com/articles/evil-eye-envy-signs/",
+      "english_title": "Signs of the Evil Eye: What Do Symptoms Really Prove?",
+      "english_url": "https://ahmedalhafiz.com/en/articles/evil-eye-envy-signs/"
     },
     {
       "slug": "magic-with-personal-photo",
@@ -43,11 +49,14 @@
       "type": "قراءة دينية وعلمية وأدبية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/magic-with-personal-photo/"
+      "url": "https://ahmedalhafiz.com/articles/magic-with-personal-photo/",
+      "english_title": "Can Someone Cast a Spell on You Using Your Photo?",
+      "english_url": "https://ahmedalhafiz.com/en/articles/magic-with-personal-photo/"
     },
     {
       "slug": "qarin-islam-thoughts-control",
@@ -56,11 +65,14 @@
       "type": "قراءة دينية وعلمية وأدبية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/qarin-islam-thoughts-control/"
+      "url": "https://ahmedalhafiz.com/articles/qarin-islam-thoughts-control/",
+      "english_title": "Qareen in Islam: Can It Read Your Mind or Control You?",
+      "english_url": "https://ahmedalhafiz.com/en/articles/qarin-islam-thoughts-control/"
     },
     {
       "slug": "sprinkled-magic-water-door-evidence",
@@ -69,11 +81,14 @@
       "type": "قراءة دينية وعلمية وأدبية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/sprinkled-magic-water-door-evidence/"
+      "url": "https://ahmedalhafiz.com/articles/sprinkled-magic-water-door-evidence/",
+      "english_title": "Sprinkled Sihr: Is Water at Your Door Evidence of Magic?",
+      "english_url": "https://ahmedalhafiz.com/en/articles/sprinkled-magic-water-door-evidence/"
     },
     {
       "slug": "love-magic-reconciliation-ruling",

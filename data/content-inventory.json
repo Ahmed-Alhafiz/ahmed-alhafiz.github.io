@@ -34,7 +34,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "ماذا أفعل إذا وجدت ورقة فيها طلاسم؟",
       "does_not_target": [
@@ -51,7 +52,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "ما علامات العين والحسد، وما الذي تثبته الأعراض؟",
       "does_not_target": [
@@ -68,7 +70,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل يمكن عمل سحر من الصورة الشخصية أو صورة على الهاتف؟",
       "does_not_target": [
@@ -85,7 +88,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل يعرف القرين أفكار الإنسان ويتحكم به؟",
       "does_not_target": [
@@ -102,7 +106,8 @@
       "class": "supporting_brief",
       "book_cluster": "umm-abbas",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "primary_intent": "هل الماء أمام الباب من علامات السحر المرشوش؟",
       "does_not_target": [
