@@ -26,6 +26,12 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("indonesia-home", "/id/", "#selected-reading"),
+    ("indonesia-about", "/id/about/", "#identity"),
+    ("indonesia-privacy", "/id/privacy/", "main"),
+    ("indonesia-catalogue", "/id/articles/", ".id-catalogue-entry"),
+    ("indonesia-ketindihan-opening", "/id/articles/ketindihan-melihat-sosok/", "#answer"),
+    ("indonesia-ketindihan-references", "/id/articles/ketindihan-melihat-sosok/", ".references"),
     ("umm-abbas-sprinkled-en", "/en/articles/sprinkled-magic-water-door-evidence/", ".references"),
     ("umm-abbas-sprinkled-opening-en", "/en/articles/sprinkled-magic-water-door-evidence/", "#answer"),
     ("umm-abbas-qarin-en", "/en/articles/qarin-islam-thoughts-control/", ".references"),
@@ -525,6 +531,10 @@ def main() -> None:
                         assert reference['native'] == 'none', f"{mode}/{name}: duplicate native list marker"
                         assert reference['before'] not in ('none', 'normal', '""'), f"{mode}/{name}: missing reference counter"
                         assert not reference['text'].startswith('['), f"{mode}/{name}: duplicate textual reference number"
+                if name == "indonesia-ketindihan-references":
+                    reference_styles = driver.execute_script("return [...document.querySelectorAll('.references li')].map(li=>({native:getComputedStyle(li).listStyleType,before:getComputedStyle(li,'::before').content}));")
+                    assert len(reference_styles)==6, f"{mode}/{name}: incomplete references"
+                    assert all(r['native']=='none' and r['before'] not in ('none','normal','\"\"') for r in reference_styles), f"{mode}/{name}: duplicate or missing reference numbering"
                 assert_page_geometry(driver, width, f"{mode}/{name}")
                 screenshot(driver, ROOT / mode / f"{name}-top.png", width, height)
                 captures += 1

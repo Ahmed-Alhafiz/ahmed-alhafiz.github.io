@@ -54,11 +54,13 @@ HOME_PAGES = {
     "index.html": "ar",
     "en/index.html": "en",
     "de/index.html": "de",
+    "id/index.html": "id",
 }
 PROFILE_PAGES = {
     "about/index.html": "ar",
     "en/about/index.html": "en",
     "de/about/index.html": "de",
+    "id/about/index.html": "id",
 }
 BOOK_SLUGS = ("sirou-fi-alard", "umm-abbas", "juhayman", "kitab-al-kutub")
 BOOK_PAGES = {
@@ -310,7 +312,7 @@ def main() -> None:
         "UX integrity passed: "
         f"{len(pages)} public pages, {wrapped_cards} cropped book cards, "
         "one compact footer each, three official contact channels, no duplicate "
-        "language footers, no public GitHub identity, stable tri-language portrait "
+        "language footers, no public GitHub identity, stable four-language portrait "
         "markup, compact mobile portrait treatment, and forced 2:3 book-cover frames."
     )
 

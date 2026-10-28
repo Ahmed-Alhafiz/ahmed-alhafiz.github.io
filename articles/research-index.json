@@ -7,7 +7,7 @@
     "profile": "https://ahmedalhafiz.com/about/"
   },
   "review_register": "https://ahmedalhafiz.com/research-status/",
-  "generated": "2026-10-28T09:58:40+01:00",
+  "generated": "2026-10-28T13:21:16.904488+00:00",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
@@ -1177,13 +1177,16 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "medical_specialist_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/sleep-paralysis-jathoom/",
       "english_title": "Why Can’t I Move When I Wake Up? Sleep Paralysis Explained",
-      "english_url": "https://ahmedalhafiz.com/en/articles/sleep-paralysis-jathoom/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/sleep-paralysis-jathoom/",
+      "indonesian_title": "Ketindihan (Sleep Paralysis): Mengapa Terasa Ada Sosok di Kamar?",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/ketindihan-melihat-sosok/"
     },
     {
       "slug": "arabic-psychological-horror",

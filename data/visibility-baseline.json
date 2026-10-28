@@ -9,12 +9,13 @@
     "author_profile_de": "https://ahmedalhafiz.com/de/about/",
     "author_manifest": "https://ahmedalhafiz.com/author.json",
     "sitemap": "https://ahmedalhafiz.com/sitemap.xml",
-    "robots": "https://ahmedalhafiz.com/robots.txt"
+    "robots": "https://ahmedalhafiz.com/robots.txt",
+    "author_profile_id": "https://ahmedalhafiz.com/id/about/"
   },
   "technical_baseline": {
-    "public_html_pages": 161,
-    "canonical_urls": 161,
-    "sitemap_urls": 161,
+    "public_html_pages": 166,
+    "canonical_urls": 166,
+    "sitemap_urls": 166,
     "research_items": 59,
     "complete_bilingual_pillars": 4,
     "arabic_feed_items": 59,
@@ -24,7 +25,8 @@
     "generic_crawlers": "allowed",
     "structured_author_identity": "deployed_and_verified",
     "custom_domain": "configured_dns_https_and_redirects_verified",
-    "indexnow": "configuration_migrated_to_custom_domain_pending_post_deploy_submission"
+    "indexnow": "configuration_migrated_to_custom_domain_pending_post_deploy_submission",
+    "indonesian_feed_items": 1
   },
   "verified_pre_rebuild_search_console_baseline": {
     "period": {
@@ -115,5 +117,14 @@
     "Connect a privacy-compliant analytics source capable of isolating utm_source=chatgpt.com.",
     "Record controlled Arabic and Latin-name SERP observations with date, country, device, and signed-out state.",
     "Capture only externally observed AI citations; do not infer them from crawl access."
-  ]
+  ],
+  "indonesian_release_baseline": {
+    "recorded_at": "2026-10-28T13:21:16.904488+00:00",
+    "pages": 5,
+    "articles": 1,
+    "organic_clicks": null,
+    "organic_impressions": null,
+    "users_in_indonesia": null,
+    "note": "Unavailable first-party data is not zero; country Indonesia and /id/ content are separate dimensions."
+  }
 }

@@ -1,0 +1,22 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Artikel Ahmed Alhafiz — Bahasa Indonesia",
+  "home_page_url": "https://ahmedalhafiz.com/id/articles/",
+  "feed_url": "https://ahmedalhafiz.com/id/articles/feed.json",
+  "language": "id",
+  "items": [
+    {
+      "id": "https://ahmedalhafiz.com/id/articles/ketindihan-melihat-sosok/",
+      "url": "https://ahmedalhafiz.com/id/articles/ketindihan-melihat-sosok/",
+      "title": "Ketindihan (Sleep Paralysis): Mengapa Terasa Ada Sosok di Kamar?",
+      "summary": "Mengapa ketindihan terasa seperti ada sosok di kamar? Ahmed Alhafiz mengulas sleep paralysis, tekanan dada, pengaruh budaya, dan batas penjelasannya.",
+      "content_text": "Mengapa ketindihan terasa seperti ada sosok di kamar? Ahmed Alhafiz mengulas sleep paralysis, tekanan dada, pengaruh budaya, dan batas penjelasannya.",
+      "date_published": "2026-10-28T13:21:16.904488+00:00",
+      "date_modified": "2026-10-28T13:21:16.904488+00:00",
+      "tags": [
+        "medical_specialist_review_pending",
+        "umm-abbas"
+      ]
+    }
+  ]
+}

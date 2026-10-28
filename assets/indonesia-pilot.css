@@ -1,0 +1,21 @@
+/* Scoped Indonesian pilot styles; existing language pages do not load this file. */
+html[lang="id"] body{font-family:Arial,Helvetica,sans-serif;line-height:1.8}
+html[lang="id"] h1,html[lang="id"] h2,html[lang="id"] h3{font-family:Georgia,"Times New Roman",serif;line-height:1.28}
+html[lang="id"] .article-body{font-family:Georgia,"Times New Roman",serif;font-size:19px;line-height:1.85}
+html[lang="id"] .article-head h1{font-size:clamp(34px,4.6vw,62px);line-height:1.22}
+html[lang="id"] .profile-latin{direction:ltr!important}
+html[lang="id"] main code{overflow-wrap:anywhere;white-space:normal}
+html[lang="id"] .profile-facts strong>span[lang="ar"]{display:inline;color:inherit;font:inherit;letter-spacing:normal;text-transform:none;margin:0;unicode-bidi:isolate}
+html[lang="id"] .book-card-cover img,html[lang="id"] .related-work img{object-fit:contain;height:auto}
+html[lang="id"] .related-work img{aspect-ratio:auto}
+.id-draft-notice{background:#ead8c5;border-bottom:1px solid #ba6d4e;padding:7px 16px;text-align:center;font:12px/1.7 Tahoma,Arial,sans-serif}
+.id-contact{display:flex;gap:14px;flex-wrap:wrap}.id-language-label{font:10px/1.2 Arial,sans-serif;border:1px solid currentColor;border-radius:4px;padding:1px 4px;margin-inline-start:3px;white-space:nowrap}
+html[lang="id"] main a[hreflang="ar"]::after{content:' AR';display:inline;font:10px/1.2 Arial,sans-serif;color:#77634f;white-space:nowrap}
+html[lang="id"] main a[hreflang="en"]::after{content:' EN';display:inline;font:10px/1.2 Arial,sans-serif;color:#77634f;white-space:nowrap}
+html[lang="id"] .section.dark a[hreflang]::after{color:#d4c1ab}
+html[lang="id"] .book-card h3:lang(ar),html[lang="id"] .book-summary h3:has([lang="ar"]){font-family:Tahoma,Arial,sans-serif;line-height:1.65}
+.id-source-note{font-size:14px;color:#596671;margin-top:36px}.id-catalogue-entry{padding-block:12px 28px;border-bottom:1px solid var(--line)}.id-catalogue-entry h2{font-size:34px;line-height:1.35}.id-catalogue-entry p{max-width:65ch}
+@media(max-width:1000px){html[lang="id"] .article-aside{order:-1}}
+@media(max-width:640px){html[lang="id"] .article-body{font-size:17px;line-height:1.8}html[lang="id"] .article-body h2{font-size:28px}html[lang="id"] .article-body h3{font-size:23px}html[lang="id"] .article-head h1{font-size:34px}html[lang="id"] .profile-hero h1{font-size:38px}html[lang="id"] .nav{gap:12px}html[lang="id"] .nav a{font-size:12px}.id-catalogue-entry h2{font-size:29px}}
+
+html[lang="id"] .references{list-style:none}

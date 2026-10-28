@@ -121,6 +121,7 @@ jobs:
             visual-review/editorial-pages/*/umm-abbas-family-ar-*.png
             visual-review/editorial-pages/*/umm-abbas-book-ar-*.png
             visual-review/editorial-pages/*/library-ar-*.png
+            visual-review/editorial-pages/*/indonesia-*.png
           retention-days: 3
           if-no-files-found: error
 

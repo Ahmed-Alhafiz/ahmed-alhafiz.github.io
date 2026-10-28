@@ -14,7 +14,8 @@
       "inLanguage": [
         "ar",
         "en",
-        "de"
+        "de",
+        "id"
       ],
       "publisher": {
         "@id": "https://ahmedalhafiz.com/#person"
@@ -38,7 +39,8 @@
       "mainEntityOfPage": [
         "https://ahmedalhafiz.com/about/",
         "https://ahmedalhafiz.com/en/about/",
-        "https://ahmedalhafiz.com/de/about/"
+        "https://ahmedalhafiz.com/de/about/",
+        "https://ahmedalhafiz.com/id/about/"
       ],
       "image": {
         "@type": "ImageObject",
@@ -432,7 +434,50 @@
       "translationOfWork": {
         "@id": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/#article"
       }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://ahmedalhafiz.com/id/about/#page",
+      "url": "https://ahmedalhafiz.com/id/about/",
+      "name": "Tentang Ahmed Alhafiz | Profil dan Karya Penulis",
+      "inLanguage": "id",
+      "mainEntity": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/ketindihan-melihat-sosok/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/ketindihan-melihat-sosok/",
+      "name": "Ketindihan: Mengapa Terasa Ada Sosok? | Ahmed Alhafiz",
+      "description": "Mengapa ketindihan terasa seperti ada sosok di kamar? Ahmed Alhafiz mengulas sleep paralysis, tekanan dada, pengaruh budaya, dan batas penjelasannya.",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "headline": "Ketindihan (Sleep Paralysis): Mengapa Terasa Ada Sosok di Kamar?",
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/sleep-paralysis-jathoom/#article"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://ahmedalhafiz.com/id/articles/ketindihan-melihat-sosok/#page"
+      },
+      "isAccessibleForFree": true,
+      "image": "https://ahmedalhafiz.com/ahmed-alhafiz-social-card.png",
+      "citation": [
+        "https://pubmed.ncbi.nlm.nih.gov/38368058/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4958367/",
+        "https://www.nhs.uk/conditions/sleep-paralysis/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8060733/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8060736/",
+        "https://www.nhs.uk/symptoms/paralysis/"
+      ],
+      "dateModified": "2026-10-28",
+      "datePublished": "2026-10-28"
     }
   ],
-  "dateModified": "2026-09-26"
+  "dateModified": "2026-10-28"
 }
