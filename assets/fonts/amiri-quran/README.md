@@ -1,7 +1,7 @@
 # Amiri Quran Regular
 
 Unmodified font, version 1.003. Copyright 2010–2022 The Amiri Quran Project Authors.
-Licensed under SIL Open Font License 1.1; the complete notice and terms are in OFL.txt.
+Licensed under SIL Open Font License 1.1; the complete notice and terms are in OFL.txt. One trailing space from the upstream license text was removed to satisfy the repository whitespace check; no words or terms changed.
 
 Downloaded on 2026-10-28 from the official Google Fonts distribution:
 https://github.com/google/fonts/blob/main/ofl/amiriquran/AmiriQuran-Regular.ttf

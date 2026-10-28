@@ -598,9 +598,11 @@
     "font_sha256": "e2a47644762d16bdfb6d33e0d8db8c6ff30beae84150ef5a705316bbd829455c",
     "font_bytes": 136920,
     "license": "SIL OFL 1.1",
-    "license_sha256": "b32e3b24e2a943b8acbf6ab8d5499bfed737d5176091b7341a8c1e7fbcdeb0fa",
+    "license_sha256": "29cdf89dd073908e3c2c6a1329fd57140bf4517850ad4e2f036ad5746e0c34dd",
     "distinct_quote_codepoints": 41,
     "missing_glyphs": [],
-    "quotation_text_modified": false
+    "quotation_text_modified": false,
+    "license_source_sha256": "b32e3b24e2a943b8acbf6ab8d5499bfed737d5176091b7341a8c1e7fbcdeb0fa",
+    "license_normalization": "one trailing space removed; all copyright and license wording preserved"
   }
 }
