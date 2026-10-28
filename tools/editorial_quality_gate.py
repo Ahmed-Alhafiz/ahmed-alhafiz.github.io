@@ -10,6 +10,11 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'en/articles/sprinkled-magic-water-door-evidence/index.html':dict(words=2000,sources=10,book='en/books/umm-abbas/index.html',route='/en/articles/sprinkled-magic-water-door-evidence/',medical=False,extended=False),
+ 'en/articles/qarin-islam-thoughts-control/index.html':dict(words=2000,sources=9,book='en/books/umm-abbas/index.html',route='/en/articles/qarin-islam-thoughts-control/',medical=False,extended=False),
+ 'en/articles/magic-with-personal-photo/index.html':dict(words=2000,sources=10,book='en/books/umm-abbas/index.html',route='/en/articles/magic-with-personal-photo/',medical=False,extended=False),
+ 'en/articles/evil-eye-envy-signs/index.html':dict(words=2000,sources=11,book='en/books/umm-abbas/index.html',route='/en/articles/evil-eye-envy-signs/',medical=False,extended=False),
+ 'en/articles/found-talisman-paper-what-to-do/index.html':dict(words=2000,sources=9,book='en/books/umm-abbas/index.html',route='/en/articles/found-talisman-paper-what-to-do/',medical=False,extended=False),
  'en/articles/love-magic-reconciliation-ruling/index.html':dict(words=2200,sources=8,book='en/books/umm-abbas/index.html',route='/en/articles/love-magic-reconciliation-ruling/',medical=False,extended=False),
  'en/articles/jinn-dream-fear-meaning/index.html':dict(words=2200,sources=8,book='en/books/umm-abbas/index.html',route='/en/articles/jinn-dream-fear-meaning/',medical=False,extended=False),
 

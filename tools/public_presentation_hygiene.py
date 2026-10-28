@@ -49,6 +49,18 @@ BANNED_PATTERNS = {
     ),
 }
 
+# This describes abusive image types in the FTC source, not how this site was
+# produced. Keep the exact subject phrase narrow; disclosures elsewhere in the
+# same page must still be rejected.
+AI_RESEARCH_SUBJECT_PHRASES = ("real, altered or AI-generated images",)
+
+
+def presentation_match(text: str, label: str, pattern: re.Pattern[str]):
+    if label == "explicit AI-production disclosure":
+        for phrase in AI_RESEARCH_SUBJECT_PHRASES:
+            text = text.replace(phrase, " " * len(phrase))
+    return pattern.search(text)
+
 # Public phrases already judged too strong, too technical, or too production-like.
 # These are exact matches so legitimate discussion of verification or automation
 # in research subject matter is not banned.
@@ -136,7 +148,7 @@ def main() -> None:
         checked += 1
 
         for label, pattern in BANNED_PATTERNS.items():
-            match = pattern.search(text)
+            match = presentation_match(text, label, pattern)
             if match:
                 snippet = re.sub(r"\s+", " ", match.group(0)).strip()
                 errors.append(f"{rel}: {label}: {snippet!r}")
