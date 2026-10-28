@@ -482,5 +482,18 @@
     "inventory": "59 Arabic research items, 52 English editions, 5 German editions and 155 public HTML pages. Umm Abbas Arabic article count remains 25 plus the separate guide.",
     "publication_evidence": "Final branch PR records CI, actual screenshots, merge, Pages and live verification. This source checkpoint does not itself establish publication.",
     "search_limits": "Independent qualitative study; no verified volume or keyword difficulty, and no indexing, ranking or traffic guarantee."
+  },
+  "love_english_translation_release": {
+    "status": "source_candidate_pending_release_checks",
+    "authorization": "Explicit publication approval on 28 October 2026, including the latest proposed English title. The following article requires separate approval.",
+    "approved_pdf_library_file_id": "libfile_b6a261f43c4481918914a7acdb90a366",
+    "approved_pdf_sha256": "b5a8f4e78e8f2f7eea5a6626ffd153418300bf50892fe8c3a54d0f9f0a8970fc",
+    "approved_title": "Do Love Spells Work? Evidence and the Islamic Ruling",
+    "body_and_reference_units": 59,
+    "references": 8,
+    "arabic_body_unchanged": true,
+    "inventory": "59 Arabic research items, 53 English editions, 5 German editions and 156 public HTML pages.",
+    "publication_evidence": "Final PR records required CI, responsive screenshots, merge, Pages and live source verification; this candidate checkpoint is not proof of publication.",
+    "limits": "Qualitative search study only; no measured keyword volume, difficulty, ranking or traffic guarantee. Independent specialist review remains pending."
   }
 }
