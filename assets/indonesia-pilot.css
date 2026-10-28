@@ -19,3 +19,11 @@ html[lang="id"] .book-card h3:lang(ar),html[lang="id"] .book-summary h3:has([lan
 @media(max-width:640px){html[lang="id"] .article-body{font-size:17px;line-height:1.8}html[lang="id"] .article-body h2{font-size:28px}html[lang="id"] .article-body h3{font-size:23px}html[lang="id"] .article-head h1{font-size:34px}html[lang="id"] .profile-hero h1{font-size:38px}html[lang="id"] .nav{gap:12px}html[lang="id"] .nav a{font-size:12px}.id-catalogue-entry h2{font-size:29px}}
 
 html[lang="id"] .references{list-style:none}
+
+/* Qur'an quotations and source attribution for the approved ratq/fatq edition. */
+.id-ratq-article .quran-arabic{font:20px/2.1 Tahoma,Arial,sans-serif;unicode-bidi:isolate}
+.id-ratq-article .quran-meaning{display:block;border-inline-start:3px solid #bd9561;padding-inline-start:16px;margin-block:18px;font-style:normal}
+.id-ratq-article .table-scroll table{min-width:540px}
+.id-ratq-article .id-translation-sources{max-width:900px;margin:auto;padding:24px;border-top:1px solid var(--line);font-size:15px;line-height:1.85}
+.id-ratq-article .id-translation-sources p{margin-block:12px}
+@media(max-width:640px){.id-ratq-article .quran-arabic{font-size:19px}.id-ratq-article .id-translation-sources{padding:16px}}

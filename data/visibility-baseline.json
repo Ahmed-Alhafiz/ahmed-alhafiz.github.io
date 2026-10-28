@@ -13,9 +13,9 @@
     "author_profile_id": "https://ahmedalhafiz.com/id/about/"
   },
   "technical_baseline": {
-    "public_html_pages": 166,
-    "canonical_urls": 166,
-    "sitemap_urls": 166,
+    "public_html_pages": 167,
+    "canonical_urls": 167,
+    "sitemap_urls": 167,
     "research_items": 59,
     "complete_bilingual_pillars": 4,
     "arabic_feed_items": 59,
@@ -26,7 +26,7 @@
     "structured_author_identity": "deployed_and_verified",
     "custom_domain": "configured_dns_https_and_redirects_verified",
     "indexnow": "configuration_migrated_to_custom_domain_pending_post_deploy_submission",
-    "indonesian_feed_items": 1
+    "indonesian_feed_items": 2
   },
   "verified_pre_rebuild_search_console_baseline": {
     "period": {
@@ -126,5 +126,13 @@
     "organic_impressions": null,
     "users_in_indonesia": null,
     "note": "Unavailable first-party data is not zero; country Indonesia and /id/ content are separate dimensions."
+  },
+  "indonesian_article_2_release": {
+    "recorded_at": "2026-10-28T18:16:45.813716+00:00",
+    "pages": 6,
+    "articles": 2,
+    "organic_clicks": null,
+    "organic_impressions": null,
+    "note": "Traffic unavailable, not zero. Locale content and user country are separate dimensions."
   }
 }

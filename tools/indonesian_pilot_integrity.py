@@ -55,5 +55,5 @@ def main():
         assert 'hreflang="id"' in text,str(path)
         assert text.count('/assets/analytics-indonesia-pilot.js')==1,str(path)
         assert 'href="/author.json"' in text,str(path)
-    print('Indonesian release integrity passed: all 141 approved units, unchanged Arabic source, six references and five complete locale pages.')
+    print('Indonesian release integrity passed: all 141 approved units, unchanged Arabic source, six references and all current complete locale pages.')
 if __name__=='__main__':main()

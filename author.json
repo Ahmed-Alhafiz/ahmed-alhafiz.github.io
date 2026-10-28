@@ -477,6 +477,65 @@
       ],
       "dateModified": "2026-10-28",
       "datePublished": "2026-10-28"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/big-bang-dalam-al-quran/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/big-bang-dalam-al-quran/",
+      "name": "Big Bang dalam Al-Qur’an? Ayat dan Tafsir | Ahmed Alhafiz",
+      "headline": "Big Bang dalam Al-Qur’an? Menelaah Makna Ratq dan Fatq",
+      "description": "Apakah ayat tentang ratq dan fatq menjelaskan Big Bang? Ahmed Alhafiz menelaah tafsir Al-Anbiya’ 30, bukti kosmologi, dan batas perbandingannya.",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "publisher": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://ahmedalhafiz.com/id/articles/big-bang-dalam-al-quran/#page"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/#article"
+      },
+      "datePublished": "2026-10-28",
+      "dateModified": "2026-10-28",
+      "isAccessibleForFree": true,
+      "image": "https://ahmedalhafiz.com/ahmed-alhafiz-social-card.png",
+      "version": "Indonesian translation 1.2; Arabic source 2.0",
+      "creativeWorkStatus": "Author review complete; external specialist review not completed",
+      "articleSection": [
+        "Al-Qur’an dan Tafsir",
+        "Kosmologi"
+      ],
+      "citation": [
+        "https://quran.com/21/30",
+        "https://quran.com/29/20",
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura21-aya30.html",
+        "https://quran.ksu.edu.sa/tafseer/qortobi/sura21-aya30.html",
+        "https://quran.com/ar/al-anbya/30/tafsirs/arabic-tanweer-tafseer",
+        "https://quran.ksu.edu.sa/tafseer/tabary/sura29-aya20.html",
+        "https://science.nasa.gov/universe/overview/",
+        "https://science.nasa.gov/astrophysics/programs/physics-of-the-cosmos/big-bang-and-the-evolution-of-the-universe/",
+        "https://www.cosmos.esa.int/web/planck/publications",
+        "https://science.nasa.gov/earth/facts/",
+        "https://ccwww.kek.jp/pdg/2025/reviews/rpp2025-rev-bbang-nucleosynthesis.pdf"
+      ],
+      "mentions": {
+        "@type": "Book",
+        "@id": "https://ahmedalhafiz.com/books/sirou-fi-alard/#book",
+        "name": "قل سيروا في الأرض فانظروا كيف بدأ الخلق",
+        "url": "https://ahmedalhafiz.com/books/sirou-fi-alard/"
+      },
+      "hasPart": {
+        "@type": "WebPage",
+        "url": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/evidence/",
+        "name": "Lampiran klaim dan bukti (bahasa Arab)",
+        "inLanguage": "ar"
+      }
     }
   ],
   "dateModified": "2026-10-28"

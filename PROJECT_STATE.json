@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "publish/id-pilot-20261028",
-  "head_sha": "402b987605890d26c3d8f78b16f79bfa95bd2855",
+  "branch": "publish/id-ratq-20261028",
+  "head_sha": "ff99a9dd41484709eabde9cd4e62c399d7b33083",
   "head_sha_semantics": "Verified published base. Final PR is the authority for CI, visual review, merge and live verification.",
-  "status": "indonesian_pilot_approved_release_candidate",
-  "updated_at": "2026-10-28T13:39:51.568890+00:00",
-  "current_task": "Publish the approved complete Indonesian pilot and four support pages; preserve existing language content.",
-  "next_action": "Pass CI and visual review, merge, verify Pages and all five live URLs, then translate ratq-fatq-big-bang for separate approval.",
+  "status": "indonesian_second_article_approved_release_candidate",
+  "updated_at": "2026-10-28T18:16:45.813716+00:00",
+  "current_task": "Publish the complete approved Indonesian ratq/fatq article; preserve current language content.",
+  "next_action": "Pass CI and visual review, merge, verify Pages and live parity. Further translations require their own approval.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -585,7 +585,7 @@
     "inventory": "59 Arabic research items, 58 English editions, 5 German editions and 161 public HTML pages."
   },
   "indonesian_pilot_release": {
-    "status": "approved_release_candidate",
+    "status": "published_and_live_verified",
     "authorization": "انشر وانتقل للتالي",
     "base_sha": "402b987605890d26c3d8f78b16f79bfa95bd2855",
     "article": "https://ahmedalhafiz.com/id/articles/ketindihan-melihat-sosok/",
@@ -598,6 +598,21 @@
     "external_specialist_review": "not_completed",
     "local_and_ci_checks": "local_checks_passed_ci_pending",
     "live_verification": "pending",
-    "public_branch": "publish/id-pilot-20261028"
+    "public_branch": "publish/id-pilot-20261028",
+    "pr": 248,
+    "merge_sha": "ff99a9dd41484709eabde9cd4e62c399d7b33083"
+  },
+  "indonesian_second_article_release": {
+    "status": "approved_release_candidate",
+    "authorization": "أمر أحمد بعد عرض المقال الثاني: النشر التلقائي بعد التحقق أو الإصلاح التلقائي.",
+    "url": "https://ahmedalhafiz.com/id/articles/big-bang-dalam-al-quran/",
+    "source_url": "https://ahmedalhafiz.com/articles/ratq-fatq-big-bang/",
+    "translation_version": "id-ratq-v1.2",
+    "units": 106,
+    "reference_entries": 9,
+    "reference_urls": 11,
+    "independent_specialist_review": false,
+    "public_html_pages": 167,
+    "publication_evidence": "This is a source checkpoint; final PR, Pages and live verification record actual publication."
   }
 }

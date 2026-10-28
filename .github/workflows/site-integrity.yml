@@ -39,9 +39,10 @@ jobs:
       - name: Verify article-to-book event routing
         run: node tools/analytics_event_integrity.js
 
-      - name: Verify approved Indonesian translation and consent routing
+      - name: Verify approved Indonesian translations and consent routing
         run: |
           python tools/indonesian_pilot_integrity.py
+          python tools/indonesian_ratq_integrity.py
           node tools/indonesian_analytics_integrity.cjs
 
       - name: Parse XML JSON feeds evidence manifests figures and every JSON-LD block

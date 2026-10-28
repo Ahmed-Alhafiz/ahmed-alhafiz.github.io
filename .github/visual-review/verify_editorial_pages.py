@@ -26,6 +26,9 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("indonesia-ratq-opening", "/id/articles/big-bang-dalam-al-quran/", "#answer"),
+    ("indonesia-ratq-table", "/id/articles/big-bang-dalam-al-quran/", ".table-scroll"),
+    ("indonesia-ratq-references", "/id/articles/big-bang-dalam-al-quran/", ".references"),
     ("indonesia-home", "/id/", "#selected-reading"),
     ("indonesia-about", "/id/about/", "#identity"),
     ("indonesia-privacy", "/id/privacy/", "main"),
@@ -531,9 +534,10 @@ def main() -> None:
                         assert reference['native'] == 'none', f"{mode}/{name}: duplicate native list marker"
                         assert reference['before'] not in ('none', 'normal', '""'), f"{mode}/{name}: missing reference counter"
                         assert not reference['text'].startswith('['), f"{mode}/{name}: duplicate textual reference number"
-                if name == "indonesia-ketindihan-references":
+                indonesian_references = {"indonesia-ketindihan-references": 6, "indonesia-ratq-references": 9}
+                if name in indonesian_references:
                     reference_styles = driver.execute_script("return [...document.querySelectorAll('.references li')].map(li=>({native:getComputedStyle(li).listStyleType,before:getComputedStyle(li,'::before').content}));")
-                    assert len(reference_styles)==6, f"{mode}/{name}: incomplete references"
+                    assert len(reference_styles)==indonesian_references[name], f"{mode}/{name}: incomplete references"
                     assert all(r['native']=='none' and r['before'] not in ('none','normal','\"\"') for r in reference_styles), f"{mode}/{name}: duplicate or missing reference numbering"
                 assert_page_geometry(driver, width, f"{mode}/{name}")
                 screenshot(driver, ROOT / mode / f"{name}-top.png", width, height)
