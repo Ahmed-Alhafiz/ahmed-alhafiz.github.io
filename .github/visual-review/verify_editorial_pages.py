@@ -29,7 +29,7 @@ PAGES = (
     ("indonesia-home", "/id/", "#selected-reading"),
     ("indonesia-about", "/id/about/", "#identity"),
     ("indonesia-privacy", "/id/privacy/", "main"),
-    ("indonesia-catalogue", "/id/articles/", "main"),
+    ("indonesia-catalogue", "/id/articles/", ".id-catalogue-entry"),
     ("indonesia-ketindihan-opening", "/id/articles/ketindihan-melihat-sosok/", "#answer"),
     ("indonesia-ketindihan-references", "/id/articles/ketindihan-melihat-sosok/", ".references"),
     ("umm-abbas-sprinkled-en", "/en/articles/sprinkled-magic-water-door-evidence/", ".references"),

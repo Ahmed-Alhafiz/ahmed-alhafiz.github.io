@@ -7,9 +7,10 @@ import hashlib,json,re
 ROOT=Path(__file__).resolve().parents[1]
 audit=json.loads((ROOT/'audit-reports/indonesian-pilot-publication-2026-10-28.json').read_text())
 class Units(HTMLParser):
-    def __init__(self):super().__init__(convert_charrefs=True);self.depth=0;self.active=[];self.units={};self.ld=False;self.buf=[];self.blocks=[];self.h1=False;self.title=[]
+    def __init__(self):super().__init__(convert_charrefs=True);self.depth=0;self.active=[];self.units={};self.ld=False;self.buf=[];self.blocks=[];self.h1=False;self.title=[];self.links=[]
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
+        if tag=='a':self.links.append(a)
         if tag not in {'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}:self.depth+=1
         if a.get('data-unit'):self.active.append([a['data-unit'],self.depth,[]])
         if tag=='script' and a.get('type')=='application/ld+json':self.ld=True;self.buf=[]
@@ -45,6 +46,8 @@ def main():
     assert article['datePublished']>='2026-10-28','Arabic date copied as translation publication'
     assert 'masih berupa draf dan belum diterbitkan' not in translated
     assert 'id-draft-notice' not in translated
+    catalogue=Units();catalogue.feed((ROOT/'id/articles/index.html').read_text())
+    assert any(a.get('href')=='https://ahmedalhafiz.com/articles/' and a.get('hreflang')=='ar' for a in catalogue.links),'untranslated catalogue must lead to its actual Arabic destination'
     for path in (ROOT/'id').rglob('index.html'):
         text=path.read_text()
         assert '<html lang="id" dir="ltr">' in text,str(path)
