@@ -329,36 +329,39 @@ def main()->int:
     # GA4 measurement integrity: one centralized loader on every public page,
     # but no Analytics request or cookie before explicit opt-in consent.
     ga4_id='G-TYFF6MTK0Y'
-    ga4_asset='assets/analytics-ga4-28.js'
-    ga4_tag='<script defer src="/assets/analytics-ga4-28.js"></script>'
-    ga4_path=root/ga4_asset
-    if not ga4_path.exists():
-        errors.append(f'{ga4_asset}: missing centralized GA4 loader')
-    else:
-        ga4_source=ga4_path.read_text(encoding='utf-8')
-        if ga4_source.count(ga4_id)!=1:errors.append(f'{ga4_asset}: expected exactly one measurement ID {ga4_id}')
-        for marker in (
-            'allow_google_signals: false',
-            'allow_ad_personalization_signals: false',
-            'send_page_view: true',
-            "const consentKey = 'ahmedalhafiz.analyticsConsent.v1'",
-            'data-consent="granted"',
-            'data-consent="denied"',
-            'function enableAnalytics()',
-            'function disableAnalytics()',
-        ):
-            if marker not in ga4_source:errors.append(f'{ga4_asset}: privacy/measurement marker missing: {marker}')
-        enable_pos=ga4_source.find('function enableAnalytics()')
-        google_pos=ga4_source.find('googletagmanager.com/gtag/js')
-        config_pos=ga4_source.find("window.gtag('config'")
-        if enable_pos<0 or google_pos<enable_pos or config_pos<enable_pos:
-            errors.append(f'{ga4_asset}: Google Analytics must not load/configure before explicit consent')
-    for privacy_rel in ('privacy/index.html','en/privacy/index.html','de/privacy/index.html'):
+    for ga4_asset in ('assets/analytics-ga4-28.js','assets/analytics-indonesia-pilot.js'):
+        ga4_path=root/ga4_asset
+        if not ga4_path.exists():
+            errors.append(f'{ga4_asset}: missing centralized GA4 loader')
+        else:
+            ga4_source=ga4_path.read_text(encoding='utf-8')
+            if ga4_source.count(ga4_id)!=1:errors.append(f'{ga4_asset}: expected exactly one measurement ID {ga4_id}')
+            for marker in (
+                'allow_google_signals: false',
+                'allow_ad_personalization_signals: false',
+                'send_page_view: true',
+                "const consentKey = 'ahmedalhafiz.analyticsConsent.v1'",
+                'data-consent="granted"',
+                'data-consent="denied"',
+                'function enableAnalytics()',
+                'function disableAnalytics()',
+            ):
+                if marker not in ga4_source:errors.append(f'{ga4_asset}: privacy/measurement marker missing: {marker}')
+            enable_pos=ga4_source.find('function enableAnalytics()')
+            google_pos=ga4_source.find('googletagmanager.com/gtag/js')
+            config_pos=ga4_source.find("window.gtag('config'")
+            if enable_pos<0 or google_pos<enable_pos or config_pos<enable_pos:
+                errors.append(f'{ga4_asset}: Google Analytics must not load/configure before explicit consent')
+    for privacy_rel in ('privacy/index.html','en/privacy/index.html','de/privacy/index.html','id/privacy/index.html'):
         if not (root/privacy_rel).exists():errors.append(f'{privacy_rel}: required privacy page missing')
     for p in htmls:
         page_source=p.read_text(encoding='utf-8')
-        count=page_source.count(ga4_tag)
-        if count!=1:errors.append(f'{p.relative_to(root)}: expected one centralized GA4 loader tag, found {count}')
+        ga4_asset='assets/analytics-indonesia-pilot.js' if p.relative_to(root).as_posix().startswith('id/') else 'assets/analytics-ga4-28.js'
+        expected_tag='<script defer src="/'+ga4_asset+'"></script>'
+        count=page_source.count(expected_tag)
+        if count!=1:errors.append(f'{p.relative_to(root)}: expected one locale-appropriate centralized GA4 loader tag, found {count}')
+        total=page_source.count('/assets/analytics-ga4-28.js')+page_source.count('/assets/analytics-indonesia-pilot.js')
+        if total!=1:errors.append(f'{p.relative_to(root)}: duplicate or missing Analytics entry points')
         if ga4_id in page_source:errors.append(f'{p.relative_to(root)}: GA4 measurement ID must stay centralized in {ga4_asset}')
 
     robots=(root/'robots.txt').read_text(encoding='utf-8') if (root/'robots.txt').exists() else ''

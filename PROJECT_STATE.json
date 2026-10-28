@@ -2,13 +2,13 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "content/umm-abbas-dreams-en-2026-10-27",
-  "head_sha": "add7862d8eaf9767c3953dc35949ed347155b01d",
+  "branch": "publish/id-pilot-20261028",
+  "head_sha": "402b987605890d26c3d8f78b16f79bfa95bd2855",
   "head_sha_semantics": "Verified published base. Final PR is the authority for CI, visual review, merge and live verification.",
-  "status": "dream_complete_english_translation_candidate",
-  "updated_at": "2026-10-27T15:22:43+01:00",
-  "current_task": "Publish the author-approved complete jinn-dreams English translation, verify publication, then prepare the love-magic English article separately for approval.",
-  "next_action": "Complete local integrity checks, responsive CI screenshots, merge, Pages and live verification. The next article is love-magic-reconciliation-ruling; its draft must be approved before publication.",
+  "status": "indonesian_pilot_approved_release_candidate",
+  "updated_at": "2026-10-28T13:39:51.568890+00:00",
+  "current_task": "Publish the approved complete Indonesian pilot and four support pages; preserve existing language content.",
+  "next_action": "Pass CI and visual review, merge, verify Pages and all five live URLs, then translate ratq-fatq-big-bang for separate approval.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
     "pull_request": 148,
@@ -583,5 +583,21 @@
     "limits": "Qualitative search study only. No measured keyword volume, difficulty, ranking or traffic guarantee. Independent medical and religious specialist review remains pending.",
     "publication_evidence": "The final PR records CI, responsive screenshots, merge, Pages and live verification; this candidate checkpoint is not publication proof.",
     "inventory": "59 Arabic research items, 58 English editions, 5 German editions and 161 public HTML pages."
+  },
+  "indonesian_pilot_release": {
+    "status": "approved_release_candidate",
+    "authorization": "انشر وانتقل للتالي",
+    "base_sha": "402b987605890d26c3d8f78b16f79bfa95bd2855",
+    "article": "https://ahmedalhafiz.com/id/articles/ketindihan-melihat-sosok/",
+    "pages": 5,
+    "translation_version": "id-pilot-v1.2",
+    "source_content_unchanged": true,
+    "seo_title": "Ketindihan: Mengapa Terasa Ada Sosok? | Ahmed Alhafiz",
+    "next_article": "ratq-fatq-big-bang",
+    "next_article_publication_requires_approval": true,
+    "external_specialist_review": "not_completed",
+    "local_and_ci_checks": "local_checks_passed_ci_pending",
+    "live_verification": "pending",
+    "public_branch": "publish/id-pilot-20261028"
   }
 }

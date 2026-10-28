@@ -1000,7 +1000,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_specialist_review",
       "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, cultural analysis, safety boundaries, source set, and stated limits; search optimization is confined to natural English title/description phrasing.",
@@ -1008,7 +1009,10 @@
       "does_not_target": [
         "تشخيص الصرع",
         "إثبات وجود كائن خارجي"
-      ]
+      ],
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/ketindihan-melihat-sosok/",
+      "indonesian_title": "Ketindihan (Sleep Paralysis): Mengapa Terasa Ada Sosok di Kamar?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; specialist_review_pending"
     },
     {
       "slug": "arabic-psychological-horror",

@@ -157,6 +157,8 @@ def expected_author_href(path: Path) -> str:
         return "/en/about/"
     if rel.startswith("de/"):
         return "/de/about/"
+    if rel.startswith("id/"):
+        return "/id/about/"
     return "/about/"
 
 
@@ -225,15 +227,16 @@ def validate_manifest(errors: list[str]) -> None:
             "https://ahmedalhafiz.com/about/",
             "https://ahmedalhafiz.com/en/about/",
             "https://ahmedalhafiz.com/de/about/",
+            "https://ahmedalhafiz.com/id/about/",
         ]
         if profiles != expected_profiles:
-            errors.append("author.json: three language-specific profile URLs missing")
+            errors.append("author.json: four language-specific profile URLs missing")
     profiles = [node for node in graph if isinstance(node, dict) and node_has_type(node, "ProfilePage")]
-    if len(profiles) != 3:
-        errors.append(f"author.json: expected three ProfilePage nodes, found {len(profiles)}")
+    if len(profiles) != 4:
+        errors.append(f"author.json: expected four ProfilePage nodes, found {len(profiles)}")
     else:
         languages = sorted(node.get("inLanguage") for node in profiles)
-        if languages != ["ar", "de", "en"]:
+        if languages != ["ar", "de", "en", "id"]:
             errors.append(f"author.json: profile languages drifted: {languages}")
         for node in profiles:
             if node.get("mainEntity") != {"@id": AUTHOR_ID}:
@@ -559,7 +562,7 @@ def main() -> None:
         raise SystemExit(1)
     print(
         "Entity integrity passed: canonical bilingual name, Arabic and Latin aliases, one author ID, "
-        "two verified public profiles, one machine-readable manifest, three visible profile editions, "
+        "two verified public profiles, one machine-readable manifest, four visible profile editions, "
         "four forthcoming books, four current reference pillars, four multilingual book-to-research graphs, "
         "canonical Juhayman title, and no alias doorway pages."
     )

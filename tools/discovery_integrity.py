@@ -160,6 +160,7 @@ def multilingual(item):
         "ar": ("url", "title"),
         "en": ("english_url", "english_title"),
         "de": ("german_url", "german_title"),
+        "id": ("indonesian_url", "indonesian_title"),
     }
     declared = item["languages"]
     if len(declared) < 2:
@@ -204,7 +205,11 @@ def index_data():
             if not x.get("german_title") or not x.get("german_url"): die(f"{s}: incomplete German metadata")
             if not page_path(x["german_url"]).is_file(): die(f"{s}: German page missing")
             page_meta(x["german_url"], x["german_title"])
-        unsupported = set(x["languages"]) - {"ar", "en", "de"}
+        if "id" in x["languages"]:
+            if not x.get("indonesian_title") or not x.get("indonesian_url"): die(f"{s}: incomplete Indonesian metadata")
+            if not page_path(x["indonesian_url"]).is_file(): die(f"{s}: Indonesian page missing")
+            page_meta(x["indonesian_url"], x["indonesian_title"])
+        unsupported = set(x["languages"]) - {"ar", "en", "de", "id"}
         if unsupported: die(f"{s}: unsupported declared languages: {sorted(unsupported)}")
         multilingual(x)
         if "de" in x["languages"]:
@@ -285,6 +290,11 @@ def surfaces(indexed):
             gdh = (ROOT/"de/articles/index.html").read_text(encoding="utf-8")
             if gu not in urls or gr not in gh or gr not in gdh:
                 die(f"{x['slug']}: German homepage/hub/sitemap omission")
+        if x.get("indonesian_url"):
+            iu=x["indonesian_url"]; ir=route(iu)
+            ih=(ROOT/"id/articles/index.html").read_text(encoding="utf-8")
+            if iu not in urls or ir not in ih: die(f"{x['slug']}: Indonesian hub/sitemap omission")
+            if br not in page_path(iu).read_text(encoding="utf-8"): die(f"{x['slug']}: Indonesian article lost its original Arabic book destination")
 
 def english_homepage(expected):
     path = ROOT / "en/index.html"
@@ -301,6 +311,7 @@ def hub_structured_inventory(indexed):
         ("articles/index.html", "ar", "url", "https://ahmedalhafiz.com/articles/#list"),
         ("en/articles/index.html", "en", "english_url", "https://ahmedalhafiz.com/en/articles/#list"),
         ("de/articles/index.html", "de", "german_url", "https://ahmedalhafiz.com/de/articles/#list"),
+        ("id/articles/index.html", "id", "indonesian_url", "https://ahmedalhafiz.com/id/articles/#list"),
     )
     for rel, language, url_key, list_id in configs:
         html = (ROOT / rel).read_text(encoding="utf-8")
@@ -384,14 +395,33 @@ def homepage_structured_inventory(indexed):
             if route(url) not in html:
                 die(f"{rel}: research URL is structured but not visibly linked: {url}")
 
+def indonesian_homepage(indexed, translated):
+    """The faithful homepage has three excerpts; Arabic destinations stay labeled."""
+    text=(ROOT/"id/index.html").read_text(encoding="utf-8")
+    visible=HomeReading();visible.feed(text)
+    if '/id/articles/' not in visible.links:die('id/index.html: Indonesian catalogue route missing')
+    known=set(indexed)|set(translated)
+    selection=[(url if url.startswith('https://') else 'https://ahmedalhafiz.com'+url,title) for url,title in visible.selected]
+    if len(selection)!=3 or len({u for u,_ in selection})!=3 or any(u not in known for u,_ in selection):die('id/index.html: selected article missing from published inventory')
+    if not any(u in translated for u,_ in selection):die('id/index.html: complete Indonesian edition missing from selection')
+    for url,_ in selection:
+        if url in indexed and not re.search(r'href=["\']'+re.escape(url)+r'["\'][^>]*hreflang=["\']ar["\']',text):die('id/index.html: Arabic destination must retain its language label')
+    ld=LD();ld.feed(text)
+    lists=[n for raw in ld.blocks for n in json.loads(raw).get('@graph',[]) if n.get('@id')=='https://ahmedalhafiz.com/id/#featured-research']
+    if len(lists)!=1 or lists[0].get('numberOfItems')!=3:die('id/index.html: featured ItemList missing')
+    if [(i.get('url'),norm(i.get('name',''))) for i in lists[0].get('itemListElement',[])]!=selection:die('id/index.html: featured ItemList differs from visible excerpts')
+
 def main():
     ar = index_data(); en = {x["english_url"]:{**x,"title":x["english_title"]} for x in ar.values() if x.get("english_url")}
     de = {x["german_url"]:{**x,"title":x["german_title"]} for x in ar.values() if x.get("german_url")}
+    indonesian = {x["indonesian_url"]:{**x,"title":x["indonesian_title"]} for x in ar.values() if x.get("indonesian_url")}
     atom(ROOT/"articles/feed.xml", ar); json_feed(ROOT/"articles/feed.json", ar)
     atom(ROOT/"en/articles/feed.xml", en); json_feed(ROOT/"en/articles/feed.json", en)
     atom(ROOT/"de/articles/feed.xml", de)
+    atom(ROOT/"id/articles/feed.xml", indonesian); json_feed(ROOT/"id/articles/feed.json", indonesian)
     surfaces(ar); english_homepage(en); hub_structured_inventory(ar); homepage_structured_inventory(ar)
-    print(f"Discovery integrity passed: {len(ar)} Arabic surfaces, {len(en)} English editions, {len(de)} German editions; chronology, JSON-LD metadata, reciprocal hreflang/switches, feeds, hubs, sitemap, book links and homepage inventories agree.")
+    indonesian_homepage(ar, indonesian)
+    print(f"Discovery integrity passed: {len(ar)} Arabic surfaces, {len(en)} English editions, {len(de)} German editions, {len(indonesian)} Indonesian editions; chronology, JSON-LD metadata, reciprocal hreflang/switches, feeds, hubs, sitemap, book links and homepage inventories agree.")
 
 if __name__ == "__main__":
     try: main()
