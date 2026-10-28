@@ -26,6 +26,8 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("umm-abbas-love-en", "/en/articles/love-magic-reconciliation-ruling/", ".references"),
+    ("umm-abbas-love-opening-en", "/en/articles/love-magic-reconciliation-ruling/", "#answer"),
     ("umm-abbas-dreams-en", "/en/articles/jinn-dream-fear-meaning/", ".references"),
     ("umm-abbas-dreams-opening-en", "/en/articles/jinn-dream-fear-meaning/", "#answer"),
 

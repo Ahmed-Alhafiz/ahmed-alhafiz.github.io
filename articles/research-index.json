@@ -7,7 +7,7 @@
     "profile": "https://ahmedalhafiz.com/about/"
   },
   "review_register": "https://ahmedalhafiz.com/research-status/",
-  "generated": "2026-10-27",
+  "generated": "2026-10-28T08:10:38+01:00",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
@@ -82,11 +82,14 @@
       "type": "قراءة دينية وعلمية وأدبية",
       "version": "1.0",
       "languages": [
-        "ar"
+        "ar",
+        "en"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/articles/love-magic-reconciliation-ruling/"
+      "url": "https://ahmedalhafiz.com/articles/love-magic-reconciliation-ruling/",
+      "english_title": "Do Love Spells Work? Evidence and the Islamic Ruling",
+      "english_url": "https://ahmedalhafiz.com/en/articles/love-magic-reconciliation-ruling/"
     },
     {
       "slug": "jinn-dream-fear-meaning",

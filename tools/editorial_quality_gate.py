@@ -10,6 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://ahmedalhafiz.com'
 
 RULES={
+ 'en/articles/love-magic-reconciliation-ruling/index.html':dict(words=2200,sources=8,book='en/books/umm-abbas/index.html',route='/en/articles/love-magic-reconciliation-ruling/',medical=False,extended=False),
  'en/articles/jinn-dream-fear-meaning/index.html':dict(words=2200,sources=8,book='en/books/umm-abbas/index.html',route='/en/articles/jinn-dream-fear-meaning/',medical=False,extended=False),
 
  'en/articles/shams-al-maarif-truth-reading-ruling/index.html':dict(words=2400,sources=9,book='en/books/umm-abbas/index.html',route='/en/articles/shams-al-maarif-truth-reading-ruling/',medical=False,extended=False),
