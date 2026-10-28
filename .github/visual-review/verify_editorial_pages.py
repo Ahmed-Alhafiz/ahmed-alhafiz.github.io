@@ -26,9 +26,9 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
-    ("indonesia-juhayman-opening", "/id/articles/juhaiman-masjidil-haram-1979/", '[data-unit="J006"]'),
+    ("indonesia-juhayman-opening", "/id/articles/juhaiman-masjidil-haram-1979/", '[data-unit="J007"]'),
     ("indonesia-juhayman-table", "/id/articles/juhaiman-masjidil-haram-1979/", ".table-scroll"),
-    ("indonesia-juhayman-references", "/id/articles/juhaiman-masjidil-haram-1979/", "#ref-1"),
+    ("indonesia-juhayman-references", "/id/articles/juhaiman-masjidil-haram-1979/", "main ol:has(> li#ref-1)"),
     ("indonesia-ratq-opening", "/id/articles/big-bang-dalam-al-quran/", '[data-unit="R011"]'),
     ("indonesia-ratq-table", "/id/articles/big-bang-dalam-al-quran/", ".table-scroll"),
     ("indonesia-ratq-references", "/id/articles/big-bang-dalam-al-quran/", ".references"),
