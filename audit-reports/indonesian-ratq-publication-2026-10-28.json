@@ -590,5 +590,17 @@
   "source_book_page_quotes_checked_against_article_only": true,
   "search_volume": null,
   "keyword_difficulty": null,
-  "created_at": "2026-10-28T18:16:45.813716+00:00"
+  "created_at": "2026-10-28T18:16:45.813716+00:00",
+  "quran_font": {
+    "font": "Amiri Quran",
+    "font_version": "1.003",
+    "font_source": "https://github.com/google/fonts/blob/main/ofl/amiriquran/AmiriQuran-Regular.ttf",
+    "font_sha256": "e2a47644762d16bdfb6d33e0d8db8c6ff30beae84150ef5a705316bbd829455c",
+    "font_bytes": 136920,
+    "license": "SIL OFL 1.1",
+    "license_sha256": "b32e3b24e2a943b8acbf6ab8d5499bfed737d5176091b7341a8c1e7fbcdeb0fa",
+    "distinct_quote_codepoints": 41,
+    "missing_glyphs": [],
+    "quotation_text_modified": false
+  }
 }

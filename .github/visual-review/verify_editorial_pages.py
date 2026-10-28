@@ -514,6 +514,12 @@ def main() -> None:
             for name, route, target_selector in PAGES:
                 driver.get(f"{BASE}{route}?editorial_visual_gate=1")
                 wait_ready(driver)
+                if name.startswith("indonesia-ratq-"):
+                    WebDriverWait(driver, 10).until(lambda browser: browser.execute_script(
+                        "return document.fonts.status==='loaded' && document.fonts.check('24px \"Amiri Quran\"','﴿﴾ۖ');"
+                    ))
+                    quran_font = driver.execute_script("return getComputedStyle(document.querySelector('.quran-arabic')).fontFamily")
+                    assert quran_font.startswith('"Amiri Quran"'), f"{mode}/{name}: Quran font missing"
                 single_number_references = {
                     "umm-abbas-sprinkled-en": 10,
                     "umm-abbas-qarin-en": 9,

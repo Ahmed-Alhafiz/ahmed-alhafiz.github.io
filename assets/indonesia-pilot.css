@@ -20,10 +20,14 @@ html[lang="id"] .book-card h3:lang(ar),html[lang="id"] .book-summary h3:has([lan
 
 html[lang="id"] .references{list-style:none}
 
-/* Qur'an quotations and source attribution for the approved ratq/fatq edition. */
-.id-ratq-article .quran-arabic{font:20px/2.1 Tahoma,Arial,sans-serif;unicode-bidi:isolate}
+/* Qur'an quotations and source attribution for the approved ratq/fatq edition.
+   Amiri Quran: SIL OFL 1.1; copyright and complete license in fonts/amiri-quran/OFL.txt. */
+@font-face{font-family:"Amiri Quran";src:url("/assets/fonts/amiri-quran/amiri-quran-regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+.id-ratq-article .quran-arabic{font:24px/2.2 "Amiri Quran",Tahoma,Arial,sans-serif;unicode-bidi:isolate}
 .id-ratq-article .quran-meaning{display:block;border-inline-start:3px solid #bd9561;padding-inline-start:16px;margin-block:18px;font-style:normal}
 .id-ratq-article .table-scroll table{min-width:540px}
 .id-ratq-article .id-translation-sources{max-width:900px;margin:auto;padding:24px;border-top:1px solid var(--line);font-size:15px;line-height:1.85}
 .id-ratq-article .id-translation-sources p{margin-block:12px}
-@media(max-width:640px){.id-ratq-article .quran-arabic{font-size:19px}.id-ratq-article .id-translation-sources{padding:16px}}
+@media(max-width:640px){.id-ratq-article .quran-arabic{font-size:22px}.id-ratq-article .id-translation-sources{padding:16px}}
+
+@media(max-width:640px){.id-ratq-article .table-scroll::before{content:"Geser tabel untuk melihat semua kolom ↔";display:block;width:100%;padding:8px 12px;background:#f3ecdf;color:#5b4b36;font:13px/1.6 Arial,sans-serif}}
