@@ -31,3 +31,40 @@ html[lang="id"] .references{list-style:none}
 @media(max-width:640px){.id-ratq-article .quran-arabic{font-size:22px}.id-ratq-article .id-translation-sources{padding:16px}}
 
 @media(max-width:640px){.id-ratq-article .table-scroll::before{content:"Geser tabel untuk melihat semua kolom ↔";display:block;width:100%;padding:8px 12px;background:#f3ecdf;color:#5b4b36;font:13px/1.6 Arial,sans-serif}}
+
+/* Complete Juhayman translation: single reading column and native reference numbering. */
+.id-juhayman-article .article-page{padding-block:32px 60px}
+.id-juhayman-article .article-shell{display:block;width:min(900px,calc(100% - 40px));margin-inline:auto}
+.id-juhayman-article .article-head{padding:30px 0 36px;background:none}
+.id-juhayman-article .article-head::after{display:none}
+.id-juhayman-article .article-head h1{font-size:clamp(32px,4.6vw,54px)}
+.id-juhayman-article .article-head .eyebrow{letter-spacing:.06em}
+.id-juhayman-article .article-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.id-juhayman-article .article-actions .button{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:10px 14px;border:1px solid var(--navy);border-radius:6px;background:var(--navy);color:#fff;font:14px/1.6 Arial,sans-serif;text-decoration:none}
+.id-juhayman-article .article-actions .button-secondary{background:transparent;color:var(--navy)}
+.id-juhayman-article .article-actions a[hreflang]::after{color:inherit}
+.id-juhayman-article .id-source-note{max-width:78ch;margin-top:24px;padding:16px 20px;border-inline-start:3px solid var(--copper);background:#f3ecdf}
+.id-juhayman-article .id-source-note p{margin:0}
+.id-juhayman-article .prose{max-width:none;font-family:Georgia,"Times New Roman",serif;font-size:19px;line-height:1.85}
+.id-juhayman-article .prose h2{font-size:32px;margin-top:48px;scroll-margin-top:100px}
+.id-juhayman-article .prose h3{font-size:24px;margin-top:32px}
+.id-juhayman-article .table-scroll{max-width:100%;border:1px solid var(--line);border-radius:8px}
+.id-juhayman-article .table-scroll table{width:100%;min-width:600px;border-collapse:collapse;font:16px/1.75 Arial,sans-serif}
+.id-juhayman-article .table-scroll th,.id-juhayman-article .table-scroll td{padding:12px 14px;text-align:start;vertical-align:top;border-bottom:1px solid var(--line)}
+.id-juhayman-article .table-scroll th{background:#f3ecdf;color:var(--navy)}
+.id-juhayman-article .prose li[id^="ref-"]{overflow-wrap:anywhere;font:15px/1.85 Arial,sans-serif;margin-bottom:16px;scroll-margin-top:130px}
+.id-juhayman-article .arabic-quotation{font:24px/2.2 "Amiri Quran",Tahoma,Arial,sans-serif;unicode-bidi:isolate}
+.id-juhayman-article .related-panel{margin-top:40px;padding:24px;border-top:1px solid var(--line)}
+.id-juhayman-article blockquote{margin-inline:0;padding:20px 24px;border-inline-start:4px solid var(--copper);background:#f3ecdf}
+@media(max-width:640px){
+  .id-juhayman-article .article-page{padding-block:12px 36px}
+  .id-juhayman-article .article-shell{width:calc(100% - 32px)}
+  .id-juhayman-article .article-head{padding-block:20px 26px}
+  .id-juhayman-article .article-head h1{font-size:32px}
+  .id-juhayman-article .prose{font-size:17px;line-height:1.85}
+  .id-juhayman-article .prose h2{font-size:28px}
+  .id-juhayman-article .prose h3{font-size:23px}
+  .id-juhayman-article .arabic-quotation{font-size:22px}
+  .id-juhayman-article .id-source-note,.id-juhayman-article .related-panel{padding:16px}
+  .id-juhayman-article .table-scroll::before{content:"Geser tabel untuk melihat semua kolom ↔";display:block;width:100%;padding:8px 12px;background:#f3ecdf;color:#5b4b36;font:13px/1.6 Arial,sans-serif}
+}

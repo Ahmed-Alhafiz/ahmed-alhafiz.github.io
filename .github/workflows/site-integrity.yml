@@ -43,6 +43,7 @@ jobs:
         run: |
           python tools/indonesian_pilot_integrity.py
           python tools/indonesian_ratq_integrity.py
+          python tools/indonesian_juhayman_integrity.py
           node tools/indonesian_analytics_integrity.cjs
 
       - name: Parse XML JSON feeds evidence manifests figures and every JSON-LD block
