@@ -760,7 +760,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -773,7 +774,9 @@
         "https://aeraweb.org/projects/lost-city/"
       ],
       "english_title": "How Was Khufu’s Great Pyramid Built? What Merer’s Diary Actually Reveals",
-      "english_url": "https://ahmedalhafiz.com/en/articles/how-khufu-pyramid-built-merer-diary/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/how-khufu-pyramid-built-merer-diary/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/piramida-khufu-dibangun-catatan-merer/",
+      "indonesian_title": "Bagaimana Piramida Khufu Dibangun? Bukti dari Catatan Merer"
     },
     {
       "slug": "green-tree-fire-photosynthesis",

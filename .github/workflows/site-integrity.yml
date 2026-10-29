@@ -46,6 +46,7 @@ jobs:
           python tools/indonesian_juhayman_integrity.py
           python tools/indonesian_baghdad_integrity.py
           python tools/indonesian_shams_integrity.py
+          python tools/indonesian_khufu_integrity.py
           node tools/indonesian_analytics_integrity.cjs
 
       - name: Parse XML JSON feeds evidence manifests figures and every JSON-LD block

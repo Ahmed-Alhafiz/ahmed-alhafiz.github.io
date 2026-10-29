@@ -687,6 +687,53 @@
         "@type": "Book",
         "url": "https://ahmedalhafiz.com/books/umm-abbas/"
       }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/piramida-khufu-dibangun-catatan-merer/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/piramida-khufu-dibangun-catatan-merer/",
+      "name": "Piramida Khufu: Bukti Catatan Merer | Ahmed Alhafiz",
+      "headline": "Bagaimana Piramida Khufu Dibangun? Bukti dari Catatan Merer",
+      "description": "Bagaimana Piramida Khufu dibangun? Ahmed Alhafiz menelaah catatan Merer, pengangkutan batu lewat Sungai Nil, pekerja, serta batas bukti arkeologis.",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "publisher": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://ahmedalhafiz.com/id/articles/piramida-khufu-dibangun-catatan-merer/#page"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/how-khufu-pyramid-built-merer-diary/#article"
+      },
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "isAccessibleForFree": true,
+      "image": "https://ahmedalhafiz.com/ahmed-alhafiz-social-card.png",
+      "version": "Indonesian translation 1.0; Arabic source 2026-09-27",
+      "articleSection": [
+        "Arkeologi dan sejarah",
+        "Logistik pembangunan piramida"
+      ],
+      "citation": [
+        "Pierre Tallet, Le journal de Merer, MIFAO 136, IFAO, 2017 — publikasi ilmiah dua catatan, Jarf A dan B.",
+        "Tallet, English and Arabic Annex to MIFAO 136 — terjemahan, komentar, rute, dan kesimpulan.",
+        "IFAO, Mission archéologique du Ouadi el-Jarf — konteks pelabuhan, penggalian, dan bibliografi.",
+        "Tallet & Marouard, The Harbor of Khufu on the Red Sea Coast at Wadi al-Jarf, 2014.",
+        "AERA, The Lost City of the Pyramid Builders — permukiman kerja dan pasokan di Giza.",
+        "Mark Lehner, On the Waterfront: Canals and Harbors in the Time of Giza Pyramid-Building.",
+        "Pierre Tallet, Le journal de Dedi et autres fragments, MIFAO 145, IFAO, 2021 — bagian kedua arsip catatan pelayaran.",
+        "Ahmed Alhafiz, قل سيروا في الأرض فانظروا كيف بدأ الخلق, Bab Ketiga, hlm. 83–84. Rujukan bagi titik berangkat pertanyaan, bukan sumber fakta-fakta arkeologis."
+      ],
+      "mentions": {
+        "@type": "Book",
+        "url": "https://ahmedalhafiz.com/books/sirou-fi-alard/"
+      }
     }
   ],
   "dateModified": "2026-10-29"

@@ -694,7 +694,8 @@
       "book_cluster": "sirou-fi-alard",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "كيف بني هرم خوفو وما الذي تثبته يوميات مرر وبرديات وادي الجرف",
       "does_not_target": [
@@ -703,7 +704,10 @@
         "استخدام المخطوط بوصفه دليلًا"
       ],
       "next_action": "seek_independent_egyptology_review_and_measure_query_fit_after_translation_publication",
-      "reason": "Full English edition preserves the papyrus-versus-inference distinctions, five-row evidence table, 8 references, original book page citation, and source order; title targets the pyramid-building question without claiming the diary solves the lifting mechanism."
+      "reason": "Full English edition preserves the papyrus-versus-inference distinctions, five-row evidence table, 8 references, original book page citation, and source order; title targets the pyramid-building question without claiming the diary solves the lifting mechanism.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/piramida-khufu-dibangun-catatan-merer/",
+      "indonesian_title": "Bagaimana Piramida Khufu Dibangun? Bukti dari Catatan Merer",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; specialist_review_pending"
     },
     {
       "slug": "green-tree-fire-photosynthesis",
