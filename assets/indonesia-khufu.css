@@ -1,0 +1,35 @@
+/* Complete Indonesian Khufu edition; styles are limited to this page. */
+.id-khufu-article .article-head{padding-block:42px 32px}
+.id-khufu-article .article-head>.wrap{max-width:900px}
+.id-khufu-article .article-head h1{font-size:clamp(32px,4.6vw,54px);line-height:1.28}
+.id-khufu-article .article-shell{display:block;width:min(900px,calc(100% - 40px));margin-inline:auto}
+.id-khufu-article .article-body{font-size:19px;line-height:1.85;overflow-wrap:anywhere}
+.id-khufu-article .article-body h2{font-size:31px;line-height:1.35}
+.id-khufu-article .article-body h3,.id-khufu-article .article-body h4{font:24px/1.4 Georgia,"Times New Roman",serif}
+.id-khufu-article .article-body [lang="ar"]{font-family:"Amiri Quran",Tahoma,Arial,sans-serif;unicode-bidi:isolate}
+.id-khufu-article .article-body .sacred-inline{display:inline-block;max-width:100%;direction:rtl;font:24px/1.95 "Amiri Quran",serif;unicode-bidi:isolate}
+.id-khufu-article .article-body blockquote{margin-inline:0;padding:20px 24px;border-inline-start:3px solid var(--copper);background:#f3ecdf}
+.id-khufu-article .table-scroll{max-width:100%;overflow-x:auto;margin-block:26px;border:1px solid var(--line);border-radius:6px}
+.id-khufu-article .table-scroll:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+.id-khufu-article .table-scroll table{width:100%;min-width:600px;table-layout:fixed;border-collapse:collapse;font:16px/1.75 Arial,sans-serif}
+.id-khufu-article .table-scroll th,.id-khufu-article .table-scroll td{padding:12px 14px;text-align:start;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:normal}
+.id-khufu-article .table-scroll th{background:#f3ecdf;color:var(--navy)}
+.id-khufu-article .article-body .references ol{list-style:decimal;padding-inline-start:1.6em!important}
+.id-khufu-article .article-body .references li{display:list-item;list-style-type:decimal;padding:0 0 16px;font:15px/1.85 Arial,sans-serif;margin-bottom:16px;overflow-wrap:anywhere}
+.id-khufu-article .article-body .references li::before{content:none;display:none}
+.id-khufu-article .id-source-note{margin-top:24px;padding:14px 18px;border-inline-start:3px solid var(--copper);background:#f3ecdf;font:14px/1.85 Arial,sans-serif}
+.id-khufu-article .id-source-note p{margin:0}
+.id-khufu-article .id-translation-sources,.id-khufu-article .id-translation-citation{width:min(900px,calc(100% - 40px));margin:24px auto;padding:18px 0;border-top:1px solid var(--line);font:14px/1.85 Arial,sans-serif;overflow-wrap:anywhere}
+.id-khufu-article .id-translation-citation strong{display:block;margin-bottom:8px}
+.id-khufu-article .id-translation-citation code{font-size:13px;line-height:1.85}
+@media(max-width:640px){
+ .id-khufu-article .article-head{padding-block:28px}
+ .id-khufu-article .article-head h1{font-size:32px}
+ .id-khufu-article .article-shell{width:calc(100% - 32px)}
+ .id-khufu-article .article-body{font-size:17px;line-height:1.85}
+ .id-khufu-article .article-body h2{font-size:27px}
+ .id-khufu-article .article-body h3,.id-khufu-article .article-body h4{font-size:23px}
+ .id-khufu-article .article-body blockquote{padding:14px}
+ .id-khufu-article .table-scroll::before{content:"Geser tabel untuk melihat semua kolom ↔";display:block;padding:8px 12px;background:#f3ecdf;color:#5b4b36;font:13px/1.6 Arial,sans-serif}
+ .id-khufu-article .id-translation-sources,.id-khufu-article .id-translation-citation{width:calc(100% - 32px)}
+}

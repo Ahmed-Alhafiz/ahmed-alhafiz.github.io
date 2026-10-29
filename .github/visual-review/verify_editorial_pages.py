@@ -26,6 +26,9 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("indonesia-khufu-opening", "/id/articles/piramida-khufu-dibangun-catatan-merer/", '[data-unit="K010"]'),
+    ("indonesia-khufu-table", "/id/articles/piramida-khufu-dibangun-catatan-merer/", '.table-scroll'),
+    ("indonesia-khufu-references", "/id/articles/piramida-khufu-dibangun-catatan-merer/", '.references'),
     ("indonesia-shams-opening", "/id/articles/kitab-syamsul-maarif-hukum-membaca/", '[data-unit="M008"]'),
     ("indonesia-shams-quotations", "/id/articles/kitab-syamsul-maarif-hukum-membaca/", '[data-unit="M025"]'),
     ("indonesia-shams-references", "/id/articles/kitab-syamsul-maarif-hukum-membaca/", '.shams-references'),
@@ -523,6 +526,18 @@ def main() -> None:
             for name, route, target_selector in PAGES:
                 driver.get(f"{BASE}{route}?editorial_visual_gate=1")
                 wait_ready(driver)
+                if name.startswith("indonesia-khufu-"):
+                    assert len(driver.find_elements(By.CSS_SELECTOR, 'main [data-unit]')) == 98, f"{mode}/{name}: incomplete translation"
+                    assert len(driver.find_elements(By.CSS_SELECTOR, 'main table tbody tr')) == 5, f"{mode}/{name}: missing evidence rows"
+                    assert len(driver.find_elements(By.CSS_SELECTOR, 'main table th')) == 3, f"{mode}/{name}: missing evidence columns"
+                    assert len(driver.find_elements(By.CSS_SELECTOR, '.references li')) == 8, f"{mode}/{name}: incomplete references"
+                    WebDriverWait(driver, 10).until(lambda browser: browser.execute_script(
+                        "return document.fonts.status==='loaded' && document.fonts.check('24px \"Amiri Quran\"','﴿من الشجر الأخضر نارًا﴾');"
+                    ))
+                    reference_styles = driver.execute_script("return [...document.querySelectorAll('.references li')].map(li=>({native:getComputedStyle(li).listStyleType,display:getComputedStyle(li).display,before:getComputedStyle(li,'::before').content}));")
+                    assert all(r['native']=='decimal' and r['display']=='list-item' and r['before'] in ('none','normal','\"\"') for r in reference_styles), f"{mode}/{name}: duplicate reference numbers"
+                    quote_style = driver.execute_script("const s=getComputedStyle(document.querySelector('.sacred-inline')); return {font:s.fontFamily,dir:s.direction};")
+                    assert quote_style['font'].startswith('\"Amiri Quran\"') and quote_style['dir']=='rtl', f"{mode}/{name}: Arabic fragment styling changed"
                 if name.startswith("indonesia-shams-"):
                     assert len(driver.find_elements(By.CSS_SELECTOR, 'main [data-unit]')) == 91, f"{mode}/{name}: incomplete translation"
                     assert len(driver.find_elements(By.CSS_SELECTOR, '.shams-references li')) == 9, f"{mode}/{name}: incomplete references"
