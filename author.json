@@ -639,6 +639,54 @@
         "name": "Berkas bukti dan sitasi (bahasa Arab)",
         "inLanguage": "ar"
       }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/kitab-syamsul-maarif-hukum-membaca/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/kitab-syamsul-maarif-hukum-membaca/",
+      "name": "Kitab Syamsul Ma’arif: Fakta dan Hukum | Ahmed Alhafiz",
+      "headline": "Kitab Syamsul Ma’arif: Fakta dan Hukum Membacanya",
+      "description": "Ahmed Alhafiz menelaah Kitab Syamsul Ma’arif: sejarah naskah, fatwa Ibnu Baz tentang membacanya, kisah jin, serta riset ketakutan dan efek nocebo.",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "publisher": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://ahmedalhafiz.com/id/articles/kitab-syamsul-maarif-hukum-membaca/#page"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/shams-al-maarif-truth-reading-ruling/#article"
+      },
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "isAccessibleForFree": true,
+      "image": "https://ahmedalhafiz.com/ahmed-alhafiz-social-card.png",
+      "version": "Indonesian translation 1.0; Arabic source 2026-10-26",
+      "articleSection": [
+        "Sejarah naskah",
+        "Agama dan psikologi ketakutan"
+      ],
+      "citation": [
+        "Abdul Aziz bin Baz: Kewajiban Memusnahkan Kitab-Kitab Sihir dan Astrologi, Fatwa 5102.",
+        "Noah Gardiner. “Forbidden Knowledge? Notes on the Production, Transmission, and Reception of the Major Works of Aḥmad al-Būnī.” Journal of Arabic and Islamic Studies 12 (2012): 81–143, khususnya hlm. 123–128. Laman studi; Teks. DOI: 10.5617/jais.4618. Tahun 2012 adalah tahun terbit jilid tersebut; platform jurnal juga menampilkan 2017 sebagai tahun ketersediaannya secara daring.",
+        "Al-Qur’an, Al-Baqarah: 102.",
+        "Sahih Muslim, hadis 2200, dari ‘Auf bin Malik al-Asyja‘i.",
+        "Al-Qur’an dan Tafsir ath-Thabari, Al-Isra: 36.",
+        "Michael Witthöft & G. James Rubin (2013). “Are media warnings about the adverse health effects of modern life self-fulfilling? An experimental study on idiopathic environmental intolerance attributed to electromagnetic fields (IEI-EMF).” Journal of Psychosomatic Research 74(3):206–212. Rekaman bibliografis dan abstrak studi. DOI: 10.1016/j.jpsychores.2012.12.002.",
+        "Christoph Boehmert, Adam Verrender, Mario Pauli & Peter Wiedemann (2018). “Does precautionary information about electromagnetic fields trigger nocebo responses? An experimental risk communication study.” Environmental Health 17:36. Teks lengkap. DOI: 10.1186/s12940-018-0377-y.",
+        "NHS: Night terrors and nightmares, tanggal peninjauan terakhir yang tercantum: 24 November 2025.",
+        "Ahmed Alhafiz: «أم عباس لجلب الحبيب وردّ المطلّقة», manuskrip yang dilampirkan oleh penulis, 324 halaman PDF; bab pertama dan surat penulis, hlm. 7–22 dan 315–322. Nomor halaman merujuk pada salinan yang dilampirkan dan mungkin berbeda dari edisi cetak. Novel ini tidak digunakan sebagai bukti medis atau pembuktian suatu peristiwa supranatural."
+      ],
+      "mentions": {
+        "@type": "Book",
+        "url": "https://ahmedalhafiz.com/books/umm-abbas/"
+      }
     }
   ],
   "dateModified": "2026-10-29"

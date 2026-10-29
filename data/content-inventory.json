@@ -161,7 +161,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "ما حقيقة كتاب شمس المعارف، وما حكم قراءته من باب الفضول؟",
       "does_not_target": [
@@ -170,7 +171,10 @@
         "ادعاء أن شمس المعارف مذكور بالاسم في الرواية"
       ],
       "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
-      "reason": "Author-approved Arabic article distinguishes manuscript history, attributed religious ruling, limited nocebo studies and literary context."
+      "reason": "Author-approved Arabic article distinguishes manuscript history, attributed religious ruling, limited nocebo studies and literary context.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/kitab-syamsul-maarif-hukum-membaca/",
+      "indonesian_title": "Kitab Syamsul Ma’arif: Fakta dan Hukum Membacanya",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; specialist_review_pending"
     },
     {
       "slug": "hexagram-magic-seal-of-solomon-umm-abbas",

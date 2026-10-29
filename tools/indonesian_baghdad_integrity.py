@@ -68,10 +68,10 @@ def main():
             assert a['data-book-slug'] == 'kitab-al-kutub' and a['hreflang'] == 'ar'
     catalogue = Units(); catalogue.feed((ROOT / 'id/articles/index.html').read_text())
     listing = next(n for b in catalogue.blocks for n in b.get('@graph', []) if n.get('@type') == 'ItemList')
-    assert listing['numberOfItems'] == len(listing['itemListElement']) == 4
-    assert listing['itemListElement'][0]['url'] == URL
+    assert listing['numberOfItems'] == len(listing['itemListElement']) >= 4
+    assert sum(item['url'] == URL for item in listing['itemListElement']) == 1
     feed = json.loads((ROOT / 'id/articles/feed.json').read_text())
-    assert len(feed['items']) == 4 and feed['items'][0]['url'] == URL
+    assert len(feed['items']) >= 4 and sum(item['url'] == URL for item in feed['items']) == 1
     assert URL in (ROOT / 'sitemap.xml').read_text()
     bib = (ROOT / 'articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/references.bib').read_text()
     ris = (ROOT / 'articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/references.ris').read_text()

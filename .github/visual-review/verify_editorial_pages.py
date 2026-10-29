@@ -26,6 +26,9 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("indonesia-shams-opening", "/id/articles/kitab-syamsul-maarif-hukum-membaca/", '[data-unit="M008"]'),
+    ("indonesia-shams-quotations", "/id/articles/kitab-syamsul-maarif-hukum-membaca/", '[data-unit="M025"]'),
+    ("indonesia-shams-references", "/id/articles/kitab-syamsul-maarif-hukum-membaca/", '.shams-references'),
     ("indonesia-baghdad-opening", "/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/", '[data-unit="B006"]'),
     ("indonesia-baghdad-causes", "/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/", 'main ul:has(> li[data-unit="B060"])'),
     ("indonesia-baghdad-references", "/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/", '.reference-list'),
@@ -520,6 +523,17 @@ def main() -> None:
             for name, route, target_selector in PAGES:
                 driver.get(f"{BASE}{route}?editorial_visual_gate=1")
                 wait_ready(driver)
+                if name.startswith("indonesia-shams-"):
+                    assert len(driver.find_elements(By.CSS_SELECTOR, 'main [data-unit]')) == 91, f"{mode}/{name}: incomplete translation"
+                    assert len(driver.find_elements(By.CSS_SELECTOR, '.shams-references li')) == 9, f"{mode}/{name}: incomplete references"
+                    assert len(driver.find_elements(By.CSS_SELECTOR, '.sacred-ar')) == 5, f"{mode}/{name}: missing Arabic quotations"
+                    WebDriverWait(driver, 10).until(lambda browser: browser.execute_script(
+                        "return document.fonts.status==='loaded' && document.fonts.check('24px \"Amiri Quran\"','﴿﴾ۖ');"
+                    ))
+                    styles = driver.execute_script("return [...document.querySelectorAll('.shams-references li')].map(li=>({native:getComputedStyle(li).listStyleType,display:getComputedStyle(li).display,before:getComputedStyle(li,'::before').content}));")
+                    assert all(r['native'] == 'decimal' and r['display'] == 'list-item' and r['before'] in ('none','normal','\"\"') for r in styles), f"{mode}/{name}: duplicate reference numbers"
+                    fonts = driver.execute_script("return [...document.querySelectorAll('.sacred-ar')].map(n=>getComputedStyle(n).fontFamily);")
+                    assert all(f.startswith('\"Amiri Quran\"') for f in fonts), f"{mode}/{name}: Arabic quotation font missing"
                 if name.startswith("indonesia-baghdad-"):
                     assert len(driver.find_elements(By.CSS_SELECTOR, 'main [data-unit]')) == 105, f"{mode}/{name}: incomplete translation"
                     assert len(driver.find_elements(By.CSS_SELECTOR, '.reference-list li')) == 8, f"{mode}/{name}: incomplete references"
