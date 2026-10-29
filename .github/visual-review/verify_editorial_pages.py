@@ -26,6 +26,9 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("indonesia-baghdad-opening", "/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/", '[data-unit="B006"]'),
+    ("indonesia-baghdad-causes", "/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/", 'main ul:has(> li[data-unit="B060"])'),
+    ("indonesia-baghdad-references", "/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/", '.reference-list'),
     ("indonesia-juhayman-opening", "/id/articles/juhaiman-masjidil-haram-1979/", '[data-unit="J007"]'),
     ("indonesia-juhayman-table", "/id/articles/juhaiman-masjidil-haram-1979/", ".table-scroll"),
     ("indonesia-juhayman-references", "/id/articles/juhaiman-masjidil-haram-1979/", "main ol:has(> li#ref-1)"),
@@ -517,6 +520,11 @@ def main() -> None:
             for name, route, target_selector in PAGES:
                 driver.get(f"{BASE}{route}?editorial_visual_gate=1")
                 wait_ready(driver)
+                if name.startswith("indonesia-baghdad-"):
+                    assert len(driver.find_elements(By.CSS_SELECTOR, 'main [data-unit]')) == 105, f"{mode}/{name}: incomplete translation"
+                    assert len(driver.find_elements(By.CSS_SELECTOR, '.reference-list li')) == 8, f"{mode}/{name}: incomplete references"
+                    reference_styles = driver.execute_script("return [...document.querySelectorAll('.reference-list li')].map(li=>({native:getComputedStyle(li).listStyleType,before:getComputedStyle(li,'::before').content}));")
+                    assert all(r['native'] == 'disc' and r['before'] in ('none','normal','\"\"') for r in reference_styles), f"{mode}/{name}: original unordered references changed"
                 if name.startswith("indonesia-ratq-"):
                     WebDriverWait(driver, 10).until(lambda browser: browser.execute_script(
                         "return document.fonts.status==='loaded' && document.fonts.check('24px \"Amiri Quran\"','﴿﴾ۖ');"
