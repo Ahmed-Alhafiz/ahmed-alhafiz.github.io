@@ -6,7 +6,7 @@
   "head_sha": "8f502e194b7dc8b4b06bba8284b848974fdff8e9",
   "head_sha_semantics": "Verified published base. Final PR is the authority for CI, visual review, merge and live verification.",
   "status": "indonesian_third_article_approved_release_candidate",
-  "updated_at": "2026-10-28T21:14:07.494988+00:00",
+  "updated_at": "2026-10-29T05:15:45.484857+01:00",
   "current_task": "Publish the complete approved Indonesian Juhayman 1979 translation; preserve existing language bodies.",
   "next_action": "Pass required CI and responsive visual checks, merge, verify Pages and live parity. Further translations require their own review approval.",
   "latest_site_audit_checkpoint": {
@@ -627,6 +627,7 @@
     "reference_entries": 4,
     "independent_specialist_review": false,
     "public_html_pages": 168,
-    "publication_evidence": "Release source checkpoint only; final PR, Pages and live verification establish actual publication."
+    "publication_evidence": "Release source checkpoint only; final PR, Pages and live verification establish actual publication.",
+    "publication_date": "2026-10-29"
   }
 }

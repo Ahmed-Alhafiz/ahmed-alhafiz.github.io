@@ -551,7 +551,7 @@
   "supplements": [
     {
       "id": "S001",
-      "text_sha256": "11d20d600827c9ff6da4548ec4e533af91940da2024106b618f9849167014fc1"
+      "text_sha256": "1d6ff066f2e84ed9d8a23e329c30fd0c22fe923b19acfd0b001994dc3f37743e"
     }
   ],
   "existing_main_pages": [
@@ -597,5 +597,7 @@
     "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/citation.bib",
     "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/citation.ris",
     "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/CITATION.cff"
-  ]
+  ],
+  "release_prepared_at": "2026-10-29T05:15:45.484857+01:00",
+  "publication_date": "2026-10-29"
 }
