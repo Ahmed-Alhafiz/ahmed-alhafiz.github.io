@@ -114,13 +114,16 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/jinn-dream-fear-meaning/",
       "english_title": "Seeing Jinn in Dreams: Does It Mean Possession or Magic?",
-      "english_url": "https://ahmedalhafiz.com/en/articles/jinn-dream-fear-meaning/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/jinn-dream-fear-meaning/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/mimpi-melihat-jin-pertanda-sihir/",
+      "indonesian_title": "Mimpi Melihat Jin Menurut Islam: Apakah Tanda Gangguan Jin atau Sihir?"
     },
     {
       "slug": "shams-al-maarif-truth-reading-ruling",

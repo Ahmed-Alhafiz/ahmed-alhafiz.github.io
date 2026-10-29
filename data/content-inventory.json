@@ -143,7 +143,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "هل رؤية الجن في المنام تدل على المسّ أو السحر؟",
       "does_not_target": [
@@ -152,7 +153,10 @@
         "شرح شلل النوم التفصيلي الذي له مقال مستقل"
       ],
       "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
-      "reason": "Approved Arabic article on dream interpretation, religious boundaries, emotional memory and literary context."
+      "reason": "Approved Arabic article on dream interpretation, religious boundaries, emotional memory and literary context.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/mimpi-melihat-jin-pertanda-sihir/",
+      "indonesian_title": "Mimpi Melihat Jin Menurut Islam: Apakah Tanda Gangguan Jin atau Sihir?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; specialist_review_pending"
     },
     {
       "slug": "shams-al-maarif-truth-reading-ruling",
