@@ -734,6 +734,53 @@
         "@type": "Book",
         "url": "https://ahmedalhafiz.com/books/sirou-fi-alard/"
       }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/mimpi-melihat-jin-pertanda-sihir/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/mimpi-melihat-jin-pertanda-sihir/",
+      "name": "Mimpi Melihat Jin Menurut Islam: Tanda Sihir? | Ahmed Alhafiz",
+      "headline": "Mimpi Melihat Jin Menurut Islam: Apakah Tanda Gangguan Jin atau Sihir?",
+      "description": "Apakah mimpi melihat jin pertanda gangguan jin atau sihir? Ahmed Alhafiz mengkaji hadis, psikologi mimpi, dan kapan mimpi buruk memerlukan bantuan.",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "publisher": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://ahmedalhafiz.com/id/articles/mimpi-melihat-jin-pertanda-sihir/#page"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/jinn-dream-fear-meaning/#article"
+      },
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "isAccessibleForFree": true,
+      "image": "https://ahmedalhafiz.com/ahmed-alhafiz-social-card.png",
+      "version": "Indonesian translation 1.1; Arabic source 2026-10-26",
+      "articleSection": [
+        "Agama dan psikologi",
+        "Mimpi dan penafsiran"
+      ],
+      "citation": [
+        "[1] Sahih Muslim, Kitab Ar-Ru’ya, hadis 2263a. Hadis Abu Hurairah tentang jenis-jenis mimpi, salat, dan larangan menceritakan mimpi yang tidak disukai. Hadis sahih karena diriwayatkan dalam Sahih Muslim. Teks Arab dan rujukan hadis.",
+        "[2] Al-Qur’an, Surah Al-Isra, ayat 36. Ayat beserta tafsirnya.",
+        "[3] National Health Service (NHS), Inggris. “Night terrors and nightmares”, ditinjau 24 November 2025. Definisi, faktor yang berkaitan, dan kapan meminta bantuan. Sumber resmi.",
+        "[4] Jing Zhang dan rekan-rekan, 2024. Studi tentang peran mimpi dalam pemrosesan memori emosional, University of California, Irvine, bersama peneliti lain; jurnal Scientific Reports, volume 14, artikel 8722. Penelitian asli, metode, dan hasil.",
+        "[5] Carey Morewedge dan Michael Norton, 2009. “When Dreaming Is Believing: The (Motivated) Interpretation of Dreams”, Journal of Personality and Social Psychology, 96(2), 249–264. Abstrak dan metadata penelitian; DOI penelitian.",
+        "[6] Sahih Muslim, Kitab Ar-Ru’ya, hadis 2262. Hadis Jabir tentang memohon perlindungan dan mengubah posisi berbaring setelah mimpi yang tidak disukai. Hadis sahih. Teks Arab dan rujukan hadis.",
+        "[7] Timothy Morgenthaler dan rekan-rekan, 2018. Pernyataan posisi American Academy of Sleep Medicine mengenai penanganan gangguan mimpi buruk pada orang dewasa, Journal of Clinical Sleep Medicine, 14(6), 1041–1055. Pernyataan posisi asli.",
+        "[8] Ahmed Alhafiz, «أم عباس لجلب الحبيب وردّ المطلّقة». Bab kedua, “Kertas yang Bernapas” («الورقة التي تنفّست»). Ini rujukan pada adegan fiksi, bukan bukti medis ataupun tentang perkara gaib. Halaman novel."
+      ],
+      "mentions": {
+        "@type": "Book",
+        "url": "https://ahmedalhafiz.com/books/umm-abbas/"
+      }
     }
   ],
   "dateModified": "2026-10-29"
