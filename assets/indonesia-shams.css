@@ -1,0 +1,24 @@
+/* Scoped to the complete Indonesian Syamsul Ma'arif edition. */
+.id-shams-article .article-head{padding-block:42px 36px}
+.id-shams-article .article-head h1{font-size:clamp(34px,4.6vw,56px);line-height:1.28}
+.id-shams-article .article-shell{gap:42px;grid-template-columns:minmax(0,760px) 250px}
+.id-shams-article .article-body{font-size:19px;line-height:1.85;overflow-wrap:anywhere}
+.id-shams-article .article-body h2{font-size:31px;line-height:1.35}
+.id-shams-article .article-body [lang="ar"]{font-family:Tahoma,Arial,sans-serif;unicode-bidi:isolate}
+.id-shams-article .article-body blockquote{margin-inline:0;padding:20px 24px;border-inline-start:3px solid var(--copper);background:#f3ecdf}
+.id-shams-article .article-body .sacred-ar{display:block;direction:rtl;text-align:right;font:26px/2.15 "Amiri Quran",serif;unicode-bidi:isolate}
+.id-shams-article .quran-meaning,.id-shams-article .hadith-meaning{display:block;font-style:italic;line-height:1.85}
+.id-shams-article .article-body .shams-references{list-style:decimal;padding-inline-start:1.6em!important}
+.id-shams-article .article-body .shams-references li{display:list-item;list-style-type:decimal;padding:0 0 16px;font:15px/1.85 Arial,sans-serif;overflow-wrap:anywhere;margin-bottom:16px;scroll-margin-top:120px}
+.id-shams-article .article-body .shams-references li::before{content:none;display:none}
+.id-shams-article .related-work>div{min-width:0}
+.id-shams-article .related-work h3{font:22px/1.65 Tahoma,Arial,sans-serif}
+.id-shams-article .related-work img{height:auto;aspect-ratio:auto;object-fit:contain}
+.id-shams-article main .btn{min-height:44px;display:inline-flex;align-items:center}
+.id-shams-article .id-source-note{max-width:900px;margin-top:22px;padding:14px 18px;border-inline-start:3px solid var(--copper);background:#f3ecdf;font:14px/1.85 Arial,sans-serif}
+.id-shams-article .id-source-note p{margin:0}
+.id-shams-article .id-translation-sources,.id-shams-article .id-translation-citation{width:min(1050px,calc(100% - 40px));margin:24px auto;padding:18px 0;border-top:1px solid var(--line);font:14px/1.85 Arial,sans-serif;overflow-wrap:anywhere}
+.id-shams-article .id-translation-citation strong{display:block;margin-bottom:8px}
+.id-shams-article .id-translation-citation code{font-size:13px;line-height:1.85}
+@media(max-width:1000px){.id-shams-article .article-shell{grid-template-columns:minmax(0,800px)}.id-shams-article .article-aside{order:initial}.id-shams-article .toc ol{columns:1}}
+@media(max-width:640px){.id-shams-article .article-head{padding-block:28px}.id-shams-article .article-head h1{font-size:32px}.id-shams-article .article-body{font-size:17px;line-height:1.85}.id-shams-article .article-body h2{font-size:27px}.id-shams-article .article-body .sacred-ar{font-size:24px}.id-shams-article .article-body blockquote{padding:14px}.id-shams-article .related-work{grid-template-columns:1fr}.id-shams-article .related-work img{width:100px}.id-shams-article .id-translation-sources,.id-shams-article .id-translation-citation{width:calc(100% - 32px)}}
