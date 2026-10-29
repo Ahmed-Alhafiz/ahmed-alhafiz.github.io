@@ -1,0 +1,625 @@
+{
+  "source_url": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/",
+  "source_before_sha256": "a89181b77b6103f6669fd190dd203d02efc7426de9333df5485667641cf5f581",
+  "target_url": "https://ahmedalhafiz.com/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/",
+  "h1": "Mengapa Baghdad Jatuh pada 1258? Benarkah Ibnu al-Alqami Mengkhianati Khalifah?",
+  "seo_title": "Jatuhnya Baghdad 1258: Benarkah Dikhianati? | Ahmed Alhafiz",
+  "meta_description": "Mengapa Baghdad jatuh pada 1258? Ahmed Alhafiz menelaah Hulagu, tuduhan terhadap Ibnu al-Alqami, pengurangan pasukan, dan batas bukti sejarahnya.",
+  "translation_version": "id-baghdad-v1.1",
+  "owner_approved": true,
+  "reference_entries": 8,
+  "references": [
+    "Halil İbrahim Hançabay, “Abbâsîler’in Son Veziri İbnü’l-Alkamî (ö. 656/1258) ve Moğollar’la İlişkisi,” Tarih Dergisi – Turkish Journal of History 72 (2020), hlm. 45–76. DOI: 10.26650/iutd.727887.",
+    "Fatih Yahya Ayaz, “Erken Dönem Memlük Tarihçilerinin Bağdat’ın Moğollar Tarafından İstilâsıyla Alâkalı Rivayet ve Yorumları,” dalam İslam Medeniyetinde Bağdat (Medînetü’s-Selâm) Uluslararası Sempozyum (2008; diterbitkan 2011), jil. I, hlm. 261–282.",
+    "Jonathan Brack, Michal Biran, dan Reuven Amitai, “Plague and the Mongol conquest of Baghdad (1258)? A reevaluation of the sources,” Medical History (2024), hlm. 1–19. DOI: 10.1017/mdh.2023.38.",
+    "‘Ata-Malik Juvayni, The History of the World-Conqueror, terj. John Andrew Boyle, jil. II (1958), khususnya hlm. 607–615 mengenai kampanye Hülegü ke barat.",
+    "Abdülkerim Özaydın, “İbnü’l-Alkamî,” TDV İslâm Ansiklopedisi 20 (1999), hlm. 483–484; edisi elektronik.",
+    "Abbas Zaryab, “Baghdad ii. From the Mongol Invasion to the Ottoman Occupation,” Encyclopaedia Iranica (diterbitkan 2002; diperbarui 2016).",
+    "Reuven Amitai, “Hulāgu Khan,” Encyclopaedia Iranica.",
+    "Michal Biran, “Violence and Non-Violence in the Mongol Conquest of Baghdad (1258),” dalam Violence in Islamic Thought from the Mongols to European Imperialism (Edinburgh University Press, 2018), hlm. 13–31. DOI: 10.1515/9781474413015-004. Digunakan di sini hanya untuk kerangka sejarah ingatan yang tersedia dalam ringkasan penerbit."
+  ],
+  "approved_reference_correction": {
+    "id": "B-SOURCE-001",
+    "unit": "B099",
+    "authorized_at": "2026-10-29T09:26:01.152140+00:00",
+    "authorization_ar": "بعد عرض التصحيح المحدد وطلب الموافقة عليه وعلى استكمال النشر، أمر أحمد بتطبيق الإصلاحات تلقائيًا والنشر بعد التحقق. يقتصر الإذن على اسم مؤلف هذا المرجع وما يقابله من ملفات الأدلة؛ لا تغيير لحجة المقال.",
+    "instruction": "اذا كانت الاجابة نعم اذا انشر بشكل تلقائي واذا لا ابدا الاصلاحات بشكل تلقائي",
+    "before_reference_author": "Charles Melville",
+    "after_reference_author": "Reuven Amitai",
+    "before_id_html": "Charles Melville, “Hulāgu Khan,” <em>Encyclopaedia Iranica</em>.",
+    "after_id_html": "Reuven Amitai, “Hulāgu Khan,” <em>Encyclopaedia Iranica</em>.",
+    "source_before_sha256": "a89181b77b6103f6669fd190dd203d02efc7426de9333df5485667641cf5f581",
+    "verified_url": "https://www.iranicaonline.org/articles/hulagu-khan/",
+    "verified_publisher_signal": "Article by Reuven Amitai",
+    "approved": true,
+    "article_argument_changed": false,
+    "public_applied": false
+  },
+  "source_link_localizations": {
+    "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/": "https://ahmedalhafiz.com/id/articles/juhaiman-masjidil-haram-1979/"
+  },
+  "main_link_targets": [
+    "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/",
+    "https://ahmedalhafiz.com/books/kitab-al-kutub/",
+    "https://www.iranicaonline.org/articles/hulagu-khan/",
+    "https://ahmedalhafiz.com/books/kitab-al-kutub/",
+    "https://ahmedalhafiz.com/id/articles/juhaiman-masjidil-haram-1979/",
+    "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/",
+    "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/citation.bib",
+    "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/citation.ris",
+    "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/CITATION.cff"
+  ],
+  "units": [
+    {
+      "id": "B001",
+      "source_text_sha256": "8f2b5e942ec3eb7abeac90318724cb038c407089da85b58e7905216c9654c122",
+      "translation_text_sha256": "8f2b5e942ec3eb7abeac90318724cb038c407089da85b58e7905216c9654c122"
+    },
+    {
+      "id": "B002",
+      "source_text_sha256": "1000d4c3382e2563d449a46778e4103bb7f5c836743e4d693a9ed99336d93474",
+      "translation_text_sha256": "4a39391f85b8447e7f26336a925c6712759bac5cd9ac3bc44a920c750b052061"
+    },
+    {
+      "id": "B003",
+      "source_text_sha256": "d62afbe2249f9d2c6c33773674befdec3efaa7f615c3166c16c119780b513627",
+      "translation_text_sha256": "5824719fdd08d1b40f363ca28c18b6fc3ec28fb8762d61a109cad1a82fdee894"
+    },
+    {
+      "id": "B004",
+      "source_text_sha256": "fae58a8aa9a74834f43a91c98a6ae1a7a0110bd529ffa80f22987f94ed47e209",
+      "translation_text_sha256": "cb33abb240153958146d625f2815747162310315984c284a4dd471bb6c736755"
+    },
+    {
+      "id": "B005",
+      "source_text_sha256": "a0ba785e1c722bf38e56bbecf660ae1a4f833e4093745c135d16a9b487175c72",
+      "translation_text_sha256": "fad26df7d1ba2d3bf217029afa7df907ec346bb18dfdf8e2360120c9fbe4a2a4"
+    },
+    {
+      "id": "B006",
+      "source_text_sha256": "908d64a8cdfff03595b6f3a370a2dd7a5925542376bb1a7b842169ddbdc96654",
+      "translation_text_sha256": "c7932b091afd5db5b718c277a70bccb6b25674715d5f6339d9ad03a4fac211d6"
+    },
+    {
+      "id": "B007",
+      "source_text_sha256": "e8bdedf878befdef029b3dcf13c7f80695181630846220fa5b624052011b9708",
+      "translation_text_sha256": "4b0a9c9fcc5fcc044bd4614049e4afea9cf52c4cdee07ce4ecbbea324950cfe2"
+    },
+    {
+      "id": "B008",
+      "source_text_sha256": "e862feb4ef06a2b703a954ba05b1475fa315083e1da0d44b1486cf68a6ae7c8c",
+      "translation_text_sha256": "d03ffd249fb655c773c15b39e0196a86847dd4336d7535e627d20537b2cbab68"
+    },
+    {
+      "id": "B009",
+      "source_text_sha256": "1b9bb8d3427cd5d326c98e0462077a2f247156c1c50123b6ab9c907a77ac034c",
+      "translation_text_sha256": "282a78740075242e3eb495ecfec406d205def2b64c29a2b8a24d8c175bba6db1"
+    },
+    {
+      "id": "B010",
+      "source_text_sha256": "b5328082b91b32e2f905777beae12e1acadcb43890255c88c3ac2d4b2f57eea6",
+      "translation_text_sha256": "c8be3cb567acc82720162f21a478a42c81f091756179db41248ec6f5fcb98187"
+    },
+    {
+      "id": "B011",
+      "source_text_sha256": "f526b3cdd9f8c1a7c3bf8d2f118ce69dd3708572644fdbd0e9b1d700e7fb4fa1",
+      "translation_text_sha256": "d855b92d616e016eab302ceecb788d4966538542760271ab9fb47cf57d430599"
+    },
+    {
+      "id": "B012",
+      "source_text_sha256": "3068400a863c8d84657e9dc43fcbbf6c886db75005f873a4876e96b7420d0c03",
+      "translation_text_sha256": "28d23682674fda570a6abd01b6a0e51fced468e5ae150e5061a3a680fda301a8"
+    },
+    {
+      "id": "B013",
+      "source_text_sha256": "999d6c10aef558a5e6b2c3999640a8cc1ae97facba82011c7022a4fb9359af05",
+      "translation_text_sha256": "cccf3051d2c1a85458a68cd70af8621f58bae6612ca7d52817225d58ba3ee0d1"
+    },
+    {
+      "id": "B014",
+      "source_text_sha256": "ce8d14b8868e49dc6e6626bbdc80da877da08404b8c5b9ef200ab5d39b00d780",
+      "translation_text_sha256": "9874b6c1742de71e4676b391cd5b8e7abd0c871e624d549652cef3b91879414f"
+    },
+    {
+      "id": "B015",
+      "source_text_sha256": "51ec61c501ca5376305d5f0b3de60b92b63d6442e5594010ff5ec49fee1f0866",
+      "translation_text_sha256": "2cb140c39221a0505630b183e4d7fe9d9ec49fe1bd5e9beb156c99cc429eb819"
+    },
+    {
+      "id": "B016",
+      "source_text_sha256": "b374e1d1a11e82aa0297ec7d13da27c5773bcbbd47616153ac44605e201462b0",
+      "translation_text_sha256": "e83a0d474bc1f3f43346c088441b1fc22e60f3e357437a6ab47784326eeead3e"
+    },
+    {
+      "id": "B017",
+      "source_text_sha256": "caaac532a27d185a7d67176f0b9bec7dd1c79a86e3e49c5629a050c324f47be2",
+      "translation_text_sha256": "43e6afd18d23858c5cf5c0b1fc43e38330078955e7138b53e74a59e94cfe2f6c"
+    },
+    {
+      "id": "B018",
+      "source_text_sha256": "9b7efc4f70adbb03c0c01bd3ffab176263d519611e11c03f86191f521cc69614",
+      "translation_text_sha256": "2aa5b1c4b5b47002c8395b4c792675f61150220362aab6877a7dbf2231a83f14"
+    },
+    {
+      "id": "B019",
+      "source_text_sha256": "7a0e5def838565880ca7d4fa7aaf978ec74681837e208059b1fe28ea6bcde1a2",
+      "translation_text_sha256": "6f337d32cd29e55928f9072893f8d9c5ef6d069b28567683ac49bb4ab93bc9a1"
+    },
+    {
+      "id": "B020",
+      "source_text_sha256": "bcafb57d12cb8c33d5f76b318cd08636852f7d525f7158088a8cee62099231f3",
+      "translation_text_sha256": "c55de94127a8671c023ee49605ad40ac55215c0617257a37477370356a64276b"
+    },
+    {
+      "id": "B021",
+      "source_text_sha256": "68758dcfa59da48ccd3556b85b5b1a90719cf2fc9f075ad0cef3c7a59e880cc0",
+      "translation_text_sha256": "6c4fb7a88b374c4190b034e207bfd6e5414f433396f575a8b127db127d63e5ba"
+    },
+    {
+      "id": "B022",
+      "source_text_sha256": "15974979e6ca7467d090e3d66d57d4a5a32fc93fec72e76f7ccf10522fc97346",
+      "translation_text_sha256": "c189dfcd91823a55e95d73ddc05c55f46af27ce3cbd80edabd820b231391cb6c"
+    },
+    {
+      "id": "B023",
+      "source_text_sha256": "d7654e46f29a1f906caacdc00990d50c5ff030d9141d1d305ee447fd02d5fdb9",
+      "translation_text_sha256": "e267006ff33dbe7f462cb7403be66fc7852a13c5082cee46e0d1010cba6e0d81"
+    },
+    {
+      "id": "B024",
+      "source_text_sha256": "71471c0f4e18e4179c7a0ca80f189209525e8899f64ec5db9922e43589dcc87a",
+      "translation_text_sha256": "7e0ce99b4a2a0861f7a7ff33c3164115fa463a3660824af0404edeac86735ede"
+    },
+    {
+      "id": "B025",
+      "source_text_sha256": "634153418fb705922f2b7840f7b43f8155e68aaee5eeb1db720b3405ad894227",
+      "translation_text_sha256": "4e6e1e635847719cc86e832118b9065683f88f1731a50db8a0595f1c804e0c64"
+    },
+    {
+      "id": "B026",
+      "source_text_sha256": "dd4fa5519a5e37f6e1b8955809f34b3f116ed9bf10adce2458db4b5cb454b6f6",
+      "translation_text_sha256": "951b060a5e1ee62cbda3b15348dab96ee31236135f34530ac54993f89de89f58"
+    },
+    {
+      "id": "B027",
+      "source_text_sha256": "fb382b891d5226c4394527b73378ba4bb9f3c83b29dec539f9739b5f1fae73e1",
+      "translation_text_sha256": "b98b4cf8ca77d3dcd5196b58bef5ad5d800e22fb8717d2b05adae70174fb9bdc"
+    },
+    {
+      "id": "B028",
+      "source_text_sha256": "8ccb480959fb9e6aaa4f1b60bc1e644ef36895cc0ddfbee1502d6e1c032fe40a",
+      "translation_text_sha256": "a3bd3e1d5b09b0889ce209267deb1dc13af6cd8b0a34d681e9353428f15fd842"
+    },
+    {
+      "id": "B029",
+      "source_text_sha256": "a1bcb24d15d53ea1fcf8cde92b900d2870eb78ec44ac9f75156c8f7e83e90d12",
+      "translation_text_sha256": "bb6e8b40c804f01c361530da2f70fd25c54857f0c0513a1778d2be589ed37ad0"
+    },
+    {
+      "id": "B030",
+      "source_text_sha256": "5dd4c6413e3513517248c7e8d818a4e33ee697ffc6dfaab2d7e82573573ff358",
+      "translation_text_sha256": "177c18d7b51e1b45f756852d60acb25ee1ce7516ffdd5c8ecf4a0bb89bfdcf24"
+    },
+    {
+      "id": "B031",
+      "source_text_sha256": "535d319efb0f097131ec9e2734777b280cc00ef081805d9c194093e9c61b6d7e",
+      "translation_text_sha256": "e0a469e9679ae4f0c35697da4be4acf82902e76e79ebd8f2377b888fc9bb3b55"
+    },
+    {
+      "id": "B032",
+      "source_text_sha256": "d8e1e5472cbbd51cef4acff0c4d80a9923ffb6358de7dd5dc887cafddca715aa",
+      "translation_text_sha256": "ea940ae24a404a8a919911635824f554359085ea53f88c97f116a82715269720"
+    },
+    {
+      "id": "B033",
+      "source_text_sha256": "91d6076d281aeeeeeb7a2f40041b9a8e8185a376f1827c3934df7eeaaf55b458",
+      "translation_text_sha256": "46b1eee4d0c995c0ef604a4c4d4fa8543e1473db429cd3844efa8597e0f9be28"
+    },
+    {
+      "id": "B034",
+      "source_text_sha256": "4cd4f97453d7e6930b39fa3d5a411496b9570a3a19d86f38897d25f4bfc8f0b4",
+      "translation_text_sha256": "25a367e8166664db3b629aa000424e49b3657a045efbc668155de91861176241"
+    },
+    {
+      "id": "B035",
+      "source_text_sha256": "6e1a231195a922dae8a24f2caef85c48120648bf1ca9653beea23b805a4fccc7",
+      "translation_text_sha256": "3e4d3cd55e6231c3f5ad8f57e67b239df24d7925dc2cbde2b3f60c1591b2d335"
+    },
+    {
+      "id": "B036",
+      "source_text_sha256": "be081314f5b40ce8d0178831dbd8d2bfa9cd62c30438d71d7e02f1f7ae4f64c0",
+      "translation_text_sha256": "fdb569a0a1f2786ec9882f494efa245848b09e35dc614bfb88920d8b5ea55093"
+    },
+    {
+      "id": "B037",
+      "source_text_sha256": "cec178d1a2b04967a1556a155acfd1f1738bf053508835d4932185087f1140f9",
+      "translation_text_sha256": "d3a139af43657b1749b695a813b9457dae50284cd650594cb959375f108ebebc"
+    },
+    {
+      "id": "B038",
+      "source_text_sha256": "f5ce7794208fb7cea416ffd21ce9bc149a01d23d95e9b041d94688eb1587c1ab",
+      "translation_text_sha256": "2f98c1e800d0c04121d25662bce09bcf844cc88e1045cb01e385f9d1ec6c0895"
+    },
+    {
+      "id": "B039",
+      "source_text_sha256": "ed4de752b09f012f4f687aeda5faa524e4be502ec580fa5685e9640c641d3a21",
+      "translation_text_sha256": "d3e5c2a85bb5035f50f2901cffb0028b9bc4fc88dd49a7cf622417fccea91610"
+    },
+    {
+      "id": "B040",
+      "source_text_sha256": "3d8f502ef2f4d4529e1f8cd00fe18e7f89cd77db5eaa27036b44011f699b3a20",
+      "translation_text_sha256": "19c78147f40d69e8420e55ceb39e9ad57f8d2d6224f0534078e90b131324352d"
+    },
+    {
+      "id": "B041",
+      "source_text_sha256": "9aee0ab4b7197bd5c990b84443764691f77005f8fe961ece08d3fbd2223a2feb",
+      "translation_text_sha256": "bb8a013fe26dcb382935a5e8bda6f6b1a64d257490a75a167a04c94c13b68698"
+    },
+    {
+      "id": "B042",
+      "source_text_sha256": "a15747cc3865a5ea87cd223594cd0f4e8b54c5b83e7df96dd3effe5892598f49",
+      "translation_text_sha256": "9f47aceb18cb5fdb41b8dace99876aa05efcbb5a899aa3666bba5a7de0000f64"
+    },
+    {
+      "id": "B043",
+      "source_text_sha256": "c40af9b5d12920e2519aa0f61831c393bfb0104afe185f767f9d1b26a9dd66b4",
+      "translation_text_sha256": "8f912be4301d6dc8a7eea47b4be5337b24534b16d5275604f374ae047d5e1b13"
+    },
+    {
+      "id": "B044",
+      "source_text_sha256": "7b3c28f41f02969219e59ba81a1d28247e742315c8f699cd2625eeb5a65999b2",
+      "translation_text_sha256": "8a10a42c7c9c6f9d66a578345430c7593769c24ce6904a247db85677441dbbfc"
+    },
+    {
+      "id": "B045",
+      "source_text_sha256": "99cde54e07cb6c0f560a562132157938da3c09da06f6e0c406abb48875a5e2c1",
+      "translation_text_sha256": "0189a657fbfe9b9763c551176a77985ab0505c19d47c3905ff8dbe47ec31a9c3"
+    },
+    {
+      "id": "B046",
+      "source_text_sha256": "3b0b5a3fed5d9d7609908e02b9cb2ab65701b455733027fc718088a63ba4ff8e",
+      "translation_text_sha256": "7e6fd419b7b4206ed670c7c6e7bd0ebf26ca05df5c44b67eabfdf0adbf14ef5e"
+    },
+    {
+      "id": "B047",
+      "source_text_sha256": "56a1d1f3c2db897988721f4fab7addfd58be4895116d4afd258a5a8fdd348e9c",
+      "translation_text_sha256": "a84e70bbebcca6acccdb54188eb27e3346e84fd18e7af4f8c5a4f571c232111e"
+    },
+    {
+      "id": "B048",
+      "source_text_sha256": "474e0197985e26b560af26bf0cf0ff730b52787790a54cb91761ba2074adf573",
+      "translation_text_sha256": "10e15db7f332a9800167ed1f83ea53a6972a01f20f9b668c46f52a539d2c3cd0"
+    },
+    {
+      "id": "B049",
+      "source_text_sha256": "1719edd3e1e0bbeb722151fbcbae432e760869c59c558fc9d2ae00df2bb0d2e2",
+      "translation_text_sha256": "c5a089abdd6e0b330862ab81040cd27cdfdeecd87074b53057daef3bc8ff1052"
+    },
+    {
+      "id": "B050",
+      "source_text_sha256": "d0ab7300944ba7e8cd4f09a0d0704fcf6395bc79a62238e4d770efa5d0c9ac76",
+      "translation_text_sha256": "7fba88c96daa5f0dca82d93332cb4058608484dcfd4e8be012c0841b1e9c08ab"
+    },
+    {
+      "id": "B051",
+      "source_text_sha256": "e8f3db481cc0e34a35226e6b58544f651c4d3990e61040fc0d5a5eea46d6cd11",
+      "translation_text_sha256": "7371d0589524b7c53a0c1a8394997692139888cd156ebd722351972dba22f6a1"
+    },
+    {
+      "id": "B052",
+      "source_text_sha256": "235dfd60e0f5d44658d9c93bb61fe3dbbd19e1cba6ddf23936f93fc4745a1408",
+      "translation_text_sha256": "bd8783e3f4c99ff8245ae925295280aecc842509a81a242f6baee71ab7447c7e"
+    },
+    {
+      "id": "B053",
+      "source_text_sha256": "2a04216ecf5de27b599fd047e22e34f6a31d4206d4f61f71ed17e3148c057d25",
+      "translation_text_sha256": "607f47d1580bc99e87702da046e9448d0b7079d15318ca54ea12094ea7c7450a"
+    },
+    {
+      "id": "B054",
+      "source_text_sha256": "905a6a71e48922f502173e679ae752f338b356c808abfa6a2e65a66426bbb199",
+      "translation_text_sha256": "d450861b8ad52aafbb93b9ec5b88fdaf4ffd33cd9e2b25b6de7f6ab1ecb73f92"
+    },
+    {
+      "id": "B055",
+      "source_text_sha256": "b845844fa2073cb48bc5e43b152f656aa89a69da958804cdad9893bf938f199e",
+      "translation_text_sha256": "3ff8e44873fd81b802c7ec92268d1e47257c357c8293a3b86dad358d292a23e6"
+    },
+    {
+      "id": "B056",
+      "source_text_sha256": "3925a88211d0344753aab467b8e54c2d24a39f0fdc52f46f405a2393f81f11ff",
+      "translation_text_sha256": "7833c2d979f343ad71490126027eb90fa7d55158bd039905b4d76deffd0d40da"
+    },
+    {
+      "id": "B057",
+      "source_text_sha256": "b427d78dd23f5269a2b3c93d42785f9a903947cc06544be24d9e86f6abc773cd",
+      "translation_text_sha256": "eea88115651560e035892444143667d4fa26c1c86b391f079f5cb88689002589"
+    },
+    {
+      "id": "B058",
+      "source_text_sha256": "8654fa79cd721b37bcbde515761bf259eb9241aa9593106dc21d87491c0ec54e",
+      "translation_text_sha256": "617018de4dff7773460ceff23ad0f45f3f38b8bdf43fe28bfdfedb93c25c7223"
+    },
+    {
+      "id": "B059",
+      "source_text_sha256": "2d25fc4f3584fbacb16c0054c90506fdaf5690534ac9dcf5f234d3b41c49aa74",
+      "translation_text_sha256": "39e21e3d211afa2087f630f2305d71da9a404450e2b19a21fcaccc9b608209ee"
+    },
+    {
+      "id": "B060",
+      "source_text_sha256": "581cfbe70c3cbf00c049d4a7dfb3ce5d93e3ce2086c6716664d6050c15904707",
+      "translation_text_sha256": "73064a4c653d7dc0093116bfa27ec61f8b65c10dce6a8bf97e8e692b437cc758"
+    },
+    {
+      "id": "B061",
+      "source_text_sha256": "3b7aff1de42dd5b649b5293929152149072da458c152db86538aacd78fb1a735",
+      "translation_text_sha256": "310ea005f4cc54b610beabae0942d44effafbef28ca8dd89d61f5b26541b0fb8"
+    },
+    {
+      "id": "B062",
+      "source_text_sha256": "131edf969a4123621f04a5f78d899e357c769f6a5115ba40a90b4f6af5f81072",
+      "translation_text_sha256": "7773f5b3923ae3d9fe7be5e183c3b15d2e69396922481756c6da57fc5c2a5f2d"
+    },
+    {
+      "id": "B063",
+      "source_text_sha256": "e33da11717f5fb1fc93f054313359e7e2238e6f5a59aa65c1b9f37ece3e684f6",
+      "translation_text_sha256": "693a0eda0f761599e7f58935d369445aed3cfa98f00f7c45a3b54859b9b19f96"
+    },
+    {
+      "id": "B064",
+      "source_text_sha256": "de6f234327ed133921c95736ad7c1c5cb6bce48581260cdfe0abfdd307d3a9e5",
+      "translation_text_sha256": "d8baf81191f6d2d353da6385292a2491c1822d5796c9d483920e7a7668466c34"
+    },
+    {
+      "id": "B065",
+      "source_text_sha256": "3ddcb9d0cefefafe9d4939f1b99ac4443d572dd845738341ecdb5537eed8c92b",
+      "translation_text_sha256": "86d7e728f222e5af93817f2c7180d580e2e72988b60fa3953e499e6d6a70ef10"
+    },
+    {
+      "id": "B066",
+      "source_text_sha256": "d6ad5d0acba2fae9094d2beb2b0ca4a6f441d097c11b9ab7f0e2712dd1e77c03",
+      "translation_text_sha256": "50e73a245c42282d474bc1cbf4b86b98303a2245a9c3a627a00450fdac20b3bb"
+    },
+    {
+      "id": "B067",
+      "source_text_sha256": "a2b3b0045f287f1a4ff87cd9952fd9643a5d49acb2cafc8f4b3466555d5e6f49",
+      "translation_text_sha256": "00845e10f36ad3e8bca6f66b509a5cd8bba9ce3e5e417f7f6b78b6dadf9880c3"
+    },
+    {
+      "id": "B068",
+      "source_text_sha256": "15108062732807b03bb595981855bc507dbcb5f09f2df076613a20d0b6d11f98",
+      "translation_text_sha256": "a72a393005248c0d0bc2dcfa97e1e322964d81c67fc3034b3f8a2a113a974120"
+    },
+    {
+      "id": "B069",
+      "source_text_sha256": "dff9f5ca087be7b9eb62a23a2c69bc6b13eb3b6c78ad4f2324c206a1f802eece",
+      "translation_text_sha256": "abb8e772391cf829fc7074c0d6c98aa0316ee9dac5b054277e5f11aed262f31e"
+    },
+    {
+      "id": "B070",
+      "source_text_sha256": "4ff4539d9595b212a40cc71d30ecf0fd29d23ca962f00d6b84094f0a9d82d84f",
+      "translation_text_sha256": "d48b8abd0b008091642dc68d989edcd2812e046b17463b20f740b70b0f796fee"
+    },
+    {
+      "id": "B071",
+      "source_text_sha256": "3845cf264e86d52139510656e44b75ddee46fbad02c762863dac828f8c6947bc",
+      "translation_text_sha256": "ddf288a17101b6babb149b4f41fbfd80a9db5676a46f148c00f4c0c682d88b1a"
+    },
+    {
+      "id": "B072",
+      "source_text_sha256": "9d4dceb79546dd08eb526c9f2ba181372ba5250737ca01192ec23e4c802d71c3",
+      "translation_text_sha256": "f475d5fde67e2b8e87246a154f640a83dd3266aa71ef4c7b64ef44faa81b7da8"
+    },
+    {
+      "id": "B073",
+      "source_text_sha256": "1ae03bafa90b4d0af92c0e5f59f2866f377caaeb510fec87e57f11f141d7e4cb",
+      "translation_text_sha256": "4a6f6c4d00aeff7a2129eb70885824317e9a8740721062e289b637a1e41e546a"
+    },
+    {
+      "id": "B074",
+      "source_text_sha256": "ec89d783c71e5acedd0df917e47e6726b0d27c5be9894c7ba2ba48b0496b185d",
+      "translation_text_sha256": "285d3114e9ab32ef342d5193829cb5cc0333cd7c6953b79bc5fed3a89688e54a"
+    },
+    {
+      "id": "B075",
+      "source_text_sha256": "5ebdf5916677d3d1112b29cb02023c2d1ad967e708af39977dc1433c8c3932d4",
+      "translation_text_sha256": "c7147d62e6cfb6aad1f67e3326180d06c90a26977dd41c03936bc1d2d9ba5fcf"
+    },
+    {
+      "id": "B076",
+      "source_text_sha256": "63cd2639643c767b6f36d5f5f2555e336388ce8b9e8003535210d9f8b421c6c0",
+      "translation_text_sha256": "2fdc550575b1b37da8d778846eca50c66f03975c8e902b5af1bc26c813b789b2"
+    },
+    {
+      "id": "B077",
+      "source_text_sha256": "10cfb406c4aaf0e6fcf803455a44a5502931da9d6db39622501407b8bca3fc89",
+      "translation_text_sha256": "876a18701ca94106226f75fbf6fbfb958e3ec235452251b5ba389d6b4a4d25fc"
+    },
+    {
+      "id": "B078",
+      "source_text_sha256": "890843a4a86428e738209f91147c78fd824d4db66311e7356914064ef7752ff1",
+      "translation_text_sha256": "45810a7640ed3fb706f31b779989ebabf7d65b73edb06e7c8a9cacb72b8fba41"
+    },
+    {
+      "id": "B079",
+      "source_text_sha256": "ed553132eda7ec662cb2b2821ec397e9447d6de348cdc19ed041c0772bcd98f5",
+      "translation_text_sha256": "bfdfdbbe52ccfb404d2e3ad505b1ae4d0ff87e8ff7d1e0f1b051e50f23206c18"
+    },
+    {
+      "id": "B080",
+      "source_text_sha256": "b5d6442a16255b6ed644660d1d5b8f5c1204d9c299d924869800de1b526afede",
+      "translation_text_sha256": "3f2c7f879b24320e2cbbf4fcd66b14e924e0c5081b627a361b2fb749ea658861"
+    },
+    {
+      "id": "B081",
+      "source_text_sha256": "c94d5c7cc1eea9b71898a1d2bb747c21bfaa612795f6e3ae5a7ceb13c084515c",
+      "translation_text_sha256": "8f155741c88ac8cba90bb62e35a9125f14e0518360c73db33db09b1248ab13b4"
+    },
+    {
+      "id": "B082",
+      "source_text_sha256": "49a77f9cf0e88fbe74cbd3d3f9571532ecc05d3dc614e5d47ca16a2c7c83d173",
+      "translation_text_sha256": "01870a66d1332c741cd3ee1ef18c4e53ccbc63cb4feac83ced2067ee720115a0"
+    },
+    {
+      "id": "B083",
+      "source_text_sha256": "b8047256e7e42b82c5ba14e1f7e5a6456397fa674da717dc825e78edaa7daaed",
+      "translation_text_sha256": "158afc189fe2bc9bd653eaaae78df90731e69c9704f12f6286fc3f3b6a8983d2"
+    },
+    {
+      "id": "B084",
+      "source_text_sha256": "45d16548a63f9957ae3795b3ff1ab848cb22dfc81e24327f91b20c6619fd0d02",
+      "translation_text_sha256": "b54c708bdb5b2a9a133ca0553dccbfae742669ea5202fbb07fc8fc2a7bd690eb"
+    },
+    {
+      "id": "B085",
+      "source_text_sha256": "a0353815112a0122a118ae831ffad73637063056999950f4f05ed5f014031ab1",
+      "translation_text_sha256": "766a4bdbecbd747cd29666d48a28606e7192260e329be249941a44f2200f5394"
+    },
+    {
+      "id": "B086",
+      "source_text_sha256": "e1c9406acbdeb1ff12c7e64927e71089b8b9e4ad00c626550c5ef076290d71dc",
+      "translation_text_sha256": "9ab1ee4a15833dd89d92a094109a4a72d44259b040e3a410683f944a73c719c8"
+    },
+    {
+      "id": "B087",
+      "source_text_sha256": "f10dd2602f3b60b85c67a3fc774d357b8f4a68eebb33cb55e611eb34dccad071",
+      "translation_text_sha256": "eee939153de449109375d11d54b1c3eefeddfd243fe7ecee6878d898322cd628"
+    },
+    {
+      "id": "B088",
+      "source_text_sha256": "b8c6ff53761418f97423ab3bbf744ae2042f2ee430990fd46ce9aca76d6574bb",
+      "translation_text_sha256": "7800ae9e18c7d7d7fe2cd95db6eb9954adf751e189835df8225338ca4dc77cb0"
+    },
+    {
+      "id": "B089",
+      "source_text_sha256": "8f8aebc14b4ab7a861106483d4ef9b668f9cf256a0603b6b27a6ee5f9286f46e",
+      "translation_text_sha256": "09d876b7c267f43e3029fa28a397f909dc19b56e970272ae42a850c538fa2292"
+    },
+    {
+      "id": "B090",
+      "source_text_sha256": "854fe4ac942f96c4a4c67d699a53c04071abd109e101f11c63c0c971c960133d",
+      "translation_text_sha256": "9c658e7ff3992eed6beaedc7bbfc5512ebf4568f8eace70dfd20bb2c30c17645"
+    },
+    {
+      "id": "B091",
+      "source_text_sha256": "f281e35cc671a78f585902f8b0028ba2374efe0cb1773368490662e66f5f9965",
+      "translation_text_sha256": "e732e2dda55eea1d3d58437194254994840759dcef043a3e41d98b95906216c9"
+    },
+    {
+      "id": "B092",
+      "source_text_sha256": "418ac70222c34e95abd86b789fb576e5590ea745ef8cb9f927bc00d2471dff61",
+      "translation_text_sha256": "640d0801a0e874e9a8ad853cef1918e47c4e45a4119dfae66b05bb30ff38491d"
+    },
+    {
+      "id": "B093",
+      "source_text_sha256": "9face32872b613939c49aff5b16535f4ace8c50b1f0b337e66d1e4e7b02ef6b5",
+      "translation_text_sha256": "3e4dbd062a00a5a2ae54bbecabbf4ae32b23ea1092f523def9588cc51efaee33"
+    },
+    {
+      "id": "B094",
+      "source_text_sha256": "1c435ba7e3f1471c9787d93953e06ce54523359777828b503d5b75409618032c",
+      "translation_text_sha256": "2f6210042bb1382e3315a91a01f9fce1150c95962abd1aa86747cee41d4d3b95"
+    },
+    {
+      "id": "B095",
+      "source_text_sha256": "5793886987eb2e69a7bd95ea8f5758b65f32bcba56d735d97237a6ccfbacd66c",
+      "translation_text_sha256": "436b02184f2c71366ffb956b6d5fcea920356577ccc247b9e4f6c0a90a43c80e"
+    },
+    {
+      "id": "B096",
+      "source_text_sha256": "7a9d8aa0c4b6cbf8431cbb846998547983b0bb0cbf38a72f84a4e57848546f9e",
+      "translation_text_sha256": "960907ea212c5883dcad778b309bf0a0d9870290792808dd27fcd3448886cbae"
+    },
+    {
+      "id": "B097",
+      "source_text_sha256": "fb716b9bc6ea2fcb597d847df074b52080ec6afbd7bb08dcfd4a0692a3f24a83",
+      "translation_text_sha256": "a1a8807eaebb34ed706aba40566e74f15d88a03e23acbc24f0fe8803f0baffdf"
+    },
+    {
+      "id": "B098",
+      "source_text_sha256": "b1d013079ad0f9c5628856beb36665aa7ce5043736d0277a6a303739b5c0bdb3",
+      "translation_text_sha256": "52e16c1928a80e4319c9d890ed768897760f4911117ee36960ba06a6158e04cc"
+    },
+    {
+      "id": "B099",
+      "source_text_sha256": "b9a737148677dc82006af2062e38f0105cbe808f03d3b92dce1713b736d6f7ca",
+      "translation_text_sha256": "9546e493c0bb6310957bd4cb0e0cf6869656dd8d2abcf7c7043a82d7d2771e03"
+    },
+    {
+      "id": "B100",
+      "source_text_sha256": "098961184b05f33393a670c23d05d4a1a653c48c063625c63bd8d6fa1434b7b0",
+      "translation_text_sha256": "20b09c07c8adcf17e47662a76568a1c4fa1ffaf90b1d2ee16ab30eec4adb3317"
+    },
+    {
+      "id": "B101",
+      "source_text_sha256": "b4fd0e33bd65a6ca384347eb97e22a381cad4f5800f19a11c5fd53237439515f",
+      "translation_text_sha256": "5b9411c7757251ef20c555d7d43cc08efc3e618f9d6e116245162efbf004cdcd"
+    },
+    {
+      "id": "B102",
+      "source_text_sha256": "4f0684ed33abc04f391c19251f55897ec9718b5831e532e828d5b522d60a82e2",
+      "translation_text_sha256": "e9c288ba11268931e021e345a354288915c2473f38fc99afbcb9e1594996f2a7"
+    },
+    {
+      "id": "B103",
+      "source_text_sha256": "eb405be2b01910b1266eea93bee4e59a2c665af7506f7858aace7c1fb7898fdf",
+      "translation_text_sha256": "3261e0c8a41ada44d0f6873bf6a0c9a047f6826889d5743d11b40e3323c5f4a2"
+    },
+    {
+      "id": "B104",
+      "source_text_sha256": "e15026e66c2cc88d5682a8bbc9b4bbba73c2fb675365fa2ff992393ccf8d7784",
+      "translation_text_sha256": "4a5a8dbd1be354025a1fcc19ebae1bce5c89d7f7f4379e53ad010604097bec6b"
+    },
+    {
+      "id": "B105",
+      "source_text_sha256": "978da374dc52301050a626d331ad4783b378f3f21678ac1e05a9824ff405e792",
+      "translation_text_sha256": "9b7e4e88cfeec0b1b9d161e2d61e265b8877cc5a42fda1eccc37c902cacfb47c"
+    }
+  ],
+  "supplements": [
+    {
+      "id": "S001",
+      "text_sha256": "1d6ff066f2e84ed9d8a23e329c30fd0c22fe923b19acfd0b001994dc3f37743e"
+    },
+    {
+      "id": "S002",
+      "text_sha256": "9982b776996059d5dfd02a1ca2030754ccc18bc686c3a3f5f0e01d3118e78deb"
+    }
+  ],
+  "unchanged_original_mains": [
+    {
+      "path": "en/articles/fall-of-baghdad-1258-ibn-al-alqami/index.html",
+      "main_sha256": "c44a57e5989cec9f882769c2c946e396760eceb2a4a689d1a6471cc8ac3375f6"
+    },
+    {
+      "path": "de/articles/fall-von-bagdad-1258-ibn-al-alqami/index.html",
+      "main_sha256": "6d4433a7ef3e20c03079391840aceac5d37e34803c86660d6ae7eb72e53ce26d"
+    }
+  ],
+  "authorized_original_changes": [
+    {
+      "path": "articles/fall-of-baghdad-1258-ibn-al-alqami/index.html",
+      "before_main_sha256": "66276c6bb8cdfb1ac5000a379f83f0e19da2e51ad0dbdd6b7e1d77ca18eb18c6",
+      "after_main_sha256": "7cf2cf32c7d63e94fecac1891be902ad1c7bbcc557dbe2c208334935d6db0c09",
+      "change": "B-SOURCE-001 reference author only, plus separate correction notice"
+    }
+  ],
+  "unchanged_previous_id_pages": [
+    {
+      "path": "id/articles/juhaiman-masjidil-haram-1979/index.html",
+      "sha256": "6995d987f2970212ee46122627fba50fad0db8167f7de47dfd2ec869a2e08721"
+    },
+    {
+      "path": "id/articles/big-bang-dalam-al-quran/index.html",
+      "sha256": "3f508b00a2f29ee13d6f2ba4905e8730a1c814c4fab35644ce8c9703da72ccf9"
+    },
+    {
+      "path": "id/articles/ketindihan-melihat-sosok/index.html",
+      "sha256": "2f73497870c2f9ff06bbe8f3a0e0558f4120d76daad21720031ba4cc93414347"
+    }
+  ],
+  "specialist_review_completed": false,
+  "search_volume": null,
+  "keyword_difficulty": null,
+  "created_at": "2026-10-29T09:28:12.649750+00:00"
+}

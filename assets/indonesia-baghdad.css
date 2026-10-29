@@ -1,0 +1,30 @@
+.id-baghdad-article .article-page{padding-block:32px 60px}
+.id-baghdad-article .article-shell{display:block;width:min(900px,calc(100% - 40px));margin-inline:auto}
+.id-baghdad-article .article-head{padding:30px 0 36px;background:none}
+.id-baghdad-article .article-head::after{display:none}
+.id-baghdad-article .article-head h1{font-size:clamp(32px,4.6vw,54px)}
+.id-baghdad-article .article-head .eyebrow{letter-spacing:.06em}
+.id-baghdad-article .article-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.id-baghdad-article .article-actions .button{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:10px 14px;border:1px solid var(--navy);border-radius:6px;background:var(--navy);color:#fff;font:14px/1.6 Arial,sans-serif;text-decoration:none}
+.id-baghdad-article .article-actions .button-secondary{background:transparent;color:var(--navy)}
+.id-baghdad-article .article-actions a[hreflang]::after{color:inherit}
+.id-baghdad-article .id-source-note{max-width:78ch;margin-top:24px;padding:16px 20px;border-inline-start:3px solid var(--copper);background:#f3ecdf}
+.id-baghdad-article .id-source-note p{margin:0}
+.id-baghdad-article .prose{max-width:none;font-family:Georgia,"Times New Roman",serif;font-size:19px;line-height:1.85}
+.id-baghdad-article .prose h2{font-size:32px;margin-top:48px;scroll-margin-top:100px}
+.id-baghdad-article .prose h3{font-size:24px;margin-top:32px}
+.id-baghdad-article .prose li[id^="ref-"]{overflow-wrap:anywhere;font:15px/1.85 Arial,sans-serif;margin-bottom:16px;scroll-margin-top:130px}
+.id-baghdad-article .related-panel{margin-top:40px;padding:24px;border-top:1px solid var(--line)}
+.id-baghdad-article blockquote{margin-inline:0;padding:20px 24px;border-inline-start:4px solid var(--copper);background:#f3ecdf}
+@media(max-width:640px){
+  .id-baghdad-article .article-page{padding-block:12px 36px}
+  .id-baghdad-article .article-shell{width:calc(100% - 32px)}
+  .id-baghdad-article .article-head{padding-block:20px 26px}
+  .id-baghdad-article .article-head h1{font-size:32px}
+  .id-baghdad-article .prose{font-size:17px;line-height:1.85}
+  .id-baghdad-article .prose h2{font-size:28px}
+  .id-baghdad-article .prose h3{font-size:23px}
+  .id-baghdad-article .id-source-note,.id-baghdad-article .related-panel{padding:16px}
+}
+.id-baghdad-article .prose [lang="ar"]{font-family:Tahoma,Arial,sans-serif;unicode-bidi:isolate}
+.id-baghdad-article .reference-list li{font:15px/1.85 Arial,sans-serif;margin-bottom:16px;overflow-wrap:anywhere}

@@ -1217,7 +1217,8 @@
       "languages": [
         "ar",
         "en",
-        "de"
+        "de",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "kitab-al-kutub",
@@ -1236,7 +1237,9 @@
         "https://isamveri.org/pdfdrg/D195119/2008/2008_AYAZFY.pdf",
         "https://doi.org/10.1017/mdh.2023.38",
         "https://www.iranicaonline.org/articles/baghdad/baghdad-iranian-connection-ii/"
-      ]
+      ],
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/",
+      "indonesian_title": "Mengapa Baghdad Jatuh pada 1258? Benarkah Ibnu al-Alqami Mengkhianati Khalifah?"
     },
     {
       "slug": "juhayman-grand-mosque-1979",

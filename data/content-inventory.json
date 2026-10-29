@@ -1042,7 +1042,8 @@
       "languages": [
         "ar",
         "en",
-        "de"
+        "de",
+        "id"
       ],
       "primary_intent": "أسباب سقوط بغداد سنة 1258 وحدود اتهام ابن العلقمي بالخيانة",
       "does_not_target": [
@@ -1051,7 +1052,10 @@
         "ملخص رواية كتاب الكتب"
       ],
       "next_action": "hold_scope_measure_and_seek_independent_review",
-      "reason": "Multilingual reference article with explicit claim-evidence architecture, citation assets, and a distinct reader question."
+      "reason": "Multilingual reference article with explicit claim-evidence architecture, citation assets, and a distinct reader question.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/",
+      "indonesian_title": "Mengapa Baghdad Jatuh pada 1258? Benarkah Ibnu al-Alqami Mengkhianati Khalifah?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; specialist_review_pending"
     },
     {
       "slug": "juhayman-grand-mosque-1979",

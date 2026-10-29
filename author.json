@@ -271,7 +271,8 @@
         {
           "@id": "https://ahmedalhafiz.com/de/articles/fall-von-bagdad-1258-ibn-al-alqami/#article"
         }
-      ]
+      ],
+      "dateModified": "2026-10-29T10:28:12+01:00"
     },
     {
       "@type": "Article",
@@ -582,6 +583,59 @@
       "hasPart": {
         "@type": "WebPage",
         "url": "https://ahmedalhafiz.com/articles/juhayman-grand-mosque-1979/evidence/",
+        "name": "Berkas bukti dan sitasi (bahasa Arab)",
+        "inLanguage": "ar"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/",
+      "name": "Jatuhnya Baghdad 1258: Benarkah Dikhianati? | Ahmed Alhafiz",
+      "headline": "Mengapa Baghdad Jatuh pada 1258? Benarkah Ibnu al-Alqami Mengkhianati Khalifah?",
+      "description": "Mengapa Baghdad jatuh pada 1258? Ahmed Alhafiz menelaah Hulagu, tuduhan terhadap Ibnu al-Alqami, pengurangan pasukan, dan batas bukti sejarahnya.",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "publisher": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://ahmedalhafiz.com/id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/#page"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/#article"
+      },
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "isAccessibleForFree": true,
+      "image": "https://ahmedalhafiz.com/ahmed-alhafiz-social-card.png",
+      "version": "Indonesian translation 1.1; Arabic source 2026-09-25; reference correction 2026-10-29",
+      "articleSection": [
+        "Sejarah",
+        "Kritik sumber sejarah"
+      ],
+      "citation": [
+        "Halil İbrahim Hançabay, “Abbâsîler’in Son Veziri İbnü’l-Alkamî (ö. 656/1258) ve Moğollar’la İlişkisi,” Tarih Dergisi – Turkish Journal of History 72 (2020), hlm. 45–76. DOI: 10.26650/iutd.727887.",
+        "Fatih Yahya Ayaz, “Erken Dönem Memlük Tarihçilerinin Bağdat’ın Moğollar Tarafından İstilâsıyla Alâkalı Rivayet ve Yorumları,” dalam İslam Medeniyetinde Bağdat (Medînetü’s-Selâm) Uluslararası Sempozyum (2008; diterbitkan 2011), jil. I, hlm. 261–282.",
+        "Jonathan Brack, Michal Biran, dan Reuven Amitai, “Plague and the Mongol conquest of Baghdad (1258)? A reevaluation of the sources,” Medical History (2024), hlm. 1–19. DOI: 10.1017/mdh.2023.38.",
+        "‘Ata-Malik Juvayni, The History of the World-Conqueror, terj. John Andrew Boyle, jil. II (1958), khususnya hlm. 607–615 mengenai kampanye Hülegü ke barat.",
+        "Abdülkerim Özaydın, “İbnü’l-Alkamî,” TDV İslâm Ansiklopedisi 20 (1999), hlm. 483–484; edisi elektronik.",
+        "Abbas Zaryab, “Baghdad ii. From the Mongol Invasion to the Ottoman Occupation,” Encyclopaedia Iranica (diterbitkan 2002; diperbarui 2016).",
+        "Reuven Amitai, “Hulāgu Khan,” Encyclopaedia Iranica.",
+        "Michal Biran, “Violence and Non-Violence in the Mongol Conquest of Baghdad (1258),” dalam Violence in Islamic Thought from the Mongols to European Imperialism (Edinburgh University Press, 2018), hlm. 13–31. DOI: 10.1515/9781474413015-004. Digunakan di sini hanya untuk kerangka sejarah ingatan yang tersedia dalam ringkasan penerbit."
+      ],
+      "mentions": {
+        "@type": "Book",
+        "url": "https://ahmedalhafiz.com/books/kitab-al-kutub/"
+      },
+      "hasPart": {
+        "@type": "WebPage",
+        "url": "https://ahmedalhafiz.com/articles/fall-of-baghdad-1258-ibn-al-alqami/evidence/",
         "name": "Berkas bukti dan sitasi (bahasa Arab)",
         "inLanguage": "ar"
       }
