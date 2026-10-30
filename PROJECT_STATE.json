@@ -2,12 +2,12 @@
   "schema_version": 1,
   "project": "ahmed-alhafiz.github.io",
   "source_of_truth": "GitHub",
-  "branch": "publish/id-dreams-20261029",
-  "head_sha": "3f5e7797c6f134113d40d89f4c05dc43ea5b3210",
+  "branch": "publish/id-qarin-20261030",
+  "head_sha": "35d029c779fc4cb5fc950a59b492f5feec28c3b9",
   "head_sha_semantics": "Verified published base. Final PR is the authority for CI, visual review, merge and live verification.",
-  "status": "indonesian_dreams_approved_release_candidate",
-  "updated_at": "2026-10-29T20:43:58.929422+00:00",
-  "current_task": "Publish the complete approved Indonesian dreams translation; preserve Arabic and English bodies.",
+  "status": "indonesian_qarin_approved_release_candidate",
+  "updated_at": "2026-10-30T14:21:42.239228+00:00",
+  "current_task": "Publish the complete approved Indonesian qarin translation; preserve Arabic and English bodies.",
   "next_action": "Pass required CI, visual and rollback checks, then merge and verify Pages and live parity.",
   "latest_site_audit_checkpoint": {
     "verified_at": "2026-10-03T20:54:44+02:00",
@@ -683,7 +683,7 @@
     "merge_sha": "3f5e7797c6f134113d40d89f4c05dc43ea5b3210"
   },
   "indonesian_dreams_article_release": {
-    "status": "approved_release_candidate",
+    "status": "published_and_live_verified",
     "project_article_number": 8,
     "published_article_count_after_release": 7,
     "authorization": "أمر أحمد بعد عرض النسخة المصححة للثامن: انشر تلقائيًا إن اجتاز الفحوص، وإلا أصلح تلقائيًا.",
@@ -695,6 +695,24 @@
     "reference_entries": 8,
     "independent_specialist_review": false,
     "public_html_pages": 172,
-    "publication_evidence": "Source checkpoint only; PR, Pages and live verification establish actual publication."
+    "publication_evidence": "Source checkpoint only; PR, Pages and live verification establish actual publication.",
+    "pr": 254,
+    "merge_sha": "35d029c779fc4cb5fc950a59b492f5feec28c3b9"
+  },
+  "indonesian_qarin_article_release": {
+    "status": "approved_release_candidate",
+    "project_article_number": 7,
+    "published_article_count_after_release": 8,
+    "authorization": "أمر أحمد30 أكتوبر بعد عرض ترجمة القرين: انشر تلقائيًا عند اجتياز الفحوص، وإلا أصلح تلقائيًا.",
+    "url": "https://ahmedalhafiz.com/id/articles/jin-qorin-islam-pikiran/",
+    "source_url": "https://ahmedalhafiz.com/articles/qarin-islam-thoughts-control/",
+    "translation_version": "id-qarin-v1.0",
+    "units": 75,
+    "source_attributes_requiring_translation": 13,
+    "reference_entries": 9,
+    "independent_specialist_review": false,
+    "public_html_pages": 173,
+    "publication_evidence": "Source checkpoint only; PR, Pages and live verification establish actual publication.",
+    "publication_date": "2026-10-30"
   }
 }

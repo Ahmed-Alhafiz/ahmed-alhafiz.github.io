@@ -89,7 +89,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "هل يعرف القرين أفكار الإنسان ويتحكم به؟",
       "does_not_target": [
@@ -98,7 +99,10 @@
         "إعادة دليل الأفكار الاقتحامية وفجوات الذاكرة"
       ],
       "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
-      "reason": "Approved Arabic article distinguishes Quranic uses of qarin, hadith readings, reported scholarly opinion about inner intentions, and bounded thought-suppression evidence with an early literary scene."
+      "reason": "Approved Arabic article distinguishes Quranic uses of qarin, hadith readings, reported scholarly opinion about inner intentions, and bounded thought-suppression evidence with an early literary scene.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/jin-qorin-islam-pikiran/",
+      "indonesian_title": "Jin Qorin dalam Islam: Bisakah Ia Mengetahui Pikiran dan Mengendalikan Anda?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; specialist_review_pending"
     },
     {
       "slug": "sprinkled-magic-water-door-evidence",

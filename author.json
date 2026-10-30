@@ -781,7 +781,55 @@
         "@type": "Book",
         "url": "https://ahmedalhafiz.com/books/umm-abbas/"
       }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/jin-qorin-islam-pikiran/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/jin-qorin-islam-pikiran/",
+      "name": "Jin Qorin dalam Islam: Bisa Membaca Pikiran? | Ahmed Alhafiz",
+      "headline": "Jin Qorin dalam Islam: Bisakah Ia Mengetahui Pikiran dan Mengendalikan Anda?",
+      "description": "Apa itu jin qorin menurut Islam? Ahmed Alhafiz menelaah hadis, ayat Al-Qur’an, pendapat ulama, serta batas kaitannya dengan pikiran dan keputusan Anda.",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "publisher": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://ahmedalhafiz.com/id/articles/jin-qorin-islam-pikiran/#page"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/qarin-islam-thoughts-control/#article"
+      },
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "isAccessibleForFree": true,
+      "image": "https://ahmedalhafiz.com/ahmed-alhafiz-social-card.png",
+      "version": "Indonesian translation 1.0; Arabic source 2026-10-27",
+      "articleSection": [
+        "Agama dan psikologi",
+        "Jin qorin dan pikiran"
+      ],
+      "citation": [
+        "[1] Sahih Muslim, 2814a. Hadis Ibnu Mas‘ud tentang pendamping dari kalangan jin. Disertai penjelasan An-Nawawi mengenai dua bacaan «فأسلم» dan bacaan yang dipilihnya, jil. 17, hlm. 293. Teks dan rujukan hadis; Syarah An-Nawawi.",
+        "[2] Al-Qur’an, Az-Zukhruf: 36; Tafsir Ath-Thabari. Ayat dan tafsir.",
+        "[3] Al-Qur’an, Qaf: 23 dan 27. Al-Qurthubi pada ayat 23; Ath-Thabari pada ayat 27. Perbedaan konteks dan pendapat diperhatikan.",
+        "[4] Islamweb, fatwa 151225, 10 Maret 2011. “Persoalan Pengetahuan Setan tentang Niat Baik dan Buruk dalam Hati.” Sumber ini menukil pendapat Ibnu Baz, bukan merujuk ke halaman asli di situs beliau; pendapat itu tidak disajikan sebagai kesepakatan ulama. Teks.",
+        "[5] Al-Qur’an, Saba’: 14; Tafsir Ibnu Katsir. Yang digunakan adalah makna yang ditunjukkan ayat, tanpa memastikan perincian riwayat tambahan mengenai lamanya waktu sejak wafatnya Sulaiman. Ayat dan tafsir.",
+        "[6] Al-Qur’an, Ibrahim: 22; Tafsir Ath-Thabari. Ayat dan tafsir.",
+        "[7] Daniel M. Wegner, David J. Schneider, Samuel R. Carter III & Teri L. White, 1987. Paradoxical Effects of Thought Suppression. Journal of Personality and Social Psychology, 53(1):5-13. DOI:10.1037/0022-3514.53.1.5. Abstrak penelitian digunakan untuk memaparkan eksperimen dan hasilnya yang terbatas, bukan untuk menilai klaim tentang perkara gaib ataupun keadaan seseorang. Abstrak dan data publikasi.",
+        "[8] Sahih Muslim, 127a. Hadis Abu Hurairah tentang bisikan dalam diri. Teks dan rujukan hadis.",
+        "[9] Ahmed Alhafiz, «أم عباس لجلب الحبيب وردّ المطلّقة». Bab Pertama, hlm. 12 dari naskah penulis terlampir yang berjumlah 324 halaman; pembacaan sastra atas momen menutup telepon dan perasaan bersalah. Halaman novel."
+      ],
+      "mentions": {
+        "@type": "Book",
+        "url": "https://ahmedalhafiz.com/books/umm-abbas/"
+      }
     }
   ],
-  "dateModified": "2026-10-29"
+  "dateModified": "2026-10-30"
 }

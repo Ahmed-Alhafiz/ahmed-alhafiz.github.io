@@ -1,0 +1,664 @@
+{
+  "source_url": "https://ahmedalhafiz.com/articles/qarin-islam-thoughts-control/",
+  "source_sha256": "e6ff80037ce89bcded001b92281f21f915a3d30987234cb50c565c79756e2985",
+  "target_url": "https://ahmedalhafiz.com/id/articles/jin-qorin-islam-pikiran/",
+  "h1": "Jin Qorin dalam Islam: Bisakah Ia Mengetahui Pikiran dan Mengendalikan Anda?",
+  "seo_title": "Jin Qorin dalam Islam: Bisa Membaca Pikiran? | Ahmed Alhafiz",
+  "meta_description": "Apa itu jin qorin menurut Islam? Ahmed Alhafiz menelaah hadis, ayat Al-Qur’an, pendapat ulama, serta batas kaitannya dengan pikiran dan keputusan Anda.",
+  "translation_version": "id-qarin-v1.0",
+  "owner_approved": true,
+  "publication_date": "2026-10-30",
+  "publication_date_id": "30 Oktober 2026",
+  "project_article_number": 7,
+  "published_article_count_after_release": 8,
+  "references": [
+    "[1] Sahih Muslim, 2814a. Hadis Ibnu Mas‘ud tentang pendamping dari kalangan jin. Disertai penjelasan An-Nawawi mengenai dua bacaan «فأسلم» dan bacaan yang dipilihnya, jil. 17, hlm. 293. Teks dan rujukan hadis; Syarah An-Nawawi.",
+    "[2] Al-Qur’an, Az-Zukhruf: 36; Tafsir Ath-Thabari. Ayat dan tafsir.",
+    "[3] Al-Qur’an, Qaf: 23 dan 27. Al-Qurthubi pada ayat 23; Ath-Thabari pada ayat 27. Perbedaan konteks dan pendapat diperhatikan.",
+    "[4] Islamweb, fatwa 151225, 10 Maret 2011. “Persoalan Pengetahuan Setan tentang Niat Baik dan Buruk dalam Hati.” Sumber ini menukil pendapat Ibnu Baz, bukan merujuk ke halaman asli di situs beliau; pendapat itu tidak disajikan sebagai kesepakatan ulama. Teks.",
+    "[5] Al-Qur’an, Saba’: 14; Tafsir Ibnu Katsir. Yang digunakan adalah makna yang ditunjukkan ayat, tanpa memastikan perincian riwayat tambahan mengenai lamanya waktu sejak wafatnya Sulaiman. Ayat dan tafsir.",
+    "[6] Al-Qur’an, Ibrahim: 22; Tafsir Ath-Thabari. Ayat dan tafsir.",
+    "[7] Daniel M. Wegner, David J. Schneider, Samuel R. Carter III & Teri L. White, 1987. Paradoxical Effects of Thought Suppression. Journal of Personality and Social Psychology, 53(1):5-13. DOI:10.1037/0022-3514.53.1.5. Abstrak penelitian digunakan untuk memaparkan eksperimen dan hasilnya yang terbatas, bukan untuk menilai klaim tentang perkara gaib ataupun keadaan seseorang. Abstrak dan data publikasi.",
+    "[8] Sahih Muslim, 127a. Hadis Abu Hurairah tentang bisikan dalam diri. Teks dan rujukan hadis.",
+    "[9] Ahmed Alhafiz, «أم عباس لجلب الحبيب وردّ المطلّقة». Bab Pertama, hlm. 12 dari naskah penulis terlampir yang berjumlah 324 halaman; pembacaan sastra atas momen menutup telepon dan perasaan bersalah. Halaman novel."
+  ],
+  "source_link_localizations": {
+    "https://ahmedalhafiz.com/": "https://ahmedalhafiz.com/id/",
+    "https://ahmedalhafiz.com/articles/": "https://ahmedalhafiz.com/id/articles/",
+    "https://ahmedalhafiz.com/about/": "https://ahmedalhafiz.com/id/about/"
+  },
+  "main_link_targets": [
+    "https://ahmedalhafiz.com/id/",
+    "https://ahmedalhafiz.com/id/articles/",
+    "https://ahmedalhafiz.com/id/about/",
+    "#ref-1",
+    "#ref-1",
+    "#ref-1",
+    "#ref-2",
+    "#ref-3",
+    "#ref-4",
+    "#ref-5",
+    "#ref-6",
+    "https://ahmedalhafiz.com/articles/memory-gaps-unremembered-actions/",
+    "#ref-7",
+    "#ref-8",
+    "https://ahmedalhafiz.com/articles/unwanted-intrusive-thoughts-meaning/",
+    "https://ahmedalhafiz.com/books/umm-abbas/",
+    "#ref-9",
+    "https://sunnah.com/muslim:2814a",
+    "https://islamweb.net/ar/library/content/53/8147/%D8%A8%D8%A7%D8%A8-%D8%AA%D8%AD%D8%B1%D9%8A%D8%B4-%D8%A7%D9%84%D8%B4%D9%8A%D8%B7%D8%A7%D9%86-%D9%88%D8%A8%D8%B9%D8%AB%D9%87-%D8%B3%D8%B1%D8%A7%D9%8A%D8%A7%D9%87-%D9%84%D9%81%D8%AA%D9%86%D8%A9-%D8%A7%D9%84%D9%86%D8%A7%D8%B3-%D9%88%D8%A3%D9%86-%D9%85%D8%B9-%D9%83%D9%84-%D8%A5%D9%86%D8%B3%D8%A7%D9%86-%D9%82%D8%B1%D9%8A%D9%86%D8%A7",
+    "https://quran.ksu.edu.sa/tafseer/tabary/sura43-aya36.html",
+    "https://quran.ksu.edu.sa/tafseer/qortobi/sura50-aya23.html",
+    "https://quran.ksu.edu.sa/tafseer/tabary/sura50-aya27.html",
+    "https://islamweb.net/ar/fatwa/151225",
+    "https://quran.ksu.edu.sa/tafseer/katheer/sura34-aya14.html",
+    "https://quran.ksu.edu.sa/tafseer/tabary/sura14-aya22.html",
+    "https://pubmed.ncbi.nlm.nih.gov/3612492/",
+    "https://sunnah.com/muslim:127a",
+    "https://ahmedalhafiz.com/books/umm-abbas/",
+    "https://ahmedalhafiz.com/books/umm-abbas/",
+    "https://ahmedalhafiz.com/books/umm-abbas/",
+    "https://ahmedalhafiz.com/id/articles/",
+    "#answer",
+    "#section-1",
+    "#section-2",
+    "#section-3",
+    "#section-4",
+    "#section-5",
+    "#section-6",
+    "#section-7",
+    "#section-8",
+    "#references",
+    "https://quranenc.com/en/browse/indonesian_affairs/43/36",
+    "https://quranenc.com/en/browse/indonesian_affairs/50/23",
+    "https://quranenc.com/en/browse/indonesian_affairs/50/27",
+    "https://quranenc.com/en/browse/indonesian_affairs/34/14",
+    "https://quranenc.com/en/browse/indonesian_affairs/14/22",
+    "https://quranenc.com/en/home/about/terms",
+    "/assets/fonts/amiri-quran/OFL.txt"
+  ],
+  "units": [
+    {
+      "id": "Q001",
+      "source_text_sha256": "b05ff2700700d7d6e25ffca825d4f77844271e04aa0f5aba14d3a7571000e947",
+      "translation_text_sha256": "9fcbe6a8e611d9884a4c1895c9cf8d515274fe6a3253695fba334c49e187618c"
+    },
+    {
+      "id": "Q002",
+      "source_text_sha256": "71cbcdd149ada1b5f50b0636037e9242a85edb6175335d655eab48be3bd29c40",
+      "translation_text_sha256": "dac8e95ad81df6e0e281efd92388ea585b33c76d6c1063537f6dfc2be3b4d237"
+    },
+    {
+      "id": "Q003",
+      "source_text_sha256": "b0bce6b60c861b7cd5b99270d91a69326d76f528b005c196fb81721d6af26556",
+      "translation_text_sha256": "d5d878db37fb38a8c866575b5d243be693891c9c4adfb7981db15afb2abe1c77"
+    },
+    {
+      "id": "Q004",
+      "source_text_sha256": "0389f170bf7df74290bbd6430e1cda0415aff8d7f4be841c587bce900f0a9c3d",
+      "translation_text_sha256": "0447ce38954ae627c711bd17aa607a8b74d926f7fe835c323b8fa745a608ac91"
+    },
+    {
+      "id": "Q005",
+      "source_text_sha256": "73bafe33f395c74afb1267eda4599eaf33b80d21bc08f0848c0af98f87cac17c",
+      "translation_text_sha256": "9bfa3992d91745ebfccd4b9eb42efaf24f4b7970c445be9628434dbfa7c656b0"
+    },
+    {
+      "id": "Q006",
+      "source_text_sha256": "2a63012ef7f80ab24642f0977e36a08b8d5386650d6423c19bd35e70751c54fe",
+      "translation_text_sha256": "7ca5ce1a52768b52fd36f99e3e764c5c01c28020f88a9b84c1391234cfbbc2f7"
+    },
+    {
+      "id": "Q007",
+      "source_text_sha256": "523a03fde715768f1c50fd533387ae0cd6aa626393461566c3ec2480b7ef8c79",
+      "translation_text_sha256": "cbdbd37a5a9ce372a957d85e18c5c3368f23454852c474a61318da99d4ea6d22"
+    },
+    {
+      "id": "Q008",
+      "source_text_sha256": "4319428dd011e8075299eda0ea687b274ab0d27faebc3baed36e14bd84ebcb7f",
+      "translation_text_sha256": "b521cc0a53495e99888aa886903e72203f02c4d21078db6378934184b8d010d4"
+    },
+    {
+      "id": "Q009",
+      "source_text_sha256": "b99fc6eb2141d882b809ad1aca77307a84e3ba495536d24af5472e496940c966",
+      "translation_text_sha256": "fce33416a1069b7c0947f833a16437494faad7e5925278f78551901e5c55971d"
+    },
+    {
+      "id": "Q010",
+      "source_text_sha256": "41036d17cc2407caf8573a31a78d93035c03a32be6554a9d8029c656088575e1",
+      "translation_text_sha256": "7c81b80277fe8b22055b384a6c9769254f4df98512f74473ff2430cdc3eab728"
+    },
+    {
+      "id": "Q011",
+      "source_text_sha256": "7796aa11f150555f900590494b48848f02f7d56e5e79f8443e6c1c2b463d6f65",
+      "translation_text_sha256": "d7d38dbb921300db09ce810aa7d3a57e1c8ec05a3fbf6895b1ebf1823e9bdb57"
+    },
+    {
+      "id": "Q012",
+      "source_text_sha256": "b694aabde642107f3378d4f46ed02f26d4b49358f5cef5e58e2d7db00cbff7cb",
+      "translation_text_sha256": "5d78fd3719b6b331987a1770126cf2a4d0320318409cfc538d7e7e232c308ca2"
+    },
+    {
+      "id": "Q013",
+      "source_text_sha256": "09e30576067b000a79e0ffb1e268651e6fa6d3d6731f6fff1506dadf2d8b35b7",
+      "translation_text_sha256": "9c66c508e64c8ac116ffc234cf8154ad8ce7b9079550bcfc59677c3c6705461f"
+    },
+    {
+      "id": "Q014",
+      "source_text_sha256": "385fbf6c9f965abdf6a183dc1bffa37ecf4a373c41a14ac9c42db57b4fd5d327",
+      "translation_text_sha256": "1776d8dafe58666e5c7181d4fdb46f7653e70b30f49f0465086778f1eddba020"
+    },
+    {
+      "id": "Q015",
+      "source_text_sha256": "9652849f56423a6bca562d5e6917b4e5fe5834e2fdb1df10a2918777798f06a7",
+      "translation_text_sha256": "d8c3104e1c06d6a551dd8a652b3629f9e65b370cd6cd9946ebb7399dfb931335"
+    },
+    {
+      "id": "Q016",
+      "source_text_sha256": "01bfe7eb438cfe398f642dbc31b22f3a80df3f1e50eec7c51ac7abaaefb2c9cd",
+      "translation_text_sha256": "67165748e841c035bb540b2e7751a7ce78f06e16bea822f70f8c66d53308a51a"
+    },
+    {
+      "id": "Q017",
+      "source_text_sha256": "183cf6b30f2a5d3bff0f6c5a0453d312c724c718e0d67ef9553d3ec3c53ba48a",
+      "translation_text_sha256": "66dda56dd4a7c383bb826fcd763ea2e2ff943552f8a80d1e840c43b502869b69"
+    },
+    {
+      "id": "Q018",
+      "source_text_sha256": "a12ec47973f4e3cdd6c10cb023ac081d28857ab28f31721c63231a0cb76a610c",
+      "translation_text_sha256": "e7e54dc2670dfc494551811a379282fcf690a326fac183575c02f6569b128093"
+    },
+    {
+      "id": "Q019",
+      "source_text_sha256": "3da68d5208286cbb34b06fc1093e17ded49fdb0afaa6a64533c3022e7e8eb2d1",
+      "translation_text_sha256": "85b353aa70fccd32ab43dcb475499398cc699a1e6ea24e5fd8c5dc73cb8fd6e7"
+    },
+    {
+      "id": "Q020",
+      "source_text_sha256": "063df3fc6b4949890966d0454879cb045b0a87e71bea7682e8b0d59a98043482",
+      "translation_text_sha256": "cb6ccab34a389ac2bcb379addfbeb61e518a759aa917a90bfe6b7782c2c53ca8"
+    },
+    {
+      "id": "Q021",
+      "source_text_sha256": "668b3f91e445146a9d2f15c5a6cae09e00ba002545521304c11401cee429ae32",
+      "translation_text_sha256": "e99c7af996004232a5cf9d5125e7291bf5b41a2aac915000af39fe3dafe39192"
+    },
+    {
+      "id": "Q022",
+      "source_text_sha256": "cb4ca74764cf2fdb8f137b7550bfe879ba0ce811409dec1836aaa5c51b0fd179",
+      "translation_text_sha256": "e959e410da402592daf7fbabb5a403d77966c9f155232780a51cda27ef9b8499"
+    },
+    {
+      "id": "Q023",
+      "source_text_sha256": "d0c8986112763d514518faa0bebedbf33e1505abb412110a135fefd7ae7541a4",
+      "translation_text_sha256": "4bd05ffd3f7c62760dced7412a532dc0334aeea75051548ecac094dca6aa8c59"
+    },
+    {
+      "id": "Q024",
+      "source_text_sha256": "58f7887119c9a6951eb825a972e0ba2275d8b8a8f3cb8a63d87d490838a41aa3",
+      "translation_text_sha256": "562fa3c4d277aa520f3545d3cc3b0729a8d8fdb87203d00ea37669a2990764c7"
+    },
+    {
+      "id": "Q025",
+      "source_text_sha256": "b90fdd927f159a62eddc0b2a1f78dd1a89fb2ff5c35b6b80f0f67b867ef8322f",
+      "translation_text_sha256": "d56082ffd21d3a099cb45ad98523c298eb05c079a0bf496c565879ec2fb985e5"
+    },
+    {
+      "id": "Q026",
+      "source_text_sha256": "3938beb1142f95635398ea534a334c54d0e0ebe6946f06c2e528a02a5db59d06",
+      "translation_text_sha256": "b4b4de00710fc2abf93bfdbab715b07dac3487190e6b5809d18198b19b6b603f"
+    },
+    {
+      "id": "Q027",
+      "source_text_sha256": "6fc331e8436bc406c16938f8ec3257926a604dd0395b3118c39e824fb41b1555",
+      "translation_text_sha256": "bd4fbe075e560485129004b5eee1f77fe7c396ffdaa7de46ff7a4f35c6fdba78"
+    },
+    {
+      "id": "Q028",
+      "source_text_sha256": "6db9719b9ea06dcd3571f5654aafce421ca1780f20948d842eb58f14e2227eb5",
+      "translation_text_sha256": "903f68fe2c4ecf60b2c49a930d3846657fe36fd79ce61ce7a3f91756a9854c14"
+    },
+    {
+      "id": "Q029",
+      "source_text_sha256": "6352629d88d4f1bcfcf5886e41270affc03576f97d8a1e73147e0df5a6f34c0b",
+      "translation_text_sha256": "b6e6fb834d1cd88c4d1d518f04d76fda0da571dcd07bfc2a2f268be0656f996c"
+    },
+    {
+      "id": "Q030",
+      "source_text_sha256": "1caafe95b3b48dc54ec98f5d2ec56f0040a5b82e84586b47048a3022a693b7f5",
+      "translation_text_sha256": "bb2929f8b089bedad629132ed1c8a255014e64e258b9da8019e5e3975d6fccaa"
+    },
+    {
+      "id": "Q031",
+      "source_text_sha256": "8afbb27d7ca772cf3072b49b3a6c072a1be801d9e97b4ebbab6f47835d1dedba",
+      "translation_text_sha256": "6115c3ba5db0bdd5ea4855c73a3dac8655de89f1c13ab6d0f27b3602f97fabf5"
+    },
+    {
+      "id": "Q032",
+      "source_text_sha256": "397a8a9a4f637bb4bb5db572d9661cc0f54b724baea8354c467a56be48b78941",
+      "translation_text_sha256": "1294e26a8eb937323dd67b96e959a80fa8be2111e2e8d75519a2db55169c5b1c"
+    },
+    {
+      "id": "Q033",
+      "source_text_sha256": "201ace9947c5d25716d22fc191a5e1ec3e849f21eada398df9c9ff988599e0ff",
+      "translation_text_sha256": "7199176328a99a62dd44245dd7f78d026fd76fbdf6d322fe1e03d90548a1cf0c"
+    },
+    {
+      "id": "Q034",
+      "source_text_sha256": "199180e7f1b83fbae2da38fe3d997374099d5a6159488708829734f67fa4429b",
+      "translation_text_sha256": "ac14daac86ce3932ac530fcb0e411577b8ad04a0a14e94dfdfaa263ceaeec79d"
+    },
+    {
+      "id": "Q035",
+      "source_text_sha256": "08be5ad17a60c77d5be13f77039b8dc48ca02aea7110b4b2b7df4aebdcaf85df",
+      "translation_text_sha256": "75af29e6d756ffd6b1703617f8f49dcf37ef43153f11173e628a79a9d37476b5"
+    },
+    {
+      "id": "Q036",
+      "source_text_sha256": "29a4b9a9f1ac159bdccec15bcfe296b4f9509185463596ccb534b58b7d6c1394",
+      "translation_text_sha256": "e462ff1594b398ec0289512b5ae665c7d255b8423b522818826776924775b40a"
+    },
+    {
+      "id": "Q037",
+      "source_text_sha256": "3112ca40f54bc34a5c08449e864fed4abf3abe5e142cf84358dc0c577a183d46",
+      "translation_text_sha256": "4a115c1b790c9c40d0c353ddd1d73250bbeb060354abde96ac1a42b3b0f224c9"
+    },
+    {
+      "id": "Q038",
+      "source_text_sha256": "7f4841f7eb46704e339d050dc3175903e29167d97d9a316db146348c75169905",
+      "translation_text_sha256": "7ead27f1407935d05b3c409397e94f8b647e9ec731f32bef44f58db2eeeb599b"
+    },
+    {
+      "id": "Q039",
+      "source_text_sha256": "b2d3582a9a983097a9070a1bc12fe3899cdea9932fb518c5c0b7d4985b082951",
+      "translation_text_sha256": "5a4ded04f6f585cd4293c349da7bbd7f8cbf6dcecb3ec76d660c7392ce8f97ed"
+    },
+    {
+      "id": "Q040",
+      "source_text_sha256": "aad2996cbd3c6ba99a27fba5044e1d29347643ba1d5938d29bca8d92c910c3ff",
+      "translation_text_sha256": "938cfcd0c602c61d51eaafb9775fa293ecb4dfcff0c29c450b2724ffe0ba55bc"
+    },
+    {
+      "id": "Q041",
+      "source_text_sha256": "eb217229a2228d740edade81bb71ef41483b698fe23648f6cff15d052b887e22",
+      "translation_text_sha256": "3bcf31385ef778164cf0edb08dba1c0bac42eba3f59a30c7e14dace26a01a66a"
+    },
+    {
+      "id": "Q042",
+      "source_text_sha256": "8eda833df3625ecda5b27549bf3af8d60099bcdc36862272990d9f1a2d11a0dd",
+      "translation_text_sha256": "893351f9872fc3da55fc9249b793eb974a296f8563f585d04865105d4357cd06"
+    },
+    {
+      "id": "Q043",
+      "source_text_sha256": "befd31dade2b2f8dd4bb0f4a5ada0bad01cac6277eba2ed88f5374e64f6c1faa",
+      "translation_text_sha256": "e27eb2cd20566bbdd17fe00e08f10ba28dce2ca3ba26ce94567c298a910b3f70"
+    },
+    {
+      "id": "Q044",
+      "source_text_sha256": "ddbef494a674ff07514d91c763e7bd7dcefb18405da4869076b7310159108a60",
+      "translation_text_sha256": "747a3caebaec2b9544d683ca520faaa33167d22505d45fd0938e16d7bc8b32ec"
+    },
+    {
+      "id": "Q045",
+      "source_text_sha256": "fd504e28791f6bb4e5ed9e18749e10de6ecc0cb8ed630b0f1031e26ee83daa9c",
+      "translation_text_sha256": "4ab8ce3c30fb15804bed47d72a42241531297e8cfcaf2a261baafbaa41cd14ba"
+    },
+    {
+      "id": "Q046",
+      "source_text_sha256": "4adb12ef641323b8d66ba04e38c0cc0d72680dcaa5cb8c0ce03d120458c2e944",
+      "translation_text_sha256": "32325f0a3c3dcaa78418e8f20710080791b2ebc707b8994389ebeb9561f2ad9b"
+    },
+    {
+      "id": "Q047",
+      "source_text_sha256": "0b0a4829f781bac7b2d13fc2919a835604402c8075dc82618f30ae53d975b81c",
+      "translation_text_sha256": "fd4c964b25b8ac162b5a9190bf93983c8ee32b70e6a1e541810be1bc22fb4e70"
+    },
+    {
+      "id": "Q048",
+      "source_text_sha256": "d96b2387a142d7032b560fd579b70f0e5481b61ed802fc0cbbd6feccd30dd359",
+      "translation_text_sha256": "bd794686e5160485ae48fe11f6a1e9a729068223dbb5d963e4130fcc6278ff9c"
+    },
+    {
+      "id": "Q049",
+      "source_text_sha256": "dff8fedfdaaf4b3f5de7c147b265339dcfa406f3b79566b8dbb2a4fdfee4d6e1",
+      "translation_text_sha256": "180f6ea4609b573fdb5c6a2e018cb8a42d9c74ae70c3426b289da3ee568c789f"
+    },
+    {
+      "id": "Q050",
+      "source_text_sha256": "459bff892acfbf473ea2d7d1ea97c438f974e7c8688798ddb70e8f6739c9165c",
+      "translation_text_sha256": "9f1babead2b9cc0ed8e73e06fb4fbc828a04fafa4b8134d2de63a5ca4c2cdcc1"
+    },
+    {
+      "id": "Q051",
+      "source_text_sha256": "7114e52c7efa4d606f6b8292b606646681a83ba8bc52e3ff93e017ad2f947edf",
+      "translation_text_sha256": "f7874a051b039bb3cee347070e911f7187326bee5c82f146f6609afb98a7437f"
+    },
+    {
+      "id": "Q052",
+      "source_text_sha256": "0eb4c9f843386483c0edec64f02cb62d8abcf82e095682ee8a1e9affe2642ba0",
+      "translation_text_sha256": "9e508970d146bfb1107ee387035a025b2b0889e77c0137af0ab4b8f2174a5d0d"
+    },
+    {
+      "id": "Q053",
+      "source_text_sha256": "d9a95f74fa812bc11d7360786d20659f75786e1dd35bb95697ddb8f04acacb43",
+      "translation_text_sha256": "d1deb6f00b5ce6c77b9fa915c1f6076393c25696c619472d724da895bbe5c004"
+    },
+    {
+      "id": "Q054",
+      "source_text_sha256": "a8e4485d42ac9ac7a32b0bb8809c0533ef2147ff2ec5f39adbc8194112d93347",
+      "translation_text_sha256": "bdd3a85772a1519592e2853e7ae22c6387fb745e8658253c262fedc445837234"
+    },
+    {
+      "id": "Q055",
+      "source_text_sha256": "10f83bab72de94b4c748b31082cc33d42c6d18dc9b3630457644d83e768f8ab5",
+      "translation_text_sha256": "147804a7321160a3861dc8e552f013afefb4264212dbefbb2bd302372c625b24"
+    },
+    {
+      "id": "Q056",
+      "source_text_sha256": "46786581f18ca1dcae482ec68675d7115a8ca2e661944a8245c318b57171d910",
+      "translation_text_sha256": "49dd3d073607b2a712748303c6cecbe97bf7ee98d3111c8a3a2cdd4df2940701"
+    },
+    {
+      "id": "Q057",
+      "source_text_sha256": "87196735feef4388c627a7694900ad5eb46bd371b1f4f1df57eb6d9b94d92ee3",
+      "translation_text_sha256": "87196735feef4388c627a7694900ad5eb46bd371b1f4f1df57eb6d9b94d92ee3"
+    },
+    {
+      "id": "Q058",
+      "source_text_sha256": "95da4a593d37a49accd3eb4067fd350a6f4fd78ec89a6629b3fe203694d4cb96",
+      "translation_text_sha256": "1ad9ae57cd2a8ffe158ddbfbd259954d7ded748fb232086e4616d81c2625d80e"
+    },
+    {
+      "id": "Q059",
+      "source_text_sha256": "9a4bc69ce9759c7f35721f084d0f18e3e3b27c778a0af2a7199e864b6b1575d3",
+      "translation_text_sha256": "da2c5c19a47fff93ba27eac52c498b8851449f5db2895a8335408503a308cc7b"
+    },
+    {
+      "id": "Q060",
+      "source_text_sha256": "4c4c207ad7dd9fec2ba4b530e2bfb6d349cbe0c9800fdb79a50593817905314b",
+      "translation_text_sha256": "16b19db27a5f131363e418efda8217ceb748b93baadbe4c9a08696a429bbd3f9"
+    },
+    {
+      "id": "Q061",
+      "source_text_sha256": "f0eba9aba843a1c050d4e1347e102bbe16099e653702f943e17af8d8e07939c6",
+      "translation_text_sha256": "1d347e17ae913240d39b90f612e0c0a9bfc32fba66f0890baa617960a7714b45"
+    },
+    {
+      "id": "Q062",
+      "source_text_sha256": "ae2cac3587ebd64643a69cd1bf05bf0ccb67406cade152dc75cdf2a5eb5ef939",
+      "translation_text_sha256": "cb382b3a741c0d4386a1082e70352b38fc18ee882b478636ae5877c3da37e39a"
+    },
+    {
+      "id": "Q063",
+      "source_text_sha256": "327a5d31339b98e5fe139f4be406422a1affb0679626b903188d1d179acbc12e",
+      "translation_text_sha256": "9cd714db84d109e360714d465606c73e0fc80362970e82466d71c9b94ea0f0f9"
+    },
+    {
+      "id": "Q064",
+      "source_text_sha256": "7fb5b829eae98c8f74a19dcda9296a4f1affc8f4ba0e378bd49ddb4fcfb1bf1e",
+      "translation_text_sha256": "e9dd023161d2d1b59327da9c979a4dee35f54f2ded0492921f139c2e046cd84b"
+    },
+    {
+      "id": "Q065",
+      "source_text_sha256": "7796aa11f150555f900590494b48848f02f7d56e5e79f8443e6c1c2b463d6f65",
+      "translation_text_sha256": "c7aed9418849def9d8d23239bd9cf6eab0acb5dacdad11c553310986ebea55a4"
+    },
+    {
+      "id": "Q066",
+      "source_text_sha256": "01bfe7eb438cfe398f642dbc31b22f3a80df3f1e50eec7c51ac7abaaefb2c9cd",
+      "translation_text_sha256": "1289db9cf374996012664432edcf47fe01e4fa106c8aa14a57abb18880859585"
+    },
+    {
+      "id": "Q067",
+      "source_text_sha256": "3da68d5208286cbb34b06fc1093e17ded49fdb0afaa6a64533c3022e7e8eb2d1",
+      "translation_text_sha256": "36f00653fe2f3d181b84b1c63964d30d0a669f364ca8709a0e468d09d81cff92"
+    },
+    {
+      "id": "Q068",
+      "source_text_sha256": "58f7887119c9a6951eb825a972e0ba2275d8b8a8f3cb8a63d87d490838a41aa3",
+      "translation_text_sha256": "4b2ff7b7bbb31df3b64147ffa410a3fdc87ec5172c7f350fe61b26cead3f0118"
+    },
+    {
+      "id": "Q069",
+      "source_text_sha256": "6db9719b9ea06dcd3571f5654aafce421ca1780f20948d842eb58f14e2227eb5",
+      "translation_text_sha256": "8541de8ba137ec2e991533ef1a8eb5f45ebef3519db2a1f25ef8df5c1f9a95ff"
+    },
+    {
+      "id": "Q070",
+      "source_text_sha256": "201ace9947c5d25716d22fc191a5e1ec3e849f21eada398df9c9ff988599e0ff",
+      "translation_text_sha256": "f0690dfcd1a9777f57693fa0760b271ea0c24dc64a987bc61cea474122c73229"
+    },
+    {
+      "id": "Q071",
+      "source_text_sha256": "3112ca40f54bc34a5c08449e864fed4abf3abe5e142cf84358dc0c577a183d46",
+      "translation_text_sha256": "6b12a45a5c3d515e39ec1cd835f8288d8ea10d9f72e68211e2694f41c0050d73"
+    },
+    {
+      "id": "Q072",
+      "source_text_sha256": "eb217229a2228d740edade81bb71ef41483b698fe23648f6cff15d052b887e22",
+      "translation_text_sha256": "b5fe9619efdcedc7ac4cdfb4a0da1bf4fc8afca3230daac2865437d0a2a56144"
+    },
+    {
+      "id": "Q073",
+      "source_text_sha256": "0b0a4829f781bac7b2d13fc2919a835604402c8075dc82618f30ae53d975b81c",
+      "translation_text_sha256": "8b3a4d1976f6885dfc77f7368af203787e660105329ce4f852f0f214ff766de8"
+    },
+    {
+      "id": "Q074",
+      "source_text_sha256": "e57774eb119f0a2798c29108b7f24159139a5ac6302d823c8ceae3d3f8a19b2e",
+      "translation_text_sha256": "40c039bd85fe4bd5252b0467b52c9b7dda5e8f655e29f8d90d6b8677818b493e"
+    },
+    {
+      "id": "Q075",
+      "source_text_sha256": "c5f4582e5c2672307fae8dc5bd79c5db6767a2c601eb706919e79e0e087e61ad",
+      "translation_text_sha256": "081358b80930512187ced0ef1c285482bd49f58143d8532f3e9744474770379b"
+    }
+  ],
+  "source_attributes_requiring_translation": 13,
+  "translated_attributes": [
+    {
+      "id": "A001",
+      "xpath": "/html/body/main/section[2]/div/article/div[1]/p/sup/a",
+      "attribute": "aria-label",
+      "ar": "المصدر 1",
+      "id_text": "Sumber 1"
+    },
+    {
+      "id": "A002",
+      "xpath": "/html/body/main/section[2]/div/article/p[3]/sup/a",
+      "attribute": "aria-label",
+      "ar": "المصدر 1",
+      "id_text": "Sumber 1"
+    },
+    {
+      "id": "A003",
+      "xpath": "/html/body/main/section[2]/div/article/p[4]/sup/a",
+      "attribute": "aria-label",
+      "ar": "المصدر 1",
+      "id_text": "Sumber 1"
+    },
+    {
+      "id": "A004",
+      "xpath": "/html/body/main/section[2]/div/article/p[6]/sup/a",
+      "attribute": "aria-label",
+      "ar": "المصدر 2",
+      "id_text": "Sumber 2"
+    },
+    {
+      "id": "A005",
+      "xpath": "/html/body/main/section[2]/div/article/p[7]/sup/a",
+      "attribute": "aria-label",
+      "ar": "المصدر 3",
+      "id_text": "Sumber 3"
+    },
+    {
+      "id": "A006",
+      "xpath": "/html/body/main/section[2]/div/article/p[10]/sup/a",
+      "attribute": "aria-label",
+      "ar": "المصدر 4",
+      "id_text": "Sumber 4"
+    },
+    {
+      "id": "A007",
+      "xpath": "/html/body/main/section[2]/div/article/p[11]/sup/a",
+      "attribute": "aria-label",
+      "ar": "المصدر 5",
+      "id_text": "Sumber 5"
+    },
+    {
+      "id": "A008",
+      "xpath": "/html/body/main/section[2]/div/article/p[13]/sup/a",
+      "attribute": "aria-label",
+      "ar": "المصدر 6",
+      "id_text": "Sumber 6"
+    },
+    {
+      "id": "A009",
+      "xpath": "/html/body/main/section[2]/div/article/p[17]/sup/a",
+      "attribute": "aria-label",
+      "ar": "المصدر 7",
+      "id_text": "Sumber 7"
+    },
+    {
+      "id": "A010",
+      "xpath": "/html/body/main/section[2]/div/article/p[20]/sup/a",
+      "attribute": "aria-label",
+      "ar": "المصدر 8",
+      "id_text": "Sumber 8"
+    },
+    {
+      "id": "A011",
+      "xpath": "/html/body/main/section[2]/div/article/p[23]/sup/a",
+      "attribute": "aria-label",
+      "ar": "المصدر 9",
+      "id_text": "Sumber 9"
+    },
+    {
+      "id": "A012",
+      "xpath": "/html/body/main/section[2]/div/article/div[3]/img",
+      "attribute": "alt",
+      "ar": "غلاف رواية أم عباس لجلب الحبيب ورد المطلقة",
+      "id_text": "Sampul novel أم عباس لجلب الحبيب وردّ المطلّقة"
+    },
+    {
+      "id": "A013",
+      "xpath": "/html/body/main/section[2]/div/aside/nav",
+      "attribute": "aria-label",
+      "ar": "فهرس المقال",
+      "id_text": "Daftar isi artikel"
+    }
+  ],
+  "supplements": [
+    {
+      "id": "S001",
+      "text_sha256": "d2dceaf5c284e34535b395786037b650ec0e2933c54d87cea3b33d134eec5e84"
+    },
+    {
+      "id": "S002",
+      "text_sha256": "e7631a6655138625a5865b72502daa85be2567cac57af3b9450e6514053fabf3"
+    },
+    {
+      "id": "S003",
+      "text_sha256": "f797fa26db1e0b2ae50913d945c90fc80e3ebefdcd3b99d1e2a040e94d2c3cc4"
+    }
+  ],
+  "unchanged_original_mains": [
+    {
+      "path": "articles/qarin-islam-thoughts-control/index.html",
+      "main_sha256": "fb1db3ac13c8fdd6f73530a5711244dc8c4ae375a1f95d09056d9bbfb822e330"
+    },
+    {
+      "path": "en/articles/qarin-islam-thoughts-control/index.html",
+      "main_sha256": "f369dde10fb92205e2805fc5dbe436c2d8fe0fa49cc8a6c769bc237455b1c64f"
+    }
+  ],
+  "unchanged_previous_id_pages": [
+    {
+      "path": "id/articles/mimpi-melihat-jin-pertanda-sihir/index.html",
+      "sha256": "bea86d23e8aef6a708f82fb0789017506d2aa2799bb8e2b6ce98718009101145"
+    },
+    {
+      "path": "id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/index.html",
+      "sha256": "df7485d6dcce3f3510d118695a8face37c1a76c0fa63294fb52f00d86da572a4"
+    },
+    {
+      "path": "id/articles/kitab-syamsul-maarif-hukum-membaca/index.html",
+      "sha256": "268a0c9476ccfcd48bcd49dc1c6d7a7d1e5c026d886d826539c6db9fc9de70cf"
+    },
+    {
+      "path": "id/articles/piramida-khufu-dibangun-catatan-merer/index.html",
+      "sha256": "8eb75bb9dd211cbe5ee89b08723285d70d2d615429687a7ddb24029cd8ed7b5f"
+    },
+    {
+      "path": "id/articles/ketindihan-melihat-sosok/index.html",
+      "sha256": "2f73497870c2f9ff06bbe8f3a0e0558f4120d76daad21720031ba4cc93414347"
+    },
+    {
+      "path": "id/articles/juhaiman-masjidil-haram-1979/index.html",
+      "sha256": "6995d987f2970212ee46122627fba50fad0db8167f7de47dfd2ec869a2e08721"
+    },
+    {
+      "path": "id/articles/big-bang-dalam-al-quran/index.html",
+      "sha256": "3f508b00a2f29ee13d6f2ba4905e8730a1c814c4fab35644ce8c9703da72ccf9"
+    }
+  ],
+  "protected_arabic_fragments": [
+    "«مَا مِنْكُمْ مِنْ أَحَدٍ إِلَّا وَقَدْ وُكِّلَ بِهِ قَرِينُهُ مِنَ الْجِنِّ»",
+    "«وَإِيَّايَ إِلَّا أَنَّ اللَّهَ أَعَانَنِي عَلَيْهِ فَأَسْلَمَ فَلَا يَأْمُرُنِي إِلَّا بِخَيْرٍ»",
+    "«وَمَنْ يَعْشُ عَنْ ذِكْرِ الرَّحْمَنِ نُقَيِّضْ لَهُ شَيْطَانًا فَهُوَ لَهُ قَرِينٌ»",
+    "«وَقَالَ قَرِينُهُ هَذَا مَا لَدَيَّ عَتِيدٌ»",
+    "«قَالَ قَرِينُهُ رَبَّنَا مَا أَطْغَيْتُهُ وَلَكِنْ كَانَ فِي ضَلَالٍ بَعِيدٍ»",
+    "«فَلَمَّا خَرَّ تَبَيَّنَتِ الْجِنُّ أَنْ لَوْ كَانُوا يَعْلَمُونَ الْغَيْبَ مَا لَبِثُوا فِي الْعَذَابِ الْمُهِينِ»",
+    "«وَمَا كَانَ لِيَ عَلَيْكُمْ مِنْ سُلْطَانٍ إِلَّا أَنْ دَعَوْتُكُمْ فَاسْتَجَبْتُمْ لِي»",
+    "«إِنَّ اللَّهَ تَجَاوَزَ لِأُمَّتِي مَا حَدَّثَتْ بِهِ أَنْفُسَهَا مَا لَمْ يَتَكَلَّمُوا أَوْ يَعْمَلُوا بِهِ»"
+  ],
+  "quran_meaning_excerpts": [
+    {
+      "unit": "Q015",
+      "sura": 43,
+      "aya": 36,
+      "id_excerpt": "Dan barangsiapa yang berpaling dari pengajaran Allah Yang Maha Pengasih (Al-Qur`an), Kami biarkan setan (menyesatkannya) dan menjadi teman karibnya.",
+      "source_file": "sources/quran-43-36.json",
+      "verbatim_contiguous_excerpt": true
+    },
+    {
+      "unit": "Q017",
+      "sura": 50,
+      "aya": 23,
+      "id_excerpt": "Dan (malaikat) yang menyertainya berkata, \"Inilah (catatan perbuatan) yang ada padaku.\"",
+      "source_file": "sources/quran-50-23.json",
+      "verbatim_contiguous_excerpt": true
+    },
+    {
+      "unit": "Q017",
+      "sura": 50,
+      "aya": 27,
+      "id_excerpt": "(Setan) yang menyertainya berkata (pula), \"Ya Tuhan kami, aku tidak menyesatkannya, tetapi dia sendiri yang berada dalam kesesatan yang jauh.\"",
+      "source_file": "sources/quran-50-27.json",
+      "verbatim_contiguous_excerpt": true
+    },
+    {
+      "unit": "Q022",
+      "sura": 34,
+      "aya": 14,
+      "id_excerpt": "Maka ketika dia telah tersungkur, tahulah jin itu bahwa sekiranya mereka mengetahui hal yang gaib tentu mereka tidak menetap dalam siksa yang menghinakan.",
+      "source_file": "sources/quran-34-14.json",
+      "verbatim_contiguous_excerpt": true
+    },
+    {
+      "unit": "Q025",
+      "sura": 14,
+      "aya": 22,
+      "id_excerpt": "Tidak ada kekuasaan bagiku terhadapmu, melainkan (sekedar) aku menyeru kamu, lalu kamu mematuhi seruanku,",
+      "source_file": "sources/quran-14-22.json",
+      "verbatim_contiguous_excerpt": true
+    }
+  ],
+  "book_links": 4,
+  "specialist_review_completed": false,
+  "search_volume": null,
+  "keyword_difficulty": null,
+  "created_at": "2026-10-30T14:21:42.239228+00:00",
+  "approval_date": "2026-10-30T15:21:42.239228+01:00",
+  "approval_scope": "id-qarin-v1.0 as displayed on 30 October; publish after successful quality and technical checks"
+}

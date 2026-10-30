@@ -66,13 +66,16 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/qarin-islam-thoughts-control/",
       "english_title": "Qareen in Islam: Can It Read Your Mind or Control You?",
-      "english_url": "https://ahmedalhafiz.com/en/articles/qarin-islam-thoughts-control/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/qarin-islam-thoughts-control/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/jin-qorin-islam-pikiran/",
+      "indonesian_title": "Jin Qorin dalam Islam: Bisakah Ia Mengetahui Pikiran dan Mengendalikan Anda?"
     },
     {
       "slug": "sprinkled-magic-water-door-evidence",
