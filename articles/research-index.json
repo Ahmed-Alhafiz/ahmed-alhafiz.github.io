@@ -34,13 +34,16 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/evil-eye-envy-signs/",
       "english_title": "Signs of the Evil Eye: What Do Symptoms Really Prove?",
-      "english_url": "https://ahmedalhafiz.com/en/articles/evil-eye-envy-signs/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/evil-eye-envy-signs/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/ciri-ciri-ain-hasad/",
+      "indonesian_title": "Tanda-Tanda Ain dan Hasad: Apa yang Bisa Dibuktikan oleh Gejalanya?"
     },
     {
       "slug": "magic-with-personal-photo",
@@ -50,13 +53,16 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/magic-with-personal-photo/",
       "english_title": "Can Someone Cast a Spell on You Using Your Photo?",
-      "english_url": "https://ahmedalhafiz.com/en/articles/magic-with-personal-photo/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/magic-with-personal-photo/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/sihir-lewat-foto/",
+      "indonesian_title": "Sihir Lewat Foto: Benarkah Bisa Dilakukan dan Apa Hukumnya?"
     },
     {
       "slug": "qarin-islam-thoughts-control",
@@ -82,13 +88,16 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
       "url": "https://ahmedalhafiz.com/articles/sprinkled-magic-water-door-evidence/",
       "english_title": "Sprinkled Sihr: Is Water at Your Door Evidence of Magic?",
-      "english_url": "https://ahmedalhafiz.com/en/articles/sprinkled-magic-water-door-evidence/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/sprinkled-magic-water-door-evidence/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/sihir-dipercikkan-air-depan-pintu/",
+      "indonesian_title": "Air di Depan Pintu: Benarkah Tanda Sihir yang Dipercikkan?"
     },
     {
       "slug": "love-magic-reconciliation-ruling",
