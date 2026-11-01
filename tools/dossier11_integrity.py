@@ -318,8 +318,11 @@ def validate_integration() -> None:
     item = matches[0]
     if item.get("url") != AR_URL or item.get("english_url") != EN_URL:
         fail("research-index.json: bilingual URLs mismatch")
-    if item.get("languages") != ["ar", "en"] or item.get("review") != REVIEW or item.get("book") != "umm-abbas":
+    if item.get("languages") != ["ar", "en", "id"] or item.get("review") != REVIEW or item.get("book") != "umm-abbas":
         fail("research-index.json: language/review/book metadata mismatch")
+    id_url = "https://ahmedalhafiz.com/id/articles/takut-kerasukan-keluarga/"
+    if item.get("indonesian_url") != id_url or not item.get("indonesian_title"):
+        fail("research-index.json: reviewed Indonesian edition metadata mismatch")
 
     for path, url in (
         (ROOT / "articles/feed.json", AR_URL),
