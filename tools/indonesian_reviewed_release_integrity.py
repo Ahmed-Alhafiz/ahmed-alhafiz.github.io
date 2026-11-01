@@ -45,6 +45,7 @@ def check():
         assert p.canonical==[r['url']] and p.alternates==r['original_language_alternates'],r['key']
         assert 'noindex' not in text.lower() and '<html lang="id" dir="ltr">' in text
         assert '.pdf' not in ''.join(p.text) and 'Tautan dari unit sumber' not in text
+        assert not re.search(r'belum disetujui|terjemahan Indonesia belum diterbitkan|terjemahan draf internal',text,re.I),r['key']+' obsolete draft metadata'
         for link in p.links:
             if link.get('href','').startswith('#'):assert link['href'][1:] in p.ids,(r['key'],link)
         article=next(n for b in p.blocks for n in b.get('@graph',[]) if n.get('@type')=='Article')

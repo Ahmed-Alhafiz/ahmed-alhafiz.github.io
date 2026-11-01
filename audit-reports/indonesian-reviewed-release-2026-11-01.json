@@ -89,14 +89,16 @@
       "description": "Menemukan air atau cairan asing di depan pintu? Periksa batas bukti, pengaruh rasa takut, dan langkah aman tanpa menuduh orang lain.",
       "primary_keyword": "air di depan pintu",
       "group": "umm",
-      "body_text_sha256": "d4fa8a7ceb3f8de1293bdeff73a31a51b8840f9e5791cc988ef6c072a57799d9",
+      "body_text_sha256": "4ebab58146946af7a1d0619c327aacd58f237c34a54311cb88ec9af13aa8b754",
       "reviewed_input_sha256": "d0158f45c9edf626e499cf1cd2505d5ac419cd39e9509567c2b08dff36ef266e",
       "qualitative_title_research": true,
       "three_title_alternatives_compared": true,
       "independent_human_review": false,
       "quantitative_keyword_metrics_available": false,
-      "new_html_sha256": "65363d88fe8f68006de5a72b8a8a1cf3662349f99d3ddf9ef501088c111423fb",
-      "publication_only_cleanups": [],
+      "new_html_sha256": "3916178e603943d9881bdf40167a78c6fdc4aedafbb7b6f0be0ac649839a06c6",
+      "publication_only_cleanups": [
+        "Update obsolete draft/unpublished translation metadata and preparation date to actual publication date 1 November 2026; approved article title and substantive text retained."
+      ],
       "original_language_alternates": {
         "ar": "https://ahmedalhafiz.com/articles/sprinkled-magic-water-door-evidence/",
         "en": "https://ahmedalhafiz.com/en/articles/sprinkled-magic-water-door-evidence/",
@@ -114,14 +116,16 @@
       "description": "Apa hukum pelet cinta dan tiwalah? Bedakan doa dari sihir, periksa janji pasangan kembali, dan pahami mengapa rasa lega belum membuktikan keberhasilan.",
       "primary_keyword": "hukum pelet cinta",
       "group": "umm",
-      "body_text_sha256": "63dc35be89239abd0a8796127487a447dfcc0a697829ddd2a2c4d1c9a4b57021",
+      "body_text_sha256": "ece307087b248c398b9f2cad656201142298da4bbdef5ca1fcc135df3af0f1b5",
       "reviewed_input_sha256": "f7e9f700e0643a14102d7f6f3b2f94c5cc0c99e7388da30eabf7cab4c1bb6fcd",
       "qualitative_title_research": true,
       "three_title_alternatives_compared": true,
       "independent_human_review": false,
       "quantitative_keyword_metrics_available": false,
-      "new_html_sha256": "83b422b0fb9f31e176ddd64cc6a51556dd2fc7aa208c16422bd325bf7c1e9ddd",
-      "publication_only_cleanups": [],
+      "new_html_sha256": "2df30642f7f405a5359fc115ecb8b1f796b1bde696785be205018e99d8bb09fe",
+      "publication_only_cleanups": [
+        "Update obsolete draft/unpublished translation metadata and preparation date to actual publication date 1 November 2026; approved article title and substantive text retained."
+      ],
       "original_language_alternates": {
         "ar": "https://ahmedalhafiz.com/articles/love-magic-reconciliation-ruling/",
         "en": "https://ahmedalhafiz.com/en/articles/love-magic-reconciliation-ruling/",
