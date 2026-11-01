@@ -26,6 +26,9 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("indonesia-ocd-opening", "/id/articles/waswas-ibadah-ocd/", '[data-unit="O011"]'),
+    ("indonesia-ocd-table", "/id/articles/waswas-ibadah-ocd/", "main table"),
+    ("indonesia-ocd-references", "/id/articles/waswas-ibadah-ocd/", "ol.references"),
     ("indonesia-qarin-opening", "/id/articles/jin-qorin-islam-pikiran/", '[data-unit="Q008"]'),
     ("indonesia-qarin-quotation", "/id/articles/jin-qorin-islam-pikiran/", '[data-unit="Q017"]'),
     ("indonesia-qarin-references", "/id/articles/jin-qorin-islam-pikiran/", ".references"),
