@@ -11,7 +11,7 @@ def digest(s):return hashlib.sha256(s.encode()).hexdigest()
 def mainpart(s):return re.search(r'<main\b.*?</main>',s,re.S).group()
 def compact(s):return re.sub(r'\s+','',s)
 def main():
-    audit=json.loads((ROOT/'audit-reports/indonesian-qarin-publication-2026-10-30.json').read_text());assert audit['owner_approved']
+    audit=json.loads((ROOT/'audit-reports/indonesian-qarin-publication-2026-11-01.json').read_text());assert audit['owner_approved']
     assert len(audit['unchanged_original_mains'])==2 and len(audit['unchanged_previous_id_pages'])==7
     for x in audit['unchanged_original_mains']:assert digest(mainpart((ROOT/x['path']).read_text()))==x['main_sha256'],x['path']
     for x in audit['unchanged_previous_id_pages']:assert hashlib.sha256((ROOT/x['path']).read_bytes()).hexdigest()==x['sha256'],x['path']

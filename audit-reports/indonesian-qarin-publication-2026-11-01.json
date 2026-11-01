@@ -7,8 +7,8 @@
   "meta_description": "Apa itu jin qorin menurut Islam? Ahmed Alhafiz menelaah hadis, ayat Al-Qur’an, pendapat ulama, serta batas kaitannya dengan pikiran dan keputusan Anda.",
   "translation_version": "id-qarin-v1.0",
   "owner_approved": true,
-  "publication_date": "2026-10-30",
-  "publication_date_id": "30 Oktober 2026",
+  "publication_date": "2026-11-01",
+  "publication_date_id": "1 November 2026",
   "project_article_number": 7,
   "published_article_count_after_release": 8,
   "references": [
@@ -551,7 +551,7 @@
   "supplements": [
     {
       "id": "S001",
-      "text_sha256": "d2dceaf5c284e34535b395786037b650ec0e2933c54d87cea3b33d134eec5e84"
+      "text_sha256": "fe18b019c6ccb58b8b25032bc32640656585bd5c526b8ff782bd8a48072b1f09"
     },
     {
       "id": "S002",
@@ -559,7 +559,7 @@
     },
     {
       "id": "S003",
-      "text_sha256": "f797fa26db1e0b2ae50913d945c90fc80e3ebefdcd3b99d1e2a040e94d2c3cc4"
+      "text_sha256": "0b6c29c0643957d55fa482132fcaec0cfc7afe2fc056e4f0731d03af2989d816"
     }
   ],
   "unchanged_original_mains": [
@@ -660,5 +660,6 @@
   "keyword_difficulty": null,
   "created_at": "2026-10-30T14:21:42.239228+00:00",
   "approval_date": "2026-10-30T15:21:42.239228+01:00",
-  "approval_scope": "id-qarin-v1.0 as displayed on 30 October; publish after successful quality and technical checks"
+  "approval_scope": "id-qarin-v1.0 as displayed on 30 October; publish after successful quality and technical checks",
+  "publication_stamped_at": "2026-11-01T02:25:58.736378+00:00"
 }
