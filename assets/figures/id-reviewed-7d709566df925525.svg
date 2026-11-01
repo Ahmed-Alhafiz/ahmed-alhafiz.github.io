@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<rect width="1600" height="1000" fill="#f3f5f5"/>
+<rect x="0" y="0" width="1600" height="150" fill="#0b1724"/>
+<text x="80" y="66" font-family="DejaVu Sans, Arial, sans-serif" fill="#ffffff" font-size="45" font-weight="700" text-anchor="start">Jalur Keselamatan Paralel</text>
+<text x="80" y="112" font-family="DejaVu Sans, Arial, sans-serif" fill="#d8e7ec" font-size="22" font-weight="400" text-anchor="start">Sejumlah langkah berlangsung bersamaan; orangnya yang menjadi pusat, bukan penafsirannya</text>
+<rect x="70" y="200" width="490" height="199" rx="24" fill="#fffdf8" stroke="#a9cbd3" stroke-width="2"/>
+<circle cx="107" cy="237" r="24" fill="#bd704e"/>
+<text x="107" y="245" font-family="DejaVu Sans, Arial, sans-serif" fill="#ffffff" font-size="23" font-weight="700" text-anchor="middle">1</text>
+<text x="142" y="246" font-family="DejaVu Sans, Arial, sans-serif" fill="#17202a" font-size="21" font-weight="700" text-anchor="start">Keselamatan segera</text>
+<text x="96" y="294" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">Bahaya langsung · kesadaran · cedera ·</text>
+<text x="96" y="318" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">keadaan darurat</text>
+<rect x="1040" y="200" width="490" height="199" rx="24" fill="#fffdf8" stroke="#a9cbd3" stroke-width="2"/>
+<circle cx="1077" cy="237" r="24" fill="#bd704e"/>
+<text x="1077" y="245" font-family="DejaVu Sans, Arial, sans-serif" fill="#ffffff" font-size="23" font-weight="700" text-anchor="middle">2</text>
+<text x="1112" y="246" font-family="DejaVu Sans, Arial, sans-serif" fill="#17202a" font-size="21" font-weight="700" text-anchor="start">Hipotesis terbuka</text>
+<text x="1066" y="294" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">Tidur · neurologis · psikologis · obat</text>
+<text x="1066" y="318" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">· lainnya</text>
+<rect x="70" y="445" width="490" height="199" rx="24" fill="#fffdf8" stroke="#a9cbd3" stroke-width="2"/>
+<circle cx="107" cy="482" r="24" fill="#bd704e"/>
+<text x="107" y="490" font-family="DejaVu Sans, Arial, sans-serif" fill="#ffffff" font-size="23" font-weight="700" text-anchor="middle">3</text>
+<text x="142" y="491" font-family="DejaVu Sans, Arial, sans-serif" fill="#17202a" font-size="21" font-weight="700" text-anchor="start">Evaluasi dan tindak</text>
+<text x="96" y="518" font-family="DejaVu Sans, Arial, sans-serif" fill="#17202a" font-size="21" font-weight="700" text-anchor="start">lanjut</text>
+<text x="96" y="565" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">Jadwal jelas · pendapat kedua ·</text>
+<text x="96" y="589" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">evaluasi ulang</text>
+<rect x="1040" y="445" width="490" height="199" rx="24" fill="#fffdf8" stroke="#a9cbd3" stroke-width="2"/>
+<circle cx="1077" cy="482" r="24" fill="#bd704e"/>
+<text x="1077" y="490" font-family="DejaVu Sans, Arial, sans-serif" fill="#ffffff" font-size="23" font-weight="700" text-anchor="middle">4</text>
+<text x="1112" y="491" font-family="DejaVu Sans, Arial, sans-serif" fill="#17202a" font-size="21" font-weight="700" text-anchor="start">Pencatatan tanpa</text>
+<text x="1066" y="518" font-family="DejaVu Sans, Arial, sans-serif" fill="#17202a" font-size="21" font-weight="700" text-anchor="start">menghakimi</text>
+<text x="1066" y="565" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">Waktu · saksi · pengalaman · penafsiran</text>
+<text x="1066" y="589" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">terpisah</text>
+<rect x="70" y="690" width="490" height="199" rx="24" fill="#fffdf8" stroke="#a9cbd3" stroke-width="2"/>
+<circle cx="107" cy="727" r="24" fill="#bd704e"/>
+<text x="107" y="735" font-family="DejaVu Sans, Arial, sans-serif" fill="#ffffff" font-size="23" font-weight="700" text-anchor="middle">5</text>
+<text x="142" y="736" font-family="DejaVu Sans, Arial, sans-serif" fill="#17202a" font-size="21" font-weight="700" text-anchor="start">Persetujuan dan batasan</text>
+<text x="96" y="784" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">Tidak berduaan secara tertutup · tidak</text>
+<text x="96" y="808" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">ada sentuhan paksa · tidak membungkam</text>
+<rect x="1040" y="690" width="490" height="199" rx="24" fill="#fffdf8" stroke="#a9cbd3" stroke-width="2"/>
+<circle cx="1077" cy="727" r="24" fill="#bd704e"/>
+<text x="1077" y="735" font-family="DejaVu Sans, Arial, sans-serif" fill="#ffffff" font-size="23" font-weight="700" text-anchor="middle">6</text>
+<text x="1112" y="736" font-family="DejaVu Sans, Arial, sans-serif" fill="#17202a" font-size="21" font-weight="700" text-anchor="start">Dukungan keluarga dan</text>
+<text x="1066" y="763" font-family="DejaVu Sans, Arial, sans-serif" fill="#17202a" font-size="21" font-weight="700" text-anchor="start">spiritual</text>
+<text x="1066" y="810" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">Sukarela dan aman; mendampingi</text>
+<text x="1066" y="834" font-family="DejaVu Sans, Arial, sans-serif" fill="#52616d" font-size="16" font-weight="400" text-anchor="start">perawatan tanpa memonopolinya</text>
+<line x1="800" y1="554" x2="560" y2="298" stroke="#82aab8" stroke-width="3" stroke-dasharray="8 6"/>
+<line x1="800" y1="554" x2="1040" y2="298" stroke="#82aab8" stroke-width="3" stroke-dasharray="8 6"/>
+<line x1="800" y1="554" x2="560" y2="543" stroke="#82aab8" stroke-width="3" stroke-dasharray="8 6"/>
+<line x1="800" y1="554" x2="1040" y2="543" stroke="#82aab8" stroke-width="3" stroke-dasharray="8 6"/>
+<line x1="800" y1="554" x2="560" y2="788" stroke="#82aab8" stroke-width="3" stroke-dasharray="8 6"/>
+<line x1="800" y1="554" x2="1040" y2="788" stroke="#82aab8" stroke-width="3" stroke-dasharray="8 6"/>
+<circle cx="800" cy="555" r="181" fill="#163444"/>
+<text x="800" y="523" font-family="DejaVu Sans, Arial, sans-serif" fill="#ffffff" font-size="26" font-weight="700" text-anchor="middle">Utamakan orangnya</text>
+<text x="800" y="571" font-family="DejaVu Sans, Arial, sans-serif" fill="#d8e7ec" font-size="18" font-weight="400" text-anchor="middle">Suara · keselamatan · pilihannya</text>
+<text x="800" y="619" font-family="DejaVu Sans, Arial, sans-serif" fill="#d8e7ec" font-size="18" font-weight="400" text-anchor="middle">Tidak direduksi pada satu tafsir</text>
+<text x="800" y="953" font-family="DejaVu Sans, Arial, sans-serif" fill="#23634b" font-size="20" font-weight="700" text-anchor="middle">Jadwal peninjauan yang jelas menghubungkan langkah-langkah dan menentukan kapan respons perlu ditingkatkan</text>
+</svg>

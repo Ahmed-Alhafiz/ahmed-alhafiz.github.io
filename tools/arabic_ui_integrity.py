@@ -187,8 +187,12 @@ def validate_status_register(
     for pillar in pillars:
         slug = pillar.get("slug")
         languages = pillar.get("languages")
-        # The reviewed ratq edition adds Indonesian; the required AR/EN pair stays intact.
-        expected_languages = ["ar", "en", "id"] if slug == "ratq-fatq-big-bang" else ["ar", "en"]
+        # Completed Indonesian editions retain the required Arabic/English pair.
+        reviewed_indonesian_pillars = {
+            "ratq-fatq-big-bang": "/id/articles/big-bang-dalam-al-quran/",
+            "diagnostic-uncertainty-family-fear-coercive-authority": "/id/articles/takut-kerasukan-keluarga/",
+        }
+        expected_languages = ["ar", "en", "id"] if slug in reviewed_indonesian_pillars else ["ar", "en"]
         if languages != expected_languages:
             errors.append(f"data/content-inventory.json: pillar {slug} must declare {expected_languages}")
             continue
@@ -200,9 +204,9 @@ def validate_status_register(
         if item.get("languages") != expected_languages:
             errors.append(f"articles/research-index.json: pillar {slug} language state disagrees with inventory")
         if "id" in expected_languages and (
-            item.get("indonesian_url") != "https://ahmedalhafiz.com/id/articles/big-bang-dalam-al-quran/"
+            item.get("indonesian_url") != "https://ahmedalhafiz.com" + reviewed_indonesian_pillars[slug]
             or not item.get("indonesian_title")
-            or not (ROOT / "id/articles/big-bang-dalam-al-quran/index.html").is_file()
+            or not (ROOT / (reviewed_indonesian_pillars[slug].lstrip("/") + "index.html")).is_file()
         ):
             errors.append(f"articles/research-index.json: pillar {slug} lacks its complete Indonesian edition")
 

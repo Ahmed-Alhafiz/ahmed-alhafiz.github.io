@@ -875,6 +875,411 @@
         "@type": "Book",
         "url": "https://ahmedalhafiz.com/books/umm-abbas/"
       }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/menemukan-kertas-rajah/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/menemukan-kertas-rajah/",
+      "headline": "Menemukan Kertas Jimat atau Rajah: Apa yang Harus Dilakukan?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/found-talisman-paper-what-to-do/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/ciri-ciri-ain-hasad/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/ciri-ciri-ain-hasad/",
+      "headline": "Ciri-Ciri Terkena Ain: Apakah Gejalanya Bisa Jadi Bukti?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/evil-eye-envy-signs/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/sihir-lewat-foto/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/sihir-lewat-foto/",
+      "headline": "Sihir Lewat Foto: Benarkah Bisa dan Apa Hukumnya?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/magic-with-personal-photo/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/sihir-dipercikkan-air-depan-pintu/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/sihir-dipercikkan-air-depan-pintu/",
+      "headline": "Air di Depan Pintu: Benarkah Tanda Sihir atau Santet?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/sprinkled-magic-water-door-evidence/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/hukum-pelet-cinta/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/hukum-pelet-cinta/",
+      "headline": "Hukum Pelet Cinta: Bisakah Mengembalikan Pasangan?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/love-magic-reconciliation-ruling/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/novel-umm-abbas/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/novel-umm-abbas/",
+      "headline": "Novel Umm Abbas: Ketika Ketakutan Menguasai Keluarga",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/umm-abbas-family-fear/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/bintang-segi-enam-cincin-sulaiman/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/bintang-segi-enam-cincin-sulaiman/",
+      "headline": "Bintang Segi Enam dan Segel Sulaiman: Apakah Tanda Sihir?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/hexagram-magic-seal-of-solomon-umm-abbas/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/cyberbullying-di-kampus/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/cyberbullying-di-kampus/",
+      "headline": "Cyberbullying di Kampus: Cara Menghadapi Rumor dan Stigma",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/cyberbullying-university-rumor-stigma/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/gejala-fisik-karena-takut/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/gejala-fisik-karena-takut/",
+      "headline": "Gejala Fisik karena Takut: Mengapa Tubuh Bereaksi?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/fear-physical-symptoms-umm-abbas/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/berjalan-saat-tidur-tidak-ingat/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/berjalan-saat-tidur-tidak-ingat/",
+      "headline": "Berjalan Saat Tidur (Sleepwalking): Mengapa Tidak Ingat?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/sleepwalking-why-no-memory/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/pikiran-intrusif-niat/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/pikiran-intrusif-niat/",
+      "headline": "Pikiran Intrusif: Apakah Saya Akan Melakukannya?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/unwanted-intrusive-thoughts-meaning/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/depersonalisasi-derealisasi/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/depersonalisasi-derealisasi/",
+      "headline": "Depersonalisasi dan Derealisasi: Mengapa Terasa Tidak Nyata?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/depersonalization-derealization-feeling-unreal/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/jin-setan-quran-injil-taurat/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/jin-setan-quran-injil-taurat/",
+      "headline": "Jin dan Setan dalam Al-Qur’an, Injil, dan Taurat",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/jinn-demons-quran-bible-torah/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/hilang-ingatan-sesaat/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/hilang-ingatan-sesaat/",
+      "headline": "Lupa Apa yang Sudah Dilakukan? Penyebab dan Kapan Periksa",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/memory-gaps-unremembered-actions/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/mendengar-suara-di-kepala/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/mendengar-suara-di-kepala/",
+      "headline": "Mendengar Suara di Kepala: Apa Penyebabnya?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/hearing-voices-in-head/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/apakah-jin-ada-dalil/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/apakah-jin-ada-dalil/",
+      "headline": "Apakah Jin Itu Ada? Dalil Al-Qur’an dan Hadis",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/jinn-existence-quran-sunnah/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/kerasukan-atau-gangguan-medis/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/kerasukan-atau-gangguan-medis/",
+      "headline": "Kerasukan atau Gangguan Jiwa dan Saraf? Mengapa Mirip?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/possession-or-neurological-psychological-disorder/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/takut-kerasukan-keluarga/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/takut-kerasukan-keluarga/",
+      "headline": "Keluarga Mengira Seseorang Kerasukan: Cara Melindunginya",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/diagnostic-uncertainty-family-fear-coercive-authority/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/penipuan-berkedok-ruqyah/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/penipuan-berkedok-ruqyah/",
+      "headline": "Penipuan Berkedok Ruqyah: Tanda dan Cara Melindungi Pasien",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/spiritual-healing-exploitation-safeguarding/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/kejang-fungsional-vs-epilepsi/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/kejang-fungsional-vs-epilepsi/",
+      "headline": "Kejang Fungsional (PNES) dan Epilepsi: Apa Bedanya?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/functional-seizures-vs-epilepsy/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/ai-ruh-kesadaran-taklif/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/ai-ruh-kesadaran-taklif/",
+      "headline": "Apakah AI Punya Ruh? Taklif dan Tanggung Jawab Manusia",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/ai-soul-consciousness-understanding-taklif/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/matahari-dhiya-bulan-nur/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/matahari-dhiya-bulan-nur/",
+      "headline": "Perbedaan Dhiya dan Nur: Matahari dan Bulan dalam Al-Qur’an",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/difference-light-nur-quran-sun-moon/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/mesopotamia-irigasi-salinitas/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/mesopotamia-irigasi-salinitas/",
+      "headline": "Benarkah Garam Meruntuhkan Peradaban Mesopotamia?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/mesopotamia-irrigation-soil-salinity-collapse/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/sungai-nil-mesir-kuno/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/sungai-nil-mesir-kuno/",
+      "headline": "Peran Sungai Nil dalam Peradaban Mesir Kuno",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/nile-ancient-egypt-flood-calendar-state/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/satu-hari-seribu-lima-puluh-ribu-tahun/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/satu-hari-seribu-lima-puluh-ribu-tahun/",
+      "headline": "1.000 atau 50.000 Tahun? Makna Sehari dalam Al-Qur’an",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/quran-day-thousand-fifty-thousand-years-relativity/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/sebelum-big-bang/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/sebelum-big-bang/",
+      "headline": "Apa yang Ada Sebelum Big Bang? Batas Pengetahuan Sains",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/before-big-bang-science-limits/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/sejarah-penemuan-tulisan/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/sejarah-penemuan-tulisan/",
+      "headline": "Mengapa Tulisan Mengubah Sejarah Manusia?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/writing-changed-human-history/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01"
     }
   ],
   "dateModified": "2026-11-01"
