@@ -24,7 +24,7 @@ try:
             WebDriverWait(browser,15).until(lambda b:b.execute_script('return [...document.images].every(i=>i.complete&&i.naturalWidth>0)'))
             info=browser.execute_script('''
                 const h=document.querySelector('h1'),b=document.querySelector('.reading-body'),rect=h.getBoundingClientRect();
-                return {width:innerWidth,documentWidth:document.documentElement.scrollWidth,h1:document.querySelectorAll('h1').length,title:h.textContent.trim(),dir:getComputedStyle(b).direction,bodyText:b.textContent.length,headingLeft:rect.left,headingRight:rect.right,unloaded:[...document.images].filter(i=>!i.complete||!i.naturalWidth).length,tables:b.querySelectorAll('table').length,cells:b.querySelectorAll('th,td').length,quoteFont:document.fonts.check('20px "Amiri Quran"')};
+                return {width:innerWidth,documentWidth:document.documentElement.scrollWidth,h1:document.querySelectorAll('h1').length,title:h.textContent.trim(),dir:getComputedStyle(b).direction,bodyText:b.textContent.length,headingLeft:rect.left,headingRight:rect.right,unloaded:[...document.images].filter(i=>!i.complete||!i.naturalWidth).length,tables:b.querySelectorAll('table').length,cells:b.querySelectorAll('th,td').length,quoteFont:!b.querySelector('[lang="ar"][dir="rtl"]')||document.fonts.check('20px "Amiri Quran"')};
             ''')
             assert info['documentWidth']<=width+1,(r['key'],name,info)
             assert info['h1']==1 and info['title']==r['title'] and info['dir']=='ltr'
