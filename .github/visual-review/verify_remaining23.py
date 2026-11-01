@@ -21,6 +21,7 @@ try:
             browser.get('http://127.0.0.1:4173'+r['url'].split('ahmedalhafiz.com',1)[1])
             WebDriverWait(browser,20).until(lambda b:b.execute_script('return document.readyState')=='complete')
             browser.execute_async_script('const done=arguments[0];document.fonts.ready.then(()=>done());')
+            browser.execute_script("document.documentElement.style.setProperty('scroll-behavior','auto','important');document.body.style.setProperty('scroll-behavior','auto','important')")
             WebDriverWait(browser,15).until(lambda b:b.execute_script('return [...document.images].every(i=>i.complete&&i.naturalWidth>0)'))
             info=browser.execute_script('''
                 const h=document.querySelector('h1'),b=document.querySelector('.reading-body'),rect=h.getBoundingClientRect();
@@ -34,12 +35,19 @@ try:
             bad=browser.execute_script('''return [...document.querySelectorAll('.reading-body h1,.reading-body h2,.reading-body h3,.reading-body img,.table-scroll')].filter(e=>!e.closest('table')).map(e=>({tag:e.tagName,left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right})).filter(r=>r.left < -1 || r.right > innerWidth+1)''')
             assert not bad,(r['key'],name,bad)
             browser.save_screenshot(str(folder/f"{r['number']:02}-opening.png"))
-            for label,selector in [('table','.reading-body .table-scroll'),('quote','.reading-body [lang="ar"]')]:
+            reject=browser.find_elements(By.XPATH,"//button[normalize-space()='Tolak']")
+            if reject:
+                reject[0].click()
+                WebDriverWait(browser,5).until(lambda b:not b.find_elements(By.XPATH,"//button[normalize-space()='Tolak']"))
+            for label,selector in [('table','.reading-body .table-scroll'),('quote','.reading-body [lang="ar"][dir="rtl"]')]:
                 es=browser.find_elements(By.CSS_SELECTOR,selector)
                 if es:
-                    browser.execute_script("arguments[0].scrollIntoView({block:'center'})",es[0]);time.sleep(.04)
+                    browser.execute_script("scrollTo({top:scrollY+arguments[0].getBoundingClientRect().top-120,behavior:'instant'})",es[0]);time.sleep(.1)
+                    top=browser.execute_script('return arguments[0].getBoundingClientRect().top',es[0])
+                    assert 0<=top<height-80,(r['key'],name,label,top)
                     browser.save_screenshot(str(folder/f"{r['number']:02}-{label}.png"))
-            browser.execute_script('scrollTo(0,document.body.scrollHeight)');time.sleep(.04)
+            browser.execute_script("scrollTo({top:document.scrollingElement.scrollHeight,behavior:'instant'})");time.sleep(.1)
+            assert browser.execute_script('return scrollY+innerHeight>=document.scrollingElement.scrollHeight-2'),(r['key'],name,'end capture not at end')
             browser.save_screenshot(str(folder/f"{r['number']:02}-end.png"))
             report.append({'key':r['key'],'viewport':name,'pass':True,**info})
         print(f'Remaining23: {name} passed for all23 pages',flush=True)
