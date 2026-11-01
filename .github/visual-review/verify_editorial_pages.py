@@ -26,6 +26,9 @@ VIEWPORTS = {
     "narrow-mobile": (360, 800),
 }
 PAGES = (
+    ("indonesia-qarin-opening", "/id/articles/jin-qorin-islam-pikiran/", '[data-unit="Q008"]'),
+    ("indonesia-qarin-quotation", "/id/articles/jin-qorin-islam-pikiran/", '[data-unit="Q017"]'),
+    ("indonesia-qarin-references", "/id/articles/jin-qorin-islam-pikiran/", ".references"),
     ("indonesia-dreams-opening", "/id/articles/mimpi-melihat-jin-pertanda-sihir/", '[data-unit="D008"]'),
     ("indonesia-dreams-quotation", "/id/articles/mimpi-melihat-jin-pertanda-sihir/", '[data-unit="D016"]'),
     ("indonesia-dreams-references", "/id/articles/mimpi-melihat-jin-pertanda-sihir/", ".references"),
@@ -529,6 +532,19 @@ def main() -> None:
             for name, route, target_selector in PAGES:
                 driver.get(f"{BASE}{route}?editorial_visual_gate=1")
                 wait_ready(driver)
+                if name.startswith("indonesia-qarin-"):
+                    assert len(driver.find_elements(By.CSS_SELECTOR, 'main [data-unit]')) == 75, f"{mode}/{name}: incomplete translation"
+                    assert len(driver.find_elements(By.CSS_SELECTOR, '.references li')) == 9, f"{mode}/{name}: incomplete references"
+                    assert len(driver.find_elements(By.CSS_SELECTOR, '.toc li')) == 10, f"{mode}/{name}: missing contents"
+                    assert len(driver.find_elements(By.CSS_SELECTOR, '.sacred-ar')) == 8, f"{mode}/{name}: missing Arabic quotation"
+                    WebDriverWait(driver, 10).until(lambda browser: browser.execute_script("return document.fonts.status==='loaded' && document.fonts.check('24px \"Amiri Quran\"','وَمَنْ يَعْشُ');"))
+                    styles = driver.execute_script("return [...document.querySelectorAll('.references li')].map(li=>({native:getComputedStyle(li).listStyleType,before:getComputedStyle(li,'::before').content}));")
+                    assert all(r['native']=='none' and r['before'] in ('none','normal','\"\"') for r in styles), f"{mode}/{name}: duplicate reference markers"
+                    cover = driver.find_element(By.CSS_SELECTOR, '.related-work img')
+                    assert cover.get_dom_attribute('src') == '/umm-abbas-cover.webp', f"{mode}/{name}: wrong cover"
+                    if name.endswith("-references"):
+                        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", cover)
+                        WebDriverWait(driver, 10).until(lambda browser: cover.get_property('naturalWidth') > 0)
                 if name.startswith("indonesia-dreams-"):
                     assert len(driver.find_elements(By.CSS_SELECTOR, 'main [data-unit]')) == 80, f"{mode}/{name}: incomplete translation"
                     assert len(driver.find_elements(By.CSS_SELECTOR, '.references li')) == 8, f"{mode}/{name}: incomplete references"
