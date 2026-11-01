@@ -51,6 +51,7 @@ jobs:
           python tools/indonesian_qarin_integrity.py
           python tools/indonesian_ocd_integrity.py
           python tools/indonesian_reviewed_release_integrity.py
+          python tools/indonesian_remaining23_integrity.py
           node tools/indonesian_analytics_integrity.cjs
 
       - name: Parse XML JSON feeds evidence manifests figures and every JSON-LD block

@@ -190,6 +190,8 @@ def validate_status_register(
         # Completed Indonesian editions retain the required Arabic/English pair.
         reviewed_indonesian_pillars = {
             "ratq-fatq-big-bang": "/id/articles/big-bang-dalam-al-quran/",
+            "water-civilization-power": "/id/articles/air-dan-kekuasaan/",
+            "teaching-names-ai-understanding": "/id/articles/ai-dan-nama-nama-adam/",
             "diagnostic-uncertainty-family-fear-coercive-authority": "/id/articles/takut-kerasukan-keluarga/",
         }
         expected_languages = ["ar", "en", "id"] if slug in reviewed_indonesian_pillars else ["ar", "en"]

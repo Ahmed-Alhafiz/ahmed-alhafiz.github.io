@@ -7,7 +7,7 @@
     "profile": "https://ahmedalhafiz.com/about/"
   },
   "review_register": "https://ahmedalhafiz.com/research-status/",
-  "generated": "2026-10-28T13:21:16.904488+00:00",
+  "generated": "2026-11-02",
   "disclaimer": "Author-led independent publication. Review status is explicit per item; inclusion does not imply peer review.",
   "items": [
     {
@@ -466,7 +466,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -493,7 +494,10 @@
         "https://www.nature.com/articles/s41467-020-17785-2"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/how-concepts-form-adam-names-scientific-models/",
-      "english_title": "How Do Concepts Form? From Names to Scientific Models"
+      "english_title": "How Do Concepts Form? From Names to Scientific Models",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/bagaimana-konsep-terbentuk/",
+      "indonesian_title": "Bagaimana Konsep Terbentuk? Nama, Bahasa, dan Ilmu",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "mesopotamia-irrigation-soil-salinity-collapse",
@@ -638,7 +642,8 @@
       "version": "1.1",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -652,7 +657,10 @@
         "https://pmc.ncbi.nlm.nih.gov/articles/PMC3309741/"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/injustice-fall-of-states-quran-history/",
-      "english_title": "Does Injustice Cause States to Fall? Quran and History"
+      "english_title": "Does Injustice Cause States to Fall? Quran and History",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/kezaliman-dan-keruntuhan-negara/",
+      "indonesian_title": "Mengapa Negara Runtuh? Peran Kezaliman dan Korupsi",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "dna-code-genetic-information",
@@ -662,7 +670,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -676,7 +685,10 @@
         "https://www.nobelprize.org/prizes/medicine/1968/summary/"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/dna-code-genetic-information/",
-      "english_title": "Is DNA Really a Code?"
+      "english_title": "Is DNA Really a Code?",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/kode-genetik-dna/",
+      "indonesian_title": "Kode Genetik: Bagaimana Sel Membaca Informasi DNA?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "age-of-universe-13-8-billion-years",
@@ -686,7 +698,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -699,7 +712,10 @@
         "https://lambda.gsfc.nasa.gov/product/wmap/dr4/sos/7year/"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/age-of-universe-13-8-billion-years/",
-      "english_title": "How Old Is the Universe? Why 13.8 Billion Years"
+      "english_title": "How Old Is the Universe? Why 13.8 Billion Years",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/usia-alam-semesta-13-8-miliar-tahun/",
+      "indonesian_title": "Berapa Umur Alam Semesta? Mengapa 13,8 Miliar Tahun?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "adam-all-languages-origin-language",
@@ -709,7 +725,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -722,7 +739,10 @@
         "https://shamela.ws/book/9977/8"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/adam-all-languages-origin-language/",
-      "english_title": "Did God Teach Adam Every Language?"
+      "english_title": "Did God Teach Adam Every Language?",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/bahasa-nabi-adam/",
+      "indonesian_title": "Bahasa Apa yang Digunakan Nabi Adam? Tafsir Al-Baqarah 31",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "turing-test-ai-consciousness",
@@ -732,7 +752,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -745,7 +766,10 @@
         "https://arxiv.org/abs/1706.03762"
       ],
       "english_title": "Does Passing the Turing Test Prove AI Is Conscious?",
-      "english_url": "https://ahmedalhafiz.com/en/articles/turing-test-ai-consciousness/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/turing-test-ai-consciousness/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/tes-turing-dan-kesadaran-ai/",
+      "indonesian_title": "Apa Itu Tes Turing? Mengapa Tidak Membuktikan AI Sadar?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "river-civilizations-water-state",
@@ -755,7 +779,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -768,7 +793,10 @@
         "https://www.fao.org/4/t0234e/t0234e03.htm"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/river-civilizations-water-state/",
-      "english_title": "Why Did Ancient Civilizations Grow Around Rivers?"
+      "english_title": "Why Did Ancient Civilizations Grow Around Rivers?",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/peradaban-kuno-dekat-sungai/",
+      "indonesian_title": "Mengapa Peradaban Kuno Tumbuh di Dekat Sungai?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "universe-expansion-wa-inna-lamusiun",
@@ -778,7 +806,8 @@
       "version": "2.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -802,7 +831,10 @@
         "https://tafsir.app/tabari/29/20"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/universe-expansion-wa-inna-lamusiun/",
-      "english_title": "Does Quran 51:47 Describe an Expanding Universe?"
+      "english_title": "Does Quran 51:47 Describe an Expanding Universe?",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/alam-semesta-mengembang-al-quran/",
+      "indonesian_title": "Alam Semesta Mengembang: Bukti dan Makna Adz-Dzariyat 47",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "madain-salih-thamud-nabataean-tombs",
@@ -812,7 +844,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -825,7 +858,10 @@
         "https://krc.orient.ox.ac.uk/ociana/index.php/13-scripts/42-thamudic.html"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/madain-salih-thamud-nabataean-tombs/",
-      "english_title": "Is Madain Salih the Land of Thamud?"
+      "english_title": "Is Madain Salih the Land of Thamud?",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/madain-saleh-tsamud-nabatea/",
+      "indonesian_title": "Madain Saleh: Rumah Tsamud atau Makam Nabatea?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "how-khufu-pyramid-built-merer-diary",
@@ -861,7 +897,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -874,7 +911,10 @@
         "https://www.energy.gov/cmei/fuels/bioenergy-basics"
       ],
       "english_title": "Fire From Green Trees in Quran 36:80: Meaning, Tafsir, and Photosynthesis",
-      "english_url": "https://ahmedalhafiz.com/en/articles/green-tree-fire-photosynthesis/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/green-tree-fire-photosynthesis/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/api-pohon-hijau-yasin-80/",
+      "indonesian_title": "Api dari Pohon Hijau: Tafsir Yasin 80 dan Fotosintesis",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "anzalna-iron-meteorites",
@@ -884,7 +924,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -898,7 +939,10 @@
         "https://doi.org/10.1111/maps.12664"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/anzalna-iron-meteorites/",
-      "english_title": "Does 'We Sent Down Iron' Mean Meteorites?"
+      "english_title": "Does 'We Sent Down Iron' Mean Meteorites?",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/besi-diturunkan-dari-langit/",
+      "indonesian_title": "Besi Diturunkan dari Langit? Tafsir Al-Hadid Ayat 25",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "marib-dam-sayl-al-arim",
@@ -908,7 +952,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -922,7 +967,10 @@
         "https://doi.org/10.1006/jasc.2000.0518"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/marib-dam-sayl-al-arim/",
-      "english_title": "Marib Dam and the Flood of al-Arim"
+      "english_title": "Marib Dam and the Flood of al-Arim",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/bendungan-marib-banjir-arim/",
+      "indonesian_title": "Bendungan Ma’rib: Sejarah Keruntuhan dan Banjir Arim",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "quran-science-method-evidence",
@@ -932,7 +980,8 @@
       "version": "2.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -945,7 +994,10 @@
         "https://quran.com/29/20"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/quran-science-method-evidence/",
-      "english_title": "Quran and Science: How to Test a Comparison"
+      "english_title": "Quran and Science: How to Test a Comparison",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/mukjizat-ilmiah-al-quran-bukti-dan-tafsir/",
+      "indonesian_title": "Mukjizat Ilmiah Al-Qur’an: Bagaimana Menilai Buktinya?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "human-embryo-quran-stages",
@@ -955,7 +1007,8 @@
       "version": "2.1",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -968,7 +1021,10 @@
         "https://pmc.ncbi.nlm.nih.gov/articles/PMC3274351/"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/human-embryo-quran-stages/",
-      "english_title": "Embryonic Stages in the Quran and Modern Science"
+      "english_title": "Embryonic Stages in the Quran and Modern Science",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/tahapan-janin-dalam-al-quran/",
+      "indonesian_title": "Tahapan Perkembangan Janin dalam Al-Qur’an dan Sains",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "brain-consciousness-spirit-limits",
@@ -978,7 +1034,8 @@
       "version": "2.1",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -995,7 +1052,10 @@
         "https://pubmed.ncbi.nlm.nih.gov/26679327/"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/brain-consciousness-spirit-limits/",
-      "english_title": "Brain, Consciousness, and the Soul: What Neuroscience Can and Cannot Explain"
+      "english_title": "Brain, Consciousness, and the Soul: What Neuroscience Can and Cannot Explain",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/otak-dan-kesadaran/",
+      "indonesian_title": "Otak dan Kesadaran: Apa Kata Sains tentang Ruh?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "water-life-molecular-properties",
@@ -1005,7 +1065,8 @@
       "version": "2.1",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -1032,7 +1093,10 @@
         "https://pubmed.ncbi.nlm.nih.gov/33192606/"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/water-life-molecular-properties/",
-      "english_title": "Why Is Water Essential to Life?"
+      "english_title": "Why Is Water Essential to Life?",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/air-penting-bagi-kehidupan/",
+      "indonesian_title": "Mengapa Air Penting bagi Kehidupan? Dari Molekul ke Sel",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "iron-fire-light-matter-energy",
@@ -1042,7 +1106,8 @@
       "version": "2.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -1058,7 +1123,10 @@
         "https://spaceplace.nasa.gov/sun-heat/en/"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/iron-fire-light-matter-energy/",
-      "english_title": "Iron, Fire and Light: Matter, Energy and Justice"
+      "english_title": "Iron, Fire and Light: Matter, Energy and Justice",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/besi-api-cahaya-al-quran/",
+      "indonesian_title": "Besi, Api, dan Cahaya: Materi dan Energi dalam Peradaban",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "civilization-knowledge-justice-collapse",
@@ -1068,7 +1136,8 @@
       "version": "2.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -1082,7 +1151,10 @@
         "https://quran.com/34/15-16"
       ],
       "english_url": "https://ahmedalhafiz.com/en/articles/civilization-knowledge-justice-collapse/",
-      "english_title": "Why Civilizations Collapse"
+      "english_title": "Why Civilizations Collapse",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/mengapa-peradaban-runtuh/",
+      "indonesian_title": "Mengapa Peradaban Runtuh? Iklim, Perang, dan Kekuasaan",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "possession-or-neurological-psychological-disorder",
@@ -1148,7 +1220,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -1161,7 +1234,10 @@
       "references_ris": "https://ahmedalhafiz.com/articles/water-civilization-power/evidence/references.ris",
       "citation_bib": "https://ahmedalhafiz.com/articles/water-civilization-power/citation.bib",
       "citation_ris": "https://ahmedalhafiz.com/articles/water-civilization-power/citation.ris",
-      "citation_cff": "https://ahmedalhafiz.com/articles/water-civilization-power/CITATION.cff"
+      "citation_cff": "https://ahmedalhafiz.com/articles/water-civilization-power/CITATION.cff",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/air-dan-kekuasaan/",
+      "indonesian_title": "Tata Kelola Air: Pembagian, Hak, dan Kekuasaan",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "diagnostic-uncertainty-family-fear-coercive-authority",
@@ -1200,7 +1276,8 @@
       "version": "2.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
@@ -1209,7 +1286,10 @@
       "claims_json": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/claims.json",
       "references_bib": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/references.bib",
       "references_ris": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/references.ris",
-      "citation_cff": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/CITATION.cff"
+      "citation_cff": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/CITATION.cff",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/ai-dan-nama-nama-adam/",
+      "indonesian_title": "Apakah AI Benar-Benar Memahami Bahasa? Bukti dan Batasnya",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "spiritual-healing-exploitation-safeguarding",
@@ -1257,13 +1337,17 @@
       "version": "3.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "sirou-fi-alard",
       "url": "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/",
       "english_url": "https://ahmedalhafiz.com/en/articles/six-days-creation-cosmic-time/",
-      "english_title": "Six Days of Creation and the Age of the Universe"
+      "english_title": "Six Days of Creation and the Age of the Universe",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/penciptaan-langit-bumi-enam-hari/",
+      "indonesian_title": "Penciptaan Langit dan Bumi dalam 6 Hari: Berapa Lama?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "sleep-paralysis-jathoom",
@@ -1291,11 +1375,15 @@
       "type": "دليل تحليلي",
       "version": "2.0",
       "languages": [
-        "ar"
+        "ar",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "umm-abbas",
-      "url": "https://ahmedalhafiz.com/guides/arabic-psychological-horror/"
+      "url": "https://ahmedalhafiz.com/guides/arabic-psychological-horror/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/guides/horor-psikologis-novel-arab/",
+      "indonesian_title": "Horor Psikologis: Ciri dan Cara Memilih Novel Arab",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "fall-of-baghdad-1258-ibn-al-alqami",
@@ -1383,7 +1471,8 @@
       "languages": [
         "ar",
         "en",
-        "de"
+        "de",
+        "id"
       ],
       "review": "author_review_complete_external_review_pending",
       "book": "juhayman",
@@ -1405,7 +1494,10 @@
         "https://doi.org/10.1111/j.1751-9004.2011.00375.x",
         "https://doi.org/10.1177/0021886301373006",
         "https://doi.org/10.5465/amj.2010.0696"
-      ]
+      ],
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/keyakinan-kelompok-dan-kekerasan/",
+      "indonesian_title": "Bagaimana Keyakinan Kelompok Berubah Menjadi Kekerasan?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "religious-ocd-scrupulosity",

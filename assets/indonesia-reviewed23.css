@@ -1,0 +1,9 @@
+/* Preserve readable table columns and independent scrolling on narrow screens. */
+.id-reviewed23-batch .table-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;margin:28px 0;border:1px solid var(--line)}
+.id-reviewed23-batch .table-scroll table{min-width:640px;margin:0;border:0;table-layout:auto}
+.id-reviewed23-batch .table-scroll:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.id-reviewed23-batch .reading-body h2,.id-reviewed23-batch .reading-body h3{scroll-margin-top:110px}
+.id-reviewed23-batch .reading-body .verified-quote-meanings{margin-top:46px;padding-top:18px;border-top:1px solid var(--line)}
+.id-reviewed23-batch .reading-body .quote-reference{margin-top:28px;font-size:15px}
+.id-reviewed23-batch .reading-body .references-list{font-size:16px;line-height:1.85}
+@media(max-width:640px){.id-reviewed23-batch .table-scroll::before{content:"Geser tabel untuk melihat semua kolom ↔";display:block;padding:9px 12px;background:#f3ecdf;color:#5b4b36;font:13px/1.7 Arial,sans-serif}}

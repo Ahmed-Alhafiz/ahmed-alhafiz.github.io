@@ -53,7 +53,7 @@ def main():
     booklinks=[n for n in p.links if 'data-article-to-book' in n];assert len(booklinks)==2
     for n in booklinks:assert n['data-lang']=='id' and n['data-book-slug']=='sirou-fi-alard' and n['data-article-slug']=='piramida-khufu-dibangun-catatan-merer' and n['href']==HOST+'/books/sirou-fi-alard/' and n['hreflang']=='ar'
     catalogue=Units();catalogue.feed((ROOT/'id/articles/index.html').read_text());listing=next(n for b in catalogue.blocks for n in b.get('@graph',[]) if n.get('@type')=='ItemList')
-    actual={HOST+'/'+str(p.parent.relative_to(ROOT)).replace('\\','/')+'/' for p in (ROOT/'id/articles').glob('*/index.html')};listed=[x['url'] for x in listing['itemListElement']]
+    actual={HOST+'/'+str(p.parent.relative_to(ROOT)).replace('\\','/')+'/' for p in [* (ROOT/'id/articles').glob('*/index.html'),* (ROOT/'id/guides').glob('*/index.html')]};listed=[x['url'] for x in listing['itemListElement']]
     assert listing['numberOfItems']==len(listed)==len(actual)>=6 and set(listed)==actual
     assert [x['position'] for x in listing['itemListElement']]==list(range(1,len(listed)+1))
     feed=json.loads((ROOT/'id/articles/feed.json').read_text());assert {x['url'] for x in feed['items']}==actual and len(feed['items'])==len(listed)
