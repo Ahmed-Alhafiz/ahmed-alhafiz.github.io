@@ -1,0 +1,27 @@
+/* Layout scoped to the completed Indonesian translation release. */
+.id-reviewed-batch .reviewed-shell{max-width:1080px;padding-block:34px 70px}
+.id-reviewed-batch .reading-body{max-width:850px;margin:auto;font:19px/1.95 Arial,Helvetica,sans-serif;color:var(--ink,#141a22);overflow-wrap:anywhere}
+.id-reviewed-batch .breadcrumbs{max-width:850px;margin:0 auto 26px;font-size:14px}
+.id-reviewed-batch .reading-body h1{font:600 clamp(32px,4.5vw,53px)/1.2 Georgia,"Times New Roman",serif;letter-spacing:-.025em;margin:16px 0 24px;overflow-wrap:anywhere}
+.id-reviewed-batch .reading-body h2{font-size:clamp(25px,3vw,33px);line-height:1.35;margin:50px 0 18px}
+.id-reviewed-batch .reading-body h3{font-size:24px;line-height:1.45;margin-top:34px}
+.id-reviewed-batch .reading-body p{margin:18px 0}
+.id-reviewed-batch .article-deck,.id-reviewed-batch .deck{font-size:21px;line-height:1.75;color:var(--muted,#b6c0cb)}
+.id-reviewed-batch .reading-body img,.id-reviewed-batch .reading-body svg{max-width:100%;height:auto}
+.id-reviewed-batch .reading-body figure{margin:30px 0}
+.id-reviewed-batch .reading-body figcaption{font-size:15px;line-height:1.7;color:var(--muted,#b6c0cb)}
+.id-reviewed-batch .reading-body [dir="rtl"],.id-reviewed-batch .reading-body .quran,.id-reviewed-batch .reading-body .quran-text,.id-reviewed-batch .reading-body .quran-arabic{font-family:"Amiri Quran",Tahoma,Arial,sans-serif;line-height:2.2;unicode-bidi:isolate}
+.id-reviewed-batch .reading-body blockquote,.id-reviewed-batch .reading-body .answer,.id-reviewed-batch .reading-body .answer-box,.id-reviewed-batch .reading-body .notice,.id-reviewed-batch .reading-body .notice-box{border-inline-start:3px solid var(--gold,#bd9561);padding:18px 23px;margin:28px 0;background:rgba(150,175,190,.055)}
+.id-reviewed-batch .reading-body table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.7;margin:28px 0;table-layout:fixed}
+.id-reviewed-batch .reading-body th,.id-reviewed-batch .reading-body td{border:1px solid var(--line,#34404e);padding:12px;vertical-align:top;overflow-wrap:anywhere}
+.id-reviewed-batch .reading-body a{overflow-wrap:anywhere}
+.id-reviewed-batch .reading-body ol.references,.id-reviewed-batch .reading-body ol.reference-list{list-style:decimal;padding-inline-start:26px;counter-reset:none}
+.id-reviewed-batch .reading-body ol.references>li,.id-reviewed-batch .reading-body ol.reference-list>li{padding-inline-start:6px;line-height:1.8;margin:16px 0}
+.id-reviewed-batch .reading-body ol.references>li::before,.id-reviewed-batch .reading-body ol.reference-list>li::before{content:none}
+.id-reviewed-batch .reading-body ol.explicit-reference-labels{list-style:none;padding-inline-start:0}
+.id-reviewed-batch .reading-body .ref-links{font-size:14px;line-height:1.8;color:var(--muted);margin:8px 0 24px}
+.id-reviewed-batch .reading-body .ref-links a{color:var(--blue);text-decoration:underline;margin-inline-end:5px}
+.id-reviewed-batch .reading-body .summary{margin:20px 0}
+.id-reviewed-batch .article-meta,.id-reviewed-batch .id-source-note{font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.8}
+.id-reviewed-batch .id-source-note{margin-top:42px;border-top:1px solid var(--line,#34404e);padding-top:20px}
+@media(max-width:640px){.id-reviewed-batch .reviewed-shell{padding-top:22px}.id-reviewed-batch .reading-body{font-size:17px;line-height:1.95}.id-reviewed-batch .article-deck,.id-reviewed-batch .deck{font-size:19px}.id-reviewed-batch .reading-body th,.id-reviewed-batch .reading-body td{padding:8px;font-size:14px}.id-reviewed-batch .reading-body blockquote{padding:14px;margin-inline:0}.id-reviewed-batch .langs{flex-wrap:wrap}}

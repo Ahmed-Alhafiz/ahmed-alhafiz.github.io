@@ -59,6 +59,18 @@ jobs:
           python .github/visual-review/verify_book_covers.py
           python .github/visual-review/verify_sitewide_arabic_nav.py
           python .github/visual-review/verify_editorial_pages.py
+          python .github/visual-review/verify_reviewed_indonesian.py
+
+      - name: Upload reviewed Indonesian contact sheets
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reviewed-indonesian-contact-sheets
+          path: |
+            visual-review/reviewed-indonesian/contact-*.png
+            visual-review/reviewed-indonesian/report.json
+          retention-days: 3
+          if-no-files-found: error
 
       - name: Upload visual review artifact
         if: always()

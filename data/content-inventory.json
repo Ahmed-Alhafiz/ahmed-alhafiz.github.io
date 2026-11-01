@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-10-28",
+  "generated": "2026-11-01",
   "site": "https://ahmedalhafiz.com/",
   "policy": {
     "primary_rule": "Do not publish a new URL merely to increase page count. Every indexed page must answer a distinct question, provide unique value, and disclose its evidence and review status.",
@@ -35,7 +35,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "ماذا أفعل إذا وجدت ورقة فيها طلاسم؟",
       "does_not_target": [
@@ -44,7 +45,10 @@
         "تعليم الطلاسم أو تقديم وصفة لإبطال السحر"
       ],
       "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
-      "reason": "Approved Arabic article answers the found-paper question, distinguishes content and use, presents the Quranic-amulet disagreement and respectful disposal, and separates general rulings from proof and accusation. Full-text review of Song-Schwarz 2009 and Bahnik-Vranka 2017 plus the 2020 label correction; no talisman tests are claimed. Chapter-two p25 is literary context without later spoilers."
+      "reason": "Approved Arabic article answers the found-paper question, distinguishes content and use, presents the Quranic-amulet disagreement and respectful disposal, and separates general rulings from proof and accusation. Full-text review of Song-Schwarz 2009 and Bahnik-Vranka 2017 plus the 2020 label correction; no talisman tests are claimed. Chapter-two p25 is literary context without later spoilers.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/menemukan-kertas-rajah/",
+      "indonesian_title": "Menemukan Kertas Jimat atau Rajah: Apa yang Harus Dilakukan?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "evil-eye-envy-signs",
@@ -53,7 +57,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "ما علامات العين والحسد، وما الذي تثبته الأعراض؟",
       "does_not_target": [
@@ -62,7 +67,10 @@
         "إعادة دليل أعراض الخوف الجسدية أو علاج الوسواس"
       ],
       "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
-      "reason": "Approved revised Arabic article distinguishes religious texts on the evil eye, probabilistic symptom lists, psychological envy and causal inference; full-text review covers the 2009 Spanish daily-recall study (39 analysed of49) and the 2023 nine-study review (seven cross-sectional); chapter-eight scene is literary context without later spoilers."
+      "reason": "Approved revised Arabic article distinguishes religious texts on the evil eye, probabilistic symptom lists, psychological envy and causal inference; full-text review covers the 2009 Spanish daily-recall study (39 analysed of49) and the 2023 nine-study review (seven cross-sectional); chapter-eight scene is literary context without later spoilers.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/ciri-ciri-ain-hasad/",
+      "indonesian_title": "Ciri-Ciri Terkena Ain: Apakah Gejalanya Bisa Jadi Bukti?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "magic-with-personal-photo",
@@ -71,7 +79,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "هل يمكن عمل سحر من الصورة الشخصية أو صورة على الهاتف؟",
       "does_not_target": [
@@ -80,7 +89,10 @@
         "إعادة دليل أعراض الخوف الجسدية أو التنمر الإلكتروني"
       ],
       "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
-      "reason": "Approved revised Arabic article distinguishes the ruling on magic, reported opinions about photographs, and proof of an individual claim; bounded experimental evidence separates printed faces from imagined faces (47 dart-task participants; 50 overall) and connects to chapter-one literary context without spoilers."
+      "reason": "Approved revised Arabic article distinguishes the ruling on magic, reported opinions about photographs, and proof of an individual claim; bounded experimental evidence separates printed faces from imagined faces (47 dart-task participants; 50 overall) and connects to chapter-one literary context without spoilers.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/sihir-lewat-foto/",
+      "indonesian_title": "Sihir Lewat Foto: Benarkah Bisa dan Apa Hukumnya?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "qarin-islam-thoughts-control",
@@ -111,7 +123,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "هل الماء أمام الباب من علامات السحر المرشوش؟",
       "does_not_target": [
@@ -120,7 +133,10 @@
         "إرجاع كل عرض إلى الخوف دون تقييم"
       ],
       "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
-      "reason": "Approved Arabic article distinguishes an unknown physical trace from its interpretation, compares two bounded nocebo findings, cites religious texts and a verified chapter-three water scene."
+      "reason": "Approved Arabic article distinguishes an unknown physical trace from its interpretation, compares two bounded nocebo findings, cites religious texts and a verified chapter-three water scene.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/sihir-dipercikkan-air-depan-pintu/",
+      "indonesian_title": "Air di Depan Pintu: Benarkah Tanda Sihir atau Santet?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "love-magic-reconciliation-ruling",
@@ -129,7 +145,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "هل ينجح جلب الحبيب وما حكم سحر المحبة؟",
       "does_not_target": [
@@ -138,7 +155,10 @@
         "أحكام رجعة شخصية أو دليل استغلال شامل"
       ],
       "next_action": "observe_search_queries_after_publication_and_seek_specialist_review",
-      "reason": "Approved Arabic article distinguishes love magic rulings, evidence of causation, ritual-related feelings of control and a verified chapter-seven literary scene."
+      "reason": "Approved Arabic article distinguishes love magic rulings, evidence of causation, ritual-related feelings of control and a verified chapter-seven literary scene.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/hukum-pelet-cinta/",
+      "indonesian_title": "Hukum Pelet Cinta: Bisakah Mengembalikan Pasangan?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "jinn-dream-fear-meaning",
@@ -191,7 +211,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "هل النجمة السداسية على ورقة دليل سحر، وما معنى خاتم سليمان؟",
       "does_not_target": [
@@ -201,7 +222,10 @@
         "الحكم الفقهي على فرد أو قطعة بلا سياق"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_specialist_review",
-      "reason": "Faithful English edition preserving the museum object qualifications, Quranic boundaries, literary manuscript page references and source order; the search title and metadata are adapted to the direct English question."
+      "reason": "Faithful English edition preserving the museum object qualifications, Quranic boundaries, literary manuscript page references and source order; the search title and metadata are adapted to the direct English question.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/bintang-segi-enam-cincin-sulaiman/",
+      "indonesian_title": "Bintang Segi Enam dan Segel Sulaiman: Apakah Tanda Sihir?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "cyberbullying-university-rumor-stigma",
@@ -210,7 +234,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "كيف أتعامل مع التنمر الإلكتروني بين طلاب الجامعة والشائعة والوصمة؟",
       "does_not_target": [
@@ -219,7 +244,10 @@
         "تقرير وقوع جريمة أو نسبة الرسائل لشخص معين"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_specialist_review",
-      "reason": "Faithful English edition preserves the distinction between message and sender, limits of cross-sectional research, Qur’anic context, manuscript pages 55–64, and eight references."
+      "reason": "Faithful English edition preserves the distinction between message and sender, limits of cross-sectional research, Qur’anic context, manuscript pages 55–64, and eight references.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/cyberbullying-di-kampus/",
+      "indonesian_title": "Cyberbullying di Kampus: Cara Menghadapi Rumor dan Stigma",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "fear-physical-symptoms-umm-abbas",
@@ -228,7 +256,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "هل الخوف يسبب أعراضًا جسدية حقيقية، وكيف نفصل خبرة الشخص عن سبب العرض؟",
       "does_not_target": [
@@ -238,7 +267,10 @@
         "الإغناء عن التقييم العاجل عند ألم الصدر أو ضيق النفس"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_specialist_review",
-      "reason": "Faithful English edition preserving the same medical, literary and religious boundaries, source set, warning signs and specialist-review status; SEO changes are limited to natural English title and metadata."
+      "reason": "Faithful English edition preserving the same medical, literary and religious boundaries, source set, warning signs and specialist-review status; SEO changes are limited to natural English title and metadata.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/gejala-fisik-karena-takut/",
+      "indonesian_title": "Gejala Fisik karena Takut: Mengapa Tubuh Bereaksi?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "sleepwalking-why-no-memory",
@@ -247,7 +279,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "لماذا لا أتذكر ما فعلته أثناء النوم، وما حدود تفسير فعل ليلي من دون شاهد؟",
       "does_not_target": [
@@ -257,7 +290,10 @@
         "فتوى مسؤولية النائم في واقعة فردية"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_specialist_review",
-      "reason": "Faithful English edition preserving the same medical, literary and religious boundaries, source set, scene locations and review status; search optimization is limited to natural English title and metadata phrasing."
+      "reason": "Faithful English edition preserving the same medical, literary and religious boundaries, source set, scene locations and review status; search optimization is limited to natural English title and metadata phrasing.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/berjalan-saat-tidur-tidak-ingat/",
+      "indonesian_title": "Berjalan Saat Tidur (Sleepwalking): Mengapa Tidak Ingat?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "unwanted-intrusive-thoughts-meaning",
@@ -266,7 +302,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "هل الأفكار المخيفة غير المرغوبة تعني النية أو الفعل، ومتى تكون وسواسًا؟",
       "does_not_target": [
@@ -276,7 +313,10 @@
         "إثبات المس من مشهد الرواية"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_specialist_review",
-      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, literary reading, source set, citation placement, and stated limits; search optimization is confined to natural English title/description phrasing."
+      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, literary reading, source set, citation placement, and stated limits; search optimization is confined to natural English title/description phrasing.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/pikiran-intrusif-niat/",
+      "indonesian_title": "Pikiran Intrusif: Apakah Saya Akan Melakukannya?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "depersonalization-derealization-feeling-unreal",
@@ -285,7 +325,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "أعراض وأسباب تبدد الشخصية وتبدد الواقع والشعور بالغربة عن الجسد أو العالم وحدود تفسير المس",
       "does_not_target": [
@@ -295,7 +336,10 @@
         "فجوات الذاكرة وسماع الأصوات"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_clinical_review",
-      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, literary reading, source set, and stated limits; search optimization is confined to natural English title/description phrasing."
+      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, literary reading, source set, and stated limits; search optimization is confined to natural English title/description phrasing.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/depersonalisasi-derealisasi/",
+      "indonesian_title": "Depersonalisasi dan Derealisasi: Mengapa Terasa Tidak Nyata?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "jinn-demons-quran-bible-torah",
@@ -304,7 +348,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "هل معنى الجن والشياطين واحد في القرآن والإنجيل والتوراة واختلاف المصطلحات والسياقات",
       "does_not_target": [
@@ -315,7 +360,10 @@
       ],
       "next_action": "measure_query_fit_and_seek_comparative_specialist_review",
       "reason": "Comparison of scriptural terms, translations and interpretation, with explicit clinical limits and direct reading of the novel, pp.184–185, 194, 200, 202–203.",
-      "english_url": "https://ahmedalhafiz.com/en/articles/jinn-demons-quran-bible-torah/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/jinn-demons-quran-bible-torah/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/jin-setan-quran-injil-taurat/",
+      "indonesian_title": "Jin dan Setan dalam Al-Qur’an, Injil, dan Taurat",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "memory-gaps-unremembered-actions",
@@ -324,7 +372,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "لماذا أفعل أشياء لا أتذكرها وأسباب فجوات الذاكرة وعلاقتها بالنوم والتفكك وحدود تفسير المس",
       "does_not_target": [
@@ -334,7 +383,10 @@
         "تشخيص اضطراب الهوية التفككي"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_clinical_review",
-      "reason": "Faithful English edition preserving the same medical, literary and religious boundaries, source set, scene locations and review status; search optimization is limited to natural English title and metadata phrasing."
+      "reason": "Faithful English edition preserving the same medical, literary and religious boundaries, source set, scene locations and review status; search optimization is limited to natural English title and metadata phrasing.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/hilang-ingatan-sesaat/",
+      "indonesian_title": "Lupa Apa yang Sudah Dilakukan? Penyebab dan Kapan Periksa",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "hearing-voices-in-head",
@@ -343,7 +395,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "أسباب سماع الأصوات والفرق عن الأفكار الاقتحامية وتجارب النوم وحدود تفسيرها بالمس",
       "does_not_target": [
@@ -353,7 +406,10 @@
         "تشخيص فجوات الذاكرة"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_clinical_review",
-      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, source set, medical and religious boundaries, and literary analysis; search optimization is confined to natural English title and metadata phrasing."
+      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, source set, medical and religious boundaries, and literary analysis; search optimization is confined to natural English title and metadata phrasing.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/mendengar-suara-di-kepala/",
+      "indonesian_title": "Mendengar Suara di Kepala: Apa Penyebabnya?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "jinn-existence-quran-sunnah",
@@ -362,7 +418,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "أدلة وجود الجن في القرآن والسنة ودلالة النصوص وحدود نسبتها إلى أعراض فردية",
       "does_not_target": [
@@ -372,7 +429,10 @@
         "ملخص الرواية"
       ],
       "next_action": "measure_query_fit_and_seek_tafsir_hadith_review",
-      "reason": "Distinct Islamic textual question, fifteen relevant sources, and explicit separation of belief, interpretation and clinical attribution."
+      "reason": "Distinct Islamic textual question, fifteen relevant sources, and explicit separation of belief, interpretation and clinical attribution.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/apakah-jin-ada-dalil/",
+      "indonesian_title": "Apakah Jin Itu Ada? Dalil Al-Qur’an dan Hadis",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "umm-abbas-family-fear",
@@ -382,7 +442,8 @@
       "languages": [
         "ar",
         "en",
-        "de"
+        "de",
+        "id"
       ],
       "primary_intent": "قراءة رواية أم عباس والخوف داخل الأسرة وصوت مريم",
       "does_not_target": [
@@ -391,7 +452,10 @@
         "دليل عام لاختيار روايات الرعب"
       ],
       "next_action": "measure_query_fit_after_translation_publication",
-      "reason": "Distinct manuscript-based literary reading, not clinical evidence or an independent review."
+      "reason": "Distinct manuscript-based literary reading, not clinical evidence or an independent review.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/novel-umm-abbas/",
+      "indonesian_title": "Novel Umm Abbas: Ketika Ketakutan Menguasai Keluarga",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "ai-soul-consciousness-understanding-taklif",
@@ -400,7 +464,8 @@
       "book_cluster": "sirou-fi-alard",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "هل للذكاء الاصطناعي روح أو تكليف وما الفرق بين الذكاء والفهم والوعي والمسؤولية",
       "does_not_target": [
@@ -410,7 +475,10 @@
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Distinct M6 book pages 49–54 question; exegesis, AI evaluation and human accountability separated from prior technical and neuroscience reports.",
-      "english_url": "https://ahmedalhafiz.com/en/articles/ai-soul-consciousness-understanding-taklif/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/ai-soul-consciousness-understanding-taklif/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/ai-ruh-kesadaran-taklif/",
+      "indonesian_title": "Apakah AI Punya Ruh? Taklif dan Tanggung Jawab Manusia",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "difference-light-nur-quran-sun-moon",
@@ -419,7 +487,8 @@
       "book_cluster": "sirou-fi-alard",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "ما الفرق بين الضوء والنور في القرآن من ضياء الشمس ونور القمر إلى الهداية",
       "does_not_target": [
@@ -429,7 +498,10 @@
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Distinct ع6 book pages 140–143 question, with exegesis, lunar optics and contextual theology separated.",
-      "english_url": "https://ahmedalhafiz.com/en/articles/difference-light-nur-quran-sun-moon/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/difference-light-nur-quran-sun-moon/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/matahari-dhiya-bulan-nur/",
+      "indonesian_title": "Perbedaan Dhiya dan Nur: Matahari dan Bulan dalam Al-Qur’an",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "how-concepts-form-adam-names-scientific-models",
@@ -457,7 +529,8 @@
       "book_cluster": "sirou-fi-alard",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "هل أسقطت ملوحة التربة حضارة بلاد الرافدين وما الذي يثبته الدليل الأثري والعلمي",
       "does_not_target": [
@@ -467,7 +540,10 @@
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Book pages 89–91 explicitly discuss irrigation, salinity and limits of a monocausal explanation.",
-      "english_url": "https://ahmedalhafiz.com/en/articles/mesopotamia-irrigation-soil-salinity-collapse/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/mesopotamia-irrigation-soil-salinity-collapse/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/mesopotamia-irigasi-salinitas/",
+      "indonesian_title": "Benarkah Garam Meruntuhkan Peradaban Mesopotamia?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "nile-ancient-egypt-flood-calendar-state",
@@ -476,7 +552,8 @@
       "book_cluster": "sirou-fi-alard",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "كيف صنع النيل حضارة مصر القديمة وما معنى افتخار فرعون بالأنهار في سورة الزخرف",
       "does_not_target": [
@@ -486,7 +563,10 @@
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Distinct Nile-specific primary document and Quran-context investigation anchored to book pages 82–88.",
-      "english_url": "https://ahmedalhafiz.com/en/articles/nile-ancient-egypt-flood-calendar-state/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/nile-ancient-egypt-flood-calendar-state/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/sungai-nil-mesir-kuno/",
+      "indonesian_title": "Peran Sungai Nil dalam Peradaban Mesir Kuno",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "quran-day-thousand-fifty-thousand-years-relativity",
@@ -495,7 +575,8 @@
       "book_cluster": "sirou-fi-alard",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "تفسير يوم كألف سنة وخمسين ألف سنة وهل يتعارض القرآن أو يتنبأ بالنسبية",
       "does_not_target": [
@@ -505,7 +586,10 @@
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Distinct question anchored to book pages 28–35, with direct tafsir and experimental sources and explicit boundary against a relativity proof.",
-      "english_url": "https://ahmedalhafiz.com/en/articles/quran-day-thousand-fifty-thousand-years-relativity/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/quran-day-thousand-fifty-thousand-years-relativity/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/satu-hari-seribu-lima-puluh-ribu-tahun/",
+      "indonesian_title": "1.000 atau 50.000 Tahun? Makna Sehari dalam Al-Qur’an",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "before-big-bang-science-limits",
@@ -514,7 +598,8 @@
       "book_cluster": "sirou-fi-alard",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "ماذا كان قبل الانفجار العظيم وبداية الزمن وحدود النماذج الكونية",
       "does_not_target": [
@@ -523,7 +608,10 @@
         "استخدام الكتاب بوصفه دليلًا"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_independent_review",
-      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, source set, scientific and theological boundaries, and stated limits; search optimization is confined to natural English title and metadata phrasing."
+      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, source set, scientific and theological boundaries, and stated limits; search optimization is confined to natural English title and metadata phrasing.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/sebelum-big-bang/",
+      "indonesian_title": "Apa yang Ada Sebelum Big Bang? Batas Pengetahuan Sains",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "writing-changed-human-history",
@@ -532,7 +620,8 @@
       "book_cluster": "sirou-fi-alard",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "أهمية الكتابة في قيام الحضارات والقلم بوصفه ذاكرة خارجية",
       "does_not_target": [
@@ -542,7 +631,10 @@
       ],
       "next_action": "seek_independent_review_and_measure_query_fit",
       "reason": "Distinct book-derived search intent with explicit evidence boundaries and no claim that the manuscript proves public facts.",
-      "english_url": "https://ahmedalhafiz.com/en/articles/writing-changed-human-history/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/writing-changed-human-history/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/sejarah-penemuan-tulisan/",
+      "indonesian_title": "Mengapa Tulisan Mengubah Sejarah Manusia?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "injustice-fall-of-states-quran-history",
@@ -895,7 +987,8 @@
       "languages": [
         "ar",
         "en",
-        "de"
+        "de",
+        "id"
       ],
       "next_action": "measure_multilingual_queries_and_seek_specialist_review",
       "reason": "Central Arabic, English, and German companion guide separating symptoms, clinical diagnosis, cultural and spiritual interpretation, historical change, and the novel’s fictional premise; retained outside the four fully qualified pillars until an independent specialist review and evidence ledger exist.",
@@ -903,7 +996,10 @@
       "does_not_target": [
         "التفريق بين النوبات الوظيفية والصرع وحده",
         "قرارات الأسرة قبل التشخيص وحدها"
-      ]
+      ],
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/kerasukan-atau-gangguan-medis/",
+      "indonesian_title": "Kerasukan atau Gangguan Jiwa dan Saraf? Mengapa Mirip?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "ratq-fatq-big-bang",
@@ -942,7 +1038,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "next_action": "hold_scope_measure_and_seek_specialist_review_after_publication_policy_allows",
       "reason": "Complete bilingual dossier with two original but explicitly non-validated frameworks, 14 claims, and 19 sources.",
@@ -950,7 +1047,10 @@
       "does_not_target": [
         "تشخيص الاضطرابات من الأعراض",
         "سلوك المعالج الروحي وحده"
-      ]
+      ],
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/takut-kerasukan-keluarga/",
+      "indonesian_title": "Keluarga Mengira Seseorang Kerasukan: Cara Melindunginya",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "teaching-names-ai-understanding",
@@ -972,7 +1072,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "next_action": "seek_independent_safeguarding_and_clinical_review; monitor organic query fit",
       "reason": "English edition preserves every clinical caution, 5 safety-boundaries and 7-step protection plan, all 12 references, complete in-text citations and the original literary relation.",
@@ -980,7 +1081,10 @@
       "does_not_target": [
         "إثبات المس من الأعراض",
         "تشخيص النوبات أو شلل النوم"
-      ]
+      ],
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/penipuan-berkedok-ruqyah/",
+      "indonesian_title": "Penipuan Berkedok Ruqyah: Tanda dan Cara Melindungi Pasien",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "functional-seizures-vs-epilepsy",
@@ -989,7 +1093,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "next_action": "retain_specialist_review_pending_measure_query_fit_after_translation",
       "reason": "Narrow medical distinction with a faithful English edition preserving the same sections, claims, safety limits, source set, and unreviewed-specialist status; search optimization is limited to natural English title and metadata phrasing.",
@@ -997,7 +1102,10 @@
       "does_not_target": [
         "تشخيص ذاتي من قائمة أعراض",
         "كل تفسير ثقافي للمس"
-      ]
+      ],
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/kejang-fungsional-vs-epilepsi/",
+      "indonesian_title": "Kejang Fungsional (PNES) dan Epilepsi: Apa Bedanya?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; independent_specialist_review_not_performed"
     },
     {
       "slug": "six-days-creation-cosmic-time",
