@@ -60,6 +60,18 @@ jobs:
           python .github/visual-review/verify_sitewide_arabic_nav.py
           python .github/visual-review/verify_editorial_pages.py
           python .github/visual-review/verify_reviewed_indonesian.py
+          python .github/visual-review/verify_remaining23.py
+
+      - name: Upload remaining23 Indonesian contact sheets
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: remaining23-indonesian-contact-sheets
+          path: |
+            visual-review/remaining23-indonesian/contact-*.png
+            visual-review/remaining23-indonesian/report.json
+          retention-days: 3
+          if-no-files-found: error
 
       - name: Upload reviewed Indonesian contact sheets
         if: always()

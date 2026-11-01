@@ -518,8 +518,8 @@ def validate_strategy_data(errors: list[str]) -> None:
         errors.append(f"content inventory: expected one Teaching the Names record, found {len(teaching)}")
     else:
         item = teaching[0]
-        if item.get("class") != "pillar" or sorted(item.get("languages", [])) != ["ar", "en"]:
-            errors.append("content inventory: Teaching the Names must remain a complete Arabic/English pillar")
+        if item.get("class") != "pillar" or sorted(item.get("languages", [])) != ["ar", "en", "id"]:
+            errors.append("content inventory: Teaching the Names must retain complete Arabic/English/Indonesian editions")
 
 
 def validate_llms_manifest(errors: list[str]) -> None:

@@ -55,7 +55,7 @@ def main():
     assert article['citation']==refs and article['datePublished']==audit['publication_date']
     assert article['translationOfWork']=={'@id':audit['source_url']+'#article'} and article['inLanguage']=='id'
     inventory=json.loads((ROOT/'data/content-inventory.json').read_text());item=next(x for x in inventory['items'] if x['slug']=='religious-ocd-scrupulosity');assert item['indonesian_url']==URL and 'id' in item['languages']
-    feed=json.loads((ROOT/'id/articles/feed.json').read_text());actual={HOST+'/'+str(p.parent.relative_to(ROOT)).strip('/')+'/' for p in (ROOT/'id/articles').glob('*/index.html')}
+    feed=json.loads((ROOT/'id/articles/feed.json').read_text());actual={HOST+'/'+str(p.parent.relative_to(ROOT)).strip('/')+'/' for p in [* (ROOT/'id/articles').glob('*/index.html'),* (ROOT/'id/guides').glob('*/index.html')]}
     assert {i['url'] for i in feed['items']}==actual
     item=next(i for i in feed['items'] if i['url']==URL);assert item['title']==audit['h1'] and item['date_published'].startswith(audit['publication_date'])
     assert len(ET.parse(ROOT/'id/articles/feed.xml').findall('{http://www.w3.org/2005/Atom}entry'))==len(actual)

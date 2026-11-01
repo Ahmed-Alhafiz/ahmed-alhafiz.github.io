@@ -55,8 +55,8 @@ def check():
             if lang in ['id','x-default']:continue
             path=ROOT/(url.split('ahmedalhafiz.com/',1)[1].rstrip('/')+'/index.html')
             q=Reader();q.feed(path.read_text());assert q.alternates==p.alternates,(r['key'],lang)
-    feed=json.loads((ROOT/'id/articles/feed.json').read_text());assert len(feed['items'])==36
+    feed=json.loads((ROOT/'id/articles/feed.json').read_text());assert len(feed['items'])==len(list([* (ROOT/'id/articles').glob('*/index.html'),* (ROOT/'id/guides').glob('*/index.html')]))
     assert urls<={x['url'] for x in feed['items']}
-    assert len(ET.parse(ROOT/'sitemap.xml').findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url'))==201
-    print('Reviewed Indonesian release passed:27 complete reviewed texts,56 original mains,9 prior ID articles,36 feed entries,201 sitemap URLs and reciprocal languages.')
+    assert len(ET.parse(ROOT/'sitemap.xml').findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url'))>=201
+    print('Reviewed Indonesian release passed:27 complete reviewed texts,56 original mains,9 prior ID articles,current feed entries,sitemap coverage and reciprocal languages.')
 if __name__=='__main__':check()

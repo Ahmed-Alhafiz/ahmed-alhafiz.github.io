@@ -72,7 +72,7 @@ def main():
         assert n['href']==HOST+'/books/umm-abbas/' and n['hreflang']=='ar'
     assert hashlib.sha256((ROOT/'umm-abbas-cover.webp').read_bytes()).hexdigest()==audit['cover_sha256']
     catalogue=Units();catalogue.feed((ROOT/'id/articles/index.html').read_text());listing=next(n for b in catalogue.blocks for n in b.get('@graph',[]) if n.get('@type')=='ItemList')
-    expected_urls={HOST+'/'+str(p.parent.relative_to(ROOT)).replace('\\','/')+'/' for p in (ROOT/'id/articles').glob('*/index.html')}
+    expected_urls={HOST+'/'+str(p.parent.relative_to(ROOT)).replace('\\','/')+'/' for p in [* (ROOT/'id/articles').glob('*/index.html'),* (ROOT/'id/guides').glob('*/index.html')]}
     listed=[x['url'] for x in listing['itemListElement']]
     assert listing['numberOfItems']==len(listed)==len(expected_urls)>=5 and set(listed)==expected_urls
     assert [x['position'] for x in listing['itemListElement']]==list(range(1,len(listed)+1))

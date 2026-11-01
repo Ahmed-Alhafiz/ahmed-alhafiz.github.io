@@ -1280,6 +1280,351 @@
       },
       "datePublished": "2026-11-01",
       "dateModified": "2026-11-01"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/kezaliman-dan-keruntuhan-negara/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/kezaliman-dan-keruntuhan-negara/",
+      "headline": "Mengapa Negara Runtuh? Peran Kezaliman dan Korupsi",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/injustice-fall-of-states-quran-history/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/kode-genetik-dna/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/kode-genetik-dna/",
+      "headline": "Kode Genetik: Bagaimana Sel Membaca Informasi DNA?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/dna-code-genetic-information/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/usia-alam-semesta-13-8-miliar-tahun/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/usia-alam-semesta-13-8-miliar-tahun/",
+      "headline": "Berapa Umur Alam Semesta? Mengapa 13,8 Miliar Tahun?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/age-of-universe-13-8-billion-years/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/bagaimana-konsep-terbentuk/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/bagaimana-konsep-terbentuk/",
+      "headline": "Bagaimana Konsep Terbentuk? Nama, Bahasa, dan Ilmu",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/how-concepts-form-adam-names-scientific-models/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/bahasa-nabi-adam/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/bahasa-nabi-adam/",
+      "headline": "Bahasa Apa yang Digunakan Nabi Adam? Tafsir Al-Baqarah 31",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/adam-all-languages-origin-language/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/tes-turing-dan-kesadaran-ai/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/tes-turing-dan-kesadaran-ai/",
+      "headline": "Apa Itu Tes Turing? Mengapa Tidak Membuktikan AI Sadar?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/turing-test-ai-consciousness/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/peradaban-kuno-dekat-sungai/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/peradaban-kuno-dekat-sungai/",
+      "headline": "Mengapa Peradaban Kuno Tumbuh di Dekat Sungai?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/river-civilizations-water-state/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/mukjizat-ilmiah-al-quran-bukti-dan-tafsir/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/mukjizat-ilmiah-al-quran-bukti-dan-tafsir/",
+      "headline": "Mukjizat Ilmiah Al-Qur’an: Bagaimana Menilai Buktinya?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/quran-science-method-evidence/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/tahapan-janin-dalam-al-quran/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/tahapan-janin-dalam-al-quran/",
+      "headline": "Tahapan Perkembangan Janin dalam Al-Qur’an dan Sains",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/human-embryo-quran-stages/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/otak-dan-kesadaran/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/otak-dan-kesadaran/",
+      "headline": "Otak dan Kesadaran: Apa Kata Sains tentang Ruh?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/brain-consciousness-spirit-limits/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/air-penting-bagi-kehidupan/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/air-penting-bagi-kehidupan/",
+      "headline": "Mengapa Air Penting bagi Kehidupan? Dari Molekul ke Sel",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/water-life-molecular-properties/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/besi-api-cahaya-al-quran/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/besi-api-cahaya-al-quran/",
+      "headline": "Besi, Api, dan Cahaya: Materi dan Energi dalam Peradaban",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/iron-fire-light-matter-energy/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/mengapa-peradaban-runtuh/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/mengapa-peradaban-runtuh/",
+      "headline": "Mengapa Peradaban Runtuh? Iklim, Perang, dan Kekuasaan",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/civilization-knowledge-justice-collapse/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/penciptaan-langit-bumi-enam-hari/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/penciptaan-langit-bumi-enam-hari/",
+      "headline": "Penciptaan Langit dan Bumi dalam 6 Hari: Berapa Lama?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/six-days-creation-cosmic-time/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/ai-dan-nama-nama-adam/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/ai-dan-nama-nama-adam/",
+      "headline": "Apakah AI Benar-Benar Memahami Bahasa? Bukti dan Batasnya",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/teaching-names-ai-understanding/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/air-dan-kekuasaan/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/air-dan-kekuasaan/",
+      "headline": "Tata Kelola Air: Pembagian, Hak, dan Kekuasaan",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/water-civilization-power/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/besi-diturunkan-dari-langit/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/besi-diturunkan-dari-langit/",
+      "headline": "Besi Diturunkan dari Langit? Tafsir Al-Hadid Ayat 25",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/anzalna-iron-meteorites/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/bendungan-marib-banjir-arim/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/bendungan-marib-banjir-arim/",
+      "headline": "Bendungan Ma’rib: Sejarah Keruntuhan dan Banjir Arim",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/marib-dam-sayl-al-arim/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/alam-semesta-mengembang-al-quran/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/alam-semesta-mengembang-al-quran/",
+      "headline": "Alam Semesta Mengembang: Bukti dan Makna Adz-Dzariyat 47",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/universe-expansion-wa-inna-lamusiun/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/madain-saleh-tsamud-nabatea/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/madain-saleh-tsamud-nabatea/",
+      "headline": "Madain Saleh: Rumah Tsamud atau Makam Nabatea?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/madain-salih-thamud-nabataean-tombs/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/api-pohon-hijau-yasin-80/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/api-pohon-hijau-yasin-80/",
+      "headline": "Api dari Pohon Hijau: Tafsir Yasin 80 dan Fotosintesis",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/green-tree-fire-photosynthesis/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/keyakinan-kelompok-dan-kekerasan/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/keyakinan-kelompok-dan-kekerasan/",
+      "headline": "Bagaimana Keyakinan Kelompok Berubah Menjadi Kekerasan?",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/how-certainty-becomes-violence/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/guides/horor-psikologis-novel-arab/#article",
+      "url": "https://ahmedalhafiz.com/id/guides/horor-psikologis-novel-arab/",
+      "headline": "Horor Psikologis: Ciri dan Cara Memilih Novel Arab",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/guides/arabic-psychological-horror/#article"
+      },
+      "datePublished": "2026-11-02",
+      "dateModified": "2026-11-02"
     }
   ],
   "dateModified": "2026-11-01"
