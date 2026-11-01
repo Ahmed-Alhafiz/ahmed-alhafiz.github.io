@@ -1334,7 +1334,8 @@
       "version": "1.0",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "review": "author_review_complete_specialist_review_pending",
       "book": "umm-abbas",
@@ -1347,7 +1348,9 @@
         "https://iris.who.int/items/cdf5a576-38ed-4e03-8f6e-2b40562273e9"
       ],
       "english_title": "Religious OCD or Faith? Scrupulosity Symptoms and Treatment",
-      "english_url": "https://ahmedalhafiz.com/en/articles/religious-ocd-scrupulosity/"
+      "english_url": "https://ahmedalhafiz.com/en/articles/religious-ocd-scrupulosity/",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/waswas-ibadah-ocd/",
+      "indonesian_title": "Waswas Berlebihan Saat Ibadah: OCD Agama atau Kurang Iman?"
     }
   ]
 }

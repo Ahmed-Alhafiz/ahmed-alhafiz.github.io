@@ -1,0 +1,24 @@
+/* Reading layout for the complete Indonesian religious OCD guide. */
+.id-ocd-article .article-head{padding-block:42px 36px}
+.id-ocd-article .article-head h1{font-size:clamp(34px,4.6vw,56px);line-height:1.28}
+.id-ocd-article .article-shell{gap:42px;grid-template-columns:minmax(0,760px) 250px}
+.id-ocd-article .article-body{font-size:19px;line-height:1.85;overflow-wrap:anywhere;min-width:0}
+.id-ocd-article .article-body h2{font-size:31px;line-height:1.35}
+.id-ocd-article .article-body h3{font-size:24px;line-height:1.5}
+.id-ocd-article .article-body table{display:table;table-layout:fixed;width:100%;min-width:0;border-collapse:collapse;font:15px/1.75 Arial,sans-serif}
+.id-ocd-article .article-body th,.id-ocd-article .article-body td{width:50%;padding:12px;vertical-align:top;text-align:start;overflow-wrap:anywhere}
+.id-ocd-article .fact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.id-ocd-article .fact{min-width:0}
+.id-ocd-article .article-body ol.references{list-style:decimal;padding-inline-start:1.7em}
+.id-ocd-article .article-body ol.references li{display:list-item;list-style:decimal;font:15px/1.85 Arial,sans-serif;margin-block:14px;padding:0;scroll-margin-top:125px}
+.id-ocd-article .article-body ol.references li::before{content:none;display:none}
+.id-ocd-article .article-body [lang="ar"]{font-family:Tahoma,Arial,sans-serif;unicode-bidi:isolate}
+.id-ocd-article .article-footer-nav{display:flex;flex-wrap:wrap;gap:14px}
+.id-ocd-article main .btn{min-height:44px;display:inline-flex;align-items:center;white-space:normal}
+.id-ocd-article .id-source-note{max-width:900px;margin-top:22px;padding:14px 18px;border-inline-start:3px solid var(--copper);background:#f3ecdf;font:14px/1.85 Arial,sans-serif}
+.id-ocd-article .id-source-note p{margin:0}
+.id-ocd-article .id-translation-citation{width:min(1050px,calc(100% - 40px));margin:24px auto;padding:18px 0;border-top:1px solid var(--line);font:14px/1.85 Arial,sans-serif;overflow-wrap:anywhere}
+.id-ocd-article .id-translation-citation strong{display:block;margin-bottom:8px}
+.id-ocd-article .id-translation-citation code{font-size:13px;line-height:1.85;white-space:normal}
+@media(max-width:1000px){.id-ocd-article .article-shell{grid-template-columns:minmax(0,800px)}.id-ocd-article .article-aside{order:initial}}
+@media(max-width:640px){.id-ocd-article .article-head{padding-block:28px}.id-ocd-article .article-head h1{font-size:32px}.id-ocd-article .article-body{font-size:17px}.id-ocd-article .article-body h2{font-size:27px}.id-ocd-article .article-body h3{font-size:22px}.id-ocd-article .fact-grid{grid-template-columns:1fr}.id-ocd-article .article-body th,.id-ocd-article .article-body td{font-size:13px;padding:8px}.id-ocd-article .id-translation-citation{width:calc(100% - 32px)}}

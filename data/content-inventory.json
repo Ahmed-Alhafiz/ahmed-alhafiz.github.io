@@ -1122,7 +1122,8 @@
       "book_cluster": "umm-abbas",
       "languages": [
         "ar",
-        "en"
+        "en",
+        "id"
       ],
       "primary_intent": "الفرق بين الوسواس القهري الديني وضعف الإيمان ومسارات العلاج",
       "does_not_target": [
@@ -1131,7 +1132,10 @@
         "استبدال العلاج أو الطوارئ"
       ],
       "next_action": "measure_query_fit_after_translation_publication_and_seek_clinical_review",
-      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, safety boundaries, source set, and stated limits; search optimization is confined to English title and metadata phrasing."
+      "reason": "Arabic source article plus a faithful English edition preserving the same sections, claims, safety boundaries, source set, and stated limits; search optimization is confined to English title and metadata phrasing.",
+      "indonesian_url": "https://ahmedalhafiz.com/id/articles/waswas-ibadah-ocd/",
+      "indonesian_title": "Waswas Berlebihan Saat Ibadah: OCD Agama atau Kurang Iman?",
+      "indonesian_translation_review": "complete_internal_semantic_and_editorial_review; specialist_review_pending"
     }
   ],
   "current_counts": {

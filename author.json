@@ -829,6 +829,52 @@
         "@type": "Book",
         "url": "https://ahmedalhafiz.com/books/umm-abbas/"
       }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://ahmedalhafiz.com/id/articles/waswas-ibadah-ocd/#article",
+      "url": "https://ahmedalhafiz.com/id/articles/waswas-ibadah-ocd/",
+      "name": "OCD Agama atau Kurang Iman? Waswas Saat Ibadah | Ahmed Alhafiz",
+      "headline": "Waswas Berlebihan Saat Ibadah: OCD Agama atau Kurang Iman?",
+      "description": "Waswas berulang saat wudu, salat, atau berniat? Ahmed Alhafiz membahas OCD agama, bedanya dari kehati-hatian beragama, serta terapi yang didukung bukti.",
+      "inLanguage": "id",
+      "author": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "publisher": {
+        "@id": "https://ahmedalhafiz.com/#person"
+      },
+      "isPartOf": {
+        "@id": "https://ahmedalhafiz.com/#website"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://ahmedalhafiz.com/id/articles/waswas-ibadah-ocd/#page"
+      },
+      "translationOfWork": {
+        "@id": "https://ahmedalhafiz.com/articles/religious-ocd-scrupulosity/#article"
+      },
+      "datePublished": "2026-11-01",
+      "dateModified": "2026-11-01",
+      "isAccessibleForFree": true,
+      "image": "https://ahmedalhafiz.com/ahmed-alhafiz-social-card.png",
+      "version": "Indonesian translation 1.0; Arabic source 2026-09-26, updated 2026-10-27",
+      "articleSection": [
+        "Kesehatan mental dan agama",
+        "OCD keagamaan"
+      ],
+      "citation": [
+        "NHS, Obsessive compulsive disorder — Overview. Definisi obsesi dan perilaku kompulsif.",
+        "International OCD Foundation, What is OCD & Scrupulosity? OCD keagamaan dan moral.",
+        "NICE CG31, Recommendations. Pilihan CBT/ERP dan SSRI berdasarkan tingkat keparahan.",
+        "NHS, OCD treatment. Penjelasan paparan dan pencegahan respons serta terapi obat.",
+        "IOCDF, Religiously-Sensitive Exposures. Prinsip terapi yang menghormati nilai agama.",
+        "IOCDF, Islam and OCD. Pemaparan edukatif tentang bagaimana OCD dapat melekat pada praktik Islam.",
+        "WHO EMRO, Obsessive-compulsive disorder fact sheet. Lembar informasi kesehatan masyarakat."
+      ],
+      "mentions": {
+        "@type": "Book",
+        "url": "https://ahmedalhafiz.com/books/umm-abbas/"
+      }
     }
   ],
   "dateModified": "2026-11-01"

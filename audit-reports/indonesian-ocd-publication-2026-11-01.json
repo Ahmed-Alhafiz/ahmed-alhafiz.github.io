@@ -1,0 +1,548 @@
+{
+  "source_url": "https://ahmedalhafiz.com/articles/religious-ocd-scrupulosity/",
+  "source_sha256": "3acf15911667ebd00d4e5220e57b518973682053890f75fc7f6b9bdb02978ea5",
+  "target_url": "https://ahmedalhafiz.com/id/articles/waswas-ibadah-ocd/",
+  "h1": "Waswas Berlebihan Saat Ibadah: OCD Agama atau Kurang Iman?",
+  "seo_title": "OCD Agama atau Kurang Iman? Waswas Saat Ibadah | Ahmed Alhafiz",
+  "meta_description": "Waswas berulang saat wudu, salat, atau berniat? Ahmed Alhafiz membahas OCD agama, bedanya dari kehati-hatian beragama, serta terapi yang didukung bukti.",
+  "translation_version": "id-ocd-v1.0",
+  "owner_approved": false,
+  "publication_authorized": true,
+  "authorization_basis": "latest user instruction 2026-11-01; completion without further approval; quality gates remain mandatory",
+  "publication_date": "2026-11-01",
+  "publication_date_id": "1 November 2026",
+  "project_article_number": 9,
+  "published_article_count_after_release": 9,
+  "references": [
+    "NHS, Obsessive compulsive disorder — Overview. Definisi obsesi dan perilaku kompulsif.",
+    "International OCD Foundation, What is OCD & Scrupulosity? OCD keagamaan dan moral.",
+    "NICE CG31, Recommendations. Pilihan CBT/ERP dan SSRI berdasarkan tingkat keparahan.",
+    "NHS, OCD treatment. Penjelasan paparan dan pencegahan respons serta terapi obat.",
+    "IOCDF, Religiously-Sensitive Exposures. Prinsip terapi yang menghormati nilai agama.",
+    "IOCDF, Islam and OCD. Pemaparan edukatif tentang bagaimana OCD dapat melekat pada praktik Islam.",
+    "WHO EMRO, Obsessive-compulsive disorder fact sheet. Lembar informasi kesehatan masyarakat."
+  ],
+  "source_link_localizations": {
+    "https://ahmedalhafiz.com/": "https://ahmedalhafiz.com/id/",
+    "https://ahmedalhafiz.com/articles/": "https://ahmedalhafiz.com/id/articles/",
+    "https://ahmedalhafiz.com/about/": "https://ahmedalhafiz.com/id/about/"
+  },
+  "main_link_targets": [
+    "https://ahmedalhafiz.com/id/",
+    "https://ahmedalhafiz.com/id/articles/",
+    "https://ahmedalhafiz.com/id/about/",
+    "#ref-1",
+    "#ref-2",
+    "https://ahmedalhafiz.com/articles/unwanted-intrusive-thoughts-meaning/",
+    "#ref-3",
+    "#ref-4",
+    "#ref-5",
+    "https://www.nhs.uk/mental-health/conditions/obsessive-compulsive-disorder-ocd/overview/",
+    "https://iocdf.org/faith-ocd/what-is-ocd-scrupulosity/",
+    "https://www.nice.org.uk/guidance/cg31/chapter/Recommendations",
+    "https://www.nhs.uk/mental-health/conditions/obsessive-compulsive-disorder-ocd/treatment/",
+    "https://iocdf.org/faith-ocd/mental-health-providers/principles-of-effective-and-religiously-sensitive-exposures/",
+    "https://iocdf.org/faith-ocd/living-with-ocd-religious-traditions/islam-and-ocd/",
+    "https://iris.who.int/items/cdf5a576-38ed-4e03-8f6e-2b40562273e9",
+    "https://ahmedalhafiz.com/books/umm-abbas/",
+    "https://ahmedalhafiz.com/books/umm-abbas/",
+    "https://ahmedalhafiz.com/id/articles/",
+    "#answer",
+    "#cycle",
+    "#difference",
+    "#treatment",
+    "#references"
+  ],
+  "units": [
+    {
+      "id": "O001",
+      "source_text_sha256": "75bc5e4f25faa16462dce90b547092916963a65ff411fee2c52d8560f573c918",
+      "translation_text_sha256": "1191a28fac7ef43b2e4173f8cf46370d5344acc8e22a8714785e2bc798d6f09e"
+    },
+    {
+      "id": "O002",
+      "source_text_sha256": "b143b3441ce426586500ee985b542c9195fc5d0bbe001e1c78ca664d33034b82",
+      "translation_text_sha256": "f9d9d353f3a792c155ec0dc81dd471c5644f3cfb7af737832b21cae66252dd87"
+    },
+    {
+      "id": "O003",
+      "source_text_sha256": "93fc57a6f599c1d735af2e29be51ff3c179f9d6b79ae7c857508c23ebd5385f9",
+      "translation_text_sha256": "8783140f48585f07258d49ed060eed530119d05805701f97832564b9ef1916de"
+    },
+    {
+      "id": "O004",
+      "source_text_sha256": "c291ce30ac5088ede12d1072e33374b86ca5741df13ab720079147f2f64f47b8",
+      "translation_text_sha256": "1ec9ac1fb83e891a12bef7ed563430be6fd48f181b5177aa88566c4731f3f37c"
+    },
+    {
+      "id": "O005",
+      "source_text_sha256": "73bafe33f395c74afb1267eda4599eaf33b80d21bc08f0848c0af98f87cac17c",
+      "translation_text_sha256": "9bfa3992d91745ebfccd4b9eb42efaf24f4b7970c445be9628434dbfa7c656b0"
+    },
+    {
+      "id": "O006",
+      "source_text_sha256": "64f4d7e4ff51e195d79c4a0bf4af4ccf837739dd1c96270bfa7e4839b8513ecd",
+      "translation_text_sha256": "7a03d3866390d3fabe24f460ce2032c9d3efa3d7a15af3039aab62f9bce99566"
+    },
+    {
+      "id": "O007",
+      "source_text_sha256": "26fdb15c00aa97858f78d996cce6f83921e117eb23c01fa276e168ae80a6ec3a",
+      "translation_text_sha256": "f9b849acc2972d773ef8bc8bf31e69f2c1234ca9c871eae3449bdceb2ed30b1a"
+    },
+    {
+      "id": "O008",
+      "source_text_sha256": "3eba0f748c7e2e173a238ae8be33ef4760daaa7db2aba57b57aa048fc687225b",
+      "translation_text_sha256": "4ae585f61e08de372e28c0320ed90e7a62061d3a51e518dd82597d5f9e7a009e"
+    },
+    {
+      "id": "O009",
+      "source_text_sha256": "9252aacb7267835b163d4f27a9fa92becf74544ed4b936c06de6e7a53faffdee",
+      "translation_text_sha256": "8573bbdce0add147223cf085830debfa4722986f2d04d43605df7da4377c852f"
+    },
+    {
+      "id": "O010",
+      "source_text_sha256": "60b18d0215447c0378592dc8444933b9ed51af0c8c6335e31971a4a56d3aad8d",
+      "translation_text_sha256": "abcd4f018cb90b7ca74b112603827b6f505ea7728e1d1eb7610022af3c892dd4"
+    },
+    {
+      "id": "O011",
+      "source_text_sha256": "d6114ce5e873dbc1c0db586fa9846f185efe7ae1593cf7b2300b7500735d6b2e",
+      "translation_text_sha256": "04cb371eddf57d201891eeea69da24eeb51afd6fa0bd14d61c9f92cd67b13b1b"
+    },
+    {
+      "id": "O012",
+      "source_text_sha256": "06f33a6278311dce20e83ac0a64530fc3e263838497bba18bc3bf7e740c84ba6",
+      "translation_text_sha256": "61b942eed25ccb8eff81bcaa843a33e6602bdacb5352ad210b0098a54df17d9d"
+    },
+    {
+      "id": "O013",
+      "source_text_sha256": "d9f442bff69e9bac570a497e0d9d5a8235074d4fece65bbe78d2f405c5f4bd18",
+      "translation_text_sha256": "31a32da58a7fb226dcc3a75fa88e6128ad68d0404ea703cd6937fff72671477c"
+    },
+    {
+      "id": "O014",
+      "source_text_sha256": "0301f97b6d7125118deeddafc8e7e3e2f9c35c86039f77c642449da59de3dddf",
+      "translation_text_sha256": "f94d602aa53523612355934b31849eb3a178fdd34a01bf9fc6c07eccf2c02418"
+    },
+    {
+      "id": "O015",
+      "source_text_sha256": "fc151a7108b2efbdcf239894c95f9542971c96627372b4879718b5815f62e926",
+      "translation_text_sha256": "3ea7b26b6bc1da5c0f61ab5fadc97e4b6bb5f7419bcd00b7256db22987f62e68"
+    },
+    {
+      "id": "O016",
+      "source_text_sha256": "b78f0e9e30742e32d14b037a858f1b66497a84a7f4a43b5797f672b00bdafbbb",
+      "translation_text_sha256": "9ac37d42dfecc7697a0b0a58ce44bfba582e4aa1b96c2e671ce5980bc12bea79"
+    },
+    {
+      "id": "O017",
+      "source_text_sha256": "e4ad137d79bcb7db3ac78d1610f81cc9b093ee7e0a9af6d61fbe145214c9baa3",
+      "translation_text_sha256": "505c03dee7e58798dc4572d9e3b8010aa2ffa3c02a453b306c723c11c5d877b6"
+    },
+    {
+      "id": "O018",
+      "source_text_sha256": "12c73c0b4c7390b2ce99d8e74d1d0723e51e572d772a07a37ac8dec99411784b",
+      "translation_text_sha256": "31ce5bf01ae9356f29c8b0a4c17b43cb6199682232d0cc562a9fb219ced45065"
+    },
+    {
+      "id": "O019",
+      "source_text_sha256": "4eac3ba1dfd5fecc05723ac3aa08a9defd0120d7a6f3e28a1a8dbd164010425c",
+      "translation_text_sha256": "a62237af94b83fa2596cb22a19caa0cb15617db103a4627a95fb851c12708fb8"
+    },
+    {
+      "id": "O020",
+      "source_text_sha256": "81794bb9b3c8fb5d6773b1bbe170e3549b5f6e9a0b6ec2eff678d73a426b74e8",
+      "translation_text_sha256": "75169df5396c2c9c7e567c5e247d0fbef88ff69e372cc3ec4a0d5a917e884a60"
+    },
+    {
+      "id": "O021",
+      "source_text_sha256": "417dab78a3799ec451a3a338e864941ef0f98502339cf0b8ea6b6c51356a09cf",
+      "translation_text_sha256": "b3ee10526f57ace15aaa405d32fd6ce1fa25ca3a5260d63c636106ad4648b9dc"
+    },
+    {
+      "id": "O022",
+      "source_text_sha256": "00858eb42f19aa89f1aa1784442f650732eb53f8cbba4707b82fd29278c77cd8",
+      "translation_text_sha256": "cfff8f99bf98cf5d44fa2dcde9250ad31180d904cc591b58fe0a4bd81932201c"
+    },
+    {
+      "id": "O023",
+      "source_text_sha256": "2c3a596220525a7bc75552af9ecb73906a36471ff15474ceeb1efb00fd176122",
+      "translation_text_sha256": "18cc991b8df7abdbe1c8d768db7c0b44148121daaa3cfba02f3a640dbb97c1b4"
+    },
+    {
+      "id": "O024",
+      "source_text_sha256": "3649ce97679d2ab618b737b5715d6dafe5d11caa44b8d076cbc762e93a601870",
+      "translation_text_sha256": "b6f1641423f591b6a34ea080485d135eb9b403ddc32ee343f596c68f57c03d4b"
+    },
+    {
+      "id": "O025",
+      "source_text_sha256": "2416f52b08dc6d84099789ba3b7e28f9cc1c1d20bef0d10993c863883594c62c",
+      "translation_text_sha256": "82842d6b8b4075f8718ddaf17a2f0300c85029a0c8da58992318985f90a9c7e7"
+    },
+    {
+      "id": "O026",
+      "source_text_sha256": "b380d2b7871130e17fde0beed1eb0b9f015f6baef8841138825b6df96f2f49f5",
+      "translation_text_sha256": "f12e5212e2d01f8cb8d5cca6398afc48746fe39c8dc436f13ec9502a7d8172cd"
+    },
+    {
+      "id": "O027",
+      "source_text_sha256": "1765557eaab77b0b925e7846105466e1f900063d9afc69f4ab920a658a490bad",
+      "translation_text_sha256": "ab98f2c8ffaeada788545c28bb5903f3411a073a5694b430633ede5a4677e5e9"
+    },
+    {
+      "id": "O028",
+      "source_text_sha256": "6b9340b0fd7f7e733c37e5792d4642337a8a06a3944bb09ee00bc02518941bbe",
+      "translation_text_sha256": "3053f7b3f474caa542107ce8a38d22a8a36c7d1fff8376e9e3560de94d50a629"
+    },
+    {
+      "id": "O029",
+      "source_text_sha256": "9346f8e9c0f694fe8633d2401be11fbf5badf989e63ab3209d7ddb87f6569a0c",
+      "translation_text_sha256": "e6c584d84813867d5985b6cdcee27c77021b34b7ebb14436a8fc39f7103636e7"
+    },
+    {
+      "id": "O030",
+      "source_text_sha256": "64d039fad9b154908dd8cafb009060f3c9667a1af3cb935583fd615b41c72e6f",
+      "translation_text_sha256": "b95bd6dd4654ec49096f5658e2ca820c5a108a22eab3d57366f0879f9db6a3d4"
+    },
+    {
+      "id": "O031",
+      "source_text_sha256": "5a2d84446a5bb2acf9d56e0991d8c1a33f962e04a462c54192406983413cbd7c",
+      "translation_text_sha256": "eff0fc0513c98bf48409aef9723ce8e851e60ee003b25394d8a463b494269144"
+    },
+    {
+      "id": "O032",
+      "source_text_sha256": "70e844ed10448b8f7942182728493be72541d9ae374085592c51fb8644cea7e1",
+      "translation_text_sha256": "7021ba14e4bbf79d80c9339114bae9a2b3511b609681eb8a5d618d0ff8726a20"
+    },
+    {
+      "id": "O033",
+      "source_text_sha256": "0efeed9cc886eb852d5412e8d991a25ad5f2af6447c33bd9510f36c5b4607be0",
+      "translation_text_sha256": "bcc837ce79168bc50476497c9b60b5b5b90eecc7ce942e5032c1909e9b58a2e2"
+    },
+    {
+      "id": "O034",
+      "source_text_sha256": "bd7b130fce96af333201afbd641e7a7661bf33ced9ea4f451ec0bca1048b3590",
+      "translation_text_sha256": "6df8a1fa0669b8a0fad8262aabc0ddbc365cb1d71616b7f67987d6831f30c9cb"
+    },
+    {
+      "id": "O035",
+      "source_text_sha256": "5b176320de5fc70251430ed9e81ee340c84e4876c6f50542193276b3fcf48256",
+      "translation_text_sha256": "e622f2df263d1ffd02192f318ed138275b3e9346e515dcd4139067dd039a71e1"
+    },
+    {
+      "id": "O036",
+      "source_text_sha256": "772b493e05c2cf9b347320751e63b71ff5d689011fac50d8f0939007b3da712b",
+      "translation_text_sha256": "37b9b5ae91386d1d8c9fe986d00498cb71c5f9d6c54b22986a9b458cdf8a4acb"
+    },
+    {
+      "id": "O037",
+      "source_text_sha256": "34612c8f8a9c1b64c3dec7b0b99ab7ebc45fdf4c09c6d67bd49a2b2cb93ee480",
+      "translation_text_sha256": "876c12f0acdb1ecc0a1587c1ada4b42375184b5f1858a43f2669e01a128a988d"
+    },
+    {
+      "id": "O038",
+      "source_text_sha256": "274b3be5844e5ff787680376135486aa01073d99bdacb408937056f8edc3ae98",
+      "translation_text_sha256": "61db64ac51fdb3b84491ef21c77dd8a7cf73c6d853f256a28cbf6c789c8faaff"
+    },
+    {
+      "id": "O039",
+      "source_text_sha256": "19efec50591507648b18944c92534e11a5dc62b207c47a8d29989cf67df5a442",
+      "translation_text_sha256": "cdb2fd32e191b7c87417981032a55ba587813c461fa653509cc591a26ddec633"
+    },
+    {
+      "id": "O040",
+      "source_text_sha256": "7ea17df726446e51388404d694fa8bb96b741de2c262c2871ee66f87848f2a48",
+      "translation_text_sha256": "0211654d7a7a87ccae1ddc4ae2394daf75d7084b44fac470c6f5b05b8f08471a"
+    },
+    {
+      "id": "O041",
+      "source_text_sha256": "5f73a463fc36f85f09e04ca7df4c0a9fa9ac220dffd6a2e1dbdfae91feee0310",
+      "translation_text_sha256": "4eb8eb9a807fda18084ad504ce0998b5c74edc862df18d7253abf4bbee92b50a"
+    },
+    {
+      "id": "O042",
+      "source_text_sha256": "3bfdb92b58a93fa3b9d2d606dc044be417f3e6009f43605aafb58e09cd945082",
+      "translation_text_sha256": "7ac90942f53b8032134a324cbb865e3a4cc393684f8040916c717d163fcb4957"
+    },
+    {
+      "id": "O043",
+      "source_text_sha256": "b74dc654ce831d548264185312d17b6a0df84fb57b0048ca1c42393aeb89721f",
+      "translation_text_sha256": "f67f02fcaca93f4b2b5b9b4f39050ce7f6dd04105fc6bebc664fcc77e2cb8c5c"
+    },
+    {
+      "id": "O044",
+      "source_text_sha256": "102bfdc7f96537db3d21beda1d4541f7892922d44e9b78a6ba324814e96f6fbf",
+      "translation_text_sha256": "bb2283295b668ebcb3d7c5df6544f783663f0f11c984581f32b8f3bc0f3fd859"
+    },
+    {
+      "id": "O045",
+      "source_text_sha256": "bdc29fb393742f6cc4da54119a87af7756100f091cd664b1637204e935208a0b",
+      "translation_text_sha256": "a3b03f9d56c6b872bc06433d2a8855778412a32e9b0061cc8797a0679a66cb40"
+    },
+    {
+      "id": "O046",
+      "source_text_sha256": "742c5dc91877734ec6da93e1a83908cd9968845f4b671a6b511ee71555370642",
+      "translation_text_sha256": "ac33646100fc3d5a278d29216775683e3a05242b9431903127ab5c94137f52fc"
+    },
+    {
+      "id": "O047",
+      "source_text_sha256": "8f6f0ca0b4d7570db9691be9f99db6a355d0def8c3b14b0b067fb2c4680dc054",
+      "translation_text_sha256": "cc14e1e9f08a9c6eb8b664fc8af4ccc53ce7fa051715d6bffb1fdac2f3ccd71e"
+    },
+    {
+      "id": "O048",
+      "source_text_sha256": "eadf5fd05047ce83c53ab0946039f3845ff255c261f766d7881ad484423602d7",
+      "translation_text_sha256": "de010ef641876a383b149d98466ebbf54842fdecc72a9381527208549b290c5f"
+    },
+    {
+      "id": "O049",
+      "source_text_sha256": "71c984e823b23d4552179240e030a726509029bbe0d25a24dc79a1c5804d21a6",
+      "translation_text_sha256": "e7842127e179cffa17b9423fb2e641fc8fc280f356ff1e9462b1a8da188132e0"
+    },
+    {
+      "id": "O050",
+      "source_text_sha256": "3b69883afb9d5f00de1e5fa8b37ee6431cd1892615bad99d10b8cc18bf4c0c8d",
+      "translation_text_sha256": "99053833d6dabff496d1b77bbc28cba77183b5b91b293c8fd7eb373b38e5b5d6"
+    },
+    {
+      "id": "O051",
+      "source_text_sha256": "ae79e370e2a1ca9133a9666ad0a5316ddc818a70ba10ca1c7ee9c54ea7348a1e",
+      "translation_text_sha256": "946127c2a28a92bcf53766dd6deff72bd0eea3498d03de3a83f14e8b0eadcc5c"
+    },
+    {
+      "id": "O052",
+      "source_text_sha256": "05b47e5a56002fe49ae44a0e75439e7c25702f0c867802dd44e3075638de518b",
+      "translation_text_sha256": "eed8b520f232c8becd4666b64fc46c4fbeb4878f6724807522b6deaef2b750a8"
+    },
+    {
+      "id": "O053",
+      "source_text_sha256": "d4f1229eac1f93ada6440a52b1a87c4fead755b7fcacbcef22edd4f625b91774",
+      "translation_text_sha256": "1dbef96598562846b1dc4edbf02b9ebb836865e969abe560ad36f6a50e6e0fea"
+    },
+    {
+      "id": "O054",
+      "source_text_sha256": "13f74d1b341987ce8641065fb9436e6cef3877024d2adc281be98a314206ec79",
+      "translation_text_sha256": "eed7bbcf8db61ed23ea34ed0f1d58387b947b7ccd8558c2073fcc3cfe9a8b60e"
+    },
+    {
+      "id": "O055",
+      "source_text_sha256": "6f256ae9c471b162c24d5d6c5d727162e4982efd46c04b7e43ab2e19d56d4498",
+      "translation_text_sha256": "43bb42797805ef598561fb7e8038af443fa22ff0e2d31b54bcc9d3558e86dd2f"
+    },
+    {
+      "id": "O056",
+      "source_text_sha256": "587c165bcdf2a7cc21397e9d2b2589a023895149cf6472593d211779a872cc4e",
+      "translation_text_sha256": "892b5afd800dd094120435a5f9c7d32b030ceb9c5ecb65c80a21c20e5d6f6cfb"
+    },
+    {
+      "id": "O057",
+      "source_text_sha256": "049dbecb06be1273ee83b8bfec249e48b96322958ae20fd80a524392c78b2f11",
+      "translation_text_sha256": "3c3822247e476af1b3655b510057cf42d8b9d37605a2f384434e4664da11397e"
+    },
+    {
+      "id": "O058",
+      "source_text_sha256": "a73fc45752d10fdd855f8ef86a6687800ff2ac0270b93edfc7cbd44ce2903c3e",
+      "translation_text_sha256": "c8d63ee61420120448b8b70dee1bc12772c32d645d0681c2cdccf571142b3f2e"
+    },
+    {
+      "id": "O059",
+      "source_text_sha256": "3b621bd3f4b66a789a4ce4502fc72861800f3fbfc1cf7aa74b2ccde96b178d0c",
+      "translation_text_sha256": "029fcd1ff23e44a15eb9d08df05259f73cf1b37c2fdc0c03bb4b1d9a802e4dc7"
+    },
+    {
+      "id": "O060",
+      "source_text_sha256": "32c136c3d4407b82f70caea1b8a204ff475fc944c37930bdf1ab94c2341d4b41",
+      "translation_text_sha256": "9e5bdc55b33247f146bee1f26c996c7dab8b9c8fc48c8e367be5d0ed190141ff"
+    },
+    {
+      "id": "O061",
+      "source_text_sha256": "57300aeac08a266e5819060283245efa6ddd9dcffe90469a086456f95614528f",
+      "translation_text_sha256": "602daea6a84ffabf65d5c1e47f1f99a5ff82d6cb3430cc17fe9487a7e78e4fbf"
+    },
+    {
+      "id": "O062",
+      "source_text_sha256": "c61783b9023f6e6f7f82129c5b9364429d9ed3d2865370c0d98ff94e728d55ca",
+      "translation_text_sha256": "dd8389142e869043c1c39c90ed53a29bd3398a1b73ec30a791f009e07e42b645"
+    },
+    {
+      "id": "O063",
+      "source_text_sha256": "f930c64067ffbbd1489cf83931f91a4aee6ec4ec88330c01125d65f7a45f66b6",
+      "translation_text_sha256": "3c12100ff265c0062755e1115087bc469e90b0e199d2b2076470e16a73e1e4d6"
+    },
+    {
+      "id": "O064",
+      "source_text_sha256": "88199004faea68e1144ec8ac6a4790571e6b667a06bb0da978ec3d0942ca533a",
+      "translation_text_sha256": "f8fc911996d349a24fb42db47d77d485e56f84eef04783263cce023d7afa309a"
+    },
+    {
+      "id": "O065",
+      "source_text_sha256": "5716d1a538edeef6a38cf282d426b850e6a2e13ce0c8481778de0d3c80767163",
+      "translation_text_sha256": "30f5c97c84f4508c9c68ad83fe002de95b4c69f82603ebc23c1b6c51e228091c"
+    },
+    {
+      "id": "O066",
+      "source_text_sha256": "ce11b84512938de643110cfda37dbb0b5574be164a3ab3b5b10f0cf4363d2bd2",
+      "translation_text_sha256": "05f5ed1e04fa6e9528ed88f8efe8a0fa26db7e19b53c447563be6f61b975b0a8"
+    },
+    {
+      "id": "O067",
+      "source_text_sha256": "4d796ec7f1654d0e037ca2dcb32796563ca51b20abc21fd9390480af02f20894",
+      "translation_text_sha256": "fa73c09c7cc66d375006a2386c91d628a239c7e467f1b26339683d0353705455"
+    },
+    {
+      "id": "O068",
+      "source_text_sha256": "76d574c300d3d6e364809b4888c1dbd3fdf334c51f95edda99e4090e7d48435c",
+      "translation_text_sha256": "1613b8b2114ed158561da21b1568d749844dcc9ea5a694bef1653cd43cd6ff4f"
+    },
+    {
+      "id": "O069",
+      "source_text_sha256": "0b842a252942dc267fff812eaafeccdd200c1e5bf16cfd711de82c04876d35dd",
+      "translation_text_sha256": "68f04a3c3114e6b4af9ee65e1076976684728deaae367f4d24416169da834de4"
+    },
+    {
+      "id": "O070",
+      "source_text_sha256": "99987ca046114aade01cee76a527dc92060773910298107fbfd52b75d7522677",
+      "translation_text_sha256": "01c3e09a0b5ad0a8e625563ab71abaf2ad45c4a3ee5cbd9927f3c8c22ed4413b"
+    },
+    {
+      "id": "O071",
+      "source_text_sha256": "c0be8e06b96573aefcf9443230c88f6e83628b95a11fec533211b0fb5ce7bb08",
+      "translation_text_sha256": "f3d66aca305779d3c566488e7f1fb74df8f7804fc877d6419e3f305deab77686"
+    },
+    {
+      "id": "O072",
+      "source_text_sha256": "8a47148efacede03796fc81c2016f9ba4b6137d6c512fc81d88885144002db5a",
+      "translation_text_sha256": "3d59699763ca53606505cbaa0bdd829778935486e6de5dd1840f7306e4781702"
+    },
+    {
+      "id": "O073",
+      "source_text_sha256": "9e5d64bb400a6b57508a1f14fe9be0179792cef575eed5ada8d6b7893c3c0fb6",
+      "translation_text_sha256": "aac621747276fa6d54b869fbb2afac635f320a8fe0f2cdb321807c7ed985cc3b"
+    },
+    {
+      "id": "O074",
+      "source_text_sha256": "11e77df3860ce555e082f390eb2926e2498e5034301f8a6291aa1726242c82af",
+      "translation_text_sha256": "3c73797d275287161d8bead2053599ebce910eacb4457c73f359e26b67076402"
+    },
+    {
+      "id": "O075",
+      "source_text_sha256": "8cffdc953a7ac635975cc0b2eecc1e6b51b6302b8f45bfc2e1b7a2913b3a7764",
+      "translation_text_sha256": "bc3c63263aef65232445f2250c64466141f3f5071f98be98f7a25d7212ae408b"
+    },
+    {
+      "id": "O076",
+      "source_text_sha256": "2203230aa091e0c1449b2d0bebc55da83320f57472305aff1844c95d2c4bd95c",
+      "translation_text_sha256": "252c4510afa2637d2234433cbbabebc5b40e4632c8da7315b0b2de11800b4d1e"
+    },
+    {
+      "id": "O077",
+      "source_text_sha256": "9c115cb2fdef24eb4a1f03fac3f12a8310c8fee6ca6588dcdb8c46611ec050e0",
+      "translation_text_sha256": "25db3c7b19a3f9eaae29005cdc5e9f30cdd7843ca0690c9291e6f3acf45af993"
+    },
+    {
+      "id": "O078",
+      "source_text_sha256": "47810bfd876da063d7a9768c94d894c9899647985d4ce69cbe4219f0205b3fd9",
+      "translation_text_sha256": "4e88d9e2c5744239baf3f86d4f6a2f845e46419dbeb251236d2a218a80f8385a"
+    },
+    {
+      "id": "O079",
+      "source_text_sha256": "6a48b4c81724b067b3f1a1a0541a27782b70824c4da5e50fa8db1d890c53590c",
+      "translation_text_sha256": "bbebd56e87ac7691e6bb7c8611d296d643ba545beb9ff8cc8cbf452305453e66"
+    },
+    {
+      "id": "O080",
+      "source_text_sha256": "06f33a6278311dce20e83ac0a64530fc3e263838497bba18bc3bf7e740c84ba6",
+      "translation_text_sha256": "573e773c8787bca456d2e12e6d5d627ec41bac00fc6c7cfff39491ba5cfc79e9"
+    },
+    {
+      "id": "O081",
+      "source_text_sha256": "9cc91cf55beae0bc207c0e5608a7fec9292b10b67d3616779cb6fe88ce20d736",
+      "translation_text_sha256": "d56b5d364e7d26e6857aa6fa27bffbf98e01de110461ca499092f7a0ca641699"
+    },
+    {
+      "id": "O082",
+      "source_text_sha256": "a076600570a0f0beb1bd7f3b65beaa64f458ac8b971db9c7e02d511054c63e2c",
+      "translation_text_sha256": "af41e94e2ab71234524af4dce5c66bd6ba038b235a4968ca0cbf01a305fb9ae6"
+    },
+    {
+      "id": "O083",
+      "source_text_sha256": "759309c453c094e24243de42c6b3f7d1ab16f643eefd4dd3a08bd81e5a2de074",
+      "translation_text_sha256": "dfa2ef805240a6a378c917befa2288e2cb1b5ecc2a302b3507377e5677ef5610"
+    },
+    {
+      "id": "O084",
+      "source_text_sha256": "ce11b84512938de643110cfda37dbb0b5574be164a3ab3b5b10f0cf4363d2bd2",
+      "translation_text_sha256": "05f5ed1e04fa6e9528ed88f8efe8a0fa26db7e19b53c447563be6f61b975b0a8"
+    }
+  ],
+  "source_attributes_requiring_translation": 1,
+  "translated_attributes": [
+    {
+      "id": "A001",
+      "xpath": "/html/body/main/section[2]/div/aside/nav",
+      "attribute": "aria-label",
+      "ar": "فهرس الدليل",
+      "id_text": "Daftar isi panduan"
+    }
+  ],
+  "supplements": [
+    {
+      "id": "S001",
+      "text_sha256": "a5c0dac0b0dc6737596014dad634b6e9f3062d8a84386cf42888d31991c9cbe2"
+    },
+    {
+      "id": "S002",
+      "text_sha256": "30a240e9561820cb6798829b8385874f4ed8ae52e230a991ea40076a161b085c"
+    }
+  ],
+  "unchanged_original_mains": [
+    {
+      "path": "articles/religious-ocd-scrupulosity/index.html",
+      "main_sha256": "db122f78b2e279b6b25d57e797372ec4d79134f03c9494ba75179ae1e426fa39"
+    },
+    {
+      "path": "en/articles/religious-ocd-scrupulosity/index.html",
+      "main_sha256": "7a93f9929d81341ebc62de3f75ff19845d661fe3fc2aba40b0a3c4b92903642d"
+    }
+  ],
+  "unchanged_previous_id_pages": [
+    {
+      "path": "id/articles/big-bang-dalam-al-quran/index.html",
+      "sha256": "3f508b00a2f29ee13d6f2ba4905e8730a1c814c4fab35644ce8c9703da72ccf9"
+    },
+    {
+      "path": "id/articles/mimpi-melihat-jin-pertanda-sihir/index.html",
+      "sha256": "bea86d23e8aef6a708f82fb0789017506d2aa2799bb8e2b6ce98718009101145"
+    },
+    {
+      "path": "id/articles/ketindihan-melihat-sosok/index.html",
+      "sha256": "2f73497870c2f9ff06bbe8f3a0e0558f4120d76daad21720031ba4cc93414347"
+    },
+    {
+      "path": "id/articles/jin-qorin-islam-pikiran/index.html",
+      "sha256": "4db9a8a7246500c97b9fb4f9052ce1254faf76b6d91359670e27ed9029cac087"
+    },
+    {
+      "path": "id/articles/jatuhnya-baghdad-1258-ibnu-al-alqami/index.html",
+      "sha256": "df7485d6dcce3f3510d118695a8face37c1a76c0fa63294fb52f00d86da572a4"
+    },
+    {
+      "path": "id/articles/kitab-syamsul-maarif-hukum-membaca/index.html",
+      "sha256": "268a0c9476ccfcd48bcd49dc1c6d7a7d1e5c026d886d826539c6db9fc9de70cf"
+    },
+    {
+      "path": "id/articles/piramida-khufu-dibangun-catatan-merer/index.html",
+      "sha256": "8eb75bb9dd211cbe5ee89b08723285d70d2d615429687a7ddb24029cd8ed7b5f"
+    },
+    {
+      "path": "id/articles/juhaiman-masjidil-haram-1979/index.html",
+      "sha256": "6995d987f2970212ee46122627fba50fad0db8167f7de47dfd2ec869a2e08721"
+    }
+  ],
+  "protected_arabic_fragments": [],
+  "book_links": 2,
+  "specialist_review_completed": false,
+  "search_volume": null,
+  "keyword_difficulty": null,
+  "created_at": "2026-11-01T02:43:06.256351+00:00"
+}
