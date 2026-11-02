@@ -117,12 +117,59 @@ try:
         assert driver.switch_to.active_element == box
         driver.save_screenshot(str(OUT / ('id-search.png' if route.startswith('/id') else 'ar-search.png')))
 
+    # The two complete catalogues share topic membership and reading order.
+    # Verify real anchor jumps, all source entries/schema, and no-script access.
+    catalogue_orders = {}
+    for width, height in [(320, 800), (390, 844), (1440, 1000)]:
+        viewport(width, height)
+        for route, language in [('/articles/', 'ar'), ('/id/articles/', 'id')]:
+            open_page(route)
+            expected = json.loads(Path(route.strip('/'), 'feed.json').read_text())['items']
+            info = driver.execute_script('''
+              const entries=[...document.querySelectorAll('.library-entry')];
+              return {title:document.querySelector('h1').textContent,
+                groups:[...document.querySelectorAll('.library-group')].map(g=>({id:g.id,
+                  slugs:[...g.querySelectorAll('.library-entry')].map(e=>e.dataset.article),
+                  count:Number(g.querySelector('.library-group-count').textContent)})),
+                articles:entries.map(e=>({slug:e.dataset.article,title:e.querySelector('h3 a').textContent,
+                  route:e.querySelector('h3 a').getAttribute('href'),summary:e.querySelector('.library-entry-copy p').textContent,
+                  book:e.querySelector('.catalogue-book').textContent})),
+                schema:[...document.querySelectorAll('script[type="application/ld+json"]')].flatMap(s=>JSON.parse(s.textContent)['@graph']||[]).find(n=>n['@type']==='ItemList'),
+                overflow:document.documentElement.scrollWidth>innerWidth+1};
+            ''')
+            assert info['title'] == ('المقالات' if language == 'ar' else 'Artikel')
+            assert not info['overflow'] and len(info['groups']) == 5
+            assert [g['count'] for g in info['groups']] == [11, 9, 13, 24, 2]
+            assert all(g['count'] == len(g['slugs']) for g in info['groups'])
+            assert len(info['articles']) == len(expected) == info['schema']['numberOfItems']
+            by_route = {e['url'].split('ahmedalhafiz.com', 1)[1]: e for e in expected}
+            for article, schema_item in zip(info['articles'], info['schema']['itemListElement']):
+                original = by_route[article['route']]
+                assert article['title'] == original['title'] == schema_item['name']
+                assert article['summary'] == original['summary'] and article['book'].strip()
+                assert schema_item['url'] == original['url']
+            catalogue_orders[language] = [(g['id'], g['slugs']) for g in info['groups']]
+            for group in info['groups']:
+                driver.find_element(By.CSS_SELECTOR, f'.catalogue-topics a[href="#{group["id"]}"]').click()
+                wait.until(lambda b: b.current_url.endswith('#' + group['id']))
+                assert driver.execute_script('''const h=document.querySelector('header').getBoundingClientRect(),g=document.getElementById(arguments[0]).getBoundingClientRect();return g.top>=h.bottom-1&&g.top<innerHeight''', group['id'])
+            driver.save_screenshot(str(OUT / f'catalogue-{language}-{width}.png'))
+            driver.execute_cdp_cmd('Emulation.setScriptExecutionDisabled', {'value': True})
+            try:
+                driver.get(BASE + route + '?no_script_catalogue=1')
+                assert len([e for e in driver.find_elements(By.CSS_SELECTOR, '.library-entry') if e.is_displayed()]) == len(expected)
+                assert not driver.find_element(By.CSS_SELECTOR, '.library-search').is_displayed()
+            finally:
+                driver.execute_cdp_cmd('Emulation.setScriptExecutionDisabled', {'value': False})
+        assert catalogue_orders['ar'] == catalogue_orders['id']
+
+    viewport(360, 800)
     # A wrapped inline headline can have an unclickable centre between its
     # line boxes. Exercise the whole visible title, not just its first text line.
     open_page('/id/articles/')
     driver.find_element(By.ID, 'id-article-search').send_keys('Berapa Umur Alam Semesta')
     wait.until(lambda b: b.find_element(By.CSS_SELECTOR, '.id-catalogue-results').text.startswith('1 /'))
-    title = driver.find_element(By.CSS_SELECTOR, '.id-catalogue-entry:not([hidden]) h2 a')
+    title = driver.find_element(By.CSS_SELECTOR, '.id-catalogue-entry:not([hidden]) h3 a')
     driver.execute_script('arguments[0].scrollIntoView({block:"center",behavior:"instant"})', title)
     assert driver.execute_script('const e=arguments[0],r=e.getBoundingClientRect();return document.elementFromPoint(r.left+r.width/2,r.top+r.height/2).closest("a")===e', title), 'Headline has an unclickable gap between lines'
     title.click()

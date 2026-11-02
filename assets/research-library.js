@@ -23,7 +23,7 @@
     for (const group of groups) {
       const count = [...group.querySelectorAll('.library-entry')].filter(entry => !entry.hidden).length;
       group.hidden = count === 0;
-      group.querySelector('.library-group-count').textContent = String(count).padStart(2, '0');
+      group.querySelector('.library-group-count').textContent = String(count);
       const link = library.querySelector(`.library-topics a[href="#${group.id}"]`);
       link.hidden = count === 0;
       link.querySelector('small').textContent = count;
@@ -38,37 +38,6 @@
     input.value = '';
     filter();
     input.focus();
-  });
-})();
-
-/* The Indonesian catalogue uses the same local search interaction. All items
-   stay in the source HTML and remain readable when JavaScript is unavailable. */
-(() => {
-  const form = document.querySelector('.id-catalogue-search');
-  if (!form) return;
-  const input = form.querySelector('input');
-  const status = form.querySelector('[role="status"]');
-  const empty = document.querySelector('.id-catalogue-empty');
-  const normalize = text => text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('id');
-  const entries = [...document.querySelectorAll('.id-catalogue-entry')].map(element => ({
-    element, text: normalize(element.textContent)
-  }));
-  const filter = () => {
-    const terms = normalize(input.value.trim()).split(/\s+/).filter(Boolean);
-    let count = 0;
-    for (const entry of entries) {
-      entry.element.hidden = !terms.every(term => entry.text.includes(term));
-      if (!entry.element.hidden) count++;
-    }
-    status.textContent = `${count} / ${entries.length} artikel`;
-    empty.hidden = count !== 0;
-  };
-  form.hidden = false;
-  input.addEventListener('input', filter);
-  form.addEventListener('submit', event => event.preventDefault());
-  form.addEventListener('reset', () => {
-    // Wait for the browser's native reset before applying the filter.
-    requestAnimationFrame(() => { filter(); input.focus(); });
   });
   filter();
 })();

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the three research hubs from existing published feed entries.
+"""Build topic-based article catalogues from existing published feed entries.
 
 The hub's main element and matching ItemList are rebuilt. Article copy, URLs, language groups,
 feeds, author identity and book publication states remain their own sources.
@@ -8,6 +8,7 @@ An unclassified new article fails visibly rather than silently disappearing.
 from __future__ import annotations
 
 import json
+import argparse
 import re
 from datetime import datetime
 from html import escape
@@ -16,10 +17,10 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 TOPICS = {
-    "cosmos": "quran-science-method-evidence ratq-fatq-big-bang six-days-creation-cosmic-time before-big-bang-science-limits age-of-universe-13-8-billion-years universe-expansion-wa-inna-lamusiun quran-day-thousand-fifty-thousand-years-relativity anzalna-iron-meteorites green-tree-fire-photosynthesis difference-light-nur-quran-sun-moon iron-fire-light-matter-energy".split(),
-    "mind": "adam-all-languages-origin-language how-concepts-form-adam-names-scientific-models teaching-names-ai-understanding turing-test-ai-consciousness ai-soul-consciousness-understanding-taklif brain-consciousness-spirit-limits human-embryo-quran-stages dna-code-genetic-information water-life-molecular-properties".split(),
-    "history": "civilization-knowledge-justice-collapse water-civilization-power river-civilizations-water-state marib-dam-sayl-al-arim how-khufu-pyramid-built-merer-diary madain-salih-thamud-nabataean-tombs mesopotamia-irrigation-soil-salinity-collapse nile-ancient-egypt-flood-calendar-state injustice-fall-of-states-quran-history writing-changed-human-history fall-of-baghdad-1258-ibn-al-alqami juhayman-grand-mosque-1979 hexagram-magic-seal-of-solomon-umm-abbas".split(),
-    "psychology": "found-talisman-paper-what-to-do evil-eye-envy-signs magic-with-personal-photo qarin-islam-thoughts-control sprinkled-magic-water-door-evidence love-magic-reconciliation-ruling jinn-dream-fear-meaning shams-al-maarif-truth-reading-ruling cyberbullying-university-rumor-stigma fear-physical-symptoms-umm-abbas sleepwalking-why-no-memory unwanted-intrusive-thoughts-meaning depersonalization-derealization-feeling-unreal jinn-demons-quran-bible-torah memory-gaps-unremembered-actions hearing-voices-in-head jinn-existence-quran-sunnah possession-or-neurological-psychological-disorder functional-seizures-vs-epilepsy sleep-paralysis-jathoom religious-ocd-scrupulosity spiritual-healing-exploitation-safeguarding diagnostic-uncertainty-family-fear-coercive-authority how-certainty-becomes-violence".split(),
+    "cosmos": "quran-science-method-evidence age-of-universe-13-8-billion-years ratq-fatq-big-bang before-big-bang-science-limits universe-expansion-wa-inna-lamusiun six-days-creation-cosmic-time quran-day-thousand-fifty-thousand-years-relativity difference-light-nur-quran-sun-moon anzalna-iron-meteorites green-tree-fire-photosynthesis iron-fire-light-matter-energy".split(),
+    "mind": "water-life-molecular-properties human-embryo-quran-stages dna-code-genetic-information brain-consciousness-spirit-limits adam-all-languages-origin-language how-concepts-form-adam-names-scientific-models teaching-names-ai-understanding turing-test-ai-consciousness ai-soul-consciousness-understanding-taklif".split(),
+    "history": "river-civilizations-water-state nile-ancient-egypt-flood-calendar-state mesopotamia-irrigation-soil-salinity-collapse water-civilization-power marib-dam-sayl-al-arim how-khufu-pyramid-built-merer-diary madain-salih-thamud-nabataean-tombs hexagram-magic-seal-of-solomon-umm-abbas writing-changed-human-history civilization-knowledge-justice-collapse injustice-fall-of-states-quran-history fall-of-baghdad-1258-ibn-al-alqami juhayman-grand-mosque-1979".split(),
+    "psychology": "fear-physical-symptoms-umm-abbas unwanted-intrusive-thoughts-meaning religious-ocd-scrupulosity sleep-paralysis-jathoom sleepwalking-why-no-memory jinn-dream-fear-meaning memory-gaps-unremembered-actions depersonalization-derealization-feeling-unreal hearing-voices-in-head functional-seizures-vs-epilepsy possession-or-neurological-psychological-disorder jinn-existence-quran-sunnah jinn-demons-quran-bible-torah qarin-islam-thoughts-control evil-eye-envy-signs found-talisman-paper-what-to-do shams-al-maarif-truth-reading-ruling magic-with-personal-photo sprinkled-magic-water-door-evidence love-magic-reconciliation-ruling spiritual-healing-exploitation-safeguarding diagnostic-uncertainty-family-fear-coercive-authority cyberbullying-university-rumor-stigma how-certainty-becomes-violence".split(),
     "literature": ["arabic-psychological-horror", "umm-abbas-family-fear"],
 }
 COPY = {
@@ -54,6 +55,102 @@ COPY = {
 
 def tag_text(value: str) -> str:
     return escape(value, quote=True)
+
+# A shared reading order for the two complete editions. Feed chronology stays intact.
+
+CATALOGUE_COPY = {
+    "ar": {
+        "title": "المقالات", "page_title": "المقالات — أحمد الحافظ",
+        "intro": "مقالات مرتبة حسب الموضوع، من القرآن والكون إلى التاريخ والنفس والأدب.",
+        "description": "تصفح مقالات أحمد الحافظ حسب الموضوع: القرآن والكون، الإنسان والوعي، التاريخ والحضارات، النفس والمعتقدات، والأدب، مع ملخص لكل مقال ومصادر داخل صفحته.",
+        "unit": "مقالًا", "topics_label": "حسب الموضوع", "search": "ابحث في المقالات",
+        "clear": "مسح", "placeholder": "مثل: الوعي، عمر الكون، الجاثوم",
+        "empty": "لا توجد مقالات مطابقة. جرّب كلمة أخرى أو امسح البحث.",
+        "read": "قراءة المقال", "book": "الكتاب المرتبط", "updated": "تحديث",
+        "note": "مصادر كل مقال وحدود الأدلة موضحة داخل صفحته.",
+        "review": "مراجعة اختصاصية خارجية: لم تتم بعد", "status": "حالة المراجعة",
+        "topics": {"cosmos": ("القرآن والكون", "الرتق والفتق والانفجار العظيم، والزمن والمادة، وقراءة الآيات في ضوء التفسير والعلم."), "mind": ("الإنسان والوعي", "الحياة واللغة والدماغ، وأسئلة الذكاء الاصطناعي والفهم."), "history": ("التاريخ والحضارات", "الأنهار والآثار والكتابة، وصعود الدول وسقوطها."), "psychology": ("النفس والمعتقدات", "الخوف والنوم والأفكار والمعتقدات، والعلاقات داخل الأسرة والمجتمع."), "literature": ("الأدب والرواية", "الرعب النفسي وقراءة الرواية.")},
+        "books": {"sirou-fi-alard": "قل سيروا في الأرض", "umm-abbas": "أم عباس", "juhayman": "جهيمان", "kitab-al-kutub": "كتاب الكتب"},
+    },
+    "id": {
+        "title": "Artikel", "page_title": "Artikel — Ahmed Alhafiz",
+        "intro": "Artikel menurut topik, dari Al-Qur’an dan alam semesta hingga sejarah, psikologi, dan sastra.",
+        "description": "Baca artikel Ahmed Alhafiz menurut topik: Al-Qur’an, alam semesta, kesadaran, sejarah, psikologi, keyakinan, dan sastra. Sumber ada di setiap artikel.",
+        "unit": "artikel", "topics_label": "Menurut topik", "search": "Cari artikel",
+        "clear": "Hapus", "placeholder": "Misalnya: kesadaran, umur alam semesta, ketindihan",
+        "empty": "Tidak ada artikel yang cocok. Coba kata lain atau hapus pencarian.",
+        "read": "Baca artikel", "book": "Terkait buku", "updated": "Diperbarui",
+        "note": "Sumber dan batas bukti dijelaskan di setiap artikel.",
+        "review": "Belum ditinjau oleh pakar independen.", "status": None,
+        "topics": {"cosmos": ("Al-Qur’an dan alam semesta", "Asal alam semesta, waktu, materi, serta pembacaan ayat melalui tafsir dan sains."), "mind": ("Manusia dan kesadaran", "Kehidupan, bahasa, otak, serta pertanyaan tentang kecerdasan buatan dan pemahaman."), "history": ("Sejarah dan peradaban", "Sungai, peninggalan kuno, tulisan, serta bangkit dan runtuhnya negara."), "psychology": ("Psikologi dan keyakinan", "Ketakutan, tidur, pikiran, keyakinan, serta hubungan dalam keluarga dan masyarakat."), "literature": ("Sastra dan novel", "Horor psikologis dan pembacaan novel.")},
+        "books": {"sirou-fi-alard": "Sirou fi al-Ard", "umm-abbas": "Umm Abbas", "juhayman": "Juhaiman", "kitab-al-kutub": "Kitab al-Kutub"},
+    },
+}
+
+
+def build_catalogue(lang: str, register: list[dict]) -> None:
+    """One simple, topic-first layout; complete HTML and identical AR/ID order."""
+    c = CATALOGUE_COPY[lang]
+    prefix = "" if lang == "ar" else "id/"
+    path = ROOT / prefix / "articles/index.html"
+    feed = json.loads((ROOT / prefix / "articles/feed.json").read_text())["items"]
+    by_url = {entry["url"]: entry for entry in feed}
+    url_key = "url" if lang == "ar" else "indonesian_url"
+    by_slug = {item["slug"]: (item, by_url[item[url_key]]) for item in register if item.get(url_key)}
+    order = [slug for slugs in TOPICS.values() for slug in slugs]
+    assert len(order) == len(set(order)) == len(feed) == len(by_slug)
+    assert set(order) == set(by_slug), "Classify every published article exactly once"
+    input_id = "article-search" if lang == "ar" else "id-article-search"
+    id_form = " id-catalogue-search" if lang == "id" else ""
+    id_results = " id-catalogue-results" if lang == "id" else ""
+    parts = [f'<main id="main" class="research-library article-catalogue" data-library-lang="{lang}">',
+             f'<section class="research-hero"><div class="wrap"><h1>{c["title"]}</h1><p>{c["intro"]}</p><div class="library-edition">{len(feed)} {c["unit"]}</div></div></section>',
+             '<section class="library-section"><div class="wrap catalogue-layout">',
+             f'<form class="library-search{id_form}" role="search" hidden><label for="{input_id}">{c["search"]}</label><div class="library-search-field"><input id="{input_id}" type="search" autocomplete="off" aria-describedby="library-search-example library-results" aria-controls="library-groups"><button type="reset" class="library-clear">{c["clear"]}</button></div><p class="library-example" id="library-search-example">{c["placeholder"]}</p><p id="library-results" class="library-results{id_results}" role="status" aria-live="polite" aria-atomic="true" data-total="{len(feed)}" data-unit="{c["unit"]}">{len(feed)} / {len(feed)} {c["unit"]}</p></form>',
+             f'<nav class="library-topics catalogue-topics" aria-label="{c["topics_label"]}"><strong>{c["topics_label"]}</strong>']
+    for topic, slugs in TOPICS.items():
+        parts.append(f'<a href="#topic-{topic}"><span>{c["topics"][topic][0]}</span><small>{len(slugs)}</small></a>')
+    parts += ['</nav>', f'<p class="library-empty" hidden>{c["empty"]}</p><div id="library-groups">']
+    ordered_entries = []
+    for topic, slugs in TOPICS.items():
+        label, description = c["topics"][topic]
+        parts.append(f'<section class="library-group" id="topic-{topic}" aria-labelledby="heading-{topic}"><div class="library-group-head"><div><h2 id="heading-{topic}">{label}</h2><p>{description}</p></div><span class="library-group-count">{len(slugs)}</span></div><div class="library-entries">')
+        for slug in slugs:
+            item, entry = by_slug[slug]
+            ordered_entries.append(entry)
+            title, summary = tag_text(entry["title"]), tag_text(entry["summary"])
+            route = urlparse(entry["url"]).path
+            legacy = " id-catalogue-entry" if lang == "id" else ""
+            book = c["books"][item["book"]]
+            parts.append(f'<article class="library-entry{legacy}" data-article="{slug}"><div class="library-entry-copy"><h3><a href="{route}">{title}</a></h3><p>{summary}</p><div class="catalogue-book"><span>{c["book"]}:</span> {tag_text(book)}</div></div><a class="library-read" href="{route}" aria-label="{c["read"]}: {title}"><span>{c["read"]}</span><span class="reading-arrow" aria-hidden="true">{"←" if lang == "ar" else "→"}</span></a></article>')
+        parts.append('</div></section>')
+    parts += ['</div>', f'<div class="catalogue-note" id="review-note"><p>{c["note"]}</p><p>{c["review"]}</p>']
+    if c["status"]:
+        parts.append(f'<a href="/research-status/">{c["status"]}</a>')
+    parts.append('</div></div></section></main>')
+    source = path.read_text()
+    source, count = re.subn(r'<main\b[^>]*>.*?</main>', '\n'.join(parts), source, flags=re.S)
+    assert count == 1
+    source = re.sub(r'<title>.*?</title>', f'<title>{c["page_title"]}</title>', source)
+    source = re.sub(r'(<meta (?:name="description"|property="og:description") content=")[^"]*', lambda m: m[1] + tag_text(c["description"]), source)
+    source = re.sub(r'(<meta property="og:title" content=")[^"]*', lambda m: m[1] + tag_text(c["page_title"]), source)
+    def sync_schema(match: re.Match) -> str:
+        data = json.loads(match[1])
+        for node in data.get("@graph", []):
+            if node.get("@type") == "CollectionPage":
+                node.update(name=c["page_title"], description=c["description"])
+            if node.get("@type") == "ItemList":
+                node.update(numberOfItems=len(ordered_entries), itemListElement=[{"@type": "ListItem", "position": pos, "url": entry["url"], "name": entry["title"]} for pos, entry in enumerate(ordered_entries, 1)])
+        return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '</script>'
+    source = re.sub(r'<script type="application/ld\+json">(.*?)</script>', sync_schema, source, flags=re.S)
+    if '/assets/article-catalogue.css' not in source:
+        source = source.replace('</head>', '<link rel="stylesheet" href="/assets/article-catalogue.css">\n</head>')
+    if lang == "ar":
+        source = source.replace('href="/articles/" aria-current="page">الأبحاث</a>', 'href="/articles/" aria-current="page">المقالات</a>')
+    else:
+        source = source.replace('<a href="/id/articles/">Artikel</a>', '<a href="/id/articles/" aria-current="page">Artikel</a>')
+    path.write_text(source)
+    print(f'{lang}: {len(feed)} articles, five topics, shared editorial order')
 
 def build(lang: str, register: list[dict]) -> None:
     c = COPY[lang]
@@ -130,6 +227,9 @@ def build(lang: str, register: list[dict]) -> None:
     print(f"{lang}: {len(feed)} published entries across {len(groups)} topics")
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--language', action='append', choices=['ar', 'en', 'de', 'id'])
+    args = parser.parse_args()
     register = json.loads((ROOT / "articles/research-index.json").read_text())["items"]
-    for language in COPY:
-        build(language, register)
+    for language in args.language or ['ar', 'en', 'de', 'id']:
+        (build_catalogue if language in CATALOGUE_COPY else build)(language, register)
