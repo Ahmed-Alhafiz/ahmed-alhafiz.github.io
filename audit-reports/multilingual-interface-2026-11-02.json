@@ -8,7 +8,7 @@
     "id/index.html",
     "en/articles/mesopotamia-irrigation-soil-salinity-collapse/index.html"
   ],
-  "article_and_evidence_mains_preserved": 191,
+  "article_and_evidence_mains_preserved": 190,
   "publication_date_syntax": {
     "count": 23,
     "value": "2026-11-02T00:57:34+01:00",
@@ -51,7 +51,6 @@
     ]
   },
   "new_dependencies": 0,
-  "new_page_network_requests": 0,
   "checks": "existing article preservation, site, UX, discovery, identity, citations, hygiene, visibility and consent gates pass; CI pending",
   "main_inventory_includes_404_page": true,
   "article_and_evidence_mains_byte_identical": 190,
@@ -62,5 +61,18 @@
       "after_main_sha256": "32ecaa39fe70e974fbf1ffc8b4cb6ebaa0ed873bb6eed3ee533eb76dc129a6f8",
       "change": "Remove only the redundant id=answer from the summary-box div. The preceding h2 retains the public #answer anchor. Text and every link are unchanged."
     }
-  }
+  },
+  "reading_tool_network_requests": 0,
+  "additional_existing_shared_script_requests": {
+    "id/articles/index.html": 1,
+    "privacy/index.html": 1,
+    "en/privacy/index.html": 1,
+    "de/privacy/index.html": 1,
+    "articles/madain-salih-thamud-nabataean-tombs/evidence/index.html": 1
+  },
+  "meta_description_length_warnings_fixed": [
+    "de/about/index.html",
+    "en/articles/spiritual-healing-exploitation-safeguarding/index.html",
+    "id/articles/ai-dan-nama-nama-adam/index.html"
+  ]
 }
