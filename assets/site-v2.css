@@ -435,3 +435,6 @@ footer.site-footer{background:#08121d;color:#b9c5cd;padding:38px 0 22px}
   :root .reading-tools summary{font-size:13px}
 }
 @media print{:root .reading-tools,:root .id-catalogue-search{display:none!important}}
+
+/* A multiline card title is one click target, including the space between lines. */
+:root :is(.id-catalogue-entry,.library-entry-copy,.article-card) :is(h2,h3)>a{display:block}
