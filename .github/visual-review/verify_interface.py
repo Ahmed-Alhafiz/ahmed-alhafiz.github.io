@@ -150,7 +150,10 @@ try:
                 assert schema_item['url'] == original['url']
             catalogue_orders[language] = [(g['id'], g['slugs']) for g in info['groups']]
             for group in info['groups']:
-                driver.find_element(By.CSS_SELECTOR, f'.catalogue-topics a[href="#{group["id"]}"]').click()
+                link = driver.find_element(By.CSS_SELECTOR, f'.catalogue-topics a[href="#{group["id"]}"]')
+                # Bring the control below the fixed masthead before a real click.
+                driver.execute_script('arguments[0].scrollIntoView({block:"center",behavior:"instant"})', link)
+                link.click()
                 wait.until(lambda b: b.current_url.endswith('#' + group['id']))
                 assert driver.execute_script('''const h=document.querySelector('header').getBoundingClientRect(),g=document.getElementById(arguments[0]).getBoundingClientRect();return g.top>=h.bottom-1&&g.top<innerHeight''', group['id'])
             driver.save_screenshot(str(OUT / f'catalogue-{language}-{width}.png'))
