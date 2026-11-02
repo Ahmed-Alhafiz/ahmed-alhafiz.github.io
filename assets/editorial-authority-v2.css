@@ -255,7 +255,9 @@ html[dir="ltr"] .library-read:hover .reading-arrow{transform:translateX(3px)}
   .article-shell .article-aside{display:contents}
   .article-shell .toc{order:-1}
   .toc{position:static;max-width:none;max-height:none;padding:8px 16px;background:#f0ebe2}
-  .toc ol{columns:1}
+  /* Disable multicolumn layout: a capped-height list otherwise creates
+     overflow columns, even with column-count:1, hiding later links sideways. */
+  .toc :is(ol,ul){columns:auto}
   .reading-contents[open] :is(ol,ul,.reading-contents-links){max-height:45dvh;overflow:auto;padding-inline-end:4px}
   .toc a{min-height:44px;display:flex;align-items:center;padding-block:9px}
 }

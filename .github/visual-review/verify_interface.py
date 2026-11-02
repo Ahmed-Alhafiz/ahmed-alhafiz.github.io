@@ -40,6 +40,19 @@ try:
     viewport(360, 800)
     for route in routes:
         open_page(route)
+        # A whole-page overflow check misses content clipped inside a TOC.
+        # Expose each disclosure, inspect its real list geometry, then restore.
+        toc_info = driver.execute_script('''
+          const states=[...document.querySelectorAll('.toc details')].map(d=>[d,d.open]);
+          states.forEach(([d])=>d.open=true);
+          const lists=[...document.querySelectorAll('.toc ol,.toc ul,.reading-contents-links')].filter(l=>l.getBoundingClientRect().width);
+          const data=lists.map(l=>{const r=l.getBoundingClientRect();return {
+            width:l.clientWidth,scroll:l.scrollWidth,links:l.querySelectorAll('a').length,
+            outside:[...l.querySelectorAll('a')].filter(a=>{const b=a.getBoundingClientRect();return b.left<r.left-1||b.right>r.right+1}).map(a=>a.textContent.trim())};});
+          states.forEach(([d,open])=>d.open=open);
+          return data;
+        ''')
+        assert all(t['scroll'] <= t['width'] + 1 and not t['outside'] for t in toc_info), (route, 'TOC has hidden horizontal overflow', toc_info)
         info = driver.execute_script('''
           const header=document.querySelector('.site-header'),nav=header.querySelector('nav');
           const links=[...header.querySelectorAll('nav a,.langs a')];
@@ -60,6 +73,7 @@ try:
             assert item['left'] >= -1 and item['right'] <= 361 and item['height'] >= 43, (route, item)
         errors = [e for e in driver.get_log('browser') if e['level'] == 'SEVERE' and e.get('source') == 'javascript']
         assert not errors, (route, errors)
+        info['tocLists'] = toc_info
         records.append(info)
     print(f'Interface: all {len(routes)} public pages passed at 360px', flush=True)
 
@@ -178,6 +192,29 @@ try:
     title.click()
     wait.until(lambda b: '/id/articles/usia-alam-semesta-13-8-miliar-tahun/' in b.current_url)
     assert driver.find_element(By.CSS_SELECTOR, '.reading-tools summary').is_displayed()
+
+    # Reproduce the last-item loss seen during the live phone click audit.
+    # Long LTR lists and a short landscape viewport must stay vertically scrollable.
+    for width, height in [(320, 800), (390, 844), (768, 650), (390, 430)]:
+        viewport(width, height)
+        for route in ['/articles/umm-abbas-family-fear/',
+                      '/en/articles/umm-abbas-family-fear/',
+                      '/de/articles/umm-abbas-family-fear/',
+                      '/id/articles/ketindihan-melihat-sosok/']:
+            open_page(route)
+            summary = driver.find_element(By.CSS_SELECTOR, '.toc details summary')
+            driver.execute_script('arguments[0].scrollIntoView({block:"center",behavior:"instant"})', summary)
+            summary.click()
+            assert driver.execute_script('return arguments[0].parentElement.open', summary)
+            lists = driver.execute_script('''return [...document.querySelectorAll('.toc details[open] ol,.toc details[open] ul,.toc details[open] .reading-contents-links')].map(l=>({width:l.clientWidth,scroll:l.scrollWidth}))''')
+            assert lists and all(l['scroll'] <= l['width'] + 1 for l in lists), (route, width, height, lists)
+            link = driver.find_elements(By.CSS_SELECTOR, '.toc details[open] a')[-1]
+            expected_hash = link.get_attribute('href').split('#', 1)[1]
+            driver.execute_script('arguments[0].scrollIntoView({block:"center",inline:"nearest",behavior:"instant"})', link)
+            link.click()
+            wait.until(lambda b: b.current_url.endswith('#' + expected_hash))
+            assert driver.execute_script('return !arguments[0].parentElement.open', summary)
+            driver.save_screenshot(str(OUT / f'contents-last-{route.strip("/").replace("/", "-")}-{width}x{height}.png'))
 
     # Privacy withdrawal is an actual button too: it must reopen the choice UI.
     open_page('/id/privacy/')
