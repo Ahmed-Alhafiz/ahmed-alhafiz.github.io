@@ -365,3 +365,73 @@ footer.site-footer{background:#08121d;color:#b9c5cd;padding:38px 0 22px}
 .books-index .books-transparency{max-width:900px;margin:34px auto 0;border-inline-start:5px solid var(--copper);border-radius:14px;box-shadow:var(--shadow-soft)}
 @media(max-width:760px){.books-index .page-head{padding:50px 0 44px}.books-index .page-head p{font-size:16px}.books-index .works-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.books-index .book-card{padding-bottom:17px}.books-index .book-card h3{margin:14px 12px 6px;font-size:16px}.books-index .book-card p{margin-inline:12px;font-size:12px}.books-index .book-card .more{margin-inline:12px}}
 @media(max-width:380px){.books-index .works-grid{grid-template-columns:1fr}.books-index .book-card h3{font-size:19px}.books-index .book-card p{font-size:13px}}
+
+/* Shared interface contract: the masthead, language controls and primary actions
+   are one component across legacy and translated layouts. Root specificity is
+   deliberate so a page-specific stylesheet cannot silently change this chrome. */
+:root body .site-header{background:rgba(8,19,30,.975);color:#f8f5ee;border-bottom:1px solid var(--line-dark);box-shadow:0 8px 30px rgba(0,0,0,.14)}
+:root .site-header .header-inner{min-height:66px;gap:18px}
+:root .site-header .brand{min-height:44px;gap:8px}
+:root .site-header .brand-mark{width:34px;height:34px;border-color:rgba(218,158,117,.48)}
+:root .site-header .brand-mark img{width:25px;height:25px}
+:root .site-header .brand-copy strong{font-size:14px;color:#fff}
+:root .site-header .brand-copy span{font-size:11px;color:#c7d2dc}
+:root body .site-header nav.nav{display:flex;align-items:center;gap:22px;color:#d8e0e6}
+:root body .site-header nav.nav a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 0;font-size:13px;line-height:1.5;text-align:center}
+:root body .site-header nav.nav a::after{bottom:4px;height:2px;background:#df9368}
+:root .site-header .langs{display:flex;gap:0;border:1px solid #52616c;border-radius:7px;overflow:hidden;direction:ltr;flex-shrink:0}
+:root .site-header .langs a{display:grid;place-items:center;min-width:36px;min-height:44px;padding:8px 6px;border:0;border-radius:0;color:#c8d2da;background:transparent}
+:root .site-header .langs a+a{border-inline-start:1px solid #52616c}
+:root .site-header .langs a[aria-current=page],:root .site-header .langs a:hover,:root .site-header .langs a:focus-visible{background:#d9a27f;color:#08131e}
+:root body .home-hero .actions a.btn{min-height:48px;padding:10px 18px;border-radius:8px;border:1px solid #b7b1a3;color:var(--ink);background:transparent;box-shadow:none;transform:none}
+:root body .home-hero .actions a.btn.primary{background:#10263a;border-color:#10263a;color:#fff}
+:root body .home-hero .actions a.btn.primary:hover{background:#213f56;border-color:#213f56}
+:root body .home-hero .actions a.btn:not(.primary):hover{background:#e9e4d8}
+:root body.reader-home .home-hero{background:var(--paper);color:var(--ink)}
+:root body.reader-home .home-hero::before{display:none}
+:root body.reader-home .home-hero h1,:root body.reader-home .home-hero h1 [lang=en]{color:var(--ink)}
+:root body.reader-home .home-hero h1 [lang=ar]{color:#62645d}
+:root body.reader-home .home-hero .hero-statement{color:#3f4d59}
+:root body.reader-home .home-hero .eyebrow{color:var(--copper)}
+:root body.reader-home .hero-dispatch{border-color:var(--line);background:var(--paper-2)}
+:root body.reader-home .hero-dispatch>*{border-color:var(--line)}
+:root body.reader-home .hero-dispatch strong,:root body.reader-home .hero-dispatch .dispatch-all{color:var(--ink)}
+:root body.reader-home .hero-dispatch small{color:#52616b}
+:root body.reader-home .hero-dispatch>a>span,:root body.reader-home .dispatch-label span{color:var(--copper)}
+:root .site-footer .footer-identity p{color:#bdc9d1}
+:root .site-footer .footer-meta{color:#aabcc8}
+:root .site-footer .footer-nav a{min-height:44px;display:flex;align-items:center}
+:root #site-contact,:root main [id]{scroll-margin-top:calc(var(--masthead-height,110px) + 24px)}
+:root .reading-body a:not(.btn):not(.button){text-decoration:underline;text-underline-offset:.18em}
+:root .reading-tools{position:fixed;inset-inline-end:18px;bottom:18px;z-index:100;max-width:min(390px,calc(100vw - 36px));border:1px solid #a7957e;border-radius:8px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow-soft);font:14px/1.6 Arial,Tahoma,sans-serif}
+:root .reading-tools[hidden]{display:none}
+:root .reading-tools summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:46px;padding:10px 16px;list-style:none;color:#10263a;font-weight:700}
+:root .reading-tools summary::-webkit-details-marker{display:none}
+:root .reading-tools summary::after{content:'+';font:24px/1 Arial,sans-serif}
+:root .reading-tools[open] summary::after{content:'−'}
+:root .reading-tools nav{padding:6px 12px 12px;border-top:1px solid var(--line);max-height:55dvh;overflow:auto;overscroll-behavior:contain}
+:root .reading-tools nav a{display:block;padding:10px 6px;min-height:44px;color:#214c64;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+:root .reading-tools nav a:hover{background:var(--paper-2)}
+:root .id-catalogue-search{margin-bottom:32px}
+:root .id-catalogue-search label{display:block;font-weight:700;margin-bottom:8px}
+:root .id-catalogue-search .library-search-field{display:flex;gap:8px}
+:root .id-catalogue-search input{width:100%;min-width:0;min-height:48px;padding:10px 12px;border:1px solid #aeb7ba;border-radius:8px;background:var(--surface);color:var(--ink);font-size:16px}
+:root .id-catalogue-search button{min-height:48px;padding:10px 14px;border:1px solid #aeb7ba;border-radius:8px;background:var(--surface);color:var(--ink);cursor:pointer}
+:root .id-catalogue-results{font-size:14px;color:#52616b}
+:root .id-catalogue-entry[hidden],:root .id-catalogue-empty[hidden]{display:none}
+@media(max-width:1020px){
+  :root .site-header .header-inner{flex-wrap:wrap;padding-block:7px 0;gap:6px 10px}
+  :root body .site-header nav.nav{order:3;width:100%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;overflow:visible;border-top:1px solid rgba(255,255,255,.12)}
+  :root body .site-header nav.nav a{min-width:0;min-height:48px;padding:7px 3px;white-space:normal;overflow-wrap:break-word}
+}
+@media(max-width:640px){
+  :root .site-header .header-inner{width:calc(100% - 28px)}
+  :root .site-header .brand-copy strong{font-size:13px}
+  :root .site-header .brand-copy span{font-size:10px}
+  :root .site-header .langs{margin-inline-start:auto}
+  :root .site-header .langs a{min-width:32px;padding:8px 4px}
+  :root body .site-header nav.nav a{font-size:12px;line-height:1.4}
+  :root .reading-tools{bottom:12px;inset-inline-end:12px;max-width:calc(100vw - 24px)}
+  :root .reading-tools summary{font-size:13px}
+}
+@media print{:root .reading-tools,:root .id-catalogue-search{display:none!important}}

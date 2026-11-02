@@ -1,0 +1,78 @@
+{
+  "base_commit": "0fbb5acd7579fe3da3eca95c54a89b19f4d447e7",
+  "branch": "fix/multilingual-ui-20261102",
+  "status": "locally_checked_pre_ci",
+  "main_blocks_unchanged": 222,
+  "main_blocks_changed": [
+    "id/articles/index.html",
+    "id/index.html",
+    "en/articles/mesopotamia-irrigation-soil-salinity-collapse/index.html"
+  ],
+  "article_and_evidence_mains_preserved": 190,
+  "publication_date_syntax": {
+    "count": 23,
+    "value": "2026-11-02T00:57:34+01:00",
+    "source_commit": "0fbb5acd7579fe3da3eca95c54a89b19f4d447e7",
+    "source_commit_time_utc": "2026-11-01T23:57:34Z",
+    "visible_dates_unchanged": true
+  },
+  "pagespeed_baseline": {
+    "url": "https://pagespeed.web.dev/analysis/https-ahmedalhafiz-com/8s8h0ew98c?form_factor=mobile",
+    "performance": 100,
+    "accessibility": 100,
+    "best_practices": 100,
+    "seo": 100,
+    "lcp_ms": 900,
+    "tbt_ms": 0,
+    "cls": 0,
+    "real_user_data": "unavailable"
+  },
+  "manual_preview": {
+    "widths": [
+      320,
+      360
+    ],
+    "languages": [
+      "ar",
+      "en",
+      "de",
+      "id"
+    ],
+    "checked": [
+      "shared header palette",
+      "primary button palette",
+      "contact target",
+      "contents keyboard and Escape",
+      "Indonesian filter, reset and no-results"
+    ],
+    "limits": [
+      "not a field Core Web Vitals measurement",
+      "CI responsive sweep and live verification are required before claiming deployment"
+    ]
+  },
+  "new_dependencies": 0,
+  "checks": "existing article preservation, site, UX, discovery, identity, citations, hygiene, visibility and consent gates pass; CI pending",
+  "main_inventory_includes_404_page": true,
+  "article_and_evidence_mains_byte_identical": 190,
+  "article_and_evidence_texts_preserved": 191,
+  "permitted_technical_repairs": {
+    "en/articles/mesopotamia-irrigation-soil-salinity-collapse/index.html": {
+      "before_main_sha256": "a92f8df8fc6ce5383c9fc5987cfe836f66ceb6c91b80f8b064d17abacd6c8103",
+      "after_main_sha256": "32ecaa39fe70e974fbf1ffc8b4cb6ebaa0ed873bb6eed3ee533eb76dc129a6f8",
+      "change": "Remove only the redundant id=answer from the summary-box div. The preceding h2 retains the public #answer anchor. Text and every link are unchanged."
+    }
+  },
+  "reading_tool_network_requests": 0,
+  "additional_existing_shared_script_requests": {
+    "id/articles/index.html": 1,
+    "privacy/index.html": 1,
+    "en/privacy/index.html": 1,
+    "de/privacy/index.html": 1,
+    "articles/madain-salih-thamud-nabataean-tombs/evidence/index.html": 1
+  },
+  "meta_description_length_warnings_fixed": [
+    "de/about/index.html",
+    "en/articles/spiritual-healing-exploitation-safeguarding/index.html",
+    "id/articles/ai-dan-nama-nama-adam/index.html"
+  ]
+}

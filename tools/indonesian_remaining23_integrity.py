@@ -51,7 +51,12 @@ def check():
         assert p.lang==('id','ltr') and 'noindex' not in text.lower(),r['key']
         assert not re.search(r'naskah persiapan|belum diterbitkan|private-status|register\.json|\bTODO\b',text,re.I),r['key']+' preparation residue'
         article=next(n for b in p.blocks for n in b.get('@graph',[]) if n.get('@type')=='Article')
-        assert article['headline']==r['title'] and article['datePublished']==a['date']
+        assert article['headline']==r['title']
+        # Publication-marking commit0fbb5acd: 2026-11-01T23:57:34Z.
+        # Retain the approved local calendar date and require an explicit timezone.
+        assert article['datePublished']=='2026-11-02T00:57:34+01:00'
+        assert article['dateModified']==article['datePublished']
+        assert article['datePublished'][:10]==a['date']
         assert article['translationOfWork']=={'@id':r['source_url']+'#article'}
         for lang,url in p.alternates.items():
             if lang in ('id','x-default'):continue

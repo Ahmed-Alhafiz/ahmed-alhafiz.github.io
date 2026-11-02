@@ -36,7 +36,16 @@ def main_hash(s):
 def check():
     audit=json.loads(AUDIT.read_text());assert audit['publication_authorized'] and audit['count']==27
     urls={r['url'] for r in audit['new_articles']};assert len(urls)==27
-    for path,expected in audit['unchanged_original_mains'].items():assert main_hash((ROOT/path).read_text())==expected,path
+    # One source-only HTML repair is authorized by the interface release. Lock
+    # both the historical baseline and the exact corrected main, not just text.
+    repairs=json.loads((ROOT/'audit-reports/multilingual-interface-2026-11-02.json').read_text())['permitted_technical_repairs']
+    assert set(repairs)=={'en/articles/mesopotamia-irrigation-soil-salinity-collapse/index.html'}
+    for path,expected in audit['unchanged_original_mains'].items():
+        actual=main_hash((ROOT/path).read_text())
+        if path in repairs:
+            assert repairs[path]['before_main_sha256']==expected,path
+            assert actual==repairs[path]['after_main_sha256'],path
+        else:assert actual==expected,path
     for path,expected in audit['unchanged_previous_id_pages'].items():assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==expected,path
     for r in audit['new_articles']:
         text=(ROOT/r['path']).read_text();p=Reader();p.feed(text)
@@ -58,5 +67,5 @@ def check():
     feed=json.loads((ROOT/'id/articles/feed.json').read_text());assert len(feed['items'])==len(list([* (ROOT/'id/articles').glob('*/index.html'),* (ROOT/'id/guides').glob('*/index.html')]))
     assert urls<={x['url'] for x in feed['items']}
     assert len(ET.parse(ROOT/'sitemap.xml').findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url'))>=201
-    print('Reviewed Indonesian release passed:27 complete reviewed texts,56 original mains,9 prior ID articles,current feed entries,sitemap coverage and reciprocal languages.')
+    print('Reviewed Indonesian release passed:27 complete reviewed texts;55 original mains unchanged and1 exact anchor-only repair;9 prior ID articles,current feed entries,sitemap coverage and reciprocal languages.')
 if __name__=='__main__':check()
