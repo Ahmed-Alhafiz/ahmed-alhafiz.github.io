@@ -2,10 +2,11 @@
   "base_commit": "0fbb5acd7579fe3da3eca95c54a89b19f4d447e7",
   "branch": "fix/multilingual-ui-20261102",
   "status": "locally_checked_pre_ci",
-  "main_blocks_unchanged": 223,
+  "main_blocks_unchanged": 222,
   "main_blocks_changed": [
     "id/articles/index.html",
-    "id/index.html"
+    "id/index.html",
+    "en/articles/mesopotamia-irrigation-soil-salinity-collapse/index.html"
   ],
   "article_and_evidence_mains_preserved": 191,
   "publication_date_syntax": {
@@ -52,5 +53,14 @@
   "new_dependencies": 0,
   "new_page_network_requests": 0,
   "checks": "existing article preservation, site, UX, discovery, identity, citations, hygiene, visibility and consent gates pass; CI pending",
-  "main_inventory_includes_404_page": true
+  "main_inventory_includes_404_page": true,
+  "article_and_evidence_mains_byte_identical": 190,
+  "article_and_evidence_texts_preserved": 191,
+  "permitted_technical_repairs": {
+    "en/articles/mesopotamia-irrigation-soil-salinity-collapse/index.html": {
+      "before_main_sha256": "a92f8df8fc6ce5383c9fc5987cfe836f66ceb6c91b80f8b064d17abacd6c8103",
+      "after_main_sha256": "32ecaa39fe70e974fbf1ffc8b4cb6ebaa0ed873bb6eed3ee533eb76dc129a6f8",
+      "change": "Remove only the redundant id=answer from the summary-box div. The preceding h2 retains the public #answer anchor. Text and every link are unchanged."
+    }
+  }
 }
