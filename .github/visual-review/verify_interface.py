@@ -200,7 +200,8 @@ try:
         for route in ['/articles/umm-abbas-family-fear/',
                       '/en/articles/umm-abbas-family-fear/',
                       '/de/articles/umm-abbas-family-fear/',
-                      '/id/articles/ketindihan-melihat-sosok/']:
+                      '/id/articles/ketindihan-melihat-sosok/',
+                      '/id/articles/kitab-syamsul-maarif-hukum-membaca/']:
             open_page(route)
             summary = driver.find_element(By.CSS_SELECTOR, '.toc details summary')
             driver.execute_script('arguments[0].scrollIntoView({block:"center",behavior:"instant"})', summary)
