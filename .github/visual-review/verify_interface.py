@@ -47,12 +47,14 @@ try:
           const ids=[...document.querySelectorAll('[id]')].map(e=>e.id);
           return {route:location.pathname,width:innerWidth,scroll:document.documentElement.scrollWidth,
             header:getComputedStyle(header).backgroundColor,bounds,
+            navColumns:getComputedStyle(nav).gridTemplateColumns.split(' ').length,
             duplicateIds:ids.filter((id,i)=>ids.indexOf(id)!==i),
             contact:!!document.getElementById('site-contact'),
             brokenAnchors:[...document.querySelectorAll('.reading-tools a,.toc a[href^="#"]')].filter(a=>!document.getElementById(decodeURIComponent(a.hash.slice(1)))).map(a=>a.hash)};
         ''')
         assert info['scroll'] <= 361, (route, 'horizontal overflow', info)
         assert info['header'] == 'rgba(8, 19, 30, 0.976)', (route, info['header'])
+        assert info['navColumns'] == 5, (route, 'legacy navigation columns', info)
         assert info['contact'] and not info['duplicateIds'] and not info['brokenAnchors'], info
         for item in info['bounds']:
             assert item['left'] >= -1 and item['right'] <= 361 and item['height'] >= 43, (route, item)
