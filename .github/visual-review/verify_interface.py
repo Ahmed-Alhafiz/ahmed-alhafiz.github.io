@@ -117,6 +117,18 @@ try:
         assert driver.switch_to.active_element == box
         driver.save_screenshot(str(OUT / ('id-search.png' if route.startswith('/id') else 'ar-search.png')))
 
+    # A wrapped inline headline can have an unclickable centre between its
+    # line boxes. Exercise the whole visible title, not just its first text line.
+    open_page('/id/articles/')
+    driver.find_element(By.ID, 'id-article-search').send_keys('Berapa Umur Alam Semesta')
+    wait.until(lambda b: b.find_element(By.CSS_SELECTOR, '.id-catalogue-results').text.startswith('1 /'))
+    title = driver.find_element(By.CSS_SELECTOR, '.id-catalogue-entry:not([hidden]) h2 a')
+    driver.execute_script('arguments[0].scrollIntoView({block:"center",behavior:"instant"})', title)
+    assert driver.execute_script('const e=arguments[0],r=e.getBoundingClientRect();return document.elementFromPoint(r.left+r.width/2,r.top+r.height/2).closest("a")===e', title), 'Headline has an unclickable gap between lines'
+    title.click()
+    wait.until(lambda b: '/id/articles/usia-alam-semesta-13-8-miliar-tahun/' in b.current_url)
+    assert driver.find_element(By.CSS_SELECTOR, '.reading-tools summary').is_displayed()
+
     # Privacy withdrawal is an actual button too: it must reopen the choice UI.
     open_page('/id/privacy/')
     driver.find_element(By.CSS_SELECTOR, '[data-analytics-consent-reset]').click()
