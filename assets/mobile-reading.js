@@ -2,9 +2,42 @@
 (() => {
   const root = document.documentElement;
   const header = document.querySelector('.site-header');
-  const article = document.querySelector('.article-body, .article-prose');
+  const article = document.querySelector('main .reading-body') ||
+    document.querySelector('main .article-body, main .article-prose, main.article-page .prose');
   const narrow = matchMedia('(max-width: 1000px)');
   const contents = [];
+  const language = (root.lang || 'ar').split('-')[0];
+  const copy = {
+    ar: {contact: 'تواصل', contents: 'محتويات المقال'},
+    en: {contact: 'Contact', contents: 'Article contents'},
+    de: {contact: 'Kontakt', contents: 'Inhalt des Artikels'},
+    id: {contact: 'Kontak', contents: 'Daftar isi artikel'}
+  }[language] || {contact: 'Contact', contents: 'Article contents'};
+
+  // Keep the same contact action on every language and every page. It remains
+  // a real local anchor; no home-page detour or untranslated placeholder.
+  const footer = document.querySelector('footer.site-footer');
+  const nav = header?.querySelector('nav');
+  if (footer && nav) {
+    const target = footer.querySelector('.footer-contact') || footer;
+    target.id = 'site-contact';
+    let contact = [...nav.querySelectorAll('a')].find(link =>
+      new URL(link.href).hash === '#contact' || link.getAttribute('href') === '#site-contact');
+    if (!contact) {
+      contact = document.createElement('a');
+      nav.append(contact);
+    }
+    contact.href = '#site-contact';
+    contact.textContent = copy.contact;
+    const prefix = language === 'ar' ? '/' : `/${language}/`;
+    for (const link of nav.querySelectorAll('a')) {
+      if (new URL(link.href).hash) continue;
+      const path = new URL(link.href).pathname;
+      if (path === location.pathname || (path !== prefix && location.pathname.startsWith(path))) {
+        link.setAttribute('aria-current', 'page');
+      }
+    }
+  }
 
   if (header) {
     const measure = () => root.style.setProperty('--masthead-height', `${header.getBoundingClientRect().height}px`);
@@ -14,6 +47,53 @@
   }
 
   if (article) {
+    // Fixed positioning avoids shifting the article when progressively adding
+    // the same contents control to older and newer translation templates.
+    const headings = [...article.querySelectorAll('h2')].filter(heading =>
+      heading.textContent.trim() && !heading.closest('.toc, nav, aside'));
+    if (headings.length >= 3) {
+      const tools = document.createElement('details');
+      tools.className = 'reading-tools';
+      const summary = document.createElement('summary');
+      summary.textContent = copy.contents;
+      const menu = document.createElement('nav');
+      menu.setAttribute('aria-label', copy.contents);
+      headings.forEach((heading, index) => {
+        if (!heading.id) {
+          let id = `reading-section-${index + 1}`;
+          while (document.getElementById(id)) id += '-section';
+          heading.id = id;
+        }
+        const link = document.createElement('a');
+        link.href = `#${encodeURIComponent(heading.id)}`;
+        link.textContent = heading.textContent.trim();
+        menu.append(link);
+      });
+      tools.append(summary, menu);
+      document.body.append(tools);
+      menu.addEventListener('click', event => {
+        if (event.target.closest('a')) tools.open = false;
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && tools.open) {
+          tools.open = false;
+          summary.focus();
+        }
+      });
+      document.addEventListener('click', event => {
+        if (tools.open && !tools.contains(event.target)) tools.open = false;
+      });
+      const consent = document.getElementById('analytics-consent');
+      if (consent) {
+        // Consent is injected before this deferred script. Keep the reading
+        // control out of its way until the visitor makes a choice.
+        tools.hidden = true;
+        const observer = new MutationObserver(() => {
+          if (!consent.isConnected) { tools.hidden = false; observer.disconnect(); }
+        });
+        observer.observe(document.body, {childList: true});
+      }
+    }
     document.querySelectorAll('.toc').forEach(toc => {
       const title = toc.querySelector('strong, h2, h3');
       let list = toc.querySelector('ol, ul');
@@ -67,7 +147,7 @@
       const progress = Math.max(0, Math.min(1, (window.scrollY + masthead - start) / distance));
       fill.style.transform = `scaleX(${progress})`;
       let current;
-      for (const section of sections) {
+      if (sections.length) for (const section of sections) {
         if (section.target.getBoundingClientRect().top <= masthead + 90) current = section.link;
       }
       if (current !== active) {

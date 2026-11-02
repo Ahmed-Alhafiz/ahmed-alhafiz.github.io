@@ -125,7 +125,7 @@ def main() -> None:
                     """,
                     nav,
                 )
-                expected_links = 4
+                expected_links = 5
                 if len(links) != expected_links:
                     raise SystemExit(
                         f"{route}: expected {expected_links} primary links, found {len(links)}"

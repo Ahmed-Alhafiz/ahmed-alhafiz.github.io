@@ -720,5 +720,19 @@
     "public_html_pages": 174,
     "publication_date": "2026-11-01",
     "publication_evidence": "Source checkpoint only; PR, Pages and live verification establish actual publication."
+  },
+  "latest_interface_repair": {
+    "date": "2026-11-02",
+    "base_commit": "0fbb5acd7579fe3da3eca95c54a89b19f4d447e7",
+    "branch": "fix/multilingual-ui-20261102",
+    "source_checkpoint": "prepared_and_locally_checked",
+    "release_authority": "GitHub PR status, Pages deployment and post-deploy verification",
+    "record": "audit-reports/multilingual-interface-2026-11-02.json",
+    "article_mains_preserved": true,
+    "remaining_checks": [
+      "full CI browser sweep",
+      "Pages deployment",
+      "post-deploy live functions and Rich Results retest"
+    ]
   }
 }
