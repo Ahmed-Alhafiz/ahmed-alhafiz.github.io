@@ -145,6 +145,9 @@ def build_catalogue(lang: str, register: list[dict]) -> None:
     source = re.sub(r'<script type="application/ld\+json">(.*?)</script>', sync_schema, source, flags=re.S)
     if '/assets/article-catalogue.css' not in source:
         source = source.replace('</head>', '<link rel="stylesheet" href="/assets/article-catalogue.css">\n</head>')
+    # Old catalogue markup and the former ID initializer differ. Bind the new
+    # pages to this search release even when a visitor cached the earlier script.
+    source = re.sub(r'src="/assets/research-library\.js(?:\?[^"]*)?"', 'src="/assets/research-library.js?v=topics-20261102"', source)
     if lang == "ar":
         source = source.replace('href="/articles/" aria-current="page">الأبحاث</a>', 'href="/articles/" aria-current="page">المقالات</a>')
     else:
