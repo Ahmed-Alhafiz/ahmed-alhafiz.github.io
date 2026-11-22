@@ -159,6 +159,19 @@
     const link = event.target.closest('a[href]');
     if (!link || !analyticsEnabled || typeof window.gtag !== 'function') return;
 
+    const bookPage = window.location.pathname.match(/^\/(?:en\/|de\/)?books\/([a-z0-9-]+)\/?$/);
+    if (bookPage && link.closest('#ordering')) {
+      const contactMethod = { 'mailto:': 'email', 'tel:': 'phone' }[link.protocol];
+      if (contactMethod) {
+        window.gtag('event', 'publisher_contact_click', {
+          book_slug: bookPage[1],
+          lang: language(),
+          contact_method: contactMethod
+        });
+      }
+      return;
+    }
+
     const article = window.location.pathname.match(/^\/(?:en\/|de\/)?(?:articles|guides)\/([^/]+)\//);
     if (!article) return;
 
