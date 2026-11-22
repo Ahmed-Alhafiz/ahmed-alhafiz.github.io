@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Preserve the reviewed text and prior releases while validating publication."""
 from pathlib import Path
+from publication_snapshot import historical_text
 from html.parser import HTMLParser
 import hashlib,json,re,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
@@ -40,10 +41,10 @@ def check():
     assert a['publication_authorized'] and a['count']==23
     assert len(a['new_articles'])==23 and len({r['url'] for r in a['new_articles']})==23
     assert len(a['unchanged_previous_id_pages'])==36
-    for path,expected in a['unchanged_original_mains'].items():assert main_hash((ROOT/path).read_text())==expected,path
-    for path,expected in a['unchanged_previous_id_pages'].items():assert sha((ROOT/path).read_bytes())==expected,path
+    for path,expected in a['unchanged_original_mains'].items():assert main_hash(historical_text(ROOT / path))==expected,path
+    for path,expected in a['unchanged_previous_id_pages'].items():assert sha(historical_text(ROOT / path).encode())==expected,path
     for r in a['new_articles']:
-        text=(ROOT/r['path']).read_text();p=Reader();p.feed(text)
+        text=(ROOT/r['path']).read_text();p=Reader();p.feed(historical_text(ROOT / r['path']))
         assert p.h1==1 and len(p.ids)==len(set(p.ids)),r['key']
         assert sha(norm(''.join(p.text)).encode())==r['body_text_sha256'],r['key']+' incomplete text'
         assert (p.tables,p.cells)==(r['tables'],r['table_cells']),r['key']+' table drift'

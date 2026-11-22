@@ -51,7 +51,7 @@
       "email": "mailto:hhafz9924@gmail.com",
       "jobTitle": "كاتب ومؤلف — Writer and author",
       "description": "أحمد الحافظ — Ahmed Alhafiz: كاتب عربي في الرواية والكتابة الفكرية والدينية والتاريخية، وينشر ملفات بحثية مستقلة تربط الادعاءات بمصادرها وحدودها.",
-      "disambiguatingDescription": "This identity refers to the author of the forthcoming works and research dossiers listed on ahmedalhafiz.com, not to other people who share the Arabic name أحمد الحافظ.",
+      "disambiguatingDescription": "This identity refers to the author of the books and research dossiers listed on ahmedalhafiz.com, not to other people who share the Arabic name أحمد الحافظ.",
       "knowsAbout": [
         "Arabic literature",
         "religion and science",
@@ -101,7 +101,11 @@
       "name": "قل سيروا في الأرض فانظروا كيف بدأ الخلق",
       "url": "https://ahmedalhafiz.com/books/sirou-fi-alard/",
       "inLanguage": "ar",
-      "creativeWorkStatus": "Forthcoming; not yet officially published",
+      "creativeWorkStatus": "Published",
+      "publisher": {
+        "@type": "Organization",
+        "name": "دار هاوس ١٠١ للنشر والتوزيع"
+      },
       "author": {
         "@id": "https://ahmedalhafiz.com/#person"
       }
@@ -112,7 +116,11 @@
       "name": "أم عباس لجلب الحبيب ورد المطلقة",
       "url": "https://ahmedalhafiz.com/books/umm-abbas/",
       "inLanguage": "ar",
-      "creativeWorkStatus": "Forthcoming; not yet officially published",
+      "creativeWorkStatus": "Published",
+      "publisher": {
+        "@type": "Organization",
+        "name": "دار غراب للنشر والتوزيع"
+      },
       "author": {
         "@id": "https://ahmedalhafiz.com/#person"
       },

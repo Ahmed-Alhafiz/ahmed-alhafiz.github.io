@@ -2,6 +2,7 @@
 """Protect full source parity and the published Indonesian ratq/fatq edition."""
 from collections import Counter
 from pathlib import Path
+from publication_snapshot import historical_text
 import hashlib,json,re
 from indonesian_pilot_integrity import Units
 
@@ -25,7 +26,7 @@ class Content(Units):
 def main():
     audit=json.loads(AUDIT.read_text());assert audit['owner_approved']
     for record in audit['existing_main_pages']:
-        text=(ROOT/record['path']).read_text();part=re.search(r'<main\b.*?</main>',text,re.S).group()
+        text=historical_text(ROOT / record['path']);part=re.search(r'<main\b.*?</main>',text,re.S).group()
         assert digest(part)==record['main_sha256'],record['path']+': original content changed'
     route='/id/articles/big-bang-dalam-al-quran/'
     text=(ROOT/(route.lstrip('/')+'index.html')).read_text()

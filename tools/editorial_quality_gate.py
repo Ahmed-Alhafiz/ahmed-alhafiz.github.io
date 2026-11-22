@@ -148,7 +148,7 @@ def main():
    if (typ=='ScholarlyArticle') or (isinstance(typ,list) and 'ScholarlyArticle' in typ):errors.append(f'{rel}: falsely implies ScholarlyArticle')
    for key in ['headline','abstract','datePublished','dateModified','author','citation']:
     if not n.get(key):errors.append(f'{rel}: Article schema missing {key}')
-   if n.get('isBasedOn'):errors.append(f'{rel}: forthcoming book must not be declared evidentiary isBasedOn')
+   if n.get('isBasedOn'):errors.append(f'{rel}: book must not be declared evidentiary isBasedOn')
    if (rel.startswith(('articles/ratq','en/articles/ratq')) or 'water-civilization-power' in rel or 'diagnostic-uncertainty-family-fear-coercive-authority' in rel or 'teaching-names-ai-understanding' in rel) and not n.get('mentions'):errors.append(f'{rel}: thematic book relationship should be disclosed with mentions')
   domains={urlsplit(h).netloc.lower() for h in ext if any(urlsplit(h).netloc.lower().endswith(t) for t in TRUSTED)}
   if len(domains)<3:errors.append(f'{rel}: trusted-source diversity too low: {sorted(domains)}')
@@ -185,7 +185,8 @@ def main():
 
  for f in ['books/sirou-fi-alard/index.html','books/umm-abbas/index.html','en/books/sirou-fi-alard/index.html','en/books/umm-abbas/index.html']:
   t=(ROOT/f).read_text(encoding='utf-8') if (ROOT/f).exists() else ''
-  if not any(x in t for x in ['قيد الإصدار','forthcoming']):errors.append(f'{f}: forthcoming state missing')
+  if '"creativeWorkStatus":"Published"' not in t or 'id="ordering"' not in t:
+   errors.append(f'{f}: publication state or ordering contact missing')
   if not any(x in t for x in ['لا تعتمد','does not treat','لا تُستخدم','not evidence']):errors.append(f'{f}: evidence independence not explicit')
 
  for route in ['/en/articles/ratq-fatq-big-bang/','/en/articles/water-civilization-power/','/en/articles/diagnostic-uncertainty-family-fear-coercive-authority/','/en/articles/teaching-names-ai-understanding/']:

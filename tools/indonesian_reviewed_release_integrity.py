@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Lock reviewed release text, preservation, indexing and language relationships."""
 from pathlib import Path
+from publication_snapshot import historical_text
 from html.parser import HTMLParser
 import hashlib,json,re,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
@@ -41,14 +42,14 @@ def check():
     repairs=json.loads((ROOT/'audit-reports/multilingual-interface-2026-11-02.json').read_text())['permitted_technical_repairs']
     assert set(repairs)=={'en/articles/mesopotamia-irrigation-soil-salinity-collapse/index.html'}
     for path,expected in audit['unchanged_original_mains'].items():
-        actual=main_hash((ROOT/path).read_text())
+        actual=main_hash(historical_text(ROOT / path))
         if path in repairs:
             assert repairs[path]['before_main_sha256']==expected,path
             assert actual==repairs[path]['after_main_sha256'],path
         else:assert actual==expected,path
-    for path,expected in audit['unchanged_previous_id_pages'].items():assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==expected,path
+    for path,expected in audit['unchanged_previous_id_pages'].items():assert hashlib.sha256(historical_text(ROOT / path).encode()).hexdigest()==expected,path
     for r in audit['new_articles']:
-        text=(ROOT/r['path']).read_text();p=Reader();p.feed(text)
+        text=(ROOT/r['path']).read_text();p=Reader();p.feed(historical_text(ROOT / r['path']))
         assert p.h1==1 and len(p.ids)==len(set(p.ids)),r['path']
         assert sha(norm(' '.join(p.text)))==r['body_text_sha256'],r['key']+' body drift'
         assert p.canonical==[r['url']] and p.alternates==r['original_language_alternates'],r['key']
