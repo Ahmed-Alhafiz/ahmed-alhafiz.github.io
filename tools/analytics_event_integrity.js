@@ -12,6 +12,7 @@ function harness(page, lang, consent = 'granted') {
   if (consent) storage.set(CONSENT_KEY, consent);
   const appended = [];
   let clickHandler;
+  let resetConsent;
 
   function element(tag) {
     return {
@@ -37,7 +38,13 @@ function harness(page, lang, consent = 'granted') {
     },
     getElementById() { return null; },
     querySelector() { return null; },
-    querySelectorAll() { return []; },
+    querySelectorAll(selector) {
+      assert.equal(selector, '[data-analytics-consent-reset]');
+      return [{ addEventListener(type, handler) {
+        assert.equal(type, 'click');
+        resetConsent = handler;
+      } }];
+    },
     createElement: element,
     head: { appendChild(node) { appended.push(node); } },
     body: { appendChild(node) { appended.push(node); } }
@@ -52,18 +59,35 @@ function harness(page, lang, consent = 'granted') {
   const window = { location, localStorage };
   vm.runInNewContext(source, { window, document, URL, Date, encodeURIComponent });
 
-  return { window, document, appended, get clickHandler() { return clickHandler; } };
+  return { window, document, appended, clickHandler, resetConsent };
 }
 
-function clickFrom(page, href, lang, dataset = {}, consent = 'granted') {
-  const env = harness(page, lang, consent);
-  const link = { href: new URL(href, env.window.location).href, dataset };
+function clickLink(env, href, dataset = {}, inOrdering = false) {
+  const target = new URL(href, env.window.location);
+  const link = {
+    href: target.href,
+    protocol: target.protocol,
+    dataset,
+    closest(selector) {
+      assert.equal(selector, '#ordering');
+      return inOrdering ? {} : null;
+    }
+  };
   assert.equal(typeof env.clickHandler, 'function');
   env.clickHandler({ target: { closest(selector) {
     assert.equal(selector, 'a[href]');
     return link;
   } } });
-  return Array.from(env.window.dataLayer || []).filter((entry) => entry[0] === 'event').map((entry) => ({
+}
+
+function events(env) {
+  return Array.from(env.window.dataLayer || []).filter((entry) => entry[0] === 'event');
+}
+
+function clickFrom(page, href, lang, dataset = {}, consent = 'granted') {
+  const env = harness(page, lang, consent);
+  clickLink(env, href, dataset);
+  return events(env).map((entry) => ({
     name: entry[1],
     article: entry[2].article_slug,
     book: entry[2].book_slug,
@@ -105,4 +129,44 @@ for (const [page, target] of [
 ]) {
   assert.deepEqual(clickFrom(page, target, 'ar'), []);
 }
-console.log('GA4 consent gate and article_to_book routing passed (AR/EN/DE, negative cases).');
+
+for (const [lang, prefix] of [['ar', ''], ['en', 'en/'], ['de', 'de/']]) {
+  for (const book of ['umm-abbas', 'sirou-fi-alard']) {
+    const route = `${prefix}books/${book}/`;
+    const html = fs.readFileSync(path.join(__dirname, '..', route, 'index.html'), 'utf8');
+    const ordering = html.match(/<aside[^>]*id="ordering"[^>]*>[\s\S]*?<\/aside>/)[0];
+    for (const [protocol, method] of [['mailto:', 'email'], ['tel:', 'phone']]) {
+      const href = new RegExp(`href="(${protocol}[^"]+)"`).exec(ordering)[1];
+      const env = harness(`${origin}/${route}`, lang);
+      clickLink(env, href, {}, true);
+      assert.deepEqual(events(env).map((entry) => [entry[1], { ...entry[2] }]), [
+        ['publisher_contact_click', { book_slug: book, lang, contact_method: method }]
+      ]);
+    }
+  }
+}
+
+const bookPage = `${origin}/books/umm-abbas/`;
+const publisher = 'mailto:publisher@example.test?subject=Book';
+for (const consent of [null, 'denied']) {
+  const env = harness(bookPage, 'ar', consent);
+  clickLink(env, publisher, {}, true);
+  clickLink(env, 'tel:+431234567', {}, true);
+  assert.deepEqual(events(env), []);
+}
+const contactEnv = harness(bookPage, 'ar');
+clickLink(contactEnv, publisher); // Outside the publisher contact section.
+clickLink(contactEnv, '#ordering'); // Merely opening the section is not a contact click.
+clickLink(contactEnv, 'https://example.test', {}, true);
+assert.deepEqual(events(contactEnv), []);
+contactEnv.resetConsent();
+clickLink(contactEnv, publisher, {}, true);
+assert.deepEqual(events(contactEnv), []);
+
+const articleEnv = harness(`${origin}/articles/sleep-paralysis-jathoom/`, 'ar');
+clickLink(articleEnv, '/books/umm-abbas/#ordering');
+assert.deepEqual(events(articleEnv).map((entry) => entry[1]), ['article_to_book']);
+clickLink(articleEnv, publisher, {}, true);
+assert.equal(events(articleEnv).length, 1);
+
+console.log('GA4 consent, article routing, and publisher email/phone clicks passed for Arabic, English, and German.');
