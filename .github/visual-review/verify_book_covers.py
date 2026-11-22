@@ -35,6 +35,10 @@ BOOKS = (
     ("kitab-al-kutub", "kitab-al-kutub"),
 )
 LANGS = (("ar", ""), ("en", "en/"), ("de", "de/"))
+ORDER_CONTACTS = {
+    "umm-abbas": ("info@ghorabpublishing.com", "+201111270066"),
+    "sirou-fi-alard": ("info@house101.ae", "+971555023671"),
+}
 HOME_ROUTES = (("ar", "/"), ("en", "/en/"), ("de", "/de/"))
 
 # Juhayman is a deliberately black, low-key cover. A per-title floor prevents
@@ -206,6 +210,26 @@ def whole_image_stats(image: Image.Image) -> dict[str, float]:
     }
 
 
+def verify_ordering(driver: webdriver.Chrome, route: str, slug: str, width: int) -> None:
+    email, phone = ORDER_CONTACTS[slug]
+    consent = driver.find_elements(By.CSS_SELECTOR, '#analytics-consent button[data-consent="denied"]')
+    if consent:
+        consent[0].click()
+    driver.find_element(By.CSS_SELECTOR, '.book-hero a[href="#ordering"]').click()
+    WebDriverWait(driver, 10).until(lambda browser: browser.current_url.endswith("#ordering"))
+    note = driver.find_element(By.ID, "ordering")
+    email_link = note.find_element(By.CSS_SELECTOR, 'a[href^="mailto:"]')
+    phone_link = note.find_element(By.CSS_SELECTOR, 'a[href^="tel:"]')
+    if not email_link.get_dom_attribute("href").startswith(f"mailto:{email}?subject="):
+        raise SystemExit(f"{route}: wrong publisher email or missing book enquiry subject")
+    if phone_link.get_dom_attribute("href") != f"tel:{phone}":
+        raise SystemExit(f"{route}: wrong publisher phone")
+    bounds = rect(driver, note)
+    fits = driver.execute_script("return arguments[0].scrollWidth <= arguments[0].clientWidth + 1", note)
+    if not fits or bounds["left"] < -1 or bounds["right"] > width + 1:
+        raise SystemExit(f"{route}: publisher contact is clipped at {width}px")
+
+
 def audit_book_covers(driver: webdriver.Chrome, mode: str, width: int, height: int) -> list[dict[str, Any]]:
     output = ROOT / "covers"
     output.mkdir(parents=True, exist_ok=True)
@@ -261,6 +285,9 @@ def audit_book_covers(driver: webdriver.Chrome, mode: str, width: int, height: i
                     f"{shot}: too little visible artwork for {slug} "
                     f"({whole['visibleContentFraction']} < {minimum}); stats={whole}"
                 )
+
+            if slug in ORDER_CONTACTS:
+                verify_ordering(driver, route, slug, width)
 
             reports.append(
                 {

@@ -167,13 +167,27 @@ def main()->int:
         for i,img in enumerate(q.images,1):
             if not img.get('alt','').strip():errors.append(f'{rel}: image {i} missing alt')
             if not img.get('width') or not img.get('height'):warnings.append(f'{rel}: image {i} missing width/height')
-        # Forthcoming-book pages must not publish unstable bibliographic claims.
+        # Books with publisher contacts do not use checkout or unverified ISBN data.
         if rel.as_posix().startswith(('books/','en/books/','de/books/')):
             source=p.read_text(encoding='utf-8').lower()
-            forbidden=('9789948639251','دار غراب','دار هاوس','house 101','house101','available now','اشتر الآن','شراء الآن')
+            published={
+                'umm-abbas': ('دار غراب للنشر والتوزيع', 'info@ghorabpublishing.com', '+201111270066'),
+                'sirou-fi-alard': ('دار هاوس ١٠١ للنشر والتوزيع', 'info@house101.ae', '+971555023671'),
+            }
+            slug=rel.parent.name
+            forbidden=('available now','اشتر الآن','شراء الآن')
+            if slug in published:
+                publisher,email,phone=published[slug]
+                for required in (publisher, '"creativeworkstatus":"published"', 'id="ordering"'):
+                    if required not in source:errors.append(f'{rel}: missing publication field {required}')
+                if not any(url.startswith(f'mailto:{email}?subject=') for url in q.hrefs) or f'tel:{phone}' not in q.hrefs:
+                    errors.append(f'{rel}: publisher email or phone missing')
+                forbidden+=('forthcoming', 'قيد الإصدار', 'in vorbereitung')
+            elif slug in ('juhayman','kitab-al-kutub'):
+                forbidden+=('دار غراب','دار هاوس','house 101','house101')
             for token in forbidden:
-                if token in source:errors.append(f'{rel}: unstable publication marker exposed: {token}')
-            if re.search(r'\b97[89][0-9\- ]{10,17}\b',source):errors.append(f'{rel}: ISBN-like number exposed on forthcoming page')
+                if token in source:errors.append(f'{rel}: inconsistent publication marker: {token}')
+            if re.search(r'\b97[89][0-9\- ]{10,17}\b',source):errors.append(f'{rel}: unverified ISBN-like number')
         # Paired research architecture.
         paired={
           'articles/index.html':('en','https://ahmedalhafiz.com/en/articles/'),

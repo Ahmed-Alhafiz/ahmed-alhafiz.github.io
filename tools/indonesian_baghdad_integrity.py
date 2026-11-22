@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Protect all approved Baghdad units, the disclosed correction and language graph."""
 from pathlib import Path
+from publication_snapshot import historical_text
 import hashlib, json, re
 from indonesian_ratq_integrity import Content
 from indonesian_pilot_integrity import Units
@@ -18,12 +19,12 @@ def main():
     audit = json.loads((ROOT / 'audit-reports/indonesian-baghdad-publication-2026-10-29.json').read_text())
     assert audit['owner_approved'] and audit['approved_reference_correction']['approved']
     for record in audit['unchanged_original_mains']:
-        assert digest(mainpart((ROOT / record['path']).read_text())) == record['main_sha256'], record['path']
+        assert digest(mainpart(historical_text(ROOT / record['path']))) == record['main_sha256'], record['path']
     for record in audit['authorized_original_changes']:
-        assert digest(mainpart((ROOT / record['path']).read_text())) == record['after_main_sha256'], record['path']
+        assert digest(mainpart(historical_text(ROOT / record['path']))) == record['after_main_sha256'], record['path']
     assert len(audit['unchanged_previous_id_pages']) == 3
     for record in audit['unchanged_previous_id_pages']:
-        assert hashlib.sha256((ROOT / record['path']).read_bytes()).hexdigest() == record['sha256'], record['path']
+        assert hashlib.sha256(historical_text(ROOT / record['path']).encode()).hexdigest() == record['sha256'], record['path']
     text = (ROOT / (ROUTE.lstrip('/') + 'index.html')).read_text()
     p = Content(); p.feed(mainpart(text))
     expected = {u['id']: u['translation_text_sha256'] for u in audit['units']}

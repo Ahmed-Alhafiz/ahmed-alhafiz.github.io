@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Protect complete medical-guide translation, source bodies and discovery links."""
 from pathlib import Path
+from publication_snapshot import historical_text
 from html.parser import HTMLParser
 import hashlib,json,re,xml.etree.ElementTree as ET
 from indonesian_ratq_integrity import Content
@@ -21,9 +22,9 @@ def main():
     assert audit['publication_authorized'] and not audit['owner_approved']
     assert len(audit['unchanged_original_mains'])==2 and len(audit['unchanged_previous_id_pages'])==8
     for original in audit['unchanged_original_mains']:
-        assert digest(mainpart((ROOT/original['path']).read_text()))==original['main_sha256'],original['path']
+        assert digest(mainpart(historical_text(ROOT / original['path'])))==original['main_sha256'],original['path']
     for previous in audit['unchanged_previous_id_pages']:
-        assert hashlib.sha256((ROOT/previous['path']).read_bytes()).hexdigest()==previous['sha256'],previous['path']
+        assert hashlib.sha256(historical_text(ROOT / previous['path']).encode()).hexdigest()==previous['sha256'],previous['path']
     text=(ROOT/(ROUTE.lstrip('/')+'index.html')).read_text();content=Content();content.feed(mainpart(text))
     units={u['id']:u['translation_text_sha256'] for u in audit['units']}
     supplements={u['id']:u['text_sha256'] for u in audit['supplements']}

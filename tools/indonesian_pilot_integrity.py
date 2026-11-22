@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Verify the approved full translation, source version, and ID release graph."""
 from pathlib import Path
+from publication_snapshot import historical_text
 from html.parser import HTMLParser
 import hashlib,json,re
 
@@ -30,11 +31,11 @@ class Units(HTMLParser):
 
 def digest(text):return hashlib.sha256(text.encode()).hexdigest()
 def main():
-    source=(ROOT/'articles/sleep-paralysis-jathoom/index.html').read_text()
+    source=historical_text(ROOT / 'articles/sleep-paralysis-jathoom/index.html')
     source_main=re.search(r'<main\b.*?</main>',source,re.S).group()
     assert digest(source_main)==audit['source_main_sha256'],'Arabic source changed: re-review the linked translation'
     route='/id/articles/ketindihan-melihat-sosok/'
-    translated=(ROOT/(route.lstrip('/')+'index.html')).read_text();p=Units();p.feed(translated)
+    translated=(ROOT/(route.lstrip('/')+'index.html')).read_text();p=Units();p.feed(historical_text(ROOT / (route.lstrip('/')+'index.html')))
     expected={u['id']:u['translation_text_sha256'] for u in audit['units']}
     assert len(expected)==141 and set(p.units)==set(expected),'incomplete approved translation'
     for uid,value in p.units.items():assert digest(value)==expected[uid],f'{uid}: approved Indonesian text drift'

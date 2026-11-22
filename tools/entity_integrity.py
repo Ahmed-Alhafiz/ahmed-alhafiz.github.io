@@ -87,17 +87,17 @@ TAG_RE = re.compile(r"<[^>]+>")
 HOME_REQUIREMENTS = {
     "index.html": {
         "title": "أحمد الحافظ — Ahmed Alhafiz | الموقع الرسمي",
-        "description": "الموقع الرسمي للكاتب أحمد الحافظ — Ahmed Alhafiz: مؤلفاته قيد الإصدار، وأبحاثه ذات المصادر المعلنة في التاريخ والدين والعلم والنفس والمجتمع.",
+        "description": "الموقع الرسمي للكاتب أحمد الحافظ — Ahmed Alhafiz: مؤلفاته المنشورة والقادمة، وأبحاثه ذات المصادر المعلنة في التاريخ والدين والعلم والنفس والمجتمع.",
         "links": ["/about/", "/books/", "/articles/"],
     },
     "en/index.html": {
         "title": "أحمد الحافظ — Ahmed Alhafiz | Official Author Website",
-        "description": "The official website of writer Ahmed Alhafiz — أحمد الحافظ: forthcoming books and source-backed research in history, religion, science, psychology, and society.",
+        "description": "Official site of writer Ahmed Alhafiz, with published and forthcoming books and sourced research on history, religion, science, and psychology.",
         "links": ["/en/about/", "/en/books/", "/en/articles/"],
     },
     "de/index.html": {
         "title": "أحمد الحافظ — Ahmed Alhafiz | Offizielle Autorenwebsite",
-        "description": "Offizielle Website von Ahmed Alhafiz — أحمد الحافظ: kommende Bücher und Forschung mit Quellen zu Geschichte, Religion, Wissenschaft, Psyche und Gesellschaft.",
+        "description": "Offizielle Website von Ahmed Alhafiz mit Büchern und belegten Beiträgen zu Geschichte, Religion, Wissenschaft und Psychologie.",
         "links": ["/de/about/", "/de/books/", "/de/articles/"],
     },
 }
@@ -244,10 +244,17 @@ def validate_manifest(errors: list[str]) -> None:
 
     books = [node for node in graph if isinstance(node, dict) and node_has_type(node, "Book")]
     if len(books) != 4:
-        errors.append(f"author.json: expected four forthcoming books, found {len(books)}")
+        errors.append(f"author.json: expected four books, found {len(books)}")
+    publishers = {
+        "https://ahmedalhafiz.com/books/umm-abbas/#book": "دار غراب للنشر والتوزيع",
+        "https://ahmedalhafiz.com/books/sirou-fi-alard/#book": "دار هاوس ١٠١ للنشر والتوزيع",
+    }
     for book in books:
-        if book.get("creativeWorkStatus") != "Forthcoming; not yet officially published":
-            errors.append(f"author.json: {book.get('name')} lost forthcoming status")
+        publisher = publishers.get(book.get("@id"))
+        expected_status = "Published" if publisher else "Forthcoming; not yet officially published"
+        expected_publisher = {"@type": "Organization", "name": publisher} if publisher else None
+        if book.get("creativeWorkStatus") != expected_status or book.get("publisher") != expected_publisher:
+            errors.append(f"author.json: wrong publication status or publisher for {book.get('name')}")
         if book.get("author") != {"@id": AUTHOR_ID}:
             errors.append(f"author.json: {book.get('name')} does not reference the canonical author")
     juhayman = [book for book in books if book.get("@id") == JUHAYMAN_ID]
@@ -563,7 +570,7 @@ def main() -> None:
     print(
         "Entity integrity passed: canonical bilingual name, Arabic and Latin aliases, one author ID, "
         "two verified public profiles, one machine-readable manifest, four visible profile editions, "
-        "four forthcoming books, four current reference pillars, four multilingual book-to-research graphs, "
+        "two published and two forthcoming books, four current reference pillars, four multilingual book-to-research graphs, "
         "canonical Juhayman title, and no alias doorway pages."
     )
 

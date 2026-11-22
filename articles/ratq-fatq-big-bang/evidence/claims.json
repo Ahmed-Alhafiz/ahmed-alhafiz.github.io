@@ -9,7 +9,7 @@
     "external_specialist_review": "not_completed",
     "peer_reviewed": false
   },
-  "related_forthcoming_work": {
+  "related_work": {
     "title": "قل سيروا في الأرض فانظروا كيف بدأ الخلق",
     "url": "https://ahmedalhafiz.com/books/sirou-fi-alard/",
     "evidentiary_role": "none; thematic relationship only"
@@ -110,14 +110,14 @@
     {
       "id": "C08",
       "claim_ar": "كتاب «سيروا في الأرض» هو منشأ السؤال التحريري، لكنه ليس مصدرًا لإثبات ادعاءات علم الكون في هذا الملف.",
-      "claim_en": "The forthcoming book Sirou fi al-Ard is the editorial origin of the question, but it is not evidence for the cosmological claims in this dossier.",
+      "claim_en": "The book Sirou fi al-Ard is the editorial origin of the question, but it is not evidence for the cosmological claims in this dossier.",
       "confidence": "high",
       "evidence_type": "editorial_disclosure",
       "sources": [
         "https://ahmedalhafiz.com/books/sirou-fi-alard/",
         "https://ahmedalhafiz.com/research-status/"
       ],
-      "caveat": "The book remains unpublished and is linked only after the evidence-led argument."
+      "caveat": "The book is linked only after the evidence-led argument."
     }
   ]
 }

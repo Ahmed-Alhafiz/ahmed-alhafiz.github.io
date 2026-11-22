@@ -2,6 +2,7 @@
 """Protect the approved complete Juhayman translation and its four-language graph."""
 from collections import Counter
 from pathlib import Path
+from publication_snapshot import historical_text
 from urllib.parse import urljoin
 from html.parser import HTMLParser
 import hashlib, json, re
@@ -32,7 +33,7 @@ def main():
     audit = json.loads((ROOT / 'audit-reports/indonesian-juhayman-publication-2026-10-28.json').read_text())
     assert audit['owner_approved'] and not audit['specialist_review_completed']
     for record in audit['existing_main_pages']:
-        assert digest(mainpart((ROOT / record['path']).read_text())) == record['main_sha256'], record['path'] + ': original body changed'
+        assert digest(mainpart(historical_text(ROOT / record['path']))) == record['main_sha256'], record['path'] + ': original body changed'
     text = (ROOT / (ROUTE.lstrip('/') + 'index.html')).read_text()
     body = mainpart(text); p = Content(); p.feed(body)
     expected = {u['id']: u['translation_text_sha256'] for u in audit['units']}

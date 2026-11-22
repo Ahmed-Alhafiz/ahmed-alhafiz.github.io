@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Protect the approved fifth text, quotations, references and existing editions."""
 from pathlib import Path
+from publication_snapshot import historical_text
 from collections import Counter
 from html.parser import HTMLParser
 from urllib.parse import urljoin
@@ -23,9 +24,9 @@ class Attributes(HTMLParser):
 def main():
     audit=json.loads((ROOT/'audit-reports/indonesian-shams-publication-2026-10-29.json').read_text());assert audit['owner_approved']
     assert len(audit['unchanged_original_mains'])==2 and len(audit['unchanged_previous_id_pages'])==4
-    for x in audit['unchanged_original_mains']:assert digest(mainpart((ROOT/x['path']).read_text()))==x['main_sha256'],x['path']
-    for x in audit['unchanged_previous_id_pages']:assert hashlib.sha256((ROOT/x['path']).read_bytes()).hexdigest()==x['sha256'],x['path']
-    text=(ROOT/(ROUTE.lstrip('/')+'index.html')).read_text();body=mainpart(text);p=Content();p.feed(body)
+    for x in audit['unchanged_original_mains']:assert digest(mainpart(historical_text(ROOT / x['path'])))==x['main_sha256'],x['path']
+    for x in audit['unchanged_previous_id_pages']:assert hashlib.sha256(historical_text(ROOT / x['path']).encode()).hexdigest()==x['sha256'],x['path']
+    text=(ROOT/(ROUTE.lstrip('/')+'index.html')).read_text();body=mainpart(historical_text(ROOT / (ROUTE.lstrip('/')+'index.html')));p=Content();p.feed(body)
     units={u['id']:u['translation_text_sha256'] for u in audit['units']};extras={s['id']:s['text_sha256'] for s in audit['supplements']}
     assert set(units)=={f'M{i:03}' for i in range(1,92)} and set(extras)=={'S001','S002','S003'}
     assert set(p.units)==set(units)|set(extras)

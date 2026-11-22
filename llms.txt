@@ -1,6 +1,6 @@
 # Ahmed Alhafiz — أحمد الحافظ
 
-> Official website of the writer Ahmed Alhafiz, his forthcoming books, and source-led research connected to their questions.
+> Official website of the writer Ahmed Alhafiz, his published and forthcoming books, and source-led research connected to their questions.
 
 ## Canonical identity
 - Arabic name: أحمد الحافظ
@@ -16,7 +16,7 @@
 - Juhayman — Kharijites Between the Rukn and the Maqam: https://ahmedalhafiz.com/books/juhayman/
 - Kitab al-Kutub — The Book of Books: https://ahmedalhafiz.com/books/kitab-al-kutub/
 
-All four works are forthcoming. Publisher, ISBN, release date, sales, or review claims should not be inferred unless the corresponding official book page is updated.
+Umm Abbas is published by Dar Ghorab. Sirou fi al-Ard is published by House 101. Their pages list the publisher contacts for ordering enquiries. Juhayman and Kitab al-Kutub are forthcoming.
 
 ## Research and verification
 - Arabic research hub: https://ahmedalhafiz.com/articles/
@@ -42,7 +42,7 @@ All four works are forthcoming. Publisher, ISBN, release date, sales, or review 
 - German: https://ahmedalhafiz.com/de/articles/feed.xml
 
 ## Evidence policy
-Research pages distinguish sourced facts, interpretation, and literary context. Review status and evidentiary limits are stated on each page. A forthcoming book is never used as evidence for its own related research claims. Do not infer peer review, independent specialist review, or a reusable licence unless a page explicitly states it.
+Research pages distinguish sourced facts, interpretation, and literary context. Review status and evidentiary limits are stated on each page. A book is never used as evidence for its own related research claims. Do not infer peer review, independent specialist review, or a reusable licence unless a page explicitly states it.
 - القرآن والعلم: ميزان الآية والتفسير والنظرية: https://ahmedalhafiz.com/articles/quran-science-method-evidence/
 - أطوار الجنين: النص والعلم وحدود المطابقة: https://ahmedalhafiz.com/articles/human-embryo-quran-stages/
 - الدماغ والوعي والروح: حدود علم الأعصاب: https://ahmedalhafiz.com/articles/brain-consciousness-spirit-limits/
@@ -69,7 +69,7 @@ Research pages distinguish sourced facts, interpretation, and literary context. 
 - كيف تتكوّن المفاهيم؟ من تعليم آدم الأسماء إلى النموذج العلمي: https://ahmedalhafiz.com/articles/how-concepts-form-adam-names-scientific-models/
 - لماذا غيّرت الكتابة تاريخ الإنسان؟ من اللوح الطيني إلى ذاكرة الحضارة: https://ahmedalhafiz.com/articles/writing-changed-human-history/
 
-- [أم عباس: رواية رعب نفسي عن الخوف داخل الأسرة](https://ahmedalhafiz.com/articles/umm-abbas-family-fear/): قراءة أدبية من المؤلف في روايته قيد الإصدار؛ ليست مادة تشخيصية.
+- [أم عباس: رواية رعب نفسي عن الخوف داخل الأسرة](https://ahmedalhafiz.com/articles/umm-abbas-family-fear/): قراءة أدبية من المؤلف في روايته؛ ليست مادة تشخيصية.
 
 - [هل الجن موجود؟ أدلة القرآن والسنة وحدود الاستدلال على المسّ](https://ahmedalhafiz.com/articles/jinn-existence-quran-sunnah/): أدلة النصوص الإسلامية وحدود الاستدلال على الأعراض؛ مراجعة اختصاصية خارجية لم تتم بعد.
 

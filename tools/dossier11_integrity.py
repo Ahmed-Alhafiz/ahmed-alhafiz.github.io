@@ -5,7 +5,7 @@ This gate protects the contribution that makes dossier 11 more than a long
 article: bilingual substantive editions, fourteen classified claims, nineteen
 sources, explicit original-synthesis boundaries, reciprocal book links,
 portable citations, accessible diagrams, social cards, and medical-safety
-language. It also prevents the forthcoming novel from being misrepresented as
+language. It also prevents the novel from being misrepresented as
 evidence.
 """
 from __future__ import annotations
@@ -117,7 +117,7 @@ def validate_claims() -> dict:
         fail("claims.json: review status mismatch")
     origin = dossier.get("thematic_origin", {})
     if origin.get("evidentiary_status") != "theme_only_not_evidence":
-        fail("claims.json: forthcoming novel must be explicitly theme-only, not evidence")
+        fail("claims.json: novel must be explicitly theme-only, not evidence")
 
     claims = data.get("claims")
     sources = data.get("sources")
@@ -232,8 +232,8 @@ def validate_pages() -> None:
         if article.get("version") != "1.0" or article.get("inLanguage") != language:
             fail(f"{rel}: Article version/language mismatch")
         mentions = article.get("mentions", {})
-        if not isinstance(mentions, dict) or mentions.get("creativeWorkStatus") != "Forthcoming; not yet officially published":
-            fail(f"{rel}: forthcoming thematic origin not truthfully declared")
+        if not isinstance(mentions, dict) or mentions.get("creativeWorkStatus") != "Published":
+            fail(f"{rel}: published thematic origin not truthfully declared")
 
     for path, language in ((AR_EVIDENCE, "ar"), (EN_EVIDENCE, "en")):
         html, text = html_text(path)

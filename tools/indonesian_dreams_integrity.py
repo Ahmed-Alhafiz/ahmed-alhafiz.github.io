@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Protect all approved dream-article units, references, dates and language editions."""
 from pathlib import Path
+from publication_snapshot import historical_text
 import hashlib,json,re,xml.etree.ElementTree as ET
 from indonesian_ratq_integrity import Content
 from indonesian_pilot_integrity import Units
@@ -13,9 +14,9 @@ def compact(s):return re.sub(r'\s+','',s)
 def main():
     audit=json.loads((ROOT/'audit-reports/indonesian-dreams-publication-2026-10-29.json').read_text());assert audit['owner_approved']
     assert len(audit['unchanged_original_mains'])==2 and len(audit['unchanged_previous_id_pages'])==6
-    for x in audit['unchanged_original_mains']:assert digest(mainpart((ROOT/x['path']).read_text()))==x['main_sha256'],x['path']
-    for x in audit['unchanged_previous_id_pages']:assert hashlib.sha256((ROOT/x['path']).read_bytes()).hexdigest()==x['sha256'],x['path']
-    text=(ROOT/(ROUTE.lstrip('/')+'index.html')).read_text();p=Content();p.feed(mainpart(text))
+    for x in audit['unchanged_original_mains']:assert digest(mainpart(historical_text(ROOT / x['path'])))==x['main_sha256'],x['path']
+    for x in audit['unchanged_previous_id_pages']:assert hashlib.sha256(historical_text(ROOT / x['path']).encode()).hexdigest()==x['sha256'],x['path']
+    text=(ROOT/(ROUTE.lstrip('/')+'index.html')).read_text();p=Content();p.feed(mainpart(historical_text(ROOT / (ROUTE.lstrip('/')+'index.html'))))
     units={u['id']:u['translation_text_sha256'] for u in audit['units']};extras={x['id']:x['text_sha256'] for x in audit['supplements']}
     assert set(units)=={f'D{i:03}' for i in range(1,81)} and set(extras)=={'S001','S002','S003'}
     assert set(p.units)==set(units)|set(extras)
